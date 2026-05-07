@@ -81,6 +81,33 @@
         </div>
       </section>
 
+      <section class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Free repo scanner</p>
+            <h2>Shipcheck catches common AI-app launch risks before a manual review.</h2>
+          </div>
+          <a class="text-link" href="https://github.com/TateLyman/shipcheck-cli" target="_blank" rel="noreferrer">Open shipcheck-cli</a>
+        </div>
+        <div class="audit-preview-grid">
+          <article>
+            <span>01</span>
+            <h3>Secrets and env names</h3>
+            <p>Looks for private-looking keys, public frontend env vars that should not be public, and Supabase service-role references.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Payments and data rules</h3>
+            <p>Flags Stripe webhook handlers without visible signature checks, missing Firebase rules, and Supabase projects without RLS evidence.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Launch leftovers</h3>
+            <p>Checks for debug API routes, missing AI usage guardrails, weak release hygiene, and handoff gaps that slow down cleanup.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section price-section">
         <div class="section-heading">
           <p class="eyebrow">Pricing</p>
