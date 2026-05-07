@@ -549,6 +549,35 @@ footer a {
   border-bottom: 1px solid var(--line);
 }
 
+.shipcheck-hero {
+  background:
+    linear-gradient(90deg, rgba(248, 245, 239, 0.95), rgba(248, 245, 239, 0.76)),
+    linear-gradient(135deg, rgba(37, 60, 120, 0.15), rgba(13, 110, 87, 0.16), rgba(217, 79, 48, 0.1));
+  border-bottom: 1px solid var(--line);
+  gap: clamp(28px, 5vw, 70px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+}
+
+.terminal-frame {
+  align-self: center;
+  box-shadow: var(--shadow);
+}
+
+.terminal-output {
+  background: #17201c;
+  border-radius: 8px;
+  color: #f7f4ee;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0;
+  overflow-x: auto;
+  padding: 18px;
+}
+
+.terminal-output code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
 .rescue-grid {
   display: grid;
   gap: 16px;
@@ -578,6 +607,28 @@ footer a {
 .price-section {
   background: #f3f5ee;
   border-block: 1px solid var(--line);
+}
+
+.source-list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.source-list article {
+  background: var(--surface);
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.source-list p {
+  color: var(--muted);
+}
+
+.source-list a {
+  color: var(--accent);
+  font-weight: 850;
 }
 
 .repair-summary {
@@ -940,6 +991,10 @@ footer a {
     min-height: auto;
   }
 
+  .shipcheck-hero {
+    grid-template-columns: 1fr;
+  }
+
   .audit-hero,
   .audit-tool {
     grid-template-columns: 1fr;
@@ -954,6 +1009,7 @@ footer a {
   .demo-grid,
   .project-grid,
   .rescue-grid,
+  .source-list,
   .repair-grid,
   .deliverable-list,
   .care-grid,
@@ -985,6 +1041,7 @@ footer a {
   .demo-grid,
   .project-grid,
   .rescue-grid,
+  .source-list,
   .repair-hero,
   .repair-grid,
   .deliverable-list,
