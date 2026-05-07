@@ -418,6 +418,21 @@ h3 {
   margin-bottom: 18px;
 }
 
+.command-snippet {
+  background: #17201c;
+  border-radius: 8px;
+  color: #f7f4ee;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 18px 0 0;
+  overflow-x: auto;
+  padding: 16px 18px;
+}
+
+.command-snippet code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
 .offer-card a,
 .project-grid a {
   color: var(--accent);
