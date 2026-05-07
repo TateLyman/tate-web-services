@@ -563,6 +563,13 @@ footer a {
   box-shadow: var(--shadow);
 }
 
+.tool-logo {
+  border-radius: 8px;
+  height: 58px;
+  margin-bottom: 18px;
+  width: 58px;
+}
+
 .terminal-output {
   background: #17201c;
   border-radius: 8px;
