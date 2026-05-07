@@ -1,0 +1,26 @@
+[
+  {
+    "business": "VibeMarketplace",
+    "to": "vibemarketplace0@gmail.com",
+    "subject": "Pre-listing safety check for vibe-coded startups",
+    "body": "Hi VibeMarketplace team,\n\nI saw that VibeMarketplace helps founders sell vibe-coded projects with revenue verification and buyer transparency. With today's public coverage around AI-built apps exposing data, a lightweight pre-listing safety check could be useful for sellers before they show a project to buyers.\n\nI put together a small $49 same-day exposure check for apps built with Lovable, Bolt, Replit, Cursor, v0, Base44, Supabase, Firebase, and Stripe:\nhttps://tatelyman.github.io/tate-web-services/vibe-leak-check.html\n\nThe check is defensive only: apps the founder controls, normal-flow review, repo/config/log review if provided, no unauthorized testing. It looks for obvious public data paths, exposed client-side secrets, auth boundaries, Supabase/Firebase rule mistakes, Stripe/webhook mismatches, and deploy config problems.\n\nIf useful, I can give you a short checklist or landing-page blurb you can forward to sellers. I can also handle a small number of discounted checks for VibeMarketplace users if you want to test demand first.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "VibeCoded Startups",
+    "to": "biasinovschi@gmail.com",
+    "subject": "Safety checklist for vibe-coded startup listings",
+    "body": "Hi,\n\nI saw VibeCoded Startups and the paid listing flow for founders showcasing vibe-coded projects. With today's coverage around AI-built apps exposing sensitive data, a simple safety checklist before submission could help founders avoid listing apps with obvious public data or auth issues.\n\nI put together a $49 same-day exposure check here:\nhttps://tatelyman.github.io/tate-web-services/vibe-leak-check.html\n\nIt is defensive only: apps the founder controls, normal-flow review, repo/config/log review if provided, no unauthorized testing. It checks the common failure points in Lovable, Bolt, Replit, Cursor, v0, Base44, Supabase, Firebase, and Stripe projects.\n\nIf useful, I can write a short checklist you can include in the submission process or offer a small discount for your listed founders while we test whether people want it.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "EdInPC",
+    "to": "contact@edinpc.com",
+    "subject": "Overflow exposure checks for vibe-coded MVPs",
+    "body": "Hi Ed,\n\nI saw your fractional CTO/CPO service for nontechnical founders with vibe-coded MVPs. Since many prospects probably need a fast technical sanity check before they are ready for deeper CTO help, I wanted to offer lightweight overflow capacity for the first pass.\n\nI built a $49 same-day exposure check focused on the obvious production risks in Lovable, Bolt, Replit, Cursor, v0, Base44, Supabase, Firebase, and Stripe projects:\nhttps://tatelyman.github.io/tate-web-services/vibe-leak-check.html\n\nIt stays defensive: apps the founder controls, normal-flow review, repo/config/log review if provided, no unauthorized testing. The output is ranked risk notes and the smallest next fix path.\n\nIf you ever get small prospects who need a quick repo/app check before a bigger engagement, I can handle those under your review or send a concise report back to you.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "VIBES.COMPANY",
+    "to": "bh@buysidedesign.com",
+    "subject": "Defensive exposure checks for vibe-coded finance apps",
+    "body": "Hi Brenna,\n\nI saw VIBES.COMPANY and the Claude-native vibe coding work for finance, investor portals, and fund technology. That is a strong wedge, and it also has a higher bar for access control, data boundaries, and handoff discipline.\n\nI put together a narrow same-day exposure check for AI-built apps:\nhttps://tatelyman.github.io/tate-web-services/vibe-leak-check.html\n\nIt is not a broad pentest and not unauthorized probing. It is a defensive pass on apps the owner controls: public data paths, client-side secrets, auth boundaries, Supabase/Firebase rules, Stripe/webhook edges, and deploy configuration. For finance-facing projects, even a lightweight pre-handoff checklist could catch issues before they become client risk.\n\nIf you ever need overflow help on a lower-risk checklist pass or want a junior second set of eyes under review, I can take small scoped pieces and return concise notes.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  }
+]

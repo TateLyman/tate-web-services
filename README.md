@@ -14,6 +14,7 @@ npx serve .
 
 - `index.html` - main sales-facing portfolio page
 - `ai-app-rescue.html` - AI-built app rescue and production cleanup sales page
+- `vibe-leak-check.html` - same-day exposure check page for AI-built apps
 - `repair-pass.html` - fixed-scope website repair pass sales page
 - `example-report.html` - sample repair-pass checklist deliverable
 - `maintenance.html` - recurring website care plan page
@@ -41,7 +42,7 @@ The script reads `outreach/lead-tracker.csv` and writes:
 
 The front-door offer is intentionally concrete:
 
-- $99 AI app risk check
+- $49 AI app exposure check
 - $299+ AI app rescue sprint
 - $500+ MCP or agent connector
 
