@@ -520,6 +520,51 @@ footer a {
   padding: clamp(52px, 8vw, 98px) clamp(18px, 5vw, 70px) clamp(36px, 6vw, 72px);
 }
 
+.page-hero {
+  align-items: center;
+  display: grid;
+  min-height: min(680px, calc(100vh - 66px));
+  padding: clamp(52px, 8vw, 98px) clamp(18px, 5vw, 70px) clamp(36px, 6vw, 72px);
+}
+
+.rescue-hero {
+  background:
+    linear-gradient(90deg, rgba(248, 245, 239, 0.94), rgba(248, 245, 239, 0.72)),
+    linear-gradient(135deg, rgba(13, 110, 87, 0.16), rgba(37, 60, 120, 0.13), rgba(217, 79, 48, 0.12));
+  border-bottom: 1px solid var(--line);
+}
+
+.rescue-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rescue-grid article {
+  background: var(--surface);
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.rescue-grid span {
+  color: var(--accent-2);
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.rescue-grid p {
+  color: var(--muted);
+}
+
+.trend-section,
+.price-section {
+  background: #f3f5ee;
+  border-block: 1px solid var(--line);
+}
+
 .repair-summary {
   background: var(--surface);
   border: 1px solid rgba(23, 32, 28, 0.1);
@@ -861,6 +906,7 @@ footer a {
   .audit-preview-grid,
   .demo-grid,
   .project-grid,
+  .rescue-grid,
   .repair-grid,
   .deliverable-list,
   .care-grid,
@@ -891,6 +937,7 @@ footer a {
   .audit-preview-grid,
   .demo-grid,
   .project-grid,
+  .rescue-grid,
   .repair-hero,
   .repair-grid,
   .deliverable-list,

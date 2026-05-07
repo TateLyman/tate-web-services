@@ -1,6 +1,6 @@
 # Tate Lyman Web Services
 
-Static portfolio and service storefront for selling fast website fixes, one-page business sites, and small automations.
+Static portfolio and service storefront for selling AI-built app rescue, production cleanup, website fixes, and small automations.
 
 ## Local preview
 
@@ -13,6 +13,7 @@ npx serve .
 ## Files
 
 - `index.html` - main sales-facing portfolio page
+- `ai-app-rescue.html` - AI-built app rescue and production cleanup sales page
 - `repair-pass.html` - fixed-scope website repair pass sales page
 - `example-report.html` - sample repair-pass checklist deliverable
 - `maintenance.html` - recurring website care plan page
@@ -38,10 +39,16 @@ The script reads `outreach/lead-tracker.csv` and writes:
 
 ## Positioning
 
-The offer is intentionally concrete:
+The front-door offer is intentionally concrete:
+
+- $99 AI app risk check
+- $299+ AI app rescue sprint
+- $500+ MCP or agent connector
+
+The website offers stay available as secondary products:
 
 - $150 website repair pass
 - $350 one-page business site
-- $250+ automation or dashboard
+- $49+ monthly website care
 
 The demo pages are sample concepts, not claimed client work.
