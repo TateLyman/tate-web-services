@@ -1,0 +1,8 @@
+[
+  {
+    "business": "CheckVibe",
+    "to": "support@checkvibe.dev",
+    "subject": "Remediation overflow for CheckVibe findings",
+    "body": "Hi CheckVibe team,\n\nI saw CheckVibe's scanner, MCP server, and affiliate program for vibe-coded app security. The scanner side is strong, but a lot of nontechnical founders will still get stuck after they see a finding and need someone to turn the report into an actual fix.\n\nI built a small manual exposure-check and rescue offer around that gap:\nhttps://tatelyman.github.io/tate-web-services/vibe-leak-check.html\nSample report format: https://tatelyman.github.io/tate-web-services/vibe-exposure-sample.html\n\nI am interested in a practical partner setup: I can refer founders to CheckVibe for scanning/monitoring, and if users need low-cost remediation after a report, I can take scoped cleanup tasks under a clear boundary: authorized apps only, normal-flow/repo/config review, no invasive testing, concise fix notes or patch work.\n\nA good first experiment could be a small \"need help fixing this?\" referral path for users who get high/critical findings but do not know how to apply the AI fix prompts safely.\n\nIf that is useful, I can start with a few discounted remediation slots and report back on what users actually ask for.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  }
+]
