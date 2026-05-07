@@ -1,6 +1,6 @@
 # Site Audit Notes
 
-Generated from `lead-tracker.csv` on 2026-05-07T17:45:56.316Z.
+Generated from `lead-tracker.csv` on 2026-05-07T18:01:52.351Z.
 
 ## Ammon Corp
 
@@ -117,4 +117,104 @@ Priority notes:
 - Add proof: reviews, project photos, credentials, or before/after examples.
 - Add a short FAQ for timing, pricing, service area, and what happens after contact.
 - Add one clear H1 headline that explains the offer.
+
+## Patriot Landscape Co. LLC
+
+- Category: Landscaping
+- Website: https://www.patriotlcl.com/
+- Fetch status: 200 OK
+- Title: Patriot Landscape Co. LLC - Lawn Care &amp; Landscaping
+- Meta description: Milwaukee Lawn Care and Landscaping Services
+- HTML size: 42 KB
+- Contact signals: Contact Us (https://www.patriotlcl.com/contact-us/); 262-853-3631 (tel:+12628533631); 262-853-3631 (tel:262-853-3631); https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.patriotlcl.com%2F&amp;linkname=Patriot%20Landscape%20Co.%20LLC (https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.patriotlcl.com%2F&amp;linkname=Patriot%20Landscape%20Co.%20LLC); Call Now Button (tel:262-853-3631)
+- Phones found on page: 262-853-3631
+
+Priority notes:
+- Add a useful meta description for search previews.
+- Add proof: reviews, project photos, credentials, or before/after examples.
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
+
+## Gardenia Landscaping Service LLC
+
+- Category: Landscaping
+- Website: https://gardenialandscapingsvc.com/contact
+- Fetch status: 200 OK
+- Title: Contact | Gardenia Landscaping Service LLC
+- Meta description: Transform your outdoor space into a stunning oasis with Gardenia Landscaping Service LLC. Our expert team of landscapers is dedicated to bringing your vision to life, creating a beautiful and functional landscape that will leave a lasting impression.
+
+Based in the heart of WI 53215, EE. UU., Gardenia Landscaping Service LLC is a leader in the landscaping industry. With years of experience and a passion for creating unique and personalized spaces, we are committed to delivering exceptional results for our clients.
+
+At Gardenia Landscaping Service LLC, we understand that every project is different and requires a personalized approach. That
+- HTML size: 1378 KB
+- Contact signals: Contact (/contact); +1414-380-2034 (tel:414-380-2034); +1 414-380-2034 (tel:+1414-380-2034); Phone +1 414-380-2034 (tel:+1414-380-2034); Vivar616@gmail.com (mailto:Vivar616@gmail.com)
+- Emails found on page: Vivar616@gmail.com
+- Phones found on page: +1414-380-2034; +1 414-380-2034; 414-380-2034
+
+Priority notes:
+- Reduce page weight by compressing images and removing extra scripts.
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
+
+## Metropolitan Maintenance and Landscaping
+
+- Category: Landscaping
+- Website: https://www.mm-l.com/
+- Fetch status: 200 OK
+- Title: Lawn &amp; Landscaping Company | Milwaukee, WI
+- Meta description: Metropolitan Maintenance and Landscaping in Milwaukee, WI, provides expert lawn care services and more. Call us today at 414-546-9191 for complete details.
+- HTML size: 120 KB
+- Contact signals: 414-546-9191 (tel:414-546-9191); https://www.facebook.com/profile.php?id=100092295743802 (https://www.facebook.com/profile.php?id=100092295743802); Contact Us (/lawn-care-quote); Call Today (/lawn-care-quote); Schedule An Appointment (https://go.thryv.com/site/yu96w4x8dgbuisn1/online-scheduling)
+- Emails found on page: mmljoe@yahoo.com; your@email.com
+- Phones found on page: 414-546-9191; 414-234-9005; 414-546-9198
+
+Priority notes:
+- Add proof: reviews, project photos, credentials, or before/after examples.
+- Lazy-load noncritical images and compress large visual assets.
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
+
+## Tutor You
+
+- Category: Tutoring
+- Website: https://tutoryou.org/contact/
+- Fetch status: 200 OK
+- Title: Contact - Tutor You
+- HTML size: 43 KB
+- Contact signals: https://www.facebook.com/nan.cath (https://www.facebook.com/nan.cath); Contact (https://tutoryou.org/contact/); nancy@tutoryou.org (mailto:nancy@tutoryou.org)
+- Emails found on page: nancy@tutoryou.org
+- Phones found on page: 678-340-9178; 414-255-7542
+
+Priority notes:
+- Add a useful meta description for search previews.
+- Lazy-load noncritical images and compress large visual assets.
+
+## GDL Detailing
+
+- Category: Auto detailing
+- Website: https://gdldetailing.wixsite.com/gdldetailing/visit
+- Fetch status: 200 OK
+- Title: VISIT | Gdldetailing
+- HTML size: 442 KB
+- Contact signals: Call Us (tel:4147911119); gdladetailing@gmail.com (mailto:gdladetailing@gmail.com); https://www.facebook.com/GDLDetailing/ (https://www.facebook.com/GDLDetailing/)
+- Emails found on page: gdladetailing@gmail.com; 605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com; dd0a55ccb8124b9c9d938e3acf41f8aa@sentry.wixpress.com; c183baa23371454f99f417f6616b724d@sentry.wixpress.com
+- Phones found on page: 414-791-1119
+
+Priority notes:
+- Add a useful meta description for search previews.
+- Add proof: reviews, project photos, credentials, or before/after examples.
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
+
+## DaWorks Detailing
+
+- Category: Auto detailing
+- Website: https://daworksdetailing.com/
+- Fetch status: 200 OK
+- Title: Daworks car wash and Detailing
+- HTML size: 101 KB
+- Contact signals: Service &amp; Booking (/service-%26-booking); BOOK APPOINTMENT (/service-%26-booking); daworks.detailing@gmail.com (mailto:daworks.detailing@gmail.com); 414-719-5309 (tel:4147195309)
+- Emails found on page: info@indiantypefoundry.com; hi@typemade.mx; daworks.detailing@gmail.com
+- Phones found on page: 414-719-5309
+
+Priority notes:
+- Add a useful meta description for search previews.
+- Add proof: reviews, project photos, credentials, or before/after examples.
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
 
