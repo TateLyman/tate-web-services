@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "audit:leads": "node scripts/audit-leads.mjs",
-    "audit:reports": "node scripts/render-private-reports.mjs"
+    "audit:reports": "node scripts/render-private-reports.mjs",
+    "outreach:render": "node scripts/render-outreach-messages.mjs"
   }
 }
