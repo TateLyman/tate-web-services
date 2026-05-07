@@ -700,6 +700,16 @@ footer a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.report-grid article {
+  background: var(--surface);
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  padding: 22px;
+}
+
+.report-grid article p {
+  color: var(--muted);
+}
+
 .report-card {
   background: var(--surface);
   border-bottom: 1px solid rgba(23, 32, 28, 0.1);
@@ -739,13 +749,23 @@ footer a {
   padding: 20px;
 }
 
-.report-summary span {
+.report-summary article {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+}
+
+.report-summary span,
+.severity {
   color: rgba(255, 255, 255, 0.68);
   display: block;
   font-size: 0.78rem;
   font-weight: 800;
   margin-bottom: 4px;
   text-transform: uppercase;
+}
+
+.severity {
+  color: var(--accent-2);
 }
 
 .audit-hero {

@@ -15,6 +15,7 @@ npx serve .
 - `index.html` - main sales-facing portfolio page
 - `ai-app-rescue.html` - AI-built app rescue and production cleanup sales page
 - `vibe-leak-check.html` - same-day exposure check page for AI-built apps
+- `vibe-exposure-sample.html` - sample exposure-check deliverable
 - `repair-pass.html` - fixed-scope website repair pass sales page
 - `example-report.html` - sample repair-pass checklist deliverable
 - `maintenance.html` - recurring website care plan page

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample Vibe-Coded App Exposure Report | Tate Lyman</title>
+    <meta name="description" content="Sample deliverable for a same-day AI app exposure check.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tate Lyman home">
+        <span class="brand-mark">TL</span>
+        <span>Tate Lyman</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="vibe-leak-check.html">Exposure check</a>
+        <a href="ai-app-rescue.html">AI app rescue</a>
+        <a class="nav-cta" href="mailto:lymantate2@gmail.com?subject=Vibe-coded%20app%20exposure%20check">Start</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="report-header">
+        <div>
+          <p class="eyebrow">Sample deliverable</p>
+          <h1>Vibe-coded app exposure check.</h1>
+          <p class="hero-subtitle">
+            Example report for a fictional AI-built booking app. This shows the format, not a real client finding.
+          </p>
+        </div>
+        <a class="button primary" href="vibe-leak-check.html">Back to offer</a>
+      </section>
+
+      <section class="section report-summary">
+        <article>
+          <span>Result</span>
+          <h3>Launch risk: medium-high</h3>
+          <p>The app can be demoed, but payment and user-data boundaries need fixes before sending traffic.</p>
+        </article>
+        <article>
+          <span>Scope</span>
+          <h3>Normal-flow review</h3>
+          <p>Public app, read-only repo access, Vercel logs, Supabase config screenshots, and Stripe test-mode settings.</p>
+        </article>
+        <article>
+          <span>Next move</span>
+          <h3>Fix auth/data first</h3>
+          <p>Do not spend on design or ads until cross-user reads and webhook trust boundaries are cleaned up.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Findings</p>
+          <h2>Ranked by business risk and fix order.</h2>
+        </div>
+        <div class="report-grid">
+          <article>
+            <span class="severity high">High</span>
+            <h3>Dashboard query can return other users' bookings</h3>
+            <p><strong>Evidence:</strong> The dashboard fetch uses a client-side filter after selecting recent bookings. The database rule does not enforce owner filtering.</p>
+            <p><strong>Impact:</strong> A logged-in customer could see another customer's appointment metadata if the route loads enough rows.</p>
+            <p><strong>Fix:</strong> Add an owner check in the database policy and make the query require the authenticated user ID server-side.</p>
+          </article>
+          <article>
+            <span class="severity high">High</span>
+            <h3>Stripe webhook accepts unsigned local test payloads</h3>
+            <p><strong>Evidence:</strong> The webhook route parses the body and updates subscription status before verifying the Stripe signature.</p>
+            <p><strong>Impact:</strong> Subscription access can drift from payment state, especially when moving from preview to production.</p>
+            <p><strong>Fix:</strong> Verify the webhook signature before any mutation and store idempotency/event IDs.</p>
+          </article>
+          <article>
+            <span class="severity medium">Medium</span>
+            <h3>Production deploy is missing two server-only variables</h3>
+            <p><strong>Evidence:</strong> Vercel logs show fallback behavior for the mailer key and webhook secret.</p>
+            <p><strong>Impact:</strong> Confirmation emails fail silently and payment events cannot be trusted.</p>
+            <p><strong>Fix:</strong> Add production env vars, remove preview fallbacks, and fail closed when a required secret is absent.</p>
+          </article>
+          <article>
+            <span class="severity medium">Medium</span>
+            <h3>Admin page is hidden in the UI but not protected</h3>
+            <p><strong>Evidence:</strong> The route is not linked from nav, but direct navigation loads the admin shell for any logged-in user.</p>
+            <p><strong>Impact:</strong> Hidden routes are discoverable and should not be used as permission boundaries.</p>
+            <p><strong>Fix:</strong> Add server-side role checks and return a hard 403 for non-admin users.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section price-section">
+        <div class="section-heading">
+          <p class="eyebrow">Fix order</p>
+          <h2>Smallest useful sprint.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Lock data access</h3>
+            <p>Add database owner checks, server-side user scoping, and direct-route tests for customer/admin views.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Verify payments</h3>
+            <p>Move webhook verification before mutation, add event idempotency, and test checkout/subscription transitions.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Clean deploy config</h3>
+            <p>Set required production variables and remove preview fallbacks that hide broken integrations.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="eyebrow">Want this format for your app?</p>
+          <h2>Send the app you control and the stack you used.</h2>
+        </div>
+        <a class="button primary" href="mailto:lymantate2@gmail.com?subject=Vibe-coded%20app%20exposure%20check">Request check</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>Sample report</span>
+      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
+      <a href="vibe-leak-check.html">Exposure check</a>
+      <a href="ai-app-rescue.html">AI app rescue</a>
+    </footer>
+  </body>
+</html>
