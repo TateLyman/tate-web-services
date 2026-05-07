@@ -78,8 +78,13 @@ For a first client with no established trust, avoid unpaid large work.
 - Best: 50% before implementation, 50% before launch/handoff.
 - Acceptable for first tiny job: build a private preview first, then collect payment before handing over editable files or production changes.
 - Avoid: doing a full rebuild before payment.
+- PayPal: https://paypal.me/glidelocal
+- Payment page: https://tatelyman.github.io/tate-web-services/payments.html
+- Common links after scope is confirmed: $49 exposure check `https://paypal.me/glidelocal/49`, $99 manual risk check `https://paypal.me/glidelocal/99`, $150 repair pass `https://paypal.me/glidelocal/150`, $299 rescue sprint deposit `https://paypal.me/glidelocal/299`.
 
 If the user does not have a payment account ready, ask them to pick the method they can legally use before quoting a live project.
+
+For any platform that requires age 18 or a formal contracting party, ask Tate for the parent/guardian or business contact details before applying, signing, or accepting paid work there.
 
 ## Follow-Up Rules
 
