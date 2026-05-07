@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
   <title id="title">Shipcheck CLI logo</title>
-  <desc id="desc">A dark square mark with a check path and SC initials.</desc>
+  <desc id="desc">A dark square mark with a check path.</desc>
   <rect width="256" height="256" rx="32" fill="#17201c"/>
-  <path d="M64 130.5 107.5 174 195 82" fill="none" stroke="#d94f30" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M47 55h162v146H47z" fill="none" stroke="#f8f5ef" stroke-width="10" stroke-linejoin="round" opacity=".88"/>
-  <text x="128" y="221" fill="#f8f5ef" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle" letter-spacing="2">SC</text>
+  <path d="M56 74h144v144H56z" fill="none" stroke="#f8f5ef" stroke-width="10" stroke-linejoin="round" opacity=".9"/>
+  <path d="M66 139 106 179 194 86" fill="none" stroke="#d94f30" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
