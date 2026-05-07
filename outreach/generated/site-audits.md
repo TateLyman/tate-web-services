@@ -1,6 +1,6 @@
 # Site Audit Notes
 
-Generated from `lead-tracker.csv` on 2026-05-07T18:01:52.351Z.
+Generated from `lead-tracker.csv` on 2026-05-07T18:12:58.927Z.
 
 ## Ammon Corp
 
@@ -217,4 +217,74 @@ Priority notes:
 - Add a useful meta description for search previews.
 - Add proof: reviews, project photos, credentials, or before/after examples.
 - Add a short FAQ for timing, pricing, service area, and what happens after contact.
+
+## Luxe Detail Co.
+
+- Category: Auto detailing
+- Website: https://www.luxedetailco.com/
+- Fetch status: 200 OK
+- Title: Luxe Detail Co. | Auto detailer in Milwaukee
+- Meta description: Luxe Detail Co. is a mobile auto detailer based in Milwaukee. We come to you and offer full-service auto detailing, polishing and more at an affordable price.
+- HTML size: 488 KB
+- Contact signals: Contact Us (https://www.luxedetailco.com/contact-us); BOOK ONLINE (https://www.luxedetailco.com/services); https://www.facebook.com/share/1JdUcTxCyW/?mibextid=wwXIfr (https://www.facebook.com/share/1JdUcTxCyW/?mibextid=wwXIfr); luxedetailcomke@gmail.com (mailto:luxedetailcomke@gmail.com)
+- Emails found on page: luxedetailcomke@gmail.com; 605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com; 8c4075d5481d476e945486754f783364@sentry.io; 18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com; dd0a55ccb8124b9c9d938e3acf41f8aa@sentry.wixpress.com
+- Phones found on page: (414) 333-5879
+
+Priority notes:
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
+- Add one clear H1 headline that explains the offer.
+
+## MH Landscaping LLC
+
+- Category: Landscaping
+- Website: https://mhlandscapingllc.net/contact
+- Fetch status: 200 OK
+- Title: MH Landscaping LLC | Contact
+- Meta description: At MH Landscaping LLC, we believe in creating outdoor spaces that are not only beautiful, but also functional and sustainable. Our team of experienced professionals is dedicated to providing top-notch landscape design, installation, and maintenance services to our clients. By utilizing the latest techniques and tools, we strive to deliver superior results that exceed our clients
+- HTML size: 485 KB
+- Contact signals: contact (/contact); Get A Quote Get A Quote (/contact); 262-745-6389 (tel:262-745-6389); mhlawncare0807@gmail.com (mailto:mhlawncare0807@gmail.com); https://www.facebook.com/people/Mhlanscaping-LLC/100084034274322/?ref=py_c (https://www.facebook.com/people/Mhlanscaping-LLC/100084034274322/?ref=py_c)
+- Emails found on page: mhlawncare0807@gmail.com
+- Phones found on page: 262-745-6389
+
+Priority notes:
+- Add a short FAQ for timing, pricing, service area, and what happens after contact.
+
+## Endless Detailing
+
+- Category: Auto detailing
+- Website: https://www.endlessdetailingwi.com/
+- Fetch status: 200 OK
+- Title: Auto Detailing, Ceramic Coating &amp; Tint | Endless Detailing
+- Meta description: Revitalize your ride with Endless Detailing! Expert car detailing in Hales Corners, WI – paint restoration, ceramic coatings, and tinting services. Call now!
+- HTML size: 216 KB
+- Contact signals: Contact (/contact); BOOK YOUR APPOINTMENT (/contact); (414) 399-0538 (tel:(414) 399-0538); Endlessdetails1@gmail.com (mailto:Endlessdetails1@gmail.com); https://facebook.com/TheEndlessDetailing (https://facebook.com/TheEndlessDetailing)
+- Emails found on page: Endlessdetails1@gmail.com; endlessdetails1@gmail.com
+- Phones found on page: (414) 399-0538
+
+Priority notes:
+- Lazy-load noncritical images and compress large visual assets.
+
+## Best Handyman
+
+- Category: Handyman
+- Website: https://best-handyman.com/contact-us/
+- Fetch status: fetch_failed (fetch failed)
+
+Priority notes:
+- Manual review needed. Automated scan did not find a clear high-confidence issue.
+
+## Arbor Stone Landscape & Design LLC
+
+- Category: Landscaping
+- Website: https://arborstonelandscapes.net/contact-us/
+- Fetch status: 200 OK
+- Title: Contact Arbor Stone Landscape & Design LLC | (414) 687-5553
+- Meta description: Arbor Stone Landscape & Design LLC is the easy choice when you are looking for a landscaping company. Visit our website to learn more about us.
+- HTML size: 80 KB
+- Contact signals: Contact (https://arborstonelandscapes.net/contact-us/); (414) 687-5553 (tel:+14146875553); Call Us (tel:+14146875553); Message Us (/contact-us/)
+- Emails found on page: arborstonelandscape@gmail.com
+- Phones found on page: (414) 687-5553
+
+Priority notes:
+- Manual review needed. Automated scan did not find a clear high-confidence issue.
 

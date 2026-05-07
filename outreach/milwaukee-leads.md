@@ -24,6 +24,18 @@ Use only if the current site feels thin, old, or hard to scan after manual revie
 | A Right Path Wellness | Wellness | https://arightpath.com/ | Erica@ARightPath.com, 414-651-2850 | Wellness site can benefit from calm service cards, FAQ, and appointment path. Avoid making medical claims. |
 | Milwaukee Handyman | Handyman | https://www.milwaukee-handyman.com/contact/ | johnz@milwaukee-handyman.com, 262-439-8620 | Established business. Only approach if manual review finds concrete mobile/contact improvements. |
 
+## Priority 3: Fresh Leads Found 2026-05-07
+
+These are not contacted yet. Use the repair-pass page as the landing link after manual verification.
+
+| Business | Category | Website | Public Contact | Angle |
+| --- | --- | --- | --- | --- |
+| Luxe Detail Co. | Auto detailing | https://www.luxedetailco.com/ | luxedetailcomke@gmail.com, 414-333-5879 | Booking-first detailer site. Check mobile first screen, search preview, and proof placement. |
+| MH Landscaping LLC | Landscaping | https://mhlandscapingllc.net/contact | mhlawncare0807@gmail.com, 262-745-6389 | Landscaping site with quote path. Check duplicated navigation, contact clarity, and page weight. |
+| Endless Detailing | Auto detailing | https://www.endlessdetailingwi.com/ | Endlessdetails1@gmail.com, 414-399-0538 | Strong category with visible placeholder content in page scan; good cleanup-pass angle if still visible. |
+| Best Handyman | Handyman | https://best-handyman.com/contact-us/ | besthandymanmke@gmail.com | Handyman estimate path. Verify mobile contact flow before outreach. |
+| Arbor Stone Landscape & Design LLC | Landscaping | https://arborstonelandscapes.net/contact-us/ | arborstonelandscape@gmail.com, 414-687-5553 | Template-heavy landscaping/hardscape site. Check title/meta, service hierarchy, and contact path. |
+
 ## Manual Check Script
 
 Before contacting, open the site on mobile width and write three facts:
@@ -46,3 +58,8 @@ Lead with the $150 repair pass, not a full rebuild. It is easier to buy and easi
 - https://www.prestigedetailingmke.com/contact
 - https://arightpath.com/
 - https://www.milwaukee-handyman.com/contact/
+- https://www.luxedetailco.com/
+- https://mhlandscapingllc.net/contact
+- https://www.endlessdetailingwi.com/
+- https://best-handyman.com/contact-us/
+- https://arborstonelandscapes.net/contact-us/

@@ -4,11 +4,13 @@ Updated: 2026-05-07.
 
 ## Best Immediate Move
 
-Use the new free audit page as the first touch instead of leading with a price:
+Use the repair-pass page as the strongest buyer link and the free audit as the low-friction fallback:
+
+https://tatelyman.github.io/tate-web-services/repair-pass.html
 
 https://tatelyman.github.io/tate-web-services/audit.html
 
-Pitch: "I ran a quick scan and found a few fixable items. Here is a free audit page if you want to score it yourself. I can do the cleanup as a fixed $150 repair pass."
+Pitch: "I ran a quick scan and found a few fixable items. I can do the cleanup as a fixed $150 repair pass, and I also made a free audit page if you want to score it yourself."
 
 ## Highest-Priority Leads
 
@@ -37,6 +39,7 @@ Pitch: "I ran a quick scan and found a few fixable items. Here is a free audit p
 - A Right Path Wellness: good contact path; pitch must avoid medical claims and focus only on site clarity.
 - Two Men & A Ladder: site already has title/description/contact signals; manual review needed before outreach.
 - Ammon Corp and Ibarra Auto Detailing: automated fetch failed, so manually inspect before using them.
+- Luxe Detail Co., MH Landscaping LLC, Endless Detailing, Best Handyman, and Arbor Stone: fresh leads added on 2026-05-07. Audit and manually verify before contacting.
 
 ## Manual Send Checklist
 

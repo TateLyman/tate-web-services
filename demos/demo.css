@@ -167,6 +167,101 @@ h2 {
   min-height: 220px;
 }
 
+.landscape-demo {
+  --accent: #2f6d3d;
+  --accent-2: #c96a34;
+  --accent-3: #245c79;
+}
+
+.landscape-visual .visual-photo {
+  background:
+    linear-gradient(180deg, #9fd3e7 0 44%, #7cad57 45% 100%);
+  min-height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.landscape-visual .visual-photo span {
+  position: absolute;
+}
+
+.sun {
+  background: #ffd25a;
+  border-radius: 999px;
+  box-shadow: 0 0 0 18px rgba(255, 210, 90, 0.16);
+  height: 54px;
+  right: 34px;
+  top: 30px;
+  width: 54px;
+}
+
+.yard-line {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  height: 10px;
+  transform: rotate(-8deg);
+}
+
+.line-a {
+  bottom: 74px;
+  left: -20px;
+  width: 72%;
+}
+
+.line-b {
+  bottom: 108px;
+  left: 14px;
+  width: 62%;
+}
+
+.line-c {
+  bottom: 42px;
+  right: -16px;
+  width: 70%;
+}
+
+.plant {
+  background: #285b39;
+  border-radius: 999px 999px 10px 10px;
+  bottom: 82px;
+  height: 64px;
+  width: 42px;
+}
+
+.plant-a {
+  left: 48px;
+}
+
+.plant-b {
+  left: 104px;
+  transform: scale(0.82);
+}
+
+.path-stone {
+  background: #d8d0bd;
+  border: 2px solid rgba(23, 28, 27, 0.12);
+  border-radius: 45% 55% 48% 52%;
+  height: 40px;
+  width: 72px;
+}
+
+.stone-a {
+  bottom: 28px;
+  left: 44%;
+}
+
+.stone-b {
+  bottom: 54px;
+  left: 58%;
+  transform: rotate(-8deg) scale(0.9);
+}
+
+.stone-c {
+  bottom: 86px;
+  left: 70%;
+  transform: rotate(10deg) scale(0.78);
+}
+
 .visual-body {
   padding: 22px;
 }

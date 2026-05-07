@@ -13,6 +13,7 @@ npx serve .
 ## Files
 
 - `index.html` - main sales-facing portfolio page
+- `repair-pass.html` - fixed-scope website repair pass sales page
 - `audit.html` - free website audit lead magnet
 - `audit.js` - browser-only audit scoring logic
 - `styles.css` - main site styles

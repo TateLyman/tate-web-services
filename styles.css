@@ -425,7 +425,7 @@ h3 {
 }
 
 .demo-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 18px;
 }
 
@@ -510,6 +510,88 @@ footer {
 footer a {
   color: var(--ink);
   font-weight: 750;
+}
+
+.repair-hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(26px, 5vw, 70px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.34fr);
+  padding: clamp(52px, 8vw, 98px) clamp(18px, 5vw, 70px) clamp(36px, 6vw, 72px);
+}
+
+.repair-summary {
+  background: var(--surface);
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.repair-summary div {
+  background: #f8faf6;
+  display: grid;
+  gap: 4px;
+  padding: 20px;
+}
+
+.repair-summary span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.repair-summary strong {
+  font-size: 1.35rem;
+}
+
+.repair-band {
+  background: #eef3ea;
+  border-block: 1px solid var(--line);
+}
+
+.repair-grid,
+.deliverable-list {
+  display: grid;
+  gap: 16px;
+}
+
+.repair-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.deliverable-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.repair-grid article,
+.deliverable-list article {
+  background: var(--surface);
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.repair-grid span {
+  color: var(--accent-2);
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.repair-grid p,
+.deliverable-list p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.deliverable-list strong {
+  display: block;
+  margin-bottom: 8px;
 }
 
 .audit-hero {
@@ -670,6 +752,8 @@ footer a {
   .audit-preview-grid,
   .demo-grid,
   .project-grid,
+  .repair-grid,
+  .deliverable-list,
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -695,6 +779,9 @@ footer a {
   .audit-preview-grid,
   .demo-grid,
   .project-grid,
+  .repair-hero,
+  .repair-grid,
+  .deliverable-list,
   .steps {
     grid-template-columns: 1fr;
   }
