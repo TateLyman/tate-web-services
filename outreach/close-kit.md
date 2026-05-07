@@ -47,6 +47,20 @@ A full one-page rebuild starts at $350 if the scope is simple: home page, servic
 The fastest path is still to start with the $150 repair pass unless the current site is too hard to edit. That keeps the first project low-risk and gives us a clear before/after.
 ```
 
+### After a repair pass is accepted
+
+Use this after the client says yes to the first project.
+
+```text
+After the repair pass, there is an optional monthly care plan if you want small edits and checks handled without starting a new project each time.
+
+The smallest plan is $49/mo for minor edits, contact-flow checks, and a monthly note. Details are here:
+
+https://tatelyman.github.io/tate-web-services/maintenance.html
+
+No need to decide that now. The first step is just the repair pass.
+```
+
 ### Agency reply
 
 ```text
