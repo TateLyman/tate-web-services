@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "audit:leads": "node scripts/audit-leads.mjs"
+    "audit:leads": "node scripts/audit-leads.mjs",
+    "audit:reports": "node scripts/render-private-reports.mjs"
   }
 }
