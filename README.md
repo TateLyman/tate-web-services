@@ -13,10 +13,24 @@ npx serve .
 ## Files
 
 - `index.html` - main sales-facing portfolio page
+- `audit.html` - free website audit lead magnet
+- `audit.js` - browser-only audit scoring logic
 - `styles.css` - main site styles
 - `demos/` - sample landing pages for local business outreach
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - lead criteria and message templates
+- `scripts/audit-leads.mjs` - local lead audit script
+
+## Lead Audit Script
+
+```bash
+npm run audit:leads
+```
+
+The script reads `outreach/lead-tracker.csv` and writes:
+
+- `outreach/generated/site-audits.md`
+- `outreach/generated/site-audits.csv`
 
 ## Positioning
 

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Website Audit | Tate Lyman</title>
+    <meta name="description" content="Run a fast website audit for mobile clarity, contact flow, speed friction, trust signals, and conversion basics.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tate Lyman home">
+        <span class="brand-mark">TL</span>
+        <span>Tate Lyman</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#offers">Offers</a>
+        <a href="index.html#process">Process</a>
+        <a href="audit.html">Free audit</a>
+        <a class="nav-cta" href="mailto:lymantate2@gmail.com?subject=Website%20audit%20request">Start</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="audit-hero">
+        <div>
+          <p class="eyebrow">Free self-check</p>
+          <h1>Find the fastest website fixes before paying anyone.</h1>
+          <p class="hero-subtitle">
+            Answer a few plain questions about your site. You’ll get a score, a prioritized fix list, and an email draft if you want help cleaning it up.
+          </p>
+        </div>
+        <div class="audit-note">
+          <strong>Best for</strong>
+          <p>Local service businesses, solo operators, small shops, and teams that rely on calls, quote requests, booking links, or contact forms.</p>
+        </div>
+      </section>
+
+      <section class="audit-tool" aria-label="Website audit tool">
+        <form id="auditForm" class="audit-form">
+          <label>
+            Business or website
+            <input id="businessName" name="businessName" type="text" placeholder="Example: Lakefront Handyman Co.">
+          </label>
+
+          <label>
+            Website URL
+            <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https://example.com">
+          </label>
+
+          <fieldset>
+            <legend>Mobile and first impression</legend>
+            <label class="check-row"><input type="checkbox" name="score" value="12" data-fix="Make the first screen say what the business does, where it serves, and what action to take."> The first screen says what the business does.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="10" data-fix="Fix mobile spacing, font sizing, and button layout so the page is easy to scan on a phone."> The page is easy to read on a phone.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="8" data-fix="Add a clear service-area line near the top of the page."> The service area or location is obvious.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact and conversion</legend>
+            <label class="check-row"><input type="checkbox" name="score" value="12" data-fix="Add a prominent call, quote, or booking button above the fold and repeat it near the bottom."> A call, quote, or booking button is visible without scrolling.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="10" data-fix="Shorten the contact path: one simple form or one clear email/phone action."> Contacting the business takes one obvious step.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="8" data-fix="Add service cards or package sections that make the next step easier to choose."> Services or packages are easy to compare.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Trust and speed</legend>
+            <label class="check-row"><input type="checkbox" name="score" value="10" data-fix="Add proof: reviews, project photos, years in business, license/insurance notes, or guarantees."> The page has proof or trust signals.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="8" data-fix="Compress large images and remove extra scripts that slow the page down."> Images load quickly and do not feel oversized.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="7" data-fix="Add basic SEO text: page title, meta description, service terms, and local area language."> The page has useful local SEO language.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Follow-up value</legend>
+            <label class="check-row"><input type="checkbox" name="score" value="8" data-fix="Add a simple FAQ that answers pricing, timing, service area, and what happens after a request."> Common questions are answered before contact.</label>
+            <label class="check-row"><input type="checkbox" name="score" value="7" data-fix="Add a lightweight tracker or form flow so new leads do not get lost."> The business has a way to track leads after they come in.</label>
+          </fieldset>
+        </form>
+
+        <aside class="audit-results" aria-live="polite">
+          <div class="score-card">
+            <span id="scoreValue">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="scoreTitle">Audit not started</h2>
+          <p id="scoreSummary">Check the boxes that are already true. The missing items become your highest-value fix list.</p>
+          <div class="result-actions">
+            <button class="button primary" id="copyResults" type="button">Copy result</button>
+            <a class="button secondary" id="emailResults" href="mailto:lymantate2@gmail.com?subject=Website%20audit%20request">Email for help</a>
+          </div>
+          <div>
+            <h3>Priority fixes</h3>
+            <ol id="fixList" class="fix-list">
+              <li>Fill out the audit to generate a prioritized repair list.</li>
+            </ol>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <span>Milwaukee, WI</span>
+      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
+      <a href="https://github.com/TateLyman" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+    <script src="audit.js"></script>
+  </body>
+</html>

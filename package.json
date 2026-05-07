@@ -1,0 +1,9 @@
+{
+  "name": "tate-web-services",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit:leads": "node scripts/audit-leads.mjs"
+  }
+}
