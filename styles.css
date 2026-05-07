@@ -594,6 +594,90 @@ footer a {
   margin-bottom: 8px;
 }
 
+.report-hero {
+  padding: clamp(52px, 8vw, 98px) clamp(18px, 5vw, 70px) clamp(24px, 4vw, 42px);
+}
+
+.report-hero h1 {
+  max-width: 920px;
+}
+
+.report-shell {
+  padding-top: 0;
+}
+
+.report-header {
+  align-items: end;
+  background: var(--surface);
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+}
+
+.report-header span {
+  background: var(--soft);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 850;
+  padding: 8px 11px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.report-card {
+  background: var(--surface);
+  border-bottom: 1px solid rgba(23, 32, 28, 0.1);
+  border-left: 1px solid rgba(23, 32, 28, 0.1);
+  padding: 22px;
+}
+
+.report-card:last-child {
+  border-right: 1px solid rgba(23, 32, 28, 0.1);
+}
+
+.report-card.success {
+  background: #eef3ea;
+}
+
+.report-card ul {
+  color: var(--muted);
+  margin: 0;
+  padding-left: 20px;
+}
+
+.report-card li + li {
+  margin-top: 10px;
+}
+
+.report-summary {
+  background: #17201c;
+  border-radius: 0 0 8px 8px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.report-summary div {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+}
+
+.report-summary span {
+  color: rgba(255, 255, 255, 0.68);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
 .audit-hero {
   align-items: end;
   display: grid;
@@ -754,6 +838,8 @@ footer a {
   .project-grid,
   .repair-grid,
   .deliverable-list,
+  .report-grid,
+  .report-summary,
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -782,8 +868,16 @@ footer a {
   .repair-hero,
   .repair-grid,
   .deliverable-list,
+  .report-grid,
+  .report-summary,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .report-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .result-actions {
