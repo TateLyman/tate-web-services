@@ -1,0 +1,38 @@
+[
+  {
+    "business": "ShipMyAI",
+    "to": "launch@shipmyai.com",
+    "subject": "Overflow help for AI app launch sprints",
+    "body": "Hi ShipMyAI team,\n\nI saw your 72h production launch offer for AI-built apps. If you ever need overflow help on scoped pieces, I can take small production-cleanup tasks under your review: repo triage notes, auth/env checks, deploy debugging, Stripe webhook checks, Supabase/Firebase rule review, and before/after QA notes.\n\nI put the focused scope here: https://tatelyman.github.io/tate-web-services/ai-app-rescue.html\n\nI am not pitching to take over client strategy. The useful angle is lower-risk extra capacity for repetitive triage and focused fixes when a sprint has too many small blockers.\n\nIf helpful, send one sanitized sample task or stuck flow and I will reply with how I would scope it.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "HashBuilt",
+    "to": "contact@hashbuilt.com",
+    "subject": "Overflow support for AI-built app cleanup",
+    "body": "Hi HashBuilt team,\n\nI saw that you offer AI-built app cleanup and scaling for Bolt/Lovable/v0 prototypes. If you ever need an extra set of hands for scoped cleanup work, I can help with focused pieces under your review: deploy failures, auth redirects, env var mismatches, Stripe/webhook checks, database rule review, and QA notes for critical flows.\n\nMy focused rescue scope is here: https://tatelyman.github.io/tate-web-services/ai-app-rescue.html\n\nI am looking for small overflow tasks, not client ownership. A good fit would be a stuck flow, triage memo, or patch that is too small to pull a senior engineer away from higher-value work.\n\nIf useful, send one example task and I will reply with timing and a fixed estimate.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "AppUnstuck",
+    "to": "help@appunstuck.com",
+    "subject": "Small overflow help for AI app rescue work",
+    "body": "Hi AppUnstuck team,\n\nI saw your rescue service for Replit, Lovable, Bolt, Cursor, and similar AI-generated apps. If you ever need extra capacity on small scoped pieces, I can help with repo triage, deploy/env checks, auth flow debugging, Stripe/webhook checks, database rule review, and concise QA notes.\n\nI put my focused scope here: https://tatelyman.github.io/tate-web-services/ai-app-rescue.html\n\nThe fit I am aiming for is white-label overflow on repetitive triage or focused fixes, with your team keeping client ownership and final review.\n\nIf useful, send a sanitized stuck-flow example and I will reply with how I would approach and price it.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "AppStuck",
+    "to": "hello@appstuck.com",
+    "subject": "Overflow help for stuck AI-coded app projects",
+    "body": "Hi AppStuck team,\n\nI saw that you finish stuck AI-coded projects from Builder, Bolt, Lovable, Replit, FlutterFlow, Base44, and similar tools. If you ever need lower-risk overflow capacity, I can help with small scoped pieces under your review: triage notes, deploy debugging, auth/env issues, Stripe webhook checks, Supabase/Firebase rules, and critical-flow QA.\n\nMy focused scope is here: https://tatelyman.github.io/tate-web-services/ai-app-rescue.html\n\nI am not pitching to own client relationships. I am looking for small tasks where an extra developer can save your senior team time.\n\nIf helpful, send one example blocker and I will reply with timing and a fixed estimate.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "Afterbuild Labs",
+    "to": "hello@afterbuildlabs.com",
+    "subject": "Overflow support for AI app rescue audits",
+    "body": "Hi Afterbuild Labs team,\n\nI saw your AI app rescue work and the recent research around why AI-built apps break. If you ever need overflow support for async audits or small focused fixes, I can help with scoped pieces under review: repo triage, auth/env checks, Stripe/webhook checks, deploy failures, Supabase/Firebase rules, and concise risk notes.\n\nI put my focused scope here: https://tatelyman.github.io/tate-web-services/ai-app-rescue.html\n\nThe fit I am aiming for is practical overflow capacity, not client ownership. A good first task would be a sanitized repo section, stuck flow, or checklist pass where you want a quick second set of hands.\n\nIf useful, send one small sample and I will reply with timing and a fixed estimate.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  },
+  {
+    "business": "TunerLabs Rescue Engineering",
+    "to": "shyam@tunerlabs.com",
+    "subject": "Overflow help for rescue engineering tasks",
+    "body": "Hi Shyam,\n\nI saw TunerLabs' Rescue Engineering page for AI-built products. If your team ever needs extra hands on lower-risk rescue work, I can help with scoped triage maps, deploy/env checks, auth flow debugging, Stripe/webhook checks, database rule review, and QA notes for critical paths.\n\nMy focused scope is here: https://tatelyman.github.io/tate-web-services/ai-app-rescue.html\n\nI am not pitching to own client relationships. The useful fit is overflow capacity for repetitive triage and focused patches while your senior team keeps review and architecture ownership.\n\nIf helpful, send one sample blocker and I will reply with how I would scope it.\n\nTate Lyman\nhttps://tatelyman.github.io/tate-web-services/\nlymantate2@gmail.com"
+  }
+]
