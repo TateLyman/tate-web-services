@@ -4,7 +4,7 @@ import { basename } from 'node:path'
 const inputPath = process.argv[2] ?? 'outreach/lead-tracker.csv'
 const outputPath = process.argv[3] ?? 'outreach/generated/site-audits.md'
 const csvOutputPath = process.argv[4] ?? 'outreach/generated/site-audits.csv'
-const userAgent = 'Mozilla/5.0 (compatible; TateLymanWebsiteAudit/1.0; +https://tatelyman.github.io/tate-web-services/)'
+const userAgent = 'Mozilla/5.0 (compatible; TateProgramsWebsiteAudit/1.0; +https://tateprograms.com/)'
 
 function parseCsvLine(line) {
   const cells = []

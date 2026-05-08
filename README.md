@@ -2,6 +2,8 @@
 
 Static portfolio and service storefront for selling AI-built app rescue, production cleanup, website fixes, and small automations.
 
+Live site: https://tateprograms.com/
+
 ## Local preview
 
 Open `index.html` directly in a browser, or run:
