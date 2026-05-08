@@ -1,4 +1,4 @@
-# Tate Lyman Web Services
+# Tate Programs Web Services
 
 Static portfolio and service storefront for selling AI-built app rescue, production cleanup, website fixes, and small automations.
 
@@ -13,6 +13,7 @@ npx serve .
 ## Files
 
 - `index.html` - main sales-facing portfolio page
+- `case-studies.html` - public proof-of-work page for Shipcheck, MCP, LaunchQuest, and related assets
 - `ai-app-rescue.html` - AI-built app rescue and production cleanup sales page
 - `vibe-leak-check.html` - same-day exposure check page for AI-built apps
 - `vibe-self-check.html` - free interactive launch safety checker for AI-built apps

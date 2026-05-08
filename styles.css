@@ -626,6 +626,12 @@ footer a {
   color: var(--muted);
 }
 
+.rescue-grid a,
+.audit-preview-grid a {
+  color: var(--accent);
+  font-weight: 850;
+}
+
 .trend-section,
 .price-section {
   background: #f3f5ee;
