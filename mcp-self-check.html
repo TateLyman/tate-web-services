@@ -3,41 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Free MCP Server Launch Self-Check | Shipcheck</title>
-    <meta name="description" content="A free self-check for MCP server launch readiness: npm package metadata, mcpName, server.json, install config, tool safety notes, registry readiness, and smoke testing.">
+    <title>Free MCP Launch Self-Check | Tate Programs</title>
+    <meta name="description" content="A free MCP server launch self-check for package metadata, server.json, install config, tool safety notes, registry readiness, smoke testing, and publish evidence.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Tate Programs home">
-        <span class="brand-mark">TP</span>
-        <span>Tate Programs</span>
+  <body class="console-home">
+    <header class="terminal-header">
+      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="terminal-brand-mark">tp</span>
+        <span>tateprograms</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="shipcheck.html">Shipcheck</a>
-        <a href="mcp-launch-review.html">MCP launch check</a>
-        <a href="mcp-launch-sample.html">Sample report</a>
-        <a href="payments.html">Payments</a>
-        <a class="nav-cta" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay $99</a>
+      <nav class="terminal-nav" aria-label="Primary navigation">
+        <a href="index.html#work">work</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-launch-review.html">MCP review</a>
+        <a href="mcp-launch-sample.html">sample report</a>
+        <a href="payments.html">payments</a>
+        <a class="terminal-nav-cta" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay $99</a>
       </nav>
     </header>
 
     <main>
-      <section class="audit-hero">
-        <div>
-          <p class="eyebrow">Free MCP self-check</p>
-          <h1>Score your MCP server before registry and directory submission.</h1>
-          <p class="hero-subtitle">
-            Check the package metadata, install path, tool safety notes, and release proof that reviewers and users look for before trusting a new MCP server.
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">free MCP self-check</p>
+          <h1>Score an MCP server before registry and directory submission.</h1>
+          <p class="console-subtitle">
+            Check the package metadata, install path, permission notes, release proof, and submission assets that reviewers and users look for before trusting a new MCP server.
           </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#mcpCheckForm">start checklist</a>
+            <a class="console-button secondary" href="mcp-launch-review.html">paid review</a>
+            <a class="console-button ghost" href="mcp-launch-sample.html">sample report</a>
+          </div>
         </div>
-        <div class="audit-note">
-          <strong>Best for</strong>
-          <p>Open-source MCP servers published through npm, GitHub, the official MCP Registry, MCP directories, or coding-agent setup guides.</p>
-        </div>
+
+        <aside class="terminal-window" aria-label="MCP self-check preview">
+          <div class="terminal-topline">readiness model</div>
+          <pre><code>score = metadata
+      + install proof
+      + client config
+      + permission notes
+      + release trail
+      + directory assets
+
+missing items become the fix list.</code></pre>
+        </aside>
       </section>
 
-      <section class="audit-tool" aria-label="MCP server launch checker">
+      <section class="console-audit-layout" aria-label="MCP server launch checker">
         <div id="mcpCheckForm" class="audit-form">
           <label>
             Package or server name
@@ -57,7 +71,7 @@
           <fieldset>
             <legend>Package identity</legend>
             <label class="check-row"><input type="checkbox" value="8" data-fix="Add complete package metadata: description, repository, license, homepage or docs link, keywords, and public issue tracker."> Package metadata is complete and points to the real repo.</label>
-            <label class="check-row"><input type="checkbox" value="9" data-fix="Add or verify the MCP server identity marker, including a stable mcpName or registry identifier that matches the package and repository."> MCP server identity is stable across package, repo, and docs.</label>
+            <label class="check-row"><input type="checkbox" value="9" data-fix="Add or verify the MCP server identity marker, including a stable package name or registry identifier that matches the repository."> MCP server identity is stable across package, repo, and docs.</label>
             <label class="check-row"><input type="checkbox" value="8" data-fix="Add a valid server.json or registry package mapping with the exact package name, version, runtime, and command users should run."> Registry package mapping or server.json is present and version-aware.</label>
             <label class="check-row"><input type="checkbox" value="6" data-fix="Create a GitHub release or tag that matches the npm package version so reviewers can verify what was shipped."> Release tag matches the published package version.</label>
           </fieldset>
@@ -72,9 +86,9 @@
 
           <fieldset>
             <legend>Tool safety and UX</legend>
-            <label class="check-row"><input type="checkbox" value="7" data-fix="Make tool names and descriptions specific enough that an agent can choose the right tool without guessing."> Tool names and descriptions are specific.</label>
+            <label class="check-row"><input type="checkbox" value="7" data-fix="Make tool names and descriptions specific enough that users can choose the right tool without guessing."> Tool names and descriptions are specific.</label>
             <label class="check-row"><input type="checkbox" value="8" data-fix="Document what each tool reads, writes, deletes, modifies, calls over the network, or requires users to authorize."> Tool permissions and side effects are documented.</label>
-            <label class="check-row"><input type="checkbox" value="6" data-fix="Return clear error messages for missing environment variables, bad paths, unsupported repos, and failed downstream commands."> Tool errors are actionable for users and agents.</label>
+            <label class="check-row"><input type="checkbox" value="6" data-fix="Return clear error messages for missing environment variables, bad paths, unsupported repos, and failed downstream commands."> Tool errors are actionable for users and clients.</label>
             <label class="check-row"><input type="checkbox" value="5" data-fix="Add input validation, path restrictions, and safe defaults before exposing filesystem, shell, network, browser, or write operations."> Risky inputs and write operations have guardrails.</label>
           </fieldset>
 
@@ -87,7 +101,7 @@
           </fieldset>
         </div>
 
-        <aside class="audit-results" aria-live="polite">
+        <aside class="audit-results" aria-label="MCP self-check results" aria-live="polite">
           <div class="score-card">
             <span id="scoreValue">0</span>
             <small>/100</small>
@@ -95,8 +109,8 @@
           <h2 id="scoreTitle">MCP launch check not started</h2>
           <p id="scoreSummary">Mark the checks that are already true. Missing items become the prioritized MCP launch-risk list.</p>
           <div class="result-actions">
-            <button class="button primary" id="copyResults" type="button">Copy result</button>
-            <a class="button secondary" id="emailResults" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20self-check%20result">Email result</a>
+            <button class="console-button primary" id="copyResults" type="button">copy result</button>
+            <a class="console-button secondary" id="emailResults" href="mailto:hello@tateprograms.com?subject=MCP%20launch%20self-check%20result">email result</a>
           </div>
           <div>
             <h3>Priority risks</h3>
@@ -104,20 +118,20 @@
               <li>Fill out the check to generate a prioritized MCP launch-risk list.</li>
             </ol>
           </div>
-          <p class="tool-note">This is a self-check, not a registry guarantee. A manual MCP launch check is $99.</p>
-          <a class="button primary wide-button" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay $99 launch check</a>
-          <a class="button secondary wide-button" href="mcp-launch-sample.html">View sample report</a>
+          <p class="tool-note">This is a self-check, not a registry guarantee. A manual MCP launch review is $99.</p>
+          <a class="console-button primary wide-button" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay $99 launch review</a>
+          <a class="console-button ghost wide-button" href="mcp-launch-sample.html">view sample report</a>
         </aside>
       </section>
     </main>
 
-    <footer>
+    <footer class="terminal-footer">
       <span>MCP launch self-check</span>
-      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
-      <a href="shipcheck.html">Shipcheck</a>
-      <a href="mcp-launch-review.html">MCP launch check</a>
-      <a href="mcp-launch-sample.html">Sample report</a>
-      <a href="payments.html">Payments</a>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="shipcheck.html">shipcheck</a>
+      <a href="mcp-launch-review.html">MCP launch review</a>
+      <a href="mcp-launch-sample.html">sample report</a>
+      <a href="payments.html">payments</a>
     </footer>
     <script src="mcp-checker.js"></script>
   </body>

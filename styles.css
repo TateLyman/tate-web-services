@@ -1214,6 +1214,12 @@ footer a {
   padding: 72px 44px 44px;
 }
 
+.console-page-hero {
+  min-height: auto;
+  padding-bottom: 56px;
+  padding-top: 64px;
+}
+
 .console-copy {
   align-self: center;
 }
@@ -1514,13 +1520,30 @@ footer a {
 
 .console-card-grid,
 .proof-terminal-grid,
-.runbook {
+.runbook,
+.console-command-grid {
   display: grid;
   gap: 16px;
 }
 
 .console-card-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.console-card-grid.two-up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.console-command-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.console-command-grid .terminal-window {
+  box-shadow: none;
+}
+
+.wide-command {
+  grid-column: 1 / -1;
 }
 
 .console-card {
@@ -1550,6 +1573,28 @@ footer a {
 .console-link {
   color: var(--console-green);
   font-weight: 850;
+}
+
+.console-card code,
+.proof-terminal-grid code,
+.console-subtitle code {
+  color: var(--console-cyan);
+}
+
+.console-card ul {
+  color: var(--console-muted);
+  margin: 16px 0 22px;
+  padding-left: 20px;
+}
+
+.console-card li + li {
+  margin-top: 9px;
+}
+
+.inline-link {
+  display: inline-block;
+  margin-left: 14px;
+  margin-top: 14px;
 }
 
 .proof-terminal-grid {
@@ -1633,11 +1678,238 @@ footer a {
   font-weight: 780;
 }
 
+.console-home .page-hero {
+  background: transparent;
+  border-bottom: 1px solid var(--console-line);
+  min-height: auto;
+  padding: 64px 44px 56px;
+}
+
+.console-home .page-hero h1 {
+  color: var(--console-ink);
+  font-family: "SF Pro Display", Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.console-home .eyebrow {
+  color: var(--console-green);
+}
+
+.console-home .hero-subtitle {
+  color: var(--console-muted);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.62;
+}
+
+.console-home .button.primary {
+  background: var(--console-green);
+  color: #041007;
+}
+
+.console-home .button.secondary {
+  background: rgba(116, 215, 255, 0.1);
+  border-color: rgba(116, 215, 255, 0.34);
+  color: var(--console-cyan);
+}
+
+.console-home .section {
+  margin: 0 44px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.console-home .section-heading h2,
+.console-home .cta-band h2,
+.console-home .report-header h1,
+.console-home .report-header h2 {
+  color: var(--console-ink);
+  font-family: "SF Pro Display", Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.console-home .text-link,
+.console-home .offer-card a,
+.console-home .project-grid a,
+.console-home .rescue-grid a,
+.console-home .audit-preview-grid a {
+  color: var(--console-green);
+}
+
+.console-home .trend-section,
+.console-home .price-section,
+.console-home .audit-preview,
+.console-home .process-section {
+  background: transparent;
+  border-block: 1px solid var(--console-line);
+}
+
+.console-home .offer-card,
+.console-home .audit-preview-grid article,
+.console-home .project-grid article,
+.console-home .steps article,
+.console-home .rescue-grid article,
+.console-home .demo-card,
+.console-home .care-card,
+.console-home .repair-grid article,
+.console-home .deliverable-list article,
+.console-home .source-list article,
+.console-home .report-header,
+.console-home .report-grid article,
+.console-home .report-card {
+  background: rgba(11, 18, 15, 0.88);
+  border-color: var(--console-line);
+  box-shadow: none;
+}
+
+.console-home .offer-card.featured,
+.console-home .care-card.featured {
+  border-color: rgba(255, 180, 84, 0.42);
+  box-shadow: var(--console-shadow);
+}
+
+.console-home .offer-card p,
+.console-home .audit-preview-grid p,
+.console-home .project-grid p,
+.console-home .steps p,
+.console-home .demo-card p,
+.console-home .rescue-grid p,
+.console-home .care-card p,
+.console-home .care-card ul,
+.console-home .repair-grid p,
+.console-home .deliverable-list p,
+.console-home .source-list p,
+.console-home .report-grid article p,
+.console-home .report-card ul,
+.console-home .section-note,
+.console-home .tool-note {
+  color: var(--console-muted);
+}
+
+.console-home .offer-top span,
+.console-home .audit-preview-grid span,
+.console-home .rescue-grid span,
+.console-home .steps span,
+.console-home .repair-grid span {
+  color: var(--console-amber);
+}
+
+.console-home .command-snippet,
+.console-home .terminal-output,
+.console-home .score-card,
+.console-home .report-summary {
+  background: #07100b;
+  border: 1px solid var(--console-line);
+}
+
+.console-home .cta-band {
+  background: #07100b;
+  border: 1px solid var(--console-line);
+  color: var(--console-ink);
+}
+
+.console-home footer:not(.terminal-footer) {
+  color: var(--console-muted);
+}
+
+.console-home footer:not(.terminal-footer) a {
+  color: var(--console-ink);
+}
+
+.console-audit-layout {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.42fr);
+  margin: 0 44px;
+  padding: 26px 0 96px;
+}
+
+.console-home .audit-form {
+  gap: 14px;
+}
+
+.console-home .audit-form > label,
+.console-home .audit-form fieldset,
+.console-home .audit-results {
+  background: rgba(11, 18, 15, 0.88);
+  border: 1px solid var(--console-line);
+  border-radius: 8px;
+  box-shadow: var(--console-shadow);
+}
+
+.console-home .audit-form > label,
+.console-home .audit-form fieldset {
+  color: var(--console-ink);
+}
+
+.console-home .audit-form label,
+.console-home .audit-form legend,
+.console-home .audit-results h2,
+.console-home .audit-results h3 {
+  color: var(--console-ink);
+}
+
+.console-home .audit-form input[type="text"],
+.console-home .audit-form input[type="url"] {
+  background: #07100b;
+  border-color: var(--console-line);
+  color: var(--console-ink);
+}
+
+.console-home .audit-form input[type="text"]::placeholder,
+.console-home .audit-form input[type="url"]::placeholder {
+  color: rgba(143, 165, 153, 0.72);
+}
+
+.console-home .check-row,
+.console-home .audit-results p,
+.console-home .fix-list {
+  color: var(--console-muted);
+}
+
+.console-home .check-row input {
+  accent-color: var(--console-green);
+}
+
+.console-home .audit-results {
+  position: sticky;
+  top: 88px;
+}
+
+.console-home .audit-results h2 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.console-home .score-card {
+  background: #07100b;
+  border: 1px solid rgba(121, 255, 157, 0.24);
+  color: var(--console-ink);
+}
+
+.console-home .score-card small {
+  color: var(--console-muted);
+}
+
+.console-home .result-actions .console-button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  min-width: 0;
+}
+
+.console-home .tool-note {
+  border-top-color: var(--console-line);
+}
+
 @media (max-width: 1080px) {
   .console-hero,
   .console-card-grid,
   .proof-terminal-grid,
   .runbook,
+  .console-command-grid,
+  .console-audit-layout,
   .console-strip {
     grid-template-columns: 1fr 1fr;
   }
@@ -1682,6 +1954,9 @@ footer a {
   .console-card-grid,
   .proof-terminal-grid,
   .runbook,
+  .console-command-grid,
+  .console-card-grid.two-up,
+  .console-audit-layout,
   .console-strip,
   .radar-panel,
   .console-section-head.split {
@@ -1690,9 +1965,17 @@ footer a {
 
   .console-strip,
   .console-section,
-  .console-cta {
+  .console-cta,
+  .console-home .section,
+  .console-home .page-hero,
+  .console-audit-layout {
     margin-left: 18px;
     margin-right: 18px;
+  }
+
+  .console-home .page-hero {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .console-section-head.split,
@@ -1705,5 +1988,14 @@ footer a {
     font-size: 0.78rem;
     overflow-wrap: anywhere;
     white-space: pre-wrap;
+  }
+
+  .console-home .audit-results {
+    position: static;
+  }
+
+  .inline-link {
+    display: block;
+    margin-left: 0;
   }
 }

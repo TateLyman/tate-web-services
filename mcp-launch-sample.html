@@ -7,17 +7,18 @@
     <meta name="description" content="Sample deliverable for a fixed-scope MCP server launch check.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Tate Programs home">
-        <span class="brand-mark">TP</span>
-        <span>Tate Programs</span>
+  <body class="console-home">
+    <header class="terminal-header">
+      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="terminal-brand-mark">tp</span>
+        <span>tateprograms</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="shipcheck.html">Shipcheck</a>
-        <a href="mcp-launch-review.html">MCP launch check</a>
-        <a href="payments.html">Payments</a>
-        <a class="nav-cta" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20check">Start</a>
+      <nav class="terminal-nav" aria-label="Primary navigation">
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-launch-review.html">MCP review</a>
+        <a href="mcp-self-check.html">self-check</a>
+        <a href="payments.html">payments</a>
+        <a class="terminal-nav-cta" href="mailto:hello@tateprograms.com?subject=MCP%20launch%20review">start</a>
       </nav>
     </header>
 
@@ -80,9 +81,9 @@
           </article>
           <article>
             <span class="severity low">Low</span>
-            <h3>Tool safety notes are too vague for agent approval</h3>
+            <h3>Tool safety notes are too vague for client approval</h3>
             <p><strong>Evidence:</strong> The README says the server can "manage project files" without separating read-only actions from writes.</p>
-            <p><strong>Impact:</strong> Users and agent clients cannot tell which actions need review before approval.</p>
+            <p><strong>Impact:</strong> Users and client integrations cannot tell which actions need review before approval.</p>
             <p><strong>Fix:</strong> Add a short tool table that states inputs, filesystem access, network calls, write behavior, and required secrets.</p>
           </article>
         </div>
@@ -121,9 +122,9 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="terminal-footer">
       <span>Sample MCP launch report</span>
-      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
       <a href="mcp-launch-review.html">MCP launch check</a>
       <a href="shipcheck.html">Shipcheck</a>
       <a href="payments.html">Payments</a>

@@ -3,150 +3,217 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MCP Server Launch Check | Shipcheck</title>
-    <meta name="description" content="A fixed-scope MCP server launch check for npm packages and open-source MCP servers: server.json, mcpName, install config, tool safety notes, and smoke testing.">
+    <title>MCP Launch Review | Tate Programs</title>
+    <meta name="description" content="A fixed-scope MCP server launch review for npm packages and open-source MCP servers: server.json, package identity, install config, safety notes, smoke testing, and registry readiness.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Tate Programs home">
-        <span class="brand-mark">TP</span>
-        <span>Tate Programs</span>
+  <body class="console-home">
+    <header class="terminal-header">
+      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="terminal-brand-mark">tp</span>
+        <span>tateprograms</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="ai-app-rescue.html">AI app rescue</a>
-        <a href="shipcheck.html">Shipcheck</a>
-        <a href="mcp-self-check.html">Free MCP check</a>
-        <a href="mcp-launch-review.html">MCP launch check</a>
-        <a href="payments.html">Payments</a>
-        <a href="index.html#work">Work</a>
-        <a class="nav-cta" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20check">Start</a>
+      <nav class="terminal-nav" aria-label="Primary navigation">
+        <a href="index.html#work">work</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-self-check.html">self-check</a>
+        <a href="case-studies.html">case files</a>
+        <a href="payments.html">payments</a>
+        <a class="terminal-nav-cta" href="mailto:hello@tateprograms.com?subject=MCP%20launch%20review">start review</a>
       </nav>
     </header>
 
     <main>
-      <section class="page-hero shipcheck-hero">
-        <div>
-          <p class="eyebrow">Fixed-scope MCP review</p>
-          <h1>MCP server almost ready? I’ll check the launch blockers before users hit them.</h1>
-          <p class="hero-subtitle">
-            A practical review for open-source MCP server packages: registry metadata, npm install path, client config, tool safety notes, and one smoke-tested report.
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">fixed-scope MCP launch review</p>
+          <h1>MCP servers should install cleanly before strangers try them.</h1>
+          <p class="console-subtitle">
+            A practical review for open-source MCP packages: package identity, <code>server.json</code>, npm install path, client config, tool-safety notes, smoke-test proof, and directory submission readiness.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay $99 check</a>
-            <a class="button secondary" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20check%20request&amp;body=Repo%20or%20npm%20link%3A%0ATarget%20directory%20or%20registry%3A%0AAnything%20currently%20failing%3A">Send repo first</a>
-            <a class="button secondary" href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">Scanner proof</a>
-            <a class="button secondary" href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">MCP server</a>
-            <a class="button secondary" href="https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck" target="_blank" rel="noreferrer">Registry listing</a>
-            <a class="button secondary" href="https://mcpservers.org/servers/tatelyman/shipcheck-mcp" target="_blank" rel="noreferrer">mcpservers.org</a>
-            <a class="button secondary" href="https://glama.ai/mcp/servers/TateLyman/shipcheck-mcp/score" target="_blank" rel="noreferrer">Glama score</a>
-            <a class="button secondary" href="mcp-self-check.html">Free self-check</a>
-            <a class="button secondary" href="mcp-launch-sample.html">Sample report</a>
+          <div class="console-actions">
+            <a class="console-button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay $99 review</a>
+            <a class="console-button secondary" href="mailto:hello@tateprograms.com?subject=MCP%20launch%20review%20request&amp;body=Repo%20or%20npm%20link%3A%0ATarget%20directory%20or%20registry%3A%0AAnything%20currently%20failing%3A">send repo first</a>
+            <a class="console-button ghost" href="mcp-self-check.html">free self-check</a>
+            <a class="console-button ghost" href="mcp-launch-sample.html">sample report</a>
           </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>scope</dt>
+              <dd>one MCP repo</dd>
+            </div>
+            <div>
+              <dt>price</dt>
+              <dd>$99</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>prioritized launch report</dd>
+            </div>
+          </dl>
         </div>
-        <aside class="browser-frame terminal-frame" aria-label="MCP launch check preview">
-          <div class="browser-bar">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="browser-body">
-            <pre class="terminal-output"><code>$ npx --yes shipcheck-cli .
-[MEDIUM] MCP package is missing mcpName
-[MEDIUM] MCP package has no server.json
-[LOW] README lacks MCP install config
 
-Fix: add registry metadata, pinned npm version,
-copyable mcpServers config, and tool-safety notes.</code></pre>
-          </div>
-        </aside>
+        <div class="terminal-rig">
+          <aside class="terminal-window" aria-label="MCP launch review preview">
+            <div class="terminal-topline">review sample</div>
+            <pre><code>$ npx --yes shipcheck-cli .
+[MEDIUM] MCP package is missing server.json
+[MEDIUM] README lacks copyable client config
+[LOW] Package version is not tied to a release tag
+
+next:
+1. add registry metadata
+2. pin package install path
+3. document permissions and side effects
+4. record a clean client smoke test</code></pre>
+          </aside>
+
+          <aside class="radar-panel" aria-label="MCP review radar">
+            <div class="radar-screen">
+              <span class="radar-axis x-axis"></span>
+              <span class="radar-axis y-axis"></span>
+              <span class="radar-dot dot-one"></span>
+              <span class="radar-dot dot-two"></span>
+              <span class="radar-dot dot-three"></span>
+              <span class="radar-sweep"></span>
+            </div>
+            <div>
+              <span>review path</span>
+              <strong>metadata &gt; install &gt; permissions &gt; smoke test &gt; submission notes</strong>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section class="section price-section">
-        <div class="section-heading split">
+      <section class="console-section">
+        <div class="console-section-head split">
           <div>
-            <p class="eyebrow">Scope</p>
-            <h2>$99 launch check for one MCP server repo.</h2>
+            <p class="console-kicker">scope</p>
+            <h2>$99 launch review for one MCP server repo.</h2>
           </div>
-          <a class="text-link" href="payments.html">Payment details</a>
+          <a class="console-link" href="payments.html">payment details</a>
         </div>
-        <div class="offer-grid">
-          <article class="offer-card">
-            <div class="offer-top">
-              <h3>MCP launch check</h3>
-              <span>$99</span>
-            </div>
+        <div class="console-card-grid two-up">
+          <article class="console-card accent-card">
+            <p class="card-command">review</p>
+            <h3>MCP launch review</h3>
+            <p class="console-price">$99</p>
             <ul>
               <li>Shipcheck report with MCP-specific findings</li>
-              <li><code>package.json</code> / <code>mcpName</code> / <code>server.json</code> review</li>
+              <li><code>package.json</code>, package identity, and <code>server.json</code> review</li>
               <li>npm install and MCP client config smoke test</li>
               <li>README install steps and tool-safety note cleanup</li>
-              <li>short prioritized fix list or small patch notes</li>
-              <li>same checks used for the published Shipcheck MCP registry listing</li>
+              <li>short prioritized fix list or patch notes</li>
+              <li>registry and directory submission notes</li>
             </ul>
-            <a class="button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay $99</a>
-            <a class="text-link" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20check%20request&amp;body=Repo%20or%20npm%20link%3A%0ATarget%20directory%20or%20registry%3A%0AAnything%20currently%20failing%3A">Send repo details</a>
+            <a class="console-button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay $99</a>
+            <a class="console-link inline-link" href="mailto:hello@tateprograms.com?subject=MCP%20launch%20review%20request&amp;body=Repo%20or%20npm%20link%3A%0ATarget%20directory%20or%20registry%3A%0AAnything%20currently%20failing%3A">send repo details</a>
           </article>
-          <article class="offer-card">
-            <div class="offer-top">
-              <h3>Patch pass</h3>
-              <span>from $150</span>
-            </div>
+          <article class="console-card">
+            <p class="card-command">patch</p>
+            <h3>Follow-up patch pass</h3>
+            <p class="console-price">from $150</p>
             <ul>
               <li>metadata and README fixes</li>
-              <li>client config examples</li>
-              <li>basic release checklist</li>
+              <li>copyable client config examples</li>
+              <li>package release checklist</li>
               <li>one follow-up smoke test</li>
               <li>fixed quote before changes</li>
             </ul>
-            <a class="button secondary" href="mailto:lymantate2@gmail.com?subject=MCP%20patch%20pass%20quote">Ask for quote</a>
+            <a class="console-button ghost" href="mailto:hello@tateprograms.com?subject=MCP%20patch%20pass%20quote">ask for quote</a>
           </article>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">What gets checked</p>
-          <h2>Small things that block trust in MCP directories and coding agents.</h2>
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">what gets checked</p>
+          <h2>Small launch details decide whether a package feels trustworthy.</h2>
         </div>
-        <div class="rescue-grid">
-          <article>
-            <span>01</span>
+        <div class="console-card-grid">
+          <article class="console-card">
+            <p class="card-command">identity</p>
             <h3>Registry metadata</h3>
-            <p>Checks the npm ownership marker, server name consistency, exact package version, repository metadata, and transport entry.</p>
+            <p>Checks package name consistency, repository metadata, version trail, runtime command, and transport entry.</p>
           </article>
-          <article>
-            <span>02</span>
+          <article class="console-card">
+            <p class="card-command">install</p>
             <h3>Install path</h3>
-            <p>Runs the package the way users will run it, then verifies the server exposes tools through an MCP client connection.</p>
+            <p>Runs the package the way users will run it and verifies the server exposes tools through a client connection.</p>
           </article>
-          <article>
-            <span>03</span>
+          <article class="console-card">
+            <p class="card-command">permissions</p>
             <h3>Tool safety</h3>
-            <p>Looks for clear notes about what tools read, what they modify, required permissions, and what users should authorize.</p>
+            <p>Looks for clear notes about what tools read, write, modify, call over the network, or require users to approve.</p>
           </article>
-          <article>
-            <span>04</span>
+          <article class="console-card">
+            <p class="card-command">submission</p>
             <h3>Directory readiness</h3>
-            <p>Prepares the repo for free listing paths like MCP directories, GitHub releases, npm, and registry-driven discovery.</p>
+            <p>Prepares the repo for listing paths like npm, GitHub releases, MCP directories, and registry-driven discovery.</p>
+          </article>
+          <article class="console-card">
+            <p class="card-command">trust</p>
+            <h3>Publish evidence</h3>
+            <p>Checks whether package ownership, release tags, and build provenance are easy for technical buyers to inspect.</p>
+          </article>
+          <article class="console-card">
+            <p class="card-command">network</p>
+            <h3>Boundary notes</h3>
+            <p>Calls out unclear filesystem access, shell usage, network calls, token handling, and remote-server assumptions.</p>
           </article>
         </div>
       </section>
 
-      <section class="cta-band">
-        <div>
-          <p class="eyebrow">Ready to send</p>
-          <h2>Pay $99, then email the repo or npm package link for the launch report.</h2>
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">current reference points</p>
+          <h2>The review tracks where the ecosystem is moving now.</h2>
         </div>
-        <a class="button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay with PayPal</a>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">npm</p>
+            <h3>Trusted Publisher setup</h3>
+            <p>npm documents trusted publishing as an OIDC relationship between package and CI provider, with short-lived publish credentials.</p>
+            <a href="https://docs.npmjs.com/trusted-publishers/" target="_blank" rel="noreferrer">npm trusted publishers</a>
+          </article>
+          <article>
+            <p class="card-command">mcp</p>
+            <h3>Server metadata</h3>
+            <p>The official registry docs use <code>server.json</code> to describe remote servers and package-backed installs.</p>
+            <a href="https://modelcontextprotocol.io/registry/remote-servers" target="_blank" rel="noreferrer">MCP registry docs</a>
+          </article>
+          <article>
+            <p class="card-command">security</p>
+            <h3>Implementation risk</h3>
+            <p>MCP security guidance highlights implementation-specific risks, including confused deputy patterns and SSRF boundaries.</p>
+            <a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" target="_blank" rel="noreferrer">MCP security guidance</a>
+          </article>
+          <article>
+            <p class="card-command">proof</p>
+            <h3>Smoke test trail</h3>
+            <p>A clean launch report should include the command, client config, observed tool list, and any permissions a user must grant.</p>
+            <a href="mcp-launch-sample.html">sample report</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">ready to send</p>
+          <h2>Pay $99, then send the repo or npm package link for review.</h2>
+          <p>Or email the repo first if you want scope confirmed before payment.</p>
+        </div>
+        <a class="console-button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay with PayPal</a>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Tate Programs</span>
-      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
-      <a href="shipcheck.html">Shipcheck</a>
-      <a href="mcp-self-check.html">Free MCP check</a>
-      <a href="mcp-launch-sample.html">Sample report</a>
-      <a href="payments.html">Payments</a>
+    <footer class="terminal-footer">
+      <span>mcp launch review</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="shipcheck.html">shipcheck</a>
+      <a href="mcp-self-check.html">self-check</a>
+      <a href="mcp-launch-sample.html">sample report</a>
+      <a href="payments.html">payments</a>
     </footer>
   </body>
 </html>

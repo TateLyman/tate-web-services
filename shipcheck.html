@@ -3,230 +3,283 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shipcheck CLI | AI App Exposure Scanner</title>
-    <meta name="description" content="Shipcheck CLI scans JavaScript and TypeScript repos for AI-app launch risks: exposed keys, unsigned Stripe webhooks, missing Firebase rules, Supabase RLS gaps, debug routes, and AI cost guardrails.">
+    <title>Shipcheck CLI | Tate Programs</title>
+    <meta name="description" content="Shipcheck scans JavaScript, TypeScript, and MCP repos for launch risk: env boundaries, Stripe webhooks, Supabase/Firebase evidence, debug routes, dependency hygiene, and registry metadata.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Tate Programs home">
-        <span class="brand-mark">TP</span>
-        <span>Tate Programs</span>
+  <body class="console-home">
+    <header class="terminal-header">
+      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="terminal-brand-mark">tp</span>
+        <span>tateprograms</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="ai-app-rescue.html">AI app rescue</a>
-        <a href="shipcheck.html">Shipcheck</a>
-        <a href="case-studies.html">Case studies</a>
-        <a href="mcp-self-check.html">Free MCP check</a>
-        <a href="vibe-self-check.html">Free checker</a>
-        <a href="payments.html">Payments</a>
-        <a href="index.html#work">Work</a>
-        <a class="nav-cta" href="mailto:lymantate2@gmail.com?subject=Shipcheck%20review%20request">Start</a>
+      <nav class="terminal-nav" aria-label="Primary navigation">
+        <a href="index.html#work">work</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-self-check.html">mcp check</a>
+        <a href="case-studies.html">case files</a>
+        <a href="payments.html">payments</a>
+        <a class="terminal-nav-cta" href="mailto:hello@tateprograms.com?subject=Shipcheck%20review%20request">request review</a>
       </nav>
     </header>
 
     <main>
-      <section class="page-hero shipcheck-hero">
-        <div>
-          <img class="tool-logo" src="assets/shipcheck-logo.svg" alt="Shipcheck CLI logo">
-          <p class="eyebrow">Free npm scanner</p>
-          <h1>Shipcheck CLI scans AI-built apps before launch.</h1>
-          <p class="hero-subtitle">
-            A defensive static scanner for JavaScript, TypeScript, AI-app, and MCP-server repos built with Lovable, Bolt, Replit, Cursor, v0, Base44, Supabase, Firebase, Stripe, and AI APIs.
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">shipcheck-cli / npm release gate</p>
+          <h1>Static release checks for JS, TS, and MCP repos.</h1>
+          <p class="console-subtitle">
+            Shipcheck reads authorized repositories and reports the launch risks that usually show up after first users arrive: exposed configuration, unsigned webhooks, missing database-rule evidence, debug routes, dependency drift, and incomplete MCP listing metadata.
           </p>
-          <div class="hero-actions">
-            <a class="button secondary" href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">Open npm</a>
-            <a class="button secondary" href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">Marketplace Action</a>
-            <a class="button secondary" href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">MCP server</a>
-            <a class="button secondary" href="https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck" target="_blank" rel="noreferrer">Registry listing</a>
-            <a class="button secondary" href="https://mcpservers.org/servers/tatelyman/shipcheck-mcp" target="_blank" rel="noreferrer">mcpservers.org</a>
-            <a class="button secondary" href="https://glama.ai/mcp/servers/TateLyman/shipcheck-mcp/score" target="_blank" rel="noreferrer">Glama score</a>
-            <a class="button primary" href="mcp-launch-review.html">MCP launch check</a>
-            <a class="button secondary" href="mcp-self-check.html">Free MCP self-check</a>
-            <a class="button secondary" href="mcp-launch-sample.html">Sample report</a>
-            <a class="button secondary" href="https://github.com/TateLyman/shipcheck-demo-ai-app" target="_blank" rel="noreferrer">Demo repo</a>
-            <a class="button secondary" href="mailto:lymantate2@gmail.com?subject=Shipcheck%20manual%20review%20request&amp;body=Repo%20or%20app%20link%3A%0ABuilder%20or%20stack%3A%0AWhat%20you%20need%20checked%3A">Request review</a>
+          <div class="console-actions">
+            <a class="console-button primary" href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm package</a>
+            <a class="console-button secondary" href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">GitHub Action</a>
+            <a class="console-button secondary" href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">MCP server</a>
+            <a class="console-button ghost" href="mcp-launch-review.html">paid MCP review</a>
+            <a class="console-button ghost" href="mcp-self-check.html">free self-check</a>
           </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>input</dt>
+              <dd>local repo</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>text / md / json / sarif</dd>
+            </div>
+            <div>
+              <dt>use case</dt>
+              <dd>pre-launch gate</dd>
+            </div>
+          </dl>
         </div>
-        <aside class="browser-frame terminal-frame" aria-label="Shipcheck terminal output preview">
-          <div class="browser-bar">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="browser-body">
-            <pre class="terminal-output"><code>$ npx --yes shipcheck-cli .
-Shipcheck report: /work/ai-app
+
+        <div class="terminal-rig">
+          <aside class="terminal-window" aria-label="Shipcheck terminal output preview">
+            <div class="terminal-topline">shipcheck run</div>
+            <pre><code>$ npx --yes shipcheck-cli .
+Shipcheck report: /work/checkout-app
 Score: 72/100
 Status: fail (threshold: high)
 Findings: 1 high, 2 medium, 1 low, 0 info
 
 [HIGH] Public frontend env var looks private
 [MEDIUM] Stripe webhook lacks visible signature check
-[MEDIUM] Supabase usage lacks RLS evidence</code></pre>
-          </div>
-        </aside>
+[MEDIUM] Supabase usage lacks RLS policy evidence
+[LOW] README launch notes are incomplete</code></pre>
+          </aside>
+
+          <aside class="radar-panel" aria-label="Shipcheck release radar">
+            <div class="radar-screen">
+              <span class="radar-axis x-axis"></span>
+              <span class="radar-axis y-axis"></span>
+              <span class="radar-dot dot-one"></span>
+              <span class="radar-dot dot-two"></span>
+              <span class="radar-dot dot-three"></span>
+              <span class="radar-sweep"></span>
+            </div>
+            <div>
+              <span>watchlist</span>
+              <strong>secrets, webhooks, rules, debug paths, package trust, MCP metadata</strong>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section class="section">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Install</p>
-            <h2>Run it from any JS or TS project root.</h2>
-          </div>
-          <a class="text-link" href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">Open Marketplace listing</a>
+      <section class="console-strip" aria-label="Shipcheck proof points">
+        <div>
+          <span>01</span>
+          <strong>Runs where teams already ship.</strong>
+          <p>CLI for local checks, GitHub Action for pull requests, and SARIF for code scanning workflows.</p>
         </div>
-        <pre class="command-snippet"><code>npx --yes shipcheck-cli .</code></pre>
-        <pre class="command-snippet"><code>npx --yes shipcheck-cli . --format markdown &gt; shipcheck-report.md</code></pre>
-        <pre class="command-snippet"><code>npx --yes shipcheck-cli . --format sarif &gt; shipcheck.sarif</code></pre>
-        <pre class="command-snippet"><code>npx --yes --package shipcheck-mcp shipcheck-mcp</code></pre>
-        <pre class="command-snippet"><code>- uses: TateLyman/shipcheck-action@v1
+        <div>
+          <span>02</span>
+          <strong>Built for launch evidence.</strong>
+          <p>Findings are written as handoff notes: what is risky, why it matters, and what to inspect next.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>MCP-aware.</strong>
+          <p>Checks server package identity, registry metadata, install instructions, and tool-safety notes.</p>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">install</p>
+            <h2>One command locally, one workflow in CI.</h2>
+          </div>
+          <a class="console-link" href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">open marketplace listing</a>
+        </div>
+        <div class="console-command-grid">
+          <article class="terminal-window">
+            <div class="terminal-topline">local scan</div>
+            <pre><code>npx --yes shipcheck-cli .</code></pre>
+          </article>
+          <article class="terminal-window">
+            <div class="terminal-topline">markdown report</div>
+            <pre><code>npx --yes shipcheck-cli . --format markdown &gt; shipcheck-report.md</code></pre>
+          </article>
+          <article class="terminal-window">
+            <div class="terminal-topline">GitHub code scanning</div>
+            <pre><code>npx --yes shipcheck-cli . --format sarif &gt; shipcheck.sarif</code></pre>
+          </article>
+          <article class="terminal-window">
+            <div class="terminal-topline">MCP server mode</div>
+            <pre><code>npx --yes --package shipcheck-mcp shipcheck-mcp</code></pre>
+          </article>
+          <article class="terminal-window wide-command">
+            <div class="terminal-topline">workflow</div>
+            <pre><code>- uses: TateLyman/shipcheck-action@v1
   with:
     format: sarif
     output: shipcheck.sarif
     fail-on: medium
     strict: true</code></pre>
-        <p class="section-note">
-          See the <a href="https://github.com/TateLyman/shipcheck-demo-ai-app/security/code-scanning" target="_blank" rel="noreferrer">demo repo code scanning alerts</a> for a small AI-app fixture.
-        </p>
+          </article>
+        </div>
       </section>
 
-      <section class="section trend-section">
-        <div class="section-heading">
-          <p class="eyebrow">Checks</p>
-          <h2>Focused on the launch failures AI app builders keep hitting.</h2>
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">checks</p>
+          <h2>The scanner focuses on things that are expensive to learn in production.</h2>
         </div>
-        <div class="rescue-grid">
-          <article>
-            <span>01</span>
-            <h3>Secrets and env boundaries</h3>
-            <p>Flags private-looking keys, public frontend env names that look sensitive, service-role references, and local environment-file hygiene issues.</p>
+        <div class="console-card-grid">
+          <article class="console-card">
+            <p class="card-command">env</p>
+            <h3>Secrets and config boundaries</h3>
+            <p>Flags private-looking keys, service-role references, sensitive public env names, and loose environment-file hygiene.</p>
           </article>
-          <article>
-            <span>02</span>
-            <h3>Payments and webhook safety</h3>
-            <p>Looks for Stripe webhook handlers without visible signature verification and highlights payment paths that need a human review before launch.</p>
+          <article class="console-card">
+            <p class="card-command">payments</p>
+            <h3>Webhook safety</h3>
+            <p>Looks for Stripe webhook handlers without visible signature verification and calls out payment paths that need review.</p>
           </article>
-          <article>
-            <span>03</span>
+          <article class="console-card">
+            <p class="card-command">data</p>
             <h3>Database rule evidence</h3>
-            <p>Checks for Firebase rules and Supabase RLS policy evidence so a generated app does not quietly ship with weak data boundaries.</p>
+            <p>Checks for Firebase rules and Supabase RLS policy evidence before user data moves through the app.</p>
           </article>
-          <article>
-            <span>04</span>
+          <article class="console-card">
+            <p class="card-command">routes</p>
             <h3>Debug and test leftovers</h3>
-            <p>Finds routes and files that look like debug, seed, reset, mock, or test shortcuts before they become production exposure.</p>
+            <p>Finds routes and files that look like seed, reset, mock, debug, admin-test, or temporary bypass paths.</p>
           </article>
-          <article>
-            <span>05</span>
-            <h3>AI cost guardrails</h3>
-            <p>Warns when repos use AI APIs without obvious rate limits, quotas, throttling, or usage controls around expensive calls.</p>
+          <article class="console-card">
+            <p class="card-command">usage</p>
+            <h3>Paid API usage controls</h3>
+            <p>Warns when expensive external calls lack visible rate limits, quotas, throttling, or abuse controls.</p>
           </article>
-          <article>
-            <span>06</span>
-            <h3>Release readiness</h3>
-            <p>Catches missing CI, missing lockfiles, missing README depth, risky scripts, loose dependency versions, and TypeScript config gaps.</p>
+          <article class="console-card">
+            <p class="card-command">release</p>
+            <h3>Build and release hygiene</h3>
+            <p>Catches missing CI, missing lockfiles, risky scripts, loose dependency versions, and weak TypeScript config.</p>
           </article>
-          <article>
-            <span>07</span>
+          <article class="console-card">
+            <p class="card-command">sarif</p>
             <h3>Code scanning handoff</h3>
-            <p>Exports SARIF so teams can upload Shipcheck findings into GitHub code scanning instead of leaving them buried in a CI log.</p>
+            <p>Exports SARIF so findings can live in GitHub code scanning instead of getting buried in a job log.</p>
           </article>
-          <article>
-            <span>08</span>
-            <h3>MCP agent access</h3>
-            <p>Runs as an MCP server so AI coding agents can scan authorized local repos and return text, Markdown, JSON, or SARIF reports.</p>
+          <article class="console-card">
+            <p class="card-command">mcp</p>
+            <h3>MCP server mode</h3>
+            <p>Runs as an MCP server for authorized local repo scans and returns text, Markdown, JSON, or SARIF output.</p>
           </article>
-          <article>
-            <span>09</span>
+          <article class="console-card">
+            <p class="card-command">registry</p>
             <h3>MCP launch metadata</h3>
-            <p>Flags missing <code>mcpName</code>, missing <code>server.json</code>, unpinned MCP registry versions, absent install config, and unclear tool-safety notes.</p>
+            <p>Flags missing package identity, missing <code>server.json</code>, unclear install config, and vague tool-safety notes.</p>
           </article>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-heading split">
+      <section class="console-section">
+        <div class="console-section-head split">
           <div>
-            <p class="eyebrow">Why now</p>
-            <h2>Generated apps made shipping easier. The review gap moved closer to production.</h2>
+            <p class="console-kicker">may 2026 bar</p>
+            <h2>Package trust and MCP install quality are now part of launch readiness.</h2>
           </div>
-          <a class="text-link" href="ai-app-rescue.html">Paid cleanup path</a>
+          <a class="console-link" href="mcp-launch-review.html">book an MCP review</a>
         </div>
-        <div class="source-list">
+        <div class="proof-terminal-grid">
           <article>
-            <h3>Vibe-coding security research is current</h3>
-            <p>The Cloud Security Alliance published a 2026 research note on AI-generated code security and vibe coding risks.</p>
-            <a href="https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/03/CSA_research_note_AI_generated_code_security_vibe_coding_20260331-csa-styled.pdf" target="_blank" rel="noreferrer">Cloud Security Alliance note</a>
+            <p class="card-command">npm</p>
+            <h3>Trusted publishing</h3>
+            <p>npm's current flow supports OIDC-based trusted publishers for GitHub Actions, GitLab CI/CD, and CircleCI, reducing dependence on long-lived publish tokens.</p>
+            <a href="https://docs.npmjs.com/trusted-publishers/" target="_blank" rel="noreferrer">npm docs</a>
           </article>
           <article>
-            <h3>Credentials in web apps are still a live issue</h3>
-            <p>Recent research on exposed API credentials found web-specific exposure vectors, including JavaScript-originated leaks.</p>
-            <a href="https://arxiv.org/abs/2603.12498" target="_blank" rel="noreferrer">Keys on Doormats paper</a>
+            <p class="card-command">provenance</p>
+            <h3>Build origin matters</h3>
+            <p>Public packages published through trusted publishing can get provenance attestations by default, which gives buyers a clearer source-to-package trail.</p>
+            <a href="https://docs.npmjs.com/trusted-publishers/" target="_blank" rel="noreferrer">provenance note</a>
           </article>
           <article>
-            <h3>Security gates for generated code are emerging</h3>
-            <p>Academic work is already proposing security gate frameworks specifically for AI-generated code.</p>
-            <a href="https://arxiv.org/abs/2604.01052" target="_blank" rel="noreferrer">VibeGuard paper</a>
+            <p class="card-command">mcp</p>
+            <h3>Registry metadata is moving</h3>
+            <p>The MCP Registry is still marked preview, with <code>server.json</code> carrying package and remote-server metadata for discovery.</p>
+            <a href="https://modelcontextprotocol.io/registry/remote-servers" target="_blank" rel="noreferrer">MCP registry docs</a>
+          </article>
+          <article>
+            <p class="card-command">security</p>
+            <h3>Tooling needs threat notes</h3>
+            <p>MCP guidance calls out implementation risks like confused deputy behavior and SSRF, so launch docs need permissions and network boundaries.</p>
+            <a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" target="_blank" rel="noreferrer">MCP security docs</a>
           </article>
         </div>
       </section>
 
-      <section class="section price-section">
-        <div class="section-heading">
-          <p class="eyebrow">When the scan finds something</p>
-          <h2>Use the free report yourself, or turn it into a fixed-scope rescue.</h2>
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">handoff</p>
+          <h2>Use the free report yourself, or turn it into a fixed-scope review.</h2>
         </div>
-        <div class="offer-grid">
-          <article class="offer-card">
-            <div class="offer-top">
-              <h3>Self-serve</h3>
-              <span>$0</span>
-            </div>
-            <p>Run Shipcheck, export markdown, and feed the findings back into your coding workflow with the remediation notes.</p>
+        <div class="console-card-grid">
+          <article class="console-card">
+            <p class="card-command">self serve</p>
+            <h3>Run the scanner</h3>
+            <p class="console-price">$0</p>
+            <p>Export Markdown or SARIF, inspect the findings, and use the remediation notes in your own release process.</p>
           </article>
-          <article class="offer-card featured">
-            <div class="offer-top">
-              <h3>Manual risk check</h3>
-              <span>$99</span>
-            </div>
-            <p>Send the repo or report for a human pass across auth, data rules, env boundaries, Stripe, deploy config, and the first paid user flow.</p>
-            <a href="payments.html">Pay after scope confirmation</a>
+          <article class="console-card accent-card">
+            <p class="card-command">review</p>
+            <h3>Manual risk check</h3>
+            <p class="console-price">$99</p>
+            <p>Send the repo or report for a human pass across auth, data rules, env boundaries, payments, deploy config, and install proof.</p>
+            <a href="payments.html">payment details</a>
           </article>
-          <article class="offer-card">
-            <div class="offer-top">
-              <h3>Rescue sprint</h3>
-              <span>$299+</span>
-            </div>
-            <p>Fix the highest-value blocker first: exposed config, payment webhook issue, deploy failure, database rule gap, or broken production flow.</p>
+          <article class="console-card">
+            <p class="card-command">fix</p>
+            <h3>Rescue sprint</h3>
+            <p class="console-price">$299+</p>
+            <p>Fix the highest-value blocker first: exposed config, webhook verification, deploy failure, database rule gap, or broken production flow.</p>
           </article>
         </div>
       </section>
 
-      <section class="cta-band">
+      <section class="console-cta">
         <div>
-          <p class="eyebrow">Defensive use only</p>
-          <h2>Run Shipcheck on repos you own or are authorized to inspect.</h2>
+          <p class="console-kicker">authorized use only</p>
+          <h2>Run Shipcheck on repos you own or are allowed to inspect.</h2>
+          <p>For a review, send the repo link, package link, or exported Shipcheck report. I will confirm scope before paid work starts.</p>
         </div>
-        <a class="button primary" href="mailto:lymantate2@gmail.com?subject=Shipcheck%20manual%20review%20request">Send report</a>
+        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Shipcheck%20manual%20review%20request&amp;body=Repo%20or%20package%20link%3A%0AStack%3A%0AWhat%20needs%20checked%3A">send report</a>
       </section>
     </main>
 
-    <footer>
-      <span>Shipcheck CLI</span>
-      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
+    <footer class="terminal-footer">
+      <span>shipcheck-cli</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
       <a href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm</a>
-      <a href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">Action</a>
-      <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">MCP</a>
-      <a href="case-studies.html">Case studies</a>
-      <a href="https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck" target="_blank" rel="noreferrer">Registry</a>
-      <a href="https://mcpservers.org/servers/tatelyman/shipcheck-mcp" target="_blank" rel="noreferrer">mcpservers.org</a>
-      <a href="https://glama.ai/mcp/servers/TateLyman/shipcheck-mcp/score" target="_blank" rel="noreferrer">Glama</a>
-      <a href="https://github.com/TateLyman/shipcheck-cli" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="mcp-self-check.html">Free MCP check</a>
-      <a href="mcp-launch-review.html">MCP launch check</a>
-      <a href="mcp-launch-sample.html">Sample report</a>
-      <a href="ai-app-rescue.html">AI app rescue</a>
-      <a href="payments.html">Payments</a>
-      <a href="index.html">Home</a>
+      <a href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">action</a>
+      <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">mcp</a>
+      <a href="mcp-self-check.html">free MCP check</a>
+      <a href="mcp-launch-review.html">MCP launch review</a>
+      <a href="case-studies.html">case files</a>
+      <a href="payments.html">payments</a>
+      <a href="index.html">home</a>
     </footer>
   </body>
 </html>

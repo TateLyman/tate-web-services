@@ -132,7 +132,7 @@ function renderReport(row) {
       <section class="card" style="margin-top:16px">
         <h2>Suggested Offer</h2>
         <p>${escapeHtml(offer)}</p>
-        <a class="button" href="mailto:lymantate2@gmail.com?subject=Website%20repair%20pass">Use $150 repair pass</a>
+        <a class="button" href="mailto:hello@tateprograms.com?subject=Website%20repair%20pass">Use $150 repair pass</a>
       </section>
 
       <section class="card" style="margin-top:16px">

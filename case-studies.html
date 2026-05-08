@@ -7,24 +7,24 @@
     <meta name="description" content="Public proof-of-work from Tate Programs: Shipcheck CLI, Shipcheck MCP, LaunchQuest, and Solana Narrative Radar.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Tate Programs home">
-        <span class="brand-mark">TP</span>
-        <span>Tate Programs</span>
+  <body class="console-home">
+    <header class="terminal-header">
+      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="terminal-brand-mark">tp</span>
+        <span>tateprograms</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="ai-app-rescue.html">Launch review</a>
-        <a href="shipcheck.html">Shipcheck</a>
-        <a href="case-studies.html">Case studies</a>
-        <a href="mcp-self-check.html">Free MCP check</a>
-        <a href="payments.html">Payments</a>
-        <a class="nav-cta" href="mailto:hello@tateprograms.com?subject=Tate%20Programs%20review%20request">Start</a>
+      <nav class="terminal-nav" aria-label="Primary navigation">
+        <a href="index.html#work">work</a>
+        <a href="ai-app-rescue.html">launch review</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-self-check.html">MCP check</a>
+        <a href="payments.html">payments</a>
+        <a class="terminal-nav-cta" href="mailto:hello@tateprograms.com?subject=Tate%20Programs%20review%20request">start</a>
       </nav>
     </header>
 
     <main>
-      <section class="page-hero rescue-hero">
+      <section class="page-hero rescue-hero console-page-hero">
         <div>
           <p class="eyebrow">Public proof of work</p>
           <h1>Shipped tools, demos, and launch systems for software and MCP builders.</h1>
@@ -51,7 +51,7 @@
           <article>
             <span>01</span>
             <h3>CLI package</h3>
-            <p>Published npm scanner for JavaScript and TypeScript repos. It checks env boundaries, Stripe webhook safety, Supabase/Firebase evidence, debug routes, AI usage guardrails, CI, docs, lockfiles, and release hygiene.</p>
+            <p>Published npm scanner for JavaScript and TypeScript repos. It checks env boundaries, Stripe webhook safety, Supabase/Firebase evidence, debug routes, paid API usage controls, CI, docs, lockfiles, and release hygiene.</p>
             <a href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm package</a>
           </article>
           <article>
@@ -63,7 +63,7 @@
           <article>
             <span>03</span>
             <h3>MCP server</h3>
-            <p>MCP server for AI coding agents to run Shipcheck against authorized local repos and return text, Markdown, JSON, or SARIF output.</p>
+            <p>MCP server for authorized local repo scans that returns text, Markdown, JSON, or SARIF output through standard MCP clients.</p>
             <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">MCP npm package</a>
           </article>
         </div>
@@ -78,7 +78,7 @@
           <article>
             <span>01</span>
             <h3>Demo app scan</h3>
-            <p>Shipcheck reports a debug API route, missing Supabase RLS proof, and missing AI usage guardrails in a fixture app designed to mirror common launch mistakes.</p>
+            <p>Shipcheck reports a debug API route, missing Supabase RLS proof, and missing paid API usage controls in a fixture app designed to mirror common launch mistakes.</p>
             <a href="https://github.com/TateLyman/shipcheck-demo-ai-app" target="_blank" rel="noreferrer">View demo repo</a>
           </article>
           <article>
@@ -139,7 +139,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="terminal-footer">
       <span>Tate Programs</span>
       <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
       <a href="https://github.com/TateLyman" target="_blank" rel="noreferrer">GitHub</a>
