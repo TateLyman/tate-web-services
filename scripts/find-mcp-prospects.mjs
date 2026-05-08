@@ -269,6 +269,28 @@ function formatMarkdown(prospects) {
   ].join('\n')
 }
 
+function formatPriorityEmailBatch(prospects) {
+  const emailLeads = prospects.filter(lead => lead.contactEmails?.length).slice(0, 10)
+  return [
+    `# MCP Email Priority Batch - ${RUN_DATE}`,
+    ``,
+    `These are the prospects from the scan with public maintainer emails visible in repository docs. Review before sending.`,
+    ``,
+    ...emailLeads.map((lead, index) => [
+      `## ${index + 1}. ${lead.title || lead.name}`,
+      ``,
+      `- To: ${lead.contactEmails.join(', ')}`,
+      `- Repo: ${lead.repositoryUrl}`,
+      `- Registry: ${lead.name} ${lead.version ? `v${lead.version}` : ''}`,
+      `- Angle: ${lead.angle}`,
+      `- Signals: ${lead.signals.slice(0, 4).join('; ')}`,
+      `- Draft: outreach/generated/mcp-prospect-messages/${slugify(lead.githubRepo || lead.name)}.txt`,
+      ``,
+    ].join('\n')),
+    ``,
+  ].join('\n')
+}
+
 function formatMessage(lead) {
   const project = lead.title || lead.name
   const repoLine = lead.repositoryUrl ? `I found it from the MCP Registry and the linked repo: ${lead.repositoryUrl}` : `I found it from the MCP Registry: ${lead.name}`
@@ -319,11 +341,13 @@ const prospects = latestEntries
   .map(entry => analyzeServer(entry, repoContexts.get(getGithubRepo(entry.server?.repository?.url ?? ''))))
   .filter(lead => lead.score >= 40 && lead.githubRepo && lead.outreachUrl)
   .sort((a, b) => b.score - a.score)
+  .filter((lead, index, leads) => leads.findIndex(other => other.githubRepo === lead.githubRepo) === index)
   .slice(0, 30)
 
 const jsonPath = `${OUTPUT_DIR}/mcp-prospects-${RUN_DATE}.json`
 const csvPath = `${OUTPUT_DIR}/mcp-prospects-${RUN_DATE}.csv`
 const mdPath = `${OUTPUT_DIR}/mcp-prospects-${RUN_DATE}.md`
+const emailBatchPath = `${OUTPUT_DIR}/mcp-email-priority-${RUN_DATE}.md`
 
 const csvHeaders = [
   'score',
@@ -352,6 +376,7 @@ await writeFile(
   ].join('\n') + '\n',
 )
 await writeFile(mdPath, formatMarkdown(prospects))
+await writeFile(emailBatchPath, formatPriorityEmailBatch(prospects))
 
 for (const lead of prospects.slice(0, 12)) {
   const filename = `${slugify(lead.githubRepo || lead.name)}.txt`
@@ -364,4 +389,5 @@ console.log(`Wrote ${prospects.length} prospects:`)
 console.log(`- ${jsonPath}`)
 console.log(`- ${csvPath}`)
 console.log(`- ${mdPath}`)
+console.log(`- ${emailBatchPath}`)
 console.log(`- ${MESSAGE_DIR}/`)
