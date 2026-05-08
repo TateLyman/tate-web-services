@@ -27,7 +27,7 @@ npx serve .
 - `styles.css` - main site styles
 - `demos/` - sample landing pages for local business outreach
 - `assets/` - generated screenshots used by the portfolio
-- `outreach/` - lead criteria and message templates
+- `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
 
 ## Lead Audit Script
