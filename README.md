@@ -1,6 +1,6 @@
 # Tate Programs Web Services
 
-Static portfolio and service storefront for selling AI-built app rescue, production cleanup, website fixes, and small automations.
+Static portfolio and service storefront for selling launch reviews, production cleanup, website fixes, and small automations.
 
 Live site: https://tateprograms.com/
 
@@ -16,10 +16,10 @@ npx serve .
 
 - `index.html` - main sales-facing portfolio page
 - `case-studies.html` - public proof-of-work page for Shipcheck, MCP, LaunchQuest, and related assets
-- `ai-app-rescue.html` - AI-built app rescue and production cleanup sales page
-- `vibe-leak-check.html` - same-day exposure check page for AI-built apps
-- `vibe-self-check.html` - free interactive launch safety checker for AI-built apps
-- `vibe-checker.js` - browser-only scoring logic for the AI app self-check
+- `ai-app-rescue.html` - launch review and production cleanup sales page
+- `vibe-leak-check.html` - same-day exposure check page for fast-built apps
+- `vibe-self-check.html` - free interactive launch safety checker for fast-built apps
+- `vibe-checker.js` - browser-only scoring logic for the app self-check
 - `mcp-self-check.html` - free interactive MCP server launch-readiness checker
 - `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
@@ -52,9 +52,9 @@ The script reads `outreach/lead-tracker.csv` and writes:
 
 The front-door offer is intentionally concrete:
 
-- $49 AI app exposure check
-- $299+ AI app rescue sprint
-- $500+ MCP or agent connector
+- $99 launch risk pass
+- $299+ production fix sprint
+- $99+ MCP launch review
 
 The website offers stay available as secondary products:
 
