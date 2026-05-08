@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "audit:leads": "node scripts/audit-leads.mjs",
+    "prospect:mcp": "node scripts/find-mcp-prospects.mjs",
     "audit:reports": "node scripts/render-private-reports.mjs",
     "outreach:render": "node scripts/render-outreach-messages.mjs"
   }

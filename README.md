@@ -36,6 +36,7 @@ npx serve .
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
+- `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
 
 ## Lead Audit Script
 
@@ -47,6 +48,21 @@ The script reads `outreach/lead-tracker.csv` and writes:
 
 - `outreach/generated/site-audits.md`
 - `outreach/generated/site-audits.csv`
+
+## MCP Prospect Scanner
+
+```bash
+npm run prospect:mcp
+```
+
+The script reads the live official MCP Registry API, checks linked GitHub repositories when available, and writes:
+
+- `outreach/generated/mcp-prospects-YYYY-MM-DD.md`
+- `outreach/generated/mcp-prospects-YYYY-MM-DD.csv`
+- `outreach/generated/mcp-prospects-YYYY-MM-DD.json`
+- `outreach/generated/mcp-prospect-messages/`
+
+Review each lead manually before contacting anyone.
 
 ## Positioning
 
