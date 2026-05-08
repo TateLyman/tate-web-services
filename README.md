@@ -37,6 +37,7 @@ npx serve .
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
 - `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
+- `scripts/render-mcp-prospect-dashboard.mjs` - local dashboard renderer for MCP prospect review and compose links
 - `scripts/render-mcp-prospect-reports.mjs` - local private mini-report renderer for MCP prospects
 
 ## Lead Audit Script
@@ -72,6 +73,14 @@ npm run reports:mcp
 ```
 
 Reports are written under `outreach/generated/mcp-prospect-reports/` and are ignored by git.
+
+To render a local prospect dashboard with report, draft, and compose links:
+
+```bash
+npm run dashboard:mcp
+```
+
+The dashboard is written to `outreach/generated/mcp-prospect-dashboard-YYYY-MM-DD.html` and is ignored by git.
 
 ## Positioning
 
