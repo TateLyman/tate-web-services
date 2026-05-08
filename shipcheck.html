@@ -30,7 +30,7 @@
           <p class="eyebrow">Free npm scanner</p>
           <h1>Shipcheck CLI scans AI-built apps before launch.</h1>
           <p class="hero-subtitle">
-            A defensive static scanner for JavaScript and TypeScript repos built with Lovable, Bolt, Replit, Cursor, v0, Base44, Supabase, Firebase, Stripe, and AI APIs.
+            A defensive static scanner for JavaScript, TypeScript, AI-app, and MCP-server repos built with Lovable, Bolt, Replit, Cursor, v0, Base44, Supabase, Firebase, Stripe, and AI APIs.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">Open npm</a>
@@ -126,6 +126,11 @@ Findings: 1 high, 2 medium, 1 low, 0 info
             <span>08</span>
             <h3>MCP agent access</h3>
             <p>Runs as an MCP server so AI coding agents can scan authorized local repos and return text, Markdown, JSON, or SARIF reports.</p>
+          </article>
+          <article>
+            <span>09</span>
+            <h3>MCP launch metadata</h3>
+            <p>Flags missing <code>mcpName</code>, missing <code>server.json</code>, unpinned MCP registry versions, absent install config, and unclear tool-safety notes.</p>
           </article>
         </div>
       </section>
