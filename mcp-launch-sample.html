@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample MCP Launch Check Report | Shipcheck</title>
+    <meta name="description" content="Sample deliverable for a fixed-scope MCP server launch check.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tate Lyman home">
+        <span class="brand-mark">TL</span>
+        <span>Tate Lyman</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="shipcheck.html">Shipcheck</a>
+        <a href="mcp-launch-review.html">MCP launch check</a>
+        <a href="payments.html">Payments</a>
+        <a class="nav-cta" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20check">Start</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="report-header">
+        <div>
+          <p class="eyebrow">Sample deliverable</p>
+          <h1>MCP server launch check.</h1>
+          <p class="hero-subtitle">
+            Example report for a fictional pre-release npm MCP server. This shows the format, not a real client finding.
+          </p>
+        </div>
+        <a class="button primary" href="mcp-launch-review.html">Back to offer</a>
+      </section>
+
+      <section class="section report-summary">
+        <article>
+          <span>Result</span>
+          <h3>Launch risk: medium</h3>
+          <p>The package can run locally, but directory metadata and install docs need cleanup before public submission.</p>
+        </article>
+        <article>
+          <span>Scope</span>
+          <h3>Repo plus npm smoke test</h3>
+          <p>Read-only repo pass, npm package metadata, MCP client config, README, release tag, and one local tool-list smoke test.</p>
+        </article>
+        <article>
+          <span>Next move</span>
+          <h3>Fix registry trust first</h3>
+          <p>Add ownership metadata, pin the package version, and document what each tool reads or changes.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Findings</p>
+          <h2>Ranked by what blocks users and directories.</h2>
+        </div>
+        <div class="report-grid">
+          <article>
+            <span class="severity high">High</span>
+            <h3>npm package is missing the MCP ownership marker</h3>
+            <p><strong>Evidence:</strong> <code>package.json</code> has no <code>mcpName</code>, while the registry submission name is set to <code>io.github.example/toolbox</code>.</p>
+            <p><strong>Impact:</strong> Official registry publishing can fail because the package does not prove it belongs to the submitted MCP server name.</p>
+            <p><strong>Fix:</strong> Add <code>"mcpName": "io.github.example/toolbox"</code> to <code>package.json</code>, then publish a new npm patch version.</p>
+          </article>
+          <article>
+            <span class="severity medium">Medium</span>
+            <h3><code>server.json</code> uses a floating package version</h3>
+            <p><strong>Evidence:</strong> The package entry points to <code>latest</code> instead of the exact npm version being submitted.</p>
+            <p><strong>Impact:</strong> Directory reviewers and users cannot reproduce the same install that was tested.</p>
+            <p><strong>Fix:</strong> Pin <code>packages[0].version</code> to the published npm version and keep it aligned with the GitHub release tag.</p>
+          </article>
+          <article>
+            <span class="severity medium">Medium</span>
+            <h3>README lacks a copyable MCP client config</h3>
+            <p><strong>Evidence:</strong> Install docs show <code>npm install</code>, but no <code>mcpServers</code> JSON for stdio clients.</p>
+            <p><strong>Impact:</strong> Users have to infer the command and arguments, which creates support churn and failed first runs.</p>
+            <p><strong>Fix:</strong> Add a tested <code>mcpServers</code> block using <code>npx --yes --package package-name package-bin</code>.</p>
+          </article>
+          <article>
+            <span class="severity low">Low</span>
+            <h3>Tool safety notes are too vague for agent approval</h3>
+            <p><strong>Evidence:</strong> The README says the server can "manage project files" without separating read-only actions from writes.</p>
+            <p><strong>Impact:</strong> Users and agent clients cannot tell which actions need review before approval.</p>
+            <p><strong>Fix:</strong> Add a short tool table that states inputs, filesystem access, network calls, write behavior, and required secrets.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section price-section">
+        <div class="section-heading">
+          <p class="eyebrow">Fix order</p>
+          <h2>Smallest useful patch pass.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Align names and versions</h3>
+            <p>Add <code>mcpName</code>, pin <code>server.json</code>, verify repository metadata, and publish a patch release.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Document install path</h3>
+            <p>Add tested stdio config, npm install command, expected tool list, and troubleshooting notes for first run.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Clarify permissions</h3>
+            <p>Mark which tools are read-only, which can modify state, and which secrets or accounts are required.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="eyebrow">Want this format for your MCP server?</p>
+          <h2>Pay $99, then email the repo or npm package link for the launch report.</h2>
+        </div>
+        <a class="button primary" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay with PayPal</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>Sample MCP launch report</span>
+      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
+      <a href="mcp-launch-review.html">MCP launch check</a>
+      <a href="shipcheck.html">Shipcheck</a>
+      <a href="payments.html">Payments</a>
+    </footer>
+  </body>
+</html>
