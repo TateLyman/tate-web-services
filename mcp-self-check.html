@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free MCP Server Launch Self-Check | Shipcheck</title>
+    <meta name="description" content="A free self-check for MCP server launch readiness: npm package metadata, mcpName, server.json, install config, tool safety notes, registry readiness, and smoke testing.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tate Lyman home">
+        <span class="brand-mark">TL</span>
+        <span>Tate Lyman</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="shipcheck.html">Shipcheck</a>
+        <a href="mcp-launch-review.html">MCP launch check</a>
+        <a href="mcp-launch-sample.html">Sample report</a>
+        <a href="payments.html">Payments</a>
+        <a class="nav-cta" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay $99</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="audit-hero">
+        <div>
+          <p class="eyebrow">Free MCP self-check</p>
+          <h1>Score your MCP server before registry and directory submission.</h1>
+          <p class="hero-subtitle">
+            Check the package metadata, install path, tool safety notes, and release proof that reviewers and users look for before trusting a new MCP server.
+          </p>
+        </div>
+        <div class="audit-note">
+          <strong>Best for</strong>
+          <p>Open-source MCP servers published through npm, GitHub, the official MCP Registry, MCP directories, or coding-agent setup guides.</p>
+        </div>
+      </section>
+
+      <section class="audit-tool" aria-label="MCP server launch checker">
+        <div id="mcpCheckForm" class="audit-form">
+          <label>
+            Package or server name
+            <input id="packageName" name="packageName" type="text" placeholder="Example: shipcheck-mcp">
+          </label>
+
+          <label>
+            Repo, npm, or package URL
+            <input id="repoUrl" name="repoUrl" type="url" placeholder="https://github.com/example/server">
+          </label>
+
+          <label>
+            Target registry or directory
+            <input id="targetRegistry" name="targetRegistry" type="text" placeholder="Official MCP Registry, PulseMCP, MCP Directory">
+          </label>
+
+          <fieldset>
+            <legend>Package identity</legend>
+            <label class="check-row"><input type="checkbox" value="8" data-fix="Add complete package metadata: description, repository, license, homepage or docs link, keywords, and public issue tracker."> Package metadata is complete and points to the real repo.</label>
+            <label class="check-row"><input type="checkbox" value="9" data-fix="Add or verify the MCP server identity marker, including a stable mcpName or registry identifier that matches the package and repository."> MCP server identity is stable across package, repo, and docs.</label>
+            <label class="check-row"><input type="checkbox" value="8" data-fix="Add a valid server.json or registry package mapping with the exact package name, version, runtime, and command users should run."> Registry package mapping or server.json is present and version-aware.</label>
+            <label class="check-row"><input type="checkbox" value="6" data-fix="Create a GitHub release or tag that matches the npm package version so reviewers can verify what was shipped."> Release tag matches the published package version.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Install and client config</legend>
+            <label class="check-row"><input type="checkbox" value="9" data-fix="Test the published package from a clean folder with the exact npx or package-manager command shown in the README."> Published install command works from a clean environment.</label>
+            <label class="check-row"><input type="checkbox" value="7" data-fix="Add a copyable mcpServers config block for at least one common client and keep the command aligned with the published package."> README has a copyable MCP client config block.</label>
+            <label class="check-row"><input type="checkbox" value="6" data-fix="Document the supported transport, required args, environment variables, and any local filesystem or network assumptions."> Transport, arguments, and environment variables are documented.</label>
+            <label class="check-row"><input type="checkbox" value="6" data-fix="Verify the package bin/export path so users do not hit missing dist files, wrong entrypoints, or ESM/CJS launch errors."> Package entrypoint and bin/export path are verified.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Tool safety and UX</legend>
+            <label class="check-row"><input type="checkbox" value="7" data-fix="Make tool names and descriptions specific enough that an agent can choose the right tool without guessing."> Tool names and descriptions are specific.</label>
+            <label class="check-row"><input type="checkbox" value="8" data-fix="Document what each tool reads, writes, deletes, modifies, calls over the network, or requires users to authorize."> Tool permissions and side effects are documented.</label>
+            <label class="check-row"><input type="checkbox" value="6" data-fix="Return clear error messages for missing environment variables, bad paths, unsupported repos, and failed downstream commands."> Tool errors are actionable for users and agents.</label>
+            <label class="check-row"><input type="checkbox" value="5" data-fix="Add input validation, path restrictions, and safe defaults before exposing filesystem, shell, network, browser, or write operations."> Risky inputs and write operations have guardrails.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Release proof</legend>
+            <label class="check-row"><input type="checkbox" value="8" data-fix="Run a smoke test through an MCP client or inspector and save the exact command, result, and tool list in the release notes or README."> Smoke test proof is visible in docs or release notes.</label>
+            <label class="check-row"><input type="checkbox" value="6" data-fix="Add CI that checks package build, npm pack contents, CLI startup, or MCP server initialization before publishing."> CI checks build, package contents, or server startup.</label>
+            <label class="check-row"><input type="checkbox" value="7" data-fix="Prepare directory submission links, screenshots, and short descriptions so each listing has consistent naming and install instructions."> Directory submission assets are ready and consistent.</label>
+            <label class="check-row"><input type="checkbox" value="7" data-fix="Add a short security note covering secrets, local data access, dependency trust, and what users should inspect before enabling the server."> Security and trust notes are clear before install.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results" aria-live="polite">
+          <div class="score-card">
+            <span id="scoreValue">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="scoreTitle">MCP launch check not started</h2>
+          <p id="scoreSummary">Mark the checks that are already true. Missing items become the prioritized MCP launch-risk list.</p>
+          <div class="result-actions">
+            <button class="button primary" id="copyResults" type="button">Copy result</button>
+            <a class="button secondary" id="emailResults" href="mailto:lymantate2@gmail.com?subject=MCP%20launch%20self-check%20result">Email result</a>
+          </div>
+          <div>
+            <h3>Priority risks</h3>
+            <ol id="fixList" class="fix-list">
+              <li>Fill out the check to generate a prioritized MCP launch-risk list.</li>
+            </ol>
+          </div>
+          <p class="tool-note">This is a self-check, not a registry guarantee. A manual MCP launch check is $99.</p>
+          <a class="button primary wide-button" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">Pay $99 launch check</a>
+          <a class="button secondary wide-button" href="mcp-launch-sample.html">View sample report</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <span>MCP launch self-check</span>
+      <a href="mailto:lymantate2@gmail.com">lymantate2@gmail.com</a>
+      <a href="shipcheck.html">Shipcheck</a>
+      <a href="mcp-launch-review.html">MCP launch check</a>
+      <a href="mcp-launch-sample.html">Sample report</a>
+      <a href="payments.html">Payments</a>
+    </footer>
+    <script src="mcp-checker.js"></script>
+  </body>
+</html>

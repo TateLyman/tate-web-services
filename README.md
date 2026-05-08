@@ -17,6 +17,10 @@ npx serve .
 - `vibe-leak-check.html` - same-day exposure check page for AI-built apps
 - `vibe-self-check.html` - free interactive launch safety checker for AI-built apps
 - `vibe-checker.js` - browser-only scoring logic for the AI app self-check
+- `mcp-self-check.html` - free interactive MCP server launch-readiness checker
+- `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
+- `mcp-launch-review.html` - fixed-scope paid MCP launch check page
+- `mcp-launch-sample.html` - sample MCP launch check report
 - `vibe-exposure-sample.html` - sample exposure-check deliverable
 - `repair-pass.html` - fixed-scope website repair pass sales page
 - `example-report.html` - sample repair-pass checklist deliverable
