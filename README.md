@@ -37,6 +37,7 @@ npx serve .
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
 - `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
+- `scripts/render-mcp-prospect-reports.mjs` - local private mini-report renderer for MCP prospects
 
 ## Lead Audit Script
 
@@ -63,6 +64,14 @@ The script reads the live official MCP Registry API, checks linked GitHub reposi
 - `outreach/generated/mcp-prospect-messages/`
 
 Review each lead manually before contacting anyone.
+
+To render private mini-reports for the current MCP prospect batch:
+
+```bash
+npm run reports:mcp
+```
+
+Reports are written under `outreach/generated/mcp-prospect-reports/` and are ignored by git.
 
 ## Positioning
 
