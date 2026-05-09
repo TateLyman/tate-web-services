@@ -2770,6 +2770,7 @@ footer a {
 }
 
 .shell-page .console-hero,
+.shell-page .page-hero,
 .shell-page .console-section,
 .shell-page .console-cta,
 .shell-page .console-strip,
@@ -2790,6 +2791,7 @@ footer a {
 }
 
 .shell-page .console-hero::before,
+.shell-page .page-hero::before,
 .shell-page .console-section::before,
 .shell-page .console-cta::before,
 .shell-page .console-strip::before,
@@ -2809,6 +2811,7 @@ footer a {
 }
 
 .shell-page .console-hero::after,
+.shell-page .page-hero::after,
 .shell-page .console-section::after,
 .shell-page .console-cta::after,
 .shell-page .console-strip::after,
@@ -2830,6 +2833,7 @@ footer a {
 }
 
 .shell-page .console-hero > *,
+.shell-page .page-hero > *,
 .shell-page .console-section > *,
 .shell-page .console-cta > *,
 .shell-page .console-strip > *,
@@ -2849,6 +2853,12 @@ footer a {
   padding: 68px 24px 24px;
 }
 
+.shell-page .page-hero {
+  border-bottom: 1px solid var(--term-line);
+  min-height: auto;
+  padding: 68px 24px 28px;
+}
+
 .shell-page .console-page-hero {
   padding-top: 68px;
 }
@@ -2864,6 +2874,7 @@ footer a {
 
 .shell-page .console-section h2,
 .shell-page .console-cta h2,
+.shell-page .page-hero h1,
 .shell-page .section-heading h2,
 .shell-page .cta-band h2,
 .shell-page .report-header h1 {
@@ -2883,6 +2894,10 @@ footer a {
 .shell-page .audit-form > label,
 .shell-page .audit-form fieldset,
 .shell-page .audit-results,
+.shell-page .offer-card,
+.shell-page .rescue-grid article,
+.shell-page .audit-preview-grid article,
+.shell-page .project-grid article,
 .shell-page .report-grid article,
 .shell-page .report-summary article,
 .shell-page .steps article {
@@ -2916,6 +2931,44 @@ footer a {
 .shell-page .console-strip div {
   background: rgba(7, 11, 8, 0.62);
   border-right: 1px solid rgba(157, 255, 188, 0.08);
+}
+
+.shell-page .offer-card.featured,
+.shell-page .care-card.featured {
+  border-color: rgba(242, 199, 107, 0.44);
+  box-shadow: none;
+}
+
+.shell-page .offer-top span,
+.shell-page .rescue-grid span,
+.shell-page .audit-preview-grid span,
+.shell-page .project-grid span {
+  color: var(--term-amber);
+}
+
+.shell-page .rescue-grid p,
+.shell-page .audit-preview-grid p,
+.shell-page .project-grid p,
+.shell-page .offer-card p,
+.shell-page .hero-subtitle {
+  color: var(--term-muted);
+}
+
+.shell-page .rescue-grid a,
+.shell-page .audit-preview-grid a,
+.shell-page .project-grid a,
+.shell-page .offer-card a,
+.shell-page .text-link {
+  color: var(--term-green);
+  font-weight: 900;
+}
+
+.shell-page .command-snippet {
+  background: #030504;
+  border: 1px solid var(--term-line);
+  border-radius: 4px;
+  color: var(--term-ink);
+  margin-top: 20px;
 }
 
 .shell-page .console-section,
@@ -3035,6 +3088,7 @@ footer a {
   }
 
   .shell-page .console-hero,
+  .shell-page .page-hero,
   .shell-page .console-section,
   .shell-page .console-cta,
   .shell-page .section,
@@ -3051,6 +3105,7 @@ footer a {
   }
 
   .shell-page .console-copy h1,
+  .shell-page .page-hero h1,
   .shell-page .report-header h1 {
     font-size: clamp(2.25rem, 12vw, 3.25rem);
   }
