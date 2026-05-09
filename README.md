@@ -38,6 +38,8 @@ npx serve .
 - `audit.html` - free website audit lead magnet
 - `audit.js` - browser-only audit scoring logic
 - `styles.css` - main site styles
+- `robots.txt` - crawler policy with sitemap reference
+- `sitemap.xml` - public crawl map for the main proof and service pages
 - `demos/` - sample landing pages for local business outreach
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
