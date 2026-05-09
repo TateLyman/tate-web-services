@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCP Directory Launch Checklist | Tate Programs</title>
+    <meta name="description" content="A practical May 2026 checklist for preparing an MCP server for npm, the official MCP Registry, Glama, PulseMCP, mcpservers.org, and curated directory PRs.">
+    <link rel="canonical" href="https://tateprograms.com/mcp-directory-checklist.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="MCP Directory Launch Checklist">
+    <meta property="og:description" content="A practical May 2026 checklist for preparing an MCP server for public directories and registry review.">
+    <meta property="og:url" content="https://tateprograms.com/mcp-directory-checklist.html">
+    <meta property="og:image" content="https://tateprograms.com/assets/mcp-directory-checklist-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MCP Directory Launch Checklist">
+    <meta name="twitter:description" content="A practical May 2026 checklist for preparing an MCP server for public directories and registry review.">
+    <meta name="twitter:image" content="https://tateprograms.com/assets/mcp-directory-checklist-og.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-registry-audit.html">mcp-audit</a>
+        <a href="mcp-directory-launch.html">directory</a>
+        <a href="mcp-directory-checklist.html">checklist</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=MCP%20directory%20checklist">
+        <span></span>
+        checklist live
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/mcp-directory-checklist</strong>
+        <em>may 2026</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">public resource</p>
+          <h1>MCP Directory Launch Checklist.</h1>
+          <p class="console-subtitle">
+            A practical checklist for maintainers who want a working MCP server to look ready in public directories. It covers package identity, <code>server.json</code>, install docs, tool behavior notes, Glama scoring, registry proof, and curated PR evidence.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#checklist">read checklist</a>
+            <a class="console-button secondary" href="mcp-directory-launch.html">paid launch pass</a>
+            <a class="console-button ghost" href="mcp-registry-audit.html">run free audit</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>updated</dt>
+              <dd>May 2026</dd>
+            </div>
+            <div>
+              <dt>target</dt>
+              <dd>public MCP listings</dd>
+            </div>
+            <div>
+              <dt>format</dt>
+              <dd>ship-ready checklist</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Checklist summary">
+          <div class="terminal-topline">checklist summary</div>
+          <pre><code>order:
+1. publish package
+2. bind package to server.json
+3. verify install command
+4. document tool behavior
+5. expose proof links
+6. submit directories
+7. watch checks and comments</code></pre>
+        </aside>
+      </section>
+
+      <section id="checklist" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">checklist</p>
+          <h2>Before submitting an MCP server anywhere public.</h2>
+        </div>
+        <div class="console-card-grid">
+          <article class="console-card">
+            <p class="card-command">01 package</p>
+            <h3>Package identity is boring and exact.</h3>
+            <ul>
+              <li><code>package.json</code> has name, version, description, repository, license, and executable bin.</li>
+              <li>The package is published before registry metadata is published.</li>
+              <li>The install command shown in README is the same one reviewers can run.</li>
+              <li>Release provenance is visible when your registry and CI support it.</li>
+            </ul>
+          </article>
+          <article class="console-card">
+            <p class="card-command">02 registry</p>
+            <h3><code>server.json</code> matches the package.</h3>
+            <ul>
+              <li><code>name</code> matches the package verification field used by the registry.</li>
+              <li><code>packages[].identifier</code> and <code>packages[].version</code> match the published artifact.</li>
+              <li>Description is short, literal, and specific.</li>
+              <li>Transport is clear: stdio, streamable HTTP, or the exact supported remote transport.</li>
+            </ul>
+          </article>
+          <article class="console-card">
+            <p class="card-command">03 install</p>
+            <h3>README has a copyable client config.</h3>
+            <ul>
+              <li>Include a complete <code>mcpServers</code> block for at least one common client.</li>
+              <li>Show required environment variables without exposing secrets.</li>
+              <li>Separate local stdio setup from hosted remote setup.</li>
+              <li>State the minimum Node, Python, or runtime version if it matters.</li>
+            </ul>
+          </article>
+          <article class="console-card">
+            <p class="card-command">04 tools</p>
+            <h3>Tool behavior is safe to understand quickly.</h3>
+            <ul>
+              <li>Every tool has a concrete verb, object, and result in its description.</li>
+              <li>Input parameters explain defaults, constraints, and dangerous combinations.</li>
+              <li>Output schemas are defined when structured results exist.</li>
+              <li>Read/write/network/destructive behavior is explicit.</li>
+            </ul>
+          </article>
+          <article class="console-card">
+            <p class="card-command">05 proof</p>
+            <h3>Directory reviewers can verify without digging.</h3>
+            <ul>
+              <li>README links to npm, GitHub, official registry metadata, and score pages if available.</li>
+              <li>Include a short smoke-test trail: command, expected tool list, and observed result.</li>
+              <li>Keep screenshots optional; make commands and links primary.</li>
+              <li>Use one concise listing sentence across directories.</li>
+            </ul>
+          </article>
+          <article class="console-card">
+            <p class="card-command">06 submit</p>
+            <h3>Submit in an order that creates proof.</h3>
+            <ul>
+              <li>Publish package first.</li>
+              <li>Publish official registry metadata second.</li>
+              <li>Submit to scoring/indexing directories next.</li>
+              <li>Open curated list PRs last, once badges and proof links exist.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">current public surfaces</p>
+          <h2>Where this checklist points in May 2026.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">official</p>
+            <h3>MCP Registry</h3>
+            <p>The official registry publishes metadata, not artifacts, and its quickstart expects the package to exist before registry publishing.</p>
+            <a href="https://modelcontextprotocol.io/registry/quickstart" target="_blank" rel="noreferrer">registry quickstart</a>
+          </article>
+          <article>
+            <p class="card-command">npm</p>
+            <h3>Trusted publishing</h3>
+            <p>npm supports trusted publishing and provenance through supported CI providers, which helps make the release trail easier to inspect.</p>
+            <a href="https://docs.npmjs.com/trusted-publishers/" target="_blank" rel="noreferrer">npm docs</a>
+          </article>
+          <article>
+            <p class="card-command">glama</p>
+            <h3>Glama</h3>
+            <p>Glama indexes servers, tools, schemas, license, quality score, and safety signals, making tool definitions and annotations visible.</p>
+            <a href="https://glama.ai/" target="_blank" rel="noreferrer">Glama</a>
+          </article>
+          <article>
+            <p class="card-command">pulse</p>
+            <h3>PulseMCP</h3>
+            <p>PulseMCP is a large MCP server directory with filters for remote availability, classifications, and update recency.</p>
+            <a href="https://www.pulsemcp.com/servers" target="_blank" rel="noreferrer">PulseMCP directory</a>
+          </article>
+          <article>
+            <p class="card-command">example</p>
+            <h3>Shipcheck trail</h3>
+            <p>Shipcheck MCP now has npm, official registry metadata, Glama score page, mcpservers.org approval, and an open curated directory PR.</p>
+            <a href="mcp-directory-launch.html">view launch pass</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">turn checklist into execution</p>
+          <h2>Need this done on one MCP server?</h2>
+          <p>The paid pass turns this checklist into a concrete review and patch-note path for one repo.</p>
+        </div>
+        <a class="console-button primary" href="mcp-directory-launch.html">open $149 pass</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>MCP directory checklist</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="mcp-directory-launch.html">directory pass</a>
+      <a href="mcp-registry-audit.html">registry audit</a>
+      <a href="shipcheck.html">shipcheck</a>
+      <a href="payments.html">payments</a>
+    </footer>
+  </body>
+</html>

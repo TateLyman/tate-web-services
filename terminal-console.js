@@ -9,6 +9,7 @@ const commands = {
     '  services     list paid scopes',
     '  proof        show public artifacts',
     '  directory    open MCP directory launch pass',
+    '  checklist    open MCP directory checklist',
     '  mcp-audit    open browser registry audit',
     '  shipcheck    open Shipcheck page',
     '  pricing      show fixed entry prices',
@@ -32,6 +33,7 @@ const commands = {
     'awesome PR       open + green checks',
     'Shipcheck Action GitHub Marketplace',
     'case files       /case-studies.html',
+    'checklist        /mcp-directory-checklist.html',
   ].join('\n'),
   pricing: [
     'FIXED ENTRY PRICES',
@@ -68,6 +70,10 @@ const commands = {
     'open /mcp-directory-launch.html',
     'fixed pass for npm package metadata, server.json, Glama score readiness, README install path, and directory submission notes.',
   ].join('\n'),
+  checklist: [
+    'open /mcp-directory-checklist.html',
+    'public May 2026 checklist for package identity, server.json, install docs, tool behavior notes, registry proof, and directory PRs.',
+  ].join('\n'),
   shipcheck: [
     'open /shipcheck.html',
     'scanner for repo launch readiness, CI output, and MCP access.',
@@ -77,6 +83,7 @@ const commands = {
 const routes = {
   'mcp-audit': 'mcp-registry-audit.html',
   directory: 'mcp-directory-launch.html',
+  checklist: 'mcp-directory-checklist.html',
   shipcheck: 'shipcheck.html',
   pay: 'payments.html',
 }

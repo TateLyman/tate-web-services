@@ -27,6 +27,7 @@ npx serve .
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-directory-launch.html` - fixed-scope MCP directory listing launch pass
+- `mcp-directory-checklist.html` - public MCP directory launch checklist resource
 - `mcp-launch-sample.html` - sample MCP launch check report
 - `launch-exposure-sample.html` - sample exposure-check deliverable
 - `repair-pass.html` - fixed-scope website repair pass sales page
