@@ -40,6 +40,7 @@ npx serve .
 - `styles.css` - main site styles
 - `robots.txt` - crawler policy with sitemap reference
 - `sitemap.xml` - public crawl map for the main proof and service pages
+- `.github/workflows/refresh-mcp-pulse.yml` - daily public MCP Registry Pulse refresh
 - `demos/` - sample landing pages for local business outreach
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo

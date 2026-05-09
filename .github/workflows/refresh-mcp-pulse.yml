@@ -1,0 +1,33 @@
+name: Refresh MCP Registry Pulse
+
+on:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: npm run pulse:mcp
+      - name: Commit pulse update
+        run: |
+          if git diff --quiet -- mcp-registry-pulse.html; then
+            echo "No pulse changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mcp-registry-pulse.html
+          git commit -m "Refresh MCP registry pulse"
+          git push
