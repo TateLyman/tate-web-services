@@ -128,6 +128,12 @@ function extractEmails(text) {
     .slice(0, 3)
 }
 
+function extractReadmeWebsite(readme) {
+  const urls = [...readme.matchAll(/https?:\/\/[^\s)"'<>]+/gi)].map(match => match[0].replace(/[.,;:]+$/, ''))
+  const blocked = /github\.com|githubusercontent\.com|img\.shields\.io|glama\.ai|modelcontextprotocol\.io|npmjs\.com|oauth\.net|opensource\.org/i
+  return urls.find(url => !blocked.test(url)) ?? ''
+}
+
 function analyzeServer(entry, repoContext) {
   const server = entry.server ?? {}
   const meta = entry._meta?.['io.modelcontextprotocol.registry/official'] ?? {}
@@ -138,6 +144,7 @@ function analyzeServer(entry, repoContext) {
   const description = server.description ?? ''
   const title = server.title ?? ''
   const contactEmails = extractEmails(readme)
+  const readmeWebsiteUrl = extractReadmeWebsite(readme)
 
   const signals = []
   const strengths = []
@@ -145,8 +152,8 @@ function analyzeServer(entry, repoContext) {
   if (!title) signals.push('Missing human-readable title')
   else strengths.push('Has title')
 
-  if (!server.websiteUrl && !repoContext?.homepageUrl) signals.push('No website URL visible in registry metadata or GitHub repo')
-  else if (!server.websiteUrl && repoContext?.homepageUrl) signals.push('Registry metadata does not expose the GitHub homepage URL')
+  if (!server.websiteUrl && !repoContext?.homepageUrl && !readmeWebsiteUrl) signals.push('No website URL visible in registry metadata, GitHub repo, or README')
+  else if (!server.websiteUrl && (repoContext?.homepageUrl || readmeWebsiteUrl)) signals.push('Registry metadata does not expose the public website URL visible elsewhere')
   else strengths.push('Registry metadata includes website URL')
 
   if (!repo) signals.push('No GitHub repository URL in registry metadata')
@@ -205,7 +212,7 @@ function analyzeServer(entry, repoContext) {
     daysSinceUpdate,
     repositoryUrl: server.repository?.url ?? '',
     githubRepo: repo,
-    websiteUrl: server.websiteUrl || repoContext?.homepageUrl || '',
+    websiteUrl: server.websiteUrl || repoContext?.homepageUrl || readmeWebsiteUrl || '',
     packageCount: packages.length,
     remoteCount: remotes.length,
     stars: repoContext?.stars ?? '',
