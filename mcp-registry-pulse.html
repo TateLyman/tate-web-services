@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCP Registry Pulse | Tate Programs</title>
+    <meta name="description" content="A public snapshot of MCP Registry launch-readiness signals across current server metadata, package paths, README install docs, safety notes, and directory proof.">
+    <link rel="canonical" href="https://tateprograms.com/mcp-registry-pulse.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="MCP Registry Pulse">
+    <meta property="og:description" content="A public snapshot of MCP launch-readiness signals from Tate Programs.">
+    <meta property="og:url" content="https://tateprograms.com/mcp-registry-pulse.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-registry-audit.html">mcp-audit</a>
+        <a href="mcp-registry-pulse.html">pulse</a>
+        <a href="mcp-directory-checklist.html">checklist</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=MCP%20registry%20pulse">
+        <span></span>
+        pulse live
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/mcp-registry-pulse</strong>
+        <em>2026-05-09</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">public registry snapshot</p>
+          <h1>MCP Registry Pulse.</h1>
+          <p class="console-subtitle">
+            A launch-readiness snapshot across current MCP Registry metadata and linked GitHub repos. This is aggregate analysis only: it shows where server launches tend to lose trust before a user ever connects a client.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#pulse-findings">read pulse</a>
+            <a class="console-button secondary" href="mcp-registry-audit.html">run free audit</a>
+            <a class="console-button ghost" href="mcp-directory-checklist.html">open checklist</a>
+            <a class="console-button ghost" href="mcp-launch-review.html">paid review</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>generated</dt>
+              <dd>2026-05-09</dd>
+            </div>
+            <div>
+              <dt>registry rows</dt>
+              <dd>300</dd>
+            </div>
+            <div>
+              <dt>latest servers</dt>
+              <dd>141</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="MCP pulse terminal">
+          <div class="terminal-topline">pulse run</div>
+          <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
+registry entries: 300
+latest servers:   141
+github repos:     84
+readme sampled:   54
+output:           mcp-registry-pulse.html</code></pre>
+        </aside>
+      </section>
+
+      <section id="pulse-findings" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">topline</p>
+          <h2>The launch bar is now metadata plus first-run proof.</h2>
+        </div>
+        <div class="console-card-grid">
+          <article class="console-card pulse-metric">
+            <p class="card-command">latest servers</p>
+            <strong>141</strong>
+            <p>Official registry entries marked latest in the fetched window.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">github repos</p>
+            <strong>84 (60%)</strong>
+            <p>Listings with a GitHub repository URL attached.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">website visible</p>
+            <strong>97 (69%)</strong>
+            <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">recent movement</p>
+            <strong>79 (56%)</strong>
+            <p>Latest metadata updated within the last 45 days.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">package path</p>
+            <strong>33 (23%)</strong>
+            <p>Listings with package install metadata.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">remote path</p>
+            <strong>115 (82%)</strong>
+            <p>Listings with hosted remote server metadata.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">surface gaps</p>
+          <h2>Common public proof gaps in the current registry sample.</h2>
+        </div>
+        <div class="pulse-bars">
+          <div class="pulse-bar-row">
+            <div>
+              <strong>Short registry descriptions</strong>
+              <span>80 / 141 - harder to understand quickly</span>
+            </div>
+            <i class="pulse-width-55"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>Missing human-readable title</strong>
+              <span>48 / 141 - namespace carries the listing</span>
+            </div>
+            <i class="pulse-width-35"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>Remote-only with no package path</strong>
+              <span>106 / 141 - hosted flow must explain trust and auth clearly</span>
+            </div>
+            <i class="pulse-width-75"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>README includes copyable mcpServers config</strong>
+              <span>36 / 54 - among readable GitHub READMEs</span>
+            </div>
+            <i class="pulse-width-65"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>README mentions install or client command</strong>
+              <span>33 / 54 - among readable GitHub READMEs</span>
+            </div>
+            <i class="pulse-width-60"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>README mentions permissions or safety</strong>
+              <span>46 / 54 - among readable GitHub READMEs</span>
+            </div>
+            <i class="pulse-width-85"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>README mentions server.json</strong>
+              <span>3 / 54 - among readable GitHub READMEs</span>
+            </div>
+            <i class="pulse-width-5"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>README includes smoke-test language</strong>
+              <span>15 / 54 - among readable GitHub READMEs</span>
+            </div>
+            <i class="pulse-width-30"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">interpretation</p>
+            <h2>What this means for maintainers.</h2>
+          </div>
+          <a class="console-link" href="mcp-directory-checklist.html">open checklist</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">01</p>
+            <h3>Remote servers need more trust copy, not less.</h3>
+            <p>When there is no local package path, the public docs need to make auth, transport, permissions, data access, and support boundaries easy to inspect.</p>
+          </article>
+          <article>
+            <p class="card-command">02</p>
+            <h3>Registry metadata should mirror the README's best proof.</h3>
+            <p>A strong README still loses value if the registry title, website, package path, and description do not surface the same clarity.</p>
+          </article>
+          <article>
+            <p class="card-command">03</p>
+            <h3>Directory acceptance is becoming a launch system.</h3>
+            <p>The strongest submissions create a proof trail: package, registry metadata, smoke test, safety notes, score page, and curated PR context.</p>
+          </article>
+          <article>
+            <p class="card-command">04</p>
+            <h3>Small docs fixes are commercial leverage.</h3>
+            <p>Clear install paths reduce support load, make buyers more comfortable, and give directory maintainers fewer reasons to skip a listing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">sources and method</p>
+          <h2>Public metadata, conservative scoring.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">registry</p>
+            <h3>Official MCP Registry API</h3>
+            <p>Fetched 300 registry entries from the public API and kept entries whose official metadata marked them latest.</p>
+            <a href="https://registry.modelcontextprotocol.io/v0.1/servers" target="_blank" rel="noreferrer">registry endpoint</a>
+          </article>
+          <article>
+            <p class="card-command">docs</p>
+            <h3>MCP Registry docs</h3>
+            <p>The public registry flow uses server metadata for discovery. This pulse treats metadata clarity as part of launch readiness.</p>
+            <a href="https://modelcontextprotocol.io/registry/quickstart" target="_blank" rel="noreferrer">registry quickstart</a>
+          </article>
+          <article>
+            <p class="card-command">github</p>
+            <h3>Linked GitHub repos</h3>
+            <p>When a listing exposed a GitHub repo, the script read public repo metadata and README text. Private code and private docs were not inspected.</p>
+            <a href="https://github.com/TateLyman/tate-web-services" target="_blank" rel="noreferrer">site repo</a>
+          </article>
+          <article>
+            <p class="card-command">shipcheck</p>
+            <h3>Repeatable review path</h3>
+            <p>Shipcheck turns the same launch-readiness ideas into a local scanner, GitHub Action, MCP server, and paid review workflow.</p>
+            <a href="shipcheck.html">open Shipcheck</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">use the pulse</p>
+          <h2>Run the free audit before submitting a server.</h2>
+          <p>Paste your metadata and public repo, then use the checklist or a fixed review to close the gaps.</p>
+        </div>
+        <a class="console-button primary" href="mcp-registry-audit.html">run free audit</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>MCP Registry Pulse</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="mcp-registry-audit.html">registry audit</a>
+      <a href="mcp-directory-checklist.html">checklist</a>
+      <a href="mcp-launch-review.html">paid review</a>
+      <a href="shipcheck.html">shipcheck</a>
+    </footer>
+  </body>
+</html>

@@ -6,6 +6,7 @@
   "scripts": {
     "audit:leads": "node scripts/audit-leads.mjs",
     "prospect:mcp": "node scripts/find-mcp-prospects.mjs",
+    "pulse:mcp": "node scripts/render-mcp-registry-pulse.mjs",
     "dashboard:mcp": "node scripts/render-mcp-prospect-dashboard.mjs",
     "reports:mcp": "node scripts/render-mcp-prospect-reports.mjs",
     "audit:reports": "node scripts/render-private-reports.mjs",

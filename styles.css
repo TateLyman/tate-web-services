@@ -1596,6 +1596,147 @@ footer a {
   margin: 18px 0 10px;
 }
 
+.pulse-metric strong {
+  color: var(--console-green);
+  display: block;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+  margin: 10px 0 14px;
+}
+
+.pulse-bars {
+  display: grid;
+  gap: 12px;
+}
+
+.pulse-bar-row {
+  background: rgba(11, 18, 15, 0.72);
+  border: 1px solid var(--console-line);
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.pulse-bar-row div {
+  align-items: baseline;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.pulse-bar-row strong {
+  color: var(--console-ink);
+}
+
+.pulse-bar-row span {
+  color: var(--console-muted);
+  font-size: 0.86rem;
+  text-align: right;
+}
+
+.pulse-bar-row i {
+  background: rgba(116, 215, 255, 0.13);
+  border-radius: 999px;
+  display: block;
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pulse-bar-row i::after {
+  background: linear-gradient(90deg, var(--console-green), var(--console-cyan));
+  border-radius: inherit;
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: var(--pulse-width, 0%);
+}
+
+.pulse-width-0 {
+  --pulse-width: 0%;
+}
+
+.pulse-width-5 {
+  --pulse-width: 5%;
+}
+
+.pulse-width-10 {
+  --pulse-width: 10%;
+}
+
+.pulse-width-15 {
+  --pulse-width: 15%;
+}
+
+.pulse-width-20 {
+  --pulse-width: 20%;
+}
+
+.pulse-width-25 {
+  --pulse-width: 25%;
+}
+
+.pulse-width-30 {
+  --pulse-width: 30%;
+}
+
+.pulse-width-35 {
+  --pulse-width: 35%;
+}
+
+.pulse-width-40 {
+  --pulse-width: 40%;
+}
+
+.pulse-width-45 {
+  --pulse-width: 45%;
+}
+
+.pulse-width-50 {
+  --pulse-width: 50%;
+}
+
+.pulse-width-55 {
+  --pulse-width: 55%;
+}
+
+.pulse-width-60 {
+  --pulse-width: 60%;
+}
+
+.pulse-width-65 {
+  --pulse-width: 65%;
+}
+
+.pulse-width-70 {
+  --pulse-width: 70%;
+}
+
+.pulse-width-75 {
+  --pulse-width: 75%;
+}
+
+.pulse-width-80 {
+  --pulse-width: 80%;
+}
+
+.pulse-width-85 {
+  --pulse-width: 85%;
+}
+
+.pulse-width-90 {
+  --pulse-width: 90%;
+}
+
+.pulse-width-95 {
+  --pulse-width: 95%;
+}
+
+.pulse-width-100 {
+  --pulse-width: 100%;
+}
+
 .console-card a,
 .proof-terminal-grid a,
 .console-link {
@@ -2725,6 +2866,15 @@ footer a {
   .inline-link {
     display: block;
     margin-left: 0;
+  }
+
+  .pulse-bar-row div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pulse-bar-row span {
+    text-align: left;
   }
 }
 

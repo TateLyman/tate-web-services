@@ -25,6 +25,7 @@ npx serve .
 - `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
+- `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-directory-launch.html` - fixed-scope MCP directory listing launch pass
 - `mcp-directory-checklist.html` - public MCP directory launch checklist resource
@@ -42,6 +43,7 @@ npx serve .
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
 - `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
+- `scripts/render-mcp-registry-pulse.mjs` - public MCP Registry pulse page generator
 - `scripts/render-mcp-prospect-dashboard.mjs` - local dashboard renderer for MCP prospect review and compose links
 - `scripts/render-mcp-prospect-reports.mjs` - local private mini-report renderer for MCP prospects
 
@@ -57,6 +59,18 @@ The script reads `outreach/lead-tracker.csv` and writes:
 - `outreach/generated/site-audits.csv`
 
 ## MCP Prospect Scanner
+
+To regenerate the public MCP Registry Pulse page:
+
+```bash
+npm run pulse:mcp
+```
+
+The script reads the live official MCP Registry API plus linked public GitHub metadata and writes:
+
+- `mcp-registry-pulse.html`
+
+The page intentionally reports aggregate launch-readiness signals, not named third-party findings.
 
 ```bash
 npm run prospect:mcp
