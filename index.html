@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tate Programs | Release Console for Launch-Ready Software</title>
+    <title>Tate Programs | Release Console</title>
     <meta name="description" content="Tate Programs runs launch checks, Shipcheck scans, MCP reviews, and production repair passes for small software teams shipping JavaScript, TypeScript, Stripe, Supabase, Firebase, and GitHub Actions projects.">
     <meta property="og:title" content="Tate Programs">
     <meta property="og:description" content="Release console for software that has to survive first users.">
@@ -47,264 +47,257 @@
       }
     </script>
   </head>
-  <body class="console-home">
-    <header class="terminal-header">
-      <a class="terminal-brand" href="#top" aria-label="Tate Programs home">
-        <span class="terminal-brand-mark">tp</span>
-        <span>Tate Programs</span>
+  <body class="console-home terminal-os">
+    <header class="os-topbar">
+      <a class="os-brand" href="#top" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
       </a>
-      <nav class="terminal-nav" aria-label="Primary navigation">
-        <a href="#console">Console</a>
-        <a href="shipcheck.html">Shipcheck</a>
-        <a href="case-studies.html">Proof</a>
-        <a href="ai-app-rescue.html">Launch review</a>
-        <a href="mcp-self-check.html">MCP check</a>
-        <a href="mcp-registry-audit.html">MCP audit</a>
-        <a class="terminal-nav-cta" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request">Start</a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="#workbench">workbench</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-registry-audit.html">mcp-audit</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
       </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request">
+        <span></span>
+        accepting work
+      </a>
     </header>
 
     <main id="top">
-      <section id="console" class="console-hero">
-        <div class="console-copy">
-          <p class="console-kicker">release-console // may-2026</p>
-          <h1>Launch console for software that has to survive first users.</h1>
-          <p class="console-subtitle">
-            Tate Programs checks repos, launch paths, MCP packages, payment flows, data boundaries, and deploy systems before small teams put real traffic on them.
+      <section id="workbench" class="terminal-desktop" aria-label="Tate Programs release console">
+        <div class="desktop-grid">
+          <aside class="system-rail" aria-label="Workspace shortcuts">
+            <a href="#workbench" aria-label="Console">~/</a>
+            <a href="mcp-registry-audit.html" aria-label="MCP registry audit">mcp</a>
+            <a href="shipcheck.html" aria-label="Shipcheck">sc</a>
+            <a href="case-studies.html" aria-label="Proof">pf</a>
+            <a href="payments.html" aria-label="Payments">$</a>
+          </aside>
+
+          <section class="terminal-shell" aria-label="Interactive release console">
+            <div class="window-chrome">
+              <div class="window-controls" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-tabs" role="tablist" aria-label="Open terminal tabs">
+                <span class="active">release@tateprograms:~</span>
+                <span>proof.log</span>
+                <span>services.man</span>
+              </div>
+              <div class="window-clock">may-2026</div>
+            </div>
+
+            <div class="terminal-scroll" id="terminalOutput" aria-live="polite">
+              <p><span class="prompt">tate@programs:~$</span> boot --workspace release-console</p>
+              <p class="dim">mounting public proof... ok</p>
+              <p class="dim">loading paid scopes... ok</p>
+              <p class="dim">checking payment link... ok</p>
+              <p><span class="prompt">tate@programs:~$</span> services --active</p>
+              <pre><code>NAME                  PRICE    OUTPUT
+launch-risk-pass      99       risk memo + fix order
+production-sprint     299+     blocker repair + deploy notes
+mcp-launch-review     99       registry/client/package report
+shipcheck             free     local scanner + CI action</code></pre>
+              <p><span class="prompt">tate@programs:~$</span> proof --short</p>
+              <pre><code>shipcheck-cli          npm published
+shipcheck-mcp          npm + registry path
+github action          marketplace listing
+mcp registry audit     browser metadata checker
+launchquest            live incentive demo</code></pre>
+              <p class="dim">type <kbd>help</kbd> or run a command below.</p>
+            </div>
+
+            <form class="terminal-input" id="terminalForm">
+              <label for="terminalCommand">command</label>
+              <span class="prompt">tate@programs:~$</span>
+              <input id="terminalCommand" name="terminalCommand" type="text" autocomplete="off" spellcheck="false" placeholder="help">
+              <button type="submit">run</button>
+            </form>
+          </section>
+
+          <aside class="side-stack" aria-label="Release console side panels">
+            <section class="status-pane">
+              <div class="pane-title">
+                <span>processes</span>
+                <strong>4 online</strong>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>pid</th>
+                    <th>task</th>
+                    <th>state</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>031</td>
+                    <td>mcp-audit</td>
+                    <td>ready</td>
+                  </tr>
+                  <tr>
+                    <td>074</td>
+                    <td>shipcheck</td>
+                    <td>published</td>
+                  </tr>
+                  <tr>
+                    <td>112</td>
+                    <td>reviews</td>
+                    <td>open</td>
+                  </tr>
+                  <tr>
+                    <td>209</td>
+                    <td>patches</td>
+                    <td>quoted</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section class="tree-pane">
+              <div class="pane-title">
+                <span>workspace</span>
+                <strong>public</strong>
+              </div>
+              <ul>
+                <li><a href="shipcheck.html">~/shipcheck</a></li>
+                <li><a href="mcp-registry-audit.html">~/tools/mcp-registry-audit</a></li>
+                <li><a href="mcp-launch-review.html">~/services/mcp-launch-review</a></li>
+                <li><a href="case-studies.html">~/proof/case-files</a></li>
+                <li><a href="payments.html">~/billing/payments</a></li>
+              </ul>
+            </section>
+
+            <section class="meter-pane">
+              <div class="pane-title">
+                <span>mode</span>
+                <strong>manual</strong>
+              </div>
+              <div class="meter-row">
+                <span>scope clarity</span>
+                <i class="meter-92"></i>
+              </div>
+              <div class="meter-row">
+                <span>launch risk</span>
+                <i class="meter-64"></i>
+              </div>
+              <div class="meter-row">
+                <span>public proof</span>
+                <i class="meter-88"></i>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <div class="command-strip" role="toolbar" aria-label="Common commands">
+          <button type="button" data-command="services">services</button>
+          <button type="button" data-command="proof">proof</button>
+          <button type="button" data-command="mcp-audit">mcp-audit</button>
+          <button type="button" data-command="shipcheck">shipcheck</button>
+          <button type="button" data-command="pricing">pricing</button>
+          <button type="button" data-command="contact">contact</button>
+          <button type="button" data-command="pay">pay</button>
+        </div>
+      </section>
+
+      <section class="terminal-manual" aria-label="Service manual">
+        <div class="manual-head">
+          <p class="console-kicker">man tate-programs</p>
+          <h1>Release work for small software teams.</h1>
+          <p>
+            Send the repo, package, or live app. Get a short report, a fix order, and a paid path only if the next step is obvious.
           </p>
-          <div class="console-actions">
-            <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request&amp;body=Repo%20or%20app%20link%3A%0AStack%3A%0AWhat%20must%20work%20first%3A%0ADeadline%3A">Request launch review</a>
-            <a class="console-button secondary" href="shipcheck.html">Run Shipcheck</a>
-            <a class="console-button secondary" href="mcp-registry-audit.html">MCP registry audit</a>
-            <a class="console-button ghost" href="case-studies.html">View proof</a>
-          </div>
-          <dl class="console-ledger">
-            <div>
-              <dt>first pass</dt>
-              <dd>$99</dd>
-            </div>
-            <div>
-              <dt>fix sprint</dt>
-              <dd>$299+</dd>
-            </div>
-            <div>
-              <dt>stack</dt>
-              <dd>JS / TS / MCP</dd>
-            </div>
-          </dl>
         </div>
 
-        <div class="terminal-rig">
-          <div class="terminal-window primary-terminal">
-            <div class="terminal-topline">
-              <span>release@tateprograms</span>
-              <span>tty1</span>
-            </div>
-            <pre><code>$ shipcheck ./repo --strict --format brief
-
-score: 76/100
-status: hold
-
-findings:
-  [medium] debug route reachable in production
-  [medium] missing Supabase RLS evidence
-  [low] rate limit not visible on paid API path
-
-next:
-  1. remove debug route
-  2. document two-user access test
-  3. cap expensive endpoint per user
-
-$ launchctl review --flow checkout --owner founder
-handoff: risk memo + patch path + deploy notes</code></pre>
-          </div>
-          <div class="radar-panel">
-            <div class="radar-screen">
-              <span class="radar-axis x-axis"></span>
-              <span class="radar-axis y-axis"></span>
-              <span class="radar-dot dot-one"></span>
-              <span class="radar-dot dot-two"></span>
-              <span class="radar-dot dot-three"></span>
-              <span class="radar-sweep"></span>
-            </div>
-            <div>
-              <span>preflight radar</span>
-              <strong>auth / data / deploy / payments</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="console-strip" aria-label="Current signal">
-        <div>
-          <span>01</span>
-          <strong>Shipping got faster.</strong>
-          <p>The failure point moved from making a demo to proving access, billing, data, and deploy behavior.</p>
-        </div>
-        <div>
-          <span>02</span>
-          <strong>Noise is expensive.</strong>
-          <p>Small teams need evidence, not giant scanner dumps or vague best-practice lists.</p>
-        </div>
-        <div>
-          <span>03</span>
-          <strong>Public proof matters.</strong>
-          <p>Shipcheck, MCP registry work, GitHub Actions, and sample reports make the offer inspectable.</p>
-        </div>
-      </section>
-
-      <section id="offers" class="console-section">
-        <div class="console-section-head">
-          <p class="console-kicker">offers.list</p>
-          <h2>Fixed-scope work for teams close enough to ship.</h2>
-        </div>
-        <div class="console-card-grid">
-          <article class="console-card">
-            <span class="card-command">./risk-pass</span>
-            <h3>Launch Risk Pass</h3>
-            <p>One repo or live app, checked for launch blockers across auth, data access, public config, payment/webhook paths, deploy settings, and obvious leftover debug surfaces.</p>
-            <div class="console-price">$99</div>
-            <a href="mailto:hello@tateprograms.com?subject=Launch%20Risk%20Pass">Book pass</a>
-          </article>
-          <article class="console-card accent-card">
-            <span class="card-command">./fix-sprint</span>
-            <h3>Production Fix Sprint</h3>
-            <p>Repair the highest-value blocker first: failing deploy, broken checkout, auth redirect loop, public data exposure, webhook mismatch, or repo cleanup before handoff.</p>
-            <div class="console-price">$299+</div>
-            <a href="mailto:hello@tateprograms.com?subject=Production%20Fix%20Sprint">Request sprint</a>
-          </article>
-          <article class="console-card">
-            <span class="card-command">./mcp-review</span>
-            <h3>MCP Launch Review</h3>
-            <p>Package metadata, pinned versions, install command, registry readiness, tool names, error behavior, and security notes for MCP servers people may run locally.</p>
-            <div class="console-price">$99</div>
-            <a href="mcp-launch-review.html">Open scope</a>
-            <a href="mcp-registry-audit.html">Run audit</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="console-section console-proof">
-        <div class="console-section-head split">
-          <div>
-            <p class="console-kicker">proof.mount</p>
-            <h2>Inspect the public artifacts before paying for anything.</h2>
-          </div>
-          <a class="console-link" href="case-studies.html">Full proof page</a>
-        </div>
-        <div class="proof-terminal-grid">
+        <div class="manual-grid">
           <article>
-            <div class="mini-terminal-title">package</div>
-            <h3>shipcheck-cli</h3>
-            <p>Published scanner for JavaScript and TypeScript release readiness, app boundaries, Stripe webhooks, Supabase/Firebase evidence, debug routes, and CI handoff.</p>
-            <a href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm</a>
-            <a href="https://github.com/TateLyman/shipcheck-cli" target="_blank" rel="noreferrer">repo</a>
+            <span>01</span>
+            <h2>Launch Risk Pass</h2>
+            <p>Auth, data access, public config, payment/webhook paths, deploy settings, and leftover debug surfaces.</p>
+            <strong>$99</strong>
+            <a href="mailto:hello@tateprograms.com?subject=Launch%20Risk%20Pass">book pass</a>
           </article>
           <article>
-            <div class="mini-terminal-title">automation</div>
-            <h3>GitHub Action</h3>
-            <p>Marketplace action that can run Shipcheck in CI and upload SARIF into GitHub code scanning for reviewable findings.</p>
-            <a href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">marketplace</a>
+            <span>02</span>
+            <h2>Production Fix Sprint</h2>
+            <p>Repair one high-value blocker first: deploy failure, broken checkout, auth loop, data exposure, or webhook mismatch.</p>
+            <strong>$299+</strong>
+            <a href="mailto:hello@tateprograms.com?subject=Production%20Fix%20Sprint">request sprint</a>
           </article>
           <article>
-            <div class="mini-terminal-title">protocol</div>
-            <h3>shipcheck-mcp</h3>
-            <p>MCP server for authorized local repo scans, published to npm and the official registry discovery path.</p>
-            <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">npm</a>
-            <a href="https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck" target="_blank" rel="noreferrer">registry</a>
-          </article>
-          <article>
-            <div class="mini-terminal-title">demo</div>
-            <h3>LaunchQuest</h3>
-            <p>Secure-launch event system built around scans, verified fixes, shared reports, and builder referrals.</p>
-            <a href="https://tatelyman.github.io/launchquest-torque/" target="_blank" rel="noreferrer">live demo</a>
+            <span>03</span>
+            <h2>MCP Launch Review</h2>
+            <p>Registry metadata, package identity, install path, client config, permission notes, and smoke-test proof.</p>
+            <strong>$99</strong>
+            <a href="mcp-launch-review.html">open scope</a>
           </article>
         </div>
       </section>
 
-      <section class="console-section workbench-section">
-        <div class="console-section-head split">
-          <div>
-            <p class="console-kicker">workbench.open</p>
-            <h2>Tools and interfaces already shipped.</h2>
-          </div>
-          <a class="console-link" href="https://github.com/TateLyman" target="_blank" rel="noreferrer">GitHub profile</a>
+      <section class="terminal-proof" aria-label="Public proof">
+        <div class="pane-title">
+          <span>proof.log</span>
+          <strong>read-only</strong>
         </div>
-        <div class="demo-grid terminal-demo-grid">
-          <article class="demo-card terminal-demo-card">
-            <a href="demos/landscaping.html" aria-label="Open landscaping sample">
-              <img src="assets/demo-landscaping.png" alt="Landscaping landing page sample screenshot">
-            </a>
-            <div>
-              <span>sample interface</span>
-              <h3>Landscaping quote page</h3>
-              <p>Fast quote path, service area clarity, and mobile-first contact flow.</p>
-            </div>
-          </article>
-          <article class="demo-card terminal-demo-card">
-            <a href="demos/auto-detail.html" aria-label="Open auto detail sample">
-              <img src="assets/demo-auto-detail.png" alt="Auto detail landing page sample screenshot">
-            </a>
-            <div>
-              <span>sample interface</span>
-              <h3>Auto detail booking page</h3>
-              <p>Tiered services, proof area, and direct booking calls.</p>
-            </div>
-          </article>
-          <article class="demo-card terminal-demo-card">
-            <a href="demos/contractor.html" aria-label="Open contractor sample">
-              <img src="assets/demo-contractor.png" alt="Contractor landing page sample screenshot">
-            </a>
-            <div>
-              <span>sample interface</span>
-              <h3>Contractor quote page</h3>
-              <p>Trust signals, project framing, and practical lead capture.</p>
-            </div>
-          </article>
-          <article class="demo-card terminal-demo-card">
-            <a href="demos/clinic.html" aria-label="Open clinic sample">
-              <img src="assets/demo-clinic.png" alt="Wellness clinic landing page sample screenshot">
-            </a>
-            <div>
-              <span>sample interface</span>
-              <h3>Clinic booking page</h3>
-              <p>Clear services, appointment path, and calm patient copy.</p>
-            </div>
-          </article>
+        <div class="proof-ledger">
+          <a href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">
+            <span>package</span>
+            <strong>shipcheck-cli</strong>
+            <em>npm scanner for release readiness</em>
+          </a>
+          <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">
+            <span>protocol</span>
+            <strong>shipcheck-mcp</strong>
+            <em>MCP server for local repo scans</em>
+          </a>
+          <a href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">
+            <span>action</span>
+            <strong>Shipcheck Action</strong>
+            <em>CI scan path with SARIF output</em>
+          </a>
+          <a href="mcp-registry-audit.html">
+            <span>tool</span>
+            <strong>MCP Registry Audit</strong>
+            <em>browser metadata audit for server.json</em>
+          </a>
+          <a href="case-studies.html">
+            <span>files</span>
+            <strong>case files</strong>
+            <em>public work and sample reports</em>
+          </a>
         </div>
       </section>
 
-      <section id="process" class="console-section process-console">
-        <div class="console-section-head">
-          <p class="console-kicker">runbook.read</p>
-          <h2>The engagement is intentionally small.</h2>
-        </div>
-        <div class="runbook">
-          <div>
-            <span>step 01</span>
-            <h3>Send the repo or live path.</h3>
-            <p>Include stack, deadline, and the first user flow that must work.</p>
-          </div>
-          <div>
-            <span>step 02</span>
-            <h3>Get the release memo.</h3>
-            <p>You receive blockers, evidence, fix order, and the smallest useful scope.</p>
-          </div>
-          <div>
-            <span>step 03</span>
-            <h3>Repair or hand off.</h3>
-            <p>Either use the report yourself or convert the top blocker into a focused sprint.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="console-cta">
+      <section class="terminal-runbook" aria-label="Runbook">
         <div>
-          <p class="console-kicker">ready</p>
+          <span>step 01</span>
+          <h2>Send the repo or live path.</h2>
+          <p>Include stack, deadline, and the first user flow that must work.</p>
+        </div>
+        <div>
+          <span>step 02</span>
+          <h2>Get the release memo.</h2>
+          <p>Blockers, evidence, fix order, and the smallest useful scope.</p>
+        </div>
+        <div>
+          <span>step 03</span>
+          <h2>Repair or hand off.</h2>
+          <p>Use the report yourself or convert the top blocker into a focused sprint.</p>
+        </div>
+      </section>
+
+      <section class="terminal-ticket">
+        <div>
+          <p class="console-kicker">ticket.open</p>
           <h2>Send the thing that is almost ready.</h2>
-          <p>I will find the shortest path from “works on my machine” to a launch someone can trust.</p>
+          <p>I will find the shortest path from “works locally” to a launch someone can trust.</p>
         </div>
-        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request">Open a ticket</a>
+        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request&amp;body=Repo%20or%20app%20link%3A%0AStack%3A%0AWhat%20must%20work%20first%3A%0ADeadline%3A">open ticket</a>
       </section>
     </main>
 
@@ -317,5 +310,6 @@ handoff: risk memo + patch path + deploy notes</code></pre>
       <a href="case-studies.html">Proof</a>
       <a href="payments.html">Payments</a>
     </footer>
+    <script src="terminal-console.js"></script>
   </body>
 </html>
