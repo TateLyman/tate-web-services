@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shipcheck CLI | Tate Programs</title>
-    <meta name="description" content="Shipcheck scans JavaScript, TypeScript, and MCP repos for launch risk: env boundaries, Stripe webhooks, Supabase/Firebase evidence, debug routes, dependency hygiene, and registry metadata.">
+    <meta name="description" content="Shipcheck scans JavaScript, TypeScript, and MCP repos for launch risk: env boundaries, Stripe webhooks, Supabase/Firebase evidence, debug routes, dependency hygiene, MCP smoke-test proof, remote auth notes, and registry metadata.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="console-home terminal-os shell-page">
@@ -41,7 +41,7 @@
           <p class="console-kicker">shipcheck-cli / npm release gate</p>
           <h1>Static release checks for JS, TS, and MCP repos.</h1>
           <p class="console-subtitle">
-            Shipcheck reads authorized repositories and reports the launch risks that usually show up after first users arrive: exposed configuration, unsigned webhooks, missing database-rule evidence, debug routes, dependency drift, and incomplete MCP listing metadata.
+            Shipcheck reads authorized repositories and reports the launch risks that usually show up after first users arrive: exposed configuration, unsigned webhooks, missing database-rule evidence, debug routes, dependency drift, incomplete MCP listing metadata, missing smoke-test proof, and unclear remote auth boundaries.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm package</a>
@@ -93,7 +93,7 @@ Findings: 1 high, 2 medium, 1 low, 0 info
             </div>
             <div>
               <span>watchlist</span>
-              <strong>secrets, webhooks, rules, debug paths, package trust, MCP metadata</strong>
+              <strong>secrets, webhooks, rules, debug paths, package trust, MCP metadata, remote auth</strong>
             </div>
           </aside>
         </div>
@@ -113,7 +113,7 @@ Findings: 1 high, 2 medium, 1 low, 0 info
         <div>
           <span>03</span>
           <strong>MCP-aware.</strong>
-          <p>Checks server package identity, registry metadata, install instructions, and tool-safety notes.</p>
+          <p>Checks server package identity, registry metadata, install instructions, smoke-test proof, remote auth notes, and tool-safety notes.</p>
         </div>
       </section>
 
@@ -203,7 +203,7 @@ Findings: 1 high, 2 medium, 1 low, 0 info
           <article class="console-card">
             <p class="card-command">registry</p>
             <h3>MCP launch metadata</h3>
-            <p>Flags missing package identity, missing <code>server.json</code>, unclear install config, and vague tool-safety notes.</p>
+            <p>Flags missing package identity, missing <code>server.json</code>, unclear install config, missing smoke-test proof, undocumented remote auth boundaries, and vague tool-safety notes.</p>
           </article>
         </div>
       </section>
