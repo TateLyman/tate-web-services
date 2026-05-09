@@ -7,23 +7,33 @@
     <meta name="description" content="Shipcheck scans JavaScript, TypeScript, and MCP repos for launch risk: env boundaries, Stripe webhooks, Supabase/Firebase evidence, debug routes, dependency hygiene, and registry metadata.">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="console-home">
-    <header class="terminal-header">
-      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
-        <span class="terminal-brand-mark">tp</span>
-        <span>tateprograms</span>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
       </a>
-      <nav class="terminal-nav" aria-label="Primary navigation">
-        <a href="index.html#work">work</a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
         <a href="shipcheck.html">shipcheck</a>
-        <a href="mcp-self-check.html">mcp check</a>
-        <a href="case-studies.html">case files</a>
-        <a href="payments.html">payments</a>
-        <a class="terminal-nav-cta" href="mailto:hello@tateprograms.com?subject=Shipcheck%20review%20request">request review</a>
+        <a href="mcp-registry-audit.html">mcp-audit</a>
+        <a href="mcp-launch-review.html">mcp-review</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
       </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Shipcheck%20review%20request">
+        <span></span>
+        scanner ready
+      </a>
     </header>
 
     <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/shipcheck</strong>
+        <em>read-only scanner</em>
+      </div>
+
       <section class="console-hero console-page-hero">
         <div class="console-copy">
           <p class="console-kicker">shipcheck-cli / npm release gate</p>
@@ -33,7 +43,7 @@
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm package</a>
-            <a class="console-button secondary" href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">GitHub Action</a>
+            <a class="console-button secondary" href="https://github.com/TateLyman/shipcheck-action" target="_blank" rel="noreferrer">GitHub Action</a>
             <a class="console-button secondary" href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">MCP server</a>
             <a class="console-button ghost" href="mcp-launch-review.html">paid MCP review</a>
             <a class="console-button ghost" href="mcp-self-check.html">free self-check</a>
@@ -110,7 +120,7 @@ Findings: 1 high, 2 medium, 1 low, 0 info
             <p class="console-kicker">install</p>
             <h2>One command locally, one workflow in CI.</h2>
           </div>
-          <a class="console-link" href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">open marketplace listing</a>
+          <a class="console-link" href="https://github.com/TateLyman/shipcheck-action" target="_blank" rel="noreferrer">open action repo</a>
         </div>
         <div class="console-command-grid">
           <article class="terminal-window">
@@ -273,7 +283,7 @@ Findings: 1 high, 2 medium, 1 low, 0 info
       <span>shipcheck-cli</span>
       <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
       <a href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">npm</a>
-      <a href="https://github.com/marketplace/actions/shipcheck-ai-app-scanner" target="_blank" rel="noreferrer">action</a>
+      <a href="https://github.com/TateLyman/shipcheck-action" target="_blank" rel="noreferrer">action</a>
       <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">mcp</a>
       <a href="mcp-self-check.html">free MCP check</a>
       <a href="mcp-launch-review.html">MCP launch review</a>

@@ -2727,3 +2727,345 @@ footer a {
     margin-left: 0;
   }
 }
+
+/* Reusable terminal shell for product and report pages */
+.shell-page main {
+  padding: 14px 18px 0;
+}
+
+.shell-pathline {
+  align-items: center;
+  background: rgba(7, 11, 8, 0.92);
+  border: 1px solid var(--term-line);
+  border-radius: 6px;
+  box-shadow: var(--term-shadow);
+  color: var(--term-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 12px;
+  min-height: 44px;
+  padding: 10px 14px;
+}
+
+.shell-pathline::before {
+  color: var(--term-green);
+  content: "$";
+  font-weight: 950;
+}
+
+.shell-pathline span,
+.shell-pathline em {
+  color: var(--term-dim);
+  font-size: 0.76rem;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.shell-pathline strong {
+  color: var(--term-ink);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.shell-page .console-hero,
+.shell-page .console-section,
+.shell-page .console-cta,
+.shell-page .console-strip,
+.shell-page .console-audit-layout,
+.shell-page .report-header,
+.shell-page .section,
+.shell-page .cta-band {
+  background:
+    linear-gradient(90deg, rgba(141, 255, 171, 0.025) 1px, transparent 1px),
+    rgba(7, 11, 8, 0.92);
+  background-size: 80px 80px;
+  border: 1px solid var(--term-line);
+  border-radius: 6px;
+  box-shadow: var(--term-shadow);
+  margin: 12px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.shell-page .console-hero::before,
+.shell-page .console-section::before,
+.shell-page .console-cta::before,
+.shell-page .console-strip::before,
+.shell-page .console-audit-layout::before,
+.shell-page .report-header::before,
+.shell-page .section::before,
+.shell-page .cta-band::before {
+  background: linear-gradient(180deg, #101812, #070b08);
+  border-bottom: 1px solid var(--term-line);
+  content: "";
+  height: 38px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.shell-page .console-hero::after,
+.shell-page .console-section::after,
+.shell-page .console-cta::after,
+.shell-page .console-strip::after,
+.shell-page .console-audit-layout::after,
+.shell-page .report-header::after,
+.shell-page .section::after,
+.shell-page .cta-band::after {
+  background:
+    radial-gradient(circle at 4px 4px, var(--term-red) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 20px 4px, var(--term-amber) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 36px 4px, var(--term-green) 0 4px, transparent 4.5px);
+  content: "";
+  height: 8px;
+  left: 13px;
+  position: absolute;
+  top: 15px;
+  width: 42px;
+  z-index: 2;
+}
+
+.shell-page .console-hero > *,
+.shell-page .console-section > *,
+.shell-page .console-cta > *,
+.shell-page .console-strip > *,
+.shell-page .console-audit-layout > *,
+.shell-page .report-header > *,
+.shell-page .section > *,
+.shell-page .cta-band > * {
+  position: relative;
+  z-index: 1;
+}
+
+.shell-page .console-hero {
+  align-items: stretch;
+  gap: clamp(20px, 4vw, 38px);
+  grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.62fr);
+  min-height: auto;
+  padding: 68px 24px 24px;
+}
+
+.shell-page .console-page-hero {
+  padding-top: 68px;
+}
+
+.shell-page .console-copy {
+  align-self: center;
+}
+
+.shell-page .console-copy h1 {
+  font-size: clamp(2.35rem, 5vw, 4.35rem);
+  line-height: 0.98;
+}
+
+.shell-page .console-section h2,
+.shell-page .console-cta h2,
+.shell-page .section-heading h2,
+.shell-page .cta-band h2,
+.shell-page .report-header h1 {
+  font-size: clamp(2rem, 3.8vw, 3.05rem);
+  line-height: 1.02;
+}
+
+.shell-page .console-subtitle {
+  max-width: 740px;
+}
+
+.shell-page .console-ledger div,
+.shell-page .console-card,
+.shell-page .proof-terminal-grid article,
+.shell-page .runbook div,
+.shell-page .terminal-demo-card,
+.shell-page .audit-form > label,
+.shell-page .audit-form fieldset,
+.shell-page .audit-results,
+.shell-page .report-grid article,
+.shell-page .report-summary article,
+.shell-page .steps article {
+  background: rgba(7, 11, 8, 0.82);
+  border-color: rgba(157, 255, 188, 0.12);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.shell-page .terminal-window,
+.shell-page .radar-panel {
+  background: var(--term-panel);
+  border-color: var(--term-line);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.shell-page .terminal-rig {
+  align-self: stretch;
+  align-content: center;
+}
+
+.shell-page .terminal-topline {
+  background: #050806;
+}
+
+.shell-page .console-strip {
+  padding-top: 38px;
+}
+
+.shell-page .console-strip div {
+  background: rgba(7, 11, 8, 0.62);
+  border-right: 1px solid rgba(157, 255, 188, 0.08);
+}
+
+.shell-page .console-section,
+.shell-page .console-cta,
+.shell-page .section,
+.shell-page .cta-band {
+  padding: 68px 24px 24px;
+}
+
+.shell-page .console-section {
+  display: block;
+}
+
+.shell-page .console-section-head {
+  margin-bottom: 22px;
+}
+
+.shell-page .console-audit-layout {
+  padding: 56px 18px 18px;
+}
+
+.shell-page .audit-form > label,
+.shell-page .audit-form fieldset,
+.shell-page .audit-results {
+  box-shadow: none;
+}
+
+.shell-page .audit-form input[type="text"],
+.shell-page .audit-form input[type="url"],
+.shell-page .audit-form textarea {
+  background: #030504;
+  border-radius: 4px;
+}
+
+.shell-page .audit-form textarea {
+  min-height: 340px;
+}
+
+.shell-page .score-card {
+  background: #030504;
+  border-color: var(--term-line-strong);
+  border-radius: 4px;
+}
+
+.shell-page .report-header {
+  align-items: center;
+  padding: 68px 24px 24px;
+}
+
+.shell-page .report-header span {
+  background: rgba(141, 255, 171, 0.09);
+  border: 1px solid var(--term-line);
+  border-radius: 4px;
+  color: var(--term-green);
+}
+
+.shell-page .report-summary {
+  color: var(--term-ink);
+}
+
+.shell-page .report-summary span,
+.shell-page .severity {
+  color: var(--term-amber);
+}
+
+.shell-page .report-grid {
+  gap: 12px;
+}
+
+.shell-page .cta-band {
+  color: var(--term-ink);
+}
+
+.shell-page .button,
+.shell-page .console-button {
+  border-radius: 4px;
+}
+
+.shell-page .button.secondary {
+  background: rgba(116, 215, 255, 0.1);
+  border-color: rgba(116, 215, 255, 0.34);
+  color: var(--term-cyan);
+}
+
+.shell-page .terminal-footer {
+  padding-top: 24px;
+}
+
+@media (max-width: 1080px) {
+  .shell-page .console-hero,
+  .shell-page .console-audit-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .shell-page .os-topbar {
+    gap: 8px;
+  }
+
+  .shell-page .os-tabs {
+    display: none;
+  }
+
+  .shell-page .os-status {
+    justify-self: stretch;
+  }
+
+  .shell-page main {
+    padding: 10px;
+  }
+
+  .shell-pathline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .shell-page .console-hero,
+  .shell-page .console-section,
+  .shell-page .console-cta,
+  .shell-page .section,
+  .shell-page .cta-band {
+    padding: 58px 16px 18px;
+  }
+
+  .shell-page .console-audit-layout {
+    padding: 50px 12px 12px;
+  }
+
+  .shell-page .console-strip {
+    padding-top: 38px;
+  }
+
+  .shell-page .console-copy h1,
+  .shell-page .report-header h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .shell-page .console-section-head.split,
+  .shell-page .console-cta,
+  .shell-page .report-header,
+  .shell-page .cta-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .shell-page .terminal-footer {
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

@@ -17,7 +17,7 @@ npx serve .
 - `index.html` - main sales-facing portfolio page
 - `terminal-console.js` - interactive command handling for the terminal-style homepage
 - `case-studies.html` - public proof-of-work page for Shipcheck, MCP, LaunchQuest, and related assets
-- `ai-app-rescue.html` - launch review and production cleanup sales page
+- `launch-review.html` - launch review and production cleanup sales page
 - `vibe-leak-check.html` - same-day exposure check page for fast-built apps
 - `vibe-self-check.html` - free interactive launch safety checker for fast-built apps
 - `vibe-checker.js` - browser-only scoring logic for the app self-check
