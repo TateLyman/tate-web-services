@@ -2771,6 +2771,8 @@ footer a {
 
 .shell-page .console-hero,
 .shell-page .page-hero,
+.shell-page .audit-hero,
+.shell-page .audit-tool,
 .shell-page .console-section,
 .shell-page .console-cta,
 .shell-page .console-strip,
@@ -2792,6 +2794,8 @@ footer a {
 
 .shell-page .console-hero::before,
 .shell-page .page-hero::before,
+.shell-page .audit-hero::before,
+.shell-page .audit-tool::before,
 .shell-page .console-section::before,
 .shell-page .console-cta::before,
 .shell-page .console-strip::before,
@@ -2812,6 +2816,8 @@ footer a {
 
 .shell-page .console-hero::after,
 .shell-page .page-hero::after,
+.shell-page .audit-hero::after,
+.shell-page .audit-tool::after,
 .shell-page .console-section::after,
 .shell-page .console-cta::after,
 .shell-page .console-strip::after,
@@ -2834,6 +2840,8 @@ footer a {
 
 .shell-page .console-hero > *,
 .shell-page .page-hero > *,
+.shell-page .audit-hero > *,
+.shell-page .audit-tool > *,
 .shell-page .console-section > *,
 .shell-page .console-cta > *,
 .shell-page .console-strip > *,
@@ -2859,6 +2867,12 @@ footer a {
   padding: 68px 24px 28px;
 }
 
+.shell-page .audit-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.4fr);
+  min-height: auto;
+  padding: 68px 24px 24px;
+}
+
 .shell-page .console-page-hero {
   padding-top: 68px;
 }
@@ -2875,9 +2889,11 @@ footer a {
 .shell-page .console-section h2,
 .shell-page .console-cta h2,
 .shell-page .page-hero h1,
+.shell-page .audit-hero h1,
 .shell-page .section-heading h2,
 .shell-page .cta-band h2,
 .shell-page .report-header h1 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   font-size: clamp(2rem, 3.8vw, 3.05rem);
   line-height: 1.02;
 }
@@ -2894,6 +2910,7 @@ footer a {
 .shell-page .audit-form > label,
 .shell-page .audit-form fieldset,
 .shell-page .audit-results,
+.shell-page .audit-note,
 .shell-page .offer-card,
 .shell-page .rescue-grid article,
 .shell-page .audit-preview-grid article,
@@ -2990,6 +3007,19 @@ footer a {
   padding: 56px 18px 18px;
 }
 
+.shell-page .audit-tool {
+  padding: 56px 18px 18px;
+}
+
+.shell-page .audit-note {
+  color: var(--term-ink);
+  box-shadow: none;
+}
+
+.shell-page .audit-note p {
+  color: var(--term-muted);
+}
+
 .shell-page .audit-form > label,
 .shell-page .audit-form fieldset,
 .shell-page .audit-results {
@@ -3059,7 +3089,9 @@ footer a {
 
 @media (max-width: 1080px) {
   .shell-page .console-hero,
-  .shell-page .console-audit-layout {
+  .shell-page .console-audit-layout,
+  .shell-page .audit-hero,
+  .shell-page .audit-tool {
     grid-template-columns: 1fr;
   }
 }
@@ -3089,6 +3121,7 @@ footer a {
 
   .shell-page .console-hero,
   .shell-page .page-hero,
+  .shell-page .audit-hero,
   .shell-page .console-section,
   .shell-page .console-cta,
   .shell-page .section,
@@ -3100,12 +3133,17 @@ footer a {
     padding: 50px 12px 12px;
   }
 
+  .shell-page .audit-tool {
+    padding: 50px 12px 12px;
+  }
+
   .shell-page .console-strip {
     padding-top: 38px;
   }
 
   .shell-page .console-copy h1,
   .shell-page .page-hero h1,
+  .shell-page .audit-hero h1,
   .shell-page .report-header h1 {
     font-size: clamp(2.25rem, 12vw, 3.25rem);
   }

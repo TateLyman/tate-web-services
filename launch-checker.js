@@ -1,4 +1,4 @@
-const form = document.querySelector('#vibeCheckForm')
+const form = document.querySelector('#launchCheckForm')
 const scoreValue = document.querySelector('#scoreValue')
 const scoreTitle = document.querySelector('#scoreTitle')
 const scoreSummary = document.querySelector('#scoreSummary')

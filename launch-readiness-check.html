@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Launch Readiness Self-Check | Tate Programs</title>
+    <meta name="description" content="A free self-check for fast-built apps before launch. Score auth, secrets, database rules, Stripe webhooks, deploy config, rate limits, and rollback readiness.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="launch-review.html">launch-review</a>
+        <a href="launch-exposure-check.html">exposure</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Launch%20readiness%20self-check">
+        <span></span>
+        checker ready
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/launch-readiness-check</strong>
+        <em>client-side checklist</em>
+      </div>
+
+      <section class="audit-hero">
+        <div>
+          <p class="eyebrow">Free self-check</p>
+          <h1>Score your app before launch.</h1>
+          <p class="hero-subtitle">
+            Mark what is already true. The missing items become your launch-risk list across auth, data, secrets, payments, deploy config, and recovery.
+          </p>
+        </div>
+        <div class="audit-note">
+          <strong>Best for</strong>
+          <p>Founders using modern web stacks, hosted databases, payment flows, file storage, API integrations, or fast prototyping tools.</p>
+        </div>
+      </section>
+
+      <section class="audit-tool" aria-label="Launch readiness checker">
+        <div id="launchCheckForm" class="audit-form">
+          <label>
+            App or project name
+            <input id="appName" name="appName" type="text" placeholder="Example: Waitlist CRM">
+          </label>
+
+          <label>
+            App URL or repo
+            <input id="appUrl" name="appUrl" type="url" placeholder="https://example.com">
+          </label>
+
+          <label>
+            Builder or stack
+            <input id="builderStack" name="builderStack" type="text" placeholder="Next.js + Supabase + Stripe">
+          </label>
+
+          <fieldset>
+            <legend>Auth and user data</legend>
+            <label class="check-row"><input type="checkbox" data-score="true" value="12" data-fix="Verify database rules with at least two real users so one account cannot read or change another account's records."> Database rules were tested with two separate user accounts.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="10" data-fix="Protect admin routes with server-side role checks. Hidden links or client-side checks are not enough."> Admin routes are blocked server-side for non-admin users.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="8" data-fix="Check storage buckets and file URLs so private user files cannot be guessed, listed, or read publicly."> Storage buckets and uploaded files are scoped to the right users.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Secrets and server boundaries</legend>
+            <label class="check-row"><input type="checkbox" data-score="true" value="12" data-fix="Move service-role keys, webhook secrets, private API keys, and admin tokens out of browser code and into server-only functions."> No private keys or service-role credentials are exposed to the browser.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="8" data-fix="Separate preview, production, test, and live environment variables. Remove fallback secrets that hide deploy failures."> Preview/test and production environment variables are separated.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="7" data-fix="Confirm server-only API calls are not being made directly from client components or public frontend code."> Server-only APIs are called from server routes, not frontend code.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Payments and paid access</legend>
+            <label class="check-row"><input type="checkbox" data-score="true" value="10" data-fix="Verify Stripe webhook signatures before changing subscription, credits, role, or access state."> Stripe webhooks are signature-verified before updating access.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="7" data-fix="Test duplicate webhook delivery and retries so subscriptions, credits, and orders are not applied twice."> Payment webhooks are idempotent for retries and duplicate events.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="6" data-fix="Run a complete checkout, failed payment, cancellation, and renewal flow in the same mode you plan to launch with."> Checkout, failed payment, cancellation, and renewal paths were tested.</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Abuse, deploy, and recovery</legend>
+            <label class="check-row"><input type="checkbox" data-score="true" value="8" data-fix="Add rate limits to paid API actions so one user, scraper, or bot cannot run up third-party usage costs."> Expensive API actions have rate limits or quotas.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="6" data-fix="Add logs or alerts for auth, payment, database, and background-job failures before sending real users."> Critical failures are logged somewhere you will actually check.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="6" data-fix="Commit to Git before launch and keep a rollback plan for the last known working deploy."> There is a Git commit and rollback path for the current launch.</label>
+            <label class="check-row"><input type="checkbox" data-score="true" value="6" data-fix="Remove generated mock data, placeholder roles, debug pages, and test-only shortcuts from production."> Mock data, debug routes, and test shortcuts are removed from production.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results" aria-label="Launch readiness self-check results" aria-live="polite">
+          <div class="score-card">
+            <span id="scoreValue">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="scoreTitle">Safety check not started</h2>
+          <p id="scoreSummary">Check the boxes that are already true. Missing items become the highest-risk launch blockers.</p>
+          <div class="result-actions">
+            <button class="button primary" id="copyResults" type="button">Copy result</button>
+            <a class="button secondary" id="emailResults" href="mailto:hello@tateprograms.com?subject=Launch%20readiness%20self-check">Email result</a>
+          </div>
+          <div>
+            <h3>Priority risks</h3>
+            <ol id="fixList" class="fix-list">
+              <li>Fill out the check to generate a prioritized launch-risk list.</li>
+            </ol>
+          </div>
+          <p class="tool-note">This is a self-check, not a guarantee. For a manual review, use the $49 exposure check.</p>
+          <a class="button primary wide-button" href="launch-exposure-check.html">Request $49 exposure check</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Launch readiness self-check</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="launch-exposure-check.html">Exposure check</a>
+      <a href="launch-exposure-sample.html">Sample report</a>
+      <a href="shipcheck.html">Shipcheck</a>
+      <a href="payments.html">Payments</a>
+      <a href="launch-review.html">Launch review</a>
+    </footer>
+    <script src="launch-checker.js"></script>
+  </body>
+</html>

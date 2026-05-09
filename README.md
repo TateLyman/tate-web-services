@@ -18,16 +18,16 @@ npx serve .
 - `terminal-console.js` - interactive command handling for the terminal-style homepage
 - `case-studies.html` - public proof-of-work page for Shipcheck, MCP, LaunchQuest, and related assets
 - `launch-review.html` - launch review and production cleanup sales page
-- `vibe-leak-check.html` - same-day exposure check page for fast-built apps
-- `vibe-self-check.html` - free interactive launch safety checker for fast-built apps
-- `vibe-checker.js` - browser-only scoring logic for the app self-check
+- `launch-exposure-check.html` - same-day exposure check page for fast-built apps
+- `launch-readiness-check.html` - free interactive launch safety checker for fast-built apps
+- `launch-checker.js` - browser-only scoring logic for the app self-check
 - `mcp-self-check.html` - free interactive MCP server launch-readiness checker
 - `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-launch-sample.html` - sample MCP launch check report
-- `vibe-exposure-sample.html` - sample exposure-check deliverable
+- `launch-exposure-sample.html` - sample exposure-check deliverable
 - `repair-pass.html` - fixed-scope website repair pass sales page
 - `example-report.html` - sample repair-pass checklist deliverable
 - `maintenance.html` - recurring website care plan page

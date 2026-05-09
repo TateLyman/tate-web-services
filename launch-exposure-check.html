@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Launch Exposure Check | Tate Programs</title>
+    <meta name="description" content="Same-day exposure check for fast-built apps using auth, hosted databases, serverless deploys, Stripe, file storage, and external APIs.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="launch-review.html">launch-review</a>
+        <a href="launch-readiness-check.html">readiness</a>
+        <a href="launch-exposure-check.html">exposure</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Launch%20exposure%20check">
+        <span></span>
+        exposure check
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/services/launch-exposure-check</strong>
+        <em>same-day triage</em>
+      </div>
+
+      <section class="page-hero rescue-hero console-page-hero">
+        <div>
+          <p class="eyebrow">Same-day launch safety pass</p>
+          <h1>Find the obvious exposure risks before strangers do.</h1>
+          <p class="hero-subtitle">
+            A $49 triage pass for founders using modern web stacks, hosted databases, Stripe, file storage, or API integrations who need a quick read on whether the launch is leaking data, keys, or access.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:hello@tateprograms.com?subject=Launch%20exposure%20check&amp;body=App%20link%3A%0ARepo%20or%20read-only%20access%20%28if%20available%29%3A%0AStack%3A%0AAuth%2Fdatabase%2Fpayment%20details%3A%0AAnything%20you%20are%20worried%20about%3A">Request $49 check</a>
+            <a class="button secondary" href="payments.html">Pay after scope confirmation</a>
+            <a class="button secondary" href="launch-readiness-check.html">Run free self-check</a>
+            <a class="button secondary" href="#checklist">What gets checked</a>
+            <a class="button secondary" href="launch-exposure-sample.html">Sample report</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="checklist" class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Exposure checklist</p>
+            <h2>The first pass looks for boring mistakes that cause expensive problems.</h2>
+          </div>
+          <a class="text-link" href="launch-review.html">Need a fix sprint?</a>
+        </div>
+        <div class="rescue-grid">
+          <article>
+            <span>01</span>
+            <h3>Public data paths</h3>
+            <p>Routes, storage buckets, documents, or tables that can be read without the user access you intended.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Client-side secrets</h3>
+            <p>API keys, webhook secrets, signing keys, admin tokens, service role keys, and private endpoints exposed to the browser.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Auth boundaries</h3>
+            <p>Login redirects, protected pages, admin views, password reset, session expiry, and cross-user data checks.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Supabase/Firebase rules</h3>
+            <p>Over-open rules, rules that only work in preview, unauthenticated writes, and missing owner checks.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Stripe and webhook edges</h3>
+            <p>Test/live key mismatch, unverified webhooks, duplicate fulfillment, and subscription access not matching payment state.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Deploy config</h3>
+            <p>Preview-only assumptions, missing environment variables, server/client mismatch, and logs that point to the first blocker.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section price-section">
+        <div class="section-heading">
+          <p class="eyebrow">Deliverable</p>
+          <h2>A short report you can act on the same day.</h2>
+        </div>
+        <div class="audit-preview-grid">
+          <article>
+            <span>Included</span>
+            <h3>Ranked risk notes</h3>
+            <p>The biggest findings first, with plain-language impact and what to fix next.</p>
+            <a href="launch-exposure-sample.html">See sample format</a>
+          </article>
+          <article>
+            <span>Free</span>
+            <h3>Self-check first</h3>
+            <p>Run the checklist before paying. If the score is weak, send the result and I can quote the smallest useful review.</p>
+            <a href="launch-readiness-check.html">Open free checker</a>
+          </article>
+          <article>
+            <span>Included</span>
+            <h3>Repro notes where safe</h3>
+            <p>Normal user-flow evidence, deploy/log clues, and code references when repo access is provided.</p>
+          </article>
+          <article>
+            <span>Optional</span>
+            <h3>Fix quote</h3>
+            <p>If there is a clean repair path, I quote the smallest useful sprint. If not, I say so.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Boundary</p>
+            <h2>This is defensive triage, not unauthorized testing.</h2>
+          </div>
+        </div>
+        <div class="audit-preview-grid">
+          <article>
+            <span>Yes</span>
+            <h3>Apps you control</h3>
+            <p>Send a public app link, read-only repo access, builder details, logs, or screenshots from tools you own.</p>
+          </article>
+          <article>
+            <span>Yes</span>
+            <h3>Normal-flow review</h3>
+            <p>Checks stay inside normal app usage, code/config review, deploy logs, and authorized project access.</p>
+          </article>
+          <article>
+            <span>No</span>
+            <h3>Invasive probing</h3>
+            <p>No brute force, no scraping private records, no guessing credentials, and no testing apps without permission.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="eyebrow">Move before launch</p>
+          <h2>Send the app link, builder used, and the stack you are worried about.</h2>
+        </div>
+        <a class="button primary" href="mailto:hello@tateprograms.com?subject=Launch%20exposure%20check&amp;body=App%20link%3A%0ARepo%20or%20read-only%20access%20%28if%20available%29%3A%0AStack%3A%0AAuth%2Fdatabase%2Fpayment%20details%3A%0AAnything%20you%20are%20worried%20about%3A">Request check</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Launch exposure check</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="https://github.com/TateLyman" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="launch-review.html">Launch review</a>
+      <a href="payments.html">Payments</a>
+      <a href="index.html">Home</a>
+    </footer>
+  </body>
+</html>
