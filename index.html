@@ -42,6 +42,12 @@
             "name": "MCP Launch Review",
             "price": "99",
             "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "MCP Directory Launch Pass",
+            "price": "149",
+            "priceCurrency": "USD"
           }
         ]
       }
@@ -57,6 +63,7 @@
         <a href="#workbench">workbench</a>
         <a href="shipcheck.html">shipcheck</a>
         <a href="mcp-registry-audit.html">mcp-audit</a>
+        <a href="mcp-directory-launch.html">directory</a>
         <a href="case-studies.html">proof</a>
         <a href="payments.html">pay</a>
       </nav>
@@ -98,17 +105,19 @@
               <p class="dim">loading paid scopes... ok</p>
               <p class="dim">checking payment link... ok</p>
               <p><span class="prompt">tate@programs:~$</span> services --active</p>
-              <pre><code>NAME                  PRICE    OUTPUT
-launch-risk-pass      99       risk memo + fix order
-production-sprint     299+     blocker repair + deploy notes
-mcp-launch-review     99       registry/client/package report
-shipcheck             free     local scanner + CI action</code></pre>
+              <pre><code>NAME           PRICE   OUTPUT
+risk-pass      99      memo + fix order
+mcp-dir        149     listing pass
+fix-sprint     299+    blocker repair
+mcp-review     99      launch report
+shipcheck      free    scanner + action</code></pre>
               <p><span class="prompt">tate@programs:~$</span> proof --short</p>
-              <pre><code>shipcheck-cli          npm published
-shipcheck-mcp          npm + registry path
-github action          marketplace listing
-mcp registry audit     browser metadata checker
-launchquest            live incentive demo</code></pre>
+              <pre><code>shipcheck-cli   npm published
+shipcheck-mcp   npm / registry / Glama
+mcpservers.org  approved listing
+awesome PR      open + green checks
+shipcheck-action marketplace listing
+launchquest     live incentive demo</code></pre>
               <p class="dim">type <kbd>help</kbd> or run a command below.</p>
             </div>
 
@@ -167,6 +176,7 @@ launchquest            live incentive demo</code></pre>
               <ul>
                 <li><a href="shipcheck.html">~/shipcheck</a></li>
                 <li><a href="mcp-registry-audit.html">~/tools/mcp-registry-audit</a></li>
+                <li><a href="mcp-directory-launch.html">~/services/mcp-directory-launch</a></li>
                 <li><a href="mcp-launch-review.html">~/services/mcp-launch-review</a></li>
                 <li><a href="case-studies.html">~/proof/case-files</a></li>
                 <li><a href="payments.html">~/billing/payments</a></li>
@@ -197,6 +207,7 @@ launchquest            live incentive demo</code></pre>
         <div class="command-strip" role="toolbar" aria-label="Common commands">
           <button type="button" data-command="services">services</button>
           <button type="button" data-command="proof">proof</button>
+          <button type="button" data-command="directory">directory</button>
           <button type="button" data-command="mcp-audit">mcp-audit</button>
           <button type="button" data-command="shipcheck">shipcheck</button>
           <button type="button" data-command="pricing">pricing</button>
@@ -231,6 +242,13 @@ launchquest            live incentive demo</code></pre>
           </article>
           <article>
             <span>03</span>
+            <h2>MCP Directory Launch</h2>
+            <p>Package metadata, server.json, Glama score readiness, registry proof, README config, and directory submission notes.</p>
+            <strong>$149</strong>
+            <a href="mcp-directory-launch.html">open pass</a>
+          </article>
+          <article>
+            <span>04</span>
             <h2>MCP Launch Review</h2>
             <p>Registry metadata, package identity, install path, client config, permission notes, and smoke-test proof.</p>
             <strong>$99</strong>
@@ -264,6 +282,11 @@ launchquest            live incentive demo</code></pre>
             <span>tool</span>
             <strong>MCP Registry Audit</strong>
             <em>browser metadata audit for server.json</em>
+          </a>
+          <a href="mcp-directory-launch.html">
+            <span>service</span>
+            <strong>MCP Directory Launch</strong>
+            <em>package-to-listing launch pass</em>
           </a>
           <a href="case-studies.html">
             <span>files</span>
