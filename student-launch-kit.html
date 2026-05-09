@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Launch Kit | Tate Programs</title>
+    <meta name="description" content="A browser-only launch checker for student software projects: package metadata, README proof, CI, secrets, publish workflow safety, MCP metadata, and demo readiness.">
+    <link rel="canonical" href="https://tateprograms.com/student-launch-kit.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="student-launch-kit.html">student-kit</a>
+        <a href="mcp-registry-pulse.html">pulse</a>
+        <a href="mcp-directory-launch.html">directory</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Student%20launch%20check">
+        <span></span>
+        local only
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/student-launch-kit</strong>
+        <em>browser-only release check</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">student launch kit / hackathon release gate</p>
+          <h1>Check a student project before judges, users, or maintainers open it.</h1>
+          <p class="console-subtitle">
+            Upload a project folder or paste key files. The checker runs in the browser and scores the launch trail: README, package metadata, CI, secrets hygiene, demo proof, npm publishing safety, and MCP registry alignment.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#launchKit">run check</a>
+            <a class="console-button secondary" href="shipcheck.html">Shipcheck CLI</a>
+            <a class="console-button secondary" href="case-studies.html">proof log</a>
+            <a class="console-button ghost" href="#hackamericaPack">submission pack</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>privacy</dt>
+              <dd>no upload</dd>
+            </div>
+            <div>
+              <dt>target</dt>
+              <dd>hackathons</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>fix list</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Student Launch Kit terminal preview">
+          <div class="terminal-topline">launchkit scan</div>
+          <pre><code>$ open student-launch-kit
+mode: browser-only
+inputs: package.json, README, workflows, server.json
+checks: release proof, safety, metadata, demo
+result: score + ranked fix queue</code></pre>
+        </aside>
+      </section>
+
+      <section id="launchKit" class="console-audit-layout launch-kit-layout" aria-label="Student project launch checker">
+        <div class="audit-form launch-kit-panel">
+          <label>
+            Project name
+            <input id="projectName" name="projectName" type="text" placeholder="Example: SafeLaunch Notes">
+          </label>
+
+          <label>
+            Repo or demo URL
+            <input id="projectUrl" name="projectUrl" type="url" placeholder="https://github.com/username/project">
+          </label>
+
+          <fieldset class="file-drop">
+            <legend>Project files</legend>
+            <p>Choose a project folder or selected files. The browser reads them locally; nothing is sent to a server.</p>
+            <input id="fileInput" type="file" multiple webkitdirectory directory>
+            <div id="fileSummary" class="file-summary">No files loaded yet.</div>
+          </fieldset>
+
+          <label>
+            Paste extra file text
+            <textarea id="pasteInput" placeholder="Optional: paste package.json, README, server.json, workflow YAML, SECURITY.md, or notes that were not in the folder upload."></textarea>
+          </label>
+
+          <fieldset>
+            <legend>Manual proof</legend>
+            <label class="check-row"><input id="hasDemoUrl" type="checkbox"> There is a live demo URL or screenshots for judges/users.</label>
+            <label class="check-row"><input id="hasVideo" type="checkbox"> There is a short demo video or walkthrough plan.</label>
+            <label class="check-row"><input id="hasReflection" type="checkbox"> The project has a short "what we learned" reflection.</label>
+            <label class="check-row"><input id="hasContact" type="checkbox"> README or site includes a contact path for questions.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results launch-kit-results" aria-label="Launch check result" aria-live="polite">
+          <div class="score-card">
+            <span id="launchScore">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="launchTitle">No project loaded</h2>
+          <p id="launchSummary">Load files or paste project text to generate a launch-readiness score.</p>
+          <div class="result-actions">
+            <button class="console-button primary" id="copyLaunchResult" type="button">copy result</button>
+            <a class="console-button secondary" id="emailLaunchResult" href="mailto:hello@tateprograms.com?subject=Student%20launch%20check%20result">email result</a>
+          </div>
+          <div class="signal-list" id="signalList"></div>
+          <div>
+            <h3>Fix queue</h3>
+            <ol id="launchFixes" class="fix-list">
+              <li>Load files to generate the first fix queue.</li>
+            </ol>
+          </div>
+          <p class="tool-note">For full repo scans, use Shipcheck locally. This page is a fast public preflight for students and small teams.</p>
+          <a class="console-button ghost wide-button" href="shipcheck.html">open Shipcheck</a>
+        </aside>
+      </section>
+
+      <section id="hackamericaPack" class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">submission pack</p>
+            <h2>Built for high-school hackathon and portfolio proof.</h2>
+          </div>
+          <a class="console-link" href="https://hackamerica.devpost.com/" target="_blank" rel="noreferrer">HackAmerica</a>
+        </div>
+        <div class="console-card-grid three-up">
+          <article class="console-card">
+            <p class="card-command">problem</p>
+            <h3>Student projects often fail at handoff.</h3>
+            <p>Judges and users need a working install path, clear README, demo proof, safety notes, and no obvious secret or publish-token mistakes.</p>
+          </article>
+          <article class="console-card">
+            <p class="card-command">solution</p>
+            <h3>Local preflight, readable fixes.</h3>
+            <p>The checker turns a project folder into a score and ranked fix queue without uploading code or requiring an account.</p>
+          </article>
+          <article class="console-card">
+            <p class="card-command">impact</p>
+            <h3>Better launches for student builders.</h3>
+            <p>It helps students submit cleaner projects, learn release discipline, and avoid avoidable mistakes before sharing software publicly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="eyebrow">Commercial path</p>
+          <h2>When a quick check turns into a real launch risk, Shipcheck turns it into a scoped fix list.</h2>
+        </div>
+        <a class="button primary" href="mailto:hello@tateprograms.com?subject=Launch%20risk%20review">Request review</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Student Launch Kit</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="shipcheck.html">Shipcheck</a>
+      <a href="case-studies.html">proof</a>
+      <a href="https://github.com/TateLyman" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://x.com/tateprograms" target="_blank" rel="noreferrer">X</a>
+    </footer>
+    <script src="student-launch-kit.js"></script>
+  </body>
+</html>

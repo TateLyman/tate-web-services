@@ -23,6 +23,8 @@ npx serve .
 - `launch-checker.js` - browser-only scoring logic for the app self-check
 - `mcp-self-check.html` - free interactive MCP server launch-readiness checker
 - `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
+- `student-launch-kit.html` - browser-only launch checker for student and hackathon projects
+- `student-launch-kit.js` - local file/folder scoring logic for the student launch checker
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
