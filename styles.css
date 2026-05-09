@@ -915,13 +915,19 @@ footer a {
 }
 
 .audit-form input[type="text"],
-.audit-form input[type="url"] {
+.audit-form input[type="url"],
+.audit-form textarea {
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
   font: inherit;
   padding: 12px 14px;
   width: 100%;
+}
+
+.audit-form textarea {
+  min-height: 260px;
+  resize: vertical;
 }
 
 .audit-form legend {
@@ -1000,6 +1006,28 @@ footer a {
 
 .fix-list li + li {
   margin-top: 10px;
+}
+
+.audit-facts {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: grid;
+  font-size: 0.9rem;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+.registry-tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.registry-tool-actions .console-button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
 }
 
 .tool-note {
@@ -1849,20 +1877,23 @@ footer a {
 }
 
 .console-home .audit-form input[type="text"],
-.console-home .audit-form input[type="url"] {
+.console-home .audit-form input[type="url"],
+.console-home .audit-form textarea {
   background: #07100b;
   border-color: var(--console-line);
   color: var(--console-ink);
 }
 
 .console-home .audit-form input[type="text"]::placeholder,
-.console-home .audit-form input[type="url"]::placeholder {
+.console-home .audit-form input[type="url"]::placeholder,
+.console-home .audit-form textarea::placeholder {
   color: rgba(143, 165, 153, 0.72);
 }
 
 .console-home .check-row,
 .console-home .audit-results p,
-.console-home .fix-list {
+.console-home .fix-list,
+.console-home .audit-facts {
   color: var(--console-muted);
 }
 
@@ -1900,6 +1931,10 @@ footer a {
 }
 
 .console-home .tool-note {
+  border-top-color: var(--console-line);
+}
+
+.console-home .audit-facts {
   border-top-color: var(--console-line);
 }
 

@@ -22,6 +22,8 @@ npx serve .
 - `vibe-checker.js` - browser-only scoring logic for the app self-check
 - `mcp-self-check.html` - free interactive MCP server launch-readiness checker
 - `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
+- `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
+- `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-launch-sample.html` - sample MCP launch check report
 - `vibe-exposure-sample.html` - sample exposure-check deliverable

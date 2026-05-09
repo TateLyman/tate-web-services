@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCP Registry Audit | Tate Programs</title>
+    <meta name="description" content="Run a browser-only MCP registry metadata audit against server.json and a public GitHub repo before submitting to registries and directories.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="console-home">
+    <header class="terminal-header">
+      <a class="terminal-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="terminal-brand-mark">tp</span>
+        <span>tateprograms</span>
+      </a>
+      <nav class="terminal-nav" aria-label="Primary navigation">
+        <a href="mcp-launch-review.html">MCP review</a>
+        <a href="mcp-self-check.html">self-check</a>
+        <a href="mcp-launch-sample.html">sample report</a>
+        <a href="payments.html">payments</a>
+        <a class="terminal-nav-cta" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay $99</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">browser-only MCP registry audit</p>
+          <h1>Check server.json and repo proof before the listing gets judged.</h1>
+          <p class="console-subtitle">
+            Paste registry metadata and a public GitHub repo. The audit checks package identity, remote transport, install docs, permission notes, smoke-test proof, Glama/directory signals, and npm ownership markers.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#registryAuditForm">run audit</a>
+            <a class="console-button secondary" href="mcp-launch-review.html">paid review</a>
+            <a class="console-button ghost" href="mcp-launch-sample.html">sample report</a>
+          </div>
+        </div>
+
+        <aside class="terminal-window" aria-label="MCP registry audit preview">
+          <div class="terminal-topline">audit model</div>
+          <pre><code>inputs:
+  server.json
+  github repo
+
+checks:
+  metadata
+  remotes/packages
+  package ownership
+  README install path
+  permissions
+  directory proof</code></pre>
+        </aside>
+      </section>
+
+      <section class="console-audit-layout" aria-label="MCP registry metadata audit">
+        <div id="registryAuditForm" class="audit-form">
+          <label>
+            server.json or MCP Registry entry
+            <textarea id="registryJson" name="registryJson" rows="16" spellcheck="false" placeholder="Paste server.json or a Registry API entry with a server object."></textarea>
+          </label>
+
+          <label>
+            Public GitHub repo URL
+            <input id="repoUrl" name="repoUrl" type="url" placeholder="https://github.com/example/server">
+          </label>
+
+          <div class="registry-tool-actions">
+            <button class="console-button primary" id="runAudit" type="button">run audit</button>
+            <button class="console-button secondary" id="loadSample" type="button">load sample</button>
+            <button class="console-button ghost" id="clearAudit" type="button">clear</button>
+          </div>
+
+          <fieldset>
+            <legend>What this catches</legend>
+            <label class="check-row"><input type="checkbox" checked disabled> Registry title, website URL, description, and version gaps.</label>
+            <label class="check-row"><input type="checkbox" checked disabled> Remote transport and package install metadata issues.</label>
+            <label class="check-row"><input type="checkbox" checked disabled> README gaps around client config, install, permissions, and smoke-test proof.</label>
+            <label class="check-row"><input type="checkbox" checked disabled> npm package ownership mismatch when public package metadata is available.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results" aria-label="MCP registry audit results" aria-live="polite">
+          <div class="score-card">
+            <span id="scoreValue">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="scoreTitle">Audit not run yet</h2>
+          <p id="scoreSummary">Paste server metadata and a GitHub repo, then run the audit. Everything runs in the browser against public metadata.</p>
+          <div class="result-actions">
+            <button class="console-button primary" id="copyResults" type="button">copy report</button>
+            <a class="console-button secondary" id="emailResults" href="mailto:hello@tateprograms.com?subject=MCP%20registry%20audit">email result</a>
+          </div>
+          <div>
+            <h3>Priority findings</h3>
+            <ol id="findingList" class="fix-list">
+              <li>Run the audit to generate a prioritized registry-readiness report.</li>
+            </ol>
+          </div>
+          <div id="auditFacts" class="audit-facts" hidden></div>
+          <p class="tool-note">Public metadata can drift. A paid MCP launch review includes a manual smoke test and source-level check.</p>
+          <a class="console-button primary wide-button" href="https://paypal.me/glidelocal/99" target="_blank" rel="noreferrer">pay $99 launch review</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>MCP registry audit</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="mcp-launch-review.html">MCP launch review</a>
+      <a href="mcp-self-check.html">self-check</a>
+      <a href="mcp-launch-sample.html">sample report</a>
+    </footer>
+    <script src="mcp-registry-audit.js"></script>
+  </body>
+</html>
