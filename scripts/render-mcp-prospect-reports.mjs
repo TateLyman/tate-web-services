@@ -64,8 +64,8 @@ function suggestedFix(signal) {
 }
 
 function riskLabel(score) {
-  if (score >= 100) return 'high-conversion target'
-  if (score >= 85) return 'strong target'
+  if (score >= 100) return 'priority review target'
+  if (score >= 85) return 'strong review target'
   return 'review manually'
 }
 

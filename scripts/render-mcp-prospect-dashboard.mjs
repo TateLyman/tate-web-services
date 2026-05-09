@@ -71,7 +71,7 @@ function parseDraft(lead, draft) {
 }
 
 function composeHref({ to, subject, body }) {
-  if (!to) {
+  if (!to || !to.includes('@')) {
     return ''
   }
   return `mailto:${encodeMailbox(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`

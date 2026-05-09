@@ -99,6 +99,7 @@ async function fetchGithubRepoContext(repo) {
       fullName: data.full_name,
       htmlUrl: data.html_url,
       description: data.description ?? '',
+      homepageUrl: data.homepage ?? '',
       stars: data.stargazers_count ?? 0,
       forks: data.forks_count ?? 0,
       openIssues: data.open_issues_count ?? 0,
@@ -144,8 +145,9 @@ function analyzeServer(entry, repoContext) {
   if (!title) signals.push('Missing human-readable title')
   else strengths.push('Has title')
 
-  if (!server.websiteUrl) signals.push('Missing website URL')
-  else strengths.push('Has website URL')
+  if (!server.websiteUrl && !repoContext?.homepageUrl) signals.push('No website URL visible in registry metadata or GitHub repo')
+  else if (!server.websiteUrl && repoContext?.homepageUrl) signals.push('Registry metadata does not expose the GitHub homepage URL')
+  else strengths.push('Registry metadata includes website URL')
 
   if (!repo) signals.push('No GitHub repository URL in registry metadata')
   else strengths.push('Registry points to GitHub repo')
@@ -203,7 +205,7 @@ function analyzeServer(entry, repoContext) {
     daysSinceUpdate,
     repositoryUrl: server.repository?.url ?? '',
     githubRepo: repo,
-    websiteUrl: server.websiteUrl ?? '',
+    websiteUrl: server.websiteUrl || repoContext?.homepageUrl || '',
     packageCount: packages.length,
     remoteCount: remotes.length,
     stars: repoContext?.stars ?? '',
@@ -302,14 +304,14 @@ function formatMessage(lead) {
     ``,
     `Hi ${project} team,`,
     ``,
-    `${repoLine}. I run Tate Programs, a small launch-review service focused on MCP packages and JS/TS release readiness.`,
+    `${repoLine}. I run Tate Programs, a small launch-readiness service for MCP packages and JS/TS repos.`,
     ``,
-    `A few public-facing launch signals looked worth tightening:`,
+    `I checked only public metadata and noticed a few launch-readiness signals worth reviewing:`,
     signalBullets,
     ``,
     `I built a free MCP self-check here: https://tateprograms.com/mcp-self-check.html`,
     ``,
-    `If useful, I can do a fixed $99 MCP launch review and return a short prioritized report covering server.json/registry metadata, package install path, client config, permission notes, smoke-test proof, and directory readiness:`,
+    `If useful, I also offer a fixed $99 MCP launch review with a short prioritized report covering server.json/registry metadata, package install path, client config, permission notes, smoke-test proof, and directory readiness:`,
     `https://tateprograms.com/mcp-launch-review.html`,
     ``,
     `No pressure. If this is not relevant, ignore this and I will not follow up.`,
