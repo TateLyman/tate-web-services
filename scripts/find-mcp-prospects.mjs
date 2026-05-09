@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { Buffer } from 'node:buffer'
 
 const REGISTRY_BASE = 'https://registry.modelcontextprotocol.io/v0.1/servers'
@@ -7,6 +7,7 @@ const DEFAULT_LIMIT = 300
 const PAGE_SIZE = 100
 const OUTPUT_DIR = 'outreach/generated'
 const MESSAGE_DIR = `${OUTPUT_DIR}/mcp-prospect-messages`
+const SUPPRESSION_PATH = 'outreach/contact-suppression.csv'
 
 const maxServers = Number.parseInt(process.argv[2] ?? `${DEFAULT_LIMIT}`, 10)
 const githubToken = process.env.GITHUB_TOKEN
@@ -120,11 +121,26 @@ function hasPattern(text, pattern) {
   return pattern.test(text)
 }
 
+async function loadSuppressedEmails() {
+  try {
+    const text = await readFile(SUPPRESSION_PATH, 'utf8')
+    return new Set(text
+      .split(/\r?\n/)
+      .slice(1)
+      .map(line => line.split(',')[0]?.trim().toLowerCase())
+      .filter(Boolean))
+  }
+  catch {
+    return new Set()
+  }
+}
+
 function extractEmails(text) {
   const matches = text.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/gi) ?? []
-  const blocked = /example\.com|domain\.com|email\.com|your-email|you@example|noreply|no-reply/i
+  const blocked = /example\.com|domain\.com|email\.com|your-email|you@example|noreply|no-reply|^(security|abuse|privacy|legal|dmarc|rua|postmaster|hostmaster|webmaster)@/i
   return [...new Set(matches)]
-    .filter(email => !blocked.test(email))
+    .map(email => email.toLowerCase())
+    .filter(email => !blocked.test(email) && !suppressedEmails.has(email))
     .slice(0, 3)
 }
 
@@ -329,6 +345,8 @@ function formatMessage(lead) {
     ``,
   ].join('\n')
 }
+
+const suppressedEmails = await loadSuppressedEmails()
 
 await mkdir(OUTPUT_DIR, { recursive: true })
 await mkdir(MESSAGE_DIR, { recursive: true })
