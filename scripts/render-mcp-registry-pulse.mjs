@@ -6,6 +6,7 @@ const RUN_DATE = new Date().toISOString().slice(0, 10)
 const DEFAULT_LIMIT = 300
 const PAGE_SIZE = 100
 const OUTPUT_PATH = 'mcp-registry-pulse.html'
+const OUTPUT_JSON_PATH = 'mcp-registry-pulse.json'
 
 const maxServers = Number.parseInt(process.argv[2] ?? `${DEFAULT_LIMIT}`, 10)
 const githubToken = process.env.GITHUB_TOKEN
@@ -301,7 +302,8 @@ registry entries: ${escapeHtml(fetchedTotal)}
 latest servers:   ${escapeHtml(totals.latestTotal)}
 github repos:     ${escapeHtml(totals.repos)}
 readme sampled:   ${escapeHtml(totals.readableRepos)}
-output:           mcp-registry-pulse.html</code></pre>
+output:           mcp-registry-pulse.html
+data:             mcp-registry-pulse.json</code></pre>
         </aside>
       </section>
 
@@ -391,7 +393,7 @@ output:           mcp-registry-pulse.html</code></pre>
             <p class="card-command">github</p>
             <h3>Linked GitHub repos</h3>
             <p>When a listing exposed a GitHub repo, the script read public repo metadata and README text. Private code and private docs were not inspected.</p>
-            <a href="https://github.com/TateLyman/tate-web-services" target="_blank" rel="noreferrer">site repo</a>
+            <a href="mcp-registry-pulse.json">aggregate JSON</a>
           </article>
           <article>
             <p class="card-command">shipcheck</p>
@@ -424,6 +426,24 @@ output:           mcp-registry-pulse.html</code></pre>
 </html>`
 }
 
+function renderJson(summary, fetchedTotal) {
+  return JSON.stringify({
+    generatedAt: RUN_DATE,
+    source: REGISTRY_BASE,
+    fetchedEntries: fetchedTotal,
+    latestServersAnalyzed: summary.totals.latestTotal,
+    githubReposDetected: summary.totals.repos,
+    readmesSampled: summary.totals.readableRepos,
+    method: [
+      'Fetched public MCP Registry entries.',
+      'Kept entries marked latest by official registry metadata.',
+      'Read linked public GitHub repo metadata and README text when available.',
+      'Reported aggregate launch-readiness signals only.'
+    ],
+    totals: summary.totals
+  }, null, 2)
+}
+
 const registryEntries = await fetchRegistryServers(maxServers)
 const latestEntries = registryEntries.filter(entry => latestMeta(entry)?.isLatest === true)
 
@@ -437,6 +457,8 @@ for (const entry of latestEntries) {
 
 const summary = summarize(latestEntries, repoContexts)
 await writeFile(OUTPUT_PATH, renderPage(summary, registryEntries.length))
+await writeFile(OUTPUT_JSON_PATH, `${renderJson(summary, registryEntries.length)}\n`)
 console.log(`Fetched ${registryEntries.length} registry entries.`)
 console.log(`Analyzed ${summary.totals.latestTotal} latest servers.`)
 console.log(`Wrote ${OUTPUT_PATH}.`)
+console.log(`Wrote ${OUTPUT_JSON_PATH}.`)

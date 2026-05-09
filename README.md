@@ -26,6 +26,7 @@ npx serve .
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
+- `mcp-registry-pulse.json` - aggregate data backing the MCP Registry Pulse page
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-directory-launch.html` - fixed-scope MCP directory listing launch pass
 - `mcp-directory-checklist.html` - public MCP directory launch checklist resource
@@ -72,6 +73,7 @@ npm run pulse:mcp
 The script reads the live official MCP Registry API plus linked public GitHub metadata and writes:
 
 - `mcp-registry-pulse.html`
+- `mcp-registry-pulse.json`
 
 The page intentionally reports aggregate launch-readiness signals, not named third-party findings.
 
