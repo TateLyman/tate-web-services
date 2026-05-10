@@ -98,7 +98,7 @@ const commands = {
   ].join('\n'),
   shipcheck: [
     'open /shipcheck.html',
-    'scanner for repo launch readiness, CI output, and MCP access.',
+    'scanner for repo launch readiness, CI output, MCP metadata, and STDIO execution-boundary notes.',
   ].join('\n'),
   readiness: [
     'open /release-readiness-2026.html',
