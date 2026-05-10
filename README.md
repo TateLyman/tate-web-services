@@ -28,6 +28,7 @@ npx serve .
 - `student-launch-review.html` - paid student project launch polish and repo handoff review page
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
+- `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot

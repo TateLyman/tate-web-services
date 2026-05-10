@@ -14,6 +14,7 @@ const commands = {
     '  radar        open agent stack radar',
     '  x402         open x402 launch checklist',
     '  commerce-gate open agent-commerce readiness gate',
+    '  commerce-report open sample readiness report',
     '  mcp-audit    open browser registry audit',
     '  shipcheck    open Shipcheck page',
     '  readiness    open 2026 release runbook',
@@ -47,6 +48,7 @@ const commands = {
     'agent radar      May 2026 map for agent-native software surfaces',
     'x402 checklist   launch controls for payment agents',
     'commerce gate    x402, Pay.sh, and payment-agent readiness check',
+    'commerce report  sample spend map and patch order',
     'case files       /case-studies.html',
     'checklist        /mcp-directory-checklist.html',
     'readiness        /release-readiness-2026.html',
@@ -106,7 +108,11 @@ const commands = {
   ].join('\n'),
   'commerce-gate': [
     'open /agent-commerce-gate.html',
-    'browser-only readiness check for x402, Pay.sh, API-payment, and agent-commerce prototypes: budgets, approvals, receipts, replay protection, auth boundaries, and payment abuse controls.',
+    'browser-only readiness check for x402, Pay.sh, API-payment, and agent-commerce prototypes: price previews, enforceable caps, receipts, replay protection, provider validation, metadata filtering, and payment abuse controls.',
+  ].join('\n'),
+  'commerce-report': [
+    'open /agent-commerce-sample-report.html',
+    'fictional 48-hour review sample for an x402 payment-agent demo: spend map, control gaps, launch evidence, and patch order.',
   ].join('\n'),
   shipcheck: [
     'open /shipcheck.html',
@@ -134,6 +140,7 @@ const routes = {
   radar: 'agent-stack-radar.html',
   x402: 'x402-launch-checklist.html',
   'commerce-gate': 'agent-commerce-gate.html',
+  'commerce-report': 'agent-commerce-sample-report.html',
   shipcheck: 'shipcheck.html',
   readiness: 'release-readiness-2026.html',
   'student-kit': 'student-launch-kit.html',

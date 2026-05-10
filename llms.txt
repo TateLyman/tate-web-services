@@ -14,6 +14,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [MCP Registry Audit](https://tateprograms.com/mcp-registry-audit.html) - Browser-only self-check for MCP registry and server metadata.
 - [MCP Directory Checklist](https://tateprograms.com/mcp-directory-checklist.html) - Public checklist for MCP directory submissions.
 - [Agent Commerce Gate](https://tateprograms.com/agent-commerce-gate.html) - Browser-only readiness check for x402, Pay.sh, API-payment, and agent-commerce prototypes, including price previews, enforceable spend caps, provider validation, and payment metadata filtering.
+- [Agent Commerce Sample Report](https://tateprograms.com/agent-commerce-sample-report.html) - Fictional sample 48-hour readiness report showing spend map, control gaps, launch evidence, and patch order for an x402 payment-agent demo.
 - [Release Readiness 2026](https://tateprograms.com/release-readiness-2026.html) - JS/npm/Action/MCP/payment-agent launch-readiness runbook.
 - [Student Launch Kit](https://tateprograms.com/student-launch-kit.html) - Browser-only launch checker for student and hackathon projects.
 - [Case Studies](https://tateprograms.com/case-studies.html) - Public proof of shipped tools and launch assets.
