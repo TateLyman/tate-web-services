@@ -2071,6 +2071,10 @@ footer a {
   min-width: 0;
 }
 
+.agent-commerce-results .result-actions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .console-home .tool-note {
   border-top-color: var(--console-line);
 }
@@ -3010,6 +3014,10 @@ footer a {
 
   .pulse-bar-row span {
     text-align: left;
+  }
+
+  .agent-commerce-results .result-actions {
+    grid-template-columns: 1fr;
   }
 }
 

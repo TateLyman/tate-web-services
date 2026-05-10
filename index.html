@@ -45,6 +45,12 @@
           },
           {
             "@type": "Offer",
+            "name": "Agent Commerce Readiness Review",
+            "price": "149",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
             "name": "Student Launch Review",
             "price": "29",
             "priceCurrency": "USD"
@@ -68,6 +74,7 @@
       <nav class="os-tabs" aria-label="Primary navigation">
         <a href="#workbench">workbench</a>
         <a href="shipcheck.html">shipcheck</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
         <a href="student-launch-kit.html">student-kit</a>
         <a href="student-launch-review.html">student-review</a>
         <a href="mcp-registry-audit.html">mcp-audit</a>
@@ -90,6 +97,7 @@
             <a href="#workbench" aria-label="Console">~/</a>
             <a href="mcp-registry-audit.html" aria-label="MCP registry audit">mcp</a>
             <a href="mcp-registry-pulse.html" aria-label="MCP registry pulse">pls</a>
+            <a href="agent-commerce-gate.html" aria-label="Agent commerce gate">pay</a>
             <a href="shipcheck.html" aria-label="Shipcheck">sc</a>
             <a href="student-launch-kit.html" aria-label="Student Launch Kit">kit</a>
             <a href="student-launch-review.html" aria-label="Student Launch Review">rev</a>
@@ -132,6 +140,7 @@ mcpservers.org  approved listing
 awesome PR      open + green checks
 shipcheck-action marketplace + CI smoke test
 student-kit   browser launch checker
+commerce-gate agent payment readiness
 registry pulse  public ecosystem snapshot
 launchquest     live incentive demo</code></pre>
               <p class="dim">type <kbd>help</kbd> or run a command below.</p>
@@ -149,7 +158,7 @@ launchquest     live incentive demo</code></pre>
             <section class="status-pane">
               <div class="pane-title">
                 <span>processes</span>
-                <strong>4 online</strong>
+                <strong>6 online</strong>
               </div>
               <table>
                 <thead>
@@ -181,6 +190,11 @@ launchquest     live incentive demo</code></pre>
                     <td>open</td>
                   </tr>
                   <tr>
+                    <td>126</td>
+                    <td>commerce</td>
+                    <td>live</td>
+                  </tr>
+                  <tr>
                     <td>209</td>
                     <td>patches</td>
                     <td>quoted</td>
@@ -196,6 +210,7 @@ launchquest     live incentive demo</code></pre>
               </div>
               <ul>
                 <li><a href="shipcheck.html">~/shipcheck</a></li>
+                <li><a href="agent-commerce-gate.html">~/tools/agent-commerce-gate</a></li>
                 <li><a href="student-launch-kit.html">~/tools/student-launch-kit</a></li>
                 <li><a href="student-launch-review.html">~/services/student-launch-review</a></li>
                 <li><a href="mcp-registry-audit.html">~/tools/mcp-registry-audit</a></li>
@@ -236,6 +251,7 @@ launchquest     live incentive demo</code></pre>
           <button type="button" data-command="directory">directory</button>
           <button type="button" data-command="checklist">checklist</button>
           <button type="button" data-command="pulse">pulse</button>
+          <button type="button" data-command="commerce-gate">commerce-gate</button>
           <button type="button" data-command="mcp-audit">mcp-audit</button>
           <button type="button" data-command="shipcheck">shipcheck</button>
           <button type="button" data-command="student-kit">student-kit</button>
@@ -272,20 +288,27 @@ launchquest     live incentive demo</code></pre>
           </article>
           <article>
             <span>03</span>
+            <h2>Agent Commerce Readiness</h2>
+            <p>x402/API payment loops, spend caps, approval checkpoints, receipts, replay protection, webhook proof, and abuse controls.</p>
+            <strong>$149</strong>
+            <a href="agent-commerce-gate.html">open gate</a>
+          </article>
+          <article>
+            <span>04</span>
             <h2>MCP Directory Launch</h2>
             <p>Package metadata, server.json version sync, Glama score readiness, registry proof, README config, and directory submission notes.</p>
             <strong>$149</strong>
             <a href="mcp-directory-launch.html">open pass</a>
           </article>
           <article>
-            <span>04</span>
+            <span>05</span>
             <h2>MCP Launch Review</h2>
             <p>Registry metadata, package identity, install path, client config, permission notes, and smoke-test proof.</p>
             <strong>$99</strong>
             <a href="mcp-launch-review.html">open scope</a>
           </article>
           <article>
-            <span>05</span>
+            <span>06</span>
             <h2>Student Launch Review</h2>
             <p>Deadline polish for student projects: README handoff, demo proof, submission copy, CI signal, and public-code cleanup.</p>
             <strong>$29+</strong>
@@ -319,6 +342,11 @@ launchquest     live incentive demo</code></pre>
             <span>service</span>
             <strong>Student Launch Review</strong>
             <em>deadline polish and repo handoff cleanup</em>
+          </a>
+          <a href="agent-commerce-gate.html">
+            <span>tool</span>
+            <strong>Agent Commerce Gate</strong>
+            <em>x402 and payment-agent readiness check</em>
           </a>
           <a href="https://github.com/TateLyman/shipcheck-action" target="_blank" rel="noreferrer">
             <span>action</span>
