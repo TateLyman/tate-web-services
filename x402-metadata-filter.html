@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>x402 Metadata Filter | Tate Programs</title>
+    <meta name="description" content="Browser-only x402 payment metadata filter for checking prompts, resource URLs, reason strings, user identifiers, secrets, and receipt fields before agent-payment demos.">
+    <link rel="canonical" href="https://tateprograms.com/x402-metadata-filter.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="x402 Metadata Filter">
+    <meta property="og:description" content="Check and sanitize payment metadata before agents spend through x402 or Pay.sh flows.">
+    <meta property="og:url" content="https://tateprograms.com/x402-metadata-filter.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="x402 Metadata Filter">
+    <meta name="twitter:description" content="Browser-only payment metadata filter for x402, Pay.sh, and payment-agent demos.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "x402 Metadata Filter",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "url": "https://tateprograms.com/x402-metadata-filter.html",
+        "description": "Browser-only payment metadata filter for x402, Pay.sh, and payment-agent demos.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        }
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
+        <a href="agent-security-drill.html">security-drill</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=x402%20metadata%20review">
+        <span></span>
+        metadata checks
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/x402-metadata-filter</strong>
+        <em>browser-only</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">x402 metadata filter / payment privacy</p>
+          <h1>Before the agent pays, strip private context from the payment record.</h1>
+          <p class="console-subtitle">
+            x402 and Pay.sh make paid API calls easy for agents. This local checker looks for prompts, user identifiers, emails, phones, query tokens, wallet context, and secret-like strings in payment metadata before receipts, facilitators, providers, or public chains can see them.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#metadataFilter">run filter</a>
+            <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
+            <a class="console-button secondary" href="x402-launch-checklist.html">x402 checklist</a>
+            <a class="console-button secondary" href="pay-sh-catalog-pulse.html">Pay.sh pulse</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>privacy</dt>
+              <dd>local</dd>
+            </div>
+            <div>
+              <dt>input</dt>
+              <dd>JSON/text</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>safe metadata</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="x402 metadata terminal preview">
+          <div class="terminal-topline">metadata.filter</div>
+          <pre><code>$ filter payment-metadata.json
+scan: prompt, pii, secrets
+url: drop query tokens
+reason: compact purpose code
+receipt: safe label only
+result: sanitized metadata</code></pre>
+        </aside>
+      </section>
+
+      <section id="metadataFilter" class="console-audit-layout launch-kit-layout" aria-label="x402 metadata filter">
+        <div class="audit-form launch-kit-panel">
+          <label>
+            Payment metadata, receipt body, or payment request JSON
+            <textarea id="metadataInput" rows="18" spellcheck="false"></textarea>
+          </label>
+          <div class="result-actions">
+            <button class="console-button primary" id="loadSample" type="button">load sample</button>
+            <button class="console-button secondary" id="copySafeMetadata" type="button">copy safe metadata</button>
+            <button class="console-button secondary" id="downloadMetadataReport" type="button">download report</button>
+          </div>
+        </div>
+
+        <aside class="audit-results launch-kit-results agent-commerce-results" aria-label="Metadata filter result" aria-live="polite">
+          <div class="score-card">
+            <span id="metadataScore">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="metadataTitle">Paste metadata to begin</h2>
+          <p id="metadataSummary">The filter runs in this browser and does not upload the text.</p>
+          <div class="signal-list" id="metadataSignals"></div>
+          <div>
+            <h3>Safe metadata draft</h3>
+            <textarea id="metadataOutput" rows="14" spellcheck="false" readonly></textarea>
+          </div>
+          <p class="tool-note">This catches common metadata leaks; it does not replace legal, compliance, wallet, or production security review.</p>
+          <a class="console-button ghost wide-button" href="mailto:hello@tateprograms.com?subject=x402%20metadata%20review">scope a review</a>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">rules</p>
+          <h2>What the filter tries to remove.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">prompt</p>
+            <h3>Private task context</h3>
+            <p>Full prompts, chat excerpts, support tickets, retrieval chunks, and internal notes should not become payment metadata.</p>
+          </article>
+          <article>
+            <p class="card-command">pii</p>
+            <h3>User identifiers</h3>
+            <p>Email, phone, names, customer ids, account ids, and location strings should be replaced with compact purpose labels.</p>
+          </article>
+          <article>
+            <p class="card-command">url</p>
+            <h3>Resource URLs</h3>
+            <p>URLs can carry query tokens, emails, session ids, and search terms. Keep the origin/path or a neutral resource label.</p>
+          </article>
+          <article>
+            <p class="card-command">secret</p>
+            <h3>Credentials</h3>
+            <p>API keys, bearer tokens, JWTs, private keys, webhook secrets, and seed-like strings should never appear in receipts.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>x402 Metadata Filter</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-commerce-gate.html">Commerce gate</a>
+      <a href="x402-launch-checklist.html">x402 checklist</a>
+      <a href="pay-sh-catalog-pulse.html">Pay.sh pulse</a>
+      <a href="payments.html">Payments</a>
+      <a href="index.html">Home</a>
+    </footer>
+    <script src="x402-metadata-filter.js"></script>
+  </body>
+</html>

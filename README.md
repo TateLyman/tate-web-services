@@ -35,6 +35,8 @@ npx serve .
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
+- `x402-metadata-filter.html` - browser-only metadata filter for x402/Pay.sh payment requests, receipts, resource URLs, prompts, PII, and secret-like fields
+- `x402-metadata-filter.js` - local scoring, redaction, safe-envelope generation, copy, and report export logic for the x402 Metadata Filter
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
@@ -64,6 +66,7 @@ npx serve .
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
 - `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
+- `scripts/find-pay-sh-prospects.mjs` - Pay.sh catalog prospect scanner for the agent-commerce readiness offer
 - `scripts/render-mcp-registry-pulse.mjs` - public MCP Registry pulse page generator
 - `scripts/render-pay-sh-catalog-pulse.mjs` - public Pay.sh catalog pulse page generator
 - `scripts/render-mcp-prospect-dashboard.mjs` - local dashboard renderer for MCP prospect review and compose links
@@ -136,6 +139,24 @@ npm run dashboard:mcp
 ```
 
 The dashboard is written to `outreach/generated/mcp-prospect-dashboard-YYYY-MM-DD.html` and is ignored by git.
+
+## Pay.sh Prospect Scanner
+
+To regenerate the private Pay.sh prospect queue:
+
+```bash
+npm run prospect:pay
+```
+
+The script reads the live Pay.sh catalog, filters already-contacted agent-commerce targets from local sent logs, and writes:
+
+- `outreach/generated/pay-sh-prospects-YYYY-MM-DD.md`
+- `outreach/generated/pay-sh-prospects-YYYY-MM-DD.csv`
+- `outreach/generated/pay-sh-prospects-YYYY-MM-DD.json`
+- `outreach/generated/pay-sh-email-priority-YYYY-MM-DD.md`
+- `outreach/generated/pay-sh-prospect-messages/`
+
+Review every target and public contact manually before sending anything.
 
 ## Positioning
 
