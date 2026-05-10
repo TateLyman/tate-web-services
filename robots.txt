@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tateprograms.com/sitemap.xml
+Host: https://tateprograms.com
+
+# Curated machine-readable map for developer tools and launch-readiness pages.
+# llms.txt is a community convention, not a crawler directive.
+LLMs: https://tateprograms.com/llms.txt

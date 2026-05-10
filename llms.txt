@@ -1,0 +1,31 @@
+# Tate Programs
+
+Tate Programs builds practical release-readiness tools and fixed-scope review services for JavaScript, TypeScript, GitHub Action, and MCP server launches.
+
+## Primary Pages
+
+- [Home](https://tateprograms.com/) - Main workbench, services, proof, and contact paths.
+- [Shipcheck CLI](https://tateprograms.com/shipcheck.html) - Static release-readiness scanner for JS, TS, GitHub Action, npm, and MCP repos.
+- [MCP Registry Pulse](https://tateprograms.com/mcp-registry-pulse.html) - Public aggregate snapshot of MCP Registry metadata, README, STDIO, auth, and launch-proof signals.
+- [MCP Registry Pulse JSON](https://tateprograms.com/mcp-registry-pulse.json) - Machine-readable aggregate data backing the Pulse page.
+- [MCP Launch Review](https://tateprograms.com/mcp-launch-review.html) - Fixed-scope paid MCP package and registry readiness review.
+- [MCP Registry Audit](https://tateprograms.com/mcp-registry-audit.html) - Browser-only self-check for MCP registry and server metadata.
+- [MCP Directory Checklist](https://tateprograms.com/mcp-directory-checklist.html) - Public checklist for MCP directory submissions.
+- [Agent Commerce Gate](https://tateprograms.com/agent-commerce-gate.html) - Browser-only readiness check for x402, API-payment, and agent-commerce prototypes.
+- [Release Readiness 2026](https://tateprograms.com/release-readiness-2026.html) - JS/npm/Action/MCP/payment-agent launch-readiness runbook.
+- [Student Launch Kit](https://tateprograms.com/student-launch-kit.html) - Browser-only launch checker for student and hackathon projects.
+- [Case Studies](https://tateprograms.com/case-studies.html) - Public proof of shipped tools and launch assets.
+- [Payments](https://tateprograms.com/payments.html) - Fixed-scope pricing and payment links.
+
+## Repositories And Packages
+
+- [Shipcheck CLI npm](https://www.npmjs.com/package/shipcheck-cli) - Public npm package, runnable with `npx --yes shipcheck-cli .`.
+- [Shipcheck MCP npm](https://www.npmjs.com/package/shipcheck-mcp) - Public MCP server package for running Shipcheck from MCP clients.
+- [Shipcheck Action](https://github.com/TateLyman/shipcheck-action) - GitHub Action wrapper for Shipcheck.
+- [Shipcheck MCP](https://github.com/TateLyman/shipcheck-mcp) - MCP server source repository.
+- [Tate Programs site](https://github.com/TateLyman/tate-web-services) - Static site source.
+
+## Contact
+
+- Email: hello@tateprograms.com
+- Website: https://tateprograms.com/
