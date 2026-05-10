@@ -10,7 +10,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [MCP Registry Pulse JSON](https://tateprograms.com/mcp-registry-pulse.json) - Machine-readable aggregate data backing the Pulse page.
 - [Agent Stack Radar](https://tateprograms.com/agent-stack-radar.html) - May 2026 radar for agent-native software trends: MCP, x402, Pay.sh, live web data, browser automation, coding agents, and machine-readable docs.
 - [x402 Launch Checklist](https://tateprograms.com/x402-launch-checklist.html) - Launch-readiness checklist for x402, Pay.sh, and agent-payment demos before real value can move.
-- [Agent Security Drill Kit](https://tateprograms.com/agent-security-drill.html) - Browser-only prompt injection, exfiltration, tool-scope, policy, audit, rate-limit, and human-review readiness check for agent launches.
+- [Agent Security Drill Kit](https://tateprograms.com/agent-security-drill.html) - Browser-only agent-security evidence console for prompt injection, exfiltration, tool scopes, policy actions, audit trails, A2A agent identity, Gemini-safe integration notes, and exportable review packs.
 - [Agent Security Sample Report](https://tateprograms.com/agent-security-sample-report.html) - Fictional sample review showing boundary map, drill results, policy gaps, audit evidence, and patch order for an agent demo.
 - [MCP Launch Review](https://tateprograms.com/mcp-launch-review.html) - Fixed-scope paid MCP package and registry readiness review.
 - [MCP Registry Audit](https://tateprograms.com/mcp-registry-audit.html) - Browser-only self-check for MCP registry and server metadata.
