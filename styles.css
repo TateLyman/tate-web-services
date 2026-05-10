@@ -2144,6 +2144,70 @@ footer a {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
+.pulse-search {
+  border: 1px solid var(--console-line);
+  border-radius: 6px;
+  margin-bottom: 18px;
+  padding: 16px;
+}
+
+.pulse-search label {
+  color: var(--console-muted);
+  display: block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.pulse-search input {
+  background: #07100b;
+  border: 1px solid rgba(121, 255, 157, 0.26);
+  border-radius: 4px;
+  color: var(--console-ink);
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.pulse-sample-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pulse-sample-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pulse-sample-card[hidden] {
+  display: none;
+}
+
+.pulse-sample-card ul {
+  color: var(--console-muted);
+  margin: 0 0 18px;
+  padding-left: 18px;
+}
+
+.pulse-sample-card li + li {
+  margin-top: 6px;
+}
+
+.pulse-sample-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.pulse-sample-links a {
+  color: var(--console-green);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.84rem;
+}
+
 .console-home .audit-facts {
   border-top-color: var(--console-line);
 }
@@ -2845,6 +2909,7 @@ footer a {
   .console-hero,
   .console-card-grid,
   .proof-terminal-grid,
+  .pulse-sample-grid,
   .runbook,
   .console-command-grid,
   .console-audit-layout,
@@ -2891,6 +2956,7 @@ footer a {
   .console-ledger,
   .console-card-grid,
   .proof-terminal-grid,
+  .pulse-sample-grid,
   .runbook,
   .console-command-grid,
   .console-card-grid.two-up,

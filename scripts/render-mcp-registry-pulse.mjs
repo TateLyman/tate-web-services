@@ -127,6 +127,72 @@ function readmeSignals(readme = '') {
   }
 }
 
+function describeInstallPath(row) {
+  if (row.packages.length && row.remotes.length) {
+    return 'package + remote'
+  }
+  if (row.packages.length) {
+    return 'package'
+  }
+  if (row.remotes.length) {
+    return 'remote'
+  }
+  return 'metadata only'
+}
+
+function publicProofGaps(row) {
+  const gaps = []
+  const hasReadme = Boolean(row.repoContext?.readme)
+  const stale = row.daysSinceUpdate === null || row.daysSinceUpdate > 45
+
+  if (!row.title) {
+    gaps.push({ label: 'Add a human-readable title', weight: 10 })
+  }
+  if (row.description.length < 90) {
+    gaps.push({ label: 'Expand the registry description', weight: 10 })
+  }
+  if (!row.websiteUrl) {
+    gaps.push({ label: 'Expose a product or docs website', weight: 8 })
+  }
+  if (!row.repo) {
+    gaps.push({ label: 'Attach a public repository', weight: 12 })
+  }
+  if (row.repo && !hasReadme) {
+    gaps.push({ label: 'Make README proof available', weight: 10 })
+  }
+  if (row.remotes.length && !row.packages.length) {
+    gaps.push({ label: 'Clarify remote auth and trust boundary', weight: 8 })
+  }
+  if (hasReadme && !row.signals.install) {
+    gaps.push({ label: 'Add install or client command', weight: 8 })
+  }
+  if (hasReadme && !row.signals.mcpServers) {
+    gaps.push({ label: 'Add copyable mcpServers config', weight: 7 })
+  }
+  if (hasReadme && !row.signals.smoke) {
+    gaps.push({ label: 'Add smoke-test or tool-list proof', weight: 8 })
+  }
+  if (hasReadme && !row.signals.safety) {
+    gaps.push({ label: 'Document permissions and safety notes', weight: 8 })
+  }
+  if (hasReadme && !row.signals.serverJson) {
+    gaps.push({ label: 'Reference server.json metadata alignment', weight: 4 })
+  }
+  if (row.repoContext?.archived) {
+    gaps.push({ label: 'Explain archive/maintenance status', weight: 12 })
+  }
+  if (stale) {
+    gaps.push({ label: 'Refresh stale registry metadata', weight: 5 })
+  }
+
+  return gaps.sort((a, b) => b.weight - a.weight)
+}
+
+function scorePublicProof(gaps) {
+  const penalty = gaps.reduce((sum, gap) => sum + gap.weight, 0)
+  return Math.max(0, 100 - penalty)
+}
+
 function latestMeta(entry) {
   return entry._meta?.['io.modelcontextprotocol.registry/official'] ?? {}
 }
@@ -146,7 +212,7 @@ function summarize(latestEntries, repoContexts) {
     const daysSinceUpdate = updatedMs ? Math.round((Date.now() - updatedMs) / 86_400_000) : null
     const websiteUrl = server.websiteUrl || repoContext?.homepageUrl || extractReadmeWebsite(readme)
 
-    return {
+    const row = {
       name: server.name ?? '',
       title: server.title ?? '',
       description: server.description ?? '',
@@ -159,6 +225,11 @@ function summarize(latestEntries, repoContexts) {
       updatedAt,
       daysSinceUpdate,
     }
+    row.gaps = publicProofGaps(row)
+    row.publicProofScore = scorePublicProof(row.gaps)
+    row.installPath = describeInstallPath(row)
+    row.primaryUrl = websiteUrl || repoContext?.htmlUrl || server.repository?.url || ''
+    return row
   })
 
   const repos = rows.filter(row => row.repo)
@@ -200,6 +271,37 @@ function summarize(latestEntries, repoContexts) {
   }
 }
 
+function sampleRows(rows) {
+  return rows
+    .filter(row => {
+      const searchable = `${row.name} ${row.title} ${row.description}`.toLowerCase()
+      const looksLikeFixture = /\b(test|testing|example|demo)\b/.test(searchable)
+      return row.name && row.primaryUrl && !looksLikeFixture
+    })
+    .sort((a, b) => {
+      if (a.publicProofScore !== b.publicProofScore) {
+        return a.publicProofScore - b.publicProofScore
+      }
+      return (b.repoContext?.stars ?? 0) - (a.repoContext?.stars ?? 0)
+    })
+    .slice(0, 18)
+}
+
+function sampleJson(row) {
+  return {
+    name: row.name,
+    title: row.title,
+    description: row.description,
+    publicProofScore: row.publicProofScore,
+    installPath: row.installPath,
+    updatedAt: row.updatedAt,
+    repo: row.repo,
+    websiteUrl: row.websiteUrl,
+    primaryUrl: row.primaryUrl,
+    topGaps: row.gaps.slice(0, 5).map(gap => gap.label),
+  }
+}
+
 function metricCard(label, value, subcopy) {
   return `<article class="console-card pulse-metric">
             <p class="card-command">${escapeHtml(label)}</p>
@@ -219,10 +321,44 @@ function bar(label, count, total, note) {
           </div>`
 }
 
+function sampleCard(row) {
+  const title = row.title || row.name
+  const description = row.description || 'No registry description available.'
+  const searchText = [
+    row.name,
+    row.title,
+    row.description,
+    row.repo,
+    row.installPath,
+    ...row.gaps.map(gap => gap.label),
+  ].filter(Boolean).join(' ').toLowerCase()
+  const gapItems = row.gaps.slice(0, 4).map(gap => `<li>${escapeHtml(gap.label)}</li>`).join('')
+  const repoLink = row.repo ? `<a href="https://github.com/${escapeHtml(row.repo)}" target="_blank" rel="noreferrer">repo</a>` : ''
+  const primaryLink = row.primaryUrl ? `<a href="${escapeHtml(row.primaryUrl)}" target="_blank" rel="noreferrer">source</a>` : ''
+  const links = [
+    primaryLink,
+    repoLink,
+    '<a href="mcp-registry-audit.html">audit template</a>',
+  ].filter(Boolean).join('\n              ')
+
+  return `<article class="console-card pulse-sample-card" data-pulse-card data-search="${escapeHtml(searchText)}">
+            <p class="card-command">score ${escapeHtml(row.publicProofScore)}/100 · ${escapeHtml(row.installPath)}</p>
+            <h3>${escapeHtml(title)}</h3>
+            <p>${escapeHtml(description.slice(0, 210))}${description.length > 210 ? '...' : ''}</p>
+            <ul>
+              ${gapItems || '<li>No major public-proof gap in this sample row.</li>'}
+            </ul>
+            <div class="pulse-sample-links">
+              ${links}
+            </div>
+          </article>`
+}
+
 function renderPage(summary, fetchedTotal) {
   const { totals } = summary
   const readmeTotal = totals.readableRepos || 1
   const latestTotal = totals.latestTotal || 1
+  const samples = sampleRows(summary.rows)
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -339,6 +475,23 @@ data:             mcp-registry-pulse.json</code></pre>
         </div>
       </section>
 
+      <section class="console-section" id="pulse-samples">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">server samples</p>
+            <h2>Searchable public-proof gaps from the fetched registry window.</h2>
+          </div>
+          <a class="console-link" href="mcp-launch-review.html">scope a review</a>
+        </div>
+        <div class="pulse-search">
+          <label for="pulseSearch">Filter by server, repo, install path, or gap</label>
+          <input id="pulseSearch" type="search" placeholder="try: remote, smoke-test, title, GitHub">
+        </div>
+        <div class="pulse-sample-grid" data-pulse-list>
+          ${samples.map(sampleCard).join('\n')}
+        </div>
+      </section>
+
       <section class="console-section">
         <div class="console-section-head split">
           <div>
@@ -422,11 +575,22 @@ data:             mcp-registry-pulse.json</code></pre>
       <a href="mcp-launch-review.html">paid review</a>
       <a href="shipcheck.html">shipcheck</a>
     </footer>
+    <script>
+      const pulseSearch = document.querySelector('#pulseSearch')
+      const pulseCards = [...document.querySelectorAll('[data-pulse-card]')]
+      pulseSearch?.addEventListener('input', event => {
+        const query = event.target.value.trim().toLowerCase()
+        for (const card of pulseCards) {
+          card.hidden = Boolean(query) && !card.dataset.search.includes(query)
+        }
+      })
+    </script>
   </body>
 </html>`
 }
 
 function renderJson(summary, fetchedTotal) {
+  const samples = sampleRows(summary.rows).map(sampleJson)
   return JSON.stringify({
     generatedAt: RUN_DATE,
     source: REGISTRY_BASE,
@@ -440,7 +604,8 @@ function renderJson(summary, fetchedTotal) {
       'Read linked public GitHub repo metadata and README text when available.',
       'Reported aggregate launch-readiness signals only.'
     ],
-    totals: summary.totals
+    totals: summary.totals,
+    sampleServers: samples
   }, null, 2)
 }
 
