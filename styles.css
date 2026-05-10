@@ -3146,6 +3146,12 @@ footer a {
   z-index: 1;
 }
 
+.shell-page .console-hero > *,
+.shell-page .terminal-window,
+.shell-page .console-copy {
+  min-width: 0;
+}
+
 .shell-page .console-hero {
   align-items: stretch;
   gap: clamp(20px, 4vw, 38px);
@@ -3223,6 +3229,63 @@ footer a {
   border-color: var(--term-line);
   border-radius: 4px;
   box-shadow: none;
+}
+
+.article-page .article-shell {
+  padding: 68px clamp(18px, 5vw, 56px) clamp(28px, 5vw, 54px);
+}
+
+.release-note {
+  color: var(--term-muted);
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.release-note h2,
+.release-note h3 {
+  color: var(--term-ink);
+  letter-spacing: 0;
+}
+
+.release-note h2 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.04;
+}
+
+.release-note h3 {
+  border-top: 1px solid var(--term-line);
+  font-size: clamp(1.22rem, 2vw, 1.72rem);
+  margin: 28px 0 0;
+  padding-top: 24px;
+}
+
+.release-note p,
+.release-note li {
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.release-note ul {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 6px;
+  padding-left: 20px;
+}
+
+.release-note code {
+  color: var(--term-green);
+}
+
+.release-note pre {
+  background: #030504;
+  border: 1px solid var(--term-line);
+  border-radius: 4px;
+  color: var(--term-ink);
+  margin: 2px 0 8px;
+  overflow-x: auto;
+  padding: 16px;
 }
 
 .shell-page .terminal-rig {
@@ -3422,6 +3485,12 @@ footer a {
     padding: 58px 16px 18px;
   }
 
+  .shell-page .console-hero,
+  .shell-page .console-section,
+  .shell-page .console-cta {
+    max-width: calc(100vw - 20px);
+  }
+
   .shell-page .console-audit-layout {
     padding: 50px 12px 12px;
   }
@@ -3439,6 +3508,28 @@ footer a {
   .shell-page .audit-hero h1,
   .shell-page .report-header h1 {
     font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .article-page .console-copy h1 {
+    font-size: clamp(1.65rem, 7.6vw, 2rem);
+    max-width: calc(100vw - 86px);
+    overflow-wrap: anywhere;
+  }
+
+  .article-page .console-copy,
+  .article-page .console-subtitle,
+  .article-page .console-actions,
+  .article-page .console-ledger {
+    max-width: calc(100vw - 54px);
+  }
+
+  .article-page .console-subtitle {
+    max-width: calc(100vw - 86px);
+  }
+
+  .article-page .console-actions {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .shell-page .console-section-head.split,

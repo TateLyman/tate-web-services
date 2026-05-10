@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Release Readiness Checks for 2026 | Tate Programs</title>
+    <meta name="description" content="A practical 2026 release-readiness runbook for JavaScript, TypeScript, npm packages, GitHub Actions, MCP servers, and payment-agent demos.">
+    <link rel="canonical" href="https://tateprograms.com/release-readiness-2026.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Release checks before trusting a JavaScript repo in 2026">
+    <meta property="og:description" content="A practical launch-readiness runbook for repos, packages, Actions, MCP servers, and payment-agent demos.">
+    <meta property="og:url" content="https://tateprograms.com/release-readiness-2026.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Release checks before trusting a JavaScript repo in 2026">
+    <meta name="twitter:description" content="A practical launch-readiness runbook for repos, packages, Actions, MCP servers, and payment-agent demos.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Release checks before trusting a JavaScript repo in 2026",
+        "description": "A practical 2026 release-readiness runbook for JavaScript, TypeScript, npm packages, GitHub Actions, MCP servers, and payment-agent demos.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-10",
+        "dateModified": "2026-05-10",
+        "mainEntityOfPage": "https://tateprograms.com/release-readiness-2026.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="mcp-registry-pulse.html">pulse</a>
+        <a href="mcp-directory-checklist.html">checklist</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Release%20readiness%20review">
+        <span></span>
+        note live
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/release-readiness-2026</strong>
+        <em>may 2026</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">release note / javascript</p>
+          <h1>Release checks before trusting a JavaScript repo in 2026.</h1>
+          <p class="console-subtitle">
+            A practical runbook for the parts of a repo that usually break after the launch post: install paths, CI proof, package metadata, secret boundaries, Actions, MCP listings, and payment-agent demos.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#runbook">read runbook</a>
+            <a class="console-button secondary" href="shipcheck.html">run Shipcheck</a>
+            <a class="console-button ghost" href="agent-commerce-gate.html">open commerce gate</a>
+            <a class="console-button ghost" href="mcp-directory-checklist.html">MCP checklist</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>stack</dt>
+              <dd>JS / TS</dd>
+            </div>
+            <div>
+              <dt>surface</dt>
+              <dd>repo to launch</dd>
+            </div>
+            <div>
+              <dt>updated</dt>
+              <dd>May 2026</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Release readiness quick scan">
+          <div class="terminal-topline">release.scan</div>
+          <pre><code>$ npx --yes shipcheck-cli .
+targets:
+  - install path
+  - ci proof
+  - package metadata
+  - env boundaries
+  - github action output
+  - mcp server metadata
+  - payment-agent caps
+status:
+  inspect before launch</code></pre>
+        </aside>
+      </section>
+
+      <section id="runbook" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">field runbook</p>
+          <h2>A repo can look finished before it is ready.</h2>
+          <p>
+            The README has a screenshot. The package builds locally. The demo runs once. The launch post is drafted.
+          </p>
+          <p>
+            That is usually the riskiest moment, because the parts that fail in public are rarely the parts that looked exciting while building. They are the boring edges: install instructions, CI, package metadata, secret handling, publish workflows, screenshots, old config files, and the difference between a demo and something another developer can actually run.
+          </p>
+
+          <h3>1. Can a stranger run it?</h3>
+          <p>If the answer depends on the maintainer sitting next to them, it is not ready.</p>
+          <ul>
+            <li>A clear install command.</li>
+            <li>A clear local dev command.</li>
+            <li>A clear test or check command.</li>
+            <li>Required environment variables listed in <code>.env.example</code>.</li>
+            <li>No hidden dependency on files that only exist on one machine.</li>
+          </ul>
+          <p>For npm packages, test the package path, not only the local repo path.</p>
+          <pre><code>npm pack --dry-run
+npm exec --yes --package &lt;package-name&gt;@latest &lt;bin-command&gt;</code></pre>
+
+          <h3>2. Is CI proving the same thing the README promises?</h3>
+          <p>A README that says <code>npm test</code> should have CI that runs it.</p>
+          <ul>
+            <li>Use a GitHub Actions workflow on pushes or pull requests.</li>
+            <li>Run the same commands documented in the README.</li>
+            <li>Commit a lockfile for apps and CLIs that expect repeatable installs.</li>
+            <li>Avoid workflows that only check formatting while skipping build and test proof.</li>
+          </ul>
+
+          <h3>3. Does the package metadata match the project?</h3>
+          <p>Bad metadata does not just look sloppy. It breaks discovery and trust.</p>
+          <ul>
+            <li><code>name</code>, <code>description</code>, <code>license</code>, <code>repository</code>, <code>homepage</code>, and <code>bugs</code>.</li>
+            <li>The <code>bin</code> entry for CLIs.</li>
+            <li>The package contents included in publish.</li>
+            <li>Version consistency across files that repeat it.</li>
+          </ul>
+          <p>
+            This matters even more for MCP servers because metadata can exist in multiple places. If <code>package.json</code>, <code>server.json</code>, registry metadata, and README instructions drift apart, users cannot tell which install path is current.
+          </p>
+
+          <h3>4. Are secrets impossible to publish by accident?</h3>
+          <p>The common failure is not a committed production key. It is a repo that teaches contributors to create one.</p>
+          <ul>
+            <li><code>.env</code>, <code>.env.local</code>, and local secret files ignored.</li>
+            <li><code>.env.example</code> committed.</li>
+            <li>Docs that name required variables without including real values.</li>
+            <li>No screenshots or demo videos showing private tokens.</li>
+            <li>No config that encourages pasting long-lived tokens into random terminals.</li>
+          </ul>
+          <p>
+            Release workflows deserve the same treatment. npm's trusted publishing flow uses OIDC so public packages can publish from supported CI without long-lived npm write tokens.
+          </p>
+
+          <h3>5. Is the GitHub Action path safe?</h3>
+          <p>For GitHub Actions, check the workflow and marketplace surface separately.</p>
+          <ul>
+            <li>Does the Action run on a real fixture repo?</li>
+            <li>Does it produce the advertised output?</li>
+            <li>If it emits SARIF, does the SARIF validate?</li>
+            <li>Are permissions narrowed instead of using broad defaults?</li>
+            <li>Is the marketplace listing consistent with the README?</li>
+          </ul>
+          <p>An Action that looks good in <code>action.yml</code> can still fail as soon as another repo consumes it.</p>
+
+          <h3>6. If it is an MCP server, can clients understand it?</h3>
+          <p>MCP has moved from experiment to ecosystem surface. That makes launch metadata part of the product.</p>
+          <ul>
+            <li>Use a working install command.</li>
+            <li>Keep the server name consistent across docs and metadata.</li>
+            <li>Describe supported tools clearly.</li>
+            <li>Explain credentials, filesystem access, and network access.</li>
+            <li>Expose a smoke-test path.</li>
+            <li>Make auth boundaries clear for remote servers.</li>
+          </ul>
+          <p>
+            The 2026 MCP roadmap points toward transport scalability, discoverable metadata, agent communication, governance, and enterprise readiness. Public metadata is now an interface, not just documentation.
+          </p>
+
+          <h3>7. If money can move, is the demo capped?</h3>
+          <p>
+            Agent-commerce and HTTP-native payment demos are getting real fast. x402 is built around HTTP 402 payment-required API calls instead of traditional account checkout.
+          </p>
+          <ul>
+            <li>Sandbox or testnet mode by default.</li>
+            <li>Explicit spend caps.</li>
+            <li>Human approval before real payment.</li>
+            <li>Recipient validation.</li>
+            <li>Replay protection.</li>
+            <li>Receipts or audit logs.</li>
+            <li>Clear refund and failure behavior.</li>
+            <li>Webhook or callback signature verification.</li>
+            <li>No private payment metadata in public logs.</li>
+          </ul>
+          <p>The mistake is treating a money-moving demo like a normal API demo. It is not normal once a bug can spend funds.</p>
+
+          <h3>8. Is there a report someone can keep?</h3>
+          <p>A written report forces launch checks to be specific.</p>
+          <ul>
+            <li>Verdict or score.</li>
+            <li>Evidence from file paths.</li>
+            <li>Top risks.</li>
+            <li>Priority fixes.</li>
+            <li>Exact commands that were run.</li>
+            <li>What was not checked.</li>
+          </ul>
+
+          <h3>9. Does the public page match the repo?</h3>
+          <p>Before sharing, compare the public surfaces.</p>
+          <ul>
+            <li>npm package page.</li>
+            <li>GitHub README.</li>
+            <li>GitHub Marketplace page if there is an Action.</li>
+            <li>MCP registry or directory listing if there is a server.</li>
+            <li>Product page.</li>
+            <li>Screenshots.</li>
+          </ul>
+          <p>Small mismatches make people hesitate. If the site says one command and npm says another, the buyer or maintainer has to do trust work before they even try the tool.</p>
+
+          <h3>Why this became Shipcheck</h3>
+          <p>
+            Shipcheck scans JavaScript and TypeScript repos for release-readiness issues across docs, package metadata, CI, env hygiene, npm publishing, GitHub Actions, MCP metadata, and payment-agent demo safety.
+          </p>
+          <pre><code>npx --yes shipcheck-cli .</code></pre>
+          <p>
+            It can export text, Markdown, JSON, and SARIF, so the output can be used as a local checklist, a pull-request artifact, or a code-scanning report.
+          </p>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source trail</p>
+          <h2>The outside interfaces this runbook is tracking.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">npm</p>
+            <h3>Trusted publishing</h3>
+            <p>npm documents OIDC-based trusted publishing for supported CI providers, reducing the need for long-lived publish tokens.</p>
+            <a href="https://docs.npmjs.com/trusted-publishers/" target="_blank" rel="noreferrer">npm docs</a>
+          </article>
+          <article>
+            <p class="card-command">mcp</p>
+            <h3>2026 roadmap</h3>
+            <p>The MCP roadmap highlights transport scalability, discoverable metadata, agent communication, governance, and enterprise readiness.</p>
+            <a href="https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/" target="_blank" rel="noreferrer">MCP roadmap</a>
+          </article>
+          <article>
+            <p class="card-command">x402</p>
+            <h3>HTTP-native payments</h3>
+            <p>x402 frames payment-required API calls around HTTP 402, which changes how builders should think about demo failure modes.</p>
+            <a href="https://www.x402.org/" target="_blank" rel="noreferrer">x402</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">turn the runbook into output</p>
+          <h2>Need one repo checked before a public launch?</h2>
+          <p>Run Shipcheck yourself or send the repo/report for a fixed-scope release-readiness pass.</p>
+        </div>
+        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Release%20readiness%20review&amp;body=Repo%20or%20package%20link%3A%0AStack%3A%0ADeadline%3A%0AWhat%20must%20work%20first%3A">open review ticket</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>release-readiness-2026</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="shipcheck.html">shipcheck</a>
+      <a href="agent-commerce-gate.html">commerce gate</a>
+      <a href="mcp-directory-checklist.html">MCP checklist</a>
+      <a href="case-studies.html">proof</a>
+      <a href="payments.html">payments</a>
+      <a href="index.html">home</a>
+    </footer>
+  </body>
+</html>

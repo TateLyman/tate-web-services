@@ -14,6 +14,7 @@ const commands = {
     '  commerce-gate open agent-commerce readiness gate',
     '  mcp-audit    open browser registry audit',
     '  shipcheck    open Shipcheck page',
+    '  readiness    open 2026 release runbook',
     '  student-kit  open student launch checker',
     '  student-review open paid student review',
     '  pricing      show fixed entry prices',
@@ -44,6 +45,7 @@ const commands = {
     'commerce gate    x402 and payment-agent readiness check',
     'case files       /case-studies.html',
     'checklist        /mcp-directory-checklist.html',
+    'readiness        /release-readiness-2026.html',
   ].join('\n'),
   pricing: [
     'FIXED ENTRY PRICES',
@@ -98,6 +100,10 @@ const commands = {
     'open /shipcheck.html',
     'scanner for repo launch readiness, CI output, and MCP access.',
   ].join('\n'),
+  readiness: [
+    'open /release-readiness-2026.html',
+    'public runbook for JS, npm, GitHub Action, MCP, and payment-agent launch checks.',
+  ].join('\n'),
   'student-kit': [
     'open /student-launch-kit.html',
     'browser-only launch preflight for student projects, hackathon submissions, and public handoff proof.',
@@ -115,6 +121,7 @@ const routes = {
   pulse: 'mcp-registry-pulse.html',
   'commerce-gate': 'agent-commerce-gate.html',
   shipcheck: 'shipcheck.html',
+  readiness: 'release-readiness-2026.html',
   'student-kit': 'student-launch-kit.html',
   'student-review': 'student-launch-review.html',
   pay: 'payments.html',
