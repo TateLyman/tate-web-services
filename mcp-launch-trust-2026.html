@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCP Launch Trust Ledger, May 2026 | Tate Programs</title>
+    <meta name="description" content="A May 2026 field note for MCP product launches: scoped credentials, audit trails, tenant boundaries, STDIO command safety, registry metadata, and buyer-facing proof.">
+    <link rel="canonical" href="https://tateprograms.com/mcp-launch-trust-2026.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="MCP Launch Trust Ledger, May 2026">
+    <meta property="og:description" content="What current MCP product launches need to prove before buyers trust agent access to real systems.">
+    <meta property="og:url" content="https://tateprograms.com/mcp-launch-trust-2026.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MCP Launch Trust Ledger, May 2026">
+    <meta name="twitter:description" content="Scoped credentials, audit trails, tenant boundaries, STDIO command safety, registry metadata, and buyer-facing proof.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "MCP Launch Trust Ledger, May 2026",
+        "description": "A May 2026 field note for MCP product launches: scoped credentials, audit trails, tenant boundaries, STDIO command safety, registry metadata, and buyer-facing proof.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-10",
+        "dateModified": "2026-05-10",
+        "mainEntityOfPage": "https://tateprograms.com/mcp-launch-trust-2026.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="mcp-registry-pulse.html">pulse</a>
+        <a href="mcp-launch-review.html">mcp-review</a>
+        <a href="agent-security-drill.html">security-drill</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=MCP%20launch%20trust%20review">
+        <span></span>
+        field note
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/mcp-launch-trust-2026</strong>
+        <em>may 2026</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">mcp launch trust / current ledger</p>
+          <h1>MCP launches are turning into buyer-trust tests.</h1>
+          <p class="console-subtitle">
+            The current wave is no longer just open-source servers and copyable configs. Behavioral analytics, wealth operations, GRC, BI, deal rooms, observability, and developer platforms are exposing real systems through MCP. Buyers now need proof of scope, audit, identity, and safe installation before they approve access.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#ledger">read ledger</a>
+            <a class="console-button secondary" href="mcp-launch-review.html">scope a review</a>
+            <a class="console-button secondary" href="mcp-registry-pulse.html">registry pulse</a>
+            <a class="console-button ghost" href="#sourceTrail">sources</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>surface</dt>
+              <dd>MCP launches</dd>
+            </div>
+            <div>
+              <dt>buyer ask</dt>
+              <dd>trust proof</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>reviewable ledger</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="MCP trust ledger preview">
+          <div class="terminal-topline">mcp.trust</div>
+          <pre><code>$ review mcp-launch --buyer-proof
+ scope: token, tenant, tool, role
+ install: client config + registry metadata
+ runtime: stdio / remote / auth headers
+ audit: allow, deny, human review
+ evidence: screenshot, log, smoke test
+ result: smaller approval loop</code></pre>
+        </aside>
+      </section>
+
+      <section id="ledger" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">field note</p>
+          <h2>The question changed from "does MCP work" to "can this be approved?"</h2>
+          <p>
+            May 2026 has a visible pattern: companies are using MCP to make existing products callable from assistants and coding tools. The business value is clear. The launch risk is also clear. A product team can ship the server, but a buyer still has to approve the credential, the client config, the action boundary, and the audit story.
+          </p>
+          <p>
+            That approval path creates paid work. Every serious MCP launch needs public docs that answer what the assistant can see, what it can change, what token is required, where the action is logged, how permissions map to the existing product, and what happens when a request is denied.
+          </p>
+
+          <h3>Five proof items buyers scan first</h3>
+          <ol>
+            <li><strong>Credential scope.</strong> The docs should say which token or API key is used, what account/tenant it touches, and whether the server sees anything outside the user's existing permissions.</li>
+            <li><strong>Action boundary.</strong> Read-only queries, admin changes, user invites, payments, exports, and destructive actions should not look the same.</li>
+            <li><strong>Audit trail.</strong> If the assistant makes or attempts a change, the product should show the log, actor, rule, target object, and timestamp.</li>
+            <li><strong>Client install proof.</strong> The registry metadata, package path, remote URL, client config, and smoke-test output should be easy to copy and verify.</li>
+            <li><strong>Failure path.</strong> A denied, expired, malformed, or over-scoped action should produce a visible result instead of silent tool failure.</li>
+          </ol>
+
+          <h3>The launch copy should move trust forward</h3>
+          <p>
+            Current MCP announcements tend to say the server is scoped, secure, or governed. That is good positioning, but buyer-facing proof should be closer to the setup path: where the token is generated, which role is required, which actions are read-only, which actions are write-capable, and which log proves the result after the assistant call finishes.
+          </p>
+
+          <h3>STDIO packages need a different paragraph</h3>
+          <p>
+            Local STDIO MCP packages are not the same as hosted remote servers. They install a local process and often run through a command such as <code>npx</code>, <code>uvx</code>, or a bundled executable. The review question is whether the README explains the command boundary, runtime args, environment variables, filesystem or network assumptions, and how a user can pin or inspect the package before running it.
+          </p>
+
+          <h3>Why this is a revenue wedge</h3>
+          <p>
+            The work is small enough to buy quickly and specific enough to be valuable. A founder, developer relations lead, or product marketer can pay for a short outside review that returns a buyer-proof checklist, missing language, metadata fixes, and a smoke-test trail. It is not a vague security audit. It is a launch approval pass for the exact public path users will follow.
+          </p>
+          <pre><code>review output:
+- buyer trust map
+- install and registry gaps
+- credential and action-boundary notes
+- audit/failure proof checklist
+- copy/docs patch order</code></pre>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">review model</p>
+            <h2>A small pass should produce evidence, not a giant report.</h2>
+          </div>
+          <a class="console-link" href="mcp-launch-review.html">paid MCP review</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">docs</p>
+            <h3>Buyer path scan</h3>
+            <p>Find the first place a cautious buyer stalls: token scope, admin role, data boundary, install command, or missing denial path.</p>
+          </article>
+          <article>
+            <p class="card-command">metadata</p>
+            <h3>Registry and package proof</h3>
+            <p>Check title, description, version, repo, package path, remote URL, client config, server metadata, and public directory readiness.</p>
+          </article>
+          <article>
+            <p class="card-command">runtime</p>
+            <h3>Install and smoke test</h3>
+            <p>Run the public install path where possible and capture tool list, connection behavior, obvious missing env vars, and failure messages.</p>
+          </article>
+          <article>
+            <p class="card-command">trust</p>
+            <h3>Patch order</h3>
+            <p>Return the smallest docs and config fixes that make the product easier to approve without overpromising security.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="sourceTrail" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source trail</p>
+          <h2>Current signals behind the ledger.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">mouseflow</p>
+            <h3>Behavioral analytics through MCP</h3>
+            <p>Mouseflow announced an MCP Server on May 1, 2026, with session, heatmap, funnel, and feedback data queryable from existing assistant tools.</p>
+            <a href="https://mouseflow.com/press-releases/mouseflow-launches-mcp-server/" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">milemarker</p>
+            <h3>Wealth-platform operations</h3>
+            <p>Milemarker announced MCP on May 5, 2026 for data, dashboards, metrics, search, and user/access operations across wealth firms.</p>
+            <a href="https://www.techfocusasia.com/article/910517070-milemarker-launches-mcp-run-your-wealth-platform-by-asking" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">github</p>
+            <h3>Security tools inside MCP workflows</h3>
+            <p>GitHub announced secret scanning with its MCP Server as generally available on May 5, 2026, showing security checks moving into agent-enabled developer workflows.</p>
+            <a href="https://github.blog/changelog/2026-05-05-secret-scanning-with-github-mcp-server-is-now-generally-available/" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">gooddata</p>
+            <h3>Agentic analytics adoption</h3>
+            <p>GoodData tied MCP server launch momentum to governed agentic analytics and enterprise wins in its April 2026 Q1 update.</p>
+            <a href="https://www.gooddata.com/press-releases/gooddata-kicks-off-2026-with-mcp-server-launch-and-major-enterprise-wins/" target="_blank" rel="noreferrer">open source</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Tate Programs</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="mcp-launch-review.html">MCP review</a>
+      <a href="mcp-registry-pulse.html">MCP pulse</a>
+      <a href="agent-stack-radar.html">Radar</a>
+      <a href="payments.html">Payments</a>
+    </footer>
+  </body>
+</html>
