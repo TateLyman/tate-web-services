@@ -32,6 +32,7 @@ npx serve .
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
 - `mcp-registry-pulse.json` - aggregate data backing the MCP Registry Pulse page
+- `agent-stack-radar.html` - May 2026 agent-native software trend radar and service thesis
 - `release-readiness-2026.html` - public JS/npm/Action/MCP/payment-agent launch-readiness runbook
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-directory-launch.html` - fixed-scope MCP directory listing launch pass
