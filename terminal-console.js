@@ -42,7 +42,7 @@ const commands = {
     'student kit     browser-only launch checker',
     'student review  paid launch polish scope',
     'registry pulse   public MCP launch snapshot',
-    'commerce gate    x402 and payment-agent readiness check',
+    'commerce gate    x402, Pay.sh, and payment-agent readiness check',
     'case files       /case-studies.html',
     'checklist        /mcp-directory-checklist.html',
     'readiness        /release-readiness-2026.html',
@@ -94,7 +94,7 @@ const commands = {
   ].join('\n'),
   'commerce-gate': [
     'open /agent-commerce-gate.html',
-    'browser-only readiness check for x402, API-payment, and agent-commerce prototypes: budgets, approvals, receipts, replay protection, auth boundaries, and payment abuse controls.',
+    'browser-only readiness check for x402, Pay.sh, API-payment, and agent-commerce prototypes: budgets, approvals, receipts, replay protection, auth boundaries, and payment abuse controls.',
   ].join('\n'),
   shipcheck: [
     'open /shipcheck.html',
