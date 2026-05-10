@@ -121,6 +121,26 @@ function hasPattern(text, pattern) {
   return pattern.test(text)
 }
 
+function packageTransportTypes(packages = []) {
+  return [...new Set(packages.map(pkg => pkg.transport?.type).filter(Boolean))]
+}
+
+function hasStdioPackage(packages = []) {
+  return packages.some(pkg => pkg.transport?.type === 'stdio')
+}
+
+function hasSecretPackageConfig(packages = []) {
+  return packages.some(pkg => (pkg.environmentVariables ?? []).some(env => env.isSecret))
+}
+
+function hasSecretRemoteHeaders(remotes = []) {
+  return remotes.some(remote => (remote.headers ?? []).some(header => header.isSecret))
+}
+
+function hasStdioBoundaryDocs(readme = '') {
+  return /stdio/i.test(readme) && /command|shell|spawn|local process|execution|runtime|args|trusted|review|pin/i.test(readme)
+}
+
 async function loadSuppressedEmails() {
   try {
     const text = await readFile(SUPPRESSION_PATH, 'utf8')
@@ -146,8 +166,8 @@ function extractEmails(text) {
 
 function extractReadmeWebsite(readme) {
   const urls = [...readme.matchAll(/https?:\/\/[^\s)"'<>]+/gi)].map(match => match[0].replace(/[.,;:]+$/, ''))
-  const blocked = /github\.com|githubusercontent\.com|img\.shields\.io|glama\.ai|modelcontextprotocol\.io|npmjs\.com|oauth\.net|opensource\.org/i
-  return urls.find(url => !blocked.test(url)) ?? ''
+  const blocked = /github\.com|githubusercontent\.com|img\.shields\.io|sonarcloud\.io|codecov\.io|badge|badges|glama\.ai|modelcontextprotocol\.io|npmjs\.com|oauth\.net|opensource\.org/i
+  return urls.find(url => !blocked.test(url) && !/[?&](token|key|secret)=/i.test(url)) ?? ''
 }
 
 function analyzeServer(entry, repoContext) {
@@ -157,6 +177,10 @@ function analyzeServer(entry, repoContext) {
   const readme = repoContext?.readme ?? ''
   const packages = server.packages ?? []
   const remotes = server.remotes ?? []
+  const packageTransports = packageTransportTypes(packages)
+  const usesStdio = hasStdioPackage(packages)
+  const secretPackageConfig = hasSecretPackageConfig(packages)
+  const secretRemoteHeaders = hasSecretRemoteHeaders(remotes)
   const description = server.description ?? ''
   const title = server.title ?? ''
   const contactEmails = extractEmails(readme)
@@ -180,6 +204,8 @@ function analyzeServer(entry, repoContext) {
 
   if (!packages.length && remotes.length) signals.push('Remote-only listing; no package install path to test')
   if (packages.length && !hasPattern(JSON.stringify(packages), /version/i)) signals.push('Package install metadata may be thin')
+  if (usesStdio) strengths.push('Package metadata declares STDIO transport')
+  if (secretPackageConfig || secretRemoteHeaders) strengths.push('Public metadata declares credential or secret fields')
 
   if (repoContext) {
     if (repoContext.archived) signals.push('GitHub repo is archived')
@@ -193,6 +219,9 @@ function analyzeServer(entry, repoContext) {
       if (!hasPattern(readme, /server\.json/i)) signals.push('README may not explain server.json or registry metadata')
       if (!hasPattern(readme, /npx|uvx|pipx|docker run|mcp install/i)) signals.push('README may lack a clear install command')
       if (!hasPattern(readme, /permission|security|safe|read-only|write|secret|token/i)) signals.push('README may lack permission or safety notes')
+      if (usesStdio && !hasStdioBoundaryDocs(readme)) signals.push('STDIO package README may not explain command execution boundary')
+      if (secretPackageConfig && !hasPattern(readme, /env|environment|secret|api key|token|credential/i)) signals.push('Secret env vars may need clearer README handling')
+      if (secretRemoteHeaders && !hasPattern(readme, /oauth|bearer|api key|authorization|token|credential/i)) signals.push('Remote auth headers may need clearer README handling')
       if (!hasPattern(readme, /glama\.ai|quality score|badge/i)) signals.push('No visible Glama score/badge language in README')
       if (readme.length > 1500) strengths.push('README has enough depth to improve quickly')
     }
@@ -210,6 +239,7 @@ function analyzeServer(entry, repoContext) {
   if ((repoContext?.stars ?? 0) >= 5) score += 8
   if (signals.length >= 4) score += 18
   if (signals.some(signal => /mcpServers|install|permission|server\.json|Glama/i.test(signal))) score += 16
+  if (signals.some(signal => /STDIO|command execution|Secret env|Remote auth/i.test(signal))) score += 18
   if (!server.websiteUrl) score += 6
   if (repoContext?.ownerType === 'Organization') score += 5
   if (repoContext?.archived) score -= 40
@@ -231,6 +261,10 @@ function analyzeServer(entry, repoContext) {
     websiteUrl: server.websiteUrl || repoContext?.homepageUrl || readmeWebsiteUrl || '',
     packageCount: packages.length,
     remoteCount: remotes.length,
+    packageTransports,
+    hasStdioPackage: usesStdio,
+    hasSecretPackageConfig: secretPackageConfig,
+    hasSecretRemoteHeaders: secretRemoteHeaders,
     stars: repoContext?.stars ?? '',
     openIssues: repoContext?.openIssues ?? '',
     pushedAt: repoContext?.pushedAt ?? '',
@@ -245,6 +279,12 @@ function analyzeServer(entry, repoContext) {
 }
 
 function chooseAngle(signals) {
+  if (signals.some(signal => /STDIO|command execution/i.test(signal))) {
+    return 'STDIO command-boundary launch review'
+  }
+  if (signals.some(signal => /Secret env|Remote auth|credential/i.test(signal))) {
+    return 'Credential and auth-boundary docs'
+  }
   if (signals.some(signal => /mcpServers|install/i.test(signal))) {
     return 'Install docs and client config cleanup'
   }
@@ -319,7 +359,11 @@ function formatPriorityEmailBatch(prospects) {
 function formatMessage(lead) {
   const project = lead.title || lead.name
   const repoLine = lead.repositoryUrl ? `I found it from the MCP Registry and the linked repo: ${lead.repositoryUrl}` : `I found it from the MCP Registry: ${lead.name}`
-  const signalBullets = lead.signals.slice(0, 3).map(signal => `- ${signal}`).join('\n')
+  const prioritySignals = [
+    ...lead.signals.filter(signal => /STDIO|command execution|Secret env|Remote auth|credential/i.test(signal)),
+    ...lead.signals.filter(signal => !/STDIO|command execution|Secret env|Remote auth|credential/i.test(signal)),
+  ].slice(0, 3)
+  const signalBullets = prioritySignals.map(signal => `- ${signal}`).join('\n')
 
   return [
     `To: ${lead.contactEmails?.[0] ?? lead.outreachUrl}`,

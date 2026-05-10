@@ -112,8 +112,8 @@ async function fetchGithubRepoContext(repo) {
 
 function extractReadmeWebsite(readme) {
   const urls = [...readme.matchAll(/https?:\/\/[^\s)"'<>]+/gi)].map(match => match[0].replace(/[.,;:]+$/, ''))
-  const blocked = /github\.com|githubusercontent\.com|img\.shields\.io|glama\.ai|modelcontextprotocol\.io|npmjs\.com|oauth\.net|opensource\.org/i
-  return urls.find(url => !blocked.test(url)) ?? ''
+  const blocked = /github\.com|githubusercontent\.com|img\.shields\.io|sonarcloud\.io|codecov\.io|badge|badges|glama\.ai|modelcontextprotocol\.io|npmjs\.com|oauth\.net|opensource\.org/i
+  return urls.find(url => !blocked.test(url) && !/[?&](token|key|secret)=/i.test(url)) ?? ''
 }
 
 function readmeSignals(readme = '') {
@@ -122,6 +122,7 @@ function readmeSignals(readme = '') {
     install: /npx|uvx|pipx|docker run|mcp install|claude mcp add|codex mcp add/i.test(readme),
     serverJson: /server\.json/i.test(readme),
     safety: /permission|security|safe|read-only|write|secret|token|destructive|approve/i.test(readme),
+    stdioBoundary: /stdio/i.test(readme) && /command|shell|spawn|local process|execution|runtime|args|trusted|review|pin/i.test(readme),
     glama: /glama\.ai|quality score|badge/i.test(readme),
     smoke: /smoke|inspector|tools\/list|test command|expected tool/i.test(readme),
   }
@@ -175,6 +176,9 @@ function publicProofGaps(row) {
   if (hasReadme && !row.signals.safety) {
     gaps.push({ label: 'Document permissions and safety notes', weight: 8 })
   }
+  if (hasReadme && row.hasStdioPackage && !row.signals.stdioBoundary) {
+    gaps.push({ label: 'Explain STDIO command boundary', weight: 8 })
+  }
   if (hasReadme && !row.signals.serverJson) {
     gaps.push({ label: 'Reference server.json metadata alignment', weight: 4 })
   }
@@ -193,6 +197,22 @@ function scorePublicProof(gaps) {
   return Math.max(0, 100 - penalty)
 }
 
+function packageTransportTypes(packages = []) {
+  return [...new Set(packages.map(pkg => pkg.transport?.type).filter(Boolean))]
+}
+
+function hasStdioPackage(packages = []) {
+  return packages.some(pkg => pkg.transport?.type === 'stdio')
+}
+
+function hasSecretPackageConfig(packages = []) {
+  return packages.some(pkg => (pkg.environmentVariables ?? []).some(env => env.isSecret))
+}
+
+function hasSecretRemoteHeaders(remotes = []) {
+  return remotes.some(remote => (remote.headers ?? []).some(header => header.isSecret))
+}
+
 function latestMeta(entry) {
   return entry._meta?.['io.modelcontextprotocol.registry/official'] ?? {}
 }
@@ -206,6 +226,7 @@ function summarize(latestEntries, repoContexts) {
     const signals = readmeSignals(readme)
     const packages = server.packages ?? []
     const remotes = server.remotes ?? []
+    const packageTransports = packageTransportTypes(packages)
     const meta = latestMeta(entry)
     const updatedAt = meta.updatedAt ?? meta.publishedAt ?? ''
     const updatedMs = updatedAt ? Date.parse(updatedAt) : 0
@@ -221,6 +242,10 @@ function summarize(latestEntries, repoContexts) {
       repoContext,
       packages,
       remotes,
+      packageTransports,
+      hasStdioPackage: hasStdioPackage(packages),
+      hasSecretPackageConfig: hasSecretPackageConfig(packages),
+      hasSecretRemoteHeaders: hasSecretRemoteHeaders(remotes),
       signals,
       updatedAt,
       daysSinceUpdate,
@@ -265,6 +290,11 @@ function summarize(latestEntries, repoContexts) {
       install: readableRepos.filter(row => row.signals.install).length,
       serverJson: readableRepos.filter(row => row.signals.serverJson).length,
       safety: readableRepos.filter(row => row.signals.safety).length,
+      stdioPackageCount: rows.filter(row => row.hasStdioPackage).length,
+      stdioPackageReadable: readableRepos.filter(row => row.hasStdioPackage).length,
+      stdioBoundaryDocs: readableRepos.filter(row => row.hasStdioPackage && row.signals.stdioBoundary).length,
+      secretPackageConfig: rows.filter(row => row.hasSecretPackageConfig).length,
+      secretRemoteHeaders: rows.filter(row => row.hasSecretRemoteHeaders).length,
       glama: readableRepos.filter(row => row.signals.glama).length,
       smoke: readableRepos.filter(row => row.signals.smoke).length,
     },
@@ -294,6 +324,10 @@ function sampleJson(row) {
     description: row.description,
     publicProofScore: row.publicProofScore,
     installPath: row.installPath,
+    packageTransports: row.packageTransports,
+    hasStdioPackage: row.hasStdioPackage,
+    hasSecretPackageConfig: row.hasSecretPackageConfig,
+    hasSecretRemoteHeaders: row.hasSecretRemoteHeaders,
     updatedAt: row.updatedAt,
     repo: row.repo,
     websiteUrl: row.websiteUrl,
@@ -330,6 +364,9 @@ function sampleCard(row) {
     row.description,
     row.repo,
     row.installPath,
+    ...row.packageTransports,
+    row.hasStdioPackage ? 'stdio command boundary local process' : '',
+    row.hasSecretPackageConfig || row.hasSecretRemoteHeaders ? 'secrets credentials tokens headers' : '',
     ...row.gaps.map(gap => gap.label),
   ].filter(Boolean).join(' ').toLowerCase()
   const gapItems = row.gaps.slice(0, 4).map(gap => `<li>${escapeHtml(gap.label)}</li>`).join('')
@@ -342,7 +379,7 @@ function sampleCard(row) {
   ].filter(Boolean).join('\n              ')
 
   return `<article class="console-card pulse-sample-card" data-pulse-card data-search="${escapeHtml(searchText)}">
-            <p class="card-command">score ${escapeHtml(row.publicProofScore)}/100 · ${escapeHtml(row.installPath)}</p>
+            <p class="card-command">score ${escapeHtml(row.publicProofScore)}/100 · ${escapeHtml(row.installPath)}${row.hasStdioPackage ? ' · stdio' : ''}</p>
             <h3>${escapeHtml(title)}</h3>
             <p>${escapeHtml(description.slice(0, 210))}${description.length > 210 ? '...' : ''}</p>
             <ul>
@@ -372,7 +409,32 @@ function renderPage(summary, fetchedTotal) {
     <meta property="og:title" content="MCP Registry Pulse">
     <meta property="og:description" content="A public snapshot of MCP launch-readiness signals from Tate Programs.">
     <meta property="og:url" content="https://tateprograms.com/mcp-registry-pulse.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MCP Registry Pulse">
+    <meta name="twitter:description" content="Public MCP Registry launch-readiness, STDIO, auth, and metadata signals.">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "MCP Registry Pulse",
+        "url": "https://tateprograms.com/mcp-registry-pulse.html",
+        "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
+        "dateModified": "${escapeHtml(RUN_DATE)}",
+        "license": "https://opensource.org/license/mit",
+        "creator": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        },
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://tateprograms.com/mcp-registry-pulse.json"
+        },
+        "isBasedOn": "https://registry.modelcontextprotocol.io/v0.1/servers"
+      }
+    </script>
   </head>
   <body class="console-home terminal-os shell-page">
     <header class="os-topbar">
@@ -460,6 +522,33 @@ data:             mcp-registry-pulse.json</code></pre>
 
       <section class="console-section">
         <div class="console-section-head">
+          <p class="console-kicker">current risk surface</p>
+          <h2>STDIO is a command boundary, so the public docs need to say what runs.</h2>
+        </div>
+        <div class="console-card-grid">
+          ${metricCard('stdio package path', `${totals.stdioPackageCount} (${percent(totals.stdioPackageCount, latestTotal)}%)`, 'Latest listings whose package metadata uses STDIO transport.')}
+          ${metricCard('stdio docs visible', `${totals.stdioBoundaryDocs} / ${totals.stdioPackageReadable || 0}`, 'Readable STDIO package READMEs that mention the command or local-process boundary.')}
+          ${metricCard('package secrets', `${totals.secretPackageConfig} (${percent(totals.secretPackageConfig, latestTotal)}%)`, 'Listings whose package metadata declares secret environment variables.')}
+          ${metricCard('remote secret headers', `${totals.secretRemoteHeaders} (${percent(totals.secretRemoteHeaders, latestTotal)}%)`, 'Listings whose remote metadata declares secret request headers.')}
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">why now</p>
+            <h3>Local MCP setup is now part of the supply chain.</h3>
+            <p>Recent MCP security research has put STDIO install configs, command review, and package pinning into the trust conversation. A clean launch page should make those boundaries obvious before a user connects a client.</p>
+            <a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/" target="_blank" rel="noreferrer">read OX advisory</a>
+          </article>
+          <article>
+            <p class="card-command">sales angle</p>
+            <h3>This is a narrow paid review people can understand.</h3>
+            <p>The fix is practical: align registry metadata, README install commands, STDIO warnings, secret handling, smoke tests, and directory proof. That maps directly to Shipcheck and the fixed MCP launch review.</p>
+            <a href="mcp-launch-review.html">paid MCP review</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
           <p class="console-kicker">surface gaps</p>
           <h2>Common public proof gaps in the current registry sample.</h2>
         </div>
@@ -470,6 +559,7 @@ data:             mcp-registry-pulse.json</code></pre>
           ${bar('README includes copyable mcpServers config', totals.mcpServers, readmeTotal, 'among readable GitHub READMEs')}
           ${bar('README mentions install or client command', totals.install, readmeTotal, 'among readable GitHub READMEs')}
           ${bar('README mentions permissions or safety', totals.safety, readmeTotal, 'among readable GitHub READMEs')}
+          ${bar('STDIO package READMEs explain command boundary', totals.stdioBoundaryDocs, totals.stdioPackageReadable || 1, 'among readable STDIO package repos')}
           ${bar('README mentions server.json', totals.serverJson, readmeTotal, 'among readable GitHub READMEs')}
           ${bar('README includes smoke-test language', totals.smoke, readmeTotal, 'among readable GitHub READMEs')}
         </div>
@@ -543,6 +633,12 @@ data:             mcp-registry-pulse.json</code></pre>
             <a href="https://modelcontextprotocol.io/registry/quickstart" target="_blank" rel="noreferrer">registry quickstart</a>
           </article>
           <article>
+            <p class="card-command">security</p>
+            <h3>MCP STDIO research</h3>
+            <p>Recent public research called out STDIO-driven command execution paths across MCP-adjacent tooling. This pulse treats local command boundaries as public launch proof.</p>
+            <a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/" target="_blank" rel="noreferrer">OX advisory</a>
+          </article>
+          <article>
             <p class="card-command">github</p>
             <h3>Linked GitHub repos</h3>
             <p>When a listing exposed a GitHub repo, the script read public repo metadata and README text. Private code and private docs were not inspected.</p>
@@ -602,6 +698,7 @@ function renderJson(summary, fetchedTotal) {
       'Fetched public MCP Registry entries.',
       'Kept entries marked latest by official registry metadata.',
       'Read linked public GitHub repo metadata and README text when available.',
+      'Computed STDIO, remote-auth, package-secret, and public-proof signals from public metadata.',
       'Reported aggregate launch-readiness signals only.'
     ],
     totals: summary.totals,

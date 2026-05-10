@@ -10,7 +10,32 @@
     <meta property="og:title" content="MCP Registry Pulse">
     <meta property="og:description" content="A public snapshot of MCP launch-readiness signals from Tate Programs.">
     <meta property="og:url" content="https://tateprograms.com/mcp-registry-pulse.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MCP Registry Pulse">
+    <meta name="twitter:description" content="Public MCP Registry launch-readiness, STDIO, auth, and metadata signals.">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "MCP Registry Pulse",
+        "url": "https://tateprograms.com/mcp-registry-pulse.html",
+        "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
+        "dateModified": "2026-05-10",
+        "license": "https://opensource.org/license/mit",
+        "creator": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        },
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://tateprograms.com/mcp-registry-pulse.json"
+        },
+        "isBasedOn": "https://registry.modelcontextprotocol.io/v0.1/servers"
+      }
+    </script>
   </head>
   <body class="console-home terminal-os shell-page">
     <header class="os-topbar">
@@ -122,6 +147,49 @@ data:             mcp-registry-pulse.json</code></pre>
 
       <section class="console-section">
         <div class="console-section-head">
+          <p class="console-kicker">current risk surface</p>
+          <h2>STDIO is a command boundary, so the public docs need to say what runs.</h2>
+        </div>
+        <div class="console-card-grid">
+          <article class="console-card pulse-metric">
+            <p class="card-command">stdio package path</p>
+            <strong>31 (22%)</strong>
+            <p>Latest listings whose package metadata uses STDIO transport.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">stdio docs visible</p>
+            <strong>9 / 20</strong>
+            <p>Readable STDIO package READMEs that mention the command or local-process boundary.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">package secrets</p>
+            <strong>14 (10%)</strong>
+            <p>Listings whose package metadata declares secret environment variables.</p>
+          </article>
+          <article class="console-card pulse-metric">
+            <p class="card-command">remote secret headers</p>
+            <strong>24 (17%)</strong>
+            <p>Listings whose remote metadata declares secret request headers.</p>
+          </article>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">why now</p>
+            <h3>Local MCP setup is now part of the supply chain.</h3>
+            <p>Recent MCP security research has put STDIO install configs, command review, and package pinning into the trust conversation. A clean launch page should make those boundaries obvious before a user connects a client.</p>
+            <a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/" target="_blank" rel="noreferrer">read OX advisory</a>
+          </article>
+          <article>
+            <p class="card-command">sales angle</p>
+            <h3>This is a narrow paid review people can understand.</h3>
+            <p>The fix is practical: align registry metadata, README install commands, STDIO warnings, secret handling, smoke tests, and directory proof. That maps directly to Shipcheck and the fixed MCP launch review.</p>
+            <a href="mcp-launch-review.html">paid MCP review</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
           <p class="console-kicker">surface gaps</p>
           <h2>Common public proof gaps in the current registry sample.</h2>
         </div>
@@ -157,16 +225,23 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>33 / 54 - among readable GitHub READMEs</span>
+              <span>32 / 54 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-60"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>46 / 54 - among readable GitHub READMEs</span>
+              <span>45 / 54 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-85"></i>
+          </div>
+          <div class="pulse-bar-row">
+            <div>
+              <strong>STDIO package READMEs explain command boundary</strong>
+              <span>9 / 20 - among readable STDIO package repos</span>
+            </div>
+            <i class="pulse-width-45"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
@@ -221,6 +296,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://packmindhub.github.io/packmind/" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/PackmindHub/packmind" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aliengiraffe/spotdb ephemeral data sandbox for ai workflows with guardrails and security aliengiraffe/spotdb package stdio stdio command boundary local process secrets credentials tokens headers add a human-readable title expand the registry description add smoke-test or tool-list proof explain stdio command boundary add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
+            <p class="card-command">score 48/100 · package · stdio</p>
+            <h3>ai.aliengiraffe/spotdb</h3>
+            <p>Ephemeral data sandbox for AI workflows with guardrails and security</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Add smoke-test or tool-list proof</li><li>Explain STDIO command boundary</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="http://localhost:8080/api/v1/upload" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/aliengiraffe/spotdb" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -314,6 +402,19 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.rolli/mcp social media search and analytics across x, reddit, bluesky, youtube, and more rolliinc/rolli-mcp package stdio stdio command boundary local process secrets credentials tokens headers add a human-readable title expand the registry description add smoke-test or tool-list proof explain stdio command boundary refresh stale registry metadata reference server.json metadata alignment">
+            <p class="card-command">score 55/100 · package · stdio</p>
+            <h3>ai.rolli/mcp</h3>
+            <p>Social media search and analytics across X, Reddit, Bluesky, YouTube, and more</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Add smoke-test or tool-list proof</li><li>Explain STDIO command boundary</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://www.npmjs.com/package/@rolli/mcp" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/rolliinc/rolli-mcp" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.adramp/google-ads google ads mcp server — manage campaigns, keywords, and metrics. remote attach a public repository add a human-readable title expand the registry description clarify remote auth and trust boundary refresh stale registry metadata">
             <p class="card-command">score 55/100 · remote</p>
             <h3>ai.adramp/google-ads</h3>
@@ -339,19 +440,6 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aliengiraffe/spotdb ephemeral data sandbox for ai workflows with guardrails and security aliengiraffe/spotdb package add a human-readable title expand the registry description add smoke-test or tool-list proof add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
-            <p class="card-command">score 56/100 · package</p>
-            <h3>ai.aliengiraffe/spotdb</h3>
-            <p>Ephemeral data sandbox for AI workflows with guardrails and security</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Add smoke-test or tool-list proof</li><li>Add copyable mcpServers config</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://sonarcloud.io/api/project_badges/measure?project=aliengiraffe_env&amp;metric=alert_status&amp;token=a564584b18c4d708580b4825a1d8c270b18a3f3f" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/aliengiraffe/spotdb" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="agency.lona/trading ai-powered trading strategy development: backtesting, market data, and portfolio analysis mindsightventures/lona remote add a human-readable title expand the registry description make readme proof available clarify remote auth and trust boundary refresh stale registry metadata">
             <p class="card-command">score 57/100 · remote</p>
             <h3>agency.lona/trading</h3>
@@ -365,8 +453,8 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/contextlayer-mcp personal context management for ai assistants autoblocksai/ctxl package add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
-            <p class="card-command">score 57/100 · package</p>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/contextlayer-mcp personal context management for ai assistants autoblocksai/ctxl package stdio stdio command boundary local process add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
+            <p class="card-command">score 57/100 · package · stdio</p>
             <h3>ai.autoblocks/contextlayer-mcp</h3>
             <p>Personal context management for AI assistants</p>
             <ul>
@@ -378,8 +466,8 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/ctxl personal context management for ai assistants autoblocksai/ctxl package add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
-            <p class="card-command">score 57/100 · package</p>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/ctxl personal context management for ai assistants autoblocksai/ctxl package stdio stdio command boundary local process add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
+            <p class="card-command">score 57/100 · package · stdio</p>
             <h3>ai.autoblocks/ctxl</h3>
             <p>Personal context management for AI assistants</p>
             <ul>
@@ -391,8 +479,8 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/ctxl-mcp personal context management for ai assistants autoblocksai/ctxl package add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
-            <p class="card-command">score 57/100 · package</p>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/ctxl-mcp personal context management for ai assistants autoblocksai/ctxl package stdio stdio command boundary local process add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
+            <p class="card-command">score 57/100 · package · stdio</p>
             <h3>ai.autoblocks/ctxl-mcp</h3>
             <p>Personal context management for AI assistants</p>
             <ul>
@@ -404,8 +492,8 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.ponlo/server family calendar, tasks, meals, lists &amp; rewards hub for ai assistants. claudiogodoyb/ponlo-ai package add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
-            <p class="card-command">score 57/100 · package</p>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.ponlo/server family calendar, tasks, meals, lists &amp; rewards hub for ai assistants. claudiogodoyb/ponlo-ai package stdio stdio command boundary local process secrets credentials tokens headers add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
+            <p class="card-command">score 57/100 · package · stdio</p>
             <h3>ai.ponlo/server</h3>
             <p>Family calendar, tasks, meals, lists &amp; rewards hub for AI assistants.</p>
             <ul>
@@ -414,19 +502,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/ClaudioGodoyB/ponlo-ai" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/ClaudioGodoyB/ponlo-ai" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.ludo/game-assets ludo ai game assets generate game assets with ai: sprites, 3d models, animations, sound effects, music, and voices. ludo-ai/ludo-mcp remote clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof document permissions and safety notes refresh stale registry metadata reference server.json metadata alignment">
-            <p class="card-command">score 59/100 · remote</p>
-            <h3>Ludo AI Game Assets</h3>
-            <p>Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.</p>
-            <ul>
-              <li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li><li>Document permissions and safety notes</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://ludo.ai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/Ludo-AI/ludo-mcp" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -482,6 +557,12 @@ data:             mcp-registry-pulse.json</code></pre>
             <h3>MCP Registry docs</h3>
             <p>The public registry flow uses server metadata for discovery. This pulse treats metadata clarity as part of launch readiness.</p>
             <a href="https://modelcontextprotocol.io/registry/quickstart" target="_blank" rel="noreferrer">registry quickstart</a>
+          </article>
+          <article>
+            <p class="card-command">security</p>
+            <h3>MCP STDIO research</h3>
+            <p>Recent public research called out STDIO-driven command execution paths across MCP-adjacent tooling. This pulse treats local command boundaries as public launch proof.</p>
+            <a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/" target="_blank" rel="noreferrer">OX advisory</a>
           </article>
           <article>
             <p class="card-command">github</p>
