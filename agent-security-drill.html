@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agent Security Drill Kit | Tate Programs</title>
-    <meta name="description" content="Browser-only drill kit for agent security launches: prompt injection, exfiltration, unsafe tool use, policy rules, audit trails, rate limits, and human review gates.">
+    <title>Agent Security Drill Kit | Governance, A2A, Gemini, and Policy Readiness | Tate Programs</title>
+    <meta name="description" content="Browser-only drill kit for agent security launches: prompt injection, exfiltration, unsafe tool use, policy rules, A2A agent identity, Gemini-safe integration, audit trails, rate limits, and human review gates.">
     <link rel="canonical" href="https://tateprograms.com/agent-security-drill.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Agent Security Drill Kit">
@@ -66,17 +66,17 @@
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">agent security drill / may 2026 signal</p>
+          <p class="console-kicker">agent security drill / may 2026 enterprise signal</p>
           <h1>Run the checks an enterprise security reviewer will ask for.</h1>
           <p class="console-subtitle">
             Current agent launches are judged on more than model quality. This browser-only kit checks policy files, prompt-injection defenses, declared-versus-detected intent, tool boundaries, audit logs, rate limits, and human review gates before a demo reaches buyers, judges, or early users.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#securityDrill">run drill</a>
+            <a class="console-button secondary" href="#evidencePack">export evidence</a>
+            <a class="console-button secondary" href="#submissionMode">track fit</a>
             <a class="console-button secondary" href="#drillPack">copy drill pack</a>
-            <a class="console-button secondary" href="agent-security-sample-report.html">sample report</a>
             <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
-            <a class="console-button secondary" href="release-readiness-2026.html">runbook</a>
             <a class="console-button ghost" href="#securitySources">source ledger</a>
           </div>
           <dl class="console-ledger">
@@ -90,7 +90,11 @@
             </div>
             <div>
               <dt>output</dt>
-              <dd>drill report</dd>
+              <dd>evidence pack</dd>
+            </div>
+            <div>
+              <dt>tracks</dt>
+              <dd>Veea / Gemini / A2A</dd>
             </div>
           </dl>
         </div>
@@ -163,9 +167,55 @@ result: score + next patch</code></pre>
             </ol>
           </div>
           <p class="tool-note">This is a launch-readiness check. Do not use it as authorization to test systems you do not own or have permission to assess.</p>
-          <a class="console-button ghost wide-button" href="agent-security-sample-report.html">view sample report</a>
           <a class="console-button ghost wide-button" href="mailto:hello@tateprograms.com?subject=Agent%20Security%20Launch%20Review">scope a review</a>
         </aside>
+      </section>
+
+      <section id="evidencePack" class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">judge-ready export</p>
+            <h2>Turn the scan into a policy, audit, and submission pack.</h2>
+          </div>
+          <div class="console-actions compact-actions">
+            <button class="console-button secondary" id="copyArtifactPack" type="button">copy evidence pack</button>
+            <button class="console-button secondary" id="downloadArtifactPack" type="button">download .md</button>
+            <button class="console-button ghost" id="copySubmissionSummary" type="button">copy summary</button>
+          </div>
+        </div>
+        <div class="terminal-window full-width-window evidence-window">
+          <div class="terminal-topline">agent-security-evidence-pack.md</div>
+          <pre id="artifactPackText"><code>Load a project to generate a Lobster Trap-style policy starter, A2A agent card, audit schema, Gemini drill prompt, fix backlog, and submission summary.</code></pre>
+        </div>
+      </section>
+
+      <section id="submissionMode" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">TechEx / lablab submission mode</p>
+          <h2>Three track angles, one concrete product.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">veea</p>
+            <h3>Agent Security & Governance</h3>
+            <p>The core demo is a local trust workbench: run adversarial drills, inspect policy coverage, export a rule pack, and preserve audit evidence.</p>
+          </article>
+          <article>
+            <p class="card-command">gemini</p>
+            <h3>Safe Gemini assist</h3>
+            <p>Use AI Studio or a server-side key only to generate more attack cases and review evidence. Browser-exposed Gemini keys are treated as a launch blocker.</p>
+          </article>
+          <article>
+            <p class="card-command">a2a</p>
+            <h3>A2A trust boundary</h3>
+            <p>Agent Cards, declared skills, provider identity, and task/audit records make multi-agent delegation reviewable before agents exchange work.</p>
+          </article>
+          <article>
+            <p class="card-command">business</p>
+            <h3>Enterprise buyer story</h3>
+            <p>Security review is the saleable pain: agent teams need evidence that files, APIs, private data, spend, and human review are controlled.</p>
+          </article>
+        </div>
       </section>
 
       <section id="drillPack" class="console-section">

@@ -1305,6 +1305,11 @@ footer a {
   margin: 30px 0;
 }
 
+.console-actions.compact-actions {
+  justify-content: flex-end;
+  margin: 0;
+}
+
 .console-button {
   align-items: center;
   border-radius: 6px;
@@ -1336,9 +1341,9 @@ footer a {
 .console-ledger {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
-  max-width: 720px;
+  max-width: 920px;
 }
 
 .console-ledger div {
@@ -1414,6 +1419,11 @@ footer a {
 
 .terminal-window code {
   font-family: inherit;
+}
+
+.evidence-window pre {
+  max-height: 720px;
+  white-space: pre-wrap;
 }
 
 .radar-panel {

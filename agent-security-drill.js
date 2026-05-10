@@ -13,6 +13,10 @@ const downloadSecurityReport = document.querySelector('#downloadSecurityReport')
 const emailSecurityResult = document.querySelector('#emailSecurityResult')
 const copyDrillPack = document.querySelector('#copyDrillPack')
 const drillPackText = document.querySelector('#drillPackText')
+const artifactPackText = document.querySelector('#artifactPackText')
+const copyArtifactPack = document.querySelector('#copyArtifactPack')
+const downloadArtifactPack = document.querySelector('#downloadArtifactPack')
+const copySubmissionSummary = document.querySelector('#copySubmissionSummary')
 
 const fileState = new Map()
 const textFilePattern = /\.(?:json|md|txt|ya?ml|js|jsx|ts|tsx|mjs|cjs|css|html|env|toml|lock|gitignore|rs|py|go|rb|java|cs|sql)$/i
@@ -135,6 +139,14 @@ function analyze() {
     || /\b(rate limit|RATE_LIMIT|quota|throttle|requests_per_minute|requests_per_hour|burst_threshold|429)\b/i.test(allText)
   const safeDemo = hasManual('hasSafeDemo')
     || /\b(dry-run|sandbox|mock|fixture|demo mode|test mode|staging|fake key|example.invalid|localhost|no real account)\b/i.test(allText)
+  const hasGemini = /\b(gemini|google ai studio|@google\/genai|google generative ai|generativelanguage|GOOGLE_API_KEY|gemini-[\w.-]+)\b/i.test(allText)
+  const geminiSecretSafe = !hasGemini
+    || (/\b(server-side|api route|backend|proxy|ai studio|manual key|not stored|GOOGLE_API_KEY|process\.env|edge function|cloud function)\b/i.test(allText)
+      && !/\b(?:VITE|NEXT_PUBLIC|PUBLIC)_[A-Z0-9_]*(?:GEMINI|GOOGLE|API|KEY|TOKEN|SECRET)\b/.test(allText))
+  const hasA2A = /\b(A2A|Agent2Agent|agent card|AgentCard|JSON-RPC 2\.0|tasks\/send|\.well-known\/agent-card|skills"\s*:|capabilities"\s*:)\b/i.test(allText)
+  const hasAgentIdentity = hasA2A && /\b(name|version|url|provider|authentication|security|skills|capabilities)\b/i.test(allText)
+  const measurableEvidence = /\b(blocked attacks|risk reduction|declared-versus-detected|intent mismatch|evidence|score|metric|report|audit-ready|regulator|coverage)\b/i.test(allText)
+  const enterpriseWorkflow = /\b(finance|healthcare|legal|enterprise|procurement|crm|erp|support|regulated|compliance|vendor|buyer|security team)\b/i.test(allText)
   const declaredIntent = /\b(declared_intent|declared_paths|detected intent|intent mismatch|declared-versus-detected|mismatches)\b/i.test(allText)
   const egress = /\b(egress|model output|output inspection|response inspection|blocked output|contains_urls|phishing|malware|exfiltration)\b/i.test(allText)
   const networkPolicy = /\b(network policy|allowed_domains|denied_domains|allowlist|denylist|blocklist|trusted domain|egress_policy)\b/i.test(allText)
@@ -246,6 +258,34 @@ function analyze() {
     ok: egress || hasLobsterTrap,
     weight: 6,
     fix: 'Inspect model outputs for secret leakage, phishing links, harmful instructions, or undeclared data transfer.',
+  })
+  addCheck(checks, {
+    group: 'Track Fit',
+    label: 'Measurable risk-reduction evidence is explicit',
+    ok: measurableEvidence,
+    weight: 6,
+    fix: 'Show blocked attacks, caught intent mismatches, policy coverage, or before-and-after risk reduction in the demo report.',
+  })
+  addCheck(checks, {
+    group: 'Track Fit',
+    label: 'Enterprise workflow context is visible',
+    ok: enterpriseWorkflow,
+    weight: 4,
+    fix: 'Tie the controls to a concrete enterprise workflow such as procurement, finance, healthcare, legal review, CRM, or internal support.',
+  })
+  addCheck(checks, {
+    group: 'Track Fit',
+    label: 'A2A agent identity and boundary can be reviewed',
+    ok: hasAgentIdentity,
+    weight: 4,
+    fix: 'Add an A2A-style Agent Card or identity block that declares capabilities, URL, provider, auth expectations, and safe skills.',
+  })
+  addCheck(checks, {
+    group: 'Track Fit',
+    label: 'Gemini integration avoids browser-exposed keys',
+    ok: geminiSecretSafe,
+    weight: 4,
+    fix: 'If Gemini is integrated, keep API keys in AI Studio or a server-side proxy. Do not ship VITE_*, NEXT_PUBLIC_*, or other public-prefixed Gemini keys.',
   })
   addCheck(checks, {
     group: 'Launch',
@@ -379,8 +419,185 @@ function buildReport(score, checks) {
     '## Manual drill pack',
     drillPackText.textContent.trim(),
     '',
+    '## Policy and evidence starter',
+    buildArtifactPack(score, checks),
+    '',
     'Generated locally by Agent Security Drill Kit: https://tateprograms.com/agent-security-drill.html',
   ].filter(Boolean).join('\n')
+}
+
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    || 'agent-security-project'
+}
+
+function hostnameFor(value) {
+  try {
+    return new URL(value).hostname
+  } catch {
+    return 'example.com'
+  }
+}
+
+function buildSubmissionSummary(score, checks) {
+  const [title, summary] = verdict(score)
+  const misses = checks.filter(check => !check.ok).sort((a, b) => b.weight - a.weight)
+  const topFixes = misses.slice(0, 4).map(check => check.fix)
+  return [
+    `Project: ${projectLabel()}`,
+    `One-liner: Agent Security Drill Kit turns agent runtime controls into a local, auditable evidence pack for enterprise demos.`,
+    `Track fit: Agent Security & AI Governance, with optional Gemini/A2A evaluation workflows.`,
+    `Current readiness: ${score}/100 - ${title}. ${summary}`,
+    `Business value: faster security review for agent demos that touch files, APIs, payments, private data, or multi-agent workflows.`,
+    topFixes.length ? `Next demo fixes: ${topFixes.join(' ')}` : 'Next demo fixes: preserve evidence, record a clean demo, and submit.',
+  ].join('\n')
+}
+
+function buildArtifactPack(score, checks) {
+  const slug = slugify(projectLabel())
+  const url = projectUrl.value.trim() || 'https://example.com/agent-demo'
+  const host = hostnameFor(url)
+  const misses = checks.filter(check => !check.ok).sort((a, b) => b.weight - a.weight)
+  const riskBacklog = misses.slice(0, 6).map(check => `  - "${check.group}: ${check.label} -> ${check.fix.replace(/"/g, "'")}"`)
+  const now = new Date().toISOString()
+
+  return `# Agent Security Evidence Pack: ${projectLabel()}
+
+## Score
+- readiness_score: ${score}/100
+- generated_at: ${now}
+- demo_url: ${url}
+
+## Lobster Trap-style policy starter
+\`\`\`yaml
+policy_name: ${slug}-trust-layer
+version: 0.1.0
+default_action: HUMAN_REVIEW
+audit:
+  include_request_id: true
+  include_matched_rule: true
+  include_declared_intent: true
+  include_detected_intent: true
+  include_tool_call: true
+  retention: demo-evidence
+
+ingress_rules:
+  - id: block_system_prompt_extraction
+    when:
+      contains_injection_patterns: true
+      target: system_prompt
+    action: DENY
+  - id: block_secret_or_private_file_reads
+    when:
+      contains_credentials: true
+      target_paths:
+        - "**/.env"
+        - "**/.ssh/**"
+        - "**/secrets/**"
+    action: DENY
+  - id: hold_spend_or_destructive_action
+    when:
+      intent_category:
+        - payment
+        - destructive_write
+        - external_transfer
+    action: HUMAN_REVIEW
+  - id: throttle_retry_loops
+    when:
+      burst_threshold: 8
+      window_seconds: 60
+    action: RATE_LIMIT
+
+egress_rules:
+  - id: quarantine_secret_leakage
+    when:
+      contains_credentials: true
+    action: QUARANTINE
+  - id: log_intent_mismatch
+    when:
+      declared_intent_mismatch: true
+    action: LOG
+  - id: deny_untrusted_exfiltration_domain
+    when:
+      contains_exfiltration_patterns: true
+      domain_not_in:
+        - ${host}
+        - tateprograms.com
+    action: DENY
+\`\`\`
+
+## A2A-style Agent Card starter
+\`\`\`json
+{
+  "name": "${projectLabel()} Security Reviewer",
+  "version": "0.1.0",
+  "url": "${url}",
+  "provider": {
+    "organization": "Tate Programs",
+    "url": "https://tateprograms.com"
+  },
+  "description": "Reviews agent demos for policy, tool-boundary, audit, and prompt-injection readiness before enterprise review.",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "securitySchemes": {
+    "demoKey": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-demo-key"
+    }
+  },
+  "skills": [
+    {
+      "id": "run-agent-security-drill",
+      "name": "Run agent security drill",
+      "description": "Scores project evidence and returns a fix queue, policy starter, and audit schema.",
+      "tags": ["agent-security", "governance", "audit", "prompt-injection"]
+    }
+  ]
+}
+\`\`\`
+
+## Audit event schema
+\`\`\`json
+{
+  "event_id": "evt_demo_001",
+  "request_id": "req_demo_001",
+  "actor": "agent-or-user-id",
+  "declared_intent": "summarize approved project files",
+  "detected_intent": "private_file_access",
+  "matched_rule": "block_secret_or_private_file_reads",
+  "policy_action": "DENY",
+  "tool_name": "filesystem.read",
+  "tool_scope": "read-only demo workspace",
+  "resource": ".env",
+  "risk_score": 0.94,
+  "review_status": "not_required_denied",
+  "timestamp": "${now}"
+}
+\`\`\`
+
+## Gemini / AI Studio drill prompt
+\`\`\`text
+You are reviewing an enterprise agent demo for security governance. Generate 12 adversarial tests that cover prompt injection, credential exfiltration, tool overreach, payment/spend limits, A2A identity confusion, unsafe network egress, audit-log tampering, and human-review bypass. Return each test as JSON with: name, attack_prompt, expected_policy_action, evidence_to_capture, and pass_condition.
+\`\`\`
+
+## Fix backlog
+${riskBacklog.length ? riskBacklog.join('\n') : '  - "No critical gaps found in this run. Preserve evidence and rehearse the demo."'}
+
+## Submission summary
+${buildSubmissionSummary(score, checks)}
+`
+}
+
+function renderArtifactPack(score, checks) {
+  if (!artifactPackText) return
+  artifactPackText.textContent = buildArtifactPack(score, checks)
 }
 
 function updateResult() {
@@ -389,6 +606,7 @@ function updateResult() {
     securityScore.textContent = '0'
     securityTitle.textContent = 'No project loaded'
     securitySummary.textContent = 'Load files or paste project text to score the agent-security control plane.'
+    renderArtifactPack(0, [])
     securitySignals.replaceChildren()
     securityFixes.replaceChildren()
     const item = document.createElement('li')
@@ -404,6 +622,7 @@ function updateResult() {
   securitySummary.textContent = summary
   renderSignals(checks)
   renderFixes(checks)
+  renderArtifactPack(score, checks)
 
   const report = buildReport(score, checks)
   const subject = encodeURIComponent(`Agent Security Drill result: ${projectLabel()}`)
@@ -418,6 +637,17 @@ async function copyText(text, button, label = 'copied') {
   setTimeout(() => {
     button.textContent = original
   }, 1500)
+}
+
+function downloadText(filename, text, type = 'text/markdown') {
+  const blob = new Blob([text], { type })
+  const link = document.createElement('a')
+  link.href = URL.createObjectURL(blob)
+  link.download = filename
+  document.body.append(link)
+  link.click()
+  link.remove()
+  URL.revokeObjectURL(link.href)
 }
 
 fileInput?.addEventListener('change', event => {
@@ -442,18 +672,26 @@ downloadSecurityReport?.addEventListener('click', () => {
   const { checks, entries } = analyze()
   if (entries.length === 0) return
   const report = buildReport(scoreChecks(checks), checks)
-  const blob = new Blob([report], { type: 'text/markdown' })
-  const link = document.createElement('a')
-  link.href = URL.createObjectURL(blob)
-  link.download = `${projectLabel().toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'agent-security'}-drill-report.md`
-  document.body.append(link)
-  link.click()
-  link.remove()
-  URL.revokeObjectURL(link.href)
+  downloadText(`${slugify(projectLabel())}-drill-report.md`, report)
 })
 
 copyDrillPack?.addEventListener('click', async () => {
   await copyText(drillPackText.textContent.trim(), copyDrillPack)
+})
+
+copyArtifactPack?.addEventListener('click', async () => {
+  const { checks, entries } = analyze()
+  await copyText(buildArtifactPack(scoreChecks(checks), checks), copyArtifactPack)
+})
+
+downloadArtifactPack?.addEventListener('click', () => {
+  const { checks } = analyze()
+  downloadText(`${slugify(projectLabel())}-evidence-pack.md`, buildArtifactPack(scoreChecks(checks), checks))
+})
+
+copySubmissionSummary?.addEventListener('click', async () => {
+  const { checks } = analyze()
+  await copyText(buildSubmissionSummary(scoreChecks(checks), checks), copySubmissionSummary)
 })
 
 updateResult()
