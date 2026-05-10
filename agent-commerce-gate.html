@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agent Commerce Gate | x402 and Pay.sh Readiness | Tate Programs</title>
-    <meta name="description" content="Browser-only readiness check for x402, Pay.sh, API-payment, and agent-commerce prototypes: budgets, approvals, receipts, replay protection, auth boundaries, and payment abuse controls.">
+    <meta name="description" content="Browser-only readiness check for x402, Pay.sh, API-payment, and agent-commerce prototypes: price previews, enforceable budgets, approvals, receipts, replay protection, metadata filtering, and payment abuse controls.">
     <link rel="canonical" href="https://tateprograms.com/agent-commerce-gate.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Agent Commerce Gate">
-    <meta property="og:description" content="A practical readiness check for x402, Pay.sh, and agent-commerce projects.">
+    <meta property="og:description" content="A practical readiness check for x402, Pay.sh, and agent-commerce projects before real value moves.">
     <meta property="og:url" content="https://tateprograms.com/agent-commerce-gate.html">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Agent Commerce Gate">
-    <meta name="twitter:description" content="Browser-only readiness check for x402, Pay.sh, and agent-commerce prototypes.">
+    <meta name="twitter:description" content="Browser-only readiness check for x402, Pay.sh, and agent-commerce prototypes before real value moves.">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
@@ -70,7 +70,7 @@
           <p class="console-kicker">agent commerce gate / may 2026 signal</p>
           <h1>Check an agent-payment prototype before it spends real value.</h1>
           <p class="console-subtitle">
-            Pay.sh, x402, and machine-payment rails are moving agent commerce from demo copy into API calls that can spend. This browser-only check scores projects for budgets, approvals, receipts, replay protection, webhook proof, remote auth boundaries, and abuse controls.
+            Pay.sh, x402, and machine-payment rails are moving agent commerce from demo copy into API calls that can spend. This browser-only check scores projects for quoted prices, enforceable budgets, approvals, receipts, replay protection, metadata filtering, provider challenge validation, and abuse controls.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#commerceGate">run check</a>
@@ -101,6 +101,7 @@
 rail: x402 / API payment / checkout
 checks: budget, approval, receipts
 guards: replay, signature, allowlist
+trust: price preview, metadata filter
 evidence: env, webhook, audit log
 result: score + launch report</code></pre>
         </aside>
@@ -135,8 +136,12 @@ result: score + launch report</code></pre>
             <label class="check-row"><input id="hasSandbox" type="checkbox"> Demo can run in sandbox, testnet, dry-run, or zero-value mode.</label>
             <label class="check-row"><input id="hasSpendCap" type="checkbox"> Every autonomous payment path has a spend cap or allowance.</label>
             <label class="check-row"><input id="hasApproval" type="checkbox"> Higher-risk purchases require a human approval checkpoint.</label>
+            <label class="check-row"><input id="hasPricePreview" type="checkbox"> Approval screen shows provider, endpoint, price, network, and maximum total.</label>
+            <label class="check-row"><input id="hasEnforceableCaps" type="checkbox"> Spend limits are enforced by wallet, server, policy engine, or infrastructure.</label>
             <label class="check-row"><input id="hasReceipt" type="checkbox"> Payment attempts write a receipt, ledger, or audit event.</label>
             <label class="check-row"><input id="hasFailurePlan" type="checkbox"> Failed, disputed, or partial payment states have a documented path.</label>
+            <label class="check-row"><input id="hasProviderValidation" type="checkbox"> Provider challenges, headers, and facilitator responses are validated.</label>
+            <label class="check-row"><input id="hasMetadataFilter" type="checkbox"> Payment metadata is filtered before it leaves the app.</label>
           </fieldset>
         </div>
 
@@ -181,7 +186,7 @@ result: score + launch report</code></pre>
           <article>
             <p class="card-command">x402</p>
             <h3>The payment step moves into HTTP.</h3>
-            <p>When a server can answer with 402 and payment instructions, the launch risk shifts to caps, receipts, metadata, and who is allowed to trigger the spend.</p>
+            <p>When a server can answer with 402 and payment instructions, the launch risk shifts to caps, price previews, receipts, metadata, and who is allowed to trigger the spend.</p>
           </article>
           <article>
             <p class="card-command">buyers</p>
@@ -222,10 +227,10 @@ result: score + launch report</code></pre>
             <a href="https://www.producthunt.com/newsletters/archive/50388-agents-paying-their-own-bills" target="_blank" rel="noreferrer">open source</a>
           </article>
           <article>
-            <p class="card-command">hackathon</p>
-            <h3>Bright Data Web Data UNLOCKED</h3>
-            <p>May 25-31, 2026 hackathon around live web data and agents. This is the next place where paid data access, provenance, and budget controls can become concrete.</p>
-            <a href="https://lablab.ai/ai-hackathons/brightdata-ai-agents-web-data-hackathon" target="_blank" rel="noreferrer">open source</a>
+            <p class="card-command">aws</p>
+            <h3>AgentCore Payments preview</h3>
+            <p>AWS announced AgentCore Payments preview on May 7, 2026 for agents paying APIs, MCP servers, web content, and other agents with spending governance and observability.</p>
+            <a href="https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-agentcore-payments-preview/" target="_blank" rel="noreferrer">open source</a>
           </article>
         </div>
       </section>
@@ -244,7 +249,7 @@ result: score + launch report</code></pre>
           <article>
             <p class="card-command">02</p>
             <h3>Control gaps</h3>
-            <p>Missing caps, approval gates, replay checks, allowlists, receipts, webhook verification, and failure paths.</p>
+            <p>Missing caps, approval gates, price previews, replay checks, provider validation, metadata filters, receipts, webhook verification, and failure paths.</p>
           </article>
           <article>
             <p class="card-command">03</p>

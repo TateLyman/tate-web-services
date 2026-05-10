@@ -15,8 +15,12 @@ const manualInputs = [
   document.querySelector('#hasSandbox'),
   document.querySelector('#hasSpendCap'),
   document.querySelector('#hasApproval'),
+  document.querySelector('#hasPricePreview'),
+  document.querySelector('#hasEnforceableCaps'),
   document.querySelector('#hasReceipt'),
   document.querySelector('#hasFailurePlan'),
+  document.querySelector('#hasProviderValidation'),
+  document.querySelector('#hasMetadataFilter'),
 ]
 
 const fileState = new Map()
@@ -168,6 +172,14 @@ function analyze() {
   const allowlist = /\b(allowlist|whitelist|denylist|blocklist|recipient validation|payTo|payee|merchant id|address validation|sanction|ofac|trusted recipient)\b/i.test(allText)
   const replay = /\b(idempotency|idempotent|nonce|replay|timestamp|expires|ttl|dedupe|deduplicate|request id)\b/i.test(allText)
   const signature = /\b(signature|verifyPayment|constructEvent|webhook secret|stripe-signature|x-signature|hmac|jwt verify|signed payload)\b/i.test(allText)
+  const pricePreview = manual('hasPricePreview') || /\b(price preview|price quote|quoted price|display(?:ed)? price|show(?:n)? cost|amount due|payment details|price before|cost before|before signing|before approval|expected cost|max(?:imum)? total|pricing prompt|price tag|payment specification|payment challenge)\b/i.test(allText)
+  const enforceableCaps = manual('hasEnforceableCaps') || /\b(hard cap|enforced cap|deterministic limit|session[- ]?level spending limit|infrastructure[- ]?level|wallet limit|on[- ]?chain limit|server[- ]?side limit|policy engine|per[- ]?session|per[- ]?day|daily budget)\b/i.test(allText)
+  const firstPaidCallBounded = /\b(smallest useful paid call|smallest paid call|minimal paid call|micro[- ]?payment|test amount|sample paid call|low[- ]?value|single paid request|one[- ]?time request|max(?:imum)? unit cost|per[- ]?request cap)\b/i.test(allText)
+  const metadataContext = /\b(payment metadata|metadata|reason string|reason field|resource url|description|memo|payment details|payment request|prompt)\b/i.test(allText)
+  const metadataFilter = manual('hasMetadataFilter') || (metadataContext
+    && /\b(redact|scrub|filter|sanitize|minimi[sz]e|pii|personal data|private prompt|sensitive|secret|omit|allowlisted fields|safe metadata)\b/i.test(allText)
+  )
+  const providerUntrusted = manual('hasProviderValidation') || /\b(untrusted|validate provider|verify provider|validate facilitator|verify facilitator|provider allowlist|trusted provider|pin facilitator|gateway url|registry gateway|payment challenge validation|payment-required header validation|headers? as untrusted|external content)\b/i.test(allText)
   const rateLimit = /\b(rate limit|ratelimit|throttle|quota|usage cap|429|retry-after|cost guard)\b/i.test(allText)
   const observability = /\b(metrics|monitoring|alert|trace|span|dashboard|event log|status page|webhook event)\b/i.test(allText)
   const docs = /\b(readme|architecture|threat model|security|permissions|policy|runbook|operations)\b/i.test(allText)
@@ -217,6 +229,27 @@ function analyze() {
   })
   addCheck(checks, {
     group: 'Control plane',
+    label: 'Price, merchant, and network are visible before approval',
+    ok: !hasPaymentRail || pricePreview,
+    weight: 8,
+    fix: 'Show the quoted price, merchant or provider, network, endpoint, and maximum total before the user signs or approves.',
+  })
+  addCheck(checks, {
+    group: 'Control plane',
+    label: 'Spending caps are enforceable outside prompt text',
+    ok: !hasPaymentRail || (spendCap && enforceableCaps),
+    weight: 8,
+    fix: 'Move budget limits into wallet, server, policy-engine, or infrastructure checks instead of relying only on agent instructions.',
+  })
+  addCheck(checks, {
+    group: 'Control plane',
+    label: 'First real paid call is deliberately small',
+    ok: !hasPaymentRail || sandbox || firstPaidCallBounded,
+    weight: 5,
+    fix: 'Start with a sandbox path or the smallest useful paid request, then require another approval for multi-call exploration.',
+  })
+  addCheck(checks, {
+    group: 'Control plane',
     label: 'Recipient or merchant validation is documented',
     ok: allowlist,
     weight: 8,
@@ -256,6 +289,20 @@ function analyze() {
     ok: !hasPaymentProvider || signature,
     weight: 8,
     fix: 'Verify payment signatures, webhook signatures, signed payloads, or facilitator responses before trusting payment state.',
+  })
+  addCheck(checks, {
+    group: 'Security',
+    label: 'Provider challenges and facilitator responses are treated as untrusted',
+    ok: !hasPaymentRail || providerUntrusted,
+    weight: 8,
+    fix: 'Validate payment challenges, provider headers, facilitator responses, gateway URLs, and external docs before an agent acts on them.',
+  })
+  addCheck(checks, {
+    group: 'Security',
+    label: 'Payment metadata is scrubbed before transmission',
+    ok: !hasPaymentRail || metadataFilter,
+    weight: 8,
+    fix: 'Filter payment metadata so private prompts, user identifiers, secrets, and sensitive reason strings never leave the app unnecessarily.',
   })
   addCheck(checks, {
     group: 'Security',
@@ -479,6 +526,8 @@ ${checkList}
 ## Launch Note
 
 This report is a readiness review for agent-payment control surfaces. It is not financial, legal, tax, compliance, or security certification.
+
+For a fuller launch checklist, use https://tateprograms.com/x402-launch-checklist.html before routing real value through x402, Pay.sh, or agent-payment infrastructure.
 `
 }
 

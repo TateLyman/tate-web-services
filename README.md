@@ -27,7 +27,7 @@ npx serve .
 - `student-launch-kit.js` - local file/folder scoring logic for the student launch checker
 - `student-launch-review.html` - paid student project launch polish and repo handoff review page
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
-- `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes
+- `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
