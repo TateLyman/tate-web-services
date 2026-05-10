@@ -28,6 +28,7 @@ npx serve .
 - `student-launch-review.html` - paid student project launch polish and repo handoff review page
 - `agent-security-drill.html` - browser-only agent security evidence console for prompt injection, exfiltration, policy, tool-scope, A2A, Gemini-safe integration, audit, and human-review readiness
 - `agent-security-drill.js` - local file/folder scoring logic plus evidence-pack export for agent security policy and launch-proof signals
+- `agent-security-evidence-2026.html` - field note about evidence packs for agent demos, A2A identity, Gemini-safe testing, and audit trails
 - `agent-security-sample-report.html` - sample agent security launch report with boundary map, drill results, audit evidence, and patch order
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering

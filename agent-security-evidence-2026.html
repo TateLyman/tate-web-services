@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agent Security Evidence Packs for 2026 | Tate Programs</title>
+    <meta name="description" content="A practical field note on why agent demos need reviewable evidence: policy actions, tool boundaries, A2A identity, Gemini-safe testing, audit trails, and human review gates.">
+    <link rel="canonical" href="https://tateprograms.com/agent-security-evidence-2026.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Agent demos need evidence, not vibes">
+    <meta property="og:description" content="A practical 2026 field note for agent security evidence packs, policy controls, A2A identity, Gemini-safe testing, and audit trails.">
+    <meta property="og:url" content="https://tateprograms.com/agent-security-evidence-2026.html">
+    <meta property="og:image" content="https://tateprograms.com/assets/agent-security-evidence-pack.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agent demos need evidence, not vibes">
+    <meta name="twitter:description" content="A practical 2026 field note for agent security evidence packs, policy controls, A2A identity, Gemini-safe testing, and audit trails.">
+    <meta name="twitter:image" content="https://tateprograms.com/assets/agent-security-evidence-pack.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Agent demos need evidence, not vibes",
+        "description": "A practical 2026 field note for agent security evidence packs, policy controls, A2A identity, Gemini-safe testing, and audit trails.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-10",
+        "dateModified": "2026-05-10",
+        "mainEntityOfPage": "https://tateprograms.com/agent-security-evidence-2026.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="agent-security-drill.html">security-drill</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Agent%20security%20evidence%20review">
+        <span></span>
+        field note
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/agent-security-evidence-2026</strong>
+        <em>may 2026</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">field note / agent security</p>
+          <h1>Agent demos need evidence, not vibes.</h1>
+          <p class="console-subtitle">
+            The 2026 agent-security question is no longer just whether the model can answer. It is whether a reviewer can inspect what the agent was allowed to read, write, call, send, spend, deny, and escalate.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#note">read note</a>
+            <a class="console-button secondary" href="agent-security-drill.html">run drill</a>
+            <a class="console-button ghost" href="agent-security-sample-report.html">sample report</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>surface</dt>
+              <dd>agent demos</dd>
+            </div>
+            <div>
+              <dt>risk</dt>
+              <dd>tools / data / spend</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>evidence pack</dd>
+            </div>
+            <div>
+              <dt>updated</dt>
+              <dd>May 2026</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Evidence pack preview">
+          <div class="terminal-topline">evidence.pack</div>
+          <pre><code>policy:
+  action: DENY / HUMAN_REVIEW
+tools:
+  scope: read / write / network
+identity:
+  agent_card: provider + skills
+audit:
+  rule + verdict + actor + trace
+result:
+  fix queue a reviewer can inspect</code></pre>
+        </aside>
+      </section>
+
+      <section id="note" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">practical read</p>
+          <h2>The trust layer has to be visible.</h2>
+          <p>
+            Agent teams are moving from chat demos into workflows that touch private files, SaaS APIs, MCP servers, payment flows, browsers, databases, and other agents. That creates a different launch bar. A useful demo is not enough if the reviewer cannot see the boundaries.
+          </p>
+          <p>
+            The public TechEx / lablab enterprise AI hackathon tracks point at the same gap: agent security, AI governance, Gemini-based agents, and deployable enterprise workflows. The interesting part is not the phrase "agent security." It is the evidence buyers and judges can inspect.
+          </p>
+
+          <h3>What an evidence pack should show</h3>
+          <ul>
+            <li>What prompt-injection and exfiltration drills were run.</li>
+            <li>Which policy rule matched the risky step.</li>
+            <li>Whether the action was allowed, denied, rate-limited, quarantined, or sent to human review.</li>
+            <li>Which tool scope was active: read, write, network, filesystem, payment, or destructive action.</li>
+            <li>What the agent claimed it intended to do versus what the policy layer detected.</li>
+            <li>Which audit event proves the decision after the demo is over.</li>
+          </ul>
+
+          <h3>A2A makes identity part of security</h3>
+          <p>
+            The Agent2Agent project frames A2A around agent discovery, capability declaration, task collaboration, and secure interoperability. That means an agent-security review should not stop at prompt text. It should also ask: who is this agent, what skills does it declare, what provider owns it, and what authentication is expected before another agent delegates work to it?
+          </p>
+
+          <h3>Gemini belongs in the test loop, not in the leak path</h3>
+          <p>
+            Gemini and AI Studio are useful for generating adversarial drill cases, summarizing evidence, and testing long-context agent workflows. The operational mistake is putting a model key where the browser bundle, a screenshot, or a public repo can expose it. A safe demo uses AI Studio directly or keeps API keys behind a server-side route.
+          </p>
+
+          <h3>Policy without audit is hard to sell</h3>
+          <p>
+            A policy rule that blocks a bad action is useful during the demo. An audit event that explains the block is useful after the demo. The second part is what makes the difference for regulated workflows, enterprise buyers, and judges looking for measurable risk reduction.
+          </p>
+
+          <h3>The small workflow that helps most</h3>
+          <ol>
+            <li>Load the project or paste the architecture notes.</li>
+            <li>Run prompt-injection, exfiltration, tool-boundary, and human-review checks.</li>
+            <li>Generate the fix queue.</li>
+            <li>Export a policy starter, A2A Agent Card, audit schema, and Gemini drill prompt.</li>
+            <li>Keep the evidence pack with the submission or buyer handoff.</li>
+          </ol>
+
+          <h3>Why I built the drill kit</h3>
+          <p>
+            Agent Security Drill Kit is a browser-only version of that workflow. It is intentionally local, because early-stage teams should be able to inspect a project without uploading source code to a third-party scanner. The current version exports a review pack that can be used for hackathon submissions, launch reviews, and product demos that need a concrete trust story.
+          </p>
+          <pre><code>open https://tateprograms.com/agent-security-drill.html
+load project
+export evidence pack
+patch top risks</code></pre>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source trail</p>
+          <h2>Signals this page tracks.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">techex</p>
+            <h3>Agent Security & AI Governance</h3>
+            <p>The May 2026 TechEx / lablab page centers enterprise agent security on guardrails, observability, access control, audit, and red-team tooling.</p>
+            <a href="https://lablab.ai/ai-hackathons/techex-intelligent-enterprise-solutions-hackathon" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">lobster</p>
+            <h3>Policy actions</h3>
+            <p>Lobster Trap positions prompt inspection around policy actions, metadata, audit logs, and deployable enforcement for agent workflows.</p>
+            <a href="https://github.com/veeainc/lobstertrap" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">a2a</p>
+            <h3>Agent identity</h3>
+            <p>The A2A project describes agent discovery, capability negotiation, task collaboration, and security expectations between independent agents.</p>
+            <a href="https://github.com/a2aproject/A2A" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">gemini</p>
+            <h3>Model testing</h3>
+            <p>Google's Gemini API and AI Studio docs are the integration path for teams using Gemini in agent workflows and test generation.</p>
+            <a href="https://ai.google.dev/gemini-api/docs/quickstart" target="_blank" rel="noreferrer">open source</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Tate Programs</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-security-drill.html">Security drill</a>
+      <a href="agent-security-sample-report.html">Sample report</a>
+      <a href="payments.html">Payments</a>
+    </footer>
+  </body>
+</html>
