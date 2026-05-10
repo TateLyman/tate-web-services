@@ -26,6 +26,8 @@ npx serve .
 - `student-launch-kit.html` - browser-only launch checker for student and hackathon projects
 - `student-launch-kit.js` - local file/folder scoring logic for the student launch checker
 - `student-launch-review.html` - paid student project launch polish and repo handoff review page
+- `agent-security-drill.html` - browser-only agent security drill kit for prompt injection, exfiltration, policy, tool-scope, audit, and human-review readiness
+- `agent-security-drill.js` - local file/folder scoring logic for agent security policy and launch-proof signals
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
@@ -122,6 +124,7 @@ The front-door offer is intentionally concrete:
 
 - $99 launch risk pass
 - $29+ student launch review
+- $149 agent security launch review
 - $149 agent commerce readiness review
 - $299+ production fix sprint
 - $99+ MCP launch review

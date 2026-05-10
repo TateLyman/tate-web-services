@@ -1042,6 +1042,10 @@ footer a {
   width: 100%;
 }
 
+.full-width-window {
+  margin-top: 18px;
+}
+
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
