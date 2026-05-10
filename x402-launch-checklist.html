@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>x402 Launch Checklist for Agent Payments | Tate Programs</title>
+    <meta name="description" content="A practical x402 and Pay.sh launch checklist for agent-payment demos: sandbox mode, spend caps, approval gates, receipts, replay protection, PII-safe payment metadata, and failure paths.">
+    <link rel="canonical" href="https://tateprograms.com/x402-launch-checklist.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="x402 Launch Checklist for Agent Payments">
+    <meta property="og:description" content="A launch-readiness checklist for x402, Pay.sh, and agent-payment demos before real value can move.">
+    <meta property="og:url" content="https://tateprograms.com/x402-launch-checklist.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="x402 Launch Checklist for Agent Payments">
+    <meta name="twitter:description" content="Sandbox mode, spend caps, approval gates, receipts, replay protection, and PII-safe payment metadata.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "x402 Launch Checklist for Agent Payments",
+        "description": "A practical x402 and Pay.sh launch checklist for agent-payment demos: sandbox mode, spend caps, approval gates, receipts, replay protection, PII-safe payment metadata, and failure paths.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-10",
+        "dateModified": "2026-05-10",
+        "mainEntityOfPage": "https://tateprograms.com/x402-launch-checklist.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-registry-pulse.html">pulse</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=x402%20launch%20review">
+        <span></span>
+        checklist live
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/x402-launch-checklist</strong>
+        <em>agent payments</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">x402 / Pay.sh launch checklist</p>
+          <h1>Before an agent can pay for an API, prove the spend path is bounded.</h1>
+          <p class="console-subtitle">
+            Pay.sh and x402 make paid API calls feel like normal HTTP work. That is exactly why launch checks matter: sandbox mode, human approval, caps, receipts, replay protection, payment metadata, and failure behavior need to be visible before a public demo.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#checklist">read checklist</a>
+            <a class="console-button secondary" href="agent-commerce-gate.html">run gate</a>
+            <a class="console-button ghost" href="#sourceTrail">sources</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>rail</dt>
+              <dd>x402 / Pay.sh</dd>
+            </div>
+            <div>
+              <dt>risk</dt>
+              <dd>runaway spend</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>launch proof</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="x402 checklist terminal preview">
+          <div class="terminal-topline">x402.check</div>
+          <pre><code>$ inspect payment-agent
+ sandbox mode: required
+ per-call cap: required
+ daily cap: required
+ user approval: required
+ receipt log: required
+ replay guard: required
+ metadata filter: required
+ failure path: required</code></pre>
+        </aside>
+      </section>
+
+      <section id="checklist" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">launch checklist</p>
+          <h2>Use this before a public x402 or Pay.sh demo.</h2>
+          <p>
+            A payment-agent demo should not be judged only by whether it completes a paid request. The useful proof is whether a stranger can see the maximum possible loss, who approved the spend, what was purchased, and how the system behaves when something goes wrong.
+          </p>
+
+          <h3>1. Default to sandbox or zero-value mode</h3>
+          <p>First-run examples should avoid real funds unless a human intentionally switches modes.</p>
+          <ul>
+            <li>Demo command uses sandbox, testnet, dry-run, or zero-value mode.</li>
+            <li>Real-payment mode is visually and programmatically separate.</li>
+            <li>Docs explain exactly when real value can move.</li>
+            <li>Automated tests never require a funded wallet.</li>
+          </ul>
+
+          <h3>2. Cap the spend in more than one place</h3>
+          <p>One cap is a useful start. Two independent caps are safer.</p>
+          <ul>
+            <li>Per-call max spend.</li>
+            <li>Per-session or per-day max spend.</li>
+            <li>Service allowlist for paid endpoints.</li>
+            <li>Wallet or contract-level limits where supported.</li>
+            <li>Clear error when a cap is exhausted.</li>
+          </ul>
+
+          <h3>3. Require human approval before real payment</h3>
+          <p>An agent can choose an API, but a user should know the price and purpose before money moves.</p>
+          <ul>
+            <li>Approval screen shows provider, endpoint, price, reason, and max total.</li>
+            <li>Multi-call exploration requires a second approval.</li>
+            <li>Ambiguous pricing pauses instead of guessing.</li>
+            <li>The user can cancel without leaving partial state behind.</li>
+          </ul>
+
+          <h3>4. Write receipts and audit events</h3>
+          <p>Every payment attempt should leave evidence.</p>
+          <ul>
+            <li>Request id or trace id.</li>
+            <li>Provider and endpoint.</li>
+            <li>Price and currency.</li>
+            <li>Approval source.</li>
+            <li>Payment proof or transaction reference when safe to store.</li>
+            <li>Result state: paid, denied, capped, failed, retried, or refunded.</li>
+          </ul>
+
+          <h3>5. Treat payment metadata as sensitive</h3>
+          <p>Resource URLs, reason strings, prompts, and descriptions can leak user intent or private context.</p>
+          <ul>
+            <li>Filter PII from payment descriptions and reason strings.</li>
+            <li>Do not place private prompts in public payment metadata.</li>
+            <li>Separate internal logs from public receipts.</li>
+            <li>Document which metadata reaches facilitators, providers, or chains.</li>
+          </ul>
+
+          <h3>6. Block replay and duplicate purchase paths</h3>
+          <p>Retries are normal. Paying twice for one action should not be.</p>
+          <ul>
+            <li>Idempotency key for payment attempts.</li>
+            <li>Nonce or expiry on payment proofs.</li>
+            <li>Duplicate detection before retrying after network failure.</li>
+            <li>Receipt reconciliation if the provider succeeds but the client times out.</li>
+          </ul>
+
+          <h3>7. Validate the recipient and endpoint</h3>
+          <p>The agent should not be able to pay a lookalike service because a page or tool response suggested it.</p>
+          <ul>
+            <li>Provider registry URL is pinned or verified.</li>
+            <li>Payment destination is checked against the expected service.</li>
+            <li>External provider docs and returned headers are treated as untrusted input.</li>
+            <li>Endpoint category matches the user's approved task.</li>
+          </ul>
+
+          <h3>8. Show failure and refund behavior</h3>
+          <p>Launch demos often show the happy path. Buyers care about the unhappy path.</p>
+          <ul>
+            <li>Payment declined.</li>
+            <li>Cap exhausted.</li>
+            <li>Provider returns paid-but-failed.</li>
+            <li>Provider succeeds but the callback is delayed.</li>
+            <li>Dispute, refund, or support path is documented.</li>
+          </ul>
+
+          <h3>9. Keep private keys and funded wallets out of public demos</h3>
+          <p>Do not let a screenshot, video, env file, or public repo become the payment credential leak.</p>
+          <ul>
+            <li><code>.env</code> and local wallet files are ignored.</li>
+            <li>Examples use placeholders or sandbox wallets.</li>
+            <li>No funded wallet seed, private key, or bearer token appears in docs, logs, or screenshots.</li>
+            <li>CI uses mocked or sandbox payment flows.</li>
+          </ul>
+
+          <h3>10. Export a launch-readiness report</h3>
+          <p>The report is what makes the demo reviewable by a teammate, judge, buyer, or sponsor.</p>
+          <ul>
+            <li>Verdict and score.</li>
+            <li>Spend map.</li>
+            <li>Control gaps.</li>
+            <li>Evidence from files, routes, or docs.</li>
+            <li>Safe launch path.</li>
+            <li>Known unchecked areas.</li>
+          </ul>
+
+          <p>
+            For a browser-only first pass, run the Agent Commerce Gate. It reads local files in the browser and returns a ranked fix queue.
+          </p>
+          <pre><code>https://tateprograms.com/agent-commerce-gate.html</code></pre>
+        </article>
+      </section>
+
+      <section id="sourceTrail" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source trail</p>
+          <h2>Why these checks belong in the launch path.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">pay.sh</p>
+            <h3>Sandbox and user authorization</h3>
+            <p>Pay.sh docs recommend sandbox mode for examples and tests, treating provider data as untrusted, making the smallest useful paid call first, and requiring local user authorization for real payments.</p>
+            <a href="https://pay.sh/docs" target="_blank" rel="noreferrer">open docs</a>
+          </article>
+          <article>
+            <p class="card-command">market</p>
+            <h3>Agents paying for APIs</h3>
+            <p>Product Hunt's May 2026 coverage describes pay.sh as a gateway for agents to discover and pay for APIs through x402 settlement.</p>
+            <a href="https://www.producthunt.com/newsletters/archive/50388-agents-paying-their-own-bills" target="_blank" rel="noreferrer">open coverage</a>
+          </article>
+          <article>
+            <p class="card-command">caps</p>
+            <h3>Spending controls</h3>
+            <p>Agent-payment documentation treats spending caps as the primary guardrail for predictable costs and recommends both app-level and on-chain limits where possible.</p>
+            <a href="https://www.agentpmt.com/docs/core-concepts/setting-spending-caps" target="_blank" rel="noreferrer">open docs</a>
+          </article>
+          <article>
+            <p class="card-command">metadata</p>
+            <h3>PII-safe payment metadata</h3>
+            <p>Recent x402 security research focuses on filtering payment metadata before transmission, enforcing spending policies, and blocking duplicate replay attempts.</p>
+            <a href="https://arxiv.org/abs/2604.11430" target="_blank" rel="noreferrer">open paper</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">paid review</p>
+          <h2>Need one x402 or Pay.sh flow checked before launch?</h2>
+          <p>Send the repo, demo, and payment rail. The 48-hour pass returns a spend map, control gaps, and patch order.</p>
+        </div>
+        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=x402%20launch%20readiness%20review&amp;body=Repo%20or%20demo%20link%3A%0APayment%20rail%20%28x402%2C%20Pay.sh%2C%20other%29%3A%0AWhat%20the%20agent%20can%20buy%3A%0ASandbox%20path%3A%0ADeadline%3A">open review ticket</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>x402-launch-checklist</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-commerce-gate.html">commerce gate</a>
+      <a href="agent-stack-radar.html">radar</a>
+      <a href="shipcheck.html">Shipcheck</a>
+      <a href="payments.html">payments</a>
+      <a href="index.html">home</a>
+    </footer>
+  </body>
+</html>
