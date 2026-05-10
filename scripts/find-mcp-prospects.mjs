@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import { Buffer } from 'node:buffer'
 
 const REGISTRY_BASE = 'https://registry.modelcontextprotocol.io/v0.1/servers'
@@ -7,10 +7,13 @@ const DEFAULT_LIMIT = 300
 const PAGE_SIZE = 100
 const OUTPUT_DIR = 'outreach/generated'
 const MESSAGE_DIR = `${OUTPUT_DIR}/mcp-prospect-messages`
+const SENT_LOG_PREFIX = 'mcp-sent-log-'
 const SUPPRESSION_PATH = 'outreach/contact-suppression.csv'
 
 const maxServers = Number.parseInt(process.argv[2] ?? `${DEFAULT_LIMIT}`, 10)
 const githubToken = process.env.GITHUB_TOKEN
+let contactedEmails = new Set()
+let contactedDomains = new Set()
 
 const headers = {
   'user-agent': 'TatePrograms-MCPProspectScanner/1.0',
@@ -29,6 +32,11 @@ function slugify(value) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .slice(0, 80)
+}
+
+function baseDomain(value) {
+  const parts = String(value ?? '').toLowerCase().split('.').filter(Boolean)
+  return parts.length >= 2 ? parts.slice(-2).join('.') : parts.join('.')
 }
 
 async function fetchJson(url, customHeaders = headers) {
@@ -155,12 +163,49 @@ async function loadSuppressedEmails() {
   }
 }
 
+async function loadExistingMcpOutreach() {
+  const emails = new Set()
+  const domains = new Set()
+
+  try {
+    const files = await readdir(OUTPUT_DIR)
+    const sentLogs = files.filter(file => file.startsWith(SENT_LOG_PREFIX) && file.endsWith('.md'))
+
+    for (const file of sentLogs) {
+      const text = await readFile(`${OUTPUT_DIR}/${file}`, 'utf8')
+      for (const line of text.split(/\r?\n/)) {
+        if (!/\bTo:/i.test(line) && !line.startsWith('| 20')) continue
+        const matches = line.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/gi) ?? []
+        for (const match of matches) {
+          const email = match.toLowerCase()
+          const domain = email.split('@')[1] ?? ''
+          emails.add(email)
+          domains.add(domain)
+          domains.add(baseDomain(domain))
+        }
+      }
+    }
+  }
+  catch {
+    return { emails, domains }
+  }
+
+  return { emails, domains }
+}
+
 function extractEmails(text) {
   const matches = text.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/gi) ?? []
   const blocked = /example\.com|domain\.com|email\.com|your-email|you@example|noreply|no-reply|^(security|abuse|privacy|legal|dmarc|rua|postmaster|hostmaster|webmaster)@/i
   return [...new Set(matches)]
     .map(email => email.toLowerCase())
-    .filter(email => !blocked.test(email) && !suppressedEmails.has(email))
+    .filter(email => {
+      const domain = email.split('@')[1] ?? ''
+      return !blocked.test(email)
+        && !suppressedEmails.has(email)
+        && !contactedEmails.has(email)
+        && !contactedDomains.has(domain)
+        && !contactedDomains.has(baseDomain(domain))
+    })
     .slice(0, 3)
 }
 
@@ -391,6 +436,9 @@ function formatMessage(lead) {
 }
 
 const suppressedEmails = await loadSuppressedEmails()
+const existingOutreach = await loadExistingMcpOutreach()
+contactedEmails = existingOutreach.emails
+contactedDomains = existingOutreach.domains
 
 await mkdir(OUTPUT_DIR, { recursive: true })
 await mkdir(MESSAGE_DIR, { recursive: true })
