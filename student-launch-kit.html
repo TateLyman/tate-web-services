@@ -62,7 +62,7 @@
             </div>
             <div>
               <dt>output</dt>
-              <dd>fix list</dd>
+              <dd>report</dd>
             </div>
           </dl>
         </div>
@@ -73,7 +73,7 @@
 mode: browser-only
 inputs: package.json, README, workflows, server.json
 checks: release proof, safety, metadata, demo
-result: score + ranked fix queue</code></pre>
+result: score + ranked report</code></pre>
         </aside>
       </section>
 
@@ -119,6 +119,7 @@ result: score + ranked fix queue</code></pre>
           <p id="launchSummary">Load files or paste project text to generate a launch-readiness score.</p>
           <div class="result-actions">
             <button class="console-button primary" id="copyLaunchResult" type="button">copy result</button>
+            <button class="console-button secondary" id="downloadLaunchReport" type="button">download .md</button>
             <a class="console-button secondary" id="emailLaunchResult" href="mailto:hello@tateprograms.com?subject=Student%20launch%20check%20result">email result</a>
           </div>
           <div class="signal-list" id="signalList"></div>

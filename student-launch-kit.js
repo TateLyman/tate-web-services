@@ -9,6 +9,7 @@ const launchSummary = document.querySelector('#launchSummary')
 const launchFixes = document.querySelector('#launchFixes')
 const signalList = document.querySelector('#signalList')
 const copyLaunchResult = document.querySelector('#copyLaunchResult')
+const downloadLaunchReport = document.querySelector('#downloadLaunchReport')
 const emailLaunchResult = document.querySelector('#emailLaunchResult')
 const manualInputs = [
   document.querySelector('#hasDemoUrl'),
@@ -66,9 +67,32 @@ function getEntries() {
     .sort((a, b) => a[0].length - b[0].length)
   const pasted = pasteInput.value.trim()
   if (pasted) {
-    entries.push(['pasted-notes.txt', pasted])
+    entries.push(...parsePastedEntries(pasted))
   }
   return entries
+}
+
+function parsePastedEntries(text) {
+  const sectionPattern = /^---\s*([^-\n][^\n]*?)\s*---\s*$/gm
+  const matches = [...text.matchAll(sectionPattern)]
+  if (matches.length === 0) {
+    return [['pasted-notes.txt', text]]
+  }
+
+  const entries = []
+  matches.forEach((match, index) => {
+    const rawName = match[1].trim()
+    const next = matches[index + 1]
+    const start = match.index + match[0].length
+    const end = next ? next.index : text.length
+    const body = text.slice(start, end).trim()
+    const name = rawName.replace(/\\/g, '/').replace(/^\.?\//, '') || `pasted-${index + 1}.txt`
+    if (body) {
+      entries.push([name, body])
+    }
+  })
+
+  return entries.length ? entries : [['pasted-notes.txt', text]]
 }
 
 function findFile(entries, predicate) {
@@ -428,9 +452,37 @@ function renderSignals(groups) {
   }
 }
 
-function resultText() {
+function reportModel() {
   const { checks, entries } = analyze()
-  const { score, missing } = summarize(checks)
+  const summary = summarize(checks)
+  const copy = rating(summary.score, entries)
+  return { checks, entries, summary, copy }
+}
+
+function statusLabel(ok) {
+  return ok ? 'pass' : 'fix'
+}
+
+function formatReportDate() {
+  return new Date().toLocaleString(undefined, {
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  })
+}
+
+function topRiskLine(missing) {
+  if (missing.length === 0) {
+    return 'No major launch gaps were detected by this browser check.'
+  }
+  return missing.slice(0, 3).map(check => check.label.toLowerCase()).join(', ')
+}
+
+function resultText() {
+  const { entries, summary } = reportModel()
+  const { score, missing } = summary
   const title = projectName.value.trim() || 'Student project'
   const url = projectUrl.value.trim() || 'No URL provided'
   const files = entries.length ? entries.map(([name]) => name).slice(0, 12).join(', ') : 'No files loaded'
@@ -447,10 +499,85 @@ ${fixes}
 Prepared with Student Launch Kit by Tate Programs.`
 }
 
+function markdownReport() {
+  const { checks, entries, summary, copy } = reportModel()
+  const title = projectName.value.trim() || 'Student project'
+  const url = projectUrl.value.trim() || 'No URL provided'
+  const files = entries.map(([name]) => name)
+  const missing = summary.missing
+  const groups = summary.groups
+
+  const fileList = files.length
+    ? files.slice(0, 24).map(name => `- \`${name}\``).join('\n')
+    : '- No files were loaded.'
+  const extraFileNote = files.length > 24 ? `\n- ${files.length - 24} additional files reviewed.` : ''
+  const groupList = groups.length
+    ? groups.map(group => `- ${group.group}: ${group.score}%`).join('\n')
+    : '- No signal groups scored yet.'
+  const fixList = missing.length
+    ? missing.slice(0, 10).map((check, index) => `${index + 1}. ${check.fix}`).join('\n')
+    : 'No major launch gaps detected by the browser check.'
+  const checkList = checks.length
+    ? checks.map(check => `- [${statusLabel(check.ok)}] ${check.group}: ${check.label}`).join('\n')
+    : '- No checks ran.'
+
+  return `# ${title} Launch Report
+
+Generated: ${formatReportDate()}
+Prepared with: Student Launch Kit by Tate Programs
+
+## Verdict
+
+Score: ${summary.score}/100
+Status: ${copy.title}
+Project URL: ${url}
+
+${copy.summary}
+
+Highest-risk areas: ${topRiskLine(missing)}
+
+## Signal Scores
+
+${groupList}
+
+## Priority Fix Queue
+
+${fixList}
+
+## Files Reviewed
+
+${fileList}${extraFileNote}
+
+## Full Check Log
+
+${checkList}
+
+## Next Pass
+
+Re-run this report after fixing the priority queue. For deeper repo checks, run Shipcheck locally with \`npx --yes shipcheck-cli .\`.
+`
+}
+
+function reportFileName() {
+  const base = projectName.value.trim() || 'student-launch-report'
+  const safe = base.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+  return `${safe || 'student-launch-report'}-launch-report.md`
+}
+
+function downloadMarkdownReport() {
+  const blob = new Blob([markdownReport()], { type: 'text/markdown;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = reportFileName()
+  document.body.append(link)
+  link.click()
+  link.remove()
+  URL.revokeObjectURL(url)
+}
+
 function updateResult() {
-  const { checks, entries } = analyze()
-  const summary = summarize(checks)
-  const copy = rating(summary.score, entries)
+  const { summary, copy } = reportModel()
   launchScore.textContent = String(summary.score)
   launchTitle.textContent = copy.title
   launchSummary.textContent = copy.summary
@@ -503,6 +630,14 @@ copyLaunchResult.addEventListener('click', async () => {
       copyLaunchResult.textContent = 'copy result'
     }, 1600)
   }
+})
+
+downloadLaunchReport.addEventListener('click', () => {
+  downloadMarkdownReport()
+  downloadLaunchReport.textContent = 'downloaded'
+  window.setTimeout(() => {
+    downloadLaunchReport.textContent = 'download .md'
+  }, 1600)
 })
 
 updateResult()
