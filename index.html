@@ -45,6 +45,12 @@
           },
           {
             "@type": "Offer",
+            "name": "Student Launch Review",
+            "price": "29",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
             "name": "MCP Directory Launch Pass",
             "price": "149",
             "priceCurrency": "USD"
@@ -63,6 +69,7 @@
         <a href="#workbench">workbench</a>
         <a href="shipcheck.html">shipcheck</a>
         <a href="student-launch-kit.html">student-kit</a>
+        <a href="student-launch-review.html">student-review</a>
         <a href="mcp-registry-audit.html">mcp-audit</a>
         <a href="mcp-registry-pulse.html">pulse</a>
         <a href="mcp-directory-launch.html">directory</a>
@@ -85,6 +92,7 @@
             <a href="mcp-registry-pulse.html" aria-label="MCP registry pulse">pls</a>
             <a href="shipcheck.html" aria-label="Shipcheck">sc</a>
             <a href="student-launch-kit.html" aria-label="Student Launch Kit">kit</a>
+            <a href="student-launch-review.html" aria-label="Student Launch Review">rev</a>
             <a href="case-studies.html" aria-label="Proof">pf</a>
             <a href="payments.html" aria-label="Payments">$</a>
           </aside>
@@ -112,6 +120,7 @@
               <p><span class="prompt">tate@programs:~$</span> services --active</p>
               <pre><code>NAME           PRICE   OUTPUT
 risk-pass      99      memo + fix order
+student-pass   29+     student launch review
 mcp-dir        149     listing pass
 fix-sprint     299+    blocker repair
 mcp-review     99      launch report
@@ -188,6 +197,7 @@ launchquest     live incentive demo</code></pre>
               <ul>
                 <li><a href="shipcheck.html">~/shipcheck</a></li>
                 <li><a href="student-launch-kit.html">~/tools/student-launch-kit</a></li>
+                <li><a href="student-launch-review.html">~/services/student-launch-review</a></li>
                 <li><a href="mcp-registry-audit.html">~/tools/mcp-registry-audit</a></li>
                 <li><a href="mcp-registry-pulse.html">~/notes/mcp-registry-pulse</a></li>
                 <li><a href="mcp-directory-launch.html">~/services/mcp-directory-launch</a></li>
@@ -229,6 +239,7 @@ launchquest     live incentive demo</code></pre>
           <button type="button" data-command="mcp-audit">mcp-audit</button>
           <button type="button" data-command="shipcheck">shipcheck</button>
           <button type="button" data-command="student-kit">student-kit</button>
+          <button type="button" data-command="student-review">student-review</button>
           <button type="button" data-command="pricing">pricing</button>
           <button type="button" data-command="contact">contact</button>
           <button type="button" data-command="pay">pay</button>
@@ -273,6 +284,13 @@ launchquest     live incentive demo</code></pre>
             <strong>$99</strong>
             <a href="mcp-launch-review.html">open scope</a>
           </article>
+          <article>
+            <span>05</span>
+            <h2>Student Launch Review</h2>
+            <p>Deadline polish for student projects: README handoff, demo proof, submission copy, CI signal, and public-code cleanup.</p>
+            <strong>$29+</strong>
+            <a href="student-launch-review.html">open scope</a>
+          </article>
         </div>
       </section>
 
@@ -296,6 +314,11 @@ launchquest     live incentive demo</code></pre>
             <span>tool</span>
             <strong>Student Launch Kit</strong>
             <em>browser-only launch preflight</em>
+          </a>
+          <a href="student-launch-review.html">
+            <span>service</span>
+            <strong>Student Launch Review</strong>
+            <em>deadline polish and repo handoff cleanup</em>
           </a>
           <a href="https://github.com/TateLyman/shipcheck-action" target="_blank" rel="noreferrer">
             <span>action</span>

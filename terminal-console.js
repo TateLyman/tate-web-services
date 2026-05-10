@@ -14,6 +14,7 @@ const commands = {
     '  mcp-audit    open browser registry audit',
     '  shipcheck    open Shipcheck page',
     '  student-kit  open student launch checker',
+    '  student-review open paid student review',
     '  pricing      show fixed entry prices',
     '  contact      prepare email ticket',
     '  pay          open payment links',
@@ -27,6 +28,7 @@ const commands = {
     'mcp-review     $99     launch report',
     'shipcheck      free    scanner + action',
     'student-kit    free    browser launch checker',
+    'student-pass   $29+    student launch review',
   ].join('\n'),
   proof: [
     'PUBLIC ARTIFACTS',
@@ -36,6 +38,7 @@ const commands = {
     'awesome PR       open + green checks',
     'Shipcheck Action GitHub Marketplace',
     'student kit     browser-only launch checker',
+    'student review  paid launch polish scope',
     'registry pulse   public MCP launch snapshot',
     'case files       /case-studies.html',
     'checklist        /mcp-directory-checklist.html',
@@ -43,6 +46,7 @@ const commands = {
   pricing: [
     'FIXED ENTRY PRICES',
     '$99      launch risk pass',
+    '$29+     student launch review',
     '$99      MCP launch review',
     '$149     MCP directory launch pass',
     '$299+    production fix sprint',
@@ -91,6 +95,10 @@ const commands = {
     'open /student-launch-kit.html',
     'browser-only launch preflight for student projects, hackathon submissions, and public handoff proof.',
   ].join('\n'),
+  'student-review': [
+    'open /student-launch-review.html',
+    'fixed-scope review for student projects: README handoff, demo proof, submission copy, CI signal, and public-code cleanup.',
+  ].join('\n'),
 }
 
 const routes = {
@@ -100,6 +108,7 @@ const routes = {
   pulse: 'mcp-registry-pulse.html',
   shipcheck: 'shipcheck.html',
   'student-kit': 'student-launch-kit.html',
+  'student-review': 'student-launch-review.html',
   pay: 'payments.html',
 }
 

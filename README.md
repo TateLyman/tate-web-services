@@ -25,6 +25,7 @@ npx serve .
 - `mcp-checker.js` - browser-only scoring logic for the MCP launch self-check
 - `student-launch-kit.html` - browser-only launch checker for student and hackathon projects
 - `student-launch-kit.js` - local file/folder scoring logic for the student launch checker
+- `student-launch-review.html` - paid student project launch polish and repo handoff review page
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
@@ -113,6 +114,7 @@ The dashboard is written to `outreach/generated/mcp-prospect-dashboard-YYYY-MM-D
 The front-door offer is intentionally concrete:
 
 - $99 launch risk pass
+- $29+ student launch review
 - $299+ production fix sprint
 - $99+ MCP launch review
 
