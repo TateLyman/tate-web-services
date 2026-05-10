@@ -37,6 +37,8 @@ npx serve .
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
 - `x402-metadata-filter.html` - browser-only metadata filter for x402/Pay.sh payment requests, receipts, resource URLs, prompts, PII, and secret-like fields
 - `x402-metadata-filter.js` - local scoring, redaction, safe-envelope generation, copy, and report export logic for the x402 Metadata Filter
+- `agentcore-payment-policy.html` - browser-only AgentCore/x402 payment policy builder for session caps, payee allowlists, approval rules, receipts, and audit evidence
+- `agentcore-payment-policy.js` - local policy scoring and JSON export logic for AgentCore, x402, MPP, and Pay.sh payment demos
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
@@ -110,6 +112,8 @@ The script reads the live Pay.sh API catalog and writes:
 - `pay-sh-catalog-pulse.json`
 
 The page reports provider-level agent-payment surfaces where launch controls matter: quoted prices, caps, receipts, metadata filtering, provider validation, and audit evidence.
+
+The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-payment-policy.html` and `agentcore-payment-policy.js` directly when updating the control model.
 
 ```bash
 npm run prospect:mcp

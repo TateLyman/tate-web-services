@@ -915,7 +915,9 @@ footer a {
 }
 
 .audit-form input[type="text"],
+.audit-form input[type="number"],
 .audit-form input[type="url"],
+.audit-form select,
 .audit-form textarea {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -923,6 +925,17 @@ footer a {
   font: inherit;
   padding: 12px 14px;
   width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-grid label {
+  display: grid;
+  gap: 10px;
 }
 
 .audit-form textarea {
@@ -2032,7 +2045,9 @@ footer a {
 }
 
 .console-home .audit-form input[type="text"],
+.console-home .audit-form input[type="number"],
 .console-home .audit-form input[type="url"],
+.console-home .audit-form select,
 .console-home .audit-form textarea {
   background: #07100b;
   border-color: var(--console-line);
@@ -2040,6 +2055,7 @@ footer a {
 }
 
 .console-home .audit-form input[type="text"]::placeholder,
+.console-home .audit-form input[type="number"]::placeholder,
 .console-home .audit-form input[type="url"]::placeholder,
 .console-home .audit-form textarea::placeholder {
   color: rgba(143, 165, 153, 0.72);
@@ -3397,7 +3413,9 @@ footer a {
 }
 
 .shell-page .audit-form input[type="text"],
+.shell-page .audit-form input[type="number"],
 .shell-page .audit-form input[type="url"],
+.shell-page .audit-form select,
 .shell-page .audit-form textarea {
   background: #030504;
   border-radius: 4px;
@@ -3543,6 +3561,10 @@ footer a {
 
   .article-page .console-actions {
     display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
     grid-template-columns: 1fr;
   }
 

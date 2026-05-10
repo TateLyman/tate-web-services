@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AgentCore Payment Policy Builder | x402 Controls | Tate Programs</title>
+    <meta name="description" content="Browser-only AgentCore and x402 payment policy builder for session spend limits, recipient allowlists, approval gates, receipts, metadata filtering, and audit evidence.">
+    <link rel="canonical" href="https://tateprograms.com/agentcore-payment-policy.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AgentCore Payment Policy Builder">
+    <meta property="og:description" content="Generate a practical payment-session policy before an agent can spend through x402, MPP, Pay.sh, or AgentCore-style rails.">
+    <meta property="og:url" content="https://tateprograms.com/agentcore-payment-policy.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AgentCore Payment Policy Builder">
+    <meta name="twitter:description" content="Browser-only payment policy builder for x402 and AgentCore-style payment sessions.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AgentCore Payment Policy Builder",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "url": "https://tateprograms.com/agentcore-payment-policy.html",
+        "description": "Browser-only AgentCore and x402 payment policy builder for session spend limits, recipient allowlists, approval gates, receipts, metadata filtering, and audit evidence.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        }
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="agentcore-payment-policy.html">agentcore-policy</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="x402-metadata-filter.html">metadata</a>
+        <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
+        <a href="agent-security-drill.html">security-drill</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=AgentCore%20payment%20policy%20review">
+        <span></span>
+        spend policies
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/agentcore-payment-policy</strong>
+        <em>x402 / AgentCore / Pay.sh</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">agentcore payment policy / may 2026 signal</p>
+          <h1>Write the spend policy before the agent gets a wallet.</h1>
+          <p class="console-subtitle">
+            AgentCore Payments, x402, MPP, and Pay.sh move paid APIs into an agent's execution loop. This local builder turns a payment demo into concrete session caps, per-call limits, recipient allowlists, approval gates, receipt rules, metadata boundaries, and audit evidence.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#policyBuilder">build policy</a>
+            <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
+            <a class="console-button secondary" href="x402-metadata-filter.html">metadata filter</a>
+            <a class="console-button secondary" href="pay-sh-catalog-pulse.html">Pay.sh pulse</a>
+            <a class="console-button ghost" href="#sourceLedger">source ledger</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>input</dt>
+              <dd>limits</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>policy JSON</dd>
+            </div>
+            <div>
+              <dt>privacy</dt>
+              <dd>browser only</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="AgentCore payment policy terminal preview">
+          <div class="terminal-topline">agentcore.policy</div>
+          <pre><code>$ policy build --rail x402
+session.max: 5 USDC
+call.max: 0.25 USDC
+approval: required over limit
+recipients: allowlist only
+metadata: purpose codes only
+receipts: required
+result: launch policy + gaps</code></pre>
+        </aside>
+      </section>
+
+      <section id="policyBuilder" class="console-audit-layout launch-kit-layout" aria-label="AgentCore payment policy builder">
+        <div class="audit-form launch-kit-panel">
+          <label>
+            Project name
+            <input id="projectName" type="text" value="Paid API research agent">
+          </label>
+
+          <label>
+            Payment rail
+            <select id="paymentRail">
+              <option value="agentcore_x402">AgentCore Payments + x402</option>
+              <option value="x402">Direct x402</option>
+              <option value="pay_sh">Pay.sh / gateway-402</option>
+              <option value="mpp">Machine Payments Protocol</option>
+              <option value="mixed">Mixed payment rails</option>
+            </select>
+          </label>
+
+          <div class="form-grid">
+            <label>
+              Session cap
+              <input id="sessionCap" type="number" min="0" step="0.01" value="5">
+            </label>
+            <label>
+              Per-call cap
+              <input id="perCallCap" type="number" min="0" step="0.01" value="0.25">
+            </label>
+            <label>
+              Currency
+              <input id="currency" type="text" value="USDC">
+            </label>
+            <label>
+              Expiry minutes
+              <input id="expiryMinutes" type="number" min="1" step="1" value="30">
+            </label>
+          </div>
+
+          <label>
+            Allowed networks
+            <input id="networks" type="text" value="base, solana-devnet">
+          </label>
+
+          <label>
+            Recipient allowlist
+            <textarea id="recipients" rows="5" spellcheck="false">0x0000000000000000000000000000000000000000
+pay.sh:sandbox-provider
+x402.quicknode.com</textarea>
+          </label>
+
+          <label>
+            Allowed purpose codes
+            <input id="purposeCodes" type="text" value="chain_data_request, web_data_request, media_processing">
+          </label>
+
+          <fieldset>
+            <legend>Controls</legend>
+            <label class="check-row"><input id="dryRun" type="checkbox" checked> Default to dry-run, testnet, or sandbox until manually promoted.</label>
+            <label class="check-row"><input id="humanApproval" type="checkbox" checked> Require human approval above the per-call cap or for new recipients.</label>
+            <label class="check-row"><input id="recipientValidation" type="checkbox" checked> Validate recipient, network, asset, amount, and facilitator response before paying.</label>
+            <label class="check-row"><input id="metadataFilter" type="checkbox" checked> Redact prompt text, PII, query tokens, and internal ids from payment metadata.</label>
+            <label class="check-row"><input id="receipts" type="checkbox" checked> Store receipts, denials, retries, and refund/dispute states.</label>
+            <label class="check-row"><input id="replayProtection" type="checkbox" checked> Reject reused payment payloads, expired sessions, and duplicate request ids.</label>
+            <label class="check-row"><input id="separateWallet" type="checkbox"> Use a dedicated low-balance wallet or payment instrument for the demo.</label>
+            <label class="check-row"><input id="observeSpend" type="checkbox" checked> Emit spend logs, metrics, and trace ids for every payment decision.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results launch-kit-results agent-commerce-results" aria-label="Generated payment policy" aria-live="polite">
+          <div class="score-card">
+            <span id="policyScore">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="policyTitle">Policy not generated</h2>
+          <p id="policySummary">The builder runs locally and outputs a policy draft plus launch gaps.</p>
+          <div class="result-actions">
+            <button class="console-button primary" id="copyPolicy" type="button">copy policy</button>
+            <button class="console-button secondary" id="downloadPolicy" type="button">download .json</button>
+            <a class="console-button secondary" href="mailto:hello@tateprograms.com?subject=AgentCore%20payment%20policy%20review">review this</a>
+          </div>
+          <div class="signal-list" id="policySignals"></div>
+          <div>
+            <h3>Policy JSON</h3>
+            <textarea id="policyOutput" rows="20" spellcheck="false" readonly></textarea>
+          </div>
+          <p class="tool-note">This is an implementation planning aid for payment-agent demos. It is not financial, legal, or compliance advice.</p>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">launch posture</p>
+            <h2>The policy should be boring enough to survive a real user.</h2>
+          </div>
+          <a class="console-link" href="agent-commerce-sample-report.html">sample report</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">cap</p>
+            <h3>Loss is bounded before execution.</h3>
+            <p>Session and per-call ceilings should be enforced outside the prompt so a model cannot talk its way into more spend.</p>
+          </article>
+          <article>
+            <p class="card-command">payee</p>
+            <h3>The recipient is explicit.</h3>
+            <p>New payees, changed networks, large amounts, and unknown facilitators should deny or pause until a human confirms.</p>
+          </article>
+          <article>
+            <p class="card-command">memo</p>
+            <h3>Metadata stays small.</h3>
+            <p>Payment records should carry compact purpose codes, not full prompts, support tickets, emails, or hidden query strings.</p>
+          </article>
+          <article>
+            <p class="card-command">audit</p>
+            <h3>Every decision has evidence.</h3>
+            <p>Receipts, denials, retries, traces, and refunds should explain what happened without exposing private user context.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="sourceLedger" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source ledger</p>
+          <h2>Why this tool exists now.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">aws</p>
+            <h3>AgentCore Payments preview</h3>
+            <p>AWS announced AgentCore Payments preview on May 7, 2026 with Coinbase and Stripe, including session spending limits, observability, x402 negotiation, and paid MCP/API access.</p>
+            <a href="https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-agentcore-payments-preview/" target="_blank" rel="noreferrer">open AWS note</a>
+          </article>
+          <article>
+            <p class="card-command">docs</p>
+            <h3>Payment sessions and instruments</h3>
+            <p>The AgentCore docs describe payment sessions with configurable payment limits, expiry, instruments, and payment lifecycle orchestration.</p>
+            <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-how-it-works.html" target="_blank" rel="noreferrer">open docs</a>
+          </article>
+          <article>
+            <p class="card-command">cloudflare</p>
+            <h3>Agentic payments over 402</h3>
+            <p>Cloudflare's Agents docs frame x402 and MPP as protocols for agents purchasing resources through HTTP 402 payment flows.</p>
+            <a href="https://developers.cloudflare.com/agents/agentic-payments/" target="_blank" rel="noreferrer">open docs</a>
+          </article>
+          <article>
+            <p class="card-command">quicknode</p>
+            <h3>Paid infrastructure without accounts</h3>
+            <p>Quicknode documents x402 and MPP as wallet-based protocols for applications and agents accessing blockchain infrastructure.</p>
+            <a href="https://www.quicknode.com/docs/build-with-ai/agentic-payments" target="_blank" rel="noreferrer">open docs</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>AgentCore Payment Policy Builder</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-commerce-gate.html">Commerce gate</a>
+      <a href="x402-metadata-filter.html">Metadata filter</a>
+      <a href="pay-sh-catalog-pulse.html">Pay.sh pulse</a>
+      <a href="payments.html">Payments</a>
+      <a href="index.html">Home</a>
+    </footer>
+    <script src="agentcore-payment-policy.js"></script>
+  </body>
+</html>

@@ -25,6 +25,17 @@ function normalizeKey(value) {
   return String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '')
 }
 
+function addContactedKey(contacted, value) {
+  const key = normalizeKey(value)
+  if (key) contacted.add(key)
+}
+
+function addContactedTokens(contacted, value) {
+  for (const token of String(value ?? '').toLowerCase().split(/[^a-z0-9]+/)) {
+    if (token.length >= 6) contacted.add(token)
+  }
+}
+
 function csvEscape(value) {
   const stringValue = Array.isArray(value) ? value.join('; ') : String(value ?? '')
   return `"${stringValue.replace(/"/g, '""')}"`
@@ -78,8 +89,16 @@ async function loadExistingOutreach() {
         const cells = line.split('|').map(cell => cell.trim()).filter(Boolean)
         const recipient = cells[1]?.replaceAll('`', '').toLowerCase()
         const target = cells[2]?.toLowerCase()
-        if (recipient) contacted.add(recipient)
-        if (target) contacted.add(target)
+        if (recipient) {
+          addContactedKey(contacted, recipient)
+          const domain = recipient.split('@')[1]
+          addContactedKey(contacted, domain)
+          addContactedTokens(contacted, domain)
+        }
+        if (target) {
+          addContactedKey(contacted, target)
+          addContactedTokens(contacted, target)
+        }
       }
     }
   }
