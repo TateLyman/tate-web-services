@@ -1,0 +1,31 @@
+name: Refresh Pay.sh Catalog Pulse
+
+on:
+  schedule:
+    - cron: "31 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: npm run pulse:pay
+      - name: Commit pulse update
+        run: |
+          if git diff --quiet -- pay-sh-catalog-pulse.html pay-sh-catalog-pulse.json; then
+            echo "No pulse changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pay-sh-catalog-pulse.html pay-sh-catalog-pulse.json
+          git commit -m "Refresh Pay.sh catalog pulse"
+          git push

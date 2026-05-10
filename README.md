@@ -33,6 +33,8 @@ npx serve .
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
+- `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
+- `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
@@ -56,12 +58,14 @@ npx serve .
 - `sitemap.xml` - public crawl map for the main proof and service pages
 - `llms.txt` - concise machine-readable map for developer tools, service pages, and proof assets
 - `.github/workflows/refresh-mcp-pulse.yml` - daily public MCP Registry Pulse refresh
+- `.github/workflows/refresh-pay-sh-pulse.yml` - daily public Pay.sh Catalog Pulse refresh
 - `demos/` - sample landing pages for local business outreach
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
 - `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
 - `scripts/render-mcp-registry-pulse.mjs` - public MCP Registry pulse page generator
+- `scripts/render-pay-sh-catalog-pulse.mjs` - public Pay.sh catalog pulse page generator
 - `scripts/render-mcp-prospect-dashboard.mjs` - local dashboard renderer for MCP prospect review and compose links
 - `scripts/render-mcp-prospect-reports.mjs` - local private mini-report renderer for MCP prospects
 
@@ -90,6 +94,19 @@ The script reads the live official MCP Registry API plus linked public GitHub me
 - `mcp-registry-pulse.json`
 
 The page intentionally reports aggregate launch-readiness signals, not named third-party findings.
+
+To regenerate the public Pay.sh Catalog Pulse page:
+
+```bash
+npm run pulse:pay
+```
+
+The script reads the live Pay.sh API catalog and writes:
+
+- `pay-sh-catalog-pulse.html`
+- `pay-sh-catalog-pulse.json`
+
+The page reports provider-level agent-payment surfaces where launch controls matter: quoted prices, caps, receipts, metadata filtering, provider validation, and audit evidence.
 
 ```bash
 npm run prospect:mcp

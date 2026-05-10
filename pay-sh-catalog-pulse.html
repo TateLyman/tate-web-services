@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pay.sh Catalog Pulse | Agent-Payment API Risk Map | Tate Programs</title>
+    <meta name="description" content="A current Pay.sh catalog pulse for agent-paid APIs: provider counts, pricing surfaces, high-priority review targets, and the launch controls teams should prove before agents spend.">
+    <link rel="canonical" href="https://tateprograms.com/pay-sh-catalog-pulse.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pay.sh Catalog Pulse">
+    <meta property="og:description" content="Live Pay.sh catalog snapshot for agent-paid API launch controls, pricing surfaces, and review priorities.">
+    <meta property="og:url" content="https://tateprograms.com/pay-sh-catalog-pulse.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pay.sh Catalog Pulse">
+    <meta name="twitter:description" content="A current snapshot of agent-paid API surfaces and launch controls.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Pay.sh Catalog Pulse",
+        "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
+        "dateModified": "2026-05-10",
+        "isBasedOn": "https://pay.sh/api/catalog",
+        "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        }
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
+        <a href="agent-security-drill.html">security-drill</a>
+        <a href="mcp-registry-pulse.html">mcp-pulse</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Agent%20Commerce%20Readiness%20Review">
+        <span></span>
+        agent payment checks
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/pay-sh-catalog-pulse</strong>
+        <em>2026-05-07T01:23:54Z</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">pay.sh catalog pulse / 2026-05-10</p>
+          <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
+          <p class="console-subtitle">
+            Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="agent-commerce-gate.html">run commerce gate</a>
+            <a class="console-button secondary" href="x402-launch-checklist.html">x402 checklist</a>
+            <a class="console-button secondary" href="agent-commerce-sample-report.html">sample report</a>
+            <a class="console-button ghost" href="pay-sh-catalog-pulse.json">data json</a>
+            <a class="console-button ghost" href="https://pay.sh/api/catalog" target="_blank" rel="noreferrer">source catalog</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>providers</dt>
+              <dd>72</dd>
+            </div>
+            <div>
+              <dt>metered</dt>
+              <dd>61</dd>
+            </div>
+            <div>
+              <dt>free tier</dt>
+              <dd>27</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
+          <div class="terminal-topline">catalog pulse</div>
+          <pre><code>$ fetch https://pay.sh/api/catalog
+providers: 72
+priced: 61
+metered: 61
+priority: 11
+checks: caps, receipts, metadata
+output: pay-sh-catalog-pulse.json</code></pre>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">review priority</p>
+            <h2>Provider surfaces to inspect before public agent demos.</h2>
+          </div>
+          <a class="console-link" href="agent-commerce-gate.html">open gate</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">high / 66</p>
+            <h3>AgentMail</h3>
+            <p>Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>83</dd></div>
+              <div><dt>price</dt><dd>$0-$10</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>wide endpoint surface</li><li>message-sending workflow</li><li>personal or business-contact data</li></ul>
+            <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 56</p>
+            <h3>StableCrypto</h3>
+            <p>Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>105</dd></div>
+              <div><dt>price</dt><dd>$0.01</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
+            <a href="https://stablecrypto.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 50</p>
+            <h3>StableDomains</h3>
+            <p>Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>cloud</dd></div>
+              <div><dt>endpoints</dt><dd>9</dd></div>
+              <div><dt>price</dt><dd>$0.1-$1,500</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>large per-call ceiling</li><li>message-sending workflow</li><li>domain or DNS workflow</li></ul>
+            <a href="https://stabledomains.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Quicknode</h3>
+            <p>Pay-per-request JSON-RPC endpoints for 140+ blockchain networks. Each chain is its own path (e.g. solana-mainnet, ethereum-mainnet). Supports SIWX session auth, x402 micropayments, dynamic per-method pricing, and direct node access without infrastructure.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>compute</dd></div>
+              <div><dt>endpoints</dt><dd>141</dd></div>
+              <div><dt>price</dt><dd>$0.001-$1</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li></ul>
+            <a href="https://x402.quicknode.com" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Alibaba Cloud OCR API</h3>
+            <p>Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>ai_ml</dd></div>
+              <div><dt>endpoints</dt><dd>75</dd></div>
+              <div><dt>price</dt><dd>$0.001</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>metered without free tier</li></ul>
+            <a href="https://ocr-api.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>StableEnrich</h3>
+            <p>Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>data</dd></div>
+              <div><dt>endpoints</dt><dd>34</dd></div>
+              <div><dt>price</dt><dd>$0.002-$0.44</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>message-sending workflow</li><li>personal or business-contact data</li><li>untrusted web-data input</li></ul>
+            <a href="https://stableenrich.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Nyne AI</h3>
+            <p>Nyne AI person enrichment and prospect search through PaySponge&#39;s x402 wrapper, with known-contact enrichment, async request polling, and natural-language people search that can return contact, company, and profile data.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>data</dd></div>
+              <div><dt>endpoints</dt><dd>3</dd></div>
+              <div><dt>price</dt><dd>$0-$0.02</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>message-sending workflow</li><li>voice or calling workflow</li><li>personal or business-contact data</li><li>untrusted web-data input</li></ul>
+            <a href="https://api.paysponge.com/x402/purchase/svc_d5ymfernpzeh58gb8" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Textbelt SMS API</h3>
+            <p>Send outbound SMS to supported-country phone numbers and check delivery status through PaySponge&#39;s x402-wrapped Textbelt service. Supports optional sender metadata, reply webhooks, and webhook data passthrough.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>2</dd></div>
+              <div><dt>price</dt><dd>$0-$0.02</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>message-sending workflow</li><li>voice or calling workflow</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
+            <a href="https://api.paysponge.com/x402/purchase/svc_d6kszbre4qwg5n4n4" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">catalog shape</p>
+          <h2>Where the catalog clusters.</h2>
+        </div>
+        <div class="console-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>category</th>
+                <th>providers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>ai_ml</td><td>33</td></tr><tr><td>data</td><td>6</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>security</td><td>4</td></tr><tr><td>shopping</td><td>3</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">spend ceiling</p>
+          <h2>Highest per-call price surfaces.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">medium / 50</p>
+            <h3>StableDomains</h3>
+            <p>Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>cloud</dd></div>
+              <div><dt>endpoints</dt><dd>9</dd></div>
+              <div><dt>price</dt><dd>$0.1-$1,500</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>large per-call ceiling</li><li>message-sending workflow</li><li>domain or DNS workflow</li></ul>
+            <a href="https://stabledomains.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 42</p>
+            <h3>StablePhone</h3>
+            <p>Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>7</dd></div>
+              <div><dt>price</dt><dd>$0.05-$20</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>message-sending workflow</li><li>voice or calling workflow</li></ul>
+            <a href="https://stablephone.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">high / 66</p>
+            <h3>AgentMail</h3>
+            <p>Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>83</dd></div>
+              <div><dt>price</dt><dd>$0-$10</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>wide endpoint surface</li><li>message-sending workflow</li><li>personal or business-contact data</li></ul>
+            <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">watch / 32</p>
+            <h3>StableEmail</h3>
+            <p>Send email, buy dedicated inboxes, manage custom subdomains, and retrieve inbound messages through per-request email APIs. Supports shared relay sending, subdomain sender identities, forwarding inboxes, message storage, and attachment access.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>24</dd></div>
+              <div><dt>price</dt><dd>$0.001-$8</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>message-sending workflow</li><li>domain or DNS workflow</li></ul>
+            <a href="https://stableemail.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">endpoint width</p>
+          <h2>Widest endpoint surfaces.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">medium / 44</p>
+            <h3>Quicknode</h3>
+            <p>Pay-per-request JSON-RPC endpoints for 140+ blockchain networks. Each chain is its own path (e.g. solana-mainnet, ethereum-mainnet). Supports SIWX session auth, x402 micropayments, dynamic per-method pricing, and direct node access without infrastructure.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>compute</dd></div>
+              <div><dt>endpoints</dt><dd>141</dd></div>
+              <div><dt>price</dt><dd>$0.001-$1</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li></ul>
+            <a href="https://x402.quicknode.com" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 56</p>
+            <h3>StableCrypto</h3>
+            <p>Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>105</dd></div>
+              <div><dt>price</dt><dd>$0.01</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
+            <a href="https://stablecrypto.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">high / 66</p>
+            <h3>AgentMail</h3>
+            <p>Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>83</dd></div>
+              <div><dt>price</dt><dd>$0-$10</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>wide endpoint surface</li><li>message-sending workflow</li><li>personal or business-contact data</li></ul>
+            <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Alibaba Cloud OCR API</h3>
+            <p>Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>ai_ml</dd></div>
+              <div><dt>endpoints</dt><dd>75</dd></div>
+              <div><dt>price</dt><dd>$0.001</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>metered without free tier</li></ul>
+            <a href="https://ocr-api.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">control list</p>
+          <h2>What every agent-payment demo should prove.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">price</p>
+            <h3>Quote before action</h3>
+            <p>The agent should see provider, endpoint, quoted price, network, max total, and failure state before the paid call is allowed.</p>
+          </article>
+          <article>
+            <p class="card-command">cap</p>
+            <h3>Enforce outside the prompt</h3>
+            <p>Spend caps should live in wallet, server, policy middleware, or facilitator configuration, not only in natural-language instructions.</p>
+          </article>
+          <article>
+            <p class="card-command">metadata</p>
+            <h3>Filter payment metadata</h3>
+            <p>Prompts, private user IDs, contact data, ticket text, and retrieval context should not leak into receipts or provider-visible metadata.</p>
+          </article>
+          <article>
+            <p class="card-command">audit</p>
+            <h3>Preserve receipts and denials</h3>
+            <p>Keep payment request, decision, receipt, retry, refund, deny reason, and human approval evidence in a reviewable log.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="console-footer">
+      <a href="index.html">Tate Programs</a>
+      <a href="agent-commerce-gate.html">Commerce Gate</a>
+      <a href="x402-launch-checklist.html">x402 Checklist</a>
+      <a href="payments.html">Payments</a>
+    </footer>
+    <script src="terminal-console.js" type="module"></script>
+  </body>
+</html>

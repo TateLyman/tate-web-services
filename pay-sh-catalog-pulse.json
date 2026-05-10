@@ -1,0 +1,628 @@
+{
+  "runDate": "2026-05-10",
+  "generatedAt": "2026-05-07T01:23:54Z",
+  "source": "https://pay.sh/api/catalog",
+  "providerCount": 72,
+  "observedProviders": 72,
+  "pricedCount": 61,
+  "meteredCount": 61,
+  "freeTierCount": 27,
+  "categoryCounts": {
+    "messaging": 4,
+    "shopping": 3,
+    "ai_ml": 33,
+    "finance": 2,
+    "cloud": 1,
+    "data": 6,
+    "media": 3,
+    "storage": 1,
+    "devtools": 1,
+    "maps": 4,
+    "compute": 1,
+    "search": 5,
+    "translation": 4,
+    "security": 4
+  },
+  "topCategories": [
+    {
+      "category": "ai_ml",
+      "count": 33
+    },
+    {
+      "category": "data",
+      "count": 6
+    },
+    {
+      "category": "search",
+      "count": 5
+    },
+    {
+      "category": "messaging",
+      "count": 4
+    },
+    {
+      "category": "maps",
+      "count": 4
+    },
+    {
+      "category": "translation",
+      "count": 4
+    },
+    {
+      "category": "security",
+      "count": 4
+    },
+    {
+      "category": "shopping",
+      "count": 3
+    }
+  ],
+  "reviewPriority": [
+    {
+      "fqn": "agentmail/email",
+      "title": "AgentMail",
+      "category": "messaging",
+      "description": "Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.",
+      "useCase": "Use for giving agents their own email address, sending outbound email, receiving replies, monitoring inboxes, automating email-based workflows, collecting verification messages, routing support mail, and managing correspondence without manual setup.",
+      "serviceUrl": "https://x402.api.agentmail.to",
+      "endpointCount": 83,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 10,
+      "sha": "c39acd601c54f2ae",
+      "priorityScore": 66,
+      "priorityLevel": "high",
+      "reasons": [
+        "meaningful per-call spend",
+        "wide endpoint surface",
+        "message-sending workflow",
+        "personal or business-contact data"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stablecrypto/market-data",
+      "title": "StableCrypto",
+      "category": "finance",
+      "description": "Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.",
+      "useCase": "Use for crypto prices, market charts, DeFi analytics, TVL and yield research, DEX pool data, wallet token balances, Ethereum transfers, contract metadata, gas estimates, bridge volume, stablecoin supply, treasury holdings, and blockchain monitoring.",
+      "serviceUrl": "https://stablecrypto.dev",
+      "endpointCount": 105,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 0.01,
+      "sha": "2858c649a49c995a",
+      "priorityScore": 56,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "financial data or wallet context",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stabledomains/domains",
+      "title": "StableDomains",
+      "category": "cloud",
+      "description": "Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.",
+      "useCase": "Use for domain registration, renewing existing names, managing DNS records, buying agent-owned domains, setting A/AAAA/CNAME/MX/TXT records, launching websites, configuring branded email, and handling registrar workflows through micropayments.",
+      "serviceUrl": "https://stabledomains.dev",
+      "endpointCount": 9,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.1,
+      "maxPriceUsd": 1500,
+      "sha": "94dd3cf308c250ad",
+      "priorityScore": 50,
+      "priorityLevel": "medium",
+      "reasons": [
+        "large per-call ceiling",
+        "message-sending workflow",
+        "domain or DNS workflow"
+      ]
+    },
+    {
+      "fqn": "quicknode/rpc",
+      "title": "Quicknode",
+      "category": "compute",
+      "description": "Pay-per-request JSON-RPC endpoints for 140+ blockchain networks. Each chain is its own path (e.g. solana-mainnet, ethereum-mainnet). Supports SIWX session auth, x402 micropayments, dynamic per-method pricing, and direct node access without infrastructure.",
+      "useCase": "Use for blockchain JSON-RPC, querying account or contract state, submitting transactions, Solana RPC, EVM RPC, multi-chain dapps, block and transaction lookups, devnet/testnet access, and scalable chain reads with pay-per-request billing.",
+      "serviceUrl": "https://x402.quicknode.com",
+      "endpointCount": 141,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 1,
+      "sha": "a455780d31c1de6b",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "financial data or wallet context"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/alibaba/ocr-api",
+      "title": "Alibaba Cloud OCR API",
+      "category": "ai_ml",
+      "description": "Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.",
+      "useCase": "Use for high-Precision Full-Text Recognition, air Travel Itinerary Recognition, unified OCR Recognition, and related document OCR, structured extraction, and image-to-text parsing.",
+      "serviceUrl": "https://ocr-api.alibaba.gateway-402.com",
+      "endpointCount": 75,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 0.001,
+      "sha": "6e26615c13d3da55",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stableenrich/enrichment",
+      "title": "StableEnrich",
+      "category": "data",
+      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
+      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
+      "serviceUrl": "https://stableenrich.dev",
+      "endpointCount": 34,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.002,
+      "maxPriceUsd": 0.44,
+      "sha": "32f0afdaade13c61",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "message-sending workflow",
+        "personal or business-contact data",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "paysponge/nyne",
+      "title": "Nyne AI",
+      "category": "data",
+      "description": "Nyne AI person enrichment and prospect search through PaySponge's x402 wrapper, with known-contact enrichment, async request polling, and natural-language people search that can return contact, company, and profile data.",
+      "useCase": "Use for B2B contact enrichment from email, phone, name, or LinkedIn URL, plus natural-language prospect search with pagination, cached request reuse, and optional email or phone enrichment.",
+      "serviceUrl": "https://api.paysponge.com/x402/purchase/svc_d5ymfernpzeh58gb8",
+      "endpointCount": 3,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 0.02,
+      "sha": "8d959cf977fc0710",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "message-sending workflow",
+        "voice or calling workflow",
+        "personal or business-contact data",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "paysponge/textbelt",
+      "title": "Textbelt SMS API",
+      "category": "messaging",
+      "description": "Send outbound SMS to supported-country phone numbers and check delivery status through PaySponge's x402-wrapped Textbelt service. Supports optional sender metadata, reply webhooks, and webhook data passthrough.",
+      "useCase": "Use for transactional SMS, alerts, reminders, verification messages, simple outbound texting, and delivery-status polling when an agent needs pay-per-request messaging without managing a separate Textbelt account.",
+      "serviceUrl": "https://api.paysponge.com/x402/purchase/svc_d6kszbre4qwg5n4n4",
+      "endpointCount": 2,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 0.02,
+      "sha": "fed334093b3529ed",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "message-sending workflow",
+        "voice or calling workflow",
+        "financial data or wallet context",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stablephone/calls",
+      "title": "StablePhone",
+      "category": "messaging",
+      "description": "Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.",
+      "useCase": "Use for AI phone calls, outbound voice tasks, call automation, dedicated caller ID numbers, renewing phone number leases, checking iMessage or FaceTime availability, appointment calls, reminders, surveys, support outreach, and phone-based agent workflows.",
+      "serviceUrl": "https://stablephone.dev",
+      "endpointCount": 7,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.05,
+      "maxPriceUsd": 20,
+      "sha": "4cfa702437e93a5a",
+      "priorityScore": 42,
+      "priorityLevel": "medium",
+      "reasons": [
+        "meaningful per-call spend",
+        "message-sending workflow",
+        "voice or calling workflow"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stablesocial/social-data",
+      "title": "StableSocial",
+      "category": "media",
+      "description": "Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.",
+      "useCase": "Use for social profile lookup, post retrieval, comment analysis, follower and following lists, TikTok/Instagram/Facebook/Reddit research, engagement metrics, subreddit monitoring, social listening, creator intelligence, and content discovery.",
+      "serviceUrl": "https://stablesocial.dev",
+      "endpointCount": 37,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.06,
+      "maxPriceUsd": 0.06,
+      "sha": "7e930b1d13fc851f",
+      "priorityScore": 38,
+      "priorityLevel": "medium",
+      "reasons": [
+        "personal or business-contact data",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "paysponge/rentcast",
+      "title": "RentCast API",
+      "category": "data",
+      "description": "Search US property records, sale listings, rental listings, market stats, rent estimates, and value estimates with geographic filters, structured housing attributes, listing detail lookups, and comparable-property data for real-estate workflows.",
+      "useCase": "Use for US real-estate search, rental comps, home value estimates, rent estimates, ZIP-level market analysis, sale and rental listing lookup, property detail enrichment, investor research, and housing data workflows that need structured filters.",
+      "serviceUrl": "https://rentcast.x402.paysponge.com",
+      "endpointCount": 10,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 0.01,
+      "sha": "8d368738472db18a",
+      "priorityScore": 38,
+      "priorityLevel": "medium",
+      "reasons": [
+        "personal or business-contact data",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    }
+  ],
+  "highestPrice": [
+    {
+      "fqn": "merit-systems/stabledomains/domains",
+      "title": "StableDomains",
+      "category": "cloud",
+      "description": "Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.",
+      "useCase": "Use for domain registration, renewing existing names, managing DNS records, buying agent-owned domains, setting A/AAAA/CNAME/MX/TXT records, launching websites, configuring branded email, and handling registrar workflows through micropayments.",
+      "serviceUrl": "https://stabledomains.dev",
+      "endpointCount": 9,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.1,
+      "maxPriceUsd": 1500,
+      "sha": "94dd3cf308c250ad",
+      "priorityScore": 50,
+      "priorityLevel": "medium",
+      "reasons": [
+        "large per-call ceiling",
+        "message-sending workflow",
+        "domain or DNS workflow"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stablephone/calls",
+      "title": "StablePhone",
+      "category": "messaging",
+      "description": "Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.",
+      "useCase": "Use for AI phone calls, outbound voice tasks, call automation, dedicated caller ID numbers, renewing phone number leases, checking iMessage or FaceTime availability, appointment calls, reminders, surveys, support outreach, and phone-based agent workflows.",
+      "serviceUrl": "https://stablephone.dev",
+      "endpointCount": 7,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.05,
+      "maxPriceUsd": 20,
+      "sha": "4cfa702437e93a5a",
+      "priorityScore": 42,
+      "priorityLevel": "medium",
+      "reasons": [
+        "meaningful per-call spend",
+        "message-sending workflow",
+        "voice or calling workflow"
+      ]
+    },
+    {
+      "fqn": "agentmail/email",
+      "title": "AgentMail",
+      "category": "messaging",
+      "description": "Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.",
+      "useCase": "Use for giving agents their own email address, sending outbound email, receiving replies, monitoring inboxes, automating email-based workflows, collecting verification messages, routing support mail, and managing correspondence without manual setup.",
+      "serviceUrl": "https://x402.api.agentmail.to",
+      "endpointCount": 83,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 10,
+      "sha": "c39acd601c54f2ae",
+      "priorityScore": 66,
+      "priorityLevel": "high",
+      "reasons": [
+        "meaningful per-call spend",
+        "wide endpoint surface",
+        "message-sending workflow",
+        "personal or business-contact data"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stableemail/email",
+      "title": "StableEmail",
+      "category": "messaging",
+      "description": "Send email, buy dedicated inboxes, manage custom subdomains, and retrieve inbound messages through per-request email APIs. Supports shared relay sending, subdomain sender identities, forwarding inboxes, message storage, and attachment access.",
+      "useCase": "Use for sending outbound emails, creating receiving inboxes, reading inbound messages, managing custom email subdomains, agent email workflows, forwarding inboxes, reply handling, verification messages, customer outreach, and per-message email delivery.",
+      "serviceUrl": "https://stableemail.dev",
+      "endpointCount": 24,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 8,
+      "sha": "144a5dd2bd7a7c77",
+      "priorityScore": 32,
+      "priorityLevel": "watch",
+      "reasons": [
+        "message-sending workflow",
+        "domain or DNS workflow"
+      ]
+    },
+    {
+      "fqn": "quicknode/rpc",
+      "title": "Quicknode",
+      "category": "compute",
+      "description": "Pay-per-request JSON-RPC endpoints for 140+ blockchain networks. Each chain is its own path (e.g. solana-mainnet, ethereum-mainnet). Supports SIWX session auth, x402 micropayments, dynamic per-method pricing, and direct node access without infrastructure.",
+      "useCase": "Use for blockchain JSON-RPC, querying account or contract state, submitting transactions, Solana RPC, EVM RPC, multi-chain dapps, block and transaction lookups, devnet/testnet access, and scalable chain reads with pay-per-request billing.",
+      "serviceUrl": "https://x402.quicknode.com",
+      "endpointCount": 141,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 1,
+      "sha": "a455780d31c1de6b",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "financial data or wallet context"
+      ]
+    },
+    {
+      "fqn": "socialintel/influencer-search",
+      "title": "Social Intel",
+      "category": "data",
+      "description": "Find Instagram influencers across 33M+ profiles by niche, country, city, follower count, and gender. Returns username, bio, follower count, engagement metrics, business contact email (~50% coverage), and creator categories for marketing discovery.",
+      "useCase": "Use for Instagram influencer discovery, creator search, niche keyword matching, audience demographics, engagement rate filtering, follower count ranges, geographic targeting, campaign planning, brand partnerships, and marketing lead lists.",
+      "serviceUrl": "https://api.socialintel.dev",
+      "endpointCount": 9,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 0.5,
+      "sha": "95a2c224d6428cc7",
+      "priorityScore": 32,
+      "priorityLevel": "watch",
+      "reasons": [
+        "message-sending workflow",
+        "personal or business-contact data",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stableenrich/enrichment",
+      "title": "StableEnrich",
+      "category": "data",
+      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
+      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
+      "serviceUrl": "https://stableenrich.dev",
+      "endpointCount": 34,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.002,
+      "maxPriceUsd": 0.44,
+      "sha": "32f0afdaade13c61",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "message-sending workflow",
+        "personal or business-contact data",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/google/videointelligence",
+      "title": "Cloud Video Intelligence API",
+      "category": "ai_ml",
+      "description": "Analyze video content asynchronously with Google Video Intelligence. Detect labels, shots, explicit content, speech, on-screen text, logos, object tracks, scene changes, and searchable metadata for uploaded or cloud-hosted videos.",
+      "useCase": "Use for video indexing, content moderation, scene and shot detection, object tracking, logo recognition, OCR on video frames, speech transcription, media search, compliance review, archive tagging, and extracting structured video metadata.",
+      "serviceUrl": "https://videointelligence.google.gateway-402.com",
+      "endpointCount": 1,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.1,
+      "maxPriceUsd": 0.1,
+      "sha": "6c17db91c40ec303",
+      "priorityScore": 32,
+      "priorityLevel": "watch",
+      "reasons": [
+        "voice or calling workflow",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    }
+  ],
+  "widestSurface": [
+    {
+      "fqn": "quicknode/rpc",
+      "title": "Quicknode",
+      "category": "compute",
+      "description": "Pay-per-request JSON-RPC endpoints for 140+ blockchain networks. Each chain is its own path (e.g. solana-mainnet, ethereum-mainnet). Supports SIWX session auth, x402 micropayments, dynamic per-method pricing, and direct node access without infrastructure.",
+      "useCase": "Use for blockchain JSON-RPC, querying account or contract state, submitting transactions, Solana RPC, EVM RPC, multi-chain dapps, block and transaction lookups, devnet/testnet access, and scalable chain reads with pay-per-request billing.",
+      "serviceUrl": "https://x402.quicknode.com",
+      "endpointCount": 141,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 1,
+      "sha": "a455780d31c1de6b",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "financial data or wallet context"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stablecrypto/market-data",
+      "title": "StableCrypto",
+      "category": "finance",
+      "description": "Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.",
+      "useCase": "Use for crypto prices, market charts, DeFi analytics, TVL and yield research, DEX pool data, wallet token balances, Ethereum transfers, contract metadata, gas estimates, bridge volume, stablecoin supply, treasury holdings, and blockchain monitoring.",
+      "serviceUrl": "https://stablecrypto.dev",
+      "endpointCount": 105,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 0.01,
+      "sha": "2858c649a49c995a",
+      "priorityScore": 56,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "financial data or wallet context",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "agentmail/email",
+      "title": "AgentMail",
+      "category": "messaging",
+      "description": "Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.",
+      "useCase": "Use for giving agents their own email address, sending outbound email, receiving replies, monitoring inboxes, automating email-based workflows, collecting verification messages, routing support mail, and managing correspondence without manual setup.",
+      "serviceUrl": "https://x402.api.agentmail.to",
+      "endpointCount": 83,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 10,
+      "sha": "c39acd601c54f2ae",
+      "priorityScore": 66,
+      "priorityLevel": "high",
+      "reasons": [
+        "meaningful per-call spend",
+        "wide endpoint surface",
+        "message-sending workflow",
+        "personal or business-contact data"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/alibaba/ocr-api",
+      "title": "Alibaba Cloud OCR API",
+      "category": "ai_ml",
+      "description": "Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.",
+      "useCase": "Use for high-Precision Full-Text Recognition, air Travel Itinerary Recognition, unified OCR Recognition, and related document OCR, structured extraction, and image-to-text parsing.",
+      "serviceUrl": "https://ocr-api.alibaba.gateway-402.com",
+      "endpointCount": 75,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 0.001,
+      "sha": "6e26615c13d3da55",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "wide endpoint surface",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stablesocial/social-data",
+      "title": "StableSocial",
+      "category": "media",
+      "description": "Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.",
+      "useCase": "Use for social profile lookup, post retrieval, comment analysis, follower and following lists, TikTok/Instagram/Facebook/Reddit research, engagement metrics, subreddit monitoring, social listening, creator intelligence, and content discovery.",
+      "serviceUrl": "https://stablesocial.dev",
+      "endpointCount": 37,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.06,
+      "maxPriceUsd": 0.06,
+      "sha": "7e930b1d13fc851f",
+      "priorityScore": 38,
+      "priorityLevel": "medium",
+      "reasons": [
+        "personal or business-contact data",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stableenrich/enrichment",
+      "title": "StableEnrich",
+      "category": "data",
+      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
+      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
+      "serviceUrl": "https://stableenrich.dev",
+      "endpointCount": 34,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.002,
+      "maxPriceUsd": 0.44,
+      "sha": "32f0afdaade13c61",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "message-sending workflow",
+        "personal or business-contact data",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "paysponge/fal",
+      "title": "fal.ai",
+      "category": "media",
+      "description": "Generate images and videos with fal.ai models including Fast SDXL, FLUX Schnell/Dev/Pro/Ultra, Recraft v3, Stable Diffusion 3.5 Large, Stable Video, and MiniMax Video. Supports async request retrieval, status polling, and cancellation.",
+      "useCase": "Use for text-to-image, design graphics, illustration, photo-style renders, premium FLUX generations, video generation, creative asset pipelines, and async media workflows that need request polling or cancellation.",
+      "serviceUrl": "https://fal.x402.paysponge.com",
+      "endpointCount": 30,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 0.07,
+      "sha": "e71b9010b30e0d6d",
+      "priorityScore": 26,
+      "priorityLevel": "watch",
+      "reasons": []
+    },
+    {
+      "fqn": "solana-foundation/alibaba/facebody",
+      "title": "Alibaba Cloud Facebody",
+      "category": "ai_ml",
+      "description": "Run image and video analysis or generation with Alibaba Cloud Facebody, including face Information Desensitization, human Pose Keypoints, and face Comparison.",
+      "useCase": "Use for face Information Desensitization, human Pose Keypoints, face Comparison, and related image or video generation, enhancement, detection, segmentation, and visual analysis.",
+      "serviceUrl": "https://facebody.alibaba.gateway-402.com",
+      "endpointCount": 26,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 0.001,
+      "sha": "9269f8a877ba946",
+      "priorityScore": 32,
+      "priorityLevel": "watch",
+      "reasons": [
+        "metered without free tier"
+      ]
+    }
+  ]
+}
