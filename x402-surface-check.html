@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>x402 Surface Check | No-Payment Manifest and 402 Review | Tate Programs</title>
+    <meta name="description" content="Free browser checker for x402 public launch surfaces. Review manifests, 402 challenges, prices, resource URLs, payment metadata, and browser CORS behavior without payment headers or paid calls.">
+    <link rel="canonical" href="https://tateprograms.com/x402-surface-check.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="x402 Surface Check">
+    <meta property="og:description" content="No-payment x402 manifest and 402 challenge review for agent-commerce launches.">
+    <meta property="og:url" content="https://tateprograms.com/x402-surface-check.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="x402 Surface Check">
+    <meta name="twitter:description" content="Review x402 manifests and no-payment 402 challenges before launch.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "x402 Surface Check",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "url": "https://tateprograms.com/x402-surface-check.html",
+        "description": "A browser checker for x402 manifests and no-payment 402 challenge shapes.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        }
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
+        <a href="x402-metadata-filter.html">metadata</a>
+        <a href="agentcore-payment-policy.html">policy</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=x402%20Surface%20Check">
+        <span></span>
+        no-payment review
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/x402-surface-check</strong>
+        <em>manifest / challenge / launch surface</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">x402 surface check / may 2026</p>
+          <h1>Inspect the public payment surface before a real agent spends.</h1>
+          <p class="console-subtitle">
+            Paste a manifest and 402 challenge, or try a public manifest URL when CORS permits. The check looks for HTTP resource leaks, missing price fields, inconsistent networks, broad browser surfaces, and payment metadata risks. It never sends payment headers and never attempts a paid call.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#surfaceCheck">run surface check</a>
+            <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
+            <a class="console-button secondary" href="agent-commerce-sample-report.html">sample report</a>
+            <a class="console-button secondary" href="x402-launch-checklist.html">checklist</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>mode</dt>
+              <dd>no payment</dd>
+            </div>
+            <div>
+              <dt>input</dt>
+              <dd>manifest + 402</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>patch order</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="x402 surface terminal preview">
+          <div class="terminal-topline">x402 surface</div>
+          <pre><code>$ check .well-known/x402
+manifest: agent, wallet, networks
+challenge: amount, payTo, asset
+resource: https only
+browser: CORS and headers
+metadata: minimal fields
+result: private patch order</code></pre>
+        </aside>
+      </section>
+
+      <section id="surfaceCheck" class="console-audit-layout launch-kit-layout" aria-label="x402 public surface checker">
+        <div class="audit-form launch-kit-panel">
+          <label>
+            x402 manifest URL
+            <input id="manifestUrl" name="manifestUrl" type="url" placeholder="https://api.example.com/.well-known/x402">
+          </label>
+
+          <div class="result-actions">
+            <button class="console-button primary" id="fetchManifest" type="button">fetch manifest</button>
+            <button class="console-button secondary" id="probeEndpoints" type="button">try no-payment probes</button>
+          </div>
+
+          <label>
+            Paste manifest JSON
+            <textarea id="manifestJson" placeholder='{"version":"1.0","agent":{"name":"Example","wallet":"..."},"x402Endpoints":{"invoice":"https://api.example.com/x402/invoice"},"networks":["solana-mainnet"]}'></textarea>
+          </label>
+
+          <label>
+            Paste 402 challenge JSON
+            <textarea id="challengeJson" placeholder='{"x402Version":2,"resource":{"url":"https://api.example.com/x402/invoice"},"accepts":[{"amount":"10000","asset":"...","network":"solana:...","payTo":"..."}]}'></textarea>
+          </label>
+
+          <fieldset>
+            <legend>Manual proof</legend>
+            <label class="check-row"><input id="hasHttpsResource" type="checkbox"> Challenges use HTTPS resource URLs in every field.</label>
+            <label class="check-row"><input id="hasBrowserPaymentHeader" type="checkbox"> Browser clients can send the required payment header.</label>
+            <label class="check-row"><input id="hasDocumentedNetwork" type="checkbox"> Manifest networks match the live payment challenges.</label>
+            <label class="check-row"><input id="hasMetadataPolicy" type="checkbox"> Payment metadata is documented and minimized.</label>
+            <label class="check-row"><input id="hasFailureLanguage" type="checkbox"> Failed, expired, duplicate, and disputed payments are documented.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results launch-kit-results agent-commerce-results" aria-label="x402 surface results" aria-live="polite">
+          <div class="score-card">
+            <span id="surfaceScore">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="surfaceTitle">No surface loaded</h2>
+          <p id="surfaceSummary">Paste a manifest or fetch a public manifest to start.</p>
+          <div class="result-actions">
+            <button class="console-button primary" id="copySurfaceResult" type="button">copy result</button>
+            <button class="console-button secondary" id="downloadSurfaceReport" type="button">download .md</button>
+            <a class="console-button secondary" id="emailSurfaceResult" href="mailto:hello@tateprograms.com?subject=x402%20Surface%20Check%20result">email result</a>
+          </div>
+          <div class="signal-list" id="surfaceSignals"></div>
+          <div>
+            <h3>Patch queue</h3>
+            <ol id="surfaceFixes" class="fix-list">
+              <li>Paste or fetch a manifest to generate the first patch queue.</li>
+            </ol>
+          </div>
+          <p class="tool-note">Browser fetches depend on the target API's CORS policy. When the browser is blocked, paste the manifest and no-payment 402 JSON instead. Do not paste secrets or payment headers.</p>
+          <a class="console-button ghost wide-button" href="mailto:hello@tateprograms.com?subject=x402%20Readiness%20Review">scope a private pass</a>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">what it checks</p>
+          <h2>The public surface should tell wallets exactly what is being bought.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">402</p>
+            <h3>Challenge shape</h3>
+            <p>Amount, asset, network, payTo, resource URL, and timeout should be present before any client signs or pays.</p>
+          </article>
+          <article>
+            <p class="card-command">https</p>
+            <h3>Canonical resources</h3>
+            <p>Resource URLs should use HTTPS and match the endpoint a wallet or facilitator is actually paying for.</p>
+          </article>
+          <article>
+            <p class="card-command">cors</p>
+            <h3>Browser payment path</h3>
+            <p>If the public flow expects browser clients, the API must allow the payment header path it documents.</p>
+          </article>
+          <article>
+            <p class="card-command">scope</p>
+            <h3>Metadata boundary</h3>
+            <p>Payment descriptions and resource strings should avoid prompts, private user content, internal IDs, and broad query context.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">private pass</p>
+          <h2>Need the external pass against a live x402 launch?</h2>
+          <p>The private review runs no-payment probes, maps spend surfaces, and returns a ranked patch order before any public write-up.</p>
+        </div>
+        <div class="console-actions">
+          <a class="console-button secondary" href="agent-commerce-sample-report.html">view sample report</a>
+          <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=x402%20Readiness%20Review&amp;body=Manifest%20URL%3A%0AEndpoints%20to%20check%3A%0AAllowed%20scope%3A%0ADeadline%3A">send scope</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>x402 Surface Check</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-commerce-gate.html">Commerce Gate</a>
+      <a href="x402-launch-checklist.html">x402 checklist</a>
+      <a href="pay-sh-catalog-pulse.html">Pay.sh pulse</a>
+      <a href="payments.html">Payments</a>
+      <a href="https://x.com/tateprograms" target="_blank" rel="noreferrer">X</a>
+    </footer>
+    <script src="x402-surface-check.js"></script>
+  </body>
+</html>
