@@ -68,6 +68,7 @@ npx serve .
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
 - `scripts/audit-leads.mjs` - local lead audit script
+- `scripts/check-x402-public-surface.mjs` - local no-payment x402 surface checker for manifest, challenge, and CORS review passes
 - `scripts/find-mcp-prospects.mjs` - MCP Registry prospect scanner for the paid MCP launch-review offer
 - `scripts/find-pay-sh-prospects.mjs` - Pay.sh catalog prospect scanner for the agent-commerce readiness offer
 - `scripts/render-mcp-registry-pulse.mjs` - public MCP Registry pulse page generator
@@ -115,6 +116,13 @@ The script reads the live Pay.sh API catalog and writes:
 The page reports provider-level agent-payment surfaces where launch controls matter: quoted prices, caps, receipts, metadata filtering, provider validation, and audit evidence.
 
 The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-payment-policy.html` and `agentcore-payment-policy.js` directly when updating the control model.
+
+To run a no-payment x402 public-surface pass against a manifest:
+
+```bash
+npm run check:x402 -- https://api.example.com/.well-known/x402 output.md
+X402_CHECK_ORIGIN=https://example.com npm run check:x402 -- https://api.example.com/.well-known/x402 output.md
+```
 
 ```bash
 npm run prospect:mcp
