@@ -112,10 +112,20 @@ function challengeSummary(result) {
   }
 }
 
-function findingList(manifest, challengeResults, preflightResults) {
+function findingList(manifestResult, challengeResults, preflightResults) {
+  const manifest = manifestResult.body.json ?? {}
   const findings = []
   const networks = manifest.networks ?? []
+  const endpointCount = Object.keys(manifest.x402Endpoints ?? {}).length
   const challengeNetworks = new Set()
+
+  if (manifestResult.status < 200 || manifestResult.status >= 300) {
+    findings.push(`P1 - Manifest returned HTTP ${manifestResult.status}; expected a successful JSON response.`)
+  }
+
+  if (endpointCount === 0) {
+    findings.push('P1 - Manifest does not expose any x402Endpoints for no-payment challenge probes.')
+  }
 
   for (const result of challengeResults) {
     const summary = challengeSummary(result)
@@ -159,7 +169,7 @@ function findingList(manifest, challengeResults, preflightResults) {
 
 function formatReport(manifestResult, challengeResults, preflightResults) {
   const manifest = manifestResult.body.json ?? {}
-  const findings = findingList(manifest, challengeResults, preflightResults)
+  const findings = findingList(manifestResult, challengeResults, preflightResults)
   const challengeRows = challengeResults.map(result => {
     const summary = challengeSummary(result)
     return `| ${result.name} | ${result.status} | ${summary.price} | ${summary.network || '-'} | ${summary.resourceUrl || '-'} |`

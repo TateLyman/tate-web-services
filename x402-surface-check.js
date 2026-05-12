@@ -112,6 +112,7 @@ function analyze() {
     return { checks, manifest, entries, challenges, challengeSummaries }
   }
 
+  const manifestStatusOk = !probeState.manifestStatus || (probeState.manifestStatus >= 200 && probeState.manifestStatus < 300)
   const manifestHasAgent = Boolean(manifest?.agent?.name && manifest?.agent?.wallet)
   const manifestHasEndpoints = entries.length > 0
   const manifestHasNetworks = Array.isArray(manifest?.networks) && manifest.networks.length > 0
@@ -144,6 +145,13 @@ function analyze() {
     ok: hasManifest,
     weight: 8,
     fix: 'Publish a parseable x402 manifest at the documented URL.',
+  })
+  addCheck(checks, {
+    group: 'Manifest',
+    label: 'Fetched manifest returned a successful HTTP status',
+    ok: manifestStatusOk,
+    weight: 6,
+    fix: 'Return a 2xx JSON response from the documented x402 manifest URL.',
   })
   addCheck(checks, {
     group: 'Manifest',
