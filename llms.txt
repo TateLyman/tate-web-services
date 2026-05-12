@@ -9,6 +9,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [MCP Registry Pulse](https://tateprograms.com/mcp-registry-pulse.html) - Public aggregate snapshot of MCP Registry metadata, README, STDIO, auth, and launch-proof signals.
 - [MCP Registry Pulse JSON](https://tateprograms.com/mcp-registry-pulse.json) - Machine-readable aggregate data backing the Pulse page.
 - [Agent Stack Radar](https://tateprograms.com/agent-stack-radar.html) - May 2026 radar for agent-native software trends: MCP, x402, Pay.sh, live web data, browser automation, coding agents, and machine-readable docs.
+- [Launch Proof Promo Flow](https://tateprograms.com/launch-proof-promo-flow.html) - Reusable ElevenCreative Flow blueprint for turning launch proof into short product clips, social scripts, scene prompts, captions, and a publish-safe fact gate.
 - [MCP Launch Trust Ledger](https://tateprograms.com/mcp-launch-trust-2026.html) - May 2026 field note for MCP product launches: scoped credentials, audit trails, tenant boundaries, STDIO command safety, registry metadata, and buyer-facing proof.
 - [x402 Launch Checklist](https://tateprograms.com/x402-launch-checklist.html) - Launch-readiness checklist for x402, Pay.sh, and agent-payment demos before real value can move.
 - [Pay.sh Catalog Pulse](https://tateprograms.com/pay-sh-catalog-pulse.html) - Live Pay.sh catalog snapshot for agent-paid API provider counts, pricing surfaces, free-tier coverage, and review-priority launch controls.
@@ -26,7 +27,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [Release Readiness 2026](https://tateprograms.com/release-readiness-2026.html) - JS/npm/Action/MCP/payment-agent launch-readiness runbook.
 - [Student Launch Kit](https://tateprograms.com/student-launch-kit.html) - Browser-only launch checker for student and hackathon projects.
 - [Case Studies](https://tateprograms.com/case-studies.html) - Public proof of shipped tools and launch assets.
-- [Payments](https://tateprograms.com/payments.html) - Fixed-scope pricing and payment links.
+- [Payments](https://tateprograms.com/payments.html) - Fixed-scope pricing and payment links, including student reviews, launch proof media, agent security, agent commerce, MCP, and repair scopes.
 
 ## Repositories And Packages
 

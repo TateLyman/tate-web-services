@@ -2320,15 +2320,24 @@ footer a {
 .os-tabs {
   gap: 4px;
   justify-content: center;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.os-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .os-tabs a {
   border: 1px solid transparent;
   border-radius: 4px;
   color: var(--term-muted);
+  flex: 0 0 auto;
   font-size: 0.8rem;
   font-weight: 800;
   padding: 8px 10px;
+  white-space: nowrap;
 }
 
 .os-tabs a:hover,

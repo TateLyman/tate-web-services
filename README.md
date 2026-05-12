@@ -46,6 +46,7 @@ npx serve .
 - `mcp-registry-pulse.html` - public aggregate MCP Registry launch-readiness snapshot
 - `mcp-registry-pulse.json` - aggregate data backing the MCP Registry Pulse page
 - `agent-stack-radar.html` - May 2026 agent-native software trend radar and service thesis
+- `launch-proof-promo-flow.html` - reusable ElevenCreative Flow blueprint for proof-led launch clips, scripts, scene prompts, captions, and a fact gate
 - `mcp-launch-trust-2026.html` - May 2026 MCP product-launch trust ledger for scoped credentials, audit trails, tenant boundaries, STDIO command safety, registry metadata, and buyer-facing proof
 - `x402-launch-checklist.html` - agent-payment launch checklist for x402 and Pay.sh demos
 - `release-readiness-2026.html` - public JS/npm/Action/MCP/payment-agent launch-readiness runbook
@@ -181,6 +182,7 @@ The front-door offer is intentionally concrete:
 - $29+ student launch review
 - $149 agent security launch review
 - $149 agent commerce readiness review
+- $149 launch proof media pass
 - $299+ production fix sprint
 - $99+ MCP launch review
 
