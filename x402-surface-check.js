@@ -35,10 +35,51 @@ function parseJson(text) {
   }
 }
 
+function valueList(value) {
+  if (Array.isArray(value)) return value.map(String)
+  if (value && typeof value === 'object') return Object.keys(value)
+  if (typeof value === 'string') return [value]
+  return []
+}
+
+function capabilityList(value) {
+  if (!Array.isArray(value)) return []
+  return value.map(item => item?.id ?? item?.name ?? item).filter(Boolean).map(String)
+}
+
 function endpointEntries(manifest) {
-  return Object.entries(manifest?.x402Endpoints ?? {})
+  const base = manifest?.baseUrl || manifestUrl.value.trim() || window.location.origin
+  const entries = Object.entries(manifest?.x402Endpoints ?? {})
     .filter(([, url]) => typeof url === 'string' && /^https?:\/\//i.test(url))
-    .map(([name, url]) => ({ name, url }))
+    .map(([name, url]) => ({ name, url, method: 'POST' }))
+
+  for (const [category, items] of Object.entries(manifest?.categories ?? {})) {
+    if (!Array.isArray(items)) continue
+    for (const item of items) {
+      if (typeof item?.endpoint === 'string' && /^https?:\/\//i.test(item.endpoint)) {
+        entries.push({ name: item.id ?? item.name ?? category, url: item.endpoint, method: item.method ?? 'POST' })
+      }
+    }
+  }
+
+  for (const resource of manifest?.resources ?? []) {
+    if (typeof resource !== 'string') continue
+    const match = resource.match(/^(GET|POST|PUT|PATCH|DELETE)\s+(\S+)/i)
+    if (!match) continue
+    const [, method, rawPath] = match
+    const url = rawPath.startsWith('http')
+      ? rawPath
+      : new URL(rawPath, base).toString()
+    entries.push({ name: rawPath.split('/').filter(Boolean).at(-1) ?? rawPath, url, method: method.toUpperCase() })
+  }
+
+  const seen = new Set()
+  return entries.filter(entry => {
+    const key = `${entry.method}:${entry.url}`
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  }).slice(0, 6)
 }
 
 function challengeList() {
@@ -113,10 +154,11 @@ function analyze() {
   }
 
   const manifestStatusOk = !probeState.manifestStatus || (probeState.manifestStatus >= 200 && probeState.manifestStatus < 300)
+  const networkNames = valueList(manifest?.networks)
   const manifestHasAgent = Boolean(manifest?.agent?.name && manifest?.agent?.wallet)
   const manifestHasEndpoints = entries.length > 0
-  const manifestHasNetworks = Array.isArray(manifest?.networks) && manifest.networks.length > 0
-  const manifestHasCapabilities = Array.isArray(manifest?.capabilities) && manifest.capabilities.length > 0
+  const manifestHasNetworks = networkNames.length > 0
+  const manifestHasCapabilities = capabilityList(manifest?.capabilities).length > 0 || Object.keys(manifest?.categories ?? {}).length > 0
   const allChallengesAre402 = probeState.endpointResults.length === 0
     ? hasChallenge
     : probeState.endpointResults.every(result => result.status === 402)
@@ -129,7 +171,7 @@ function analyze() {
   const networkMatch = manual('hasDocumentedNetwork')
     || !manifestHasNetworks
     || challengeNetworks.size === 0
-    || manifest.networks.some(network => [...challengeNetworks].some(challengeNetwork => challengeNetwork.includes(network) || network.includes(challengeNetwork)))
+    || networkNames.some(network => [...challengeNetworks].some(challengeNetwork => challengeNetwork.includes(network) || network.includes(challengeNetwork)))
   const browserHeader = manual('hasBrowserPaymentHeader')
     || probeState.endpointResults.some(result => /x-payment/i.test(result.allowHeaders ?? ''))
   const hasMetadataPolicy = manual('hasMetadataPolicy')
@@ -299,7 +341,7 @@ function reportMarkdown(result) {
     ``,
     `- Agent: ${manifest?.agent?.name ?? '-'}`,
     `- Wallet: ${manifest?.agent?.wallet ?? '-'}`,
-    `- Networks: ${(manifest?.networks ?? []).join(', ') || '-'}`,
+    `- Networks: ${valueList(manifest?.networks).join(', ') || '-'}`,
     `- Endpoints: ${result.entries.map(entry => `${entry.name} ${entry.url}`).join('; ') || '-'}`,
     ``,
     `## Challenge Map`,
@@ -346,6 +388,20 @@ async function readJsonResponse(response) {
   }
 }
 
+function parseEncodedChallenge(value) {
+  if (!value) return null
+  try {
+    const normalized = value.replace(/-/g, '+').replace(/_/g, '/')
+    const padded = normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '=')
+    const binary = atob(padded)
+    const bytes = Uint8Array.from(binary, character => character.charCodeAt(0))
+    return JSON.parse(new TextDecoder().decode(bytes))
+  }
+  catch {
+    return null
+  }
+}
+
 async function fetchPublicManifest() {
   const url = manifestUrl.value.trim()
   if (!url) return
@@ -379,7 +435,7 @@ async function tryNoPaymentProbes() {
   for (const entry of entries.slice(0, 6)) {
     try {
       const response = await fetch(entry.url, {
-        method: 'POST',
+        method: entry.method ?? 'POST',
         headers: {
           accept: 'application/json',
           'content-type': 'application/json',
@@ -393,6 +449,10 @@ async function tryNoPaymentProbes() {
       }
       catch {
         json = null
+      }
+      const headerChallenge = parseEncodedChallenge(response.headers.get('payment-required'))
+      if (headerChallenge && !json?.accepts?.length) {
+        json = headerChallenge
       }
       probeState.endpointResults.push({
         ...entry,

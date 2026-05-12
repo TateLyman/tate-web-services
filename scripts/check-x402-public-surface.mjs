@@ -3,6 +3,7 @@ import { writeFile } from 'node:fs/promises'
 const manifestUrl = process.argv[2]
 const outputPath = process.argv[3]
 const preflightOrigin = process.env.X402_CHECK_ORIGIN ?? new URL(manifestUrl ?? 'https://example.com').origin
+const probeLimit = Number(process.env.X402_CHECK_LIMIT ?? 6)
 
 if (!manifestUrl) {
   console.error('Usage: node scripts/check-x402-public-surface.mjs <manifest-url> [output.md]')
@@ -29,11 +30,39 @@ function canonicalEndpointEntries(manifest) {
 
   for (const [name, url] of Object.entries(manifest.x402Endpoints ?? {})) {
     if (typeof url === 'string' && url.startsWith('http')) {
-      entries.push({ name, url })
+      entries.push({ name, url, method: 'POST' })
     }
   }
 
+  for (const [category, items] of Object.entries(manifest.categories ?? {})) {
+    if (!Array.isArray(items)) continue
+    for (const item of items) {
+      if (typeof item?.endpoint === 'string' && item.endpoint.startsWith('http')) {
+        entries.push({ name: item.id ?? item.name ?? category, url: item.endpoint, method: item.method ?? 'POST' })
+      }
+    }
+  }
+
+  for (const resource of manifest.resources ?? []) {
+    if (typeof resource !== 'string') continue
+    const match = resource.match(/^(GET|POST|PUT|PATCH|DELETE)\s+(\S+)/i)
+    if (!match) continue
+    const [, method, rawPath] = match
+    const url = rawPath.startsWith('http')
+      ? rawPath
+      : new URL(rawPath, manifest.baseUrl ?? manifestUrl).toString()
+    entries.push({ name: rawPath.split('/').filter(Boolean).at(-1) ?? rawPath, url, method: method.toUpperCase() })
+  }
+
+  const seen = new Set()
   return entries
+    .filter(entry => {
+      const key = `${entry.method}:${entry.url}`
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+    .slice(0, Number.isFinite(probeLimit) && probeLimit > 0 ? probeLimit : 6)
 }
 
 async function readText(response) {
@@ -43,6 +72,18 @@ async function readText(response) {
   }
   catch {
     return { text, json: null }
+  }
+}
+
+function parseEncodedChallenge(value) {
+  if (!value) return null
+  try {
+    const normalized = value.replace(/-/g, '+').replace(/_/g, '/')
+    const padded = normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '=')
+    return JSON.parse(Buffer.from(padded, 'base64').toString('utf8'))
+  }
+  catch {
+    return null
   }
 }
 
@@ -61,7 +102,7 @@ async function fetchManifest(url) {
 
 async function probeEndpoint(entry) {
   const response = await fetch(entry.url, {
-    method: 'POST',
+    method: entry.method ?? 'POST',
     headers: {
       ...headers,
       'content-type': 'application/json',
@@ -69,6 +110,11 @@ async function probeEndpoint(entry) {
     body: '{}',
   })
   const body = await readText(response)
+  const headerChallenge = parseEncodedChallenge(response.headers.get('payment-required'))
+
+  if (headerChallenge && !body.json?.accepts?.length) {
+    body.json = headerChallenge
+  }
 
   return {
     ...entry,
@@ -83,7 +129,7 @@ async function probePreflight(entry, origin = preflightOrigin) {
     method: 'OPTIONS',
     headers: {
       origin,
-      'access-control-request-method': 'POST',
+      'access-control-request-method': entry.method ?? 'POST',
       'access-control-request-headers': 'content-type,x-payment',
     },
   })
@@ -112,15 +158,31 @@ function challengeSummary(result) {
   }
 }
 
+function valueList(value) {
+  if (Array.isArray(value)) return value.map(String)
+  if (value && typeof value === 'object') return Object.keys(value)
+  if (typeof value === 'string') return [value]
+  return []
+}
+
+function capabilityList(value) {
+  if (!Array.isArray(value)) return []
+  return value.map(item => item?.id ?? item?.name ?? item).filter(Boolean).map(String)
+}
+
 function findingList(manifestResult, challengeResults, preflightResults) {
   const manifest = manifestResult.body.json ?? {}
   const findings = []
-  const networks = manifest.networks ?? []
-  const endpointCount = Object.keys(manifest.x402Endpoints ?? {}).length
+  const networks = valueList(manifest.networks)
+  const endpointCount = canonicalEndpointEntries(manifest).length
   const challengeNetworks = new Set()
 
   if (manifestResult.status < 200 || manifestResult.status >= 300) {
     findings.push(`P1 - Manifest returned HTTP ${manifestResult.status}; expected a successful JSON response.`)
+  }
+
+  if (!manifestResult.body.json) {
+    findings.push(`P1 - Manifest did not return parseable JSON; content begins: ${manifestResult.body.text.slice(0, 80).replace(/\s+/g, ' ')}.`)
   }
 
   if (endpointCount === 0) {
@@ -172,10 +234,10 @@ function formatReport(manifestResult, challengeResults, preflightResults) {
   const findings = findingList(manifestResult, challengeResults, preflightResults)
   const challengeRows = challengeResults.map(result => {
     const summary = challengeSummary(result)
-    return `| ${result.name} | ${result.status} | ${summary.price} | ${summary.network || '-'} | ${summary.resourceUrl || '-'} |`
+    return `| ${result.name} | ${result.method ?? 'POST'} | ${result.status} | ${summary.price} | ${summary.network || '-'} | ${summary.resourceUrl || '-'} |`
   })
   const preflightRows = preflightResults.map(result => {
-    return `| ${result.name} | ${result.status} | ${result.headers['access-control-allow-origin'] ?? '-'} | ${result.headers['access-control-allow-headers'] ?? '-'} | ${result.headers['access-control-allow-methods'] ?? '-'} |`
+    return `| ${result.name} | ${result.method ?? 'POST'} | ${result.status} | ${result.headers['access-control-allow-origin'] ?? '-'} | ${result.headers['access-control-allow-headers'] ?? '-'} | ${result.headers['access-control-allow-methods'] ?? '-'} |`
   })
 
   return [
@@ -192,19 +254,19 @@ function formatReport(manifestResult, challengeResults, preflightResults) {
     `- Agent: ${manifest.agent?.name ?? '-'}`,
     `- Wallet: ${manifest.agent?.wallet ?? '-'}`,
     `- Facilitator: ${manifest.facilitator ?? '-'}`,
-    `- Networks: ${(manifest.networks ?? []).join(', ') || '-'}`,
-    `- Capabilities: ${(manifest.capabilities ?? []).map(item => item.id).join(', ') || '-'}`,
+    `- Networks: ${valueList(manifest.networks).join(', ') || '-'}`,
+    `- Capabilities: ${capabilityList(manifest.capabilities).join(', ') || '-'}`,
     ``,
     `## No-Payment Challenge Map`,
     ``,
-    `| Endpoint | HTTP | Price | Network | Resource URL |`,
-    `| --- | --- | --- | --- | --- |`,
+    `| Endpoint | Method | HTTP | Price | Network | Resource URL |`,
+    `| --- | --- | --- | --- | --- | --- |`,
     ...challengeRows,
     ``,
     `## Browser Preflight Map`,
     ``,
-    `| Endpoint | HTTP | Allow-Origin | Allow-Headers | Allow-Methods |`,
-    `| --- | --- | --- | --- | --- |`,
+    `| Endpoint | Method | HTTP | Allow-Origin | Allow-Headers | Allow-Methods |`,
+    `| --- | --- | --- | --- | --- | --- |`,
     ...preflightRows,
     ``,
     `## Findings`,
@@ -215,11 +277,7 @@ function formatReport(manifestResult, challengeResults, preflightResults) {
 }
 
 const manifestResult = await fetchManifest(manifestUrl)
-if (!manifestResult.body.json) {
-  throw new Error(`Manifest did not return JSON: ${manifestUrl}`)
-}
-
-const endpoints = canonicalEndpointEntries(manifestResult.body.json)
+const endpoints = manifestResult.body.json ? canonicalEndpointEntries(manifestResult.body.json) : []
 const challengeResults = []
 const preflightResults = []
 
