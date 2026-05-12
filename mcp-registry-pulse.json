@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-11",
+  "generatedAt": "2026-05-12",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 143,
-  "githubReposDetected": 87,
-  "readmesSampled": 55,
+  "latestServersAnalyzed": 145,
+  "githubReposDetected": 88,
+  "readmesSampled": 56,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,32 +13,32 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 143,
-    "repos": 87,
-    "readableRepos": 55,
+    "latestTotal": 145,
+    "repos": 88,
+    "readableRepos": 56,
     "packageCount": 34,
-    "remoteCount": 117,
+    "remoteCount": 119,
     "packageOnly": 24,
-    "remoteOnly": 107,
+    "remoteOnly": 109,
     "both": 10,
-    "noInstallPath": 107,
-    "websiteVisible": 100,
+    "noInstallPath": 109,
+    "websiteVisible": 102,
     "missingTitle": 50,
-    "shortDescription": 79,
-    "recent45": 78,
+    "shortDescription": 81,
+    "recent45": 81,
     "orgOwned": 41,
-    "issuesEnabled": 54,
+    "issuesEnabled": 55,
     "archived": 0,
     "mcpServers": 36,
-    "install": 32,
+    "install": 33,
     "serverJson": 3,
-    "safety": 46,
+    "safety": 47,
     "stdioPackageCount": 32,
     "stdioPackageReadable": 20,
-    "stdioBoundaryDocs": 9,
+    "stdioBoundaryDocs": 10,
     "secretPackageConfig": 14,
     "secretRemoteHeaders": 24,
-    "glama": 26,
+    "glama": 27,
     "smoke": 15
   },
   "sampleServers": [
@@ -265,30 +265,6 @@
       ]
     },
     {
-      "name": "ai.rolli/mcp",
-      "title": "",
-      "description": "Social media search and analytics across X, Reddit, Bluesky, YouTube, and more",
-      "publicProofScore": 55,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": true,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-03-13T12:54:13.259425Z",
-      "repo": "rolliinc/rolli-mcp",
-      "websiteUrl": "https://www.npmjs.com/package/@rolli/mcp",
-      "primaryUrl": "https://www.npmjs.com/package/@rolli/mcp",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Add smoke-test or tool-list proof",
-        "Explain STDIO command boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "ai.adramp/google-ads",
       "title": "",
       "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
@@ -440,6 +416,30 @@
       "repo": "autoblocksai/ctxl",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/autoblocksai/ctxl",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.ponlo/server",
+      "title": "",
+      "description": "Family calendar, tasks, meals, lists & rewards hub for AI assistants.",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": true,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-03-04T21:01:15.992017Z",
+      "repo": "ClaudioGodoyB/ponlo-ai",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/ClaudioGodoyB/ponlo-ai",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
