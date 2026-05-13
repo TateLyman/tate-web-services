@@ -62,6 +62,27 @@ function endpointEntries(manifest) {
     }
   }
 
+  if (manifest?.openapi && manifest.paths && typeof manifest.paths === 'object') {
+    const serverBase = manifest.servers?.find(server => typeof server?.url === 'string')?.url ?? base
+    const methods = ['get', 'post', 'put', 'patch', 'delete']
+
+    for (const [path, operations] of Object.entries(manifest.paths)) {
+      if (!operations || typeof operations !== 'object') continue
+      for (const method of methods) {
+        const operation = operations[method]
+        if (!operation || typeof operation !== 'object') continue
+        const url = path.startsWith('http')
+          ? path
+          : new URL(path, serverBase).toString()
+        entries.push({
+          name: operation.operationId ?? `${method.toUpperCase()} ${path}`,
+          url,
+          method: method.toUpperCase(),
+        })
+      }
+    }
+  }
+
   for (const resource of manifest?.resources ?? []) {
     if (typeof resource !== 'string') continue
     const match = resource.match(/^(GET|POST|PUT|PATCH|DELETE)\s+(\S+)/i)
@@ -115,6 +136,22 @@ function challengeSummary(challenge) {
   }
 }
 
+function challengeAccepts(challenges) {
+  return challenges.flatMap(challenge => Array.isArray(challenge?.accepts) ? challenge.accepts : [])
+}
+
+function looksLikeStagingNetwork(network) {
+  return /devnet|testnet|sepolia|local|eip155:84532|solana:EtWTRAB/i.test(String(network ?? ''))
+}
+
+function looksLikePlaceholderPayTo(payTo) {
+  const value = String(payTo ?? '')
+  if (!value) return false
+  if (/^0x0{36,}0?1?$/i.test(value)) return true
+  if (/^1{24,}$/.test(value)) return true
+  return false
+}
+
 function addCheck(checks, check) {
   checks.push(check)
 }
@@ -143,6 +180,7 @@ function analyze() {
   const challenges = challengeList()
   const entries = endpointEntries(manifest)
   const challengeSummaries = challenges.map(challengeSummary)
+  const accepts = challengeAccepts(challenges)
   const challengeNetworks = new Set(challengeSummaries.map(item => item.network).filter(Boolean))
   const resourceUrls = challengeSummaries.flatMap(item => [item.resourceUrl, item.extraResource]).filter(Boolean)
   const hasManifest = Boolean(manifest)
@@ -164,6 +202,10 @@ function analyze() {
     : probeState.endpointResults.every(result => result.status === 402)
   const allPricesPresent = challengeSummaries.length > 0
     && challengeSummaries.every(item => item.amount && item.payTo && item.asset && item.network)
+  const noPlaceholderPayTo = accepts.length === 0
+    || accepts.every(item => !looksLikePlaceholderPayTo(item.payTo))
+  const noStagingNetwork = accepts.length === 0
+    || accepts.every(item => !looksLikeStagingNetwork(item.network))
   const httpsResources = manual('hasHttpsResource') || (resourceUrls.length > 0 && resourceUrls.every(url => /^https:\/\//i.test(url)))
   const resourceRepeated = challengeSummaries.length > 0
     && challengeSummaries.every(item => item.resourceUrl && item.extraResource)
@@ -229,6 +271,20 @@ function analyze() {
     ok: !hasChallenge || allPricesPresent,
     weight: 12,
     fix: 'Include amount, asset, network, and payTo before a client can approve or sign.',
+  })
+  addCheck(checks, {
+    group: 'Challenge',
+    label: 'No placeholder payment recipients are advertised',
+    ok: !hasChallenge || noPlaceholderPayTo,
+    weight: 10,
+    fix: 'Replace zero-address, system-program, or placeholder payTo values before presenting the endpoint as production-ready.',
+  })
+  addCheck(checks, {
+    group: 'Challenge',
+    label: 'Payment networks are production rails',
+    ok: !hasChallenge || noStagingNetwork,
+    weight: 7,
+    fix: 'If the endpoint is still testnet, label it demo-only. If it is production, return live-value networks and production payTo recipients.',
   })
   addCheck(checks, {
     group: 'Challenge',
@@ -434,13 +490,14 @@ async function tryNoPaymentProbes() {
   const challenges = []
   for (const entry of entries.slice(0, 6)) {
     try {
+      const method = entry.method ?? 'POST'
       const response = await fetch(entry.url, {
-        method: entry.method ?? 'POST',
+        method,
         headers: {
           accept: 'application/json',
           'content-type': 'application/json',
         },
-        body: '{}',
+        body: method === 'GET' || method === 'HEAD' ? undefined : '{}',
       })
       const text = await response.text()
       let json = null

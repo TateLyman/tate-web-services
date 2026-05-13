@@ -33,8 +33,8 @@ npx serve .
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
-- `x402-surface-check.html` - browser checker for x402 manifests and pasted no-payment 402 challenges
-- `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, and metadata boundaries
+- `x402-surface-check.html` - browser checker for x402 manifests, OpenAPI specs, and pasted no-payment 402 challenges
+- `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
 - `pay-skills-launch-queue.html` - live pay-skills registry PR watchlist for x402, MPP, Solana, Base, compute, commerce, wallet, and data-api launch surfaces
@@ -138,7 +138,7 @@ The page reports current agent-payment launch surfaces from registry submissions
 
 The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-payment-policy.html` and `agentcore-payment-policy.js` directly when updating the control model.
 
-To run a no-payment x402 public-surface pass against a manifest:
+To run a no-payment x402 public-surface pass against a manifest or OpenAPI spec:
 
 ```bash
 npm run check:x402 -- https://api.example.com/.well-known/x402 output.md

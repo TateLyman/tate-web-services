@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>x402 Surface Check | No-Payment Manifest and 402 Review | Tate Programs</title>
-    <meta name="description" content="Free browser checker for x402 public launch surfaces. Review manifests, 402 challenges, prices, resource URLs, payment metadata, and browser CORS behavior without payment headers or paid calls.">
+    <title>x402 Surface Check | Manifest and 402 Review | Tate Programs</title>
+    <meta name="description" content="Free browser checker for x402 public launch surfaces. Review manifests, OpenAPI specs, 402 challenges, prices, resource URLs, payment metadata, staging rails, placeholder payees, and browser CORS behavior without payment headers or paid calls.">
     <link rel="canonical" href="https://tateprograms.com/x402-surface-check.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="x402 Surface Check">
@@ -70,7 +70,7 @@
           <p class="console-kicker">x402 surface check / may 2026</p>
           <h1>Inspect the public payment surface before a real agent spends.</h1>
           <p class="console-subtitle">
-            Paste a manifest and 402 challenge, or try a public manifest URL when CORS permits. The check looks for HTTP resource leaks, missing price fields, inconsistent networks, broad browser surfaces, and payment metadata risks. It never sends payment headers and never attempts a paid call.
+            Paste a manifest, OpenAPI spec, and 402 challenge, or try a public URL when CORS permits. The check looks for HTTP resource leaks, missing price fields, inconsistent networks, placeholder payees, staging rails, broad browser surfaces, and payment metadata risks. It never sends payment headers and never attempts a paid call.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#surfaceCheck">run surface check</a>
@@ -109,8 +109,8 @@ result: private patch order</code></pre>
       <section id="surfaceCheck" class="console-audit-layout launch-kit-layout" aria-label="x402 public surface checker">
         <div class="audit-form launch-kit-panel">
           <label>
-            x402 manifest URL
-            <input id="manifestUrl" name="manifestUrl" type="url" placeholder="https://api.example.com/.well-known/x402">
+            x402 manifest or OpenAPI URL
+            <input id="manifestUrl" name="manifestUrl" type="url" placeholder="https://api.example.com/.well-known/x402 or /openapi.json">
           </label>
 
           <div class="result-actions">
@@ -119,7 +119,7 @@ result: private patch order</code></pre>
           </div>
 
           <label>
-            Paste manifest JSON
+            Paste manifest or OpenAPI JSON
             <textarea id="manifestJson" placeholder='{"version":"1.0","agent":{"name":"Example","wallet":"..."},"x402Endpoints":{"invoice":"https://api.example.com/x402/invoice"},"networks":["solana-mainnet"]}'></textarea>
           </label>
 

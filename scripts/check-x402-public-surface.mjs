@@ -43,6 +43,28 @@ function canonicalEndpointEntries(manifest) {
     }
   }
 
+  if (manifest.openapi && manifest.paths && typeof manifest.paths === 'object') {
+    const baseUrl = manifest.servers?.find(server => typeof server?.url === 'string')?.url
+      ?? manifestUrl
+    const methods = ['get', 'post', 'put', 'patch', 'delete']
+
+    for (const [path, operations] of Object.entries(manifest.paths)) {
+      if (!operations || typeof operations !== 'object') continue
+      for (const method of methods) {
+        const operation = operations[method]
+        if (!operation || typeof operation !== 'object') continue
+        const url = path.startsWith('http')
+          ? path
+          : new URL(path, baseUrl).toString()
+        entries.push({
+          name: operation.operationId ?? `${method.toUpperCase()} ${path}`,
+          url,
+          method: method.toUpperCase(),
+        })
+      }
+    }
+  }
+
   for (const resource of manifest.resources ?? []) {
     if (typeof resource !== 'string') continue
     const match = resource.match(/^(GET|POST|PUT|PATCH|DELETE)\s+(\S+)/i)
@@ -101,13 +123,14 @@ async function fetchManifest(url) {
 }
 
 async function probeEndpoint(entry) {
+  const method = entry.method ?? 'POST'
   const response = await fetch(entry.url, {
-    method: entry.method ?? 'POST',
+    method,
     headers: {
       ...headers,
       'content-type': 'application/json',
     },
-    body: '{}',
+    body: method === 'GET' || method === 'HEAD' ? undefined : '{}',
   })
   const body = await readText(response)
   const headerChallenge = parseEncodedChallenge(response.headers.get('payment-required'))
@@ -158,6 +181,22 @@ function challengeSummary(result) {
   }
 }
 
+function challengeAccepts(result) {
+  return Array.isArray(result.body.json?.accepts) ? result.body.json.accepts : []
+}
+
+function looksLikeStagingNetwork(network) {
+  return /devnet|testnet|sepolia|local|eip155:84532|solana:EtWTRAB/i.test(String(network ?? ''))
+}
+
+function looksLikePlaceholderPayTo(payTo) {
+  const value = String(payTo ?? '')
+  if (!value) return false
+  if (/^0x0{36,}0?1?$/i.test(value)) return true
+  if (/^1{24,}$/.test(value)) return true
+  return false
+}
+
 function valueList(value) {
   if (Array.isArray(value)) return value.map(String)
   if (value && typeof value === 'object') return Object.keys(value)
@@ -201,6 +240,14 @@ function findingList(manifestResult, challengeResults, preflightResults) {
     }
     if (!summary.amount || !summary.payTo || !summary.asset) {
       findings.push(`P1 - ${result.name} challenge is missing amount, payTo, or asset metadata.`)
+    }
+    for (const accept of challengeAccepts(result)) {
+      if (looksLikePlaceholderPayTo(accept.payTo)) {
+        findings.push(`P1 - ${result.name} challenge advertises placeholder-looking payTo ${accept.payTo}; production listings should not ask agents to pay placeholder recipients.`)
+      }
+      if (looksLikeStagingNetwork(accept.network)) {
+        findings.push(`P2 - ${result.name} challenge advertises staging/test network ${accept.network}; document this as demo-only until live-value payment rails are active.`)
+      }
     }
     if (!summary.resourceUrl || !summary.extraResource) {
       findings.push(`P2 - ${result.name} challenge does not repeat the resource URL in both resource.url and accepts[0].extra.resource.`)
