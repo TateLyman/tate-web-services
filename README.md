@@ -37,6 +37,8 @@ npx serve .
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, and metadata boundaries
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
+- `pay-skills-launch-queue.html` - live pay-skills registry PR watchlist for x402, MPP, Solana, Base, compute, commerce, wallet, and data-api launch surfaces
+- `pay-skills-launch-queue.json` - machine-readable data backing the Pay-Skills Launch Queue page
 - `x402-metadata-filter.html` - browser-only metadata filter for x402/Pay.sh payment requests, receipts, resource URLs, prompts, PII, and secret-like fields
 - `x402-metadata-filter.js` - local scoring, redaction, safe-envelope generation, copy, and report export logic for the x402 Metadata Filter
 - `agentcore-payment-policy.html` - browser-only AgentCore/x402 payment policy builder for session caps, payee allowlists, approval rules, receipts, and audit evidence
@@ -67,6 +69,7 @@ npx serve .
 - `llms.txt` - concise machine-readable map for developer tools, service pages, and proof assets
 - `.github/workflows/refresh-mcp-pulse.yml` - daily public MCP Registry Pulse refresh
 - `.github/workflows/refresh-pay-sh-pulse.yml` - daily public Pay.sh Catalog Pulse refresh
+- `.github/workflows/refresh-pay-skills-queue.yml` - daily public pay-skills registry queue refresh
 - `demos/` - sample landing pages for local business outreach
 - `assets/` - generated screenshots used by the portfolio
 - `outreach/` - local-only lead criteria, trackers, and message templates ignored from the public repo
@@ -76,6 +79,7 @@ npx serve .
 - `scripts/find-pay-sh-prospects.mjs` - Pay.sh catalog prospect scanner for the agent-commerce readiness offer
 - `scripts/render-mcp-registry-pulse.mjs` - public MCP Registry pulse page generator
 - `scripts/render-pay-sh-catalog-pulse.mjs` - public Pay.sh catalog pulse page generator
+- `scripts/render-pay-skills-launch-queue.mjs` - public pay-skills launch queue generator and local lead queue writer
 - `scripts/render-mcp-prospect-dashboard.mjs` - local dashboard renderer for MCP prospect review and compose links
 - `scripts/render-mcp-prospect-reports.mjs` - local private mini-report renderer for MCP prospects
 
@@ -117,6 +121,20 @@ The script reads the live Pay.sh API catalog and writes:
 - `pay-sh-catalog-pulse.json`
 
 The page reports provider-level agent-payment surfaces where launch controls matter: quoted prices, caps, receipts, metadata filtering, provider validation, and audit evidence.
+
+To regenerate the public Pay-Skills Launch Queue page:
+
+```bash
+npm run pulse:pay-skills
+```
+
+The script reads the public `solana-foundation/pay-skills` pull-request queue and writes:
+
+- `pay-skills-launch-queue.html`
+- `pay-skills-launch-queue.json`
+- `outreach/generated/pay-skills-launch-queue-YYYY-MM-DD.md`
+
+The page reports current agent-payment launch surfaces from registry submissions; the local outreach file is only a research queue.
 
 The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-payment-policy.html` and `agentcore-payment-policy.js` directly when updating the control model.
 
