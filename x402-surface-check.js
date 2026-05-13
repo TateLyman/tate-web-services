@@ -124,15 +124,18 @@ function moneyFromAtomic(amount, decimals = 6) {
 
 function challengeSummary(challenge) {
   const firstAccept = challenge?.accepts?.[0] ?? {}
+  const amount = firstAccept.amount ?? firstAccept.maxAmountRequired ?? firstAccept.maxAmount ?? ''
+  const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
+  const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
   return {
-    resourceUrl: challenge?.resource?.url ?? '',
+    resourceUrl,
     network: firstAccept.network ?? '',
-    amount: firstAccept.amount ?? '',
-    price: moneyFromAtomic(firstAccept.amount),
+    amount,
+    price: moneyFromAtomic(amount),
     payTo: firstAccept.payTo ?? '',
     asset: firstAccept.asset ?? '',
     timeout: firstAccept.maxTimeoutSeconds ?? '',
-    extraResource: firstAccept.extra?.resource ?? '',
+    extraResource,
   }
 }
 
@@ -507,7 +510,9 @@ async function tryNoPaymentProbes() {
       catch {
         json = null
       }
-      const headerChallenge = parseEncodedChallenge(response.headers.get('payment-required'))
+      const headerChallenge = parseEncodedChallenge(
+        response.headers.get('payment-required') ?? response.headers.get('x-payment-required'),
+      )
       if (headerChallenge && !json?.accepts?.length) {
         json = headerChallenge
       }

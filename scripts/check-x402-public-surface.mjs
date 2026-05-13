@@ -133,7 +133,9 @@ async function probeEndpoint(entry) {
     body: method === 'GET' || method === 'HEAD' ? undefined : '{}',
   })
   const body = await readText(response)
-  const headerChallenge = parseEncodedChallenge(response.headers.get('payment-required'))
+  const headerChallenge = parseEncodedChallenge(
+    response.headers.get('payment-required') ?? response.headers.get('x-payment-required'),
+  )
 
   if (headerChallenge && !body.json?.accepts?.length) {
     body.json = headerChallenge
@@ -167,17 +169,20 @@ async function probePreflight(entry, origin = preflightOrigin) {
 function challengeSummary(result) {
   const challenge = result.body.json
   const firstAccept = challenge?.accepts?.[0] ?? {}
+  const amount = firstAccept.amount ?? firstAccept.maxAmountRequired ?? firstAccept.maxAmount ?? ''
+  const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
+  const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
 
   return {
     status: result.status,
-    resourceUrl: challenge?.resource?.url ?? '',
+    resourceUrl,
     network: firstAccept.network ?? '',
-    amount: firstAccept.amount ?? '',
-    price: moneyFromAtomic(firstAccept.amount),
+    amount,
+    price: moneyFromAtomic(amount),
     payTo: firstAccept.payTo ?? '',
     asset: firstAccept.asset ?? '',
     timeout: firstAccept.maxTimeoutSeconds ?? '',
-    extraResource: firstAccept.extra?.resource ?? '',
+    extraResource,
   }
 }
 
