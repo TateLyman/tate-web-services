@@ -74,6 +74,8 @@
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#surfaceCheck">run surface check</a>
+            <a class="console-button secondary" href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">npm cli</a>
+            <a class="console-button secondary" href="https://github.com/TateLyman/x402-surface-check" target="_blank" rel="noreferrer">github</a>
             <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
             <a class="console-button secondary" href="agent-commerce-sample-report.html">sample report</a>
             <a class="console-button secondary" href="x402-launch-checklist.html">checklist</a>
@@ -96,14 +98,29 @@
 
         <aside class="terminal-window" aria-label="x402 surface terminal preview">
           <div class="terminal-topline">x402 surface</div>
-          <pre><code>$ check .well-known/x402
-manifest: agent, wallet, networks
+          <pre><code>$ npx --yes x402-surface-check \
+  https://api.example.com/openapi.json
+document: OpenAPI
 challenge: amount, payTo, asset
-resource: https only
-browser: CORS and headers
-metadata: minimal fields
-result: private patch order</code></pre>
+rails: production, not staging
+browser: X-PAYMENT allowed
+result: markdown patch queue</code></pre>
         </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">cli</p>
+          <h2>Run the same no-payment pass from npm.</h2>
+          <p>
+            The package is dependency-free and reads manifests or OpenAPI specs. It never sends payment headers, signs, or attempts paid calls.
+          </p>
+        </div>
+        <div class="terminal-window">
+          <div class="terminal-topline">npm</div>
+          <pre><code>npx --yes x402-surface-check https://api.example.com/.well-known/x402
+npx --yes x402-surface-check https://api.example.com/openapi.json report.md</code></pre>
+        </div>
       </section>
 
       <section id="surfaceCheck" class="console-audit-layout launch-kit-layout" aria-label="x402 public surface checker">
