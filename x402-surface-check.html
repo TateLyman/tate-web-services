@@ -100,7 +100,7 @@
 
         <aside class="terminal-window" aria-label="x402 surface terminal preview">
           <div class="terminal-topline">x402 surface</div>
-          <pre><code>$ npx --yes github:TateLyman/x402-surface-check \
+          <pre><code>$ npx --yes github:TateLyman/x402-surface-check#v0.2.1 \
   --endpoint --method POST https://x402.rpc.ankr.com/eth
 document: direct endpoint
 challenge: mpp, amount, payTo, asset
@@ -113,16 +113,17 @@ result: markdown patch queue</code></pre>
       <section class="console-section">
         <div class="console-section-head">
           <p class="console-kicker">cli</p>
-          <h2>Run the same no-payment pass from npm.</h2>
+          <h2>Run the same no-payment pass from the CLI.</h2>
           <p>
             The package is dependency-free and reads manifests, OpenAPI specs, or direct paid endpoints. It never sends payment headers, signs, or attempts paid calls.
           </p>
         </div>
         <div class="terminal-window">
           <div class="terminal-topline">npm</div>
-          <pre><code>npx --yes x402-surface-check https://api.example.com/.well-known/x402
+          <pre><code>npx --yes github:TateLyman/x402-surface-check#v0.2.1 https://api.example.com/.well-known/x402
+npx --yes x402-surface-check https://api.example.com/.well-known/x402
 npx --yes x402-surface-check https://api.example.com/openapi.json report.md
-npx --yes github:TateLyman/x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/eth</code></pre>
+npx --yes github:TateLyman/x402-surface-check#v0.2.1 --endpoint --method POST https://x402.rpc.ankr.com/eth</code></pre>
         </div>
       </section>
 
