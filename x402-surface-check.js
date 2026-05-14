@@ -1,6 +1,9 @@
 const manifestUrl = document.querySelector('#manifestUrl')
 const manifestJson = document.querySelector('#manifestJson')
 const challengeJson = document.querySelector('#challengeJson')
+const challengeHeader = document.querySelector('#challengeHeader')
+const directEndpointMode = document.querySelector('#directEndpointMode')
+const endpointMethod = document.querySelector('#endpointMethod')
 const fetchManifest = document.querySelector('#fetchManifest')
 const probeEndpoints = document.querySelector('#probeEndpoints')
 const surfaceScore = document.querySelector('#surfaceScore')
@@ -49,9 +52,20 @@ function capabilityList(value) {
 
 function endpointEntries(manifest) {
   const base = manifest?.baseUrl || manifestUrl.value.trim() || window.location.origin
-  const entries = Object.entries(manifest?.x402Endpoints ?? {})
+  const entries = []
+  const directUrl = manifestUrl.value.trim()
+
+  if (directEndpointMode.checked && /^https?:\/\//i.test(directUrl)) {
+    entries.push({
+      name: new URL(directUrl).pathname.split('/').filter(Boolean).at(-1) ?? directUrl,
+      url: directUrl,
+      method: endpointMethod.value || 'POST',
+    })
+  }
+
+  entries.push(...Object.entries(manifest?.x402Endpoints ?? {})
     .filter(([, url]) => typeof url === 'string' && /^https?:\/\//i.test(url))
-    .map(([name, url]) => ({ name, url, method: 'POST' }))
+    .map(([name, url]) => ({ name, url, method: 'POST' })))
 
   for (const [category, items] of Object.entries(manifest?.categories ?? {})) {
     if (!Array.isArray(items)) continue
@@ -104,12 +118,16 @@ function endpointEntries(manifest) {
 }
 
 function challengeList() {
+  const headerChallenge = parsePaymentAuthenticate(challengeHeader.value.trim())
   const parsed = parseJson(challengeJson.value)
-  if (!parsed) return []
-  if (Array.isArray(parsed)) return parsed.filter(Boolean)
-  if (Array.isArray(parsed.results)) return parsed.results.filter(Boolean)
-  if (Array.isArray(parsed.challenges)) return parsed.challenges.filter(Boolean)
-  return [parsed]
+  const entries = []
+  if (headerChallenge) entries.push(headerChallenge)
+  if (!parsed) return entries
+  if (Array.isArray(parsed)) entries.push(...parsed.filter(Boolean))
+  else if (Array.isArray(parsed.results)) entries.push(...parsed.results.filter(Boolean))
+  else if (Array.isArray(parsed.challenges)) entries.push(...parsed.challenges.filter(Boolean))
+  else entries.push(parsed)
+  return entries
 }
 
 function moneyFromAtomic(amount, decimals = 6) {
@@ -128,6 +146,7 @@ function challengeSummary(challenge) {
   const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
   const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
   return {
+    protocol: challenge?.protocol ?? (firstAccept.scheme === 'mpp' ? 'mpp' : 'x402'),
     resourceUrl,
     network: firstAccept.network ?? '',
     amount,
@@ -180,6 +199,7 @@ function sameHost(urls) {
 
 function analyze() {
   const manifest = parseJson(manifestJson.value)
+  const directEndpoint = directEndpointMode.checked
   const challenges = challengeList()
   const entries = endpointEntries(manifest)
   const challengeSummaries = challenges.map(challengeSummary)
@@ -190,11 +210,11 @@ function analyze() {
   const hasChallenge = challenges.length > 0
   const checks = []
 
-  if (!hasManifest && !hasChallenge && probeState.endpointResults.length === 0) {
+  if (!hasManifest && !hasChallenge && probeState.endpointResults.length === 0 && !directEndpoint) {
     return { checks, manifest, entries, challenges, challengeSummaries }
   }
 
-  const manifestStatusOk = !probeState.manifestStatus || (probeState.manifestStatus >= 200 && probeState.manifestStatus < 300)
+  const manifestStatusOk = directEndpoint || !probeState.manifestStatus || (probeState.manifestStatus >= 200 && probeState.manifestStatus < 300)
   const networkNames = valueList(manifest?.networks)
   const manifestHasAgent = Boolean(manifest?.agent?.name && manifest?.agent?.wallet)
   const manifestHasEndpoints = entries.length > 0
@@ -218,18 +238,19 @@ function analyze() {
     || challengeNetworks.size === 0
     || networkNames.some(network => [...challengeNetworks].some(challengeNetwork => challengeNetwork.includes(network) || network.includes(challengeNetwork)))
   const browserHeader = manual('hasBrowserPaymentHeader')
-    || probeState.endpointResults.some(result => /x-payment/i.test(result.allowHeaders ?? ''))
+    || probeState.endpointResults.some(result => result.allowHeaders === '*' || /x-payment/i.test(result.allowHeaders ?? ''))
+  const reviewText = `${manifestJson.value}\n${challengeJson.value}\n${challengeHeader.value}\n${JSON.stringify(challenges)}`
   const hasMetadataPolicy = manual('hasMetadataPolicy')
-    || /metadata|resource|description|memo|redact|filter|minimi[sz]e|pii|private/i.test(`${manifestJson.value}\n${challengeJson.value}`)
+    || /metadata|resource|description|memo|redact|filter|minimi[sz]e|pii|private/i.test(reviewText)
   const hasFailureLanguage = manual('hasFailureLanguage')
-    || /failed|expired|duplicate|dispute|refund|settle|reconcile|idempot/i.test(`${manifestJson.value}\n${challengeJson.value}`)
+    || /failed|expired|duplicate|dispute|refund|settle|reconcile|idempot/i.test(reviewText)
   const noSingularConflict = !(manifest?.x402Endpoint && manifest?.x402Endpoints)
   const probeBlocked = probeState.endpointResults.some(result => result.error)
 
   addCheck(checks, {
     group: 'Manifest',
     label: 'Manifest JSON is present and parseable',
-    ok: hasManifest,
+    ok: directEndpoint || hasManifest,
     weight: 8,
     fix: 'Publish a parseable x402 manifest at the documented URL.',
   })
@@ -243,7 +264,7 @@ function analyze() {
   addCheck(checks, {
     group: 'Manifest',
     label: 'Agent name and wallet are visible',
-    ok: !hasManifest || manifestHasAgent,
+    ok: directEndpoint || !hasManifest || manifestHasAgent,
     weight: 8,
     fix: 'Add agent.name and agent.wallet so clients know who receives payment.',
   })
@@ -257,7 +278,7 @@ function analyze() {
   addCheck(checks, {
     group: 'Manifest',
     label: 'Networks and capabilities are documented',
-    ok: !hasManifest || (manifestHasNetworks && manifestHasCapabilities),
+    ok: directEndpoint || !hasManifest || (manifestHasNetworks && manifestHasCapabilities),
     weight: 8,
     fix: 'List supported networks and capability IDs so integrators can bind intent to payment.',
   })
@@ -385,7 +406,7 @@ function reportMarkdown(result) {
   const manifest = result.manifest
   const fixes = result.checks.filter(check => !check.ok)
   const challengeRows = result.challengeSummaries.map((item, index) => {
-    return `| ${index + 1} | ${item.price || '-'} | ${item.network || '-'} | ${item.payTo || '-'} | ${item.resourceUrl || '-'} |`
+    return `| ${index + 1} | ${item.protocol || '-'} | ${item.price || '-'} | ${item.network || '-'} | ${item.payTo || '-'} | ${item.resourceUrl || '-'} |`
   })
 
   return [
@@ -405,9 +426,9 @@ function reportMarkdown(result) {
     ``,
     `## Challenge Map`,
     ``,
-    `| # | Price | Network | Pay To | Resource URL |`,
-    `| --- | --- | --- | --- | --- |`,
-    ...(challengeRows.length ? challengeRows : ['| - | - | - | - | - |']),
+    `| # | Protocol | Price | Network | Pay To | Resource URL |`,
+    `| --- | --- | --- | --- | --- | --- |`,
+    ...(challengeRows.length ? challengeRows : ['| - | - | - | - | - | - |']),
     ``,
     `## Patch Queue`,
     ``,
@@ -457,7 +478,50 @@ function parseEncodedChallenge(value) {
     return JSON.parse(new TextDecoder().decode(bytes))
   }
   catch {
-    return null
+    try {
+      return JSON.parse(value)
+    }
+    catch {
+      return null
+    }
+  }
+}
+
+function parsePaymentAuthenticate(value) {
+  const header = value.replace(/^www-authenticate:\s*/i, '').trim()
+  if (!header || !/^Payment\s+/i.test(header)) return null
+  const params = {}
+  const pattern = /([a-zA-Z][\w-]*)="([^"]*)"/g
+  let match = pattern.exec(header)
+
+  while (match) {
+    params[match[1]] = match[2]
+    match = pattern.exec(header)
+  }
+
+  const request = parseEncodedChallenge(params.request)
+  if (!request) return null
+
+  const resource = manifestUrl.value.trim()
+  return {
+    protocol: 'mpp',
+    resource: { url: resource },
+    accepts: [{
+      scheme: 'mpp',
+      network: request.methodDetails?.network ?? request.network ?? '',
+      amount: request.amount ?? '',
+      asset: request.currency ?? request.asset ?? '',
+      payTo: request.recipient ?? request.payTo ?? '',
+      resource,
+      maxTimeoutSeconds: '',
+      extra: {
+        description: request.description ?? '',
+        expires: params.expires ?? '',
+        id: params.id ?? '',
+        intent: params.intent ?? '',
+        method: params.method ?? '',
+      },
+    }],
   }
 }
 
@@ -513,8 +577,16 @@ async function tryNoPaymentProbes() {
       const headerChallenge = parseEncodedChallenge(
         response.headers.get('payment-required') ?? response.headers.get('x-payment-required'),
       )
-      if (headerChallenge && !json?.accepts?.length) {
-        json = headerChallenge
+      const paymentChallenge = parsePaymentAuthenticate(response.headers.get('www-authenticate') ?? '')
+      if (!json?.accepts?.length) {
+        if (headerChallenge) {
+          json = headerChallenge
+        }
+        else if (paymentChallenge) {
+          paymentChallenge.resource.url = entry.url
+          paymentChallenge.accepts[0].resource = entry.url
+          json = paymentChallenge
+        }
       }
       probeState.endpointResults.push({
         ...entry,
@@ -561,6 +633,9 @@ copySurfaceResult.addEventListener('click', copyResult)
 downloadSurfaceReport.addEventListener('click', downloadReport)
 manifestJson.addEventListener('input', updateResult)
 challengeJson.addEventListener('input', updateResult)
+challengeHeader.addEventListener('input', updateResult)
 manifestUrl.addEventListener('input', updateResult)
+directEndpointMode.addEventListener('change', updateResult)
+endpointMethod.addEventListener('change', updateResult)
 manualInputs.forEach(input => input.addEventListener('change', updateResult))
 updateResult()
