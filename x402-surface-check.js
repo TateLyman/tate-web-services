@@ -50,8 +50,27 @@ function capabilityList(value) {
   return value.map(item => item?.id ?? item?.name ?? item).filter(Boolean).map(String)
 }
 
+function documentBaseUrl(manifest) {
+  const typedBase = manifest?.service_url || manifest?.serviceUrl || manifest?.baseUrl || manifest?.base_url
+  if (typeof typedBase === 'string' && typedBase) return typedBase
+  try {
+    return new URL('/', manifestUrl.value.trim() || window.location.origin).toString()
+  }
+  catch {
+    return window.location.origin
+  }
+}
+
+function endpointUrl(rawPath, baseUrl) {
+  const value = String(rawPath ?? '')
+  if (!value) return ''
+  if (/^https?:\/\//i.test(value)) return value
+  const base = value.startsWith('/') ? baseUrl : `${baseUrl.replace(/\/?$/, '/')}`
+  return new URL(value, base).toString()
+}
+
 function endpointEntries(manifest) {
-  const base = manifest?.baseUrl || manifestUrl.value.trim() || window.location.origin
+  const base = documentBaseUrl(manifest)
   const entries = []
   const directUrl = manifestUrl.value.trim()
 
@@ -73,6 +92,18 @@ function endpointEntries(manifest) {
       if (typeof item?.endpoint === 'string' && /^https?:\/\//i.test(item.endpoint)) {
         entries.push({ name: item.id ?? item.name ?? category, url: item.endpoint, method: item.method ?? 'POST' })
       }
+    }
+  }
+
+  if (Array.isArray(manifest?.endpoints)) {
+    for (const endpoint of manifest.endpoints) {
+      const rawPath = endpoint?.url ?? endpoint?.endpoint ?? endpoint?.path
+      if (!rawPath) continue
+      entries.push({
+        name: endpoint.id ?? endpoint.name ?? String(rawPath).split('/').filter(Boolean).at(-1) ?? String(rawPath),
+        url: endpointUrl(rawPath, base),
+        method: String(endpoint.method ?? 'POST').toUpperCase(),
+      })
     }
   }
 

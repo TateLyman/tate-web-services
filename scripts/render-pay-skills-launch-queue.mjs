@@ -334,6 +334,7 @@ function renderHtml(summary) {
         <a href="index.html#workbench">workbench</a>
         <a href="agent-stack-radar.html">radar</a>
         <a href="x402-launch-checklist.html">x402</a>
+        <a href="x402-attack-map-2026.html">attack-map</a>
         <a href="agent-commerce-gate.html">commerce-gate</a>
         <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
         <a href="pay-skills-launch-queue.html">queue</a>
@@ -363,6 +364,7 @@ function renderHtml(summary) {
           <div class="console-actions">
             <a class="console-button primary" href="agent-commerce-gate.html">run commerce gate</a>
             <a class="console-button secondary" href="x402-surface-check.html">check x402 surface</a>
+            <a class="console-button secondary" href="x402-attack-map-2026.html">attack map</a>
             <a class="console-button secondary" href="agent-commerce-sample-report.html">sample report</a>
             <a class="console-button ghost" href="pay-skills-launch-queue.json">data json</a>
             <a class="console-button ghost" href="${summary.source}" target="_blank" rel="noreferrer">source queue</a>
@@ -456,10 +458,11 @@ output: pay-skills-launch-queue.json</code></pre>
         <p class="console-kicker">paid scope</p>
         <h2>Need a private launch-control pass before the public queue gets attention?</h2>
         <p>
-          Send one manifest, OpenAPI file, pay-skills PR, or no-payment 402 challenge. The fixed $149 review returns a spend map, public-surface gaps, metadata risks, replay/failure notes, and a patch order. Owner-authorized surfaces only.
+          Send one manifest, OpenAPI file, direct paid endpoint, pay-skills PR, or no-payment 402 challenge. The fixed $149 review returns a spend map, public-surface gaps, metadata risks, replay/failure notes, and a patch order. Owner-authorized surfaces only.
         </p>
         <div class="console-actions">
           <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Agent-payment%20launch%20queue%20review">email scope</a>
+          <a class="console-button secondary" href="x402-attack-map-2026.html">attack map</a>
           <a class="console-button secondary" href="payments.html">pricing</a>
         </div>
       </section>
