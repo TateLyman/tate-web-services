@@ -175,6 +175,7 @@ function challengeList() {
 }
 
 function moneyFromAtomic(amount, decimals = 6) {
+  if (amount === '' || amount === null || amount === undefined) return ''
   const numeric = Number(amount)
   if (!Number.isFinite(numeric)) return String(amount ?? '')
   const value = numeric / (10 ** decimals)
