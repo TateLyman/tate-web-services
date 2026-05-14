@@ -45,6 +45,24 @@ function valueList(value) {
   return []
 }
 
+function displayMetadataValue(value) {
+  if (value === null || value === undefined || value === '') return '-'
+  if (Array.isArray(value)) {
+    return value.map(displayMetadataValue).filter(item => item && item !== '-').join(', ') || '-'
+  }
+  if (typeof value === 'object') {
+    const parts = [
+      value.name,
+      value.operator,
+      value.url,
+      value.jurisdiction,
+      value.network,
+    ].filter(item => item !== null && item !== undefined && item !== '').map(String)
+    return parts.join(' / ') || Object.keys(value).join(', ') || '-'
+  }
+  return String(value)
+}
+
 function capabilityList(value) {
   if (!Array.isArray(value)) return []
   return value.map(item => item?.id ?? item?.name ?? item).filter(Boolean).map(String)
@@ -472,6 +490,7 @@ function reportMarkdown(result) {
     ``,
     `- Agent: ${manifest?.agent?.name ?? '-'}`,
     `- Wallet: ${manifest?.agent?.wallet ?? '-'}`,
+    `- Facilitator: ${displayMetadataValue(manifest?.facilitator)}`,
     `- Networks: ${valueList(manifest?.networks).join(', ') || '-'}`,
     `- Endpoints: ${result.entries.map(entry => `${entry.name} ${entry.url}`).join('; ') || '-'}`,
     ``,
