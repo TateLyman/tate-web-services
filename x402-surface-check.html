@@ -126,6 +126,42 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
         </div>
       </section>
 
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">field notes</p>
+          <h2>Recent public checks have caught real launch edges.</h2>
+          <p>
+            The useful signal is narrow: no-payment probes, reproducible commands, and fixes that make public payment surfaces easier for wallets and agents to trust.
+          </p>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">fixed</p>
+            <h3>TensorFeed premium routes</h3>
+            <p>Seven parameter-required routes were moved behind canonical x402 V2 challenges after the checker found anonymous probes reaching validation first.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/68#issuecomment-4454875076" target="_blank" rel="noreferrer">verification comment</a>
+          </article>
+          <article>
+            <p class="card-command">cors</p>
+            <h3>MadeOnSol browser path</h3>
+            <p>A public Solana x402 surface returned clean 402 pricing, but preflight did not allow `X-PAYMENT` before the payment challenge.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/65#issuecomment-4454860951" target="_blank" rel="noreferrer">surface note</a>
+          </article>
+          <article>
+            <p class="card-command">mpp</p>
+            <h3>Ankr direct endpoint</h3>
+            <p>Direct endpoint mode maps MPP `WWW-Authenticate` challenges without signing or sending a payment header.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/64#issuecomment-4446139872" target="_blank" rel="noreferrer">proof comment</a>
+          </article>
+          <article>
+            <p class="card-command">manifest</p>
+            <h3>Fresh manifest shapes</h3>
+            <p>Endpoint arrays, item catalogs, and x402 V2 requirements headers are now parsed because live providers are already shipping those shapes.</p>
+            <a href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">current npm build</a>
+          </article>
+        </div>
+      </section>
+
       <section id="surfaceCheck" class="console-audit-layout launch-kit-layout" aria-label="x402 public surface checker">
         <div class="audit-form launch-kit-panel">
           <label>
