@@ -107,6 +107,19 @@ function endpointEntries(manifest) {
     }
   }
 
+  if (Array.isArray(manifest?.items)) {
+    for (const item of manifest.items) {
+      if (item?.type && item.type !== 'http') continue
+      const rawPath = item?.resource ?? item?.url ?? item?.endpoint ?? item?.path
+      if (!rawPath) continue
+      entries.push({
+        name: item.metadata?.name ?? item.id ?? item.name ?? String(rawPath).split('/').filter(Boolean).at(-1) ?? String(rawPath),
+        url: endpointUrl(rawPath, base),
+        method: String(item.method ?? 'GET').toUpperCase(),
+      })
+    }
+  }
+
   if (manifest?.openapi && manifest.paths && typeof manifest.paths === 'object') {
     const serverBase = manifest.servers?.find(server => typeof server?.url === 'string')?.url ?? base
     const methods = ['get', 'post', 'put', 'patch', 'delete']
