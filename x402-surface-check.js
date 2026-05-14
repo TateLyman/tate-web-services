@@ -228,10 +228,11 @@ function acceptDecimals(accept) {
 }
 
 function usesDecimalAmount(accept) {
-  if (accept.maxAmountRequired !== undefined || accept.maxAmount !== undefined) return false
-  if (accept.amount === undefined || accept.amount === null || accept.amount === '') return false
-  const amount = String(accept.amount)
+  const rawAmount = acceptAmountValue(accept)
+  if (rawAmount === undefined || rawAmount === null || rawAmount === '') return false
+  const amount = String(rawAmount)
   if (amount.includes('.')) return true
+  if (accept.maxAmountRequired !== undefined || accept.maxAmount !== undefined) return false
   return !accept.asset && Boolean(accept.token)
 }
 
@@ -243,7 +244,7 @@ function challengePrice(accept) {
 }
 
 function challengeSummary(challenge) {
-  const firstAccept = challenge?.accepts?.[0] ?? {}
+  const firstAccept = challengeAccepts([challenge])[0] ?? {}
   const hasChallenge = hasPaymentChallenge(challenge)
   const amount = acceptAmountValue(firstAccept)
   const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
@@ -262,11 +263,15 @@ function challengeSummary(challenge) {
 }
 
 function challengeAccepts(challenges) {
-  return challenges.flatMap(challenge => Array.isArray(challenge?.accepts) ? challenge.accepts : [])
+  return challenges.flatMap(challenge => {
+    if (Array.isArray(challenge?.accepts)) return challenge.accepts
+    if (Array.isArray(challenge?.schemes)) return challenge.schemes
+    return []
+  })
 }
 
 function hasPaymentChallenge(challenge) {
-  const accepts = Array.isArray(challenge?.accepts) ? challenge.accepts : []
+  const accepts = challengeAccepts([challenge])
   return accepts.length > 0 || Boolean(challenge?.resource || challenge?.payment)
 }
 
@@ -709,8 +714,9 @@ async function tryNoPaymentProbes() {
       )
       const authenticateChallenge = parsePaymentAuthenticate(response.headers.get('www-authenticate') ?? '')
         ?? parseX402Authenticate(response.headers.get('www-authenticate') ?? '')
-      if (!json?.accepts?.length) {
-        if (headerChallenge) {
+      const bodyHasChallenge = Array.isArray(json?.accepts) || Array.isArray(json?.schemes)
+      if (!bodyHasChallenge) {
+        if (headerChallenge && typeof headerChallenge === 'object') {
           json = headerChallenge
         }
         else if (authenticateChallenge) {

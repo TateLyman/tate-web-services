@@ -148,7 +148,8 @@ async function probeEndpoint(entry) {
     response.headers.get('payment-required') ?? response.headers.get('x-payment-required'),
   )
 
-  if (headerChallenge && !body.json?.accepts?.length) {
+  const bodyHasChallenge = Array.isArray(body.json?.accepts) || Array.isArray(body.json?.schemes)
+  if (headerChallenge && typeof headerChallenge === 'object' && !bodyHasChallenge) {
     body.json = headerChallenge
   }
 
@@ -179,7 +180,7 @@ async function probePreflight(entry, origin = preflightOrigin) {
 
 function challengeSummary(result) {
   const challenge = result.body.json
-  const firstAccept = challenge?.accepts?.[0] ?? {}
+  const firstAccept = challengeAccepts(result)[0] ?? {}
   const amount = acceptAmountValue(firstAccept)
   const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
   const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
@@ -198,7 +199,9 @@ function challengeSummary(result) {
 }
 
 function challengeAccepts(result) {
-  return Array.isArray(result.body.json?.accepts) ? result.body.json.accepts : []
+  if (Array.isArray(result.body.json?.accepts)) return result.body.json.accepts
+  if (Array.isArray(result.body.json?.schemes)) return result.body.json.schemes
+  return []
 }
 
 function hasPaymentChallenge(result) {
@@ -221,10 +224,11 @@ function acceptDecimals(accept) {
 }
 
 function usesDecimalAmount(accept, result) {
-  if (accept.maxAmountRequired !== undefined || accept.maxAmount !== undefined) return false
-  if (accept.amount === undefined || accept.amount === null || accept.amount === '') return false
-  const amount = String(accept.amount)
+  const rawAmount = acceptAmountValue(accept)
+  if (rawAmount === undefined || rawAmount === null || rawAmount === '') return false
+  const amount = String(rawAmount)
   if (amount.includes('.')) return true
+  if (accept.maxAmountRequired !== undefined || accept.maxAmount !== undefined) return false
   if (!accept.asset && (accept.token || result.headers?.['x-payment-token'])) return true
   return result.headers?.['x-payment-amount'] === amount
 }

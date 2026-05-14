@@ -33,7 +33,7 @@ npx serve .
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
-- `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, MPP payment headers, x402 V2 requirements headers, and legacy decimal x402 v1 challenges
+- `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, `schemes[]` challenge arrays, MPP payment headers, x402 V2 requirements headers, and legacy decimal x402 v1 challenges
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
 - `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, facilitator binding, replay, cache hygiene, metadata boundaries, and discovery steering
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
