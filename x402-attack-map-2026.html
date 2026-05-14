@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>x402 Attack Map 2026 | Payment-Agent Controls | Tate Programs</title>
+    <meta name="description" content="A May 2026 x402 and MPP attack-control map for payment-agent launches: finality, facilitator binding, replay protection, cache hygiene, metadata boundaries, and discovery steering.">
+    <link rel="canonical" href="https://tateprograms.com/x402-attack-map-2026.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="x402 Attack Map 2026">
+    <meta property="og:description" content="Turn the latest x402 payment-agent attack classes into practical launch controls and patch order.">
+    <meta property="og:url" content="https://tateprograms.com/x402-attack-map-2026.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="x402 Attack Map 2026">
+    <meta name="twitter:description" content="Finality, facilitator binding, replay protection, cache hygiene, and discovery steering controls for x402 launches.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "x402 Attack Map 2026",
+        "description": "A May 2026 x402 and MPP attack-control map for payment-agent launches: finality, facilitator binding, replay protection, cache hygiene, metadata boundaries, and discovery steering.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-13",
+        "dateModified": "2026-05-13",
+        "mainEntityOfPage": "https://tateprograms.com/x402-attack-map-2026.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="x402-surface-check.html">surface</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="pay-skills-launch-queue.html">pay-skills</a>
+        <a href="agentcore-payment-policy.html">agentcore-policy</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=x402%20attack%20map%20review">
+        <span></span>
+        attack map live
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/x402-attack-map-2026</strong>
+        <em>payment-agent controls</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">x402 attack map / may 2026</p>
+          <h1>Map the new x402 failure modes before an agent pays.</h1>
+          <p class="console-subtitle">
+            A May 2026 x402 security preprint puts names on the practical risks payment-agent builders now need to prove away: premature grants, caller-unbound settlement, replay, header and cache confusion, and manipulated discovery metadata. This page turns those attack classes into launch controls for x402, MPP, Pay.sh, and pay-skills providers.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="x402-surface-check.html">run surface check</a>
+            <a class="console-button secondary" href="#attackMap">read map</a>
+            <a class="console-button secondary" href="agentcore-payment-policy.html">build policy</a>
+            <a class="console-button secondary" href="x402-launch-checklist.html">launch checklist</a>
+            <a class="console-button ghost" href="#sourceTrail">source</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>scope</dt>
+              <dd>x402 / MPP</dd>
+            </div>
+            <div>
+              <dt>mode</dt>
+              <dd>no payment</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>patch order</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="x402 attack map terminal preview">
+          <div class="terminal-topline">x402.threat-map</div>
+          <pre><code>$ map attacks --from arxiv:2605.11781
+I-A  wait or reserve before grant
+I-B  bind settlement to caller + facilitator
+II   single-use pay_id + resource_id
+III  no-store headers + isolated payment fields
+IV   verify discovery metadata and providers
+output: launch controls buyers can inspect</code></pre>
+        </aside>
+      </section>
+
+      <section id="attackMap" class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">attack classes</p>
+            <h2>Convert the research into controls a buyer can see.</h2>
+          </div>
+          <a class="console-link" href="https://arxiv.org/abs/2605.11781" target="_blank" rel="noreferrer">open paper</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">I-A / finality</p>
+            <h3>Grant before finality</h3>
+            <p>A server can release access while a payment is still optimistic, reorg-prone, or only reserved. The launch proof should show exactly when access is granted.</p>
+            <a href="#patchOrder">patch order</a>
+          </article>
+          <article>
+            <p class="card-command">I-B / settlement</p>
+            <h3>Caller-unbound settlement</h3>
+            <p>Payment verification should be bound to the intended caller, facilitator, amount, chain, token, and resource. Otherwise a settlement proof can drift across contexts.</p>
+            <a href="agentcore-payment-policy.html">build policy</a>
+          </article>
+          <article>
+            <p class="card-command">II / replay</p>
+            <h3>One payment, many grants</h3>
+            <p>Every paid grant needs an atomic idempotency record. The reliable key is not just a transaction hash; it is the payment intent plus the exact resource being bought.</p>
+            <a href="x402-launch-checklist.html">open checklist</a>
+          </article>
+          <article>
+            <p class="card-command">III / headers</p>
+            <h3>Proxy and cache confusion</h3>
+            <p>Payment headers should not be merged, duplicated, cached, or exposed through shared layers. Every paid route should send no-store/private cache policy.</p>
+            <a href="x402-surface-check.html">run check</a>
+          </article>
+          <article>
+            <p class="card-command">IV / discovery</p>
+            <h3>Discovery steering</h3>
+            <p>Agent-readable registries and manifests can steer wallets toward the wrong provider, price, or resource. Discovery metadata needs validation and owner-controlled canonical URLs.</p>
+            <a href="pay-skills-launch-queue.html">watch queue</a>
+          </article>
+          <article>
+            <p class="card-command">privacy / metadata</p>
+            <h3>Payment-request leakage</h3>
+            <p>Resource names, receipts, prompts, user IDs, and query context can leak through payment metadata. Keep the pay envelope minimal and move private detail to internal logs.</p>
+            <a href="x402-metadata-filter.html">filter metadata</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="patchOrder" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">patch order</p>
+          <h2>The shortest credible hardening pass.</h2>
+          <p>
+            This is the review order I would use for a live x402 or MPP launch surface before public promotion, especially if agents can trigger real spend.
+          </p>
+
+          <h3>1. Sign the canonical payment intent</h3>
+          <p>
+            Bind <code>pay_id</code>, <code>resource_id</code>, facilitator, amount, token, chain ID, expiry, and allowed method into the payment challenge or policy object. Do not let clients infer those fields from mutable UI copy.
+          </p>
+
+          <h3>2. Verify the resource scope before granting</h3>
+          <p>
+            A successful payment should unlock only the endpoint, file, dataset row, API call, or compute job named in the challenge. Wildcard resources are a launch blocker unless the cap and audit trail are very clear.
+          </p>
+
+          <h3>3. Claim once, atomically</h3>
+          <p>
+            Create an idempotency record before work starts. Use a key that combines payment intent and resource, then reject duplicates, expired challenges, and already-claimed receipts with a visible error path.
+          </p>
+
+          <h3>4. Pick a release policy</h3>
+          <p>
+            Either reserve funds before execution or wait for enough finality before releasing the paid result. The public docs should say which path is used for demos, production, refunds, and failed settlement.
+          </p>
+
+          <h3>5. Harden HTTP boundaries</h3>
+          <p>
+            Paid routes should use <code>Cache-Control: no-store, private</code>, avoid shared proxy caching, reject duplicate payment headers, and document which browser headers are required for MPP or x402 clients.
+          </p>
+
+          <h3>6. Treat discovery as a security surface</h3>
+          <p>
+            Manifests, registry PRs, SKILL files, and docs should point to canonical HTTPS origins, stable owner identities, current prices, and exact networks. Agents should not have to guess which provider is real.
+          </p>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">tool coverage</p>
+          <h2>What the public checker can catch now.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">endpoint</p>
+            <h3>No-payment 402 probes</h3>
+            <p>Direct endpoint mode checks whether a paid route returns a structured 402 challenge before any payment header is sent.</p>
+          </article>
+          <article>
+            <p class="card-command">mpp</p>
+            <h3>MPP header shape</h3>
+            <p>The checker parses pasted <code>WWW-Authenticate: Payment</code> headers and scores amount, network, currency, expiry, and request metadata shape.</p>
+          </article>
+          <article>
+            <p class="card-command">cors</p>
+            <h3>Browser payment surface</h3>
+            <p>CORS and allowed headers reveal whether browser agents can send the expected payment fields or whether the integration will fail at launch.</p>
+          </article>
+          <article>
+            <p class="card-command">metadata</p>
+            <h3>Leak-prone fields</h3>
+            <p>Manifest, challenge, and pasted JSON review flags prompts, private IDs, token-like values, staging rails, placeholder payees, and broad resources.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="sourceTrail" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source trail</p>
+          <h2>Why this page exists now.</h2>
+        </div>
+        <div class="article-shell">
+          <article class="release-note">
+            <p>
+              The trigger is the May 12, 2026 preprint <a href="https://arxiv.org/abs/2605.11781" target="_blank" rel="noreferrer">Five Attacks on x402 Agentic Payment Protocol</a>. The useful move is not to amplify panic. It is to make each failure mode inspectable in launch docs, route behavior, policy files, and sample transactions.
+            </p>
+            <p>
+              This field note is intentionally practical: no private probing, no signed payments, no exploit publication. Owner-authorized review should start from public manifests, no-payment challenges, endpoint headers, and repo docs, then move to private patching only with scope.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">private pass</p>
+          <h2>Need one x402 or MPP surface mapped against these controls?</h2>
+          <p>Send the manifest, PR, docs, endpoint list, and allowed scope. The pass returns a spend map, attack-control gaps, and patch order before any public write-up.</p>
+        </div>
+        <div class="console-actions">
+          <a class="console-button secondary" href="agent-commerce-sample-report.html">view sample report</a>
+          <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=x402%20attack%20map%20review&amp;body=Manifest%20or%20PR%20URL%3A%0AEndpoints%20to%20check%3A%0AAllowed%20scope%3A%0ADeadline%3A">send scope</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>x402 attack map</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="x402-surface-check.html">surface check</a>
+      <a href="x402-launch-checklist.html">x402 checklist</a>
+      <a href="agentcore-payment-policy.html">policy builder</a>
+      <a href="pay-skills-launch-queue.html">pay-skills queue</a>
+      <a href="payments.html">payments</a>
+      <a href="https://x.com/tateprograms" target="_blank" rel="noreferrer">X</a>
+    </footer>
+  </body>
+</html>

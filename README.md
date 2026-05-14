@@ -35,6 +35,7 @@ npx serve .
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
 - `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, direct paid endpoints, pasted no-payment 402 challenges, and MPP payment headers
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
+- `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, facilitator binding, replay, cache hygiene, metadata boundaries, and discovery steering
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
 - `pay-skills-launch-queue.html` - live pay-skills registry PR watchlist for x402, MPP, Solana, Base, compute, commerce, wallet, and data-api launch surfaces
