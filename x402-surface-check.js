@@ -187,11 +187,12 @@ function moneyFromAtomic(amount, decimals = 6) {
 
 function challengeSummary(challenge) {
   const firstAccept = challenge?.accepts?.[0] ?? {}
+  const hasChallenge = hasPaymentChallenge(challenge)
   const amount = firstAccept.amount ?? firstAccept.maxAmountRequired ?? firstAccept.maxAmount ?? ''
   const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
   const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
   return {
-    protocol: challenge?.protocol ?? (firstAccept.scheme === 'mpp' ? 'mpp' : 'x402'),
+    protocol: hasChallenge ? challenge?.protocol ?? (firstAccept.scheme === 'mpp' ? 'mpp' : 'x402') : '',
     resourceUrl,
     network: firstAccept.network ?? '',
     amount,
