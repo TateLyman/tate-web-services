@@ -171,7 +171,7 @@ function challengeList() {
   else if (Array.isArray(parsed.results)) entries.push(...parsed.results.filter(Boolean))
   else if (Array.isArray(parsed.challenges)) entries.push(...parsed.challenges.filter(Boolean))
   else entries.push(parsed)
-  return entries
+  return entries.filter(hasPaymentChallenge)
 }
 
 function moneyFromAtomic(amount, decimals = 6) {
@@ -204,6 +204,11 @@ function challengeSummary(challenge) {
 
 function challengeAccepts(challenges) {
   return challenges.flatMap(challenge => Array.isArray(challenge?.accepts) ? challenge.accepts : [])
+}
+
+function hasPaymentChallenge(challenge) {
+  const accepts = Array.isArray(challenge?.accepts) ? challenge.accepts : []
+  return accepts.length > 0 || Boolean(challenge?.resource || challenge?.payment)
 }
 
 function looksLikeStagingNetwork(network) {
@@ -266,7 +271,7 @@ function analyze() {
   const manifestHasCapabilities = capabilityList(manifest?.capabilities).length > 0 || Object.keys(manifest?.categories ?? {}).length > 0
   const allChallengesAre402 = probeState.endpointResults.length === 0
     ? hasChallenge
-    : probeState.endpointResults.every(result => result.status === 402)
+    : probeState.endpointResults.every(result => result.status === 402 && result.hasChallenge)
   const allPricesPresent = challengeSummaries.length > 0
     && challengeSummaries.every(item => item.amount && item.payTo && item.asset && item.network)
   const noPlaceholderPayTo = accepts.length === 0
@@ -658,8 +663,9 @@ async function tryNoPaymentProbes() {
         ...entry,
         status: response.status,
         allowHeaders: response.headers.get('access-control-allow-headers') ?? '',
+        hasChallenge: hasPaymentChallenge(json),
       })
-      if (json) challenges.push(json)
+      if (hasPaymentChallenge(json)) challenges.push(json)
     }
     catch (error) {
       probeState.endpointResults.push({ ...entry, error: error.message })
