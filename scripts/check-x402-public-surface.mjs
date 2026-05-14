@@ -36,6 +36,20 @@ function moneyFromDecimal(amount) {
   })}`
 }
 
+function numberFromDecimal(amount) {
+  const numeric = Number(amount)
+  return Number.isFinite(numeric) ? numeric : null
+}
+
+function operationExpectedPrice(operation) {
+  const price = operation?.['x-payment-info']?.price
+    ?? operation?.['x-payment']?.price
+    ?? operation?.payment?.price
+  const amount = price?.amount ?? price?.amountUsd ?? price?.usd
+  const numeric = numberFromDecimal(amount)
+  return numeric === null ? null : numeric
+}
+
 function canonicalEndpointEntries(manifest) {
   const entries = []
 
@@ -71,6 +85,7 @@ function canonicalEndpointEntries(manifest) {
           name: operation.operationId ?? `${method.toUpperCase()} ${path}`,
           url,
           method: method.toUpperCase(),
+          expectedPriceUsd: operationExpectedPrice(operation),
         })
       }
     }
@@ -191,6 +206,8 @@ function challengeSummary(result) {
     network: firstAccept.network ?? '',
     amount,
     price: challengePrice(firstAccept, result),
+    priceUsd: challengePriceUsd(firstAccept, result),
+    expectedPriceUsd: typeof result.expectedPriceUsd === 'number' ? result.expectedPriceUsd : null,
     payTo: firstAccept.payTo ?? '',
     asset: acceptAssetValue(firstAccept),
     timeout: firstAccept.maxTimeoutSeconds ?? '',
@@ -238,6 +255,14 @@ function challengePrice(accept, result) {
   return usesDecimalAmount(accept, result)
     ? moneyFromDecimal(amount)
     : moneyFromAtomic(amount, acceptDecimals(accept))
+}
+
+function challengePriceUsd(accept, result) {
+  const amount = acceptAmountValue(accept)
+  if (usesDecimalAmount(accept, result)) return numberFromDecimal(amount)
+  const numeric = Number(amount)
+  if (!Number.isFinite(numeric)) return null
+  return numeric / (10 ** acceptDecimals(accept))
 }
 
 function looksLikeStagingNetwork(network) {
@@ -329,6 +354,12 @@ function findingList(manifestResult, challengeResults, preflightResults) {
     }
     if (!summary.amount || !summary.payTo || !summary.asset) {
       findings.push(`P1 - ${result.name} challenge is missing amount, payTo, or asset metadata.`)
+    }
+    if (summary.expectedPriceUsd !== null && summary.priceUsd !== null) {
+      const delta = Math.abs(summary.expectedPriceUsd - summary.priceUsd)
+      if (delta > 0.000001) {
+        findings.push(`P1 - ${result.name} documented price ${moneyFromDecimal(summary.expectedPriceUsd)} does not match live 402 challenge price ${moneyFromDecimal(summary.priceUsd)}.`)
+      }
     }
     for (const accept of challengeAccepts(result)) {
       if (looksLikePlaceholderPayTo(accept.payTo)) {
