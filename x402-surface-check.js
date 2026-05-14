@@ -203,10 +203,49 @@ function moneyFromAtomic(amount, decimals = 6) {
   })}`
 }
 
+function moneyFromDecimal(amount) {
+  if (amount === '' || amount === null || amount === undefined) return ''
+  const numeric = Number(amount)
+  if (!Number.isFinite(numeric)) return String(amount ?? '')
+  return `$${numeric.toLocaleString(undefined, {
+    maximumFractionDigits: 6,
+    minimumFractionDigits: numeric < 0.01 ? 3 : 2,
+  })}`
+}
+
+function acceptAmountValue(accept) {
+  return accept.maxAmountRequired ?? accept.maxAmount ?? accept.amount ?? ''
+}
+
+function acceptAssetValue(accept) {
+  return accept.asset ?? accept.token ?? accept.currency ?? ''
+}
+
+function acceptDecimals(accept) {
+  const value = accept.decimals ?? accept.extra?.decimals ?? accept.methodDetails?.decimals
+  const numeric = Number(value)
+  return Number.isFinite(numeric) ? numeric : 6
+}
+
+function usesDecimalAmount(accept) {
+  if (accept.maxAmountRequired !== undefined || accept.maxAmount !== undefined) return false
+  if (accept.amount === undefined || accept.amount === null || accept.amount === '') return false
+  const amount = String(accept.amount)
+  if (amount.includes('.')) return true
+  return !accept.asset && Boolean(accept.token)
+}
+
+function challengePrice(accept) {
+  const amount = acceptAmountValue(accept)
+  return usesDecimalAmount(accept)
+    ? moneyFromDecimal(amount)
+    : moneyFromAtomic(amount, acceptDecimals(accept))
+}
+
 function challengeSummary(challenge) {
   const firstAccept = challenge?.accepts?.[0] ?? {}
   const hasChallenge = hasPaymentChallenge(challenge)
-  const amount = firstAccept.amount ?? firstAccept.maxAmountRequired ?? firstAccept.maxAmount ?? ''
+  const amount = acceptAmountValue(firstAccept)
   const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
   const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
   return {
@@ -214,9 +253,9 @@ function challengeSummary(challenge) {
     resourceUrl,
     network: firstAccept.network ?? '',
     amount,
-    price: moneyFromAtomic(amount),
+    price: hasChallenge ? challengePrice(firstAccept) : '',
     payTo: firstAccept.payTo ?? '',
-    asset: firstAccept.asset ?? '',
+    asset: acceptAssetValue(firstAccept),
     timeout: firstAccept.maxTimeoutSeconds ?? '',
     extraResource,
   }
@@ -360,10 +399,10 @@ function analyze() {
   })
   addCheck(checks, {
     group: 'Challenge',
-    label: 'Amount, asset, network, and payTo are present',
+    label: 'Amount, asset/token, network, and payTo are present',
     ok: !hasChallenge || allPricesPresent,
     weight: 12,
-    fix: 'Include amount, asset, network, and payTo before a client can approve or sign.',
+    fix: 'Include amount, asset or token metadata, network, and payTo before a client can approve or sign.',
   })
   addCheck(checks, {
     group: 'Challenge',
@@ -593,6 +632,7 @@ function parsePaymentAuthenticate(value) {
       maxTimeoutSeconds: '',
       extra: {
         description: request.description ?? '',
+        decimals: request.methodDetails?.decimals ?? '',
         expires: params.expires ?? '',
         id: params.id ?? '',
         intent: params.intent ?? '',

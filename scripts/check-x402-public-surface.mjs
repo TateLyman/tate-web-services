@@ -16,12 +16,23 @@ const headers = {
 }
 
 function moneyFromAtomic(amount, decimals = 6) {
+  if (amount === '' || amount === null || amount === undefined) return ''
   const numeric = Number(amount)
   if (!Number.isFinite(numeric)) return String(amount ?? '')
   const value = numeric / (10 ** decimals)
   return `$${value.toLocaleString(undefined, {
     maximumFractionDigits: 6,
     minimumFractionDigits: value < 0.01 ? 3 : 2,
+  })}`
+}
+
+function moneyFromDecimal(amount) {
+  if (amount === '' || amount === null || amount === undefined) return ''
+  const numeric = Number(amount)
+  if (!Number.isFinite(numeric)) return String(amount ?? '')
+  return `$${numeric.toLocaleString(undefined, {
+    maximumFractionDigits: 6,
+    minimumFractionDigits: numeric < 0.01 ? 3 : 2,
   })}`
 }
 
@@ -169,7 +180,7 @@ async function probePreflight(entry, origin = preflightOrigin) {
 function challengeSummary(result) {
   const challenge = result.body.json
   const firstAccept = challenge?.accepts?.[0] ?? {}
-  const amount = firstAccept.amount ?? firstAccept.maxAmountRequired ?? firstAccept.maxAmount ?? ''
+  const amount = acceptAmountValue(firstAccept)
   const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
   const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
 
@@ -178,9 +189,9 @@ function challengeSummary(result) {
     resourceUrl,
     network: firstAccept.network ?? '',
     amount,
-    price: moneyFromAtomic(amount),
+    price: challengePrice(firstAccept, result),
     payTo: firstAccept.payTo ?? '',
-    asset: firstAccept.asset ?? '',
+    asset: acceptAssetValue(firstAccept),
     timeout: firstAccept.maxTimeoutSeconds ?? '',
     extraResource,
   }
@@ -188,6 +199,41 @@ function challengeSummary(result) {
 
 function challengeAccepts(result) {
   return Array.isArray(result.body.json?.accepts) ? result.body.json.accepts : []
+}
+
+function hasPaymentChallenge(result) {
+  const challenge = result.body.json
+  return challengeAccepts(result).length > 0 || Boolean(challenge?.resource || challenge?.payment || result.headers?.['www-authenticate'])
+}
+
+function acceptAmountValue(accept) {
+  return accept.maxAmountRequired ?? accept.maxAmount ?? accept.amount ?? ''
+}
+
+function acceptAssetValue(accept) {
+  return accept.asset ?? accept.token ?? accept.currency ?? ''
+}
+
+function acceptDecimals(accept) {
+  const value = accept.decimals ?? accept.extra?.decimals ?? accept.methodDetails?.decimals
+  const numeric = Number(value)
+  return Number.isFinite(numeric) ? numeric : 6
+}
+
+function usesDecimalAmount(accept, result) {
+  if (accept.maxAmountRequired !== undefined || accept.maxAmount !== undefined) return false
+  if (accept.amount === undefined || accept.amount === null || accept.amount === '') return false
+  const amount = String(accept.amount)
+  if (amount.includes('.')) return true
+  if (!accept.asset && (accept.token || result.headers?.['x-payment-token'])) return true
+  return result.headers?.['x-payment-amount'] === amount
+}
+
+function challengePrice(accept, result) {
+  const amount = acceptAmountValue(accept)
+  return usesDecimalAmount(accept, result)
+    ? moneyFromDecimal(amount)
+    : moneyFromAtomic(amount, acceptDecimals(accept))
 }
 
 function looksLikeStagingNetwork(network) {
@@ -254,9 +300,25 @@ function findingList(manifestResult, challengeResults, preflightResults) {
   for (const result of challengeResults) {
     const summary = challengeSummary(result)
     if (summary.network) challengeNetworks.add(summary.network)
+    const hasChallenge = hasPaymentChallenge(result)
 
     if (result.status !== 402) {
-      findings.push(`P1 - ${result.name} returned ${result.status}, not 402, for a no-payment POST probe.`)
+      if (result.status >= 200 && result.status < 300) {
+        findings.push(`P3 - ${result.name} returned ${result.status} without a payment challenge for a no-payment ${result.method ?? 'POST'} probe; document this as free/trial access or move the 402 challenge before content.`)
+      }
+      else if (result.status === 400 || result.status === 422) {
+        findings.push(`P1 - ${result.name} returned validation HTTP ${result.status} before a payment challenge for a no-payment ${result.method ?? 'POST'} probe.`)
+      }
+      else if (result.status === 401 || result.status === 403) {
+        findings.push(`P2 - ${result.name} returned auth HTTP ${result.status} before a payment challenge for a no-payment ${result.method ?? 'POST'} probe; document the auth/free-tier order if this is intentional.`)
+      }
+      else {
+        findings.push(`P1 - ${result.name} returned ${result.status}, not 402, for a no-payment ${result.method ?? 'POST'} probe.`)
+      }
+    }
+
+    if (!hasChallenge) {
+      continue
     }
     if (summary.resourceUrl.startsWith('http://') || summary.extraResource.startsWith('http://')) {
       findings.push(`P1 - ${result.name} challenge uses a non-HTTPS resource URL: ${summary.resourceUrl || summary.extraResource}.`)
@@ -279,7 +341,7 @@ function findingList(manifestResult, challengeResults, preflightResults) {
 
   for (const result of preflightResults) {
     const allowed = result.headers['access-control-allow-headers'] ?? ''
-    if (!/x-payment/i.test(allowed)) {
+    if (allowed !== '*' && !/x-payment/i.test(allowed)) {
       findings.push(`P1 - ${result.name} CORS preflight does not allow X-PAYMENT; observed allow headers: ${allowed || 'none'}.`)
     }
     const methods = result.headers['access-control-allow-methods'] ?? ''
@@ -304,7 +366,7 @@ function formatReport(manifestResult, challengeResults, preflightResults) {
   const findings = findingList(manifestResult, challengeResults, preflightResults)
   const challengeRows = challengeResults.map(result => {
     const summary = challengeSummary(result)
-    return `| ${result.name} | ${result.method ?? 'POST'} | ${result.status} | ${summary.price} | ${summary.network || '-'} | ${summary.resourceUrl || '-'} |`
+    return `| ${result.name} | ${result.method ?? 'POST'} | ${result.status} | ${summary.price || '-'} | ${summary.network || '-'} | ${summary.resourceUrl || '-'} |`
   })
   const preflightRows = preflightResults.map(result => {
     return `| ${result.name} | ${result.method ?? 'POST'} | ${result.status} | ${result.headers['access-control-allow-origin'] ?? '-'} | ${result.headers['access-control-allow-headers'] ?? '-'} | ${result.headers['access-control-allow-methods'] ?? '-'} |`
