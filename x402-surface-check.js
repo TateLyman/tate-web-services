@@ -531,9 +531,9 @@ function parseEncodedChallenge(value) {
   }
 }
 
-function parsePaymentAuthenticate(value) {
+function authenticateParams(value, scheme) {
   const header = value.replace(/^www-authenticate:\s*/i, '').trim()
-  if (!header || !/^Payment\s+/i.test(header)) return null
+  if (!header || !new RegExp(`^${scheme}\\s+`, 'i').test(header)) return null
   const params = {}
   const pattern = /([a-zA-Z][\w-]*)="([^"]*)"/g
   let match = pattern.exec(header)
@@ -542,6 +542,13 @@ function parsePaymentAuthenticate(value) {
     params[match[1]] = match[2]
     match = pattern.exec(header)
   }
+
+  return params
+}
+
+function parsePaymentAuthenticate(value) {
+  const params = authenticateParams(value, 'Payment')
+  if (!params) return null
 
   const request = parseEncodedChallenge(params.request)
   if (!request) return null
@@ -566,6 +573,19 @@ function parsePaymentAuthenticate(value) {
         method: params.method ?? '',
       },
     }],
+  }
+}
+
+function parseX402Authenticate(value) {
+  const params = authenticateParams(value, 'X402')
+  if (!params) return null
+
+  const requirements = parseEncodedChallenge(params.requirements ?? params.request)
+  if (!requirements || !Array.isArray(requirements.accepts)) return null
+
+  return {
+    protocol: requirements.protocol ?? 'x402',
+    ...requirements,
   }
 }
 
@@ -621,15 +641,17 @@ async function tryNoPaymentProbes() {
       const headerChallenge = parseEncodedChallenge(
         response.headers.get('payment-required') ?? response.headers.get('x-payment-required'),
       )
-      const paymentChallenge = parsePaymentAuthenticate(response.headers.get('www-authenticate') ?? '')
+      const authenticateChallenge = parsePaymentAuthenticate(response.headers.get('www-authenticate') ?? '')
+        ?? parseX402Authenticate(response.headers.get('www-authenticate') ?? '')
       if (!json?.accepts?.length) {
         if (headerChallenge) {
           json = headerChallenge
         }
-        else if (paymentChallenge) {
-          paymentChallenge.resource.url = entry.url
-          paymentChallenge.accepts[0].resource = entry.url
-          json = paymentChallenge
+        else if (authenticateChallenge) {
+          authenticateChallenge.resource = authenticateChallenge.resource ?? { url: entry.url }
+          authenticateChallenge.resource.url = authenticateChallenge.resource.url || entry.url
+          authenticateChallenge.accepts[0].resource = authenticateChallenge.accepts[0].resource || entry.url
+          json = authenticateChallenge
         }
       }
       probeState.endpointResults.push({
