@@ -142,9 +142,9 @@ The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-p
 To run a no-payment x402 public-surface pass against a manifest, OpenAPI spec, or direct paid endpoint:
 
 ```bash
-npx --yes github:TateLyman/x402-surface-check#v0.2.1 https://api.example.com/.well-known/x402.json
+npx --yes x402-surface-check https://api.example.com/.well-known/x402.json
 npx --yes x402-surface-check https://api.example.com/openapi.json report.md
-npx --yes github:TateLyman/x402-surface-check#v0.2.1 --endpoint --method POST https://x402.rpc.ankr.com/eth
+npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/eth
 npm run check:x402 -- https://api.example.com/.well-known/x402 output.md
 X402_CHECK_ORIGIN=https://example.com npm run check:x402 -- https://api.example.com/.well-known/x402 output.md
 ```
