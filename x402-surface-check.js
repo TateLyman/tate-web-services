@@ -87,6 +87,12 @@ function endpointUrl(rawPath, baseUrl) {
   return new URL(value, base).toString()
 }
 
+function openApiServerBaseUrl(manifest) {
+  const rawUrl = manifest?.servers?.find(server => typeof server?.url === 'string')?.url
+  if (!rawUrl) return documentBaseUrl(manifest)
+  return endpointUrl(rawUrl, documentBaseUrl(manifest))
+}
+
 function linkedDiscoveryUrl(manifest) {
   const rawUrl = manifest?.discovery_url
     ?? manifest?.discoveryUrl
@@ -163,7 +169,9 @@ function openApiProbeUrl(path, operation, baseUrl) {
     }
   }
 
-  const url = path.startsWith('http') ? new URL(resolvedPath) : new URL(resolvedPath, baseUrl)
+  const url = /^https?:\/\//i.test(String(resolvedPath))
+    ? new URL(resolvedPath)
+    : new URL(String(resolvedPath).replace(/^\/+/, ''), `${baseUrl.replace(/\/?$/, '/')}`)
   for (const [name, value] of searchParams.entries()) {
     url.searchParams.set(name, value)
   }
@@ -222,7 +230,7 @@ function endpointEntries(manifest) {
   }
 
   if (manifest?.openapi && manifest.paths && typeof manifest.paths === 'object') {
-    const serverBase = manifest.servers?.find(server => typeof server?.url === 'string')?.url ?? base
+    const serverBase = openApiServerBaseUrl(manifest)
     const methods = ['get', 'post', 'put', 'patch', 'delete']
 
     for (const [path, operations] of Object.entries(manifest.paths)) {
@@ -858,6 +866,7 @@ async function tryNoPaymentProbes() {
         ...entry,
         status: response.status,
         allowHeaders: response.headers.get('access-control-allow-headers') ?? '',
+        allowOrigin: response.headers.get('access-control-allow-origin') ?? '',
         hasChallenge: hasPaymentChallenge(json),
       })
       if (hasPaymentChallenge(json)) challenges.push(json)

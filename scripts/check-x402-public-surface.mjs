@@ -116,7 +116,9 @@ function openApiProbeUrl(path, operation, baseUrl) {
     }
   }
 
-  const url = path.startsWith('http') ? new URL(resolvedPath) : new URL(resolvedPath, baseUrl)
+  const url = /^https?:\/\//i.test(String(resolvedPath))
+    ? new URL(resolvedPath)
+    : new URL(String(resolvedPath).replace(/^\/+/, ''), `${baseUrl.replace(/\/?$/, '/')}`)
   for (const [name, value] of searchParams.entries()) {
     url.searchParams.set(name, value)
   }
@@ -137,6 +139,12 @@ function endpointUrl(rawPath, baseUrl, sourceUrl = manifestUrl) {
   if (/^https?:\/\//i.test(value)) return value
   const base = value.startsWith('/') ? baseUrl : `${baseUrl.replace(/\/?$/, '/')}`
   return new URL(value, base || documentBaseUrl({}, sourceUrl)).toString()
+}
+
+function openApiServerBaseUrl(manifest, sourceUrl = manifestUrl) {
+  const rawUrl = manifest.servers?.find(server => typeof server?.url === 'string')?.url
+  if (!rawUrl) return documentBaseUrl(manifest, sourceUrl)
+  return endpointUrl(rawUrl, documentBaseUrl(manifest, sourceUrl), sourceUrl)
 }
 
 function linkedDiscoveryUrl(manifest, sourceUrl = manifestUrl) {
@@ -195,8 +203,7 @@ function canonicalEndpointEntries(manifest) {
   }
 
   if (manifest.openapi && manifest.paths && typeof manifest.paths === 'object') {
-    const baseUrl = manifest.servers?.find(server => typeof server?.url === 'string')?.url
-      ?? manifestUrl
+    const baseUrl = openApiServerBaseUrl(manifest)
     const methods = ['get', 'post', 'put', 'patch', 'delete']
 
     for (const [path, operations] of Object.entries(manifest.paths)) {
@@ -272,7 +279,70 @@ function parseEncodedChallenge(value) {
     return JSON.parse(Buffer.from(padded, 'base64').toString('utf8'))
   }
   catch {
-    return null
+    try {
+      return JSON.parse(value)
+    }
+    catch {
+      return null
+    }
+  }
+}
+
+function authenticateParams(value, scheme) {
+  const header = String(value ?? '').replace(/^www-authenticate:\s*/i, '').trim()
+  if (!header || !new RegExp(`^${scheme}\\s+`, 'i').test(header)) return null
+  const params = {}
+  const pattern = /([a-zA-Z][\w-]*)="([^"]*)"/g
+  let match = pattern.exec(header)
+
+  while (match) {
+    params[match[1]] = match[2]
+    match = pattern.exec(header)
+  }
+
+  return params
+}
+
+function parsePaymentAuthenticate(value) {
+  const params = authenticateParams(value, 'Payment')
+  if (!params) return null
+
+  const request = parseEncodedChallenge(params.request)
+  if (!request) return null
+
+  return {
+    protocol: 'mpp',
+    resource: { url: '' },
+    accepts: [{
+      scheme: 'mpp',
+      network: request.methodDetails?.network ?? params.method ?? '',
+      amount: request.amount ?? '',
+      asset: request.currency ?? '',
+      payTo: request.recipient ?? '',
+      resource: '',
+      maxTimeoutSeconds: '',
+      extra: {
+        description: request.description ?? '',
+        decimals: request.methodDetails?.decimals ?? '',
+        expires: params.expires ?? '',
+        id: params.id ?? '',
+        intent: params.intent ?? '',
+        method: params.method ?? '',
+      },
+    }],
+  }
+}
+
+function parseX402Authenticate(value) {
+  const params = authenticateParams(value, 'X402')
+  if (!params) return null
+
+  const requirements = parseEncodedChallenge(params.requirements ?? params.request)
+  if (!requirements || !Array.isArray(requirements.accepts)) return null
+
+  return {
+    protocol: requirements.protocol ?? 'x402',
+    ...requirements,
   }
 }
 
@@ -289,13 +359,14 @@ async function fetchManifest(url) {
   }
 }
 
-async function probeEndpoint(entry) {
+async function probeEndpoint(entry, origin = preflightOrigin) {
   const method = entry.method ?? 'POST'
   const response = await fetch(entry.url, {
     method,
     headers: {
       ...headers,
       'content-type': 'application/json',
+      ...(origin ? { origin } : {}),
     },
     body: method === 'GET' || method === 'HEAD'
       ? undefined
@@ -305,10 +376,20 @@ async function probeEndpoint(entry) {
   const headerChallenge = parseEncodedChallenge(
     response.headers.get('payment-required') ?? response.headers.get('x-payment-required'),
   )
+  const authenticateChallenge = parsePaymentAuthenticate(response.headers.get('www-authenticate'))
+    ?? parseX402Authenticate(response.headers.get('www-authenticate'))
 
   const bodyHasChallenge = Array.isArray(body.json?.accepts) || Array.isArray(body.json?.schemes)
-  if (headerChallenge && typeof headerChallenge === 'object' && !bodyHasChallenge) {
-    body.json = headerChallenge
+  if (!bodyHasChallenge) {
+    if (headerChallenge && typeof headerChallenge === 'object') {
+      body.json = headerChallenge
+    }
+    else if (authenticateChallenge) {
+      authenticateChallenge.resource = authenticateChallenge.resource ?? { url: entry.url }
+      authenticateChallenge.resource.url = authenticateChallenge.resource.url || entry.url
+      authenticateChallenge.accepts[0].resource = authenticateChallenge.accepts[0].resource || entry.url
+      body.json = authenticateChallenge
+    }
   }
 
   return {
@@ -503,6 +584,9 @@ function findingList(manifestResult, challengeResults, preflightResults) {
 
     if (!hasChallenge) {
       continue
+    }
+    if (!result.headers?.['access-control-allow-origin']) {
+      findings.push(`P1 - ${result.name} 402 challenge response does not allow the requesting origin; browser agents cannot read the payment requirements even if preflight succeeds.`)
     }
     if (summary.resourceUrl.startsWith('http://') || summary.extraResource.startsWith('http://')) {
       findings.push(`P1 - ${result.name} challenge uses a non-HTTPS resource URL: ${summary.resourceUrl || summary.extraResource}.`)
