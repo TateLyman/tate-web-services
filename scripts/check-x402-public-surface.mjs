@@ -50,6 +50,31 @@ function operationExpectedPrice(operation) {
   return numeric === null ? null : numeric
 }
 
+function documentBaseUrl(manifest, sourceUrl = manifestUrl) {
+  if (typeof manifest.service_url === 'string') return manifest.service_url
+  if (typeof manifest.serviceUrl === 'string') return manifest.serviceUrl
+  if (typeof manifest.baseUrl === 'string') return manifest.baseUrl
+  if (typeof manifest.base_url === 'string') return manifest.base_url
+  return new URL('/', sourceUrl).toString()
+}
+
+function endpointUrl(rawPath, baseUrl, sourceUrl = manifestUrl) {
+  const value = String(rawPath ?? '')
+  if (!value) return ''
+  if (/^https?:\/\//i.test(value)) return value
+  const base = value.startsWith('/') ? baseUrl : `${baseUrl.replace(/\/?$/, '/')}`
+  return new URL(value, base || documentBaseUrl({}, sourceUrl)).toString()
+}
+
+function linkedDiscoveryUrl(manifest, sourceUrl = manifestUrl) {
+  const rawUrl = manifest?.discovery_url
+    ?? manifest?.discoveryUrl
+    ?? manifest?.resources_url
+    ?? manifest?.resourcesUrl
+  if (typeof rawUrl !== 'string' || !rawUrl.trim()) return ''
+  return endpointUrl(rawUrl, documentBaseUrl(manifest, sourceUrl), sourceUrl)
+}
+
 function canonicalEndpointEntries(manifest) {
   const entries = []
 
@@ -65,6 +90,33 @@ function canonicalEndpointEntries(manifest) {
       if (typeof item?.endpoint === 'string' && item.endpoint.startsWith('http')) {
         entries.push({ name: item.id ?? item.name ?? category, url: item.endpoint, method: item.method ?? 'POST' })
       }
+    }
+  }
+
+  if (Array.isArray(manifest.endpoints)) {
+    const baseUrl = documentBaseUrl(manifest)
+    for (const endpoint of manifest.endpoints) {
+      const rawPath = endpoint?.url ?? endpoint?.endpoint ?? endpoint?.path
+      if (!rawPath) continue
+      entries.push({
+        name: endpoint.id ?? endpoint.name ?? String(rawPath).split('/').filter(Boolean).at(-1) ?? String(rawPath),
+        url: endpointUrl(rawPath, baseUrl),
+        method: String(endpoint.method ?? 'POST').toUpperCase(),
+      })
+    }
+  }
+
+  if (Array.isArray(manifest.items)) {
+    const baseUrl = documentBaseUrl(manifest)
+    for (const item of manifest.items) {
+      if (item?.type && item.type !== 'http') continue
+      const rawPath = item?.resource ?? item?.url ?? item?.endpoint ?? item?.path
+      if (!rawPath) continue
+      entries.push({
+        name: item.metadata?.name ?? item.id ?? item.name ?? String(rawPath).split('/').filter(Boolean).at(-1) ?? String(rawPath),
+        url: endpointUrl(rawPath, baseUrl),
+        method: String(item.method ?? 'GET').toUpperCase(),
+      })
     }
   }
 
@@ -413,7 +465,7 @@ function findingList(manifestResult, challengeResults, preflightResults) {
   return findings
 }
 
-function formatReport(manifestResult, challengeResults, preflightResults) {
+function formatReport(manifestResult, challengeResults, preflightResults, sourceResult = null) {
   const manifest = manifestResult.body.json ?? {}
   const findings = findingList(manifestResult, challengeResults, preflightResults)
   const challengeRows = challengeResults.map(result => {
@@ -427,6 +479,7 @@ function formatReport(manifestResult, challengeResults, preflightResults) {
   return [
     `# x402 Public Surface Check`,
     ``,
+    ...(sourceResult ? [`Source: ${sourceResult.url}`] : []),
     `Manifest: ${manifestResult.url}`,
     `Checked: ${new Date().toISOString()}`,
     `Scope: manifest, no-payment POST probes, and browser-style CORS preflight. No payment headers or paid calls.`,
@@ -460,8 +513,23 @@ function formatReport(manifestResult, challengeResults, preflightResults) {
   ].join('\n')
 }
 
-const manifestResult = await fetchManifest(manifestUrl)
-const endpoints = manifestResult.body.json ? canonicalEndpointEntries(manifestResult.body.json) : []
+let sourceResult = null
+let manifestResult = await fetchManifest(manifestUrl)
+let endpoints = manifestResult.body.json ? canonicalEndpointEntries(manifestResult.body.json) : []
+
+if (endpoints.length === 0 && manifestResult.body.json) {
+  const discoveryUrl = linkedDiscoveryUrl(manifestResult.body.json, manifestResult.url)
+  if (discoveryUrl) {
+    const linkedResult = await fetchManifest(discoveryUrl)
+    const linkedEndpoints = linkedResult.body.json ? canonicalEndpointEntries(linkedResult.body.json) : []
+    if (linkedEndpoints.length > 0) {
+      sourceResult = manifestResult
+      manifestResult = linkedResult
+      endpoints = linkedEndpoints
+    }
+  }
+}
+
 const challengeResults = []
 const preflightResults = []
 
@@ -470,7 +538,7 @@ for (const entry of endpoints) {
   preflightResults.push(await probePreflight(entry))
 }
 
-const report = formatReport(manifestResult, challengeResults, preflightResults)
+const report = formatReport(manifestResult, challengeResults, preflightResults, sourceResult)
 
 if (outputPath) {
   await writeFile(outputPath, `${report}\n`)

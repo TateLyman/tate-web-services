@@ -110,6 +110,12 @@
             <p>OpenAPI probes found structured multi-rail x402 challenges across sampled Base/Solana endpoints, then isolated a browser preflight blocker where `OPTIONS` returns 405 before `X-PAYMENT` can be sent.</p>
             <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4455678163" target="_blank" rel="noreferrer">surface note</a>
           </article>
+          <article>
+            <span>09</span>
+            <h3>Agent Trust Bench</h3>
+            <p>After the initial discovery/CORS/resource-echo notes, follow-up probes against `.well-known/x402.json` now resolve through `discovery_url` to six clean adversarial x402 profiles with browser payment headers enabled.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/23#issuecomment-4455722170" target="_blank" rel="noreferrer">fix verification</a>
+          </article>
         </div>
       </section>
 

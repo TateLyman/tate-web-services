@@ -87,6 +87,15 @@ function endpointUrl(rawPath, baseUrl) {
   return new URL(value, base).toString()
 }
 
+function linkedDiscoveryUrl(manifest) {
+  const rawUrl = manifest?.discovery_url
+    ?? manifest?.discoveryUrl
+    ?? manifest?.resources_url
+    ?? manifest?.resourcesUrl
+  if (typeof rawUrl !== 'string' || !rawUrl.trim()) return ''
+  return endpointUrl(rawUrl, documentBaseUrl(manifest))
+}
+
 function endpointEntries(manifest) {
   const base = documentBaseUrl(manifest)
   const entries = []
@@ -681,7 +690,23 @@ async function fetchPublicManifest() {
   try {
     const response = await fetch(url, { headers: { accept: 'application/json' } })
     probeState.manifestStatus = response.status
-    manifestJson.value = await readJsonResponse(response)
+    const text = await readJsonResponse(response)
+    const parsed = parseJson(text)
+    const discoveryUrl = parsed && endpointEntries(parsed).length === 0 ? linkedDiscoveryUrl(parsed) : ''
+    if (discoveryUrl) {
+      const discoveryResponse = await fetch(discoveryUrl, { headers: { accept: 'application/json' } })
+      if (discoveryResponse.ok) {
+        manifestUrl.value = discoveryUrl
+        probeState.manifestStatus = discoveryResponse.status
+        manifestJson.value = await readJsonResponse(discoveryResponse)
+      }
+      else {
+        manifestJson.value = text
+      }
+    }
+    else {
+      manifestJson.value = text
+    }
   }
   catch (error) {
     surfaceSummary.textContent = `Browser fetch failed: ${error.message}. Paste the manifest JSON instead.`
