@@ -50,6 +50,79 @@ function operationExpectedPrice(operation) {
   return numeric === null ? null : numeric
 }
 
+function exampleValue(schemaOrParameter) {
+  if (!schemaOrParameter || typeof schemaOrParameter !== 'object') return undefined
+  const schema = schemaOrParameter.schema ?? schemaOrParameter
+  const value = schemaOrParameter.example
+    ?? schema.example
+    ?? schema.default
+    ?? (Array.isArray(schema.enum) ? schema.enum[0] : undefined)
+  if (value !== undefined) return value
+  if (schema.type === 'string') return ''
+  if (schema.type === 'number' || schema.type === 'integer') return 0
+  if (schema.type === 'boolean') return false
+  return undefined
+}
+
+function mediaExample(media) {
+  if (!media || typeof media !== 'object') return undefined
+  if (media.example !== undefined) return media.example
+  const examples = media.examples && typeof media.examples === 'object'
+    ? Object.values(media.examples)
+    : []
+  const firstExample = examples.find(Boolean)
+  if (firstExample?.value !== undefined) return firstExample.value
+  if (firstExample?.externalValue) return undefined
+
+  const schema = media.schema
+  if (!schema || typeof schema !== 'object' || schema.type !== 'object') return undefined
+  const body = {}
+  const properties = schema.properties && typeof schema.properties === 'object'
+    ? schema.properties
+    : {}
+  const required = new Set(Array.isArray(schema.required) ? schema.required : Object.keys(properties))
+
+  for (const [name, property] of Object.entries(properties)) {
+    if (!required.has(name)) continue
+    const value = exampleValue(property)
+    if (value !== undefined) body[name] = value
+  }
+
+  return Object.keys(body).length ? body : undefined
+}
+
+function operationRequestBody(operation) {
+  const content = operation?.requestBody?.content
+  if (!content || typeof content !== 'object') return undefined
+  const media = content['application/json']
+    ?? content['application/*+json']
+    ?? Object.entries(content).find(([type]) => /json/i.test(type))?.[1]
+  return mediaExample(media)
+}
+
+function openApiProbeUrl(path, operation, baseUrl) {
+  const parameters = Array.isArray(operation?.parameters) ? operation.parameters : []
+  let resolvedPath = path
+  const searchParams = new URLSearchParams()
+
+  for (const parameter of parameters) {
+    const value = exampleValue(parameter)
+    if (value === undefined || value === '') continue
+    if (parameter.in === 'path') {
+      resolvedPath = resolvedPath.replaceAll(`{${parameter.name}}`, encodeURIComponent(String(value)))
+    }
+    else if (parameter.in === 'query') {
+      searchParams.set(parameter.name, String(value))
+    }
+  }
+
+  const url = path.startsWith('http') ? new URL(resolvedPath) : new URL(resolvedPath, baseUrl)
+  for (const [name, value] of searchParams.entries()) {
+    url.searchParams.set(name, value)
+  }
+  return url.toString()
+}
+
 function documentBaseUrl(manifest, sourceUrl = manifestUrl) {
   if (typeof manifest.service_url === 'string') return manifest.service_url
   if (typeof manifest.serviceUrl === 'string') return manifest.serviceUrl
@@ -71,6 +144,7 @@ function linkedDiscoveryUrl(manifest, sourceUrl = manifestUrl) {
     ?? manifest?.discoveryUrl
     ?? manifest?.resources_url
     ?? manifest?.resourcesUrl
+    ?? (/^(https?:\/\/|\/)/i.test(String(manifest?.openapi ?? '')) ? manifest.openapi : '')
   if (typeof rawUrl !== 'string' || !rawUrl.trim()) return ''
   return endpointUrl(rawUrl, documentBaseUrl(manifest, sourceUrl), sourceUrl)
 }
@@ -130,14 +204,13 @@ function canonicalEndpointEntries(manifest) {
       for (const method of methods) {
         const operation = operations[method]
         if (!operation || typeof operation !== 'object') continue
-        const url = path.startsWith('http')
-          ? path
-          : new URL(path, baseUrl).toString()
+        const url = openApiProbeUrl(path, operation, baseUrl)
         entries.push({
           name: operation.operationId ?? `${method.toUpperCase()} ${path}`,
           url,
           method: method.toUpperCase(),
           expectedPriceUsd: operationExpectedPrice(operation),
+          requestBody: operationRequestBody(operation),
         })
       }
     }
@@ -208,7 +281,9 @@ async function probeEndpoint(entry) {
       ...headers,
       'content-type': 'application/json',
     },
-    body: method === 'GET' || method === 'HEAD' ? undefined : '{}',
+    body: method === 'GET' || method === 'HEAD'
+      ? undefined
+      : JSON.stringify(entry.requestBody ?? {}),
   })
   const body = await readText(response)
   const headerChallenge = parseEncodedChallenge(
@@ -339,7 +414,7 @@ function looksLikeOperationalHealthEndpoint(result) {
 }
 
 function valueList(value) {
-  if (Array.isArray(value)) return value.map(String)
+  if (Array.isArray(value)) return value.map(displayMetadataValue)
   if (value && typeof value === 'object') return Object.keys(value)
   if (typeof value === 'string') return [value]
   return []
