@@ -71,7 +71,7 @@
           <p class="console-kicker">x402 surface check / may 2026</p>
           <h1>Inspect the public payment surface before a real agent spends.</h1>
           <p class="console-subtitle">
-            Paste a manifest, OpenAPI spec, direct endpoint, 402 challenge, MPP payment header, or x402 V2 requirements header. The check looks for HTTP resource leaks, missing price fields, inconsistent networks, placeholder payees, staging rails, broad browser surfaces, and payment metadata risks. It never sends payment headers and never attempts a paid call.
+            Paste a manifest, OpenAPI spec, direct endpoint, 402 challenge, MPP payment header, or x402 V2 requirements header. The check looks for HTTP resource leaks, missing price fields, inconsistent networks, placeholder payees, staging rails, browser payment-header blockers, and payment metadata risks. It never sends payment headers and never attempts a paid call.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#surfaceCheck">run surface check</a>
@@ -190,9 +190,15 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
             <a href="https://github.com/solana-foundation/pay-skills/pull/19#issuecomment-4455641258" target="_blank" rel="noreferrer">surface note</a>
           </article>
           <article>
+            <p class="card-command">browser</p>
+            <h3>anchor-x402</h3>
+            <p>Twenty sampled paid routes returned structured multi-rail x402 challenges, while browser preflights returned 405 before `X-PAYMENT` could be sent.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4455678163" target="_blank" rel="noreferrer">surface note</a>
+          </article>
+          <article>
             <p class="card-command">manifest</p>
             <h3>Fresh manifest shapes</h3>
-            <p>Endpoint arrays, item catalogs, `schemes[]` challenges, declared-price drift, x402 V2 requirements headers, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes.</p>
+            <p>Endpoint arrays, item catalogs, `schemes[]` challenges, declared-price drift, x402 V2 requirements headers, health/status routes, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes.</p>
             <a href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">current npm build</a>
           </article>
         </div>

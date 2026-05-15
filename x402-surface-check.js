@@ -287,6 +287,16 @@ function looksLikePlaceholderPayTo(payTo) {
   return false
 }
 
+function looksLikeOperationalHealthProbe(result) {
+  try {
+    const value = `${result.name ?? ''} ${new URL(result.url).pathname}`.toLowerCase()
+    return /(^|[/_\s-])(health|healthz|ready|readiness|live|liveness|status)([/_\s-]|$)/.test(value)
+  }
+  catch {
+    return /(^|[/_\s-])(health|healthz|ready|readiness|live|liveness|status)([/_\s-]|$)/i.test(result.name ?? '')
+  }
+}
+
 function addCheck(checks, check) {
   checks.push(check)
 }
@@ -335,7 +345,10 @@ function analyze() {
   const manifestHasCapabilities = capabilityList(manifest?.capabilities).length > 0 || Object.keys(manifest?.categories ?? {}).length > 0
   const allChallengesAre402 = probeState.endpointResults.length === 0
     ? hasChallenge
-    : probeState.endpointResults.every(result => result.status === 402 && result.hasChallenge)
+    : probeState.endpointResults.every(result => {
+      if (result.status === 402 && result.hasChallenge) return true
+      return result.status >= 200 && result.status < 300 && looksLikeOperationalHealthProbe(result)
+    })
   const allPricesPresent = challengeSummaries.length > 0
     && challengeSummaries.every(item => item.amount && item.payTo && item.asset && item.network)
   const noPlaceholderPayTo = accepts.length === 0
