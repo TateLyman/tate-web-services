@@ -242,14 +242,29 @@ function endpointEntries(manifest) {
   }
 
   for (const resource of manifest?.resources ?? []) {
-    if (typeof resource !== 'string') continue
-    const match = resource.match(/^(GET|POST|PUT|PATCH|DELETE)\s+(\S+)/i)
-    if (!match) continue
-    const [, method, rawPath] = match
-    const url = rawPath.startsWith('http')
-      ? rawPath
-      : new URL(rawPath, base).toString()
-    entries.push({ name: rawPath.split('/').filter(Boolean).at(-1) ?? rawPath, url, method: method.toUpperCase() })
+    if (typeof resource === 'string') {
+      const match = resource.match(/^(GET|POST|PUT|PATCH|DELETE)\s+(\S+)/i)
+      if (!match) continue
+      const [, method, rawPath] = match
+      const url = rawPath.startsWith('http')
+        ? rawPath
+        : new URL(rawPath, base).toString()
+      entries.push({ name: rawPath.split('/').filter(Boolean).at(-1) ?? rawPath, url, method: method.toUpperCase() })
+      continue
+    }
+
+    if (!resource || typeof resource !== 'object') continue
+    const rawPath = resource.url ?? resource.endpoint ?? resource.resource ?? resource.path
+    if (!rawPath) continue
+    entries.push({
+      name: resource.id
+        ?? resource.name
+        ?? resource.title
+        ?? String(resource.path ?? rawPath).split('/').filter(Boolean).at(-1)
+        ?? String(rawPath),
+      url: endpointUrl(rawPath, base),
+      method: String(resource.method ?? 'GET').toUpperCase(),
+    })
   }
 
   const seen = new Set()
