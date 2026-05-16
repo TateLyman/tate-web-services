@@ -95,8 +95,8 @@
           <article>
             <span>06</span>
             <h3>UZPROOF verify</h3>
-            <p>The paid verification endpoint returned a clean `$0.05` Solana x402 challenge with browser payment headers and a visible MPP negotiation path. Remaining notes were limited to free/auth-first route labeling and absolute resource URLs.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/28#issuecomment-4455613892" target="_blank" rel="noreferrer">verification note</a>
+            <p>Follow-up probes confirmed canonical Solana x402 pricing, browser payment headers, and an MPP `WWW-Authenticate: Payment` path on the paid verification route.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/28#issuecomment-4464777208" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <span>07</span>
@@ -113,8 +113,8 @@
           <article>
             <span>09</span>
             <h3>Agent Trust Bench</h3>
-            <p>After the initial discovery/CORS/resource-echo notes, follow-up probes against `.well-known/x402.json` now resolve through `discovery_url` to six clean adversarial x402 profiles with browser payment headers enabled.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/23#issuecomment-4455722170" target="_blank" rel="noreferrer">fix verification</a>
+            <p>The hosted OpenAPI now has populated paths. The latest follow-up shows the paid profile routes still need browser-readable preflight/body-level x402 output if browser agents are intended.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/23#issuecomment-4464775907" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <span>10</span>
@@ -161,8 +161,8 @@
           <article>
             <span>17</span>
             <h3>AlgoVoi compliance gate</h3>
-            <p>The compliance attestation and clear-address screen returned live verdicts with generic sanctions reasons and a tipping-off notice. The public note caught that the unsupported-network demo fixture validates the address before reaching the intended verdict.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/24#issuecomment-4455886793" target="_blank" rel="noreferrer">surface note</a>
+            <p>The unsupported-network demo fixture and browser preflight were fixed. Follow-up checks now reach the intended `unsupported_network` verdict and allow the payment header set.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/24#issuecomment-4464774497" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <span>18</span>

@@ -180,8 +180,8 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">clean</p>
             <h3>UZPROOF verify</h3>
-            <p>The paid verify endpoint exposes `$0.05` Solana x402 pricing, browser payment headers, and an MPP challenge path from no-payment probes.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/28#issuecomment-4455613892" target="_blank" rel="noreferrer">verification note</a>
+            <p>The paid verify endpoint now exposes canonical Solana x402 pricing, browser payment headers, and an MPP `Payment` challenge path from no-payment probes.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/28#issuecomment-4464777208" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <p class="card-command">price drift</p>
@@ -196,10 +196,10 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
             <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4464744893" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
-            <p class="card-command">fixed</p>
+            <p class="card-command">follow-up</p>
             <h3>Agent Trust Bench</h3>
-            <p>The canonical `.well-known/x402.json` now links through `discovery_url` to a clean adversarial resource catalog with browser payment headers enabled.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/23#issuecomment-4455722170" target="_blank" rel="noreferrer">fix verification</a>
+            <p>The hosted OpenAPI path is fixed; paid profile routes still need browser-readable preflight/body-level x402 output if browser agents are intended.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/23#issuecomment-4464775907" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <p class="card-command">discovery</p>
@@ -246,8 +246,8 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">compliance</p>
             <h3>AlgoVoi compliance gate</h3>
-            <p>The free pre-payment screen returns privacy-preserving compliance verdicts; the unsupported-network example needs a valid address fixture.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/24#issuecomment-4455886793" target="_blank" rel="noreferrer">surface note</a>
+            <p>The unsupported-network fixture and browser preflight were fixed; no-payment checks now hit the intended verdict and payment-header path.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/24#issuecomment-4464774497" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <p class="card-command">market data</p>
