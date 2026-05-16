@@ -121,7 +121,7 @@ result: markdown patch queue</code></pre>
           <p class="console-kicker">cli</p>
           <h2>Run the same no-payment pass from the CLI.</h2>
           <p>
-            The package is dependency-free and reads manifests, OpenAPI specs, item catalogs, or direct paid endpoints. It never sends payment headers, signs, or attempts paid calls. Current reports include grouped findings, cache-policy maps, accept-leg resource binding, timeout/expiry metadata, optional <code>--strict-cache</code> findings for missing policy headers, optional <code>--strict-proof</code> findings for idempotency and signed offer/receipt evidence, and contextual guide links for CORS, cache, Worker gates, resource echo, replay windows, and validation/auth ordering.
+            The package is dependency-free and reads manifests, OpenAPI specs, item catalogs, tool maps, string-valued endpoint maps, nested discovery links, or direct paid endpoints. It never sends payment headers, signs, or attempts paid calls. Current reports include grouped findings, cache-policy maps, accept-leg resource binding, timeout/expiry metadata, optional <code>--strict-cache</code> findings for missing policy headers, optional <code>--strict-proof</code> findings for idempotency and signed offer/receipt evidence, and contextual guide links for CORS, cache, Worker gates, resource echo, replay windows, and validation/auth ordering.
           </p>
         </div>
         <div class="terminal-window">
@@ -383,7 +383,7 @@ npx --yes x402-surface-check --strict-proof https://api.example.com/openapi.json
           <article>
             <p class="card-command">manifest</p>
             <h3>Fresh manifest shapes</h3>
-            <p>Endpoint arrays, <code>resources[]</code> catalogs, raw resource URL strings, item catalogs, <code>discovery_url</code> and OpenAPI links, OpenAPI server base paths, paid-operation prioritization, nested request schemas, explicit direct-endpoint bodies, <code>schemes[]</code> challenges, declared-price drift, x402 V2 requirements headers, cache-control posture, accept-leg resource binding, timeout/expiry metadata, optional strict-cache findings, optional strict-proof idempotency and signed offer/receipt findings, credential-like registry URL params with redacted report output, browser-readable 402 CORS gaps, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes.</p>
+            <p>Endpoint arrays, <code>resources[]</code> catalogs, <code>tools</code> maps, string-valued endpoint maps, raw resource URL strings, item catalogs, string and nested <code>discovery</code> links, OpenAPI server base paths, paid-operation prioritization, nested request schemas, explicit direct-endpoint bodies, <code>schemes[]</code> challenges, declared-price drift, x402 V2 requirements headers, cache-control posture, accept-leg resource binding, timeout/expiry metadata, optional strict-cache findings, optional strict-proof idempotency and signed offer/receipt findings, credential-like registry URL params with redacted report output, browser-readable 402 CORS gaps, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes.</p>
             <a href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">current npm build</a>
           </article>
         </div>
