@@ -69,6 +69,7 @@ const commands = {
     'security report  sample boundary map and patch order',
     'x402 checklist   launch controls for payment agents',
     'x402 batch       escrow, vouchers, channels, and claim cadence',
+    'x402 action      GitHub Action for CI payment-surface checks',
     'x402 cors      browser-readable 402 challenge fix',
     'x402 worker    Cloudflare Worker payment-gate starter',
     'x402 attack map finality, replay, cache, and discovery controls',

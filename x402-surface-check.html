@@ -79,6 +79,7 @@
             <a class="console-button primary" href="#surfaceCheck">run surface check</a>
             <a class="console-button secondary" href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">npm cli</a>
             <a class="console-button secondary" href="https://github.com/TateLyman/x402-surface-check" target="_blank" rel="noreferrer">github</a>
+            <a class="console-button secondary" href="https://github.com/TateLyman/x402-surface-check-action" target="_blank" rel="noreferrer">github action</a>
             <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
             <a class="console-button secondary" href="agent-payment-launch-review.html">private review</a>
             <a class="console-button secondary" href="agent-commerce-sample-report.html">sample report</a>
@@ -129,6 +130,15 @@ result: markdown patch queue</code></pre>
 npx --yes x402-surface-check https://api.example.com/openapi.json report.md
 npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/eth
 npx --yes x402-surface-check --strict-cache https://api.example.com/openapi.json</code></pre>
+        </div>
+        <div class="terminal-window">
+          <div class="terminal-topline">github action</div>
+          <pre><code>- uses: TateLyman/x402-surface-check-action@v1
+  with:
+    target: https://api.example.com/.well-known/x402
+    origin: https://app.example.com
+    strict-cache: true
+    output: x402-surface-report.md</code></pre>
         </div>
       </section>
 
