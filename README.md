@@ -43,6 +43,8 @@ npx serve .
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
 - `pay-skills-launch-queue.html` - live pay-skills registry PR watchlist for x402, MPP, Solana, Base, compute, commerce, wallet, and data-api launch surfaces
 - `pay-skills-launch-queue.json` - machine-readable data backing the Pay-Skills Launch Queue page
+- `x402-ecosystem-radar.html` - live Coinbase x402 PR radar for partner listings, MCP payment endpoints, mainnet rails, discovery metadata, and launch-control review priorities
+- `x402-ecosystem-radar.json` - machine-readable data backing the x402 Ecosystem Radar page
 - `x402-metadata-filter.html` - browser-only metadata filter for x402/Pay.sh payment requests, receipts, resource URLs, prompts, PII, and secret-like fields
 - `x402-metadata-filter.js` - local scoring, redaction, safe-envelope generation, copy, and report export logic for the x402 Metadata Filter
 - `agentcore-payment-policy.html` - browser-only AgentCore/x402 payment policy builder for Coinbase/Stripe payment connections, session caps, payee allowlists, approval rules, receipts, and audit evidence
@@ -140,6 +142,19 @@ The script reads the public `solana-foundation/pay-skills` pull-request queue an
 - `outreach/generated/pay-skills-launch-queue-YYYY-MM-DD.md`
 
 The page reports current agent-payment launch surfaces from registry submissions; the local outreach file is only a research queue.
+
+To regenerate the public x402 Ecosystem Radar page:
+
+```bash
+npm run pulse:x402-ecosystem
+```
+
+The script reads public `coinbase/x402` pull requests and writes:
+
+- `x402-ecosystem-radar.html`
+- `x402-ecosystem-radar.json`
+
+The page reports current Coinbase x402 partner listings, MCP/payment endpoint claims, discovery metadata, rail signals, and review-priority launch controls.
 
 The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-payment-policy.html` and `agentcore-payment-policy.js` directly when updating the control model.
 
