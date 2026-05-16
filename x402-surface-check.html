@@ -294,8 +294,8 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">audit trail</p>
             <h3>Mycelium Oasis</h3>
-            <p>The direct x402 gate is live at `$0.001`, but the challenge currently binds to a localhost resource and needs browser/testnet boundary clarity.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/70#issuecomment-4464811050" target="_blank" rel="noreferrer">surface note</a>
+            <p>The resource URL and actual 402 CORS header were fixed; browser `OPTIONS` preflight still returns 405, so browser agents remain blocked before the payment-header path.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/70#issuecomment-4465203573" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <p class="card-command">payai</p>
