@@ -21,6 +21,8 @@ const manualInputs = [
   document.querySelector('#hasDocumentedNetwork'),
   document.querySelector('#hasMetadataPolicy'),
   document.querySelector('#hasCachePolicy'),
+  document.querySelector('#hasPaymentIdentifier'),
+  document.querySelector('#hasSignedReceipt'),
   document.querySelector('#hasFailureLanguage'),
 ]
 
@@ -482,6 +484,23 @@ function challengeAccepts(challenges) {
   })
 }
 
+function extensionKeys(container) {
+  const extensions = container?.extensions
+  if (!extensions || typeof extensions !== 'object' || Array.isArray(extensions)) return []
+  return Object.keys(extensions)
+}
+
+function challengeExtensionKeys(challenge) {
+  return [
+    ...extensionKeys(challenge),
+    ...challengeAccepts([challenge]).flatMap(accept => extensionKeys(accept)),
+  ].map(key => key.toLowerCase())
+}
+
+function hasChallengeExtension(challenge, pattern) {
+  return challengeExtensionKeys(challenge).some(key => pattern.test(key))
+}
+
 function hasPaymentChallenge(challenge) {
   const accepts = challengeAccepts([challenge])
   return accepts.length > 0 || Boolean(challenge?.resource || challenge?.payment)
@@ -522,6 +541,10 @@ function looksLikeOperationalHealthProbe(result) {
   catch {
     return /(^|[/_\s-])(health|healthz|ready|readiness|live|liveness|status)([/_\s-]|$)/i.test(result.name ?? '')
   }
+}
+
+function isMutatingMethod(method) {
+  return !['GET', 'HEAD', 'OPTIONS'].includes(String(method ?? 'POST').toUpperCase())
 }
 
 function addCheck(checks, check) {
@@ -607,6 +630,15 @@ function analyze() {
     || /cache-control|no-store|private cache|shared cache|cdn cache|proxy cache|bypass cache/i.test(reviewText)
   const hasFailureLanguage = manual('hasFailureLanguage')
     || /failed|expired|duplicate|dispute|refund|settle|reconcile|idempot/i.test(reviewText)
+  const hasPaymentIdentifier = manual('hasPaymentIdentifier')
+    || challenges.some(challenge => hasChallengeExtension(challenge, /payment[-_]?identifier|idempotenc/))
+    || /payment[-_]?identifier|idempotency|idempotency key|payment id/i.test(reviewText)
+  const hasSignedReceipt = manual('hasSignedReceipt')
+    || challenges.some(challenge => hasChallengeExtension(challenge, /offer[-_]?receipt|signed[-_]?(offer|receipt)/))
+    || /offer[-_]?receipt|signed offer|signed receipt|proof of terms|proof of delivery/i.test(reviewText)
+  const hasMutatingPaidRoute = directEndpoint
+    || entries.some(entry => isMutatingMethod(entry.method))
+    || probeState.endpointResults.some(result => isMutatingMethod(result.method))
   const noSingularConflict = !(manifest?.x402Endpoint && manifest?.x402Endpoints)
   const probeBlocked = probeState.endpointResults.some(result => result.error)
 
@@ -749,6 +781,20 @@ function analyze() {
     ok: hasCachePolicy,
     weight: 6,
     fix: 'Document Cache-Control: no-store/private or cache-bypass behavior for paid responses and edge proxies.',
+  })
+  addCheck(checks, {
+    group: 'Scope',
+    label: 'Mutating paid routes have idempotency proof',
+    ok: !hasMutatingPaidRoute || hasPaymentIdentifier,
+    weight: 6,
+    fix: 'Declare payment-identifier support or document the idempotency key used to deduplicate paid retries.',
+  })
+  addCheck(checks, {
+    group: 'Scope',
+    label: 'Signed offer or receipt evidence is available',
+    ok: !hasChallenge || hasSignedReceipt,
+    weight: 5,
+    fix: 'Advertise signed offers or signed receipts when clients need portable proof of committed terms and delivery.',
   })
   addCheck(checks, {
     group: 'Scope',
