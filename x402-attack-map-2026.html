@@ -130,7 +130,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">100%</p>
             <h3>Cache leakage condition</h3>
-            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.21 now makes cache posture part of the report.</p>
+            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.22 now makes cache posture part of the report, with an optional strict-cache mode for missing policy headers.</p>
           </article>
           <article>
             <p class="card-command">71.8%</p>
@@ -202,7 +202,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">cache</p>
             <h3>Paid-content reuse</h3>
-            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.21 prints a Cache Policy Map, flags explicitly cacheable challenge responses, and links the relevant implementation guide when cache or CORS findings appear. The Worker starter shows a minimal no-store/private payment gate.</p>
+            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.22 prints a Cache Policy Map, flags explicitly cacheable challenge responses, offers <code>--strict-cache</code> for missing policy headers, and links the relevant implementation guide when cache or CORS findings appear. The Worker starter shows a minimal no-store/private payment gate.</p>
             <a href="x402-surface-check.html">open checker</a>
             <a href="cloudflare-x402-worker.html">worker guide</a>
           </article>
@@ -283,7 +283,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">cache</p>
             <h3>Challenge cache policy</h3>
-            <p>The CLI reports observed <code>Cache-Control</code> on no-payment challenge responses and warns on explicitly cacheable payment gates.</p>
+            <p>The CLI reports observed <code>Cache-Control</code> on no-payment challenge responses, warns on explicitly cacheable payment gates, and can flag missing cache policy in strict mode.</p>
           </article>
           <article>
             <p class="card-command">metadata</p>
