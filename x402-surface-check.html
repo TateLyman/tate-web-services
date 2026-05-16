@@ -334,6 +334,11 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
             </label>
           </fieldset>
 
+          <label>
+            Direct endpoint JSON body
+            <textarea id="directRequestBody" placeholder='{"messages":[{"role":"user","content":"quote the current CPI trend"}],"model":"example"}'></textarea>
+          </label>
+
           <div class="result-actions">
             <button class="console-button primary" id="fetchManifest" type="button">fetch manifest</button>
             <button class="console-button secondary" id="probeEndpoints" type="button">try no-payment probes</button>

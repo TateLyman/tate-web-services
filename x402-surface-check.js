@@ -4,6 +4,7 @@ const challengeJson = document.querySelector('#challengeJson')
 const challengeHeader = document.querySelector('#challengeHeader')
 const directEndpointMode = document.querySelector('#directEndpointMode')
 const endpointMethod = document.querySelector('#endpointMethod')
+const directRequestBody = document.querySelector('#directRequestBody')
 const fetchManifest = document.querySelector('#fetchManifest')
 const probeEndpoints = document.querySelector('#probeEndpoints')
 const surfaceScore = document.querySelector('#surfaceScore')
@@ -35,6 +36,17 @@ function parseJson(text) {
   }
   catch {
     return null
+  }
+}
+
+function parseDirectRequestBody() {
+  const clean = directRequestBody.value.trim()
+  if (!clean) return undefined
+  try {
+    return JSON.parse(clean)
+  }
+  catch {
+    return undefined
   }
 }
 
@@ -244,6 +256,7 @@ function endpointEntries(manifest) {
       name: new URL(directUrl).pathname.split('/').filter(Boolean).at(-1) ?? directUrl,
       url: directUrl,
       method: endpointMethod.value || 'POST',
+      requestBody: parseDirectRequestBody(),
     })
   }
 
@@ -532,7 +545,7 @@ function analyze() {
     || networkNames.some(network => [...challengeNetworks].some(challengeNetwork => challengeNetwork.includes(network) || network.includes(challengeNetwork)))
   const browserHeader = manual('hasBrowserPaymentHeader')
     || probeState.endpointResults.some(result => result.allowHeaders === '*' || /x-payment/i.test(result.allowHeaders ?? ''))
-  const reviewText = `${manifestJson.value}\n${challengeJson.value}\n${challengeHeader.value}\n${JSON.stringify(challenges)}`
+  const reviewText = `${manifestJson.value}\n${challengeJson.value}\n${challengeHeader.value}\n${directRequestBody.value}\n${JSON.stringify(challenges)}`
   const hasMetadataPolicy = manual('hasMetadataPolicy')
     || /metadata|resource|description|memo|redact|filter|minimi[sz]e|pii|private/i.test(reviewText)
   const hasFailureLanguage = manual('hasFailureLanguage')
@@ -878,6 +891,10 @@ async function fetchPublicManifest() {
 
 async function tryNoPaymentProbes() {
   const manifest = parseJson(manifestJson.value)
+  if (directEndpointMode.checked && directRequestBody.value.trim() && parseDirectRequestBody() === undefined) {
+    surfaceSummary.textContent = 'Direct endpoint body must be valid JSON before probing.'
+    return
+  }
   const entries = endpointEntries(manifest)
   if (entries.length === 0) return
 
@@ -897,7 +914,7 @@ async function tryNoPaymentProbes() {
         },
         body: method === 'GET' || method === 'HEAD'
           ? undefined
-          : JSON.stringify(entry.requestBody ?? {}),
+          : JSON.stringify(entry.requestBody === undefined ? {} : entry.requestBody),
       })
       const text = await response.text()
       let json = null
@@ -975,5 +992,6 @@ challengeHeader.addEventListener('input', updateResult)
 manifestUrl.addEventListener('input', updateResult)
 directEndpointMode.addEventListener('change', updateResult)
 endpointMethod.addEventListener('change', updateResult)
+directRequestBody.addEventListener('input', updateResult)
 manualInputs.forEach(input => input.addEventListener('change', updateResult))
 updateResult()
