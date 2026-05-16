@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>x402 Surface Check | Manifest and 402 Review | Tate Programs</title>
-    <meta name="description" content="Free browser checker for x402 and MPP public launch surfaces. Review manifests, OpenAPI specs, direct paid endpoints, 402 challenges, prices, resource URLs, payment metadata, staging rails, placeholder payees, and browser CORS behavior without payment headers or paid calls.">
+    <meta name="description" content="Free browser checker for x402 and MPP public launch surfaces. Review manifests, OpenAPI specs, direct paid endpoints, 402 challenges, prices, resource URLs, payment metadata, cache policy, staging rails, placeholder payees, and browser CORS behavior without payment headers or paid calls.">
     <link rel="canonical" href="https://tateprograms.com/x402-surface-check.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="x402 Surface Check">
@@ -315,7 +315,7 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">manifest</p>
             <h3>Fresh manifest shapes</h3>
-            <p>Endpoint arrays, `resources[]` catalogs, raw resource URL strings, item catalogs, `discovery_url` and OpenAPI links, OpenAPI server base paths, paid-operation prioritization, nested request schemas, explicit direct-endpoint bodies, `schemes[]` challenges, declared-price drift, x402 V2 requirements headers, browser-readable 402 CORS gaps, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes.</p>
+            <p>Endpoint arrays, `resources[]` catalogs, raw resource URL strings, item catalogs, `discovery_url` and OpenAPI links, OpenAPI server base paths, paid-operation prioritization, nested request schemas, explicit direct-endpoint bodies, `schemes[]` challenges, declared-price drift, x402 V2 requirements headers, cache-control posture, browser-readable 402 CORS gaps, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes.</p>
             <a href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">current npm build</a>
           </article>
         </div>
@@ -374,6 +374,7 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
             <label class="check-row"><input id="hasBrowserPaymentHeader" type="checkbox"> Browser clients can send the required payment header.</label>
             <label class="check-row"><input id="hasDocumentedNetwork" type="checkbox"> Manifest networks match the live payment challenges.</label>
             <label class="check-row"><input id="hasMetadataPolicy" type="checkbox"> Payment metadata is documented and minimized.</label>
+            <label class="check-row"><input id="hasCachePolicy" type="checkbox"> Payment-gated responses bypass shared caches or use no-store/private.</label>
             <label class="check-row"><input id="hasFailureLanguage" type="checkbox"> Failed, expired, duplicate, and disputed payments are documented.</label>
           </fieldset>
         </div>
@@ -422,6 +423,11 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
             <p class="card-command">cors</p>
             <h3>Browser payment path</h3>
             <p>If the public flow expects browser clients, the API must allow the payment header path it documents.</p>
+          </article>
+          <article>
+            <p class="card-command">cache</p>
+            <h3>Shared-cache boundary</h3>
+            <p>Paid routes should avoid public cache policy, and protected responses should use no-store/private or bypass shared proxy caches.</p>
           </article>
           <article>
             <p class="card-command">scope</p>

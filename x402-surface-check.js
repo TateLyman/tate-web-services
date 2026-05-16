@@ -20,6 +20,7 @@ const manualInputs = [
   document.querySelector('#hasBrowserPaymentHeader'),
   document.querySelector('#hasDocumentedNetwork'),
   document.querySelector('#hasMetadataPolicy'),
+  document.querySelector('#hasCachePolicy'),
   document.querySelector('#hasFailureLanguage'),
 ]
 
@@ -548,6 +549,8 @@ function analyze() {
   const reviewText = `${manifestJson.value}\n${challengeJson.value}\n${challengeHeader.value}\n${directRequestBody.value}\n${JSON.stringify(challenges)}`
   const hasMetadataPolicy = manual('hasMetadataPolicy')
     || /metadata|resource|description|memo|redact|filter|minimi[sz]e|pii|private/i.test(reviewText)
+  const hasCachePolicy = manual('hasCachePolicy')
+    || /cache-control|no-store|private cache|shared cache|cdn cache|proxy cache|bypass cache/i.test(reviewText)
   const hasFailureLanguage = manual('hasFailureLanguage')
     || /failed|expired|duplicate|dispute|refund|settle|reconcile|idempot/i.test(reviewText)
   const noSingularConflict = !(manifest?.x402Endpoint && manifest?.x402Endpoints)
@@ -671,6 +674,13 @@ function analyze() {
     ok: hasMetadataPolicy,
     weight: 8,
     fix: 'Document what metadata leaves the app, and filter private prompts, user content, internal IDs, and secrets.',
+  })
+  addCheck(checks, {
+    group: 'Scope',
+    label: 'Protected payment responses avoid shared cache reuse',
+    ok: hasCachePolicy,
+    weight: 6,
+    fix: 'Document Cache-Control: no-store/private or cache-bypass behavior for paid responses and edge proxies.',
   })
   addCheck(checks, {
     group: 'Scope',
