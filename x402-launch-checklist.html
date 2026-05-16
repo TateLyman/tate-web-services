@@ -46,6 +46,7 @@
         <a href="agent-stack-radar.html">radar</a>
         <a href="agent-commerce-gate.html">commerce-gate</a>
         <a href="agentcore-payment-policy.html">agentcore-policy</a>
+        <a href="x402-batch-settlement-checklist.html">batch</a>
         <a href="x402-cors-fix.html">cors</a>
         <a href="x402-attack-map-2026.html">attack-map</a>
         <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
@@ -77,6 +78,7 @@
             <a class="console-button primary" href="#checklist">read checklist</a>
             <a class="console-button secondary" href="agent-commerce-gate.html">run gate</a>
             <a class="console-button secondary" href="agentcore-payment-policy.html">build policy</a>
+            <a class="console-button secondary" href="x402-batch-settlement-checklist.html">batch checklist</a>
             <a class="console-button secondary" href="pay-sh-catalog-pulse.html">Pay.sh pulse</a>
             <a class="console-button secondary" href="x402-metadata-filter.html">metadata filter</a>
             <a class="console-button secondary" href="x402-attack-map-2026.html">attack map</a>
@@ -236,6 +238,10 @@
             For AgentCore-style payment sessions, generate a policy draft with caps, payee allowlists, approval rules, receipts, replay protection, and metadata boundaries.
           </p>
           <pre><code>https://tateprograms.com/agentcore-payment-policy.html</code></pre>
+          <p>
+            For batch-settled x402 routes, check escrow, signed vouchers, channel storage, claim cadence, refund windows, and reconciliation states.
+          </p>
+          <pre><code>https://tateprograms.com/x402-batch-settlement-checklist.html</code></pre>
         </article>
       </section>
 
@@ -263,6 +269,13 @@
             <h3>Spending controls</h3>
             <p>Agent-payment documentation treats spending caps as the primary guardrail for predictable costs and recommends both app-level and on-chain limits where possible.</p>
             <a href="https://www.agentpmt.com/docs/core-concepts/setting-spending-caps" target="_blank" rel="noreferrer">open docs</a>
+          </article>
+          <article>
+            <p class="card-command">batch</p>
+            <h3>x402 voucher settlement</h3>
+            <p>Batch settlement adds escrow, cumulative vouchers, claim jobs, settlement sweeps, and refunds to the payment-agent launch surface.</p>
+            <a href="x402-batch-settlement-checklist.html">open checklist</a>
+            <a href="https://docs.x402.org/schemes/batch-settlement" target="_blank" rel="noreferrer">open docs</a>
           </article>
           <article>
             <p class="card-command">metadata</p>
@@ -295,6 +308,7 @@
       <a href="agent-commerce-gate.html">commerce gate</a>
       <a href="pay-sh-catalog-pulse.html">pay pulse</a>
       <a href="x402-metadata-filter.html">metadata filter</a>
+      <a href="x402-batch-settlement-checklist.html">batch checklist</a>
       <a href="x402-attack-map-2026.html">attack map</a>
       <a href="agentcore-payment-policy.html">policy builder</a>
       <a href="agent-stack-radar.html">radar</a>

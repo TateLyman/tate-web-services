@@ -52,6 +52,7 @@ npx serve .
 - `launch-proof-promo-flow.html` - reusable ElevenCreative Flow blueprint for proof-led launch clips, scripts, scene prompts, captions, and a fact gate
 - `mcp-launch-trust-2026.html` - May 2026 MCP product-launch trust ledger for scoped credentials, audit trails, tenant boundaries, STDIO command safety, registry metadata, and buyer-facing proof
 - `x402-launch-checklist.html` - agent-payment launch checklist for x402 and Pay.sh demos
+- `x402-batch-settlement-checklist.html` - batch-settled x402 launch checklist for escrow, vouchers, channel storage, deposit caps, claim cadence, refunds, and reconciliation evidence
 - `release-readiness-2026.html` - public JS/npm/Action/MCP/payment-agent launch-readiness runbook
 - `mcp-launch-review.html` - fixed-scope paid MCP launch check page
 - `mcp-directory-launch.html` - fixed-scope MCP directory listing launch pass

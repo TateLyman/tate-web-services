@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>x402 Batch Settlement Checklist | Tate Programs</title>
+    <meta name="description" content="A May 2026 readiness checklist for x402 batch settlement launches: escrow, signed vouchers, channel storage, deposit caps, claim cadence, refunds, and reconciliation evidence.">
+    <link rel="canonical" href="https://tateprograms.com/x402-batch-settlement-checklist.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="x402 Batch Settlement Checklist">
+    <meta property="og:description" content="Review escrow, vouchers, channel storage, refunds, and claim cadence before launching batch-settled x402 payments.">
+    <meta property="og:url" content="https://tateprograms.com/x402-batch-settlement-checklist.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="x402 Batch Settlement Checklist">
+    <meta name="twitter:description" content="A practical field guide for batch-settled x402 launches.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "x402 Batch Settlement Checklist",
+        "description": "A May 2026 readiness checklist for x402 batch settlement launches: escrow, signed vouchers, channel storage, deposit caps, claim cadence, refunds, and reconciliation evidence.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-16",
+        "dateModified": "2026-05-16",
+        "mainEntityOfPage": "https://tateprograms.com/x402-batch-settlement-checklist.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="x402-surface-check.html">surface</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="x402-cors-fix.html">cors</a>
+        <a href="x402-attack-map-2026.html">attack-map</a>
+        <a href="agentcore-payment-policy.html">policy</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=x402%20batch%20settlement%20review">
+        <span></span>
+        batch review
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/x402-batch-settlement</strong>
+        <em>escrow / vouchers / claims</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">x402 batch settlement / may 2026</p>
+          <h1>When x402 moves to vouchers, launch risk moves to session state.</h1>
+          <p class="console-subtitle">
+            Batch settlement lets agents authorize many small paid interactions with signed vouchers and redeem them later in bulk. That makes high-frequency agent commerce cheaper, but it also adds new proof requirements: escrow funding, channel storage, voucher monotonicity, claim timing, refund windows, and reconciliation after partial failure.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#checklist">read checklist</a>
+            <a class="console-button secondary" href="https://www.x402.org/writing/x402-batch-settlement" target="_blank" rel="noreferrer">x402 announcement</a>
+            <a class="console-button secondary" href="https://docs.x402.org/schemes/batch-settlement" target="_blank" rel="noreferrer">official docs</a>
+            <a class="console-button secondary" href="agentcore-payment-policy.html">policy builder</a>
+            <a class="console-button ghost" href="x402-surface-check.html">surface check</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>scheme</dt>
+              <dd>batch-settlement</dd>
+            </div>
+            <div>
+              <dt>hot path</dt>
+              <dd>signed voucher</dd>
+            </div>
+            <div>
+              <dt>risk</dt>
+              <dd>state drift</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="x402 batch settlement terminal preview">
+          <div class="terminal-topline">batch.trace</div>
+          <pre><code>$ inspect batch-settlement
+channel: funded escrow
+voucher: cumulative, signed, monotonic
+storage: durable and shared
+claims: scheduled before withdraw delay
+refunds: idle channel path documented
+result: launch proof, not just demo success</code></pre>
+        </aside>
+      </section>
+
+      <section class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">why now</p>
+          <h2>The public x402 surface is no longer only one request, one settlement.</h2>
+          <p>
+            The official x402 team announced batch settlement on May 11, 2026. The model separates request-time authorization from later onchain redemption: the buyer commits funds, signs cumulative vouchers per request, the seller verifies those vouchers cheaply, and settlement happens later in bulk. That is a strong fit for agent loops, inference, data, and compute, but it shifts review from a single <code>402</code> response to the lifecycle around channels.
+          </p>
+        </article>
+      </section>
+
+      <section id="checklist" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">readiness checklist</p>
+          <h2>Use this before putting batch-settled routes in front of agents.</h2>
+
+          <h3>1. Make the scheme explicit in discovery</h3>
+          <p>
+            The paid route should say when it uses <code>batch-settlement</code> instead of immediate exact settlement. Agents need to know whether they are authorizing a one-off transfer, opening a channel, topping up escrow, or signing a voucher against an existing channel.
+          </p>
+
+          <h3>2. Publish the per-request ceiling</h3>
+          <p>
+            Batch settlement can support dynamic usage, but each route still needs a maximum charge per interaction. Put the ceiling in the challenge and docs, then explain when the server may settle for less than that ceiling.
+          </p>
+
+          <h3>3. Cap deposits separately from route price</h3>
+          <p>
+            A per-call max does not bound the session if the client auto-deposits too much. Show the deposit multiplier, maximum deposit, top-up trigger, and what happens when the cap is reached.
+          </p>
+
+          <h3>4. Treat voucher signing as a hot credential</h3>
+          <p>
+            If voucher signing is delegated to a separate key, document the delegation boundary. The buyer should be able to rotate it, revoke it, and prove which signer authorized each cumulative amount.
+          </p>
+
+          <h3>5. Prove vouchers are monotonic</h3>
+          <p>
+            Every voucher should advance the cumulative amount for a channel. Reject stale vouchers, duplicate vouchers, lower cumulative amounts, route mismatches, expired sessions, and vouchers for the wrong receiver.
+          </p>
+
+          <h3>6. Use durable, shared channel storage</h3>
+          <p>
+            In-memory channel state is fine for a toy demo. Production needs storage that survives restarts. Serverless or multi-instance deployments need shared storage so two workers cannot accept conflicting channel state.
+          </p>
+
+          <h3>7. Schedule claims before withdrawal risk</h3>
+          <p>
+            The claim interval, settle interval, refund interval, and withdrawal delay should be visible. Operators need enough margin to claim outstanding vouchers before a payer can exit a channel.
+          </p>
+
+          <h3>8. Separate claim, settle, and refund evidence</h3>
+          <p>
+            A launch report should show which vouchers were accepted, when they were claimed, when claimed funds were swept to the receiver, and how idle balances are refunded.
+          </p>
+
+          <h3>9. Reconcile paid-but-not-served and served-but-not-claimed states</h3>
+          <p>
+            Batch settlement changes failure handling. Track whether the server served the resource after voucher verification, whether the voucher was later claimed, and whether the user can recover from a channel resync.
+          </p>
+
+          <h3>10. Keep browser CORS and resource binding intact</h3>
+          <p>
+            Batch-settled routes still need readable <code>402</code> responses, exposed payment headers, canonical <code>resource.url</code>, and accept-level resource echo. The settlement scheme changes, but the launch surface still has to be inspectable.
+          </p>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">proof fields</p>
+          <h2>What a batch-settlement review should capture.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">channel</p>
+            <h3>Escrow map</h3>
+            <p>Network, token, receiver, channel id, deposit policy, maximum deposit, top-up policy, and withdrawal delay.</p>
+          </article>
+          <article>
+            <p class="card-command">voucher</p>
+            <h3>Signed state</h3>
+            <p>Signer, cumulative amount, route binding, expiry, nonce or sequence, replay handling, and stale-voucher rejection.</p>
+          </article>
+          <article>
+            <p class="card-command">storage</p>
+            <h3>Persistence</h3>
+            <p>Where the latest voucher and channel session state live, whether storage is shared, and how recovery works after restart.</p>
+          </article>
+          <article>
+            <p class="card-command">claim</p>
+            <h3>Operator cadence</h3>
+            <p>Claim interval, settle interval, refund interval, max claims per batch, and alerting when claim lag grows.</p>
+          </article>
+          <article>
+            <p class="card-command">refund</p>
+            <h3>Exit path</h3>
+            <p>Idle-channel refund rules, cooperative close behavior, outstanding-voucher handling, and user-facing recovery copy.</p>
+          </article>
+          <article>
+            <p class="card-command">ledger</p>
+            <h3>Reconciliation</h3>
+            <p>Per-request served state, voucher accepted state, claim state, onchain sweep state, and unresolved discrepancy queue.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">commands</p>
+          <h2>Start with normal surface checks, then inspect batch state.</h2>
+          <p>
+            A public no-payment check still verifies whether the route advertises the scheme, price ceiling, network, payee, resource URL, and browser readability. Batch-specific evidence then comes from docs, code, logs, or operator screenshots rather than paid calls.
+          </p>
+          <pre><code>npx --yes x402-surface-check@latest \
+  --endpoint --method GET https://api.example.com/metered \
+  --origin https://app.example.com
+
+curl -si https://api.example.com/metered \
+  -H 'Origin: https://app.example.com'
+
+# Then review evidence for:
+# - deposit policy and maximum deposit
+# - voucher signer delegation
+# - durable channel storage
+# - claim/settle/refund intervals
+# - reconciliation states</code></pre>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">paid review angle</p>
+            <h2>The offer is a lifecycle review, not a payment attempt.</h2>
+            <p>
+              Send the public route, docs, and non-secret evidence for channel storage, voucher signing, and claim jobs. The review returns a spend map, state-machine gaps, and a patch order without sending payment headers or touching private keys.
+            </p>
+          </div>
+          <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=x402%20batch%20settlement%20review&amp;body=Public%20route%20or%20docs%3A%0AScheme%20%28batch-settlement%2Fexact%2Fupto%29%3A%0AWhat%20agents%20buy%3A%0AChannel%20storage%20evidence%3A%0AClaim%2Fsettle%2Frefund%20evidence%3A%0ALaunch%20deadline%3A">scope a review</a>
+        </div>
+      </section>
+
+      <section class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">source trail</p>
+          <h2>Primary sources used for this checklist.</h2>
+          <ul>
+            <li><a href="https://www.x402.org/writing/x402-batch-settlement" target="_blank" rel="noreferrer">Introducing x402 Batch Settlement</a>, published May 11, 2026.</li>
+            <li><a href="https://docs.x402.org/schemes/batch-settlement" target="_blank" rel="noreferrer">Official x402 batch settlement docs</a>, including server storage, client setup, deposit policy, voucher signer delegation, receiver authorizer, and settlement policy sections.</li>
+            <li><a href="x402-cors-fix.html">x402 CORS Fix</a> for the browser-readable 402 and resource-binding checks that still apply to batch-settled routes.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
