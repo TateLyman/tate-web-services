@@ -168,8 +168,8 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">multi-rail</p>
             <h3>KR Crypto Intelligence</h3>
-            <p>The manifest advertises Base, Polygon, and Solana rails while sampled routes return live Base x402 challenges.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/35#issuecomment-4455433768" target="_blank" rel="noreferrer">proof comment</a>
+            <p>After the first pass, sampled paid routes now return clean x402 challenges with browser preflight and resource URLs aligned.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/35#issuecomment-4464741622" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <p class="card-command">pricing</p>
@@ -186,14 +186,14 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">price drift</p>
             <h3>HYRE Agent</h3>
-            <p>OpenAPI-declared prices were 10x lower than the live Solana 402 challenges on sampled DeFi intelligence routes.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/19#issuecomment-4455641258" target="_blank" rel="noreferrer">surface note</a>
+            <p>The 10x OpenAPI/live price drift was fixed; sampled Solana routes now match live 402 challenge prices.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/19#issuecomment-4464749120" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <p class="card-command">browser</p>
             <h3>anchor-x402</h3>
-            <p>Twenty sampled paid routes returned structured multi-rail x402 challenges, while browser preflights returned 405 before `X-PAYMENT` could be sent.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4455678163" target="_blank" rel="noreferrer">surface note</a>
+            <p>Browser preflight is fixed across sampled routes; actual 402 responses still need ACAO so browser agents can read payment requirements.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4464744893" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <p class="card-command">fixed</p>
@@ -234,14 +234,14 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">market data</p>
             <h3>Blocksize market data</h3>
-            <p>Four live crypto, FX, and metals routes returned clean Solana x402 challenges with browser payment headers enabled.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4455863491" target="_blank" rel="noreferrer">verification note</a>
+            <p>Resource echo is fixed on sampled market-data routes; actual 402 responses still need ACAO for browser-readable payment requirements.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4464747368" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <p class="card-command">ecosystem</p>
             <h3>x402watch analytics</h3>
-            <p>Paid wash-detail, transaction, history, and wallet-check routes return Base x402 challenges; OpenAPI needs clearer paid-route metadata.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/36#issuecomment-4455875409" target="_blank" rel="noreferrer">surface note</a>
+            <p>OpenAPI metadata, resource echo, and POST preflight are fixed; actual 402 responses still need browser-readable CORS.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/36#issuecomment-4464743543" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <p class="card-command">compliance</p>
@@ -282,8 +282,8 @@ npx --yes x402-surface-check --endpoint --method POST https://x402.rpc.ankr.com/
           <article>
             <p class="card-command">devtools</p>
             <h3>Boundary Guard x402</h3>
-            <p>Paid readiness and receipt routes return structured multi-rail x402 challenges; resource binding and live-vs-sidecar discovery scope need polish.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/52#issuecomment-4456117811" target="_blank" rel="noreferrer">surface note</a>
+            <p>Resource binding, sidecar scope, and health-probe boundaries were fixed; sampled paid REST routes now read clean.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/52#issuecomment-4464739109" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <p class="card-command">manifest</p>

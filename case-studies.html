@@ -83,8 +83,8 @@
           <article>
             <span>04</span>
             <h3>KR Crypto Intelligence</h3>
-            <p>The manifest advertises Base, Polygon, and Solana rails. Sampled paid routes returned live Base x402 challenges, with remaining notes around browser preflight and accept metadata.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/35#issuecomment-4455433768" target="_blank" rel="noreferrer">proof comment</a>
+            <p>Initial probes found browser preflight and accept-resource gaps. Follow-up probes now show sampled paid routes returning clean x402 challenges with browser preflight and resource URLs aligned.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/35#issuecomment-4464741622" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <span>05</span>
@@ -101,14 +101,14 @@
           <article>
             <span>07</span>
             <h3>HYRE Agent</h3>
-            <p>Live OpenAPI probes confirmed coherent Solana x402 challenges across sampled DeFi intelligence routes, then isolated a material 10x price drift between documented `x-payment-info` amounts and live challenge prices.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/19#issuecomment-4455641258" target="_blank" rel="noreferrer">surface note</a>
+            <p>Live OpenAPI probes isolated a material 10x price drift. The provider moved to a single source of truth, and follow-up probes now show sampled prices matching live Solana 402 challenges.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/19#issuecomment-4464749120" target="_blank" rel="noreferrer">fix verification</a>
           </article>
           <article>
             <span>08</span>
             <h3>anchor-x402</h3>
-            <p>OpenAPI probes found structured multi-rail x402 challenges across sampled Base/Solana endpoints, then isolated a browser preflight blocker where `OPTIONS` returns 405 before `X-PAYMENT` can be sent.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4455678163" target="_blank" rel="noreferrer">surface note</a>
+            <p>Browser preflight was fixed after the first pass. The latest follow-up isolated the remaining actual-402 CORS header needed for browser agents to read payment requirements.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4464744893" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <span>09</span>
@@ -149,14 +149,14 @@
           <article>
             <span>15</span>
             <h3>Blocksize market data</h3>
-            <p>VWAP, bid/ask, FX, and metals endpoints returned clean Solana mainnet x402 challenges at the documented prices, with browser preflight allowing `content-type,x-payment`.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4455863491" target="_blank" rel="noreferrer">verification note</a>
+            <p>VWAP, bid/ask, FX, and metals endpoints return coherent Solana mainnet x402 challenges. The resource echo patch landed; actual 402 responses still need ACAO for browser readability.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4464747368" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <span>16</span>
             <h3>x402watch analytics</h3>
-            <p>Paid ecosystem analytics endpoints returned Base x402 challenges for wash detail, transaction history, category history, and wallet checks. The public note isolated OpenAPI paid/free labeling and POST preflight method polish.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/36#issuecomment-4455875409" target="_blank" rel="noreferrer">surface note</a>
+            <p>Paid ecosystem analytics endpoints return Base x402 challenges. OpenAPI metadata, resource echo, and POST preflight were fixed; actual 402 responses still need browser-readable CORS.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/36#issuecomment-4464743543" target="_blank" rel="noreferrer">follow-up note</a>
           </article>
           <article>
             <span>17</span>
@@ -197,8 +197,8 @@
           <article>
             <span>23</span>
             <h3>Boundary Guard x402</h3>
-            <p>Sampled scan, health-probe, readiness, launch-pack, and receipt routes returned structured Solana/Base x402 challenges. The public note scoped remaining work to resource binding and live discovery clarity.</p>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/52#issuecomment-4456117811" target="_blank" rel="noreferrer">surface note</a>
+            <p>Sampled scan, health-probe, readiness, launch-pack, and receipt routes returned structured Solana/Base x402 challenges. Follow-up verification cleared resource binding, sidecar scope, and health-probe boundary notes.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/52#issuecomment-4464739109" target="_blank" rel="noreferrer">fix verification</a>
           </article>
         </div>
       </section>
