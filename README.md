@@ -35,7 +35,7 @@ npx serve .
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
 - `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, linked `discovery_url` catalogs, `resources[]` catalogs, raw resource URL strings, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, `schemes[]` challenge arrays, declared-price drift, cache-control posture, contextual guide links, browser origin/payment-header preflight blockers, MPP payment headers, x402 V2 requirements headers, health/status routes, and legacy decimal x402 v1 challenges
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
-- `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, facilitator binding, replay, cache hygiene, metadata boundaries, and discovery steering
+- `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, settlement binding, replay, cache hygiene, discovery steering, AgentCore payment policy, and measured failure evidence
 - `cloudflare-x402-worker.html` - Cloudflare Worker launch guide for x402 and MPP-style payment gates with browser-readable 402, `X-PAYMENT` preflight, no-store/private cache policy, Vary headers, and no grant before verification
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
@@ -43,7 +43,7 @@ npx serve .
 - `pay-skills-launch-queue.json` - machine-readable data backing the Pay-Skills Launch Queue page
 - `x402-metadata-filter.html` - browser-only metadata filter for x402/Pay.sh payment requests, receipts, resource URLs, prompts, PII, and secret-like fields
 - `x402-metadata-filter.js` - local scoring, redaction, safe-envelope generation, copy, and report export logic for the x402 Metadata Filter
-- `agentcore-payment-policy.html` - browser-only AgentCore/x402 payment policy builder for session caps, payee allowlists, approval rules, receipts, and audit evidence
+- `agentcore-payment-policy.html` - browser-only AgentCore/x402 payment policy builder for Coinbase/Stripe payment connections, session caps, payee allowlists, approval rules, receipts, and audit evidence
 - `agentcore-payment-policy.js` - local policy scoring and JSON export logic for AgentCore, x402, MPP, and Pay.sh payment demos
 - `mcp-registry-audit.html` - browser-only MCP registry/server.json audit tool
 - `mcp-registry-audit.js` - public metadata checks for server.json and GitHub repo launch proof

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AgentCore Payment Policy Builder | x402 Controls | Tate Programs</title>
-    <meta name="description" content="Browser-only AgentCore and x402 payment policy builder for session spend limits, recipient allowlists, approval gates, receipts, metadata filtering, and audit evidence.">
+    <meta name="description" content="Browser-only AgentCore and x402 payment policy builder for Coinbase/Stripe payment connections, session spend limits, recipient allowlists, approval gates, receipts, metadata filtering, and audit evidence.">
     <link rel="canonical" href="https://tateprograms.com/agentcore-payment-policy.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="AgentCore Payment Policy Builder">
@@ -22,7 +22,7 @@
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web",
         "url": "https://tateprograms.com/agentcore-payment-policy.html",
-        "description": "Browser-only AgentCore and x402 payment policy builder for session spend limits, recipient allowlists, approval gates, receipts, metadata filtering, and audit evidence.",
+        "description": "Browser-only AgentCore and x402 payment policy builder for Coinbase/Stripe payment connections, session spend limits, recipient allowlists, approval gates, receipts, metadata filtering, and audit evidence.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -70,7 +70,7 @@
           <p class="console-kicker">agentcore payment policy / may 2026 signal</p>
           <h1>Write the spend policy before the agent gets a wallet.</h1>
           <p class="console-subtitle">
-            AgentCore Payments, x402, MPP, and Pay.sh move paid APIs into an agent's execution loop. This local builder turns a payment demo into concrete session caps, per-call limits, recipient allowlists, approval gates, receipt rules, metadata boundaries, and audit evidence.
+            AgentCore Payments, x402, MPP, and Pay.sh move paid APIs into an agent's execution loop. AWS now documents payment credential providers, payment managers, payment instruments, funded wallet sessions, and automatic x402 handling. This local builder turns that stack into concrete session caps, per-call limits, recipient allowlists, approval gates, receipt rules, metadata boundaries, and audit evidence.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#policyBuilder">build policy</a>
@@ -244,8 +244,8 @@ x402.quicknode.com</textarea>
           <article>
             <p class="card-command">docs</p>
             <h3>Payment sessions and instruments</h3>
-            <p>The AgentCore docs describe payment sessions with configurable payment limits, expiry, instruments, and payment lifecycle orchestration.</p>
-            <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-how-it-works.html" target="_blank" rel="noreferrer">open docs</a>
+            <p>The AgentCore getting-started docs walk through credential providers, IAM roles, a payment manager and connector, a payment instrument, wallet funding, a payment session, and automatic payment processing.</p>
+            <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-getting-started.html" target="_blank" rel="noreferrer">open docs</a>
           </article>
           <article>
             <p class="card-command">cloudflare</p>

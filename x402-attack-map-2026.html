@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>x402 Attack Map 2026 | Payment-Agent Controls | Tate Programs</title>
-    <meta name="description" content="A May 2026 x402 and MPP attack-control map for payment-agent launches: finality, facilitator binding, replay protection, cache hygiene, metadata boundaries, and discovery steering.">
+    <meta name="description" content="A May 2026 x402 and MPP attack-control map for payment-agent launches: finality, facilitator binding, replay protection, cache hygiene, discovery steering, and AgentCore payment policy.">
     <link rel="canonical" href="https://tateprograms.com/x402-attack-map-2026.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="x402 Attack Map 2026">
@@ -19,7 +19,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "x402 Attack Map 2026",
-        "description": "A May 2026 x402 and MPP attack-control map for payment-agent launches: finality, facilitator binding, replay protection, cache hygiene, metadata boundaries, and discovery steering.",
+        "description": "A May 2026 x402 and MPP attack-control map for payment-agent launches: finality, facilitator binding, replay protection, cache hygiene, discovery steering, and AgentCore payment policy.",
         "author": {
           "@type": "Person",
           "name": "Tate Lyman"
@@ -70,7 +70,7 @@
           <p class="console-kicker">x402 attack map / may 2026</p>
           <h1>Map the new x402 failure modes before an agent pays.</h1>
           <p class="console-subtitle">
-            A May 2026 x402 security preprint puts names on the practical risks payment-agent builders now need to prove away: premature grants, caller-unbound settlement, replay, header and cache confusion, and manipulated discovery metadata. This page turns those attack classes into launch controls for x402, MPP, Pay.sh, and pay-skills providers.
+            AWS pushed agent payments into preview on May 7, 2026, and a May 12 x402 security preprint put numbers on the practical risks payment-agent builders now need to prove away: premature grants, caller-unbound settlement, replay, header and cache confusion, and manipulated discovery metadata. This page turns those attack classes into launch controls for AgentCore Payments, x402, MPP, Pay.sh, and pay-skills providers.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="x402-surface-check.html">run surface check</a>
@@ -106,6 +106,38 @@ III  no-store headers + isolated payment fields
 IV   verify discovery metadata and providers
 output: launch controls buyers can inspect</code></pre>
         </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">may 2026 update</p>
+            <h2>The paper is useful because it measured the failures.</h2>
+          </div>
+          <a class="console-link" href="https://arxiv.org/abs/2605.11781" target="_blank" rel="noreferrer">arXiv:2605.11781</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">5.18%</p>
+            <h3>Optimistic grant risk</h3>
+            <p>The preprint reports revert-grant exposure when access is released before durable settlement. The control is a named release policy: reserve, wait for confirmations, or explicitly cap the loss.</p>
+          </article>
+          <article>
+            <p class="card-command">248 grants</p>
+            <h3>Replay over-granting</h3>
+            <p>A live replay test produced many grants from one payment. The launch control is a pre-grant claim keyed by payment intent and exact resource, not raw header bytes alone.</p>
+          </article>
+          <article>
+            <p class="card-command">100%</p>
+            <h3>Cache leakage condition</h3>
+            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.21 now makes cache posture part of the report.</p>
+          </article>
+          <article>
+            <p class="card-command">71.8%</p>
+            <h3>Discovery steering</h3>
+            <p>Metadata manipulation can win an agent's provider choice before payment begins. Registry listings need owner-controlled canonical URLs, exact prices, and low-hype descriptions.</p>
+          </article>
+        </div>
       </section>
 
       <section id="attackMap" class="console-section">
@@ -270,6 +302,9 @@ output: launch controls buyers can inspect</code></pre>
           <article class="release-note">
             <p>
               The trigger is the May 12, 2026 preprint <a href="https://arxiv.org/abs/2605.11781" target="_blank" rel="noreferrer">Five Attacks on x402 Agentic Payment Protocol</a>. The useful move is not to amplify panic. It is to make each failure mode inspectable in launch docs, route behavior, policy files, and sample transactions.
+            </p>
+            <p>
+              The market reason to care is equally current: AWS announced AgentCore Payments preview on May 7, 2026, with x402 negotiation, Coinbase and Stripe wallet connections, session spending limits, observability, paid MCP/API access, and the Coinbase x402 Bazaar MCP server available through AgentCore Gateway.
             </p>
             <p>
               This field note is intentionally practical: no private probing, no signed payments, no exploit publication. Owner-authorized review should start from public manifests, no-payment challenges, endpoint headers, and repo docs, then move to private patching only with scope.
