@@ -30,8 +30,9 @@
         "url": "https://tateprograms.com/agent-payment-launch-review.html",
         "description": "Private launch review for payment-agent projects covering public 402 surfaces, spend caps, cache policy, CORS, replay/idempotency, metadata boundaries, receipts, and patch order.",
         "offers": {
-          "@type": "Offer",
-          "price": "149",
+          "@type": "AggregateOffer",
+          "lowPrice": "49",
+          "highPrice": "149",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock"
         }
@@ -73,10 +74,11 @@
           <p class="console-kicker">agent payment launch review / may 2026</p>
           <h1>Scope the private review before a paid agent goes live.</h1>
           <p class="console-subtitle">
-            AWS AgentCore Payments, Cloudflare Workers, x402, MPP, and Pay.sh are making paid API calls part of the agent runtime. This page turns a launch surface into a concrete review scope: no-payment 402 checks, spend-map controls, cache policy, CORS, replay/idempotency, metadata filtering, receipt evidence, and a patch order.
+            AWS AgentCore Payments, Cloudflare Workers, x402, MPP, and Pay.sh are making paid API calls part of the agent runtime. Start with a $49 no-payment proof pass for one public surface, or scope the full $149 review for spend maps, cache policy, CORS, replay/idempotency, metadata filtering, receipt evidence, and patch order.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#reviewBuilder">build review scope</a>
+            <a class="console-button secondary" href="https://paypal.me/glidelocal/49" target="_blank" rel="noreferrer">pay $49 quick pass</a>
             <a class="console-button secondary" href="x402-surface-check.html">run free surface check</a>
             <a class="console-button secondary" href="agentcore-payment-policy.html">build spend policy</a>
             <a class="console-button secondary" href="x402-attack-map-2026.html">attack map</a>
@@ -86,7 +88,7 @@
           <dl class="console-ledger">
             <div>
               <dt>entry</dt>
-              <dd>$149</dd>
+              <dd>$49 / $149</dd>
             </div>
             <div>
               <dt>mode</dt>
@@ -200,7 +202,8 @@ deliverable: spend map + patch order</code></pre>
             <textarea id="scopeOutput" rows="22" spellcheck="false" readonly></textarea>
           </div>
           <p class="tool-note">The review is private-first. Public writeups only happen with mutual sign-off on facts and framing.</p>
-          <a class="console-button ghost wide-button" href="https://paypal.me/glidelocal/149" target="_blank" rel="noreferrer">Pay $149 after scope</a>
+          <a class="console-button secondary wide-button" href="https://paypal.me/glidelocal/49" target="_blank" rel="noreferrer">Pay $49 quick pass</a>
+          <a class="console-button ghost wide-button" href="https://paypal.me/glidelocal/149" target="_blank" rel="noreferrer">Pay $149 full review</a>
         </aside>
       </section>
 
@@ -213,6 +216,11 @@ deliverable: spend map + patch order</code></pre>
           <a class="console-link" href="agent-commerce-sample-report.html">sample report</a>
         </div>
         <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">$49</p>
+            <h3>Quick proof pass</h3>
+            <p>One public manifest, OpenAPI file, PR, or direct paid endpoint. Output is a concise private note with the no-payment route map, clean proof, and top patch items.</p>
+          </article>
           <article>
             <p class="card-command">surface</p>
             <h3>No-payment route map</h3>
