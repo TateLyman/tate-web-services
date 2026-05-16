@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agent Hackathon Submission Gate | Tate Programs</title>
+    <meta name="description" content="A May 2026 browser-only submission gate for agent hackathon projects: demo proof, eligibility, MCP/tool surfaces, x402 payments, evals, audit logs, and judge-ready evidence.">
+    <link rel="canonical" href="https://tateprograms.com/agent-submission-gate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Agent Hackathon Submission Gate">
+    <meta property="og:description" content="Score an agent hackathon project for proof, safety, eligibility, and judge-ready launch evidence before submission.">
+    <meta property="og:url" content="https://tateprograms.com/agent-submission-gate.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Agent Hackathon Submission Gate">
+    <meta name="twitter:description" content="A May 2026 submission gate for MCP, x402, browser, data, security, and enterprise agent builds.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Agent Hackathon Submission Gate",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "url": "https://tateprograms.com/agent-submission-gate.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Browser-only submission readiness checker for agent hackathon projects, covering demo proof, eligibility, MCP/tool surfaces, x402 payments, evals, audit logs, and judge-ready evidence."
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="agent-submission-gate.html">submission</a>
+        <a href="agent-commerce-gate.html">commerce-gate</a>
+        <a href="agent-security-drill.html">security-drill</a>
+        <a href="x402-surface-check.html">surface</a>
+        <a href="mcp-launch-trust-2026.html">mcp-trust</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Agent%20hackathon%20submission%20pass">
+        <span></span>
+        gate live
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/agent-submission-gate</strong>
+        <em>may 2026</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">agent hackathon submission gate</p>
+          <h1>Before submitting an agent build, make the proof impossible to miss.</h1>
+          <p class="console-subtitle">
+            Current agent events are rewarding projects that show real tool use, clear permissions, working demos, eval evidence, payment boundaries, and a clean explanation of what can go wrong. This gate scores the submission trail before the deadline.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#submissionGate">run gate</a>
+            <a class="console-button secondary" href="agent-stack-radar.html">open radar</a>
+            <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
+            <a class="console-button secondary" href="agent-security-drill.html">security drill</a>
+            <a class="console-button ghost" href="#sourceTrail">sources</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>input</dt>
+              <dd>repo + notes</dd>
+            </div>
+            <div>
+              <dt>checks</dt>
+              <dd>proof + risk</dd>
+            </div>
+            <div>
+              <dt>output</dt>
+              <dd>fix order</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Agent submission terminal preview">
+          <div class="terminal-topline">submit.gate</div>
+          <pre><code>$ score agent-build --deadline soon
+ demo proof
+ tool boundary
+ eval evidence
+ payment cap
+ eligibility note
+ judge summary
+ risk queue
+ video script</code></pre>
+        </aside>
+      </section>
+
+      <section id="submissionGate" class="console-audit-layout launch-kit-layout" aria-label="Agent hackathon submission checker">
+        <div class="audit-form launch-kit-panel">
+          <label>
+            Project name
+            <input id="projectName" name="projectName" type="text" placeholder="Example: Spend-Safe Research Agent">
+          </label>
+          <label>
+            Repo or demo URL
+            <input id="projectUrl" name="projectUrl" type="url" placeholder="https://github.com/username/agent-build">
+          </label>
+          <label>
+            Submission focus
+            <select id="eventFocus" name="eventFocus">
+              <option value="general">General agent build</option>
+              <option value="mcp">MCP / tool server</option>
+              <option value="payments">x402 / agent payments</option>
+              <option value="browser">Browser or computer-use agent</option>
+              <option value="data">Live data or research agent</option>
+              <option value="enterprise">Enterprise workflow agent</option>
+              <option value="security">Agent security or governance</option>
+            </select>
+          </label>
+          <label class="file-drop">
+            Project files
+            <input id="fileInput" type="file" multiple webkitdirectory directory>
+            <span id="fileSummary">Choose a project folder or paste files below. Files stay in the browser.</span>
+          </label>
+          <label>
+            Paste key files or submission draft
+            <textarea id="pasteInput" placeholder="Optional: paste README, package.json, OpenAPI, server.json, policy files, demo script, judging criteria, or submission copy. Use --- file --- separators for multiple files."></textarea>
+          </label>
+          <fieldset>
+            <legend>Manual proof</legend>
+            <label class="check-row"><input id="hasDemoUrl" type="checkbox"> Public demo URL, screenshots, or hosted walkthrough exists.</label>
+            <label class="check-row"><input id="hasVideo" type="checkbox"> Short demo video or recording plan is ready.</label>
+            <label class="check-row"><input id="hasEligibility" type="checkbox"> Rules, age, team, residency, and prize eligibility were checked truthfully.</label>
+            <label class="check-row"><input id="hasJudgeCopy" type="checkbox"> Submission copy explains the problem, user, and why the agent matters.</label>
+            <label class="check-row"><input id="hasEvalProof" type="checkbox"> There is a repeatable eval, test log, or before/after proof.</label>
+            <label class="check-row"><input id="hasSafeMode" type="checkbox"> Demo mode avoids real secrets, irreversible actions, and surprise spend.</label>
+          </fieldset>
+        </div>
+
+        <aside class="audit-results launch-kit-results agent-commerce-results" aria-label="Agent submission readiness result" aria-live="polite">
+          <div class="score-card">
+            <span id="submissionScore">0</span>
+            <small>/100</small>
+          </div>
+          <h2 id="submissionTitle">Load a project to score the submission.</h2>
+          <p id="submissionSummary">Upload files or paste the README/submission draft to generate a deadline-focused fix order.</p>
+          <div class="result-actions">
+            <button class="console-button primary" id="copySubmissionResult" type="button">copy result</button>
+            <button class="console-button secondary" id="downloadSubmissionReport" type="button">download report</button>
+            <a class="console-button secondary" id="emailSubmissionResult" href="mailto:hello@tateprograms.com?subject=Agent%20Submission%20Gate%20result">email result</a>
+          </div>
+          <h3>Next fixes</h3>
+          <ol id="submissionFixes"></ol>
+          <h3>Detected signals</h3>
+          <ul id="signalList"></ul>
+          <p class="tool-note">This is a submission-readiness check, not a guarantee of prize eligibility, selection, legal compliance, or judging outcome. Always follow the event rules truthfully.</p>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">what this catches</p>
+          <h2>Judges and buyers need proof, not just a working prompt.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">proof</p>
+            <h3>Demo evidence</h3>
+            <p>Checks for a hosted demo, screenshots, walkthrough script, README run path, and a concise explanation of the user-visible outcome.</p>
+          </article>
+          <article>
+            <p class="card-command">control</p>
+            <h3>Tool boundaries</h3>
+            <p>Looks for MCP metadata, tool manifests, permissions, audit logs, rate limits, destructive-action gates, and human review paths.</p>
+          </article>
+          <article>
+            <p class="card-command">payment</p>
+            <h3>Spend boundaries</h3>
+            <p>For x402, Pay.sh, MPP, wallet, or paid API builds, it checks for sandbox mode, caps, approvals, receipts, replay notes, and metadata filtering.</p>
+          </article>
+          <article>
+            <p class="card-command">deadline</p>
+            <h3>Submission shape</h3>
+            <p>Scores the pitch, install path, eligibility note, risk statement, eval evidence, video readiness, and the smallest next patch before the deadline.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="sourceTrail" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">source trail</p>
+          <h2>Why this is the current submission surface.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">rapid agent</p>
+            <h3>Partner MCP agent builds</h3>
+            <p>Google Cloud Rapid Agent is a live May 2026 signal for agents that use MCP servers and partner data/tool providers.</p>
+            <a href="https://rapid-agent.devpost.com/" target="_blank" rel="noreferrer">open event</a>
+          </article>
+          <article>
+            <p class="card-command">hermes</p>
+            <h3>Self-hosted agent control</h3>
+            <p>The DEV Hermes Agent Challenge pushes builders toward agent behavior that can be run, inspected, and explained.</p>
+            <a href="https://dev.to/challenges/hermes-agent-2026-05-15" target="_blank" rel="noreferrer">open challenge</a>
+          </article>
+          <article>
+            <p class="card-command">enterprise</p>
+            <h3>Governance and payments</h3>
+            <p>May 2026 enterprise hackathons are centering agent security, governance, payments, approval gates, and business workflows.</p>
+            <a href="https://lablab.ai/ai-hackathons/techex-intelligent-enterprise-solutions-hackathon" target="_blank" rel="noreferrer">open TechEx</a>
+          </article>
+          <article>
+            <p class="card-command">rules</p>
+            <h3>Eligibility is part of readiness</h3>
+            <p>Several active prize events require entrants to be 18 or the local age of majority. Truthful eligibility checks belong before work starts.</p>
+            <a href="https://microsoft.github.io/agent-academy/events/hackathon/" target="_blank" rel="noreferrer">open example</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="console-kicker">paid pass</p>
+          <h2>Need the submission fixed before a deadline?</h2>
+          <p>Send the repo, event link, rules, and demo state. The pass returns a judge-facing fix order, proof checklist, and demo script.</p>
+        </div>
+        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Agent%20hackathon%20submission%20pass">request pass</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Agent Submission Gate</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-stack-radar.html">Radar</a>
+      <a href="agent-commerce-gate.html">Commerce gate</a>
+      <a href="agent-security-drill.html">Security drill</a>
+      <a href="payments.html">Payments</a>
+      <a href="index.html">Home</a>
+    </footer>
+
+    <script src="agent-submission-gate.js"></script>
+  </body>
+</html>
