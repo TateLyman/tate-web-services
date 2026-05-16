@@ -308,6 +308,12 @@ npx --yes x402-surface-check --strict-cache https://api.example.com/openapi.json
             <a href="https://github.com/solana-foundation/pay-skills/pull/36#issuecomment-4467776800" target="_blank" rel="noreferrer">clean re-check</a>
           </article>
           <article>
+            <p class="card-command">headers</p>
+            <h3>SolSentry x402 stats</h3>
+            <p>A live endpoint returned stats with no payment challenge while headers advertised enforced x402, and browser preflight omitted the documented payment header. The check is now covered in 0.2.24.</p>
+            <a href="https://github.com/solsentry/solsentry-app/issues/2" target="_blank" rel="noreferrer">surface note</a>
+          </article>
+          <article>
             <p class="card-command">compliance</p>
             <h3>AlgoVoi compliance gate</h3>
             <p>The unsupported-network fixture and browser preflight were fixed; no-payment checks now hit the intended verdict and payment-header path.</p>
