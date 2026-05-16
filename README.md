@@ -150,6 +150,10 @@ npm run check:x402 -- https://api.example.com/.well-known/x402 output.md
 X402_CHECK_ORIGIN=https://example.com npm run check:x402 -- https://api.example.com/.well-known/x402 output.md
 ```
 
+Related implementation starter:
+
+- `https://github.com/TateLyman/x402-cache-safe-worker` - Cloudflare Worker starter for cache-safe x402-style payment gates with CORS, `no-store, private`, resource echo, and smoke tests.
+
 ```bash
 npm run prospect:mcp
 ```
