@@ -408,6 +408,37 @@ function acceptDecimals(accept) {
   return Number.isFinite(numeric) ? numeric : 6
 }
 
+function acceptResourceValue(accept) {
+  return accept.resource
+    ?? accept.extra?.resource
+    ?? accept.resourceUrl
+    ?? accept.extra?.resourceUrl
+    ?? ''
+}
+
+function challengeResourceValue(challenge) {
+  return challenge?.resource?.url
+    ?? challenge?.resourceUrl
+    ?? ''
+}
+
+function hasFreshnessMetadata(challenge, accept) {
+  return [
+    challenge?.expires,
+    challenge?.expiresAt,
+    challenge?.validBefore,
+    challenge?.maxTimeoutSeconds,
+    accept?.maxTimeoutSeconds,
+    accept?.maxTimeout,
+    accept?.timeout,
+    accept?.expires,
+    accept?.expiresAt,
+    accept?.validBefore,
+    accept?.extra?.expires,
+    accept?.extra?.validBefore,
+  ].some(value => value !== undefined && value !== null && value !== '')
+}
+
 function usesDecimalAmount(accept) {
   const rawAmount = acceptAmountValue(accept)
   if (rawAmount === undefined || rawAmount === null || rawAmount === '') return false
@@ -428,8 +459,8 @@ function challengeSummary(challenge) {
   const firstAccept = challengeAccepts([challenge])[0] ?? {}
   const hasChallenge = hasPaymentChallenge(challenge)
   const amount = acceptAmountValue(firstAccept)
-  const resourceUrl = challenge?.resource?.url ?? firstAccept.resource ?? ''
-  const extraResource = firstAccept.extra?.resource ?? firstAccept.resource ?? ''
+  const resourceUrl = challengeResourceValue(challenge) || acceptResourceValue(firstAccept)
+  const extraResource = acceptResourceValue(firstAccept)
   return {
     protocol: hasChallenge ? challenge?.protocol ?? (firstAccept.scheme === 'mpp' ? 'mpp' : 'x402') : '',
     resourceUrl,
@@ -466,6 +497,21 @@ function looksLikePlaceholderPayTo(payTo) {
   if (/^0x0{36,}0?1?$/i.test(value)) return true
   if (/^1{24,}$/.test(value)) return true
   return false
+}
+
+function looksLikeLocalResourceUrl(value) {
+  if (!/^https?:\/\//i.test(String(value ?? ''))) return false
+  try {
+    const host = new URL(value).hostname.toLowerCase()
+    return host === 'localhost'
+      || host === '0.0.0.0'
+      || host === '127.0.0.1'
+      || host === '::1'
+      || host.endsWith('.local')
+  }
+  catch {
+    return false
+  }
 }
 
 function looksLikeOperationalHealthProbe(result) {
@@ -510,6 +556,8 @@ function analyze() {
   const accepts = challengeAccepts(challenges)
   const challengeNetworks = new Set(challengeSummaries.map(item => item.network).filter(Boolean))
   const resourceUrls = challengeSummaries.flatMap(item => [item.resourceUrl, item.extraResource]).filter(Boolean)
+  const topResourceUrls = challenges.map(challengeResourceValue).filter(Boolean)
+  const acceptResourceUrls = accepts.map(acceptResourceValue).filter(Boolean)
   const hasManifest = Boolean(manifest)
   const hasChallenge = challenges.length > 0
   const checks = []
@@ -536,10 +584,16 @@ function analyze() {
     || accepts.every(item => !looksLikePlaceholderPayTo(item.payTo))
   const noStagingNetwork = accepts.length === 0
     || accepts.every(item => !looksLikeStagingNetwork(item.network))
-  const httpsResources = manual('hasHttpsResource') || (resourceUrls.length > 0 && resourceUrls.every(url => /^https:\/\//i.test(url)))
+  const httpsResources = manual('hasHttpsResource') || (resourceUrls.length > 0 && resourceUrls.every(url => /^https:\/\//i.test(url) && !looksLikeLocalResourceUrl(url)))
   const resourceRepeated = challengeSummaries.length > 0
-    && challengeSummaries.every(item => item.resourceUrl && item.extraResource)
+    && accepts.length > 0
+    && acceptResourceUrls.length === accepts.length
+  const resourceConsistent = topResourceUrls.length === 0
+    || acceptResourceUrls.length === 0
+    || acceptResourceUrls.every(resource => topResourceUrls.includes(resource))
   const resourceHostStable = sameHost(resourceUrls)
+  const hasFreshness = accepts.length === 0
+    || accepts.some((accept, index) => hasFreshnessMetadata(challenges.find(challenge => challengeAccepts([challenge]).includes(accept)) ?? challenges[index], accept))
   const networkMatch = manual('hasDocumentedNetwork')
     || !manifestHasNetworks
     || challengeNetworks.size === 0
@@ -624,14 +678,28 @@ function analyze() {
     label: 'Resource URLs are HTTPS',
     ok: !hasChallenge || httpsResources,
     weight: 10,
-    fix: 'Canonicalize every resource URL to HTTPS in resource.url and accepts[0].extra.resource.',
+    fix: 'Canonicalize every resource URL to public HTTPS, and remove localhost or private-development hosts from payment requirements.',
   })
   addCheck(checks, {
     group: 'Challenge',
-    label: 'Resource URL is repeated consistently',
+    label: 'Every accept leg repeats the resource URL',
     ok: !hasChallenge || resourceRepeated,
     weight: 6,
-    fix: 'Repeat the paid resource in both resource.url and accepts[0].extra.resource for wallet and facilitator logs.',
+    fix: 'Repeat the paid resource in each accept leg for wallet logs, facilitator logs, and replay/spend-map binding.',
+  })
+  addCheck(checks, {
+    group: 'Challenge',
+    label: 'Top-level and accept-leg resource URLs agree',
+    ok: !hasChallenge || resourceConsistent,
+    weight: 6,
+    fix: 'Keep resource.url and accept-leg resource fields identical when both are present.',
+  })
+  addCheck(checks, {
+    group: 'Challenge',
+    label: 'Payment challenge has timeout or expiry metadata',
+    ok: !hasChallenge || hasFreshness,
+    weight: 6,
+    fix: 'Expose maxTimeoutSeconds, expires, validBefore, or equivalent freshness metadata so payment capabilities have a bounded replay window.',
   })
   addCheck(checks, {
     group: 'Challenge',

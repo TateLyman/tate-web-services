@@ -130,7 +130,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">100%</p>
             <h3>Cache leakage condition</h3>
-            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.24 makes cache posture and payment-enforcement header drift part of the report, with an optional strict-cache mode for missing policy headers.</p>
+            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.26 makes cache posture, payment-enforcement header drift, resource binding, and freshness metadata part of the report.</p>
           </article>
           <article>
             <p class="card-command">71.8%</p>
@@ -202,7 +202,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">cache</p>
             <h3>Paid-content reuse</h3>
-            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.24 prints a Cache Policy Map, flags explicitly cacheable challenge responses, catches payment-enforcement headers on 200 responses, offers <code>--strict-cache</code> for missing policy headers, and links the relevant implementation guide when cache or CORS findings appear. The Worker starter shows a minimal no-store/private payment gate.</p>
+            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.26 prints a Cache Policy Map, flags explicitly cacheable challenge responses as P1, catches payment-enforcement headers on 200 responses, checks accept-leg resource binding and freshness metadata, and links the relevant implementation guide when cache or CORS findings appear. The Worker starter shows a minimal no-store/private payment gate.</p>
             <a href="x402-surface-check.html">open checker</a>
             <a href="cloudflare-x402-worker.html">worker guide</a>
           </article>
