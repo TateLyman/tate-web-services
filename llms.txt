@@ -46,7 +46,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [Shipcheck MCP](https://github.com/TateLyman/shipcheck-mcp) - MCP server source repository.
 - [Tate Programs site](https://github.com/TateLyman/tate-web-services) - Static site source.
 - [x402 Cache-Safe Worker](https://github.com/TateLyman/x402-cache-safe-worker) - Cloudflare Worker starter for cache-safe x402-style payment gates with CORS, no-store/private cache policy, resource echo, and smoke tests.
-- [x402 Surface Check Action](https://github.com/TateLyman/x402-surface-check-action) - GitHub Action wrapper for running no-payment x402, MPP, Pay.sh, AgentCore-style, and HTTP 402 launch-surface checks in CI.
+- [x402 Surface Check Action](https://github.com/marketplace/actions/x402-surface-check) - GitHub Marketplace Action for running no-payment x402, MPP, Pay.sh, AgentCore-style, and HTTP 402 launch-surface checks in CI.
 
 ## Contact
 
