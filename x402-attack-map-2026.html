@@ -30,7 +30,7 @@
           "url": "https://tateprograms.com/"
         },
         "datePublished": "2026-05-13",
-        "dateModified": "2026-05-13",
+        "dateModified": "2026-05-16",
         "mainEntityOfPage": "https://tateprograms.com/x402-attack-map-2026.html"
       }
     </script>
@@ -77,6 +77,7 @@
             <a class="console-button secondary" href="#attackMap">read map</a>
             <a class="console-button secondary" href="agentcore-payment-policy.html">build policy</a>
             <a class="console-button secondary" href="x402-launch-checklist.html">launch checklist</a>
+            <a class="console-button secondary" href="x402-batch-settlement-checklist.html">batch checklist</a>
             <a class="console-button ghost" href="#sourceTrail">source</a>
           </div>
           <dl class="console-ledger">
@@ -155,6 +156,36 @@ output: launch controls buyers can inspect</code></pre>
         </div>
       </section>
 
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">research deltas</p>
+          <h2>The useful signal is measurable failure, not abstract risk.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">replay</p>
+            <h3>Duplicate grants</h3>
+            <p>The paper frames replay as a payment-service correspondence failure: one payment proof should not unlock many resource grants. Treat <code>pay_id + resource_id</code> as a pre-grant claim key.</p>
+          </article>
+          <article>
+            <p class="card-command">cache</p>
+            <h3>Paid-content reuse</h3>
+            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.20 now prints a Cache Policy Map and flags explicitly cacheable challenge responses.</p>
+            <a href="x402-surface-check.html">open checker</a>
+          </article>
+          <article>
+            <p class="card-command">settle</p>
+            <h3>Grant timing</h3>
+            <p>Builders need a named release policy: reserve before work, wait for enough finality, or state why optimistic release is acceptable for the value at risk.</p>
+          </article>
+          <article>
+            <p class="card-command">discovery</p>
+            <h3>Agent steering</h3>
+            <p>Registry copy, manifest metadata, owner identity, and canonical URLs affect which paid endpoint an agent chooses before any protocol-level payment check begins.</p>
+          </article>
+        </div>
+      </section>
+
       <section id="patchOrder" class="console-section article-shell">
         <article class="release-note">
           <p class="console-kicker">patch order</p>
@@ -215,6 +246,11 @@ output: launch controls buyers can inspect</code></pre>
             <p class="card-command">cors</p>
             <h3>Browser payment surface</h3>
             <p>CORS and allowed headers reveal whether browser agents can send the expected payment fields or whether the integration will fail at launch.</p>
+          </article>
+          <article>
+            <p class="card-command">cache</p>
+            <h3>Challenge cache policy</h3>
+            <p>The CLI reports observed <code>Cache-Control</code> on no-payment challenge responses and warns on explicitly cacheable payment gates.</p>
           </article>
           <article>
             <p class="card-command">metadata</p>
