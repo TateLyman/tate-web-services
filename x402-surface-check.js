@@ -122,9 +122,13 @@ function resolveSchema(schema, manifest, seen = new Set()) {
   return resolveSchema(resolved, manifest, seen)
 }
 
-function exampleValue(schemaOrParameter, manifest) {
+function exampleValue(schemaOrParameter, manifest, depth = 0) {
   if (!schemaOrParameter || typeof schemaOrParameter !== 'object') return undefined
   const schema = resolveSchema(schemaOrParameter.schema ?? schemaOrParameter, manifest)
+  const composite = schema.oneOf ?? schema.anyOf ?? schema.allOf
+  if (Array.isArray(composite) && composite.length > 0) {
+    return exampleValue(composite[0], manifest, depth + 1)
+  }
   const value = schemaOrParameter.example
     ?? schema.const
     ?? schema.example
@@ -141,6 +145,25 @@ function exampleValue(schemaOrParameter, manifest) {
   if (schema.type === 'integer') return Number.isFinite(Number(schema.minimum)) ? Number(schema.minimum) : 1
   if (schema.type === 'number') return Number.isFinite(Number(schema.minimum)) ? Number(schema.minimum) : 1
   if (schema.type === 'boolean') return false
+  if (schema.type === 'array') {
+    if (depth > 4) return []
+    const item = exampleValue(schema.items ?? {}, manifest, depth + 1)
+    return item === undefined ? [] : [item]
+  }
+  if (schema.type === 'object') {
+    if (depth > 4) return {}
+    const properties = schema.properties && typeof schema.properties === 'object'
+      ? schema.properties
+      : {}
+    const required = new Set(Array.isArray(schema.required) ? schema.required : Object.keys(properties))
+    const result = {}
+    for (const [name, property] of Object.entries(properties)) {
+      if (!required.has(name)) continue
+      const nestedValue = exampleValue(property, manifest, depth + 1)
+      if (nestedValue !== undefined) result[name] = nestedValue
+    }
+    return result
+  }
   return undefined
 }
 
