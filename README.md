@@ -33,6 +33,8 @@ npx serve .
 - `agent-commerce-gate.html` - browser-only readiness checker for x402, Pay.sh, and payment-agent prototypes
 - `agent-commerce-gate.js` - local file/folder scoring logic for agent-commerce control planes, including price previews, enforceable caps, provider validation, and metadata filtering
 - `agent-commerce-sample-report.html` - sample 48-hour readiness report for an x402 payment-agent demo
+- `agent-payment-launch-review.html` - paid private-review intake and scope builder for x402, MPP, Pay.sh, Cloudflare Worker, and AgentCore Payments launches
+- `agent-payment-launch-review.js` - local scope, score, deliverable, and email-body generation logic for the agent payment launch review
 - `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, linked `discovery_url` catalogs, `resources[]` catalogs, raw resource URL strings, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, `schemes[]` challenge arrays, declared-price drift, cache-control posture, optional strict-cache findings, contextual guide links, browser origin/payment-header preflight blockers, MPP payment headers, x402 V2 requirements headers, health/status routes, and legacy decimal x402 v1 challenges
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
 - `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, settlement binding, replay, cache hygiene, discovery steering, AgentCore payment policy, and measured failure evidence
@@ -141,6 +143,8 @@ The page reports current agent-payment launch surfaces from registry submissions
 
 The AgentCore Payment Policy Builder is a static browser tool; edit `agentcore-payment-policy.html` and `agentcore-payment-policy.js` directly when updating the control model.
 
+The Agent Payment Launch Review scope builder is a static browser tool; edit `agent-payment-launch-review.html` and `agent-payment-launch-review.js` directly when updating the paid-review intake model.
+
 To run a no-payment x402 public-surface pass against a manifest, OpenAPI spec, or direct paid endpoint:
 
 ```bash
@@ -209,6 +213,7 @@ The front-door offer is intentionally concrete:
 - $99 launch risk pass
 - $29+ student launch review
 - $149 agent security launch review
+- $149+ agent payment launch review
 - $149 agent commerce readiness review
 - $149 launch proof media pass
 - $299+ production fix sprint

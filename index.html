@@ -51,6 +51,12 @@
           },
           {
             "@type": "Offer",
+            "name": "Agent Payment Launch Review",
+            "price": "149",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
             "name": "Agent Security Launch Review",
             "price": "149",
             "priceCurrency": "USD"
@@ -86,6 +92,7 @@
       <nav class="os-tabs" aria-label="Primary navigation">
         <a href="#workbench">workbench</a>
         <a href="agent-stack-radar.html">radar</a>
+        <a href="agent-payment-launch-review.html">payment-review</a>
         <a href="agent-submission-gate.html">submission</a>
         <a href="launch-proof-promo-flow.html">promo-flow</a>
         <a href="mcp-launch-trust-2026.html">mcp-trust</a>
@@ -125,6 +132,7 @@
             <a href="mcp-registry-audit.html" aria-label="MCP registry audit">mcp</a>
             <a href="mcp-registry-pulse.html" aria-label="MCP registry pulse">pls</a>
             <a href="agent-stack-radar.html" aria-label="Agent stack radar">rad</a>
+            <a href="agent-payment-launch-review.html" aria-label="Agent payment launch review">payr</a>
             <a href="agent-submission-gate.html" aria-label="Agent submission gate">sub</a>
             <a href="launch-proof-promo-flow.html" aria-label="Launch proof promo flow">vid</a>
             <a href="mcp-launch-trust-2026.html" aria-label="MCP launch trust ledger">trst</a>
@@ -171,6 +179,7 @@
               <pre><code>NAME           PRICE   OUTPUT
 risk-pass      99      memo + fix order
 student-pass   29+     student launch review
+pay-review     149     private spend map
 mcp-dir        149     listing pass
 fix-sprint     299+    blocker repair
 security       149     drill report
@@ -197,6 +206,7 @@ registry pulse  public ecosystem snapshot
 pay-sh pulse    live agent-paid API catalog map
 pay-skills     fresh x402 registry launch queue
 agent radar     May 2026 trend map
+payment-review private x402 / MPP / AgentCore scope
 submission gate agent hackathon fix order
 promo flow      launch proof to short video blueprint
 launchquest     live incentive demo</code></pre>
@@ -267,6 +277,7 @@ launchquest     live incentive demo</code></pre>
               </div>
               <ul>
                 <li><a href="shipcheck.html">~/shipcheck</a></li>
+                <li><a href="agent-payment-launch-review.html">~/services/agent-payment-launch-review</a></li>
                 <li><a href="agent-commerce-gate.html">~/tools/agent-commerce-gate</a></li>
                 <li><a href="pay-sh-catalog-pulse.html">~/notes/pay-sh-catalog-pulse</a></li>
                 <li><a href="x402-metadata-filter.html">~/tools/x402-metadata-filter</a></li>
@@ -325,6 +336,7 @@ launchquest     live incentive demo</code></pre>
           <button type="button" data-command="checklist">checklist</button>
           <button type="button" data-command="pulse">pulse</button>
           <button type="button" data-command="radar">radar</button>
+          <button type="button" data-command="payment-review">payment-review</button>
           <button type="button" data-command="promo-flow">promo-flow</button>
           <button type="button" data-command="security-drill">security-drill</button>
           <button type="button" data-command="security-report">security-report</button>
@@ -383,34 +395,41 @@ launchquest     live incentive demo</code></pre>
           </article>
           <article>
             <span>04</span>
+            <h2>Agent Payment Launch Review</h2>
+            <p>Private-first x402, MPP, AgentCore, Cloudflare Worker, and Pay.sh review: no-payment surface pass, cache/CORS, replay, metadata, receipt evidence, and patch order.</p>
+            <strong>$149+</strong>
+            <a href="agent-payment-launch-review.html">build scope</a>
+          </article>
+          <article>
+            <span>05</span>
             <h2>Agent Commerce Readiness</h2>
             <p>x402, Pay.sh, and API-payment loops: quoted prices, enforceable caps, approvals, receipts, replay protection, provider validation, metadata filters, and abuse controls.</p>
             <strong>$149</strong>
             <a href="agent-commerce-gate.html">open gate</a>
           </article>
           <article>
-            <span>05</span>
+            <span>06</span>
             <h2>Launch Proof Media Pass</h2>
             <p>Proof extraction, three short launch scripts, scene prompt map, caption set, and a publish-safe fact gate for one product or demo.</p>
             <strong>$149</strong>
             <a href="launch-proof-promo-flow.html">open flow</a>
           </article>
           <article>
-            <span>06</span>
+            <span>07</span>
             <h2>MCP Directory Launch</h2>
             <p>Package metadata, server.json version sync, Glama score readiness, registry proof, README config, and directory submission notes.</p>
             <strong>$149</strong>
             <a href="mcp-directory-launch.html">open pass</a>
           </article>
           <article>
-            <span>07</span>
+            <span>08</span>
             <h2>MCP Launch Review</h2>
             <p>Registry metadata, package identity, install path, client config, permission notes, and smoke-test proof.</p>
             <strong>$99</strong>
             <a href="mcp-launch-review.html">open scope</a>
           </article>
           <article>
-            <span>08</span>
+            <span>09</span>
             <h2>Student Launch Review</h2>
             <p>Deadline polish for student projects: README handoff, demo proof, submission copy, CI signal, and public-code cleanup.</p>
             <strong>$29+</strong>
@@ -449,6 +468,11 @@ launchquest     live incentive demo</code></pre>
             <span>tool</span>
             <strong>Agent Commerce Gate</strong>
             <em>x402, Pay.sh, and payment-agent readiness check</em>
+          </a>
+          <a href="agent-payment-launch-review.html">
+            <span>service</span>
+            <strong>Agent Payment Launch Review</strong>
+            <em>private x402, MPP, AgentCore, and Worker patch scope</em>
           </a>
           <a href="pay-sh-catalog-pulse.html">
             <span>research</span>

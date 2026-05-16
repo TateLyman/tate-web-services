@@ -24,6 +24,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [x402 Attack Map 2026](https://tateprograms.com/x402-attack-map-2026.html) - Practical control map for x402 and MPP launches after May 2026 attack research: finality, settlement binding, replay/idempotency, cache hygiene, discovery steering, AgentCore payment policy, and measured failure evidence.
 - [x402 Metadata Filter](https://tateprograms.com/x402-metadata-filter.html) - Browser-only filter for payment metadata, prompts, resource URLs, user identifiers, query tokens, and secret-like fields before x402 or Pay.sh demos.
 - [AgentCore Payment Policy Builder](https://tateprograms.com/agentcore-payment-policy.html) - Browser-only policy builder for AgentCore Payments, x402, MPP, and Pay.sh demos: Coinbase/Stripe payment connections, session caps, per-call limits, recipient allowlists, approvals, metadata boundaries, receipts, replay protection, and audit evidence.
+- [Agent Payment Launch Review](https://tateprograms.com/agent-payment-launch-review.html) - Private-first paid review intake for x402, MPP, Pay.sh, Cloudflare Worker, and AgentCore Payments launches, generating a scoped spend map, cache/CORS/replay review, metadata boundary, receipt evidence, and patch order.
 - [Agent Security Drill Kit](https://tateprograms.com/agent-security-drill.html) - Browser-only agent-security evidence console for prompt injection, exfiltration, tool scopes, policy actions, audit trails, A2A agent identity, Gemini-safe integration notes, and exportable review packs.
 - [Agent Security Evidence Note](https://tateprograms.com/agent-security-evidence-2026.html) - Field note on why 2026 agent demos need inspectable evidence packs: policy actions, tool boundaries, A2A identity, Gemini-safe testing, audit trails, and human review gates.
 - [Agent Security Sample Report](https://tateprograms.com/agent-security-sample-report.html) - Fictional sample review showing boundary map, drill results, policy gaps, audit evidence, and patch order for an agent demo.
@@ -35,7 +36,7 @@ Tate Programs builds practical release-readiness tools and fixed-scope review se
 - [Release Readiness 2026](https://tateprograms.com/release-readiness-2026.html) - JS/npm/Action/MCP/payment-agent launch-readiness runbook.
 - [Student Launch Kit](https://tateprograms.com/student-launch-kit.html) - Browser-only launch checker for student and hackathon projects.
 - [Case Studies](https://tateprograms.com/case-studies.html) - Public proof of x402 launch checks, shipped tools, and launch assets.
-- [Payments](https://tateprograms.com/payments.html) - Fixed-scope pricing and payment links, including student reviews, launch proof media, agent security, agent commerce, MCP, and repair scopes.
+- [Payments](https://tateprograms.com/payments.html) - Fixed-scope pricing and payment links, including student reviews, launch proof media, agent security, agent payment launch reviews, agent commerce, MCP, and repair scopes.
 
 ## Repositories And Packages
 
