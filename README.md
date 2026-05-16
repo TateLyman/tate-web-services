@@ -36,6 +36,7 @@ npx serve .
 - `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, linked `discovery_url` catalogs, `resources[]` catalogs, raw resource URL strings, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, `schemes[]` challenge arrays, declared-price drift, cache-control posture, browser origin/payment-header preflight blockers, MPP payment headers, x402 V2 requirements headers, health/status routes, and legacy decimal x402 v1 challenges
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
 - `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, facilitator binding, replay, cache hygiene, metadata boundaries, and discovery steering
+- `cloudflare-x402-worker.html` - Cloudflare Worker launch guide for x402 and MPP-style payment gates with browser-readable 402, `X-PAYMENT` preflight, no-store/private cache policy, Vary headers, and no grant before verification
 - `pay-sh-catalog-pulse.html` - live Pay.sh catalog pulse for agent-paid API provider counts, price surfaces, and launch-control review priorities
 - `pay-sh-catalog-pulse.json` - machine-readable data backing the Pay.sh Catalog Pulse page
 - `pay-skills-launch-queue.html` - live pay-skills registry PR watchlist for x402, MPP, Solana, Base, compute, commerce, wallet, and data-api launch surfaces

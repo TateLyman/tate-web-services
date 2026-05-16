@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloudflare x402 Worker Starter | Tate Programs</title>
+    <meta name="description" content="A practical Cloudflare Worker launch guide for x402 and MPP-style payment gates: readable 402 challenges, X-PAYMENT preflight, no-store cache policy, Vary headers, and no paid-content grant before verification.">
+    <link rel="canonical" href="https://tateprograms.com/cloudflare-x402-worker.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cloudflare x402 Worker Starter">
+    <meta property="og:description" content="A cache-safe Worker pattern for browser-readable 402 payment challenges before agents spend.">
+    <meta property="og:url" content="https://tateprograms.com/cloudflare-x402-worker.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cloudflare x402 Worker Starter">
+    <meta name="twitter:description" content="Readable 402, X-PAYMENT preflight, no-store cache policy, and safe verification boundaries for agent-payment Workers.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Cloudflare x402 Worker Starter",
+        "description": "A practical Cloudflare Worker launch guide for x402 and MPP-style payment gates: readable 402 challenges, X-PAYMENT preflight, no-store cache policy, Vary headers, and no paid-content grant before verification.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-16",
+        "dateModified": "2026-05-16",
+        "mainEntityOfPage": "https://tateprograms.com/cloudflare-x402-worker.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="agent-stack-radar.html">radar</a>
+        <a href="x402-surface-check.html">surface</a>
+        <a href="x402-cors-fix.html">cors</a>
+        <a href="x402-attack-map-2026.html">attack-map</a>
+        <a href="x402-batch-settlement-checklist.html">batch</a>
+        <a href="pay-skills-launch-queue.html">pay-skills</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Cloudflare%20x402%20Worker%20review">
+        <span></span>
+        worker gate
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/cloudflare-x402-worker</strong>
+        <em>cache-safe payment gate</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">cloudflare worker / x402 / may 2026</p>
+          <h1>A payment Worker should be boring before it is monetized.</h1>
+          <p class="console-subtitle">
+            Cloudflare's Agents docs now describe x402 and MPP as agentic-payment paths for HTTP resources and MCP tools. That makes the edge gate important: the Worker should return a readable 402, keep paid responses out of shared caches, and refuse to serve protected content until verification is real.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="https://github.com/TateLyman/x402-cache-safe-worker" target="_blank" rel="noreferrer">open starter</a>
+            <a class="console-button secondary" href="#workerChecklist">checklist</a>
+            <a class="console-button secondary" href="x402-cors-fix.html">cors guide</a>
+            <a class="console-button secondary" href="x402-surface-check.html">run checker</a>
+            <a class="console-button secondary" href="https://developers.cloudflare.com/agents/agentic-payments/" target="_blank" rel="noreferrer">Cloudflare docs</a>
+            <a class="console-button ghost" href="x402-attack-map-2026.html">attack map</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>runtime</dt>
+              <dd>Worker</dd>
+            </div>
+            <div>
+              <dt>gate</dt>
+              <dd>HTTP 402</dd>
+            </div>
+            <div>
+              <dt>cache</dt>
+              <dd>no-store/private</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Cloudflare x402 Worker terminal preview">
+          <div class="terminal-topline">worker.gate</div>
+          <pre><code>$ npm test
+402 challenge: no-store, private
+preflight: allows x-payment
+vary: origin + payment headers
+paid path: refuses placeholder payment
+result: safe until verifier is wired</code></pre>
+        </aside>
+      </section>
+
+      <section id="workerChecklist" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">worker checklist</p>
+          <h2>The launch contract for an edge payment gate.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">402</p>
+            <h3>Challenge before content</h3>
+            <p>Unauthenticated paid routes should return a structured 402 with amount, resource, network, and payee data before any protected response body is generated.</p>
+          </article>
+          <article>
+            <p class="card-command">cors</p>
+            <h3>Readable to browser agents</h3>
+            <p>OPTIONS must allow <code>content-type,x-payment</code>, and the actual 402 response must include <code>Access-Control-Allow-Origin</code> plus exposed payment headers.</p>
+          </article>
+          <article>
+            <p class="card-command">cache</p>
+            <h3>No shared cache reuse</h3>
+            <p>Use <code>Cache-Control: no-store, private</code> on payment challenges and protected responses, then vary on origin and payment-relevant headers.</p>
+          </article>
+          <article>
+            <p class="card-command">verify</p>
+            <h3>No grant before verification</h3>
+            <p>The starter deliberately returns <code>501</code> after a placeholder payment header. That is safer than accidentally shipping paid content before settlement validation exists.</p>
+          </article>
+          <article>
+            <p class="card-command">resource</p>
+            <h3>Bind the exact route</h3>
+            <p>Top-level resource metadata and accept-level resource echo should point to the same canonical HTTPS URL the agent is buying.</p>
+          </article>
+          <article>
+            <p class="card-command">logs</p>
+            <h3>Keep receipts without prompts</h3>
+            <p>Log request ids, challenge ids, route, rail, and verification result. Do not place prompts, PII, API keys, or wallet secrets in payment metadata.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">starter map</p>
+          <h2>The public repo is intentionally small.</h2>
+          <p>
+            The starter is not a fake payment processor. It is a safe edge shape to copy before adding a real x402 or MPP verifier. The important part is that every risky default is explicit.
+          </p>
+          <pre><code>src/worker.mjs
+  OPTIONS /paid/report        -> 204 CORS preflight
+  GET/POST /paid/report       -> 402 payment challenge
+  GET/POST with X-PAYMENT     -> 501 until verifier is wired
+  GET /health                 -> public cacheable health check
+
+test/smoke.mjs
+  verifies no-store/private, Vary, CORS,
+  resource echo, and no grant before verification</code></pre>
+          <p>
+            Start from the repo, wire your actual verifier, then run the no-payment checker against the deployed Worker before you announce the paid route.
+          </p>
+          <p>
+            <a href="https://github.com/TateLyman/x402-cache-safe-worker" target="_blank" rel="noreferrer">Open the Worker starter</a>
+            or run the broader <a href="x402-surface-check.html">x402 Surface Check</a>.
+          </p>
+        </article>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">commands</p>
+            <h2>Smoke-test the gate before promotion.</h2>
+          </div>
+          <a class="console-link" href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">npm checker</a>
+        </div>
+        <div class="terminal-window">
+          <div class="terminal-topline">local proof</div>
+          <pre><code>git clone https://github.com/TateLyman/x402-cache-safe-worker
+cd x402-cache-safe-worker
+npm test
+
+npx --yes x402-surface-check@latest \
+  --endpoint --method POST https://worker.example.com/paid/report \
+  --origin https://app.example.com \
+  --body '{"report":"demo"}'</code></pre>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">why now</p>
+          <h2>The platform layer is normalizing paid agent calls.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">Cloudflare</p>
+            <h3>Workers and MCP tools</h3>
+            <p>Cloudflare documents x402 and MPP for agentic payments, including HTTP content, MCP tools, and Agents SDK client flows.</p>
+            <a href="https://developers.cloudflare.com/agents/agentic-payments/" target="_blank" rel="noreferrer">official docs</a>
+          </article>
+          <article>
+            <p class="card-command">AWS</p>
+            <h3>Managed spend governance</h3>
+            <p>AgentCore Payments preview points the market toward session spending limits, wallet authentication, observability, and x402 negotiation as managed infrastructure.</p>
+            <a href="https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-agentcore-payments-preview/" target="_blank" rel="noreferrer">official announcement</a>
+          </article>
+          <article>
+            <p class="card-command">research</p>
+            <h3>Attack surface is real</h3>
+            <p>May 2026 x402 attack research highlights finality, replay, caller binding, header/cache handling, and discovery steering as launch controls, not theoretical footnotes.</p>
+            <a href="https://arxiv.org/abs/2605.11781" target="_blank" rel="noreferrer">open paper</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-cta">
+        <div>
+          <p class="console-kicker">paid pass</p>
+          <h2>Need a Worker, MCP tool, or x402 route checked before public launch?</h2>
+          <p>Send the deployed route, manifest, repo, intended origin, and what a paid call is supposed to unlock.</p>
+        </div>
+        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Cloudflare%20x402%20Worker%20review&amp;body=Worker%20URL%3A%0AManifest%20or%20OpenAPI%3A%0AIntended%20browser%20origin%3A%0AWhat%20payment%20unlocks%3A%0ADeadline%3A">send scope</a>
+      </section>
+    </main>
+
+    <footer class="console-footer">
+      <span>cloudflare x402 worker</span>
+      <a href="x402-cors-fix.html">cors guide</a>
+      <a href="x402-surface-check.html">surface check</a>
+      <a href="x402-attack-map-2026.html">attack map</a>
+      <a href="payments.html">paid scopes</a>
+    </footer>
+  </body>
+</html>
