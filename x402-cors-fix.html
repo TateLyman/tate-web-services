@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>x402 CORS Fix | Browser-Readable 402 Challenges | Tate Programs</title>
+    <meta name="description" content="A practical x402 CORS fix guide for browser agents: preflight, actual 402 responses, payment-required headers, X-PAYMENT, resource echo, and middleware order.">
+    <link rel="canonical" href="https://tateprograms.com/x402-cors-fix.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="x402 CORS Fix">
+    <meta property="og:description" content="Preflight is not enough. Make actual x402 402 challenge responses readable to browser agents before launch.">
+    <meta property="og:url" content="https://tateprograms.com/x402-cors-fix.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="x402 CORS Fix">
+    <meta name="twitter:description" content="Browser-readable x402 402 challenges, payment headers, resource echo, and middleware order.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "x402 CORS Fix",
+        "description": "A practical x402 CORS fix guide for browser agents: preflight, actual 402 responses, payment-required headers, X-PAYMENT, resource echo, and middleware order.",
+        "author": {
+          "@type": "Person",
+          "name": "Tate Lyman"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com/"
+        },
+        "datePublished": "2026-05-16",
+        "dateModified": "2026-05-16",
+        "mainEntityOfPage": "https://tateprograms.com/x402-cors-fix.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page article-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html#workbench">workbench</a>
+        <a href="x402-surface-check.html">surface</a>
+        <a href="x402-launch-checklist.html">x402</a>
+        <a href="x402-attack-map-2026.html">attack-map</a>
+        <a href="pay-skills-launch-queue.html">pay-skills</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=x402%20CORS%20review">
+        <span></span>
+        browser 402
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/notes/x402-cors-fix</strong>
+        <em>browser payment headers</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">x402 cors / may 2026</p>
+          <h1>Preflight is not enough for browser-readable x402.</h1>
+          <p class="console-subtitle">
+            A browser client has to pass two gates before it can pay: the OPTIONS preflight must allow the payment header, and the actual 402 challenge response must expose the payment requirements. If the second response drops CORS, wallets and browser agents cannot read the amount, rail, payee, or resource they are supposed to authorize.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="#fixOrder">fix order</a>
+            <a class="console-button secondary" href="x402-surface-check.html">run checker</a>
+            <a class="console-button secondary" href="#commands">commands</a>
+            <a class="console-button secondary" href="#proofTrail">proof trail</a>
+            <a class="console-button ghost" href="x402-launch-checklist.html">launch checklist</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>failure</dt>
+              <dd>blind 402</dd>
+            </div>
+            <div>
+              <dt>header</dt>
+              <dd>X-PAYMENT</dd>
+            </div>
+            <div>
+              <dt>result</dt>
+              <dd>readable challenge</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="x402 CORS terminal preview">
+          <div class="terminal-topline">cors.trace</div>
+          <pre><code>$ curl -i -X OPTIONS /paid \
+  -H 'Origin: https://app.example' \
+  -H 'Access-Control-Request-Headers: x-payment'
+204 access-control-allow-headers: x-payment
+
+$ curl -i /paid -H 'Origin: https://app.example'
+402 access-control-allow-origin: https://app.example
+402 access-control-expose-headers: payment-required</code></pre>
+        </aside>
+      </section>
+
+      <section id="fixOrder" class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">fix order</p>
+          <h2>Make the challenge readable before you promote the endpoint.</h2>
+
+          <h3>1. Answer OPTIONS on every paid route</h3>
+          <p>
+            Return <code>204</code> or <code>200</code> with the intended origin, the route method, <code>OPTIONS</code>, and the payment headers the client will send. For x402, that usually means <code>x-payment</code> plus <code>content-type</code>. For MPP or mixed surfaces, include the documented payment-signature and receipt headers too.
+          </p>
+
+          <h3>2. Add CORS to the actual 402 response</h3>
+          <p>
+            The most common miss is fixing preflight while the payment-required response still has no <code>Access-Control-Allow-Origin</code>. That leaves browser clients unable to read the challenge payload. Add the same origin policy to the 402 path that short-circuits before application handlers.
+          </p>
+
+          <h3>3. Expose payment requirement headers</h3>
+          <p>
+            If your challenge is carried in a header, expose it. Common names are <code>payment-required</code>, <code>x-payment-required</code>, <code>payment-response</code>, and <code>x-payment-response</code>. Without <code>Access-Control-Expose-Headers</code>, browser code may receive the 402 but still be unable to inspect the fields it needs.
+          </p>
+
+          <h3>4. Put CORS outside payment middleware</h3>
+          <p>
+            In middleware stacks where the x402 layer returns early, CORS has to wrap that layer. If the payment middleware is outermost, it can emit a 402 before the response passes through CORS. The fast test is simple: hit a paid route without payment and inspect the actual 402 headers, not just OPTIONS.
+          </p>
+
+          <h3>5. Echo the resource on each accept leg</h3>
+          <p>
+            Keep the top-level <code>resource.url</code>, then repeat the charged URL in <code>accepts[N].resource</code> or <code>accepts[N].extra.resource</code>. That makes spend maps, wallet prompts, receipts, and rail selection easier to reconcile.
+          </p>
+        </article>
+      </section>
+
+      <section id="commands" class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">commands</p>
+            <h2>Test both gates from the shell.</h2>
+          </div>
+          <a class="console-link" href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">npm package</a>
+        </div>
+        <div class="terminal-window">
+          <div class="terminal-topline">no-payment check</div>
+          <pre><code>npx --yes x402-surface-check@latest \
+  --endpoint --method POST https://api.example.com/paid \
+  --origin https://app.example.com \
+  --body '{"sample":true}'
+
+curl -si -X OPTIONS https://api.example.com/paid \
+  -H 'Origin: https://app.example.com' \
+  -H 'Access-Control-Request-Method: POST' \
+  -H 'Access-Control-Request-Headers: x-payment,content-type'
+
+curl -si -X POST https://api.example.com/paid \
+  -H 'Origin: https://app.example.com' \
+  -H 'Content-Type: application/json' \
+  -d '{"sample":true}'</code></pre>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">response checklist</p>
+          <h2>The headers to look for.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">OPTIONS</p>
+            <h3>Preflight</h3>
+            <p><code>Access-Control-Allow-Origin</code>, <code>Access-Control-Allow-Methods</code>, and <code>Access-Control-Allow-Headers</code> should appear on the preflight response.</p>
+          </article>
+          <article>
+            <p class="card-command">402</p>
+            <h3>Challenge response</h3>
+            <p>The actual payment-required response should also include <code>Access-Control-Allow-Origin</code>, not only the challenge payload.</p>
+          </article>
+          <article>
+            <p class="card-command">expose</p>
+            <h3>Readable headers</h3>
+            <p><code>Access-Control-Expose-Headers</code> should include whichever header carries settlement or payment requirements.</p>
+          </article>
+          <article>
+            <p class="card-command">resource</p>
+            <h3>Route binding</h3>
+            <p>Resource URLs should be canonical HTTPS values, and accept legs should echo the exact URL being purchased.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section article-shell">
+        <article class="release-note">
+          <p class="console-kicker">implementation notes</p>
+          <h2>Framework fixes are usually small.</h2>
+
+          <h3>FastAPI / Starlette</h3>
+          <p>
+            Register CORS so it wraps the x402 middleware path. Then confirm that no-payment 402 responses, not only OPTIONS responses, contain the allow-origin and expose-headers values.
+          </p>
+          <pre><code>app.add_middleware(X402Middleware, ...)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://app.example.com"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["content-type", "x-payment"],
+    expose_headers=["payment-required", "x-payment-response"],
+)</code></pre>
+
+          <h3>Express</h3>
+          <p>
+            Put the CORS layer before paid-route middleware or set headers on the 402 response directly before returning.
+          </p>
+          <pre><code>app.use(cors({
+  origin: "https://app.example.com",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["content-type", "x-payment"],
+  exposedHeaders: ["payment-required", "x-payment-response"],
+}));
+
+app.options("/paid", cors());
+app.post("/paid", x402Middleware, handler);</code></pre>
+
+          <h3>Next.js / Vercel routes</h3>
+          <p>
+            If a route handler returns 402 before normal response helpers run, attach the headers to that returned response. Also implement an explicit <code>OPTIONS</code> export for the same path.
+          </p>
+          <pre><code>const corsHeaders = {
+  "Access-Control-Allow-Origin": "https://app.example.com",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "content-type, x-payment",
+  "Access-Control-Expose-Headers": "payment-required, x-payment-response",
+};
+
+export async function OPTIONS() {
+  return new Response(null, { status: 204, headers: corsHeaders });
+}</code></pre>
+        </article>
+      </section>
+
+      <section id="proofTrail" class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">field proof</p>
+          <h2>This has already changed live x402 surfaces.</h2>
+          <p>
+            The pattern is not theoretical. Recent no-payment checks caught it on public pay-skills launches, and follow-up patches made the payment requirements readable.
+          </p>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">fixed</p>
+            <h3>anchor-x402</h3>
+            <p>Middleware order was changed so actual 402 responses pass through CORS and expose the payment headers.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/47#issuecomment-4465218516" target="_blank" rel="noreferrer">fix verification</a>
+          </article>
+          <article>
+            <p class="card-command">partial</p>
+            <h3>Blocksize market data</h3>
+            <p>Preflight and resource echo were fixed; the latest note isolated actual-402 ACAO as the remaining browser-agent blocker.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4464747368" target="_blank" rel="noreferrer">follow-up note</a>
+          </article>
+          <article>
+            <p class="card-command">partial</p>
+            <h3>x402watch</h3>
+            <p>Paid endpoint metadata and POST preflight improved; actual 402 responses still need browser-readable CORS.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/36#issuecomment-4464743543" target="_blank" rel="noreferrer">follow-up note</a>
+          </article>
+          <article>
+            <p class="card-command">partial</p>
+            <h3>x402jp Japan data</h3>
+            <p>Weather routes now return structured 402 challenges; browser CORS and resource echo remain the highest-value polish.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/58#issuecomment-4455401355" target="_blank" rel="noreferrer">fix verification</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">paid review</p>
+            <h2>Need this checked before a launch?</h2>
+            <p>
+              Send one manifest, OpenAPI file, direct endpoint, or registry PR. The fixed-scope review returns the no-payment evidence, spend-map gaps, and patch order.
+            </p>
+          </div>
+          <a class="console-button primary" href="payments.html">see fixed scopes</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
