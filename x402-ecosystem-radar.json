@@ -123,7 +123,7 @@
       "url": "https://github.com/coinbase/x402/pull/158",
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
-      "updatedAt": "2026-05-07T19:32:00Z",
+      "updatedAt": "2026-05-16T22:36:20Z",
       "ageHours": 219,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
@@ -551,6 +551,48 @@
     }
   ],
   "newestRows": [
+    {
+      "number": 158,
+      "title": "Add Crinkl to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/158",
+      "state": "open",
+      "createdAt": "2026-05-07T19:16:56Z",
+      "updatedAt": "2026-05-16T22:36:20Z",
+      "ageHours": 219,
+      "author": "alvintanpoco",
+      "authorUrl": "https://github.com/alvintanpoco",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.1,
+      "urls": [
+        "https://www.crinkl.xyz/developers",
+        "https://api.crinkl.xyz",
+        "https://api.crinkl.xyz/x402/catalog",
+        "https://solscan.io/tx/2uB7Y91N6GQPiAnemQ7yFUpdhUygjoqu4s86MXf4RJSfPza1VaCpC8Uxf1eDcZBQJ7woEaBUq98zYxxT4aBVAM1E"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/crinkl/metadata.json",
+        "typescript/site/public/logos/crinkl.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/crinkl/metadata.json"
+      ],
+      "summary": "Adds Crinkl to the x402 ecosystem page as a `Services/Endpoints` provider.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 84,
+      "priority": "urgent"
+    },
     {
       "number": 169,
       "title": "Add DPX to x402 ecosystem partners",
@@ -1031,7 +1073,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T04:03:07Z",
       "updatedAt": "2026-05-15T08:26:14Z",
-      "ageHours": 66,
+      "ageHours": 67,
       "author": "nolnol3",
       "authorUrl": "https://github.com/nolnol3",
       "category": "x402 repo activity",
@@ -1141,48 +1183,6 @@
       ],
       "priorityScore": 56,
       "priority": "review"
-    },
-    {
-      "number": 158,
-      "title": "Add Crinkl to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/158",
-      "state": "open",
-      "createdAt": "2026-05-07T19:16:56Z",
-      "updatedAt": "2026-05-07T19:32:00Z",
-      "ageHours": 219,
-      "author": "alvintanpoco",
-      "authorUrl": "https://github.com/alvintanpoco",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.1,
-      "urls": [
-        "https://www.crinkl.xyz/developers",
-        "https://api.crinkl.xyz",
-        "https://api.crinkl.xyz/x402/catalog",
-        "https://solscan.io/tx/2uB7Y91N6GQPiAnemQ7yFUpdhUygjoqu4s86MXf4RJSfPza1VaCpC8Uxf1eDcZBQJ7woEaBUq98zYxxT4aBVAM1E"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/crinkl/metadata.json",
-        "typescript/site/public/logos/crinkl.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/crinkl/metadata.json"
-      ],
-      "summary": "Adds Crinkl to the x402 ecosystem page as a `Services/Endpoints` provider.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 84,
-      "priority": "urgent"
     },
     {
       "number": 157,
@@ -1486,7 +1486,7 @@
       "url": "https://github.com/coinbase/x402/pull/158",
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
-      "updatedAt": "2026-05-07T19:32:00Z",
+      "updatedAt": "2026-05-16T22:36:20Z",
       "ageHours": 219,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
@@ -2719,7 +2719,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T04:03:07Z",
       "updatedAt": "2026-05-15T08:26:14Z",
-      "ageHours": 66,
+      "ageHours": 67,
       "author": "nolnol3",
       "authorUrl": "https://github.com/nolnol3",
       "category": "x402 repo activity",
