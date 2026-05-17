@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16",
+  "generatedAt": "2026-05-17",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 149,
@@ -25,7 +25,7 @@
     "websiteVisible": 105,
     "missingTitle": 52,
     "shortDescription": 83,
-    "recent45": 84,
+    "recent45": 82,
     "orgOwned": 43,
     "issuesEnabled": 56,
     "archived": 0,
@@ -155,6 +155,28 @@
       ]
     },
     {
+      "name": "ai.raisonn/connect",
+      "title": "",
+      "description": "AI-native art catalogue. Catalogue works, parse provenance, and generate signed RAIs.",
+      "publicProofScore": 49,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-04-01T21:37:52.119242Z",
+      "repo": "raisonnai/raisonnai",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/raisonnai/raisonnai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
       "name": "ai.com.mcp/skills-search",
       "title": "Agent Skills Search Server",
       "description": "Search and discover Agent Skills from the skills.sh registry. Powered by HAPI MCP server.",
@@ -243,28 +265,6 @@
       ]
     },
     {
-      "name": "ai.raisonn/connect",
-      "title": "",
-      "description": "AI-native art catalogue. Catalogue works, parse provenance, and generate signed RAIs.",
-      "publicProofScore": 54,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-04-01T21:37:52.119242Z",
-      "repo": "raisonnai/raisonnai",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/raisonnai/raisonnai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
       "name": "ai.explorium/mcp-explorium",
       "title": "",
       "description": "Access live company and contact data from Explorium's AgentSource B2B platform.",
@@ -278,6 +278,28 @@
       "repo": "explorium-ai/mcp-explorium",
       "websiteUrl": "https://www.explorium.ai",
       "primaryUrl": "https://www.explorium.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.inflowpay.app/inflow",
+      "title": "",
+      "description": "MCP Server for agents to onboard, pay, and provision services autonomously with InFlow",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-04-01T08:15:17.136175Z",
+      "repo": "inflowpayai/inflow-mcp",
+      "websiteUrl": "https://app.inflowpay.ai",
+      "primaryUrl": "https://app.inflowpay.ai",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
@@ -411,30 +433,6 @@
       "hasSecretPackageConfig": false,
       "hasSecretRemoteHeaders": false,
       "updatedAt": "2026-01-12T03:52:12.746584Z",
-      "repo": "autoblocksai/ctxl",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/autoblocksai/ctxl",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.autoblocks/ctxl-mcp",
-      "title": "",
-      "description": "Personal context management for AI assistants",
-      "publicProofScore": 57,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-01-12T03:52:19.009876Z",
       "repo": "autoblocksai/ctxl",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/autoblocksai/ctxl",
