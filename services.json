@@ -10,6 +10,43 @@
   "currency": "USD",
   "services": [
     {
+      "id": "agent-payment-receipt-map",
+      "name": "Agent Payment Receipt Map",
+      "price_usd": 50,
+      "delivery": "24h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "agent-payments",
+        "signed-receipts",
+        "solana-escrow",
+        "buyer-proof"
+      ],
+      "scope": "Private read of one paid-run receipt, task JSON, escrow record, or proposed payment schema.",
+      "requires_authorization": true,
+      "input_fields": [
+        "project_url",
+        "payment_rail",
+        "receipt_or_task_json",
+        "authorized_scope",
+        "contact_email",
+        "notes"
+      ],
+      "deliverables": [
+        "task-to-payment binding gaps",
+        "actor and signer proof notes",
+        "artifact digest recommendation",
+        "unchecked claims section",
+        "failure, refund, retry, or cure rule",
+        "smallest patch order"
+      ],
+      "url": "https://tateprograms.com/agent-payment-receipt-map.html",
+      "payment_url": "https://paypal.me/glidelocal/50",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20payment%20receipt%20map"
+    },
+    {
       "id": "x402-launch-recheck",
       "name": "x402 Launch Re-check",
       "price_usd": 49,
