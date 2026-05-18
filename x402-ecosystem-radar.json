@@ -376,7 +376,7 @@
       "state": "open",
       "createdAt": "2026-05-06T12:00:16Z",
       "updatedAt": "2026-05-06T12:47:10Z",
-      "ageHours": 293,
+      "ageHours": 294,
       "author": "piiiico",
       "authorUrl": "https://github.com/piiiico",
       "category": "ecosystem listing",
@@ -520,39 +520,43 @@
       "priority": "urgent"
     },
     {
-      "number": 168,
-      "title": "feat(ecosystem): add AI Talent Atlas — researcher intelligence API",
-      "url": "https://github.com/coinbase/x402/pull/168",
-      "state": "open",
-      "createdAt": "2026-05-16T16:59:56Z",
-      "updatedAt": "2026-05-16T22:16:15Z",
-      "ageHours": 48,
-      "author": "FuturMix",
-      "authorUrl": "https://github.com/FuturMix",
+      "number": 159,
+      "title": "feat: add NZRT Wiki API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/159",
+      "state": "closed",
+      "createdAt": "2026-05-08T01:39:02Z",
+      "updatedAt": "2026-05-08T01:48:46Z",
+      "ageHours": 256,
+      "author": "NZRTnetwork",
+      "authorUrl": "https://github.com/NZRTnetwork",
       "category": "ecosystem listing",
       "networks": [
         "Base",
-        "USDC"
+        "Base Sepolia",
+        "USDC",
+        "mainnet",
+        "testnet"
       ],
-      "maxPriceUsd": 0.5,
+      "maxPriceUsd": 0,
       "urls": [
-        "https://www.agentrift.tech"
+        "https://api.nzrtnetwork.com",
+        "https://github.com/NZRTnetwork/nzrt-x402"
       ],
       "files": [
-        "typescript/site/app/ecosystem/partners-data/ai-talent-atlas/metadata.json",
-        "typescript/site/public/logos/ai-talent-atlas.png"
+        "typescript/site/app/ecosystem/partners-data/nzrt-wiki/metadata.json",
+        "typescript/site/public/logos/nzrt-wiki.png"
       ],
       "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/ai-talent-atlas/metadata.json"
+        "typescript/site/app/ecosystem/partners-data/nzrt-wiki/metadata.json"
       ],
-      "summary": "Adds AI Talent Atlas to the x402 ecosystem page as a `Services/Endpoints` provider.",
+      "summary": "**NZRT Wiki API** - pay-per-query knowledge API serving NZRT Network vault content via x402 micropayments on Base.",
       "reasons": [
         "public ecosystem listing",
         "agent-discoverable surface",
-        "declared paid calls"
+        "mainnet value path"
       ],
-      "priorityScore": 60,
-      "priority": "urgent"
+      "priorityScore": 56,
+      "priority": "review"
     }
   ],
   "newestRows": [
@@ -914,7 +918,7 @@
       "state": "open",
       "createdAt": "2026-05-16T16:59:56Z",
       "updatedAt": "2026-05-16T22:16:15Z",
-      "ageHours": 48,
+      "ageHours": 49,
       "author": "FuturMix",
       "authorUrl": "https://github.com/FuturMix",
       "category": "ecosystem listing",
@@ -939,8 +943,8 @@
         "agent-discoverable surface",
         "declared paid calls"
       ],
-      "priorityScore": 60,
-      "priority": "urgent"
+      "priorityScore": 52,
+      "priority": "review"
     },
     {
       "number": 167,
@@ -1274,7 +1278,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T04:03:07Z",
       "updatedAt": "2026-05-15T08:26:14Z",
-      "ageHours": 109,
+      "ageHours": 110,
       "author": "nolnol3",
       "authorUrl": "https://github.com/nolnol3",
       "category": "x402 repo activity",
@@ -1601,7 +1605,7 @@
       "state": "open",
       "createdAt": "2026-05-06T12:00:16Z",
       "updatedAt": "2026-05-06T12:47:10Z",
-      "ageHours": 293,
+      "ageHours": 294,
       "author": "piiiico",
       "authorUrl": "https://github.com/piiiico",
       "category": "ecosystem listing",
@@ -1745,41 +1749,6 @@
       "priority": "urgent"
     },
     {
-      "number": 168,
-      "title": "feat(ecosystem): add AI Talent Atlas — researcher intelligence API",
-      "url": "https://github.com/coinbase/x402/pull/168",
-      "state": "open",
-      "createdAt": "2026-05-16T16:59:56Z",
-      "updatedAt": "2026-05-16T22:16:15Z",
-      "ageHours": 48,
-      "author": "FuturMix",
-      "authorUrl": "https://github.com/FuturMix",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC"
-      ],
-      "maxPriceUsd": 0.5,
-      "urls": [
-        "https://www.agentrift.tech"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/ai-talent-atlas/metadata.json",
-        "typescript/site/public/logos/ai-talent-atlas.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/ai-talent-atlas/metadata.json"
-      ],
-      "summary": "Adds AI Talent Atlas to the x402 ecosystem page as a `Services/Endpoints` provider.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "declared paid calls"
-      ],
-      "priorityScore": 60,
-      "priority": "urgent"
-    },
-    {
       "number": 159,
       "title": "feat: add NZRT Wiki API to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/159",
@@ -1825,7 +1794,7 @@
       "state": "open",
       "createdAt": "2026-05-03T22:54:58Z",
       "updatedAt": "2026-05-04T19:46:30Z",
-      "ageHours": 354,
+      "ageHours": 355,
       "author": "johnyi12",
       "authorUrl": "https://github.com/johnyi12",
       "category": "ecosystem listing",
@@ -1850,6 +1819,41 @@
         "settlement or checkout workflow"
       ],
       "priorityScore": 56,
+      "priority": "review"
+    },
+    {
+      "number": 168,
+      "title": "feat(ecosystem): add AI Talent Atlas — researcher intelligence API",
+      "url": "https://github.com/coinbase/x402/pull/168",
+      "state": "open",
+      "createdAt": "2026-05-16T16:59:56Z",
+      "updatedAt": "2026-05-16T22:16:15Z",
+      "ageHours": 49,
+      "author": "FuturMix",
+      "authorUrl": "https://github.com/FuturMix",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "maxPriceUsd": 0.5,
+      "urls": [
+        "https://www.agentrift.tech"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/ai-talent-atlas/metadata.json",
+        "typescript/site/public/logos/ai-talent-atlas.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/ai-talent-atlas/metadata.json"
+      ],
+      "summary": "Adds AI Talent Atlas to the x402 ecosystem page as a `Services/Endpoints` provider.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "declared paid calls"
+      ],
+      "priorityScore": 52,
       "priority": "review"
     },
     {
@@ -1964,7 +1968,7 @@
       "state": "open",
       "createdAt": "2026-05-03T21:50:55Z",
       "updatedAt": "2026-05-03T21:51:03Z",
-      "ageHours": 355,
+      "ageHours": 356,
       "author": "kite-builds",
       "authorUrl": "https://github.com/kite-builds",
       "category": "ecosystem listing",
@@ -2112,7 +2116,7 @@
       "state": "closed",
       "createdAt": "2026-05-06T19:50:13Z",
       "updatedAt": "2026-05-06T21:08:18Z",
-      "ageHours": 285,
+      "ageHours": 286,
       "author": "aayushijain21",
       "authorUrl": "https://github.com/aayushijain21",
       "category": "protocol implementation",
@@ -2638,7 +2642,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T04:03:07Z",
       "updatedAt": "2026-05-15T08:26:14Z",
-      "ageHours": 109,
+      "ageHours": 110,
       "author": "nolnol3",
       "authorUrl": "https://github.com/nolnol3",
       "category": "x402 repo activity",
@@ -2805,7 +2809,7 @@
       "state": "open",
       "createdAt": "2026-05-02T06:50:31Z",
       "updatedAt": "2026-05-02T06:50:40Z",
-      "ageHours": 394,
+      "ageHours": 395,
       "author": "hilarl",
       "authorUrl": "https://github.com/hilarl",
       "category": "docs / discovery",
