@@ -57,6 +57,12 @@
           },
           {
             "@type": "Offer",
+            "name": "x402 Fix Sprint",
+            "price": "299",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
             "name": "Agent Security Launch Review",
             "price": "149",
             "priceCurrency": "USD"
@@ -93,6 +99,7 @@
         <a href="#workbench">workbench</a>
         <a href="agent-stack-radar.html">radar</a>
         <a href="agent-payment-launch-review.html">payment-review</a>
+        <a href="x402-fix-sprint.html">fix-sprint</a>
         <a href="agent-submission-gate.html">submission</a>
         <a href="launch-proof-promo-flow.html">promo-flow</a>
         <a href="mcp-launch-trust-2026.html">mcp-trust</a>
@@ -134,6 +141,7 @@
             <a href="mcp-registry-pulse.html" aria-label="MCP registry pulse">pls</a>
             <a href="agent-stack-radar.html" aria-label="Agent stack radar">rad</a>
             <a href="agent-payment-launch-review.html" aria-label="Agent payment launch review">payr</a>
+            <a href="x402-fix-sprint.html" aria-label="x402 fix sprint">fix</a>
             <a href="agent-submission-gate.html" aria-label="Agent submission gate">sub</a>
             <a href="launch-proof-promo-flow.html" aria-label="Launch proof promo flow">vid</a>
             <a href="mcp-launch-trust-2026.html" aria-label="MCP launch trust ledger">trst</a>
@@ -182,8 +190,9 @@
 risk-pass      99      memo + fix order
 student-pass   29+     student launch review
 pay-review     149     private spend map
+x402-fix       299     paid blocker sprint
 mcp-dir        149     listing pass
-fix-sprint     299+    blocker repair
+fix-sprint     299+    app blocker repair
 security       149     drill report
 media-pass     149     scripts + scene map
 submission     99      proof + fix order
@@ -201,6 +210,7 @@ commerce-gate x402 / Pay.sh readiness
 x402 filter   payment metadata cleanup
 x402 surface  manifest / endpoint / MPP check
 x402 action   CI wrapper for payment-surface checks
+x402 fix      paid re-check or small authorized sprint
 x402 proof    public builder acknowledgements + fixes
 x402 cors     browser-readable 402 challenge fix
 x402 attacks  finality / replay / cache / discovery map
@@ -282,6 +292,7 @@ launchquest     live incentive demo</code></pre>
               <ul>
                 <li><a href="shipcheck.html">~/shipcheck</a></li>
                 <li><a href="agent-payment-launch-review.html">~/services/agent-payment-launch-review</a></li>
+                <li><a href="x402-fix-sprint.html">~/services/x402-fix-sprint</a></li>
                 <li><a href="agent-commerce-gate.html">~/tools/agent-commerce-gate</a></li>
                 <li><a href="pay-sh-catalog-pulse.html">~/notes/pay-sh-catalog-pulse</a></li>
                 <li><a href="x402-metadata-filter.html">~/tools/x402-metadata-filter</a></li>
@@ -342,6 +353,7 @@ launchquest     live incentive demo</code></pre>
           <button type="button" data-command="pulse">pulse</button>
           <button type="button" data-command="radar">radar</button>
           <button type="button" data-command="payment-review">payment-review</button>
+          <button type="button" data-command="x402-fix">x402-fix</button>
           <button type="button" data-command="promo-flow">promo-flow</button>
           <button type="button" data-command="security-drill">security-drill</button>
           <button type="button" data-command="security-report">security-report</button>
@@ -407,34 +419,41 @@ launchquest     live incentive demo</code></pre>
           </article>
           <article>
             <span>05</span>
+            <h2>x402 Fix Sprint</h2>
+            <p>Paid re-check or small authorized patch path for one agent-payment launch blocker: CORS, cache, resource echo, discovery docs, or registry proof.</p>
+            <strong>$49 / $299</strong>
+            <a href="x402-fix-sprint.html">scope sprint</a>
+          </article>
+          <article>
+            <span>06</span>
             <h2>Agent Commerce Readiness</h2>
             <p>x402, Pay.sh, and API-payment loops: quoted prices, enforceable caps, approvals, receipts, replay protection, provider validation, metadata filters, and abuse controls.</p>
             <strong>$149</strong>
             <a href="agent-commerce-gate.html">open gate</a>
           </article>
           <article>
-            <span>06</span>
+            <span>07</span>
             <h2>Launch Proof Media Pass</h2>
             <p>Proof extraction, three short launch scripts, scene prompt map, caption set, and a publish-safe fact gate for one product or demo.</p>
             <strong>$149</strong>
             <a href="launch-proof-promo-flow.html">open flow</a>
           </article>
           <article>
-            <span>07</span>
+            <span>08</span>
             <h2>MCP Directory Launch</h2>
             <p>Package metadata, server.json version sync, Glama score readiness, registry proof, README config, and directory submission notes.</p>
             <strong>$149</strong>
             <a href="mcp-directory-launch.html">open pass</a>
           </article>
           <article>
-            <span>08</span>
+            <span>09</span>
             <h2>MCP Launch Review</h2>
             <p>Registry metadata, package identity, install path, client config, permission notes, and smoke-test proof.</p>
             <strong>$99</strong>
             <a href="mcp-launch-review.html">open scope</a>
           </article>
           <article>
-            <span>09</span>
+            <span>10</span>
             <h2>Student Launch Review</h2>
             <p>Deadline polish for student projects: README handoff, demo proof, submission copy, CI signal, and public-code cleanup.</p>
             <strong>$29+</strong>
@@ -478,6 +497,11 @@ launchquest     live incentive demo</code></pre>
             <span>service</span>
             <strong>Agent Payment Launch Review</strong>
             <em>$49 quick proof pass or full private review</em>
+          </a>
+          <a href="x402-fix-sprint.html">
+            <span>service</span>
+            <strong>x402 Fix Sprint</strong>
+            <em>paid re-check and small authorized blocker fix</em>
           </a>
           <a href="pay-sh-catalog-pulse.html">
             <span>research</span>
