@@ -37,6 +37,7 @@ npx serve .
 - `agent-payment-launch-review.js` - local scope, score, deliverable, and email-body generation logic for the agent payment launch review
 - `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, Streamable HTTP MCP `tools/list` catalogs, linked `discovery_url` catalogs, string and nested `discovery` links, `routes[]` catalogs, `resources[]` catalogs, endpoint-bearing `tools` maps, string-valued endpoint maps, raw resource URL strings, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, `schemes[]` challenge arrays, declared-price drift, cache-control posture, accept-leg resource binding, timeout/expiry metadata, optional strict-cache findings, optional strict-proof payment-identifier and signed offer/receipt checks, credential-like public registry URL params with redacted output, contextual guide links, browser origin/payment-header preflight blockers, MPP payment headers, x402 V2 requirements headers, MCP tool-name array handling, health/status routes, and legacy decimal x402 v1 challenges
 - `x402-fix-sprint.html` - paid private re-check and small authorized implementation sprint for one x402 launch blocker
+- `services.json` - machine-readable paid service catalog for agent marketplaces and crawlers
 - `x402-surface-check.js` - browser scoring logic for x402 public-surface shape, resources, networks, placeholder payees, staging rails, and metadata boundaries
 - `x402-attack-map-2026.html` - May 2026 field note mapping x402 and MPP attack classes to launch controls for finality, settlement binding, replay, cache hygiene, discovery steering, AgentCore payment policy, and measured failure evidence
 - `cloudflare-x402-worker.html` - Cloudflare Worker launch guide for x402 and MPP-style payment gates with browser-readable 402, `X-PAYMENT` preflight, no-store/private cache policy, Vary headers, and no grant before verification
@@ -75,6 +76,7 @@ npx serve .
 - `robots.txt` - crawler policy with sitemap reference
 - `sitemap.xml` - public crawl map for the main proof and service pages
 - `llms.txt` - concise machine-readable map for developer tools, service pages, and proof assets
+- `services.json` - fixed-scope service catalog with inputs, deliverables, prices, proof, and payment links
 - `.github/workflows/refresh-mcp-pulse.yml` - daily public MCP Registry Pulse refresh
 - `.github/workflows/refresh-pay-sh-pulse.yml` - daily public Pay.sh Catalog Pulse refresh
 - `.github/workflows/refresh-pay-skills-queue.yml` - daily public pay-skills registry queue refresh

@@ -1,0 +1,142 @@
+{
+  "provider": {
+    "name": "Tate Programs",
+    "url": "https://tateprograms.com",
+    "email": "hello@tateprograms.com",
+    "payment_url": "https://paypal.me/glidelocal",
+    "services_url": "https://tateprograms.com/services.json"
+  },
+  "last_updated": "2026-05-18",
+  "currency": "USD",
+  "services": [
+    {
+      "id": "x402-launch-recheck",
+      "name": "x402 Launch Re-check",
+      "price_usd": 49,
+      "delivery": "24h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "agent-payments",
+        "launch-review",
+        "security",
+        "developer-tools"
+      ],
+      "scope": "Private no-payment re-check of one x402 manifest, paid endpoint, or launch PR after a fix.",
+      "requires_authorization": true,
+      "input_fields": [
+        "surface_url",
+        "authorized_scope",
+        "previous_context_url",
+        "contact_email",
+        "notes"
+      ],
+      "deliverables": [
+        "pass/fail result",
+        "remaining launch blockers",
+        "commands or probes used",
+        "optional public wording for mutual sign-off"
+      ],
+      "url": "https://tateprograms.com/x402-fix-sprint.html",
+      "payment_url": "https://paypal.me/glidelocal/49",
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20re-check"
+    },
+    {
+      "id": "x402-launch-review",
+      "name": "x402 Launch Review",
+      "price_usd": 149,
+      "delivery": "48h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "pay-sh",
+        "agent-commerce",
+        "launch-review",
+        "mcp"
+      ],
+      "scope": "Private launch-readiness review for one x402, Pay.sh, MPP, or agent-payment surface.",
+      "requires_authorization": true,
+      "input_fields": [
+        "project_url",
+        "surface_url",
+        "authorized_scope",
+        "expected_price_or_network",
+        "contact_email",
+        "notes"
+      ],
+      "deliverables": [
+        "spend map",
+        "manifest and discovery review",
+        "402 challenge findings",
+        "CORS/cache/resource binding findings",
+        "metadata exposure notes",
+        "ranked patch order"
+      ],
+      "url": "https://tateprograms.com/x402-fix-sprint.html",
+      "payment_url": "https://paypal.me/glidelocal/149",
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20review"
+    },
+    {
+      "id": "x402-fix-sprint",
+      "name": "x402 Fix Sprint",
+      "price_usd": 299,
+      "delivery": "72h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "fix-sprint",
+        "agent-payments",
+        "cors",
+        "openapi",
+        "ci"
+      ],
+      "scope": "Small authorized implementation sprint for one x402 launch blocker.",
+      "requires_authorization": true,
+      "input_fields": [
+        "repo_url",
+        "surface_url",
+        "blocker_type",
+        "authorized_scope",
+        "contact_email",
+        "notes"
+      ],
+      "blocker_types": [
+        "manifest_or_discovery",
+        "cors_or_headers",
+        "cache_controls",
+        "resource_binding",
+        "price_or_network_docs",
+        "ci_gate",
+        "other"
+      ],
+      "deliverables": [
+        "small patch or patch plan",
+        "verification commands or probes",
+        "included follow-up re-check",
+        "private delivery by email or platform thread"
+      ],
+      "url": "https://tateprograms.com/x402-fix-sprint.html",
+      "payment_url": "https://paypal.me/glidelocal/299",
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20fix%20sprint"
+    }
+  ],
+  "boundaries": [
+    "Authorized targets only.",
+    "No signed payment attempts unless a customer provides explicit test scope.",
+    "No private publication without mutual sign-off.",
+    "No wallet keys, recovery phrases, or production secrets should be sent."
+  ],
+  "proof": [
+    "https://github.com/Cryptorefills/agentic-commerce/pull/3#issuecomment-4478268227",
+    "https://github.com/coinbase/x402/pull/154#issuecomment-4480044559",
+    "https://github.com/agno-agi/agno/pull/7885#issuecomment-4480053042",
+    "https://github.com/coinbase/x402/pull/134#issuecomment-4480069267"
+  ],
+  "repository": "https://github.com/TateLyman/the402-provider-webhook"
+}
