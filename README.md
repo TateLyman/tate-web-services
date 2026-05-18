@@ -37,6 +37,7 @@ npx serve .
 - `agent-payment-launch-review.js` - local scope, score, deliverable, and email-body generation logic for the agent payment launch review
 - `x402-surface-check.html` - browser checker and CLI landing page for x402 manifests, OpenAPI specs, Streamable HTTP MCP `tools/list` catalogs, linked `discovery_url` catalogs, string and nested `discovery` links, `routes[]` catalogs, `resources[]` catalogs, endpoint-bearing `tools` maps, string-valued endpoint maps, raw resource URL strings, item catalogs, direct paid endpoints, pasted no-payment 402 challenges, `schemes[]` challenge arrays, declared-price drift, cache-control posture, accept-leg resource binding, timeout/expiry metadata, optional strict-cache findings, optional strict-proof payment-identifier and signed offer/receipt checks, credential-like public registry URL params with redacted output, contextual guide links, browser origin/payment-header preflight blockers, MPP payment headers, x402 V2 requirements headers, MCP tool-name array handling, health/status routes, and legacy decimal x402 v1 challenges
 - `x402-fix-sprint.html` - paid private re-check and small authorized implementation sprint for one x402 launch blocker
+- `x402-five-attack-review.html` - paid private May 2026 x402 readiness review mapped to finality, settlement binding, replay, cache/header handling, discovery steering, and patch order
 - `services.json` - machine-readable paid service catalog for agent marketplaces and crawlers
 - `https://the402.tateprograms.com/api/triage` - deployed public no-payment x402 triage endpoint for agent marketplace listing
 - `https://the402.tateprograms.com/api/x402/triage` - live $0.01 x402 paid triage endpoint on Solana mainnet USDC
@@ -236,6 +237,7 @@ The front-door offer is intentionally concrete:
 - $29+ student launch review
 - $149 agent security launch review
 - $149+ agent payment launch review
+- $249 x402 five-attack review
 - $149 agent commerce readiness review
 - $149 launch proof media pass
 - $299+ production fix sprint

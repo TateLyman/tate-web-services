@@ -10,6 +10,67 @@
   "currency": "USD",
   "services": [
     {
+      "id": "x402-five-attack-review",
+      "name": "x402 Five-Attack Review",
+      "price_usd": 249,
+      "delivery": "48h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "agent-payments",
+        "security-review",
+        "finality",
+        "replay",
+        "cache-safety",
+        "discovery"
+      ],
+      "scope": "Private no-payment readiness review for one x402 launch surface, mapped to the May 2026 five-attack classes.",
+      "tiers": [
+        {
+          "name": "Snapshot",
+          "price_usd": 99,
+          "delivery": "24h",
+          "payment_url": "https://paypal.me/glidelocal/99"
+        },
+        {
+          "name": "Readiness review",
+          "price_usd": 249,
+          "delivery": "48h",
+          "payment_url": "https://paypal.me/glidelocal/249"
+        },
+        {
+          "name": "Patch sprint",
+          "price_usd": 499,
+          "delivery": "72h",
+          "payment_url": "https://paypal.me/glidelocal/499"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "project_url",
+        "manifest_or_endpoint_url",
+        "registry_or_docs_url",
+        "expected_price_or_network",
+        "authorized_scope",
+        "contact_email",
+        "notes"
+      ],
+      "deliverables": [
+        "route and spend map",
+        "finality and release-policy notes",
+        "settlement binding findings",
+        "replay and idempotency findings",
+        "cache, CORS, and payment-header findings",
+        "discovery metadata findings",
+        "ranked patch order"
+      ],
+      "url": "https://tateprograms.com/x402-five-attack-review.html",
+      "payment_url": "https://paypal.me/glidelocal/249",
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20five-attack%20review"
+    },
+    {
       "id": "agent-payment-receipt-map",
       "name": "Agent Payment Receipt Map",
       "price_usd": 50,
