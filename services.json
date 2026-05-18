@@ -193,6 +193,43 @@
       "url": "https://the402.tateprograms.com/api/triage",
       "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20public%20triage%20API"
+    },
+    {
+      "id": "x402-paid-triage-api",
+      "name": "x402 Paid Triage API",
+      "price_usd": 0.01,
+      "delivery": "instant",
+      "service_type": "data_api",
+      "fulfillment_type": "automated",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "agent-payments",
+        "paid-api",
+        "triage",
+        "solana-usdc",
+        "developer-tools"
+      ],
+      "scope": "Paid automated triage for one public x402, MPP, Pay.sh, or agent-payment launch surface.",
+      "requires_authorization": false,
+      "input_fields": [
+        "url",
+        "method",
+        "origin"
+      ],
+      "deliverables": [
+        "HTTP status and selected payment headers",
+        "payment challenge summary",
+        "cache/CORS/resource findings",
+        "paid review path"
+      ],
+      "url": "https://the402.tateprograms.com/api/x402/triage",
+      "method": "POST",
+      "payment_protocol": "x402",
+      "payment_asset": "USDC",
+      "payment_network": "solana-mainnet",
+      "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20paid%20triage%20API"
     }
   ],
   "boundaries": [
