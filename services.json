@@ -124,6 +124,38 @@
       "url": "https://tateprograms.com/x402-fix-sprint.html",
       "payment_url": "https://paypal.me/glidelocal/299",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20fix%20sprint"
+    },
+    {
+      "id": "x402-public-triage-api",
+      "name": "x402 Public Triage API",
+      "price_usd": 0.01,
+      "delivery": "instant",
+      "service_type": "data_api",
+      "fulfillment_type": "automated",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "agent-payments",
+        "triage",
+        "agent-card",
+        "developer-tools"
+      ],
+      "scope": "Public no-payment triage for one HTTPS manifest, paid endpoint, OpenAPI file, or discovery URL.",
+      "requires_authorization": false,
+      "input_fields": [
+        "url",
+        "method",
+        "origin"
+      ],
+      "deliverables": [
+        "HTTP status and selected payment headers",
+        "challenge summary",
+        "cache/CORS/resource findings",
+        "paid review path"
+      ],
+      "url": "https://the402.tateprograms.com/api/triage",
+      "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20public%20triage%20API"
     }
   ],
   "boundaries": [
