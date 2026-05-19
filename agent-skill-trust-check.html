@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <title>Agent Skill Trust Check | SKILL.md Pre-install Review | Tate Programs</title>
+    <meta name="description" content="Static trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings before install. Flags exec, secrets, wallet, network, and provenance risk.">
+    <link rel="canonical" href="https://tateprograms.com/agent-skill-trust-check.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Agent Skill Trust Check">
+    <meta property="og:description" content="Pre-install trust review for agent-skill listings before a buyer or marketplace runs them.">
+    <meta property="og:url" content="https://tateprograms.com/agent-skill-trust-check.html">
+    <meta name="twitter:title" content="Agent Skill Trust Check">
+    <meta name="twitter:description" content="Pre-install static trust check for SKILL.md, OpenClaw, Hermes, MCP, and marketplace skill listings.">
+    <link rel="alternate" type="application/json" href="https://tateprograms.com/services.json" title="Tate Programs service catalog">
+    <link rel="icon" href="assets/tate-programs-icon.svg" type="image/svg+xml">
+    <meta property="og:image" content="https://tateprograms.com/assets/tate-programs-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#111915">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Agent Skill Trust Check",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Cross-platform",
+        "url": "https://tateprograms.com/agent-skill-trust-check.html",
+        "codeRepository": "https://github.com/TateLyman/agent-skill-trust-check",
+        "softwareVersion": "0.1.0",
+        "description": "Static trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings before install.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.05",
+          "priceCurrency": "USD",
+          "url": "https://orkai.ai/skills/agent-skill-trust-check"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com",
+          "email": "hello@tateprograms.com"
+        }
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html">home</a>
+        <a href="agent-payment-launch-review.html">reviews</a>
+        <a href="x402-surface-check.html">free-check</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.0" target="_blank" rel="noreferrer">
+        <span></span>
+        release 0.1.0
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/tools/agent-skill-trust-check</strong>
+        <em>pre-install skill review</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">agent-skill marketplace / trust gate</p>
+          <h1>Review a skill before an agent installs it.</h1>
+          <p class="console-subtitle">
+            `agent-skill-trust-check` reads a SKILL.md file, marketplace listing, or pasted skill text and returns a compact install verdict. It is built for sellers, buyers, and marketplaces that need a clear signal before code, credentials, wallets, or network calls enter the runtime.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="https://github.com/TateLyman/agent-skill-trust-check" target="_blank" rel="noreferrer">open repo</a>
+            <a class="console-button secondary" href="https://orkai.ai/skills/agent-skill-trust-check" target="_blank" rel="noreferrer">paid skill</a>
+            <a class="console-button secondary" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.0" target="_blank" rel="noreferrer">release</a>
+            <a class="console-button ghost" href="payments.html">private review</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>paid API</dt>
+              <dd>$0.05</dd>
+            </div>
+            <div>
+              <dt>version</dt>
+              <dd>0.1.0</dd>
+            </div>
+            <div>
+              <dt>mode</dt>
+              <dd>static</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Agent Skill Trust Check commands">
+          <div class="terminal-topline">local check</div>
+          <pre><code>$ git clone https://github.com/TateLyman/agent-skill-trust-check
+$ cd agent-skill-trust-check
+$ npm run check
+$ node bin/agent-skill-trust-check.js ./SKILL.md --json
+
+signals:
+  exec / shell / fs writes
+  secrets / wallet / payment requests
+  network reach / persistence
+  provenance and install notes</code></pre>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">signals</p>
+            <h2>A fast verdict on the parts that can hurt a buyer.</h2>
+          </div>
+          <a class="console-link" href="https://github.com/TateLyman/agent-skill-trust-check" target="_blank" rel="noreferrer">source</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">exec</p>
+            <h3>Runtime power</h3>
+            <p>Flags shell commands, filesystem writes, package install steps, background tasks, and instructions that move a skill beyond read-only guidance.</p>
+          </article>
+          <article>
+            <p class="card-command">secrets</p>
+            <h3>Credential pressure</h3>
+            <p>Looks for API keys, wallet phrases, browser cookies, SSH material, private tokens, and vague requests for account access.</p>
+          </article>
+          <article>
+            <p class="card-command">network</p>
+            <h3>Outside calls</h3>
+            <p>Separates harmless documentation links from command-driven fetches, webhooks, remote scripts, and services that receive user data.</p>
+          </article>
+          <article>
+            <p class="card-command">provenance</p>
+            <h3>Market fit</h3>
+            <p>Checks whether the listing includes author, repo, version, license, install boundary, test notes, and enough evidence to justify trust.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">boundary</p>
+          <h2>No execution. No wallet. No account access.</h2>
+        </div>
+        <div class="terminal-window wide-terminal">
+          <div class="terminal-topline">trust boundary</div>
+          <pre><code>{
+  "runsSkillCode": false,
+  "signsWalletMessages": false,
+  "submitsPaymentHeaders": false,
+  "needsPrivateCredentials": false,
+  "output": [
+    "score",
+    "verdict",
+    "findings",
+    "missingSignals",
+    "patchOrder"
+  ]
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">fit</p>
+            <h2>Useful before a skill becomes a paid dependency.</h2>
+          </div>
+          <a class="console-link" href="mailto:hello@tateprograms.com?subject=Agent%20Skill%20Trust%20Check">send a skill</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">seller</p>
+            <h3>Before listing</h3>
+            <p>Clean up unclear install steps, unsafe wording, missing versioning, and trust gaps before a marketplace buyer sees the page.</p>
+          </article>
+          <article>
+            <p class="card-command">buyer</p>
+            <h3>Before install</h3>
+            <p>Decide whether a skill is safe to test, needs sandboxing, or should be rejected until the author removes risky behavior.</p>
+          </article>
+          <article>
+            <p class="card-command">marketplace</p>
+            <h3>Before promotion</h3>
+            <p>Add a simple intake gate for skills that mention payments, credentials, local code execution, remote scripts, or persistent agents.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Tate Programs</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="agent-payment-launch-review.html">Review</a>
+      <a href="x402-surface-check.html">Free check</a>
+      <a href="case-studies.html">Proof</a>
+      <a href="payments.html">Payments</a>
+      <a href="index.html">Home</a>
+    </footer>
+  </body>
+</html>
