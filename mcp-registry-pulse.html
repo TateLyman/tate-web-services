@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-05-18",
+        "dateModified": "2026-05-19",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-05-18</em>
+        <em>2026-05-19</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-05-18</dd>
+              <dd>2026-05-19</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -99,8 +99,8 @@
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
 latest servers:   149
-github repos:     90
-readme sampled:   58
+github repos:     89
+readme sampled:   60
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -119,12 +119,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>90 (60%)</strong>
+            <strong>89 (60%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>106 (71%)</strong>
+            <strong>107 (72%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -134,12 +134,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>32 (21%)</strong>
+            <strong>30 (20%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>124 (83%)</strong>
+            <strong>126 (85%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -153,17 +153,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>30 (20%)</strong>
+            <strong>28 (19%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">stdio docs visible</p>
-            <strong>10 / 19</strong>
+            <strong>10 / 18</strong>
             <p>Readable STDIO package READMEs that mention the command or local-process boundary.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>14 (9%)</strong>
+            <strong>13 (9%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -197,65 +197,65 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>82 / 149 - harder to understand quickly</span>
+              <span>80 / 149 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>53 / 149 - namespace carries the listing</span>
+              <span>50 / 149 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-35"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>115 / 149 - hosted flow must explain trust and auth clearly</span>
+              <span>117 / 149 - hosted flow must explain trust and auth clearly</span>
             </div>
-            <i class="pulse-width-75"></i>
+            <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>35 / 58 - among readable GitHub READMEs</span>
+              <span>39 / 60 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-60"></i>
+            <i class="pulse-width-65"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>32 / 58 - among readable GitHub READMEs</span>
+              <span>31 / 60 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-55"></i>
+            <i class="pulse-width-50"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>49 / 58 - among readable GitHub READMEs</span>
+              <span>48 / 60 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-85"></i>
+            <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>STDIO package READMEs explain command boundary</strong>
-              <span>10 / 19 - among readable STDIO package repos</span>
+              <span>10 / 18 - among readable STDIO package repos</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>4 / 58 - among readable GitHub READMEs</span>
+              <span>8 / 60 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-5"></i>
+            <i class="pulse-width-15"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>15 / 58 - among readable GitHub READMEs</span>
+              <span>18 / 60 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-25"></i>
+            <i class="pulse-width-30"></i>
           </div>
         </div>
       </section>
@@ -312,19 +312,6 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.presentations/presentations-ai presentations.ai mcp server — create designed slide decks from a topic, text, or document. slidecraft-in/presentations-ai-mcp-server remote add a human-readable title clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof document permissions and safety notes add copyable mcpservers config reference server.json metadata alignment">
-            <p class="card-command">score 47/100 · remote</p>
-            <h3>ai.presentations/presentations-ai</h3>
-            <p>Presentations.AI MCP server — create designed slide decks from a topic, text, or document.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://presentations.ai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/slidecraft-in/presentations-ai-mcp-server" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aliengiraffe/spotdb ephemeral data sandbox for ai workflows with guardrails and security aliengiraffe/spotdb package stdio stdio command boundary local process secrets credentials tokens headers add a human-readable title expand the registry description add smoke-test or tool-list proof explain stdio command boundary add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
             <p class="card-command">score 48/100 · package · stdio</p>
             <h3>ai.aliengiraffe/spotdb</h3>
@@ -348,19 +335,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.raisonn/connect ai-native art catalogue. catalogue works, parse provenance, and generate signed rais. raisonnai/raisonnai remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary refresh stale registry metadata">
-            <p class="card-command">score 49/100 · remote</p>
-            <h3>ai.raisonn/connect</h3>
-            <p>AI-native art catalogue. Catalogue works, parse provenance, and generate signed RAIs.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://github.com/raisonnai/raisonnai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/raisonnai/raisonnai" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -453,19 +427,6 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.auxen/auxen provision private ai model endpoints on dedicated gpus (llama, qwen, mistral). pay per minute. auxen-ai/auxen-mcp remote add a human-readable title clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
-            <p class="card-command">score 55/100 · remote</p>
-            <h3>ai.auxen/auxen</h3>
-            <p>Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://auxen.ai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/auxen-ai/auxen-mcp" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.paperlantern/code paper lantern research intelligence for ai coding agents. 2m+ cs papers with evidence and tradeoffs. paperlantern-ai/paperlantern-cli remote expand the registry description clarify remote auth and trust boundary add smoke-test or tool-list proof document permissions and safety notes add copyable mcpservers config reference server.json metadata alignment">
             <p class="card-command">score 55/100 · remote</p>
             <h3>Paper Lantern</h3>
@@ -502,6 +463,45 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/autoblocksai/ctxl" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/autoblocksai/ctxl" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/ctxl personal context management for ai assistants autoblocksai/ctxl package stdio stdio command boundary local process add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
+            <p class="card-command">score 57/100 · package · stdio</p>
+            <h3>ai.autoblocks/ctxl</h3>
+            <p>Personal context management for AI assistants</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://github.com/autoblocksai/ctxl" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/autoblocksai/ctxl" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.autoblocks/ctxl-mcp personal context management for ai assistants autoblocksai/ctxl package stdio stdio command boundary local process add a human-readable title expand the registry description make readme proof available expose a product or docs website refresh stale registry metadata">
+            <p class="card-command">score 57/100 · package · stdio</p>
+            <h3>ai.autoblocks/ctxl-mcp</h3>
+            <p>Personal context management for AI assistants</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://github.com/autoblocksai/ctxl" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/autoblocksai/ctxl" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.nefesh/human-state nefesh — real-time human state awareness for ai fuses biometric signals into a stress score (0-100) for ai adaptation. mcp + a2a native. nefesh-ai/nefesh-mcp-server remote secrets credentials tokens headers expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof refresh stale registry metadata reference server.json metadata alignment">
+            <p class="card-command">score 57/100 · remote</p>
+            <h3>Nefesh — Real-Time Human State Awareness for AI</h3>
+            <p>Fuses biometric signals into a stress score (0-100) for AI adaptation. MCP + A2A native.</p>
+            <ul>
+              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://a2a-protocol.org" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/nefesh-ai/nefesh-mcp-server" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>

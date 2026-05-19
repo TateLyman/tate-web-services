@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-18",
+  "generatedAt": "2026-05-19",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 149,
-  "githubReposDetected": 90,
-  "readmesSampled": 58,
+  "githubReposDetected": 89,
+  "readmesSampled": 60,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -14,32 +14,32 @@
   ],
   "totals": {
     "latestTotal": 149,
-    "repos": 90,
-    "readableRepos": 58,
-    "packageCount": 32,
-    "remoteCount": 124,
-    "packageOnly": 23,
-    "remoteOnly": 115,
+    "repos": 89,
+    "readableRepos": 60,
+    "packageCount": 30,
+    "remoteCount": 126,
+    "packageOnly": 21,
+    "remoteOnly": 117,
     "both": 9,
-    "noInstallPath": 115,
-    "websiteVisible": 106,
-    "missingTitle": 53,
-    "shortDescription": 82,
+    "noInstallPath": 117,
+    "websiteVisible": 107,
+    "missingTitle": 50,
+    "shortDescription": 80,
     "recent45": 81,
-    "orgOwned": 45,
-    "issuesEnabled": 57,
+    "orgOwned": 48,
+    "issuesEnabled": 59,
     "archived": 0,
-    "mcpServers": 35,
-    "install": 32,
-    "serverJson": 4,
-    "safety": 49,
-    "stdioPackageCount": 30,
-    "stdioPackageReadable": 19,
+    "mcpServers": 39,
+    "install": 31,
+    "serverJson": 8,
+    "safety": 48,
+    "stdioPackageCount": 28,
+    "stdioPackageReadable": 18,
     "stdioBoundaryDocs": 10,
-    "secretPackageConfig": 14,
+    "secretPackageConfig": 13,
     "secretRemoteHeaders": 24,
-    "glama": 27,
-    "smoke": 15
+    "glama": 30,
+    "smoke": 18
   },
   "sampleServers": [
     {
@@ -109,28 +109,6 @@
       ]
     },
     {
-      "name": "ai.presentations/presentations-ai",
-      "title": "",
-      "description": "Presentations.AI MCP server — create designed slide decks from a topic, text, or document.",
-      "publicProofScore": 47,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-18T06:26:51.040273Z",
-      "repo": "slidecraft-in/presentations-ai-mcp-server",
-      "websiteUrl": "https://presentations.ai",
-      "primaryUrl": "https://presentations.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes"
-      ]
-    },
-    {
       "name": "ai.aliengiraffe/spotdb",
       "title": "",
       "description": "Ephemeral data sandbox for AI workflows with guardrails and security",
@@ -168,28 +146,6 @@
       "repo": "filegraph/docconvert",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/filegraph/docconvert",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.raisonn/connect",
-      "title": "",
-      "description": "AI-native art catalogue. Catalogue works, parse provenance, and generate signed RAIs.",
-      "publicProofScore": 49,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-04-01T21:37:52.119242Z",
-      "repo": "raisonnai/raisonnai",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/raisonnai/raisonnai",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
@@ -353,28 +309,6 @@
       ]
     },
     {
-      "name": "ai.auxen/auxen",
-      "title": "",
-      "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
-      "publicProofScore": 55,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-13T13:33:55.16904Z",
-      "repo": "auxen-ai/auxen-mcp",
-      "websiteUrl": "https://auxen.ai",
-      "primaryUrl": "https://auxen.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config"
-      ]
-    },
-    {
       "name": "ai.paperlantern/code",
       "title": "Paper Lantern",
       "description": "Research intelligence for AI coding agents. 2M+ CS papers with evidence and tradeoffs.",
@@ -439,6 +373,76 @@
         "Expand the registry description",
         "Make README proof available",
         "Expose a product or docs website",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.autoblocks/ctxl",
+      "title": "",
+      "description": "Personal context management for AI assistants",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-01-12T03:52:12.746584Z",
+      "repo": "autoblocksai/ctxl",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/autoblocksai/ctxl",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.autoblocks/ctxl-mcp",
+      "title": "",
+      "description": "Personal context management for AI assistants",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-01-12T03:52:19.009876Z",
+      "repo": "autoblocksai/ctxl",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/autoblocksai/ctxl",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.nefesh/human-state",
+      "title": "Nefesh — Real-Time Human State Awareness for AI",
+      "description": "Fuses biometric signals into a stress score (0-100) for AI adaptation. MCP + A2A native.",
+      "publicProofScore": 57,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-04-03T19:42:18.337564Z",
+      "repo": "nefesh-ai/nefesh-mcp-server",
+      "websiteUrl": "https://a2a-protocol.org",
+      "primaryUrl": "https://a2a-protocol.org",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
         "Refresh stale registry metadata"
       ]
     }
