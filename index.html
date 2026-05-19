@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tate Programs | Release Console</title>
-    <meta name="description" content="Tate Programs runs launch checks, Shipcheck scans, MCP reviews, and production repair passes for small software teams shipping JavaScript, TypeScript, Stripe, Supabase, Firebase, and GitHub Actions projects.">
+    <title>Tate Programs | x402 Launch Reviews and Fix Sprints</title>
+    <meta name="description" content="Private x402, Pay.sh, MPP, and agent-payment launch reviews. Get a clear spend map, patch order, and small authorized fix sprint before paid APIs meet real buyers.">
     <meta property="og:title" content="Tate Programs">
-    <meta property="og:description" content="Release console for software that has to survive first users.">
+    <meta property="og:description" content="Private x402 launch reviews and fix sprints for paid agent APIs.">
     <meta property="og:url" content="https://tateprograms.com/">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#111915">
     <link rel="canonical" href="https://tateprograms.com/">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
@@ -19,7 +20,7 @@
         "url": "https://tateprograms.com/",
         "email": "hello@tateprograms.com",
         "areaServed": "Worldwide",
-        "description": "Launch checks, repo audits, MCP reviews, and production repair passes for small software teams.",
+        "description": "Private x402, Pay.sh, MPP, and agent-payment launch reviews with fixed-scope re-checks and implementation sprints.",
         "sameAs": [
           "https://github.com/TateLyman",
           "https://x.com/tateprograms"
@@ -27,674 +28,286 @@
         "makesOffer": [
           {
             "@type": "Offer",
-            "name": "Launch Risk Pass",
-            "price": "99",
-            "priceCurrency": "USD"
+            "name": "x402 Launch Re-check",
+            "price": "49",
+            "priceCurrency": "USD",
+            "description": "One public x402 surface re-checked after a fix."
           },
           {
             "@type": "Offer",
-            "name": "Production Fix Sprint",
-            "price": "299",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "MCP Launch Review",
-            "price": "99",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Agent Commerce Readiness Review",
+            "name": "x402 Launch Review",
             "price": "149",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Agent Payment Launch Review",
-            "price": "149",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "description": "Private spend map, evidence table, and patch order for one launch surface."
           },
           {
             "@type": "Offer",
             "name": "x402 Fix Sprint",
             "price": "299",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Agent Security Launch Review",
-            "price": "149",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Launch Proof Media Pass",
-            "price": "149",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Student Launch Review",
-            "price": "29",
-            "priceCurrency": "USD"
-          },
-          {
-            "@type": "Offer",
-            "name": "MCP Directory Launch Pass",
-            "price": "149",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "description": "Small authorized implementation sprint for one x402 launch blocker."
           }
         ]
       }
     </script>
   </head>
-  <body class="console-home terminal-os">
-    <header class="os-topbar">
-      <a class="os-brand" href="#top" aria-label="Tate Programs home">
-        <span class="os-mark">tp</span>
-        <span>tate@programs</span>
+  <body class="revenue-home">
+    <header class="rev-nav">
+      <a class="rev-brand" href="#top" aria-label="Tate Programs home">
+        <span class="rev-mark">tp</span>
+        <span>Tate Programs</span>
       </a>
-      <nav class="os-tabs" aria-label="Primary navigation">
-        <a href="#workbench">workbench</a>
-        <a href="agent-stack-radar.html">radar</a>
-        <a href="agent-payment-launch-review.html">payment-review</a>
-        <a href="x402-fix-sprint.html">fix-sprint</a>
-        <a href="x402-five-attack-review.html">five-attack</a>
-        <a href="agent-submission-gate.html">submission</a>
-        <a href="launch-proof-promo-flow.html">promo-flow</a>
-        <a href="mcp-launch-trust-2026.html">mcp-trust</a>
-        <a href="x402-launch-checklist.html">x402</a>
-        <a href="x402-batch-settlement-checklist.html">batch</a>
-        <a href="x402-cors-fix.html">cors</a>
-        <a href="cloudflare-x402-worker.html">worker</a>
-        <a href="x402-attack-map-2026.html">attack-map</a>
-        <a href="x402-ecosystem-radar.html">ecosystem</a>
-        <a href="x402-surface-check.html">surface</a>
-        <a href="x402-triage-mcp.html">triage-mcp</a>
-        <a href="pay-sh-catalog-pulse.html">pay-pulse</a>
-        <a href="pay-skills-launch-queue.html">pay-skills</a>
-        <a href="x402-metadata-filter.html">metadata</a>
-        <a href="shipcheck.html">shipcheck</a>
-        <a href="agent-security-drill.html">security-drill</a>
-        <a href="agent-commerce-gate.html">commerce-gate</a>
-        <a href="agentcore-payment-policy.html">agentcore-policy</a>
-        <a href="student-launch-kit.html">student-kit</a>
-        <a href="student-launch-review.html">student-review</a>
-        <a href="mcp-registry-audit.html">mcp-audit</a>
-        <a href="mcp-registry-pulse.html">pulse</a>
-        <a href="mcp-directory-launch.html">directory</a>
-        <a href="mcp-directory-checklist.html">checklist</a>
-        <a href="case-studies.html">proof</a>
-        <a href="payments.html">pay</a>
+      <nav aria-label="Primary navigation">
+        <a href="#proof">Proof</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#tools">Tools</a>
+        <a href="case-studies.html">Case files</a>
       </nav>
-      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request">
-        <span></span>
-        accepting work
-      </a>
+      <a class="rev-nav-cta" href="mailto:hello@tateprograms.com?subject=x402%20launch%20review%20request&amp;body=Surface%20or%20repo%20URL%3A%0AProtocol%20or%20payment%20rail%3A%0AWhat%20must%20work%20before%20launch%3A%0ADeadline%3A">Start review</a>
     </header>
 
     <main id="top">
-      <section id="workbench" class="terminal-desktop" aria-label="Tate Programs release console">
-        <div class="desktop-grid">
-          <aside class="system-rail" aria-label="Workspace shortcuts">
-            <a href="#workbench" aria-label="Console">~/</a>
-            <a href="mcp-registry-audit.html" aria-label="MCP registry audit">mcp</a>
-            <a href="mcp-registry-pulse.html" aria-label="MCP registry pulse">pls</a>
-            <a href="agent-stack-radar.html" aria-label="Agent stack radar">rad</a>
-            <a href="agent-payment-launch-review.html" aria-label="Agent payment launch review">payr</a>
-            <a href="x402-fix-sprint.html" aria-label="x402 fix sprint">fix</a>
-            <a href="x402-five-attack-review.html" aria-label="x402 five-attack review">5atk</a>
-            <a href="agent-submission-gate.html" aria-label="Agent submission gate">sub</a>
-            <a href="launch-proof-promo-flow.html" aria-label="Launch proof promo flow">vid</a>
-            <a href="mcp-launch-trust-2026.html" aria-label="MCP launch trust ledger">trst</a>
-            <a href="agent-security-drill.html" aria-label="Agent security drill">sec</a>
-            <a href="x402-launch-checklist.html" aria-label="x402 launch checklist">402</a>
-            <a href="x402-batch-settlement-checklist.html" aria-label="x402 batch settlement checklist">bat</a>
-            <a href="x402-cors-fix.html" aria-label="x402 CORS fix">cor</a>
-            <a href="cloudflare-x402-worker.html" aria-label="Cloudflare x402 Worker guide">wrk</a>
-            <a href="x402-attack-map-2026.html" aria-label="x402 attack map">atk</a>
-            <a href="x402-ecosystem-radar.html" aria-label="x402 ecosystem radar">eco</a>
-            <a href="x402-surface-check.html" aria-label="x402 surface check">srf</a>
-            <a href="x402-triage-mcp.html" aria-label="x402 triage MCP">tri</a>
-            <a href="agent-commerce-gate.html" aria-label="Agent commerce gate">pay</a>
-            <a href="pay-sh-catalog-pulse.html" aria-label="Pay.sh catalog pulse">cat</a>
-            <a href="pay-skills-launch-queue.html" aria-label="Pay-skills launch queue">que</a>
-            <a href="x402-metadata-filter.html" aria-label="x402 metadata filter">pii</a>
-            <a href="agentcore-payment-policy.html" aria-label="AgentCore payment policy">pol</a>
-            <a href="shipcheck.html" aria-label="Shipcheck">sc</a>
-            <a href="student-launch-kit.html" aria-label="Student Launch Kit">kit</a>
-            <a href="student-launch-review.html" aria-label="Student Launch Review">rev</a>
-            <a href="case-studies.html" aria-label="Proof">pf</a>
-            <a href="payments.html" aria-label="Payments">$</a>
-          </aside>
-
-          <section class="terminal-shell" aria-label="Interactive release console">
-            <div class="window-chrome">
-              <div class="window-controls" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="terminal-tabs" role="tablist" aria-label="Open terminal tabs">
-                <span class="active">release@tateprograms:~</span>
-                <span>proof.log</span>
-                <span>services.man</span>
-              </div>
-              <div class="window-clock">may-2026</div>
+      <section class="rev-hero" aria-labelledby="hero-title">
+        <div class="rev-hero-copy">
+          <p class="rev-kicker">May 2026 / x402, Pay.sh, MPP, AgentCore</p>
+          <h1 id="hero-title">Make paid agent APIs safe enough to launch.</h1>
+          <p class="rev-lede">I review the exact public surface buyers and agents will hit: manifests, 402 challenges, resource binding, CORS, cache posture, receipts, metadata, and failure paths.</p>
+          <div class="rev-actions" aria-label="Primary actions">
+            <a class="rev-button primary" href="mailto:hello@tateprograms.com?subject=x402%20launch%20review%20request&amp;body=Surface%20or%20repo%20URL%3A%0AProtocol%20or%20payment%20rail%3A%0AWhat%20must%20work%20before%20launch%3A%0ADeadline%3A">Send a surface</a>
+            <a class="rev-button secondary" href="x402-surface-check.html">Run free check</a>
+          </div>
+          <dl class="rev-proof-strip" aria-label="Current proof signals">
+            <div>
+              <dt>Live APIs</dt>
+              <dd>402 Index healthy</dd>
             </div>
-
-            <div class="terminal-scroll" id="terminalOutput" aria-live="polite">
-              <p><span class="prompt">tate@programs:~$</span> boot --workspace release-console</p>
-              <p class="dim">mounting public proof... ok</p>
-              <p class="dim">loading paid scopes... ok</p>
-              <p class="dim">checking payment link... ok</p>
-              <p><span class="prompt">tate@programs:~$</span> services --active</p>
-              <pre><code>NAME           PRICE   OUTPUT
-risk-pass      99      memo + fix order
-student-pass   29+     student launch review
-pay-review     149     private spend map
-x402-fix       299     paid blocker sprint
-five-attack    249     May 2026 x402 review
-mcp-dir        149     listing pass
-fix-sprint     299+    app blocker repair
-security       149     drill report
-media-pass     149     scripts + scene map
-submission     99      proof + fix order
-mcp-review     99      launch report
-shipcheck      free    scanner + action
-radar          free    trend map</code></pre>
-              <p><span class="prompt">tate@programs:~$</span> proof --short</p>
-              <pre><code>shipcheck-cli   npm published
-shipcheck-mcp   npm / registry / Glama
-mcpservers.org  approved listing
-awesome PR      open + green checks
-shipcheck-action marketplace + CI smoke test
-student-kit   browser launch checker
-commerce-gate x402 / Pay.sh readiness
-x402 filter   payment metadata cleanup
-x402 surface  manifest / endpoint / MPP check
-x402 mcp      triage + 402 Index tools
-x402 action   CI wrapper for payment-surface checks
-x402 fix      paid re-check or small authorized sprint
-x402 proof    public builder acknowledgements + fixes
-x402 cors     browser-readable 402 challenge fix
-x402 attacks  finality / replay / cache / discovery map
-agent policy  AgentCore/x402 spend policy builder
-security-drill prompt injection / policy checks
-registry pulse  public ecosystem snapshot
-pay-sh pulse    live agent-paid API catalog map
-pay-skills     fresh x402 registry launch queue
-agent radar     May 2026 trend map
-payment-review private x402 / MPP / AgentCore scope
-submission gate agent hackathon fix order
-promo flow      launch proof to short video blueprint
-launchquest     live incentive demo</code></pre>
-              <p class="dim">type <kbd>help</kbd> or run a command below.</p>
+            <div>
+              <dt>Validator</dt>
+              <dd>Agentic Market passed</dd>
             </div>
-
-            <form class="terminal-input" id="terminalForm">
-              <label for="terminalCommand">command</label>
-              <span class="prompt">tate@programs:~$</span>
-              <input id="terminalCommand" name="terminalCommand" type="text" autocomplete="off" spellcheck="false" placeholder="help">
-              <button type="submit">run</button>
-            </form>
-          </section>
-
-          <aside class="side-stack" aria-label="Release console side panels">
-            <section class="status-pane">
-              <div class="pane-title">
-                <span>processes</span>
-                <strong>6 online</strong>
-              </div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>pid</th>
-                    <th>task</th>
-                    <th>state</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>031</td>
-                    <td>mcp-audit</td>
-                    <td>ready</td>
-                  </tr>
-                  <tr>
-                    <td>074</td>
-                    <td>shipcheck</td>
-                    <td>published</td>
-                  </tr>
-                  <tr>
-                    <td>088</td>
-                    <td>student-kit</td>
-                    <td>live</td>
-                  </tr>
-                  <tr>
-                    <td>112</td>
-                    <td>reviews</td>
-                    <td>open</td>
-                  </tr>
-                  <tr>
-                    <td>126</td>
-                    <td>security</td>
-                    <td>live</td>
-                  </tr>
-                  <tr>
-                    <td>209</td>
-                    <td>patches</td>
-                    <td>quoted</td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-
-            <section class="tree-pane">
-              <div class="pane-title">
-                <span>workspace</span>
-                <strong>public</strong>
-              </div>
-              <ul>
-                <li><a href="shipcheck.html">~/shipcheck</a></li>
-                <li><a href="agent-payment-launch-review.html">~/services/agent-payment-launch-review</a></li>
-                <li><a href="agent-payment-receipt-map.html">~/services/agent-payment-receipt-map</a></li>
-                <li><a href="x402-fix-sprint.html">~/services/x402-fix-sprint</a></li>
-                <li><a href="x402-five-attack-review.html">~/services/x402-five-attack-review</a></li>
-                <li><a href="agent-commerce-gate.html">~/tools/agent-commerce-gate</a></li>
-                <li><a href="pay-sh-catalog-pulse.html">~/notes/pay-sh-catalog-pulse</a></li>
-                <li><a href="x402-metadata-filter.html">~/tools/x402-metadata-filter</a></li>
-                <li><a href="agentcore-payment-policy.html">~/tools/agentcore-payment-policy</a></li>
-                <li><a href="student-launch-kit.html">~/tools/student-launch-kit</a></li>
-                <li><a href="student-launch-review.html">~/services/student-launch-review</a></li>
-                <li><a href="mcp-registry-audit.html">~/tools/mcp-registry-audit</a></li>
-                <li><a href="mcp-registry-pulse.html">~/notes/mcp-registry-pulse</a></li>
-                <li><a href="agent-stack-radar.html">~/notes/agent-stack-radar</a></li>
-                <li><a href="launch-proof-promo-flow.html">~/templates/launch-proof-promo-flow</a></li>
-                <li><a href="mcp-launch-trust-2026.html">~/notes/mcp-launch-trust-2026</a></li>
-                <li><a href="agent-security-drill.html">~/tools/agent-security-drill</a></li>
-                <li><a href="agent-security-sample-report.html">~/reports/agent-security-sample</a></li>
-                <li><a href="x402-launch-checklist.html">~/notes/x402-launch-checklist</a></li>
-                <li><a href="x402-batch-settlement-checklist.html">~/notes/x402-batch-settlement</a></li>
-                <li><a href="x402-cors-fix.html">~/notes/x402-cors-fix</a></li>
-                <li><a href="cloudflare-x402-worker.html">~/notes/cloudflare-x402-worker</a></li>
-                <li><a href="x402-attack-map-2026.html">~/notes/x402-attack-map-2026</a></li>
-                <li><a href="x402-ecosystem-radar.html">~/radar/coinbase-x402</a></li>
-                <li><a href="x402-triage-mcp.html">~/tools/x402-triage-mcp</a></li>
-                <li><a href="agent-commerce-sample-report.html">~/reports/agent-commerce-sample</a></li>
-                <li><a href="release-readiness-2026.html">~/notes/release-readiness-2026</a></li>
-                <li><a href="mcp-directory-launch.html">~/services/mcp-directory-launch</a></li>
-                <li><a href="mcp-directory-checklist.html">~/notes/mcp-directory-checklist</a></li>
-                <li><a href="mcp-launch-review.html">~/services/mcp-launch-review</a></li>
-                <li><a href="case-studies.html">~/proof/case-files</a></li>
-                <li><a href="mcp-registry-pulse.json">~/proof/pulse.json</a></li>
-                <li><a href="pay-sh-catalog-pulse.json">~/proof/pay-sh-catalog.json</a></li>
-                <li><a href="payments.html">~/billing/payments</a></li>
-              </ul>
-            </section>
-
-            <section class="meter-pane">
-              <div class="pane-title">
-                <span>mode</span>
-                <strong>manual</strong>
-              </div>
-              <div class="meter-row">
-                <span>scope clarity</span>
-                <i class="meter-92"></i>
-              </div>
-              <div class="meter-row">
-                <span>launch risk</span>
-                <i class="meter-64"></i>
-              </div>
-              <div class="meter-row">
-                <span>public proof</span>
-                <i class="meter-88"></i>
-              </div>
-            </section>
-          </aside>
+            <div>
+              <dt>Buyer signal</dt>
+              <dd>Teams are replying</dd>
+            </div>
+          </dl>
         </div>
 
-        <div class="command-strip" role="toolbar" aria-label="Common commands">
-          <button type="button" data-command="services">services</button>
-          <button type="button" data-command="proof">proof</button>
-          <button type="button" data-command="directory">directory</button>
-          <button type="button" data-command="checklist">checklist</button>
-          <button type="button" data-command="pulse">pulse</button>
-          <button type="button" data-command="radar">radar</button>
-          <button type="button" data-command="payment-review">payment-review</button>
-          <button type="button" data-command="x402-fix">x402-fix</button>
-          <button type="button" data-command="five-attack">five-attack</button>
-          <button type="button" data-command="promo-flow">promo-flow</button>
-          <button type="button" data-command="security-drill">security-drill</button>
-          <button type="button" data-command="security-report">security-report</button>
-          <button type="button" data-command="x402">x402</button>
-          <button type="button" data-command="x402-batch">x402-batch</button>
-          <button type="button" data-command="x402-cors">x402-cors</button>
-          <button type="button" data-command="x402-worker">x402-worker</button>
-          <button type="button" data-command="x402-attack-map">x402-attack-map</button>
-          <button type="button" data-command="commerce-gate">commerce-gate</button>
-          <button type="button" data-command="pay-pulse">pay-pulse</button>
-          <button type="button" data-command="pay-skills">pay-skills</button>
-          <button type="button" data-command="metadata-filter">metadata-filter</button>
-          <button type="button" data-command="agentcore-policy">agentcore-policy</button>
-          <button type="button" data-command="commerce-report">commerce-report</button>
-          <button type="button" data-command="mcp-audit">mcp-audit</button>
-          <button type="button" data-command="shipcheck">shipcheck</button>
-          <button type="button" data-command="readiness">readiness</button>
-          <button type="button" data-command="student-kit">student-kit</button>
-          <button type="button" data-command="student-review">student-review</button>
-          <button type="button" data-command="pricing">pricing</button>
-          <button type="button" data-command="contact">contact</button>
-          <button type="button" data-command="pay">pay</button>
+        <div class="rev-terminal" aria-label="Tate Programs terminal summary">
+          <div class="rev-terminal-top">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>review.log</strong>
+          </div>
+          <div class="rev-terminal-body" id="terminalOutput" aria-live="polite">
+            <p><span class="rev-prompt">tate@programs</span> review --surface ./paid-api</p>
+            <pre><code>checklist:
+  price before action       pass
+  canonical resource        inspect
+  browser payment headers   inspect
+  cache policy              inspect
+  receipt boundary          inspect
+  metadata leakage          inspect
+
+output:
+  private spend map
+  ranked patch order
+  proof commands</code></pre>
+            <p><span class="rev-prompt">tate@programs</span> status --market</p>
+            <pre><code>the402        onboarding
+AgentPay      provider review
+402 Index     live + domain verified
+TaskHawk      re-check pending</code></pre>
+          </div>
+          <form class="rev-terminal-input" id="terminalForm">
+            <label for="terminalCommand">command</label>
+            <span>$</span>
+            <input id="terminalCommand" name="terminalCommand" type="text" autocomplete="off" spellcheck="false" placeholder="pricing">
+            <button type="submit">run</button>
+          </form>
         </div>
       </section>
 
-      <section class="terminal-manual" aria-label="Service manual">
-        <div class="manual-head">
-          <p class="console-kicker">man tate-programs</p>
-          <h1>Release work for small software teams.</h1>
-          <p>
-            Send the repo, package, or live app. Get a short report, a fix order, and a paid path only if the next step is obvious.
-          </p>
+      <section class="rev-status" aria-label="Current workbench state">
+        <div>
+          <span>Now</span>
+          <strong>Fixed-price review channel being wired through the402.</strong>
         </div>
+        <div>
+          <span>Next</span>
+          <strong>Provider-marketplace payouts and first paid review.</strong>
+        </div>
+        <div>
+          <span>Rule</span>
+          <strong>Private first. Public only with mutual sign-off.</strong>
+        </div>
+      </section>
 
-        <div class="manual-grid">
-          <article>
+      <section id="pricing" class="rev-section">
+        <div class="rev-section-head">
+          <p class="rev-kicker">Pricing</p>
+          <h2>Pick the smallest useful scope.</h2>
+          <p>Transparent pricing lowers friction. The first job is usually a re-check or launch review, not a giant retainer.</p>
+        </div>
+        <div class="rev-price-grid">
+          <article class="rev-price-card">
             <span>01</span>
-            <h2>Launch Risk Pass</h2>
-            <p>Auth, data access, public config, payment/webhook paths, deploy settings, and leftover debug surfaces.</p>
-            <strong>$99</strong>
-            <a href="mailto:hello@tateprograms.com?subject=Launch%20Risk%20Pass">book pass</a>
+            <h3>x402 Launch Re-check</h3>
+            <p class="rev-price">$49</p>
+            <p>One public route, manifest, docs page, or registry PR after you apply a fix.</p>
+            <ul>
+              <li>Pass/fail result</li>
+              <li>Remaining blockers</li>
+              <li>Clean public wording option</li>
+            </ul>
+            <a href="mailto:hello@tateprograms.com?subject=x402%20Launch%20Re-check">Request re-check</a>
           </article>
-          <article>
+          <article class="rev-price-card featured">
             <span>02</span>
-            <h2>Production Fix Sprint</h2>
-            <p>Repair one high-value blocker first: deploy failure, broken checkout, auth loop, data exposure, or webhook mismatch.</p>
-            <strong>$299+</strong>
-            <a href="mailto:hello@tateprograms.com?subject=Production%20Fix%20Sprint">request sprint</a>
+            <h3>x402 Launch Review</h3>
+            <p class="rev-price">$149</p>
+            <p>A private external pass for one payment-agent launch surface before buyers depend on it.</p>
+            <ul>
+              <li>Spend map</li>
+              <li>Evidence table</li>
+              <li>Patch order</li>
+            </ul>
+            <a href="mailto:hello@tateprograms.com?subject=x402%20Launch%20Review">Request review</a>
           </article>
-          <article>
+          <article class="rev-price-card">
             <span>03</span>
-            <h2>Agent Security Drill</h2>
-            <p>Prompt injection, exfiltration, unsafe tool use, policy actions, audit trails, rate limits, safe demo mode, and human review gates.</p>
-            <strong>$149</strong>
-            <a href="agent-security-sample-report.html">view sample</a>
-          </article>
-          <article>
-            <span>04</span>
-            <h2>Agent Payment Launch Review</h2>
-            <p>Private-first x402, MPP, AgentCore, Cloudflare Worker, and Pay.sh pass: $49 quick proof pass for one public surface, or the full spend-map review with patch order.</p>
-            <strong>$49 / $149</strong>
-            <a href="agent-payment-launch-review.html">build scope</a>
-          </article>
-          <article>
-            <span>05</span>
-            <h2>x402 Fix Sprint</h2>
-            <p>Paid re-check or small authorized patch path for one agent-payment launch blocker: CORS, cache, resource echo, discovery docs, or registry proof.</p>
-            <strong>$49 / $299</strong>
-            <a href="x402-fix-sprint.html">scope sprint</a>
-          </article>
-          <article>
-            <span>06</span>
-            <h2>x402 Five-Attack Review</h2>
-            <p>Private May 2026 readiness pass mapped to finality, settlement binding, replay, cache/header handling, and discovery steering.</p>
-            <strong>$99 / $249 / $499</strong>
-            <a href="x402-five-attack-review.html">scope review</a>
-          </article>
-          <article>
-            <span>07</span>
-            <h2>Agent Commerce Readiness</h2>
-            <p>x402, Pay.sh, and API-payment loops: quoted prices, enforceable caps, approvals, receipts, replay protection, provider validation, metadata filters, and abuse controls.</p>
-            <strong>$149</strong>
-            <a href="agent-commerce-gate.html">open gate</a>
-          </article>
-          <article>
-            <span>08</span>
-            <h2>Launch Proof Media Pass</h2>
-            <p>Proof extraction, three short launch scripts, scene prompt map, caption set, and a publish-safe fact gate for one product or demo.</p>
-            <strong>$149</strong>
-            <a href="launch-proof-promo-flow.html">open flow</a>
-          </article>
-          <article>
-            <span>09</span>
-            <h2>MCP Directory Launch</h2>
-            <p>Package metadata, server.json version sync, Glama score readiness, registry proof, README config, and directory submission notes.</p>
-            <strong>$149</strong>
-            <a href="mcp-directory-launch.html">open pass</a>
-          </article>
-          <article>
-            <span>10</span>
-            <h2>MCP Launch Review</h2>
-            <p>Registry metadata, package identity, install path, client config, permission notes, and smoke-test proof.</p>
-            <strong>$99</strong>
-            <a href="mcp-launch-review.html">open scope</a>
-          </article>
-          <article>
-            <span>11</span>
-            <h2>Student Launch Review</h2>
-            <p>Deadline polish for student projects: README handoff, demo proof, submission copy, CI signal, and public-code cleanup.</p>
-            <strong>$29+</strong>
-            <a href="student-launch-review.html">open scope</a>
+            <h3>x402 Fix Sprint</h3>
+            <p class="rev-price">$299</p>
+            <p>Small authorized patch for one blocker: CORS, cache, resource echo, docs, or CI gate.</p>
+            <ul>
+              <li>Branch or PR link</li>
+              <li>Verification commands</li>
+              <li>One follow-up re-check</li>
+            </ul>
+            <a href="mailto:hello@tateprograms.com?subject=x402%20Fix%20Sprint">Scope sprint</a>
           </article>
         </div>
       </section>
 
-      <section class="terminal-proof" aria-label="Public proof">
-        <div class="pane-title">
-          <span>proof.log</span>
-          <strong>read-only</strong>
+      <section id="proof" class="rev-section rev-proof-section">
+        <div class="rev-section-head compact">
+          <p class="rev-kicker">Proof</p>
+          <h2>Recent signals from live surfaces.</h2>
         </div>
-        <div class="proof-ledger">
-          <a href="https://www.npmjs.com/package/shipcheck-cli" target="_blank" rel="noreferrer">
-            <span>package</span>
-            <strong>shipcheck-cli</strong>
-            <em>npm scanner for release and publish readiness</em>
+        <div class="rev-proof-grid">
+          <article>
+            <span>validator</span>
+            <h3>Agentic Market checks passed</h3>
+            <p>Both Tate Programs paid endpoints returned implementation-correct validator results before marketplace indexing.</p>
+          </article>
+          <article>
+            <span>registry</span>
+            <h3>402 Index sees the APIs</h3>
+            <p>The paid triage and index-watch endpoints are healthy, domain verified, and Base mainnet aligned.</p>
+          </article>
+          <article>
+            <span>builder fix</span>
+            <h3>Phoenix Zero updated docs</h3>
+            <p>A public re-check caught a testnet/mainnet mismatch; the builder updated PAY.md to match the live rail.</p>
+          </article>
+          <article>
+            <span>buyer reply</span>
+            <h3>TaskHawk accepted a patch note</h3>
+            <p>Kevros/TaskHawk called the accept-leg resource finding actionable and requested plaintext repro.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rev-process">
+        <div>
+          <p class="rev-kicker">Process</p>
+          <h2>Fast enough for launch week. Boring enough for trust.</h2>
+        </div>
+        <ol>
+          <li>
+            <strong>Send one surface.</strong>
+            <span>Endpoint, manifest, OpenAPI, docs, registry PR, or repo link.</span>
+          </li>
+          <li>
+            <strong>Get the risk map.</strong>
+            <span>What can be bought, what can fail, what leaks, and what blocks launch.</span>
+          </li>
+          <li>
+            <strong>Patch the highest-leverage issue.</strong>
+            <span>Either you fix from the notes or I handle one authorized sprint.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="tools" class="rev-section">
+        <div class="rev-section-head">
+          <p class="rev-kicker">Free surface area</p>
+          <h2>Use the tools before paying.</h2>
+          <p>These pages prove the method and help a serious buyer decide whether a paid pass is worth it.</p>
+        </div>
+        <div class="rev-tool-grid">
+          <a href="x402-surface-check.html">
+            <span>surface</span>
+            <strong>x402 Surface Check</strong>
+            <em>Manifest, OpenAPI, endpoint, MPP, and browser-readable 402 checks.</em>
           </a>
-          <a href="https://www.npmjs.com/package/shipcheck-mcp" target="_blank" rel="noreferrer">
-            <span>protocol</span>
-            <strong>shipcheck-mcp</strong>
-            <em>MCP server for local repo scans</em>
-          </a>
-          <a href="student-launch-kit.html">
-            <span>tool</span>
-            <strong>Student Launch Kit</strong>
-            <em>browser-only launch preflight</em>
-          </a>
-          <a href="student-launch-review.html">
-            <span>service</span>
-            <strong>Student Launch Review</strong>
-            <em>deadline polish and repo handoff cleanup</em>
-          </a>
-          <a href="agent-commerce-gate.html">
-            <span>tool</span>
-            <strong>Agent Commerce Gate</strong>
-            <em>x402, Pay.sh, and payment-agent readiness check</em>
-          </a>
-          <a href="agent-payment-launch-review.html">
-            <span>service</span>
-            <strong>Agent Payment Launch Review</strong>
-            <em>$49 quick proof pass or full private review</em>
-          </a>
-          <a href="agent-payment-receipt-map.html">
-            <span>service</span>
-            <strong>Agent Payment Receipt Map</strong>
-            <em>$50 paid-run proof packet for receipts and escrow tasks</em>
-          </a>
-          <a href="x402-fix-sprint.html">
-            <span>service</span>
-            <strong>x402 Fix Sprint</strong>
-            <em>paid re-check and small authorized blocker fix</em>
-          </a>
-          <a href="x402-five-attack-review.html">
-            <span>service</span>
-            <strong>x402 Five-Attack Review</strong>
-            <em>May 2026 finality, binding, replay, cache, and discovery pass</em>
-          </a>
-          <a href="pay-sh-catalog-pulse.html">
-            <span>research</span>
-            <strong>Pay.sh Catalog Pulse</strong>
-            <em>live agent-paid API provider map and review priorities</em>
+          <a href="x402-triage-mcp.html">
+            <span>mcp</span>
+            <strong>x402 Triage MCP</strong>
+            <em>Registry-listed MCP server for no-payment x402 triage and 402 Index watch.</em>
           </a>
           <a href="pay-skills-launch-queue.html">
-            <span>research</span>
+            <span>queue</span>
             <strong>Pay-Skills Launch Queue</strong>
-            <em>fresh x402 registry PRs and launch-control priorities</em>
-          </a>
-          <a href="x402-ecosystem-radar.html">
-            <span>research</span>
-            <strong>x402 Ecosystem Radar</strong>
-            <em>Coinbase x402 PRs, partner launches, and discovery signals</em>
-          </a>
-          <a href="x402-cors-fix.html">
-            <span>field note</span>
-            <strong>x402 CORS Fix</strong>
-            <em>browser-readable 402 challenges and payment headers</em>
-          </a>
-          <a href="cloudflare-x402-worker.html">
-            <span>implementation</span>
-            <strong>Cloudflare x402 Worker</strong>
-            <em>cache-safe edge gate with no grant before verification</em>
-          </a>
-          <a href="x402-batch-settlement-checklist.html">
-            <span>field note</span>
-            <strong>x402 Batch Settlement</strong>
-            <em>escrow, vouchers, channel storage, and claim cadence</em>
-          </a>
-          <a href="x402-attack-map-2026.html">
-            <span>field note</span>
-            <strong>x402 Attack Map 2026</strong>
-            <em>finality, replay, cache, and discovery controls</em>
+            <em>Fresh x402, Base, Solana, MPP, and agent-paid API launch surfaces.</em>
           </a>
           <a href="x402-metadata-filter.html">
-            <span>tool</span>
+            <span>metadata</span>
             <strong>x402 Metadata Filter</strong>
-            <em>payment metadata cleanup before agent spend</em>
-          </a>
-          <a href="https://github.com/marketplace/actions/x402-surface-check" target="_blank" rel="noreferrer">
-            <span>action</span>
-            <strong>x402 Surface Check Action</strong>
-            <em>Marketplace CI wrapper for no-payment payment-surface checks</em>
-          </a>
-          <a href="agentcore-payment-policy.html">
-            <span>tool</span>
-            <strong>AgentCore Payment Policy</strong>
-            <em>session caps, payee allowlists, and receipt rules</em>
-          </a>
-          <a href="agent-security-drill.html">
-            <span>tool</span>
-            <strong>Agent Security Drill</strong>
-            <em>prompt injection, policy, audit, and review readiness</em>
-          </a>
-          <a href="agent-security-evidence-2026.html">
-            <span>note</span>
-            <strong>Agent Security Evidence</strong>
-            <em>policy, identity, audit, and human-review field note</em>
-          </a>
-          <a href="agent-security-sample-report.html">
-            <span>sample</span>
-            <strong>Agent Security Report</strong>
-            <em>example boundary map and patch order</em>
-          </a>
-          <a href="agent-commerce-sample-report.html">
-            <span>sample</span>
-            <strong>Agent Commerce Report</strong>
-            <em>example spend map and patch order</em>
-          </a>
-          <a href="https://github.com/TateLyman/shipcheck-action" target="_blank" rel="noreferrer">
-            <span>action</span>
-            <strong>Shipcheck Action</strong>
-            <em>CI scan path with SARIF output</em>
-          </a>
-          <a href="mcp-registry-audit.html">
-            <span>tool</span>
-            <strong>MCP Registry Audit</strong>
-            <em>browser metadata audit for server.json</em>
-          </a>
-          <a href="mcp-registry-pulse.html">
-            <span>research</span>
-            <strong>MCP Registry Pulse</strong>
-            <em>public snapshot of launch-readiness signals</em>
-          </a>
-          <a href="agent-stack-radar.html">
-            <span>research</span>
-            <strong>Agent Stack Radar</strong>
-            <em>May 2026 map for agent-native software surfaces</em>
-          </a>
-          <a href="launch-proof-promo-flow.html">
-            <span>template</span>
-            <strong>Launch Proof Promo Flow</strong>
-            <em>reusable proof-led short-video flow blueprint</em>
-          </a>
-          <a href="mcp-launch-trust-2026.html">
-            <span>note</span>
-            <strong>MCP Launch Trust</strong>
-            <em>current buyer-proof ledger for MCP product launches</em>
-          </a>
-          <a href="x402-launch-checklist.html">
-            <span>checklist</span>
-            <strong>x402 Launch Checklist</strong>
-            <em>agent-payment spend controls and launch proof</em>
-          </a>
-          <a href="mcp-directory-launch.html">
-            <span>service</span>
-            <strong>MCP Directory Launch</strong>
-            <em>package-to-listing launch pass</em>
-          </a>
-          <a href="mcp-directory-checklist.html">
-            <span>resource</span>
-            <strong>MCP Directory Checklist</strong>
-            <em>May 2026 public launch checklist</em>
-          </a>
-          <a href="release-readiness-2026.html">
-            <span>runbook</span>
-            <strong>Release Readiness 2026</strong>
-            <em>JS, npm, Action, MCP, and payment-agent launch checks</em>
-          </a>
-          <a href="case-studies.html">
-            <span>files</span>
-            <strong>case files</strong>
-            <em>public work and sample reports</em>
+            <em>Find prompts, user identifiers, and secret-like values before receipts expose them.</em>
           </a>
         </div>
       </section>
 
-      <section class="terminal-runbook" aria-label="Runbook">
+      <section class="rev-faq">
         <div>
-          <span>step 01</span>
-          <h2>Send the repo or live path.</h2>
-          <p>Include stack, deadline, and the first user flow that must work.</p>
+          <p class="rev-kicker">Fit</p>
+          <h2>Good buyers are easy to recognize.</h2>
         </div>
-        <div>
-          <span>step 02</span>
-          <h2>Get the release memo.</h2>
-          <p>Blockers, evidence, fix order, and the smallest useful scope.</p>
-        </div>
-        <div>
-          <span>step 03</span>
-          <h2>Repair or hand off.</h2>
-          <p>Use the report yourself or convert the top blocker into a focused sprint.</p>
+        <div class="rev-faq-list">
+          <details open>
+            <summary>Who is this for?</summary>
+            <p>Teams shipping x402, Pay.sh, MPP, AgentCore, Cloudflare Worker, or marketplace-listed paid APIs where a wrong payment challenge can cost trust.</p>
+          </details>
+          <details>
+            <summary>What do you avoid?</summary>
+            <p>No unauthorized testing, no paid calls without explicit test fixtures, no private systems, no public disclosure without sign-off.</p>
+          </details>
+          <details>
+            <summary>What should I send first?</summary>
+            <p>One URL and one sentence: what must work before launch. If the surface is not a fit, I will say that instead of stretching the scope.</p>
+          </details>
         </div>
       </section>
 
-      <section class="terminal-ticket">
+      <section class="rev-final">
         <div>
-          <p class="console-kicker">ticket.open</p>
-          <h2>Send the thing that is almost ready.</h2>
-          <p>I will find the shortest path from “works locally” to a launch someone can trust.</p>
+          <p class="rev-kicker">Start small</p>
+          <h2>Send the route that matters most.</h2>
+          <p>The fastest useful review starts with one public paid endpoint and a clear launch risk.</p>
         </div>
-        <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Launch%20review%20request&amp;body=Repo%20or%20app%20link%3A%0AStack%3A%0AWhat%20must%20work%20first%3A%0ADeadline%3A">open ticket</a>
+        <a class="rev-button primary" href="mailto:hello@tateprograms.com?subject=x402%20launch%20review%20request&amp;body=Surface%20or%20repo%20URL%3A%0AProtocol%20or%20payment%20rail%3A%0AWhat%20must%20work%20before%20launch%3A%0ADeadline%3A">Open private thread</a>
       </section>
     </main>
 
-    <footer class="terminal-footer">
+    <footer class="rev-footer">
       <span>Tate Programs</span>
       <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
-      <a href="https://github.com/TateLyman" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://x.com/tateprograms" target="_blank" rel="noreferrer">X</a>
-      <a href="shipcheck.html">Shipcheck</a>
-      <a href="case-studies.html">Proof</a>
+      <a href="https://github.com/TateLyman">GitHub</a>
+      <a href="https://x.com/tateprograms">X</a>
       <a href="payments.html">Payments</a>
     </footer>
+
     <script src="terminal-console.js"></script>
   </body>
 </html>
