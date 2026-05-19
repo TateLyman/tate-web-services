@@ -325,7 +325,6 @@
         "agent-payments",
         "paid-api",
         "triage",
-        "solana-usdc",
         "base-usdc",
         "developer-tools"
       ],
@@ -346,7 +345,13 @@
       "method": "POST",
       "payment_protocol": "x402",
       "payment_asset": "USDC",
-      "payment_network": "base-mainnet-primary-plus-solana-mainnet",
+      "payment_network": "base-mainnet",
+      "payment_networks": [
+        "eip155:8453"
+      ],
+      "pay_to": {
+        "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      },
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js7b65r0vcewvjpte7tfvs6z09871zj3",
@@ -374,7 +379,6 @@
         "402-index",
         "agent-payments",
         "provider-health",
-        "solana-usdc",
         "base-usdc",
         "developer-tools"
       ],
@@ -396,7 +400,13 @@
       "method": "POST",
       "payment_protocol": "x402",
       "payment_asset": "USDC",
-      "payment_network": "base-mainnet-primary-plus-solana-mainnet",
+      "payment_network": "base-mainnet",
+      "payment_networks": [
+        "eip155:8453"
+      ],
+      "pay_to": {
+        "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      },
       "index_listing_url": "https://402index.io/directory",
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
