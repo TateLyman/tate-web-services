@@ -495,6 +495,56 @@
         "approval_status": "pending_approval",
         "created_at": "2026-05-19"
       }
+    },
+    {
+      "id": "agent-skill-trust-check-api",
+      "name": "Agent Skill Trust Check API",
+      "category": "paid-api",
+      "status": "live",
+      "price_usd": 0.05,
+      "currency": "USDC",
+      "tags": [
+        "agent-skills",
+        "openclaw",
+        "hermes",
+        "mcp",
+        "security",
+        "marketplace"
+      ],
+      "scope": "Paid public-text trust check for OpenClaw, Hermes, MCP, and SKILL.md agent-skill listings before installation.",
+      "requires_authorization": false,
+      "input_fields": [
+        "url",
+        "text"
+      ],
+      "deliverables": [
+        "risk score and install verdict",
+        "execution, secrets, wallet/payment, network, prompt-boundary, persistence, provenance, and verification findings",
+        "missing provenance signals",
+        "ordered patch list before install or marketplace listing"
+      ],
+      "url": "https://the402.tateprograms.com/api/provider/skill-trust-check",
+      "method": "POST",
+      "payment_protocol": "marketplace-managed",
+      "marketplace_proxy": {
+        "base_url": "https://the402.tateprograms.com",
+        "path": "/api/provider/skill-trust-check",
+        "method": "POST",
+        "auth_header": "X-Tate-Provider-Token",
+        "price_microdollars": 50000,
+        "note": "For proxy marketplaces that collect payment from the buyer and forward calls with private upstream auth."
+      },
+      "agentmint_listing": {
+        "skill_id": 51,
+        "slug": "agent-skill-trust-check",
+        "public_url": "https://orkai.ai/skills/agent-skill-trust-check",
+        "network": "base",
+        "price_micro_usdc": 50000,
+        "payout_address": "0x7bc5e304ca289823dec021012d6bb361ddf6b368",
+        "webhook_status": "unverified-but-signed-post-verified",
+        "created_at": "2026-05-19"
+      },
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20skill%20trust%20check"
     }
   ],
   "boundaries": [
