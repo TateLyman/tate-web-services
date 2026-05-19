@@ -6,7 +6,7 @@
     "payment_url": "https://paypal.me/glidelocal",
     "services_url": "https://tateprograms.com/services.json"
   },
-  "last_updated": "2026-05-18",
+  "last_updated": "2026-05-19",
   "currency": "USD",
   "services": [
     {
@@ -51,6 +51,10 @@
       "url": "https://github.com/TateLyman/x402-triage-mcp",
       "repository": "https://github.com/TateLyman/x402-triage-mcp",
       "npm_package": "x402-triage-mcp",
+      "npm_version": "0.1.1",
+      "official_mcp_registry": "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.TateLyman%2Fx402-triage-mcp",
+      "registry_name": "io.github.TateLyman/x402-triage-mcp",
+      "registry_status": "active",
       "mcp_config": {
         "command": "npx",
         "args": [
