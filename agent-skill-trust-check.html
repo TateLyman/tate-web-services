@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <title>Agent Skill Trust Check | SKILL.md Pre-install Review | Tate Programs</title>
-    <meta name="description" content="Static trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings before install. Flags exec, secrets, wallet, network, and provenance risk.">
+    <meta name="description" content="Static trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings before install. Flags local access, account access, payment actions, external destinations, and provenance risk.">
     <link rel="canonical" href="https://tateprograms.com/agent-skill-trust-check.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Agent Skill Trust Check">
@@ -28,13 +28,13 @@
         "operatingSystem": "Cross-platform",
         "url": "https://tateprograms.com/agent-skill-trust-check.html",
         "codeRepository": "https://github.com/TateLyman/agent-skill-trust-check",
-        "softwareVersion": "0.1.0",
+        "softwareVersion": "0.1.1",
         "description": "Static trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings before install.",
         "offers": {
           "@type": "Offer",
-          "price": "0.05",
+          "price": "7.00",
           "priceCurrency": "USD",
-          "url": "https://orkai.ai/skills/agent-skill-trust-check"
+          "url": "https://www.paperclipskills.com/api/v1/skills/%40tateprograms%2Fagent-skill-trust-check"
         },
         "publisher": {
           "@type": "Organization",
@@ -58,9 +58,9 @@
         <a href="case-studies.html">proof</a>
         <a href="payments.html">pay</a>
       </nav>
-      <a class="os-status" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.0" target="_blank" rel="noreferrer">
+      <a class="os-status" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.1" target="_blank" rel="noreferrer">
         <span></span>
-        release 0.1.0
+        release 0.1.1
       </a>
     </header>
 
@@ -76,12 +76,13 @@
           <p class="console-kicker">agent-skill marketplace / trust gate</p>
           <h1>Review a skill before an agent installs it.</h1>
           <p class="console-subtitle">
-            `agent-skill-trust-check` reads a SKILL.md file, marketplace listing, or pasted skill text and returns a compact install verdict. It is built for sellers, buyers, and marketplaces that need a clear signal before code, credentials, wallets, or network calls enter the runtime.
+            `agent-skill-trust-check` reads a SKILL.md file, marketplace listing, or pasted skill text and returns a compact install verdict. It is built for sellers, buyers, and marketplaces that need a clear signal before local access, account access, payment actions, or external destinations enter the runtime.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="https://github.com/TateLyman/agent-skill-trust-check" target="_blank" rel="noreferrer">open repo</a>
-            <a class="console-button secondary" href="https://orkai.ai/skills/agent-skill-trust-check" target="_blank" rel="noreferrer">paid skill</a>
-            <a class="console-button secondary" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.0" target="_blank" rel="noreferrer">release</a>
+            <a class="console-button secondary" href="https://www.npmjs.com/package/agent-skill-trust-check" target="_blank" rel="noreferrer">npm</a>
+            <a class="console-button secondary" href="https://www.paperclipskills.com/api/v1/skills/%40tateprograms%2Fagent-skill-trust-check" target="_blank" rel="noreferrer">paperclip</a>
+            <a class="console-button secondary" href="https://orkai.ai/skills/agent-skill-trust-check" target="_blank" rel="noreferrer">orkai</a>
             <a class="console-button ghost" href="payments.html">private review</a>
           </div>
           <dl class="console-ledger">
@@ -90,12 +91,12 @@
               <dd>$0.05</dd>
             </div>
             <div>
-              <dt>version</dt>
-              <dd>0.1.0</dd>
+              <dt>paid skill</dt>
+              <dd>$7</dd>
             </div>
             <div>
-              <dt>mode</dt>
-              <dd>static</dd>
+              <dt>version</dt>
+              <dd>0.1.1</dd>
             </div>
           </dl>
         </div>
@@ -104,13 +105,12 @@
           <div class="terminal-topline">local check</div>
           <pre><code>$ git clone https://github.com/TateLyman/agent-skill-trust-check
 $ cd agent-skill-trust-check
-$ npm run check
-$ node bin/agent-skill-trust-check.js ./SKILL.md --json
+$ npx --yes agent-skill-trust-check ./SKILL.md --json
 
 signals:
-  exec / shell / fs writes
-  secrets / wallet / payment requests
-  network reach / persistence
+  local access / file changes
+  account and payment access
+  external destinations / background behavior
   provenance and install notes</code></pre>
         </aside>
       </section>
