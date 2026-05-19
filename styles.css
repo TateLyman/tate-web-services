@@ -4029,6 +4029,13 @@ footer a {
   margin: 0;
 }
 
+.rev-market-grid a {
+  color: #7bd89d;
+  font-weight: 820;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .rev-section,
 .rev-process,
 .rev-faq,

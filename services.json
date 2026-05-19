@@ -311,6 +311,61 @@
       }
     },
     {
+      "id": "sdk-continuity-sprint",
+      "name": "SDK Continuity Snapshot",
+      "price_usd": 199,
+      "delivery": "48h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "openapi",
+        "sdk-generator",
+        "stainless-migration",
+        "mcp",
+        "developer-experience",
+        "ci"
+      ],
+      "scope": "Private OpenAPI SDK continuity snapshot for teams moving off a hosted SDK generator: spec freeze map, generated language parity, docs/MCP continuity, release CI, and patch order.",
+      "tiers": [
+        {
+          "name": "Continuity snapshot",
+          "price_usd": 199,
+          "delivery": "48h",
+          "payment_url": "https://paypal.me/glidelocal/199"
+        },
+        {
+          "name": "Migration patch sprint",
+          "price_usd": 799,
+          "delivery": "72h",
+          "payment_url": "https://paypal.me/glidelocal/799"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "api_or_repo_url",
+        "openapi_spec_url_or_path",
+        "current_generator_or_vendor",
+        "generated_sdk_languages",
+        "release_ci_url",
+        "must_not_break_customer_flow",
+        "authorized_scope",
+        "contact_email",
+        "notes"
+      ],
+      "deliverables": [
+        "OpenAPI contract freeze map",
+        "generated SDK language parity table",
+        "docs, examples, and MCP connector continuity notes",
+        "release CI and package publishing risk map",
+        "replacement generator or custom pipeline options",
+        "ranked first patch order"
+      ],
+      "url": "https://tateprograms.com/sdk-continuity-sprint.html",
+      "payment_url": "https://paypal.me/glidelocal/199",
+      "contact_url": "mailto:hello@tateprograms.com?subject=SDK%20continuity%20snapshot"
+    },
+    {
       "id": "x402-public-triage-api",
       "name": "x402 Public Triage API",
       "price_usd": 0.01,

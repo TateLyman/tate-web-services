@@ -40,6 +40,7 @@ npx serve .
 - `agent-skill-trust-check.html` - landing page for the static SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace pre-install trust checker
 - `x402-fix-sprint.html` - paid private re-check and small authorized implementation sprint for one x402 launch blocker
 - `x402-five-attack-review.html` - paid private May 2026 x402 readiness review mapped to finality, settlement binding, replay, cache/header handling, discovery steering, and patch order
+- `sdk-continuity-sprint.html` - paid OpenAPI SDK continuity snapshot and migration sprint after the May 2026 Stainless hosted product wind-down
 - `services.json` - machine-readable paid service catalog for agent marketplaces and crawlers
 - `https://the402.tateprograms.com/api/triage` - deployed public no-payment x402 triage endpoint for agent marketplace listing
 - `https://the402.tateprograms.com/api/x402/triage` - live $0.01 x402 paid triage endpoint on Base mainnet USDC; listed on PayanAgent as `js7b65r0vcewvjpte7tfvs6z09871zj3` and announced on 402.pub as `f6d86109195055ce473a7a9b9524f52fcc5f44008532c474ee436b3b95501477`
