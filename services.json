@@ -524,6 +524,8 @@
         "ordered patch list before install or marketplace listing"
       ],
       "url": "https://the402.tateprograms.com/api/provider/skill-trust-check",
+      "github_repo": "https://github.com/TateLyman/agent-skill-trust-check",
+      "release_url": "https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.0",
       "method": "POST",
       "payment_protocol": "marketplace-managed",
       "marketplace_proxy": {
