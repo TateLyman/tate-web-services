@@ -3,8 +3,17 @@
     "name": "Tate Programs",
     "url": "https://tateprograms.com",
     "email": "hello@tateprograms.com",
-    "payment_url": "https://paypal.me/glidelocal",
-    "services_url": "https://tateprograms.com/services.json"
+    "payment_url": "eip155:8453:0x7bc5e304ca289823dec021012d6bb361ddf6b368",
+    "human_payment_url": "https://paypal.me/glidelocal",
+    "services_url": "https://tateprograms.com/services.json",
+    "settlement": {
+      "preferred_asset": "USDC",
+      "preferred_network": "base-mainnet",
+      "preferred_chain_id": "eip155:8453",
+      "payout_wallets": {
+        "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      }
+    }
   },
   "last_updated": "2026-05-19",
   "currency": "USD",
@@ -346,11 +355,20 @@
       "payment_protocol": "x402",
       "payment_asset": "USDC",
       "payment_network": "base-mainnet",
+      "payment_url": "eip155:8453:0x7bc5e304ca289823dec021012d6bb361ddf6b368",
       "payment_networks": [
         "eip155:8453"
       ],
       "pay_to": {
         "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      },
+      "marketplace_proxy": {
+        "base_url": "https://the402.tateprograms.com",
+        "path": "/api/provider/triage",
+        "method": "POST",
+        "auth_header": "X-Tate-Provider-Token",
+        "price_microdollars": 10000,
+        "note": "For proxy marketplaces that collect payment from the buyer and forward calls with private upstream auth."
       },
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
@@ -401,11 +419,20 @@
       "payment_protocol": "x402",
       "payment_asset": "USDC",
       "payment_network": "base-mainnet",
+      "payment_url": "eip155:8453:0x7bc5e304ca289823dec021012d6bb361ddf6b368",
       "payment_networks": [
         "eip155:8453"
       ],
       "pay_to": {
         "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      },
+      "marketplace_proxy": {
+        "base_url": "https://the402.tateprograms.com",
+        "path": "/api/provider/index-watch",
+        "method": "POST",
+        "auth_header": "X-Tate-Provider-Token",
+        "price_microdollars": 10000,
+        "note": "For proxy marketplaces that collect payment from the buyer and forward calls with private upstream auth."
       },
       "index_listing_url": "https://402index.io/directory",
       "payanagent_listing": {
