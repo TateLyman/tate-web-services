@@ -403,7 +403,20 @@
         "public_url": "https://402.pub/#naddr1qvzqqqr64gpzqfgpk3aqev7w9uq76lfv3u0ezj5mc3t8y6wgc3edznplytx4vr4gqythwumn8ghj7un9d3shjtnyv9kh2uewd9hsz9nhwden5te0wfjkccte9ec8y6tdv9kzumn9wsqpuarpw3jj6urjdanhyctdwvkhsdpsxgkhqctfvskhgunfv9nk2gdv8dp"
       },
       "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
-      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20paid%20triage%20API"
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20paid%20triage%20API",
+      "obolos_listing": {
+        "api_id": "eca2d274-b559-4657-bccb-f2d4a4dfc36c",
+        "slug": "tate-programs-x402-triage",
+        "marketplace_url": "https://obolos.tech/app/api/tate-programs-x402-triage",
+        "paid_proxy_url": "https://obolos.tech/api/proxy/tate-programs-x402-triage",
+        "service_type": "api",
+        "pricing_model": "per_call",
+        "price_usd": 0.01,
+        "payout_network": "base-mainnet",
+        "platform_fee_percent": 1,
+        "approval_status": "pending_approval",
+        "created_at": "2026-05-19"
+      }
     },
     {
       "id": "x402-index-watch-api",
@@ -468,7 +481,20 @@
         "public_url": "https://402.pub/#naddr1qvzqqqr64gpzqfgpk3aqev7w9uq76lfv3u0ezj5mc3t8y6wgc3edznplytx4vr4gqythwumn8ghj7un9d3shjtnyv9kh2uewd9hsz9nhwden5te0wfjkccte9ec8y6tdv9kzumn9wsqpuarpw3jj6urjdanhyctdwvkhsdpsxgkkjmnyv4uz6ampw33kstfugdg"
       },
       "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
-      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20index%20watch%20API"
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20index%20watch%20API",
+      "obolos_listing": {
+        "api_id": "cf1847cd-af8c-434d-801a-d2f957a6899d",
+        "slug": "tate-programs-x402-index-watch",
+        "marketplace_url": "https://obolos.tech/app/api/tate-programs-x402-index-watch",
+        "paid_proxy_url": "https://obolos.tech/api/proxy/tate-programs-x402-index-watch",
+        "service_type": "api",
+        "pricing_model": "per_call",
+        "price_usd": 0.01,
+        "payout_network": "base-mainnet",
+        "platform_fee_percent": 1,
+        "approval_status": "pending_approval",
+        "created_at": "2026-05-19"
+      }
     }
   ],
   "boundaries": [
