@@ -48,7 +48,7 @@
         "402 Index health and payment-validity summary",
         "paid endpoint and review handoff paths"
       ],
-      "url": "https://github.com/TateLyman/x402-triage-mcp",
+      "url": "https://tateprograms.com/x402-triage-mcp.html",
       "repository": "https://github.com/TateLyman/x402-triage-mcp",
       "npm_package": "x402-triage-mcp",
       "npm_version": "0.1.1",
