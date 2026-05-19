@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tate Programs x402 launch review card">
+  <rect width="1200" height="630" fill="#f6f1e8"/>
+  <path d="M0 110h1200M0 520h1200" stroke="#d8d2c4" stroke-width="2"/>
+  <rect x="70" y="72" width="70" height="70" rx="16" fill="#111915"/>
+  <text x="105" y="116" text-anchor="middle" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="24" font-weight="800" fill="#f6f1e8">tp</text>
+  <text x="165" y="114" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#111915">Tate Programs</text>
+  <text x="70" y="210" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="20" font-weight="800" fill="#1f7a54">MAY 2026 / X402 / PAY.SH / MPP</text>
+  <text x="70" y="285" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#111915">Paid agent APIs</text>
+  <text x="70" y="360" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#111915">safe enough to launch.</text>
+  <text x="74" y="430" font-family="Inter, Arial, sans-serif" font-size="27" fill="#303a34">Private spend map, patch order, and authorized fix sprint.</text>
+  <rect x="780" y="96" width="340" height="390" rx="12" fill="#111915"/>
+  <rect x="780" y="96" width="340" height="58" rx="12" fill="#18231e"/>
+  <circle cx="816" cy="126" r="8" fill="#d85d48"/>
+  <circle cx="842" cy="126" r="8" fill="#e5b846"/>
+  <circle cx="868" cy="126" r="8" fill="#52b678"/>
+  <text x="898" y="132" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" font-weight="700" fill="#94a89d">review.log</text>
+  <text x="820" y="198" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="21" font-weight="800" fill="#55d88b">tate@programs</text>
+  <text x="1000" y="198" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="21" fill="#f6f1e8">--x402</text>
+  <text x="820" y="254" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">price before action</text>
+  <text x="1050" y="254" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">pass</text>
+  <text x="820" y="294" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">resource binding</text>
+  <text x="1050" y="294" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">check</text>
+  <text x="820" y="334" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">cache policy</text>
+  <text x="1050" y="334" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">check</text>
+  <text x="820" y="374" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">receipt boundary</text>
+  <text x="1050" y="374" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="18" fill="#dce8df">check</text>
+  <rect x="70" y="520" width="210" height="56" rx="8" fill="#c94d2c"/>
+  <text x="175" y="556" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#fffaf4">Start review</text>
+  <text x="312" y="556" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="20" font-weight="800" fill="#111915">$49 / $149 / $299</text>
+</svg>

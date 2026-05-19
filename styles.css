@@ -3923,6 +3923,7 @@ footer a {
 }
 
 .rev-status,
+.rev-market,
 .rev-section,
 .rev-process,
 .rev-faq,
@@ -3963,6 +3964,69 @@ footer a {
 .rev-status strong {
   display: block;
   font-size: 0.96rem;
+}
+
+.rev-market {
+  display: grid;
+  gap: 42px;
+  grid-template-columns: minmax(0, 0.84fr) minmax(420px, 0.92fr);
+  padding: 74px 32px 0;
+}
+
+.rev-market-copy {
+  align-self: start;
+}
+
+.rev-market h2 {
+  color: var(--rev-ink);
+  font-size: 2.65rem;
+  font-weight: 880;
+  line-height: 0.98;
+  margin: 0;
+  max-width: 680px;
+}
+
+.rev-market-copy p:not(.rev-kicker) {
+  color: var(--rev-muted);
+  margin: 22px 0 0;
+  max-width: 680px;
+}
+
+.rev-market-grid {
+  background: var(--rev-ink);
+  border-radius: 8px;
+  color: var(--rev-paper);
+  display: grid;
+  padding: 10px 22px;
+}
+
+.rev-market-grid article {
+  padding: 20px 0;
+}
+
+.rev-market-grid article + article {
+  border-top: 1px solid rgba(246, 241, 232, 0.16);
+}
+
+.rev-market-grid span {
+  color: #7bd89d;
+  display: block;
+  font-family: var(--rev-mono);
+  font-size: 0.72rem;
+  font-weight: 830;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+
+.rev-market-grid strong {
+  display: block;
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+}
+
+.rev-market-grid p {
+  color: #c7d2cc;
+  margin: 0;
 }
 
 .rev-section,
@@ -4215,6 +4279,7 @@ footer a {
   }
 
   .rev-hero,
+  .rev-market,
   .rev-process,
   .rev-faq {
     grid-template-columns: 1fr;
@@ -4240,6 +4305,7 @@ footer a {
   }
 
   .rev-hero,
+  .rev-market,
   .rev-section,
   .rev-process,
   .rev-faq,
@@ -4276,12 +4342,14 @@ footer a {
   }
 
   .rev-section,
+  .rev-market,
   .rev-process,
   .rev-faq {
     padding-top: 62px;
   }
 
   .rev-section-head h2,
+  .rev-market h2,
   .rev-process h2,
   .rev-faq h2,
   .rev-final h2 {

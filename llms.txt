@@ -1,10 +1,10 @@
 # Tate Programs
 
-Tate Programs builds practical release-readiness tools and fixed-scope review services for JavaScript, TypeScript, GitHub Action, and MCP server launches.
+Tate Programs runs fixed-scope launch reviews and small implementation sprints for paid agent APIs, x402, Pay.sh, MPP, AgentCore, MCP, JavaScript, TypeScript, and GitHub Action launches.
 
 ## Primary Pages
 
-- [Home](https://tateprograms.com/) - Main workbench, services, proof, and contact paths.
+- [Home](https://tateprograms.com/) - Focused paid-offer page for private x402 launch reviews, $49 re-checks, $149 spend maps, $299 fix sprints, proof signals, and current May 2026 agent-payment market positioning.
 - [Shipcheck CLI](https://tateprograms.com/shipcheck.html) - Static release-readiness scanner for JS, TS, GitHub Action, npm, and MCP repos.
 - [MCP Registry Pulse](https://tateprograms.com/mcp-registry-pulse.html) - Public aggregate snapshot of MCP Registry metadata, README, STDIO, auth, and launch-proof signals.
 - [MCP Registry Pulse JSON](https://tateprograms.com/mcp-registry-pulse.json) - Machine-readable aggregate data backing the Pulse page.

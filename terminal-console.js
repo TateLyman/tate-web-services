@@ -9,6 +9,7 @@ const commands = {
       'commands:',
       '  pricing  fixed entry scopes',
       '  proof    recent public signals',
+      '  market   why this is moving now',
       '  tools    free checks and docs',
       '  process  how a review moves',
       '  contact  private request template',
@@ -34,6 +35,17 @@ const commands = {
       '  TaskHawk       accepted accept-leg resource finding',
       '  AgentPay       provider review queue',
       '  the402         fixed-price channel onboarding',
+    ].join('\n'),
+  },
+  market: {
+    text: [
+      'why now:',
+      '  agent runtimes can pay for APIs during execution',
+      '  search agents and marketplaces change how buyers discover endpoints',
+      '  launch proof is shifting from uptime to spend policy, receipts, and failure behavior',
+      '',
+      'best offer:',
+      '  private x402 launch review -> spend map + patch order',
     ].join('\n'),
   },
   tools: {
