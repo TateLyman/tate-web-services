@@ -4376,3 +4376,283 @@ footer a {
     margin-top: 64px;
   }
 }
+
+/* Site coherence pass: keep secondary pages aligned with the focused homepage. */
+.terminal-os.shell-page {
+  --term-bg: #f6f1e8;
+  --term-panel: #fffdf8;
+  --term-panel-2: #f8f5ef;
+  --term-panel-3: #eee6d8;
+  --term-ink: #111915;
+  --term-muted: #5f675f;
+  --term-dim: #8b8378;
+  --term-line: rgba(17, 25, 21, 0.14);
+  --term-line-strong: rgba(17, 25, 21, 0.24);
+  --term-green: #1f7a54;
+  --term-cyan: #284d8f;
+  --term-amber: #b27a13;
+  --term-red: #c94d2c;
+  --term-shadow: 0 18px 52px rgba(29, 47, 38, 0.1);
+  background:
+    linear-gradient(90deg, rgba(17, 25, 21, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(17, 25, 21, 0.03) 1px, transparent 1px),
+    var(--term-bg);
+  background-size: 72px 72px;
+  color: var(--term-ink);
+}
+
+.terminal-os.shell-page::before {
+  display: none;
+}
+
+.terminal-os.shell-page .os-topbar {
+  background: rgba(17, 25, 21, 0.94);
+  border-bottom-color: rgba(255, 253, 248, 0.12);
+  box-shadow: 0 12px 42px rgba(17, 25, 21, 0.14);
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.terminal-os.shell-page .os-brand {
+  color: #fffdf8;
+}
+
+.terminal-os.shell-page .os-mark {
+  background: #fffdf8;
+  color: #111915;
+}
+
+.terminal-os.shell-page .os-tabs {
+  justify-content: center;
+}
+
+.terminal-os.shell-page .os-tabs a {
+  color: rgba(255, 253, 248, 0.68);
+  font-size: 0.78rem;
+}
+
+.terminal-os.shell-page .os-tabs a:hover,
+.terminal-os.shell-page .os-tabs a:focus-visible {
+  border-color: rgba(255, 253, 248, 0.18);
+  color: #fffdf8;
+}
+
+.terminal-os.shell-page .os-status {
+  border-color: rgba(255, 253, 248, 0.18);
+  color: #fffdf8;
+}
+
+.terminal-os.shell-page .os-status span {
+  background: #e5b846;
+  box-shadow: 0 0 0 4px rgba(229, 184, 70, 0.14);
+}
+
+.shell-page main {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding-bottom: 28px;
+}
+
+.shell-pathline {
+  background: rgba(255, 253, 248, 0.88);
+  border-color: rgba(17, 25, 21, 0.12);
+  box-shadow: 0 12px 34px rgba(29, 47, 38, 0.08);
+}
+
+.shell-page .console-hero,
+.shell-page .page-hero,
+.shell-page .audit-hero,
+.shell-page .audit-tool,
+.shell-page .console-section,
+.shell-page .console-cta,
+.shell-page .console-strip,
+.shell-page .console-audit-layout,
+.shell-page .report-header,
+.shell-page .section,
+.shell-page .cta-band {
+  background:
+    linear-gradient(90deg, rgba(17, 25, 21, 0.025) 1px, transparent 1px),
+    var(--term-panel);
+  background-size: 72px 72px;
+  border-color: rgba(17, 25, 21, 0.12);
+  box-shadow: var(--term-shadow);
+}
+
+.shell-page .console-hero::before,
+.shell-page .page-hero::before,
+.shell-page .audit-hero::before,
+.shell-page .audit-tool::before,
+.shell-page .console-section::before,
+.shell-page .console-cta::before,
+.shell-page .console-strip::before,
+.shell-page .console-audit-layout::before,
+.shell-page .report-header::before,
+.shell-page .section::before,
+.shell-page .cta-band::before {
+  background: linear-gradient(180deg, #1b2620, #111915);
+  border-bottom-color: rgba(17, 25, 21, 0.14);
+}
+
+.shell-page .console-copy h1,
+.shell-page .page-hero h1,
+.shell-page .audit-hero h1,
+.shell-page .report-header h1,
+.shell-page .section-heading h2,
+.shell-page .console-section h2,
+.shell-page .console-cta h2 {
+  color: #111915;
+}
+
+.shell-page .console-subtitle,
+.shell-page .hero-subtitle,
+.shell-page .console-card p,
+.shell-page .audit-preview-grid p,
+.shell-page .project-grid p,
+.shell-page .release-note,
+.shell-page .release-note p,
+.shell-page .release-note li {
+  color: #5f675f;
+}
+
+.shell-page .console-ledger div,
+.shell-page .console-card,
+.shell-page .proof-terminal-grid article,
+.shell-page .runbook div,
+.shell-page .terminal-demo-card,
+.shell-page .audit-form > label,
+.shell-page .audit-form fieldset,
+.shell-page .audit-results,
+.shell-page .audit-note,
+.shell-page .offer-card,
+.shell-page .rescue-grid article,
+.shell-page .audit-preview-grid article,
+.shell-page .project-grid article,
+.shell-page .report-grid article,
+.shell-page .report-summary article,
+.shell-page .steps article {
+  background: rgba(255, 253, 248, 0.84);
+  border-color: rgba(17, 25, 21, 0.12);
+}
+
+.shell-page .terminal-window,
+.shell-page .radar-panel,
+.shell-page .command-snippet,
+.shell-page .terminal-scroll,
+.shell-page .score-card,
+.shell-page .audit-form input[type="text"],
+.shell-page .audit-form input[type="number"],
+.shell-page .audit-form input[type="url"],
+.shell-page .audit-form select,
+.shell-page .audit-form textarea,
+.shell-page .release-note pre {
+  background: #111915;
+  border-color: rgba(255, 253, 248, 0.14);
+  color: #eaf2e7;
+}
+
+.shell-page .terminal-window pre,
+.shell-page .terminal-window code,
+.shell-page .command-snippet,
+.shell-page .release-note pre {
+  color: #d7eadc;
+}
+
+.shell-page .console-button.primary,
+.shell-page .button.primary {
+  background: #c94d2c;
+  border-color: #c94d2c;
+  color: #fffdf8;
+}
+
+.shell-page .console-button.secondary,
+.shell-page .button.secondary {
+  background: rgba(31, 122, 84, 0.09);
+  border-color: rgba(31, 122, 84, 0.22);
+  color: #1f7a54;
+}
+
+.shell-page .console-button.ghost,
+.shell-page .button.ghost {
+  border-color: rgba(40, 77, 143, 0.22);
+  color: #284d8f;
+}
+
+.shell-page .console-actions {
+  gap: 10px;
+}
+
+.shell-page .console-actions .console-button,
+.shell-page .hero-actions .button {
+  min-height: 42px;
+}
+
+.shell-page .console-ledger dt {
+  color: #7a837b;
+}
+
+.shell-page .console-ledger dd {
+  color: #17201c;
+}
+
+.shell-page .focused-offer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.shell-page .focused-offer-grid .offer-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.shell-page .focused-offer-grid .offer-card > a:last-child {
+  margin-top: auto;
+}
+
+.shell-page .terminal-footer,
+.terminal-os .terminal-footer,
+.console-footer {
+  color: #5f675f;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.legacy-redirect {
+  align-items: center;
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.redirect-panel {
+  background: var(--rev-surface);
+  border: 1px solid var(--rev-line);
+  border-radius: 8px;
+  box-shadow: 0 18px 52px rgba(29, 47, 38, 0.12);
+  margin: 0 auto;
+  max-width: 620px;
+  padding: clamp(28px, 6vw, 54px);
+}
+
+.redirect-panel h1 {
+  font-size: clamp(2.1rem, 6vw, 3.8rem);
+  line-height: 0.98;
+}
+
+.redirect-panel p:not(.rev-kicker) {
+  color: var(--rev-muted);
+  font-size: 1.04rem;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 760px) {
+  .terminal-os.shell-page .os-topbar {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-os.shell-page .os-tabs {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .shell-page .focused-offer-grid {
+    grid-template-columns: 1fr;
+  }
+}

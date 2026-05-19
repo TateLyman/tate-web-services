@@ -7,3 +7,5 @@ Host: https://tateprograms.com
 # Curated machine-readable map for developer tools and launch-readiness pages.
 # llms.txt is a community convention, not a crawler directive.
 LLMs: https://tateprograms.com/llms.txt
+
+# Deprecated broad-service/demo URLs are noindex redirect stubs, not sitemap targets.
