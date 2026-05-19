@@ -295,6 +295,12 @@
         "service_id": "js7b65r0vcewvjpte7tfvs6z09871zj3",
         "discovery_url": "https://payanagent.com/api/v1/services?search=tate"
       },
+      "nostr_402pub_listing": {
+        "event_id": "f6d86109195055ce473a7a9b9524f52fcc5f44008532c474ee436b3b95501477",
+        "pubkey": "2501b47a0cb3ce2f01ed7d2c8f1f914a9bc4567269c8c472d14c3f22cd560ea8",
+        "naddr": "naddr1qvzqqqr64gpzqfgpk3aqev7w9uq76lfv3u0ezj5mc3t8y6wgc3edznplytx4vr4gqythwumn8ghj7un9d3shjtnyv9kh2uewd9hsz9nhwden5te0wfjkccte9ec8y6tdv9kzumn9wsqpuarpw3jj6urjdanhyctdwvkhsdpsxgkhqctfvskhgunfv9nk2gdv8dp",
+        "public_url": "https://402.pub/#naddr1qvzqqqr64gpzqfgpk3aqev7w9uq76lfv3u0ezj5mc3t8y6wgc3edznplytx4vr4gqythwumn8ghj7un9d3shjtnyv9kh2uewd9hsz9nhwden5te0wfjkccte9ec8y6tdv9kzumn9wsqpuarpw3jj6urjdanhyctdwvkhsdpsxgkhqctfvskhgunfv9nk2gdv8dp"
+      },
       "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20paid%20triage%20API"
     },
@@ -339,6 +345,12 @@
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js783ryc2t5gn5gyh9pg9hw7ph870c67",
         "discovery_url": "https://payanagent.com/api/v1/services?search=tate"
+      },
+      "nostr_402pub_listing": {
+        "event_id": "b162ecdf0df98ff1b878f6f70687f9758926bbb4978349cb76c889d661eb21e2",
+        "pubkey": "2501b47a0cb3ce2f01ed7d2c8f1f914a9bc4567269c8c472d14c3f22cd560ea8",
+        "naddr": "naddr1qvzqqqr64gpzqfgpk3aqev7w9uq76lfv3u0ezj5mc3t8y6wgc3edznplytx4vr4gqythwumn8ghj7un9d3shjtnyv9kh2uewd9hsz9nhwden5te0wfjkccte9ec8y6tdv9kzumn9wsqpuarpw3jj6urjdanhyctdwvkhsdpsxgkkjmnyv4uz6ampw33kstfugdg",
+        "public_url": "https://402.pub/#naddr1qvzqqqr64gpzqfgpk3aqev7w9uq76lfv3u0ezj5mc3t8y6wgc3edznplytx4vr4gqythwumn8ghj7un9d3shjtnyv9kh2uewd9hsz9nhwden5te0wfjkccte9ec8y6tdv9kzumn9wsqpuarpw3jj6urjdanhyctdwvkhsdpsxgkkjmnyv4uz6ampw33kstfugdg"
       },
       "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20index%20watch%20API"
