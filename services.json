@@ -205,7 +205,14 @@
       ],
       "url": "https://tateprograms.com/x402-fix-sprint.html",
       "payment_url": "https://paypal.me/glidelocal/49",
-      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20re-check"
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20re-check",
+      "payanagent_listing": {
+        "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
+        "service_id": "js70vv9t0qqfctw68afdqc82ms871hkv",
+        "service_type": "job",
+        "pricing_model": "per_job",
+        "discovery_url": "https://payanagent.com/api/v1/discover?q=x402%20launch%20review"
+      }
     },
     {
       "id": "x402-launch-review",
@@ -242,7 +249,14 @@
       ],
       "url": "https://tateprograms.com/x402-fix-sprint.html",
       "payment_url": "https://paypal.me/glidelocal/149",
-      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20review"
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20review",
+      "payanagent_listing": {
+        "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
+        "service_id": "js738p91kt259jwmsm8fqxhrsd871y6c",
+        "service_type": "job",
+        "pricing_model": "per_job",
+        "discovery_url": "https://payanagent.com/api/v1/discover?q=x402%20launch%20review"
+      }
     },
     {
       "id": "x402-fix-sprint",
@@ -287,7 +301,14 @@
       ],
       "url": "https://tateprograms.com/x402-fix-sprint.html",
       "payment_url": "https://paypal.me/glidelocal/299",
-      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20fix%20sprint"
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20fix%20sprint",
+      "payanagent_listing": {
+        "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
+        "service_id": "js74yyeev0mhss30y6knrwdsfd870d20",
+        "service_type": "job",
+        "pricing_model": "per_job",
+        "discovery_url": "https://payanagent.com/api/v1/discover?q=x402%20fix%20sprint"
+      }
     },
     {
       "id": "x402-public-triage-api",
