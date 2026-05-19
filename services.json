@@ -10,6 +10,59 @@
   "currency": "USD",
   "services": [
     {
+      "id": "x402-triage-mcp",
+      "name": "x402 Triage MCP",
+      "price_usd": 0,
+      "delivery": "instant",
+      "service_type": "mcp_server",
+      "fulfillment_type": "automated",
+      "category": "developer-tools",
+      "tags": [
+        "mcp",
+        "x402",
+        "agent-payments",
+        "402-index",
+        "security",
+        "api-marketplace"
+      ],
+      "scope": "MCP server for no-payment x402 surface triage, 402 Index health checks, and paid review handoff.",
+      "requires_authorization": false,
+      "input_fields": [
+        "url",
+        "method",
+        "origin",
+        "q",
+        "protocol",
+        "health",
+        "limit"
+      ],
+      "tools": [
+        "triage_x402_surface",
+        "watch_402_index",
+        "x402_paid_paths"
+      ],
+      "deliverables": [
+        "x402 challenge summary",
+        "attack-class triage notes",
+        "cache/CORS/resource findings",
+        "402 Index health and payment-validity summary",
+        "paid endpoint and review handoff paths"
+      ],
+      "url": "https://github.com/TateLyman/x402-triage-mcp",
+      "repository": "https://github.com/TateLyman/x402-triage-mcp",
+      "npm_package": "x402-triage-mcp",
+      "mcp_config": {
+        "command": "npx",
+        "args": [
+          "--yes",
+          "--package",
+          "x402-triage-mcp",
+          "x402-triage-mcp"
+        ]
+      },
+      "contact_url": "mailto:hello@tateprograms.com?subject=x402%20Triage%20MCP"
+    },
+    {
       "id": "x402-five-attack-review",
       "name": "x402 Five-Attack Review",
       "price_usd": 249,
