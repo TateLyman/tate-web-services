@@ -28,6 +28,71 @@
   "currency": "USD",
   "services": [
     {
+      "id": "agent-commerce-readiness-sprint",
+      "name": "Agent Commerce Readiness Sprint",
+      "price_usd": 750,
+      "delivery": "3-5 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-infrastructure",
+      "tags": [
+        "agent-commerce",
+        "paid-apis",
+        "x402",
+        "mpp",
+        "agentcore",
+        "catalogs",
+        "receipts",
+        "spend-controls",
+        "b2b"
+      ],
+      "scope": "B2B readiness sprint for one product, catalog, marketplace, or paid API launch surface where agents need to discover, authorize, pay, retry, and prove the transaction safely.",
+      "tiers": [
+        {
+          "name": "Readiness map",
+          "price_usd": 750,
+          "delivery": "3 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20map"
+        },
+        {
+          "name": "Launch sprint",
+          "price_usd": 2500,
+          "delivery": "1 week",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20launch%20sprint"
+        },
+        {
+          "name": "Readiness monitor",
+          "price_usd": 4500,
+          "delivery": "monthly",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20monitor"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "product_or_catalog_url",
+        "paid_route_or_checkout_url",
+        "payment_or_checkout_rail",
+        "agent_discovery_surface",
+        "authorized_scope",
+        "contact_email",
+        "launch_deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "agent-commerce surface map",
+        "catalog and discovery review",
+        "payment challenge or checkout boundary review",
+        "authorization and spend-control map",
+        "receipt and reconciliation evidence map",
+        "retry, failure, and refund notes",
+        "ranked patch order",
+        "partner-ready launch proof packet"
+      ],
+      "url": "https://tateprograms.com/agent-commerce-readiness-sprint.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20sprint"
+    },
+    {
       "id": "agent-spend-guard-review",
       "name": "Agent Spend Guard Review",
       "price_usd": 199,

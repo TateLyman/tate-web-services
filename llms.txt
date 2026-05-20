@@ -1,10 +1,11 @@
 # Tate Programs
 
-Tate Programs runs fixed-scope launch reviews and small implementation sprints for paid agent APIs, x402, Pay.sh, MPP, AgentCore, MCP, JavaScript, TypeScript, and GitHub Action launches.
+Tate Programs runs B2B agent-commerce readiness sprints, fixed-scope launch reviews, and small implementation sprints for paid agent APIs, x402, Pay.sh, MPP, AgentCore, MCP, JavaScript, TypeScript, and GitHub Action launches.
 
 ## Primary Pages
 
-- [Home](https://tateprograms.com/) - Focused paid-offer page for private x402 launch reviews, $49 re-checks, $149 spend maps, $299 fix sprints, proof signals, and current May 2026 agent-payment market positioning.
+- [Home](https://tateprograms.com/) - Focused B2B paid-offer page for agent-commerce readiness maps, launch sprints, recurring monitors, private x402 launch reviews, proof signals, and current May 2026 agent-payment market positioning.
+- [Agent Commerce Readiness Sprint](https://tateprograms.com/agent-commerce-readiness-sprint.html) - B2B readiness sprint for companies launching agent-discoverable catalogs, paid APIs, x402 routes, MPP flows, AgentCore integrations, receipts, spend controls, failure recovery, and partner-ready launch proof. Tiers: $750 readiness map, $2,500 launch sprint, and $4,500/month readiness monitor.
 - [Shipcheck CLI](https://tateprograms.com/shipcheck.html) - Static release-readiness scanner for JS, TS, GitHub Action, npm, and MCP repos.
 - [MCP Registry Pulse](https://tateprograms.com/mcp-registry-pulse.html) - Public aggregate snapshot of MCP Registry metadata, README, STDIO, auth, and launch-proof signals.
 - [MCP Registry Pulse JSON](https://tateprograms.com/mcp-registry-pulse.json) - Machine-readable aggregate data backing the Pulse page.
@@ -24,7 +25,7 @@ Tate Programs runs fixed-scope launch reviews and small implementation sprints f
 - [x402 Five-Attack Review](https://tateprograms.com/x402-five-attack-review.html) - Paid private May 2026 x402 readiness review mapped to finality, settlement binding, replay, cache/header handling, discovery steering, patch order, and live provider proof from TaskHawk, Blocksize, Carbon Cashmere, and Tate Programs' own endpoints.
 - [x402 Attack Surface Gate on Agensi](https://www.agensi.io/skill/dda183c1-4c47-4f39-a7f1-c4cec9004d20) - Paid SKILL.md marketplace version of the no-payment x402 and agent-payment launch review workflow for resource binding, replay, paid-but-denied, browser/CORS, cache, metadata, and settlement risks.
 - [SDK Continuity Sprint](https://tateprograms.com/sdk-continuity-sprint.html) - Paid OpenAPI SDK migration and generator-continuity offer after the May 2026 Stainless hosted product wind-down: $199 continuity snapshot and $799 authorized patch sprint for generated SDKs, docs, MCP connectors, and release CI.
-- [Service Catalog JSON](https://tateprograms.com/services.json) - Machine-readable fixed-scope service catalog for agent marketplaces and crawlers: $49 x402 re-check, $99/$199 spend guard review, $149 launch review, $199 SDK continuity snapshot, $249 five-attack review, $299 x402 fix sprint, $349 agent subscription boundary review, $499 patch sprint, and $799 SDK migration patch sprint.
+- [Service Catalog JSON](https://tateprograms.com/services.json) - Machine-readable fixed-scope service catalog for agent marketplaces and crawlers: $750 agent-commerce readiness map, $2,500 launch sprint, $4,500/month readiness monitor, $49 x402 re-check, $99/$199 spend guard review, $149 launch review, $199 SDK continuity snapshot, $249 five-attack review, $299 x402 fix sprint, $349 agent subscription boundary review, $499 patch sprint, and $799 SDK migration patch sprint.
 - [Agent Card](https://tateprograms.com/.well-known/agent-card.json) and [x402 Manifest](https://tateprograms.com/.well-known/x402) - Main-domain machine-readable discovery files for Tate Programs paid readiness APIs.
 - [AgentPay Provider Registry](https://x402-agent-pay.com/providers) - External x402 provider registry listing Tate Programs as a verified AgentPay provider; machine feed at `https://x402-agent-pay.com/api/providers`.
 - [APIHub Tate Programs x402 Surface Checks](https://apihub.io/marketplace/tate-programs-x402) - Active APIHub marketplace listing for Tate Programs paid proxy endpoints: `/api/provider/triage`, `/api/provider/index-watch`, and `/api/provider/skill-trust-check`, each priced at $0.01 per request through APIHub credits or x402 payment.

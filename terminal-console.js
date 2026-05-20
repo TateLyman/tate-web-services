@@ -7,7 +7,7 @@ const commands = {
   help: {
     text: [
       'commands:',
-      '  pricing  fixed entry scopes',
+      '  pricing  b2b sprint + entry scopes',
       '  proof    recent public signals',
       '  market   why this is moving now',
       '  tools    free checks and docs',
@@ -18,7 +18,12 @@ const commands = {
   },
   pricing: {
     text: [
-      'fixed scopes:',
+      'b2b scopes:',
+      '  $750   Agent Commerce Readiness Map',
+      '  $2.5k  Agent Commerce Launch Sprint',
+      '  $4.5k  Readiness Monitor / month',
+      '',
+      'entry scopes:',
       '  $49   x402 Launch Re-check',
       '  $149  x402 Launch Review',
       '  $349  Agent Subscription Boundary Review',
@@ -48,7 +53,7 @@ const commands = {
       '  launch proof is shifting from uptime to spend policy, receipts, and failure behavior',
       '',
       'best offer:',
-      '  private x402 launch review or subscription-boundary review -> spend map + patch order',
+      '  agent-commerce readiness map -> launch sprint -> recurring readiness monitor',
     ].join('\n'),
   },
   tools: {
@@ -81,7 +86,7 @@ const commands = {
       '  what must work before launch',
       '  deadline',
     ].join('\n'),
-    route: 'mailto:hello@tateprograms.com?subject=x402%20launch%20review%20request',
+    route: 'mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20sprint',
   },
 }
 
