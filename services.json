@@ -620,6 +620,47 @@
         "created_at": "2026-05-19"
       },
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20skill%20trust%20check"
+    },
+    {
+      "id": "security-remediation-plan",
+      "name": "Security Remediation Plan",
+      "category": "agent-skill",
+      "status": "live",
+      "price_usd": 0,
+      "tags": [
+        "security",
+        "vulnerability-remediation",
+        "dependency-triage",
+        "patch-planning",
+        "agent-skills"
+      ],
+      "scope": "Free agent skill that turns a provided vulnerability finding, dependency alert, or scanner note into a remediation plan with patch order and verification checks.",
+      "requires_authorization": false,
+      "input_fields": [
+        "finding",
+        "ecosystem",
+        "affected_component",
+        "severity",
+        "constraints"
+      ],
+      "deliverables": [
+        "risk class",
+        "first patch",
+        "ordered remediation plan",
+        "verification checklist",
+        "open questions",
+        "planning-only boundary"
+      ],
+      "url": "https://aiskillstore.io/skills/8d5a2f7f-6217-4770-9aa4-3930020fefc4",
+      "ai_skill_store_listing": {
+        "skill_id": "8d5a2f7f-6217-4770-9aa4-3930020fefc4",
+        "name": "security-remediation-plan",
+        "trust_level": "sandbox",
+        "vetting_status": "approved",
+        "created_at": "2026-05-20",
+        "demand_signal": "AI Skill Store Most Wanted showed zero-result demand for security vulnerability remediation and security monitoring vulnerability scanning."
+      },
+      "contact_url": "mailto:hello@tateprograms.com?subject=Security%20remediation%20plan"
     }
   ],
   "boundaries": [
