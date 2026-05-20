@@ -92,7 +92,9 @@
           <article>
             <span>new</span>
             <h3>May 20 patch loops</h3>
-            <p>Same-day checks closed the loop on provider fixes: Crest patched browser CORS and discovery, Phoenix Zero aligned its payment rail documentation with live testnet behavior, and Mameta's Japan APIs moved to 204 preflight plus no-store 402 responses before the final header-exposure fix.</p>
+            <p>Same-day checks closed the loop on provider fixes: TaskHawk deployed accept-leg resource binding and passed the re-check, Blocksize fixed the original actual-402 browser-read blocker, Carbon Cashmere shipped a flat 177-endpoint manifest, and earlier Crest, Phoenix Zero, and Mameta fixes kept moving.</p>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4501515863" target="_blank" rel="noreferrer">Blocksize re-check</a>
+            <a href="https://github.com/punkpeye/awesome-mcp-servers/pull/6640#issuecomment-4501517723" target="_blank" rel="noreferrer">Carbon re-check</a>
             <a href="https://github.com/coinbase/x402/pull/167#issuecomment-4493636178" target="_blank" rel="noreferrer">Crest re-check</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/73#issuecomment-4493660686" target="_blank" rel="noreferrer">Phoenix re-check</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/74#issuecomment-4493653984" target="_blank" rel="noreferrer">Mameta launch review</a>
@@ -242,8 +244,9 @@
           <article>
             <span>16</span>
             <h3>Blocksize market data</h3>
-            <p>VWAP, bid/ask, FX, and metals endpoints return coherent Solana mainnet x402 challenges. The resource echo patch landed; actual 402 responses still need ACAO for browser readability.</p>
+            <p>VWAP, bid/ask, FX, and metals endpoints return coherent Solana mainnet x402 challenges. The latest re-check confirmed actual 402 responses now expose browser-readable payment headers and repeat the requested resource; sampled responses still need a visible no-store cache policy.</p>
             <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4464747368" target="_blank" rel="noreferrer">follow-up note</a>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4501515863" target="_blank" rel="noreferrer">latest re-check</a>
           </article>
           <article>
             <span>17</span>
