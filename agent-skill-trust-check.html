@@ -28,7 +28,7 @@
         "operatingSystem": "Cross-platform",
         "url": "https://tateprograms.com/agent-skill-trust-check.html",
         "codeRepository": "https://github.com/TateLyman/agent-skill-trust-check",
-        "softwareVersion": "0.1.1",
+        "softwareVersion": "0.1.2",
         "description": "Static trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings before install.",
         "offers": {
           "@type": "Offer",
@@ -58,9 +58,9 @@
         <a href="case-studies.html">proof</a>
         <a href="payments.html">pay</a>
       </nav>
-      <a class="os-status" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.1" target="_blank" rel="noreferrer">
+      <a class="os-status" href="https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.2" target="_blank" rel="noreferrer">
         <span></span>
-        release 0.1.1
+        release 0.1.2
       </a>
     </header>
 
@@ -81,6 +81,7 @@
           <div class="console-actions">
             <a class="console-button primary" href="https://github.com/TateLyman/agent-skill-trust-check" target="_blank" rel="noreferrer">open repo</a>
             <a class="console-button secondary" href="https://www.npmjs.com/package/agent-skill-trust-check" target="_blank" rel="noreferrer">npm</a>
+            <a class="console-button secondary" href="https://aiskillstore.io/skills/be1a09eb-13c2-4bdf-ad00-8445e8394157" target="_blank" rel="noreferrer">ai skill store</a>
             <a class="console-button secondary" href="https://www.paperclipskills.com/api/v1/skills/@tateprograms/agent-skill-trust-check" target="_blank" rel="noreferrer">paperclip</a>
             <a class="console-button secondary" href="https://orkai.ai/skills/agent-skill-trust-check" target="_blank" rel="noreferrer">orkai</a>
             <a class="console-button ghost" href="payments.html">private review</a>
@@ -96,7 +97,7 @@
             </div>
             <div>
               <dt>version</dt>
-              <dd>0.1.1</dd>
+              <dd>0.1.2</dd>
             </div>
           </dl>
         </div>
@@ -106,6 +107,7 @@
           <pre><code>$ git clone https://github.com/TateLyman/agent-skill-trust-check
 $ cd agent-skill-trust-check
 $ npx --yes agent-skill-trust-check ./SKILL.md --json
+$ node bin/agent-skill-trust-check-stdin.js &lt; ./SKILL.md
 
 signals:
   local access / file changes
