@@ -43,6 +43,7 @@ npx serve .
 - `x402-five-attack-review.html` - paid private May 2026 x402 readiness review mapped to finality, settlement binding, replay, cache/header handling, discovery steering, and patch order
 - `sdk-continuity-sprint.html` - paid OpenAPI SDK continuity snapshot and migration sprint after the May 2026 Stainless hosted product wind-down
 - `services.json` - machine-readable paid service catalog for agent marketplaces and crawlers
+- `https://x402-agent-pay.com/providers` - external AgentPay provider registry listing Tate Programs as a verified x402 provider; machine feed: `https://x402-agent-pay.com/api/providers`
 - `https://the402.tateprograms.com/api/triage` - deployed public no-payment x402 triage endpoint for agent marketplace listing
 - `https://the402.tateprograms.com/api/x402/triage` - live $0.01 x402 paid triage endpoint on Base mainnet USDC; listed on PayanAgent as `js7b65r0vcewvjpte7tfvs6z09871zj3` and announced on 402.pub as `f6d86109195055ce473a7a9b9524f52fcc5f44008532c474ee436b3b95501477`
 - `https://the402.tateprograms.com/api/x402/index-watch` - live $0.01 x402 paid 402 Index health-watch endpoint for provider/domain/service queries on Base mainnet USDC; listed on PayanAgent as `js783ryc2t5gn5gyh9pg9hw7ph870c67` and announced on 402.pub as `b162ecdf0df98ff1b878f6f70687f9758926bbb4978349cb76c889d661eb21e2`

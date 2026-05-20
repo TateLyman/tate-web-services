@@ -6,6 +6,11 @@
     "payment_url": "eip155:8453:0x7bc5e304ca289823dec021012d6bb361ddf6b368",
     "human_payment_url": "https://paypal.me/glidelocal",
     "services_url": "https://tateprograms.com/services.json",
+    "marketplace_listings": {
+      "agentpay_provider_registry": "https://x402-agent-pay.com/providers",
+      "agentpay_machine_feed": "https://x402-agent-pay.com/api/providers",
+      "payanagent_discovery": "https://payanagent.com/api/v1/discover?q=x402%20subscription%20boundary%20launch%20review"
+    },
     "settlement": {
       "preferred_asset": "USDC",
       "preferred_network": "base-mainnet",
