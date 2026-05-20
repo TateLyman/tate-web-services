@@ -297,7 +297,14 @@
       ],
       "url": "https://tateprograms.com/agent-subscription-boundary-review.html",
       "payment_url": "https://paypal.me/glidelocal/349",
-      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20subscription%20boundary%20review"
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20subscription%20boundary%20review",
+      "payanagent_listing": {
+        "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
+        "service_id": "js73e4g7kq064b2jg0grafrrth8730wg",
+        "service_type": "job",
+        "pricing_model": "per_job",
+        "discovery_url": "https://payanagent.com/api/v1/discover?q=agent%20subscription%20boundary%20review"
+      }
     },
     {
       "id": "x402-fix-sprint",
