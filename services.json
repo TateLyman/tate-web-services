@@ -668,6 +668,13 @@
         "webhook_status": "unverified-but-signed-post-verified",
         "created_at": "2026-05-19"
       },
+      "payanagent_listing": {
+        "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
+        "service_id": "js76g8grh1rndrqpp77w87bzzn872jt6",
+        "price_cents": 1,
+        "pricing_model": "per_request",
+        "discovery_url": "https://payanagent.com/api/v1/discover?q=agent%20skill%20trust%20check"
+      },
       "paperclip_listing": {
         "name": "@tateprograms/agent-skill-trust-check",
         "version": "0.1.1",
