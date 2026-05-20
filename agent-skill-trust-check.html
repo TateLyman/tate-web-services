@@ -104,11 +104,13 @@
 
         <aside class="terminal-window" aria-label="Agent Skill Trust Check commands">
           <div class="terminal-topline">local check</div>
-          <pre><code>$ git clone https://github.com/TateLyman/agent-skill-trust-check
-$ cd agent-skill-trust-check
-$ npx --yes agent-skill-trust-check ./SKILL.md --json
-$ node bin/agent-skill-trust-check-stdin.js &lt; ./SKILL.md
-$ curl -i https://the402.tateprograms.com/api/x402/skill-trust-check
+          <pre><code>$ npm view agent-skill-trust-check version
+$ npx --yes agent-skill-trust-check \
+  ./SKILL.md --json
+$ node bin/agent-skill-trust-check-stdin.js \
+  &lt; ./SKILL.md
+$ HOST=https://the402.tateprograms.com
+$ curl -i "$HOST/api/x402/skill-trust-check"
 
 signals:
   local access / file changes
