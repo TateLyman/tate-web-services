@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-19",
+  "generatedAt": "2026-05-20",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 149,
-  "githubReposDetected": 89,
-  "readmesSampled": 60,
+  "latestServersAnalyzed": 150,
+  "githubReposDetected": 90,
+  "readmesSampled": 61,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,32 +13,32 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 149,
-    "repos": 89,
-    "readableRepos": 60,
+    "latestTotal": 150,
+    "repos": 90,
+    "readableRepos": 61,
     "packageCount": 30,
-    "remoteCount": 126,
+    "remoteCount": 127,
     "packageOnly": 21,
-    "remoteOnly": 117,
+    "remoteOnly": 118,
     "both": 9,
-    "noInstallPath": 117,
-    "websiteVisible": 107,
+    "noInstallPath": 118,
+    "websiteVisible": 108,
     "missingTitle": 50,
-    "shortDescription": 80,
+    "shortDescription": 81,
     "recent45": 81,
-    "orgOwned": 48,
-    "issuesEnabled": 59,
+    "orgOwned": 49,
+    "issuesEnabled": 60,
     "archived": 0,
-    "mcpServers": 39,
-    "install": 31,
+    "mcpServers": 40,
+    "install": 32,
     "serverJson": 8,
     "safety": 48,
     "stdioPackageCount": 28,
     "stdioPackageReadable": 18,
     "stdioBoundaryDocs": 10,
     "secretPackageConfig": 13,
-    "secretRemoteHeaders": 24,
-    "glama": 30,
+    "secretRemoteHeaders": 25,
+    "glama": 32,
     "smoke": 18
   },
   "sampleServers": [
@@ -84,6 +84,28 @@
         "Clarify remote auth and trust boundary",
         "Add install or client command",
         "Add smoke-test or tool-list proof"
+      ]
+    },
+    {
+      "name": "ai.com.mcp/skills-search",
+      "title": "Agent Skills Search Server",
+      "description": "Search and discover Agent Skills from the skills.sh registry. Powered by HAPI MCP server.",
+      "publicProofScore": 42,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-02-04T12:46:39.858109Z",
+      "repo": "agentskills/agentskills",
+      "websiteUrl": "https://run.mcp.com.ai",
+      "primaryUrl": "https://run.mcp.com.ai",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes"
       ]
     },
     {
@@ -152,28 +174,6 @@
         "Make README proof available",
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.com.mcp/skills-search",
-      "title": "Agent Skills Search Server",
-      "description": "Search and discover Agent Skills from the skills.sh registry. Powered by HAPI MCP server.",
-      "publicProofScore": 50,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-02-04T12:46:39.858109Z",
-      "repo": "agentskills/agentskills",
-      "websiteUrl": "https://run.mcp.com.ai",
-      "primaryUrl": "https://run.mcp.com.ai",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config"
       ]
     },
     {

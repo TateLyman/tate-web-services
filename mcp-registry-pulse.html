@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <title>MCP Registry Pulse | Tate Programs</title>
     <meta name="description" content="A public snapshot of MCP Registry launch-readiness signals across current server metadata, package paths, README install docs, safety notes, and directory proof.">
     <link rel="canonical" href="https://tateprograms.com/mcp-registry-pulse.html">
@@ -11,12 +10,9 @@
     <meta property="og:title" content="MCP Registry Pulse">
     <meta property="og:description" content="A public snapshot of MCP launch-readiness signals from Tate Programs.">
     <meta property="og:url" content="https://tateprograms.com/mcp-registry-pulse.html">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="MCP Registry Pulse">
     <meta name="twitter:description" content="Public MCP Registry launch-readiness, STDIO, auth, and metadata signals.">
-    <link rel="icon" href="assets/tate-programs-icon.svg" type="image/svg+xml">
-    <meta property="og:image" content="https://tateprograms.com/assets/tate-programs-og.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#111915">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
@@ -25,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-05-19",
+        "dateModified": "2026-05-20",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -48,9 +44,11 @@
         <span>tate@programs</span>
       </a>
       <nav class="os-tabs" aria-label="Primary navigation">
-        <a href="index.html">home</a>
-        <a href="agent-payment-launch-review.html">reviews</a>
-        <a href="x402-surface-check.html">free-check</a>
+        <a href="index.html#workbench">workbench</a>
+        <a href="shipcheck.html">shipcheck</a>
+        <a href="mcp-registry-audit.html">mcp-audit</a>
+        <a href="mcp-registry-pulse.html">pulse</a>
+        <a href="mcp-directory-checklist.html">checklist</a>
         <a href="case-studies.html">proof</a>
         <a href="payments.html">pay</a>
       </nav>
@@ -64,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-05-19</em>
+        <em>2026-05-20</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -83,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-05-19</dd>
+              <dd>2026-05-20</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -91,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>149</dd>
+              <dd>150</dd>
             </div>
           </dl>
         </div>
@@ -100,9 +98,9 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   149
-github repos:     89
-readme sampled:   60
+latest servers:   150
+github repos:     90
+readme sampled:   61
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -116,17 +114,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>149</strong>
+            <strong>150</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>89 (60%)</strong>
+            <strong>90 (60%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>107 (72%)</strong>
+            <strong>108 (72%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -141,7 +139,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>126 (85%)</strong>
+            <strong>127 (85%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -170,7 +168,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote secret headers</p>
-            <strong>24 (16%)</strong>
+            <strong>25 (17%)</strong>
             <p>Listings whose remote metadata declares secret request headers.</p>
           </article>
         </div>
@@ -199,42 +197,42 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>80 / 149 - harder to understand quickly</span>
+              <span>81 / 150 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>50 / 149 - namespace carries the listing</span>
+              <span>50 / 150 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-35"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>117 / 149 - hosted flow must explain trust and auth clearly</span>
+              <span>118 / 150 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>39 / 60 - among readable GitHub READMEs</span>
+              <span>40 / 61 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>31 / 60 - among readable GitHub READMEs</span>
+              <span>32 / 61 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-50"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>48 / 60 - among readable GitHub READMEs</span>
+              <span>48 / 61 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
@@ -248,14 +246,14 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>8 / 60 - among readable GitHub READMEs</span>
+              <span>8 / 61 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-15"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>18 / 60 - among readable GitHub READMEs</span>
+              <span>18 / 61 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
@@ -301,6 +299,19 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.com.mcp/skills-search agent skills search server search and discover agent skills from the skills.sh registry. powered by hapi mcp server. agentskills/agentskills remote expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof document permissions and safety notes add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
+            <p class="card-command">score 42/100 · remote</p>
+            <h3>Agent Skills Search Server</h3>
+            <p>Search and discover Agent Skills from the skills.sh registry. Powered by HAPI MCP server.</p>
+            <ul>
+              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://run.mcp.com.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/agentskills/agentskills" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.openarx/openarx open scientific knowledge mcp for ai agents. three profiles: search, publish, govern. openarx-ai/openarx-core remote add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
             <p class="card-command">score 45/100 · remote</p>
             <h3>ai.openarx/openarx</h3>
@@ -337,19 +348,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.com.mcp/skills-search agent skills search server search and discover agent skills from the skills.sh registry. powered by hapi mcp server. agentskills/agentskills remote expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
-            <p class="card-command">score 50/100 · remote</p>
-            <h3>Agent Skills Search Server</h3>
-            <p>Search and discover Agent Skills from the skills.sh registry. Powered by HAPI MCP server.</p>
-            <ul>
-              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://run.mcp.com.ai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/agentskills/agentskills" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -592,13 +590,12 @@ data:             mcp-registry-pulse.json</code></pre>
     </main>
 
     <footer class="terminal-footer">
-      <span>Tate Programs</span>
+      <span>MCP Registry Pulse</span>
       <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
-      <a href="agent-payment-launch-review.html">Review</a>
-      <a href="x402-surface-check.html">Free check</a>
-      <a href="case-studies.html">Proof</a>
-      <a href="payments.html">Payments</a>
-      <a href="index.html">Home</a>
+      <a href="mcp-registry-audit.html">registry audit</a>
+      <a href="mcp-directory-checklist.html">checklist</a>
+      <a href="mcp-launch-review.html">paid review</a>
+      <a href="shipcheck.html">shipcheck</a>
     </footer>
     <script>
       const pulseSearch = document.querySelector('#pulseSearch')
