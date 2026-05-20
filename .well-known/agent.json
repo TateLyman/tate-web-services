@@ -95,6 +95,10 @@
     }
   ],
   "service_catalog": "https://the402.tateprograms.com/services",
+  "marketplace": {
+    "402IndexServiceId": "5105e941-29f9-4027-bea3-63c20628de4c",
+    "queryUrl": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402"
+  },
   "x-tate-programs-x402": {
     "price": "$0.01",
     "resource": "https://the402.tateprograms.com/a2a",

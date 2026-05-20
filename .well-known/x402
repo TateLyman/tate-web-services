@@ -20,12 +20,18 @@
     "https://the402.tateprograms.com/api/x402/skill-trust-check",
     "https://the402.tateprograms.com/a2a"
   ],
+  "marketplace_listings": {
+    "402_index_query": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402",
+    "agentpay_provider_registry": "https://x402-agent-pay.com/providers",
+    "agentpay_machine_feed": "https://x402-agent-pay.com/api/providers"
+  },
   "endpoints": [
     {
       "name": "x402 Paid Triage API",
       "method": "POST",
       "url": "https://the402.tateprograms.com/api/x402/triage",
       "price_usd": 0.01,
+      "402_index_service_id": "0e2a0c6d-99b3-423d-8eb7-f4aff0a43feb",
       "network": "eip155:8453",
       "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
     },
@@ -34,6 +40,7 @@
       "method": "POST",
       "url": "https://the402.tateprograms.com/api/x402/index-watch",
       "price_usd": 0.01,
+      "402_index_service_id": "5bd5faa0-3f55-4a01-bc22-3bfb5a10746f",
       "network": "eip155:8453",
       "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
     },
@@ -42,6 +49,7 @@
       "method": "POST",
       "url": "https://the402.tateprograms.com/api/x402/skill-trust-check",
       "price_usd": 0.01,
+      "402_index_service_id": "23e2f6d7-1abf-47e2-93d3-f0628df93cf5",
       "network": "eip155:8453",
       "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
     },
@@ -50,6 +58,7 @@
       "method": "POST",
       "url": "https://the402.tateprograms.com/a2a",
       "price_usd": 0.01,
+      "402_index_service_id": "5105e941-29f9-4027-bea3-63c20628de4c",
       "network": "eip155:8453",
       "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
     }

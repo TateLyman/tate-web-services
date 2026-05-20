@@ -7,6 +7,7 @@
     "human_payment_url": "https://paypal.me/glidelocal",
     "services_url": "https://tateprograms.com/services.json",
     "marketplace_listings": {
+      "x402index_query": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402",
       "agentpay_provider_registry": "https://x402-agent-pay.com/providers",
       "agentpay_machine_feed": "https://x402-agent-pay.com/api/providers",
       "payanagent_discovery": "https://payanagent.com/api/v1/discover?q=x402%20subscription%20boundary%20launch%20review",
@@ -567,6 +568,13 @@
         "service_id": "js7b65r0vcewvjpte7tfvs6z09871zj3",
         "discovery_url": "https://payanagent.com/api/v1/services?search=tate"
       },
+      "x402index_listing": {
+        "service_id": "0e2a0c6d-99b3-423d-8eb7-f4aff0a43feb",
+        "query_url": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402",
+        "status": "active",
+        "probe_status": "probeable",
+        "registered_at": "2026-05-20"
+      },
       "nostr_402pub_listing": {
         "event_id": "f6d86109195055ce473a7a9b9524f52fcc5f44008532c474ee436b3b95501477",
         "pubkey": "2501b47a0cb3ce2f01ed7d2c8f1f914a9bc4567269c8c472d14c3f22cd560ea8",
@@ -644,6 +652,13 @@
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js783ryc2t5gn5gyh9pg9hw7ph870c67",
         "discovery_url": "https://payanagent.com/api/v1/services?search=tate"
+      },
+      "x402index_listing": {
+        "service_id": "5bd5faa0-3f55-4a01-bc22-3bfb5a10746f",
+        "query_url": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402",
+        "status": "active",
+        "probe_status": "probeable",
+        "registered_at": "2026-05-20"
       },
       "nostr_402pub_listing": {
         "event_id": "b162ecdf0df98ff1b878f6f70687f9758926bbb4978349cb76c889d661eb21e2",
@@ -737,6 +752,13 @@
         "price_cents": 1,
         "pricing_model": "per_request",
         "discovery_url": "https://payanagent.com/api/v1/discover?q=agent%20skill%20trust%20check"
+      },
+      "x402index_listing": {
+        "service_id": "23e2f6d7-1abf-47e2-93d3-f0628df93cf5",
+        "query_url": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402",
+        "status": "active",
+        "probe_status": "probeable",
+        "registered_at": "2026-05-20"
       },
       "paperclip_listing": {
         "name": "@tateprograms/agent-skill-trust-check",

@@ -183,11 +183,11 @@
           <p class="rev-kicker">May 2026 / x402, Pay.sh, MPP, AgentCore</p>
           <h1 id="hero-title">Make paid agent APIs safe enough to launch.</h1>
           <p class="rev-lede">I review the exact public surface buyers and agents will hit: manifests, 402 challenges, resource binding, CORS, cache posture, receipts, metadata, and failure paths.</p>
-          <div class="rev-actions" aria-label="Primary actions">
+          <div class="rev-actions" role="group" aria-label="Primary actions">
             <a class="rev-button primary" href="mailto:hello@tateprograms.com?subject=x402%20launch%20review%20request&amp;body=Surface%20or%20repo%20URL%3A%0AProtocol%20or%20payment%20rail%3A%0AWhat%20must%20work%20before%20launch%3A%0ADeadline%3A">Send a surface</a>
             <a class="rev-button secondary" href="x402-surface-check.html">Run free check</a>
           </div>
-          <dl class="rev-proof-strip" aria-label="Current proof signals">
+          <dl class="rev-proof-strip">
             <div>
               <dt>Live APIs</dt>
               <dd>402 Index healthy</dd>
@@ -203,7 +203,7 @@
           </dl>
         </div>
 
-        <div class="rev-terminal" aria-label="Tate Programs terminal summary">
+        <section class="rev-terminal" aria-label="Tate Programs terminal summary">
           <div class="rev-terminal-top">
             <span></span>
             <span></span>
@@ -225,9 +225,9 @@ output:
   ranked patch order
   proof commands</code></pre>
             <p><span class="rev-prompt">tate@programs</span> status --market</p>
-            <pre><code>the402        onboarding
-AgentPay      provider review
-402 Index     live + domain verified
+            <pre><code>the402        direct manifest live
+AgentPay      wallet verified
+402 Index     4 live paid endpoints
 TaskHawk      patch re-check clean
 Subscriptions boundary review live</code></pre>
           </div>
@@ -237,7 +237,7 @@ Subscriptions boundary review live</code></pre>
             <input id="terminalCommand" name="terminalCommand" type="text" autocomplete="off" spellcheck="false" placeholder="pricing">
             <button type="submit">run</button>
           </form>
-        </div>
+        </section>
       </section>
 
       <section class="rev-status" aria-label="Current workbench state">
@@ -261,7 +261,7 @@ Subscriptions boundary review live</code></pre>
           <h2 id="market-title">Agent spending is becoming infrastructure. Launch trust is the bottleneck.</h2>
           <p>Paid APIs are moving from demo pages into agent runtimes, marketplaces, and search-led discovery. The teams that win will be able to prove price, policy, receipt, and failure behavior before the first buyer route depends on them.</p>
         </div>
-        <div class="rev-market-grid" aria-label="Current market signals">
+        <div class="rev-market-grid">
           <article>
             <span>runtime</span>
             <strong>AgentCore Payments preview</strong>
@@ -379,7 +379,7 @@ Subscriptions boundary review live</code></pre>
           <article>
             <span>registry</span>
             <h3>402 Index sees the APIs</h3>
-            <p>The paid triage and index-watch endpoints are healthy, domain verified, and Base mainnet aligned.</p>
+            <p>Four paid endpoints are active and probeable: triage, index watch, agent-skill trust check, and the A2A review agent.</p>
           </article>
           <article>
             <span>builder fix</span>

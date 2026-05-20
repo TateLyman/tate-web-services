@@ -102,6 +102,10 @@
         "url": "https://the402.tateprograms.com/api/x402/triage",
         "method": "POST"
       },
+      "marketplace": {
+        "402IndexServiceId": "0e2a0c6d-99b3-423d-8eb7-f4aff0a43feb",
+        "queryUrl": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402"
+      },
       "x402": {
         "amountUsd": 0.01,
         "network": "eip155:8453",
@@ -121,6 +125,10 @@
       "endpoint": {
         "url": "https://the402.tateprograms.com/api/x402/index-watch",
         "method": "POST"
+      },
+      "marketplace": {
+        "402IndexServiceId": "5bd5faa0-3f55-4a01-bc22-3bfb5a10746f",
+        "queryUrl": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402"
       },
       "x402": {
         "amountUsd": 0.01,
@@ -143,6 +151,10 @@
       "endpoint": {
         "url": "https://the402.tateprograms.com/api/x402/skill-trust-check",
         "method": "POST"
+      },
+      "marketplace": {
+        "402IndexServiceId": "23e2f6d7-1abf-47e2-93d3-f0628df93cf5",
+        "queryUrl": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402"
       },
       "x402": {
         "amountUsd": 0.01,
