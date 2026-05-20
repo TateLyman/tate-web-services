@@ -15,7 +15,7 @@
       }
     }
   },
-  "last_updated": "2026-05-19",
+  "last_updated": "2026-05-20",
   "currency": "USD",
   "services": [
     {
@@ -247,7 +247,7 @@
         "metadata exposure notes",
         "ranked patch order"
       ],
-      "url": "https://tateprograms.com/x402-fix-sprint.html",
+      "url": "https://tateprograms.com/agent-payment-launch-review.html",
       "payment_url": "https://paypal.me/glidelocal/149",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20review",
       "payanagent_listing": {
@@ -257,6 +257,47 @@
         "pricing_model": "per_job",
         "discovery_url": "https://payanagent.com/api/v1/discover?q=x402%20launch%20review"
       }
+    },
+    {
+      "id": "agent-subscription-boundary-review",
+      "name": "Agent Subscription Boundary Review",
+      "price_usd": 349,
+      "delivery": "72h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "developer-tools",
+      "tags": [
+        "x402",
+        "mpp",
+        "agent-payments",
+        "subscriptions",
+        "api-keys",
+        "billing",
+        "launch-review"
+      ],
+      "scope": "Private review for one x402 or MPP flow where a paid agent request creates an account, subscription, API key, top-up, balance, or long-lived platform credential.",
+      "requires_authorization": true,
+      "input_fields": [
+        "project_url",
+        "subscription_endpoint_url",
+        "payment_rail",
+        "paid_result_type",
+        "authorized_scope",
+        "contact_email",
+        "notes"
+      ],
+      "deliverables": [
+        "payment-to-account boundary map",
+        "plan, amount, resource, asset, and recipient check",
+        "retry and idempotency notes",
+        "API-key scope and revocation notes",
+        "cache, CORS, and payment-header findings",
+        "receipt and settlement evidence map",
+        "ranked patch order"
+      ],
+      "url": "https://tateprograms.com/agent-subscription-boundary-review.html",
+      "payment_url": "https://paypal.me/glidelocal/349",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20subscription%20boundary%20review"
     },
     {
       "id": "x402-fix-sprint",
@@ -556,7 +597,7 @@
       "name": "Agent Skill Trust Check API",
       "category": "paid-api",
       "status": "live",
-      "price_usd": 0.05,
+      "price_usd": 0.01,
       "currency": "USDC",
       "tags": [
         "agent-skills",
@@ -579,14 +620,24 @@
         "ordered patch list before install or marketplace listing"
       ],
       "landing_page": "https://tateprograms.com/agent-skill-trust-check.html",
-      "url": "https://the402.tateprograms.com/api/provider/skill-trust-check",
+      "url": "https://the402.tateprograms.com/api/x402/skill-trust-check",
       "github_repo": "https://github.com/TateLyman/agent-skill-trust-check",
       "release_url": "https://github.com/TateLyman/agent-skill-trust-check/releases/tag/v0.1.2",
       "npm_package": "agent-skill-trust-check",
       "npm_version": "0.1.1",
       "npm_url": "https://www.npmjs.com/package/agent-skill-trust-check",
       "method": "POST",
-      "payment_protocol": "marketplace-managed",
+      "payment_protocol": "x402",
+      "payment_asset": "USDC",
+      "payment_network": "base-mainnet",
+      "payment_url": "eip155:8453:0x7bc5e304ca289823dec021012d6bb361ddf6b368",
+      "payment_networks": [
+        "eip155:8453"
+      ],
+      "pay_to": {
+        "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      },
+      "agent_card_url": "https://the402.tateprograms.com/.well-known/agent-card.json",
       "marketplace_proxy": {
         "base_url": "https://the402.tateprograms.com",
         "path": "/api/provider/skill-trust-check",
