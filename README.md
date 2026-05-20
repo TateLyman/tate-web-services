@@ -16,7 +16,7 @@ npx serve .
 
 - `index.html` - main sales-facing portfolio page
 - `terminal-console.js` - interactive command handling for the terminal-style homepage
-- `case-studies.html` - public proof-of-work page for x402 launch checks, May 2026 provider patch loops including LogicNodes nested-challenge coverage, Shipcheck, MCP, LaunchQuest, and related assets
+- `case-studies.html` - public proof-of-work page for x402 launch checks, May 2026 provider patch loops including LogicNodes nested-challenge coverage and Automattic paid MCP upload recovery, Shipcheck, MCP, LaunchQuest, and related assets
 - `launch-review.html` - launch review and production cleanup sales page
 - `launch-exposure-check.html` - same-day exposure check page for fast-built apps
 - `launch-readiness-check.html` - free interactive launch safety checker for fast-built apps
