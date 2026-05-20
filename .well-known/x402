@@ -6,7 +6,8 @@
   "contact": "hello@tateprograms.com",
   "base_url": "https://the402.tateprograms.com",
   "service_catalog": "https://tateprograms.com/services.json",
-  "agent_card": "https://tateprograms.com/.well-known/agent-card.json",
+  "agent_card": "https://tateprograms.com/.well-known/agent.json",
+  "legacy_agent_card": "https://tateprograms.com/.well-known/agent-card.json",
   "networks": [
     "eip155:8453"
   ],
@@ -16,7 +17,8 @@
   "resources": [
     "https://the402.tateprograms.com/api/x402/triage",
     "https://the402.tateprograms.com/api/x402/index-watch",
-    "https://the402.tateprograms.com/api/x402/skill-trust-check"
+    "https://the402.tateprograms.com/api/x402/skill-trust-check",
+    "https://the402.tateprograms.com/a2a"
   ],
   "endpoints": [
     {
@@ -39,6 +41,14 @@
       "name": "Agent Skill Trust Check API",
       "method": "POST",
       "url": "https://the402.tateprograms.com/api/x402/skill-trust-check",
+      "price_usd": 0.01,
+      "network": "eip155:8453",
+      "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+    },
+    {
+      "name": "Agent Payment Surface Triage A2A",
+      "method": "POST",
+      "url": "https://the402.tateprograms.com/a2a",
       "price_usd": 0.01,
       "network": "eip155:8453",
       "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"

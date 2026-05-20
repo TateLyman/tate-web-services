@@ -1,0 +1,108 @@
+{
+  "protocolVersion": "1.0",
+  "name": "Tate Programs Agent Payment Surface Triage",
+  "description": "A2A JSON-RPC endpoint for paid x402 launch triage, 402 Index health checks, and agent-skill trust checks.",
+  "version": "2026.05.20",
+  "provider": {
+    "name": "Tate Programs",
+    "url": "https://tateprograms.com",
+    "email": "hello@tateprograms.com"
+  },
+  "url": "https://the402.tateprograms.com/a2a",
+  "supportedInterfaces": [
+    {
+      "url": "https://the402.tateprograms.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extensions": [
+      {
+        "uri": "https://github.com/google-agentic-commerce/a2a-x402/blob/main/spec/v0.2",
+        "required": false,
+        "description": "Calls are gated at the HTTP layer with x402 before JSON-RPC execution."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "x402_launch_triage",
+      "name": "x402 Launch Triage",
+      "description": "Check one public manifest, paid endpoint, OpenAPI file, or discovery URL for no-payment launch readiness.",
+      "tags": [
+        "x402",
+        "agent-payments",
+        "launch-readiness",
+        "cors",
+        "resource-binding"
+      ],
+      "examples": [
+        "{\"skill\":\"triage\",\"url\":\"https://api.example.com/.well-known/x402\",\"method\":\"GET\"}"
+      ]
+    },
+    {
+      "id": "x402_index_watch",
+      "name": "402 Index Watch",
+      "description": "Search public 402 Index metadata for provider, domain, service, health, and verification signals.",
+      "tags": [
+        "x402",
+        "402-index",
+        "marketplace",
+        "service-health"
+      ],
+      "examples": [
+        "{\"skill\":\"index_watch\",\"q\":\"example.com\",\"protocol\":\"x402\",\"limit\":10}"
+      ]
+    },
+    {
+      "id": "agent_skill_trust_check",
+      "name": "Agent Skill Trust Check",
+      "description": "Inspect public agent-skill text, SKILL.md files, or repo documentation before installation.",
+      "tags": [
+        "agent-skills",
+        "openclaw",
+        "mcp",
+        "skill-review",
+        "security"
+      ],
+      "examples": [
+        "{\"skill\":\"skill_trust\",\"url\":\"https://github.com/example/agent-skill\"}"
+      ]
+    }
+  ],
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "documentationUrl": "https://tateprograms.com/x402-surface-check.html",
+  "securitySchemes": {
+    "x402Http": {
+      "type": "http",
+      "scheme": "x402",
+      "description": "HTTP 402 challenge with USDC payment requirements before JSON-RPC execution."
+    }
+  },
+  "securityRequirements": [
+    {
+      "x402Http": []
+    }
+  ],
+  "service_catalog": "https://the402.tateprograms.com/services",
+  "x-tate-programs-x402": {
+    "price": "$0.01",
+    "resource": "https://the402.tateprograms.com/a2a",
+    "networks": [
+      "eip155:8453"
+    ],
+    "payTo": {
+      "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+    }
+  }
+}
