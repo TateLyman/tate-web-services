@@ -10,6 +10,7 @@
       "x402index_query": "https://402index.io/api/v1/services?q=Tate%20Programs&protocol=x402",
       "agentpay_provider_registry": "https://x402-agent-pay.com/providers",
       "agentpay_machine_feed": "https://x402-agent-pay.com/api/providers",
+      "apihub_marketplace": "https://apihub.io/marketplace/tate-programs-x402",
       "payanagent_discovery": "https://payanagent.com/api/v1/discover?q=x402%20subscription%20boundary%20launch%20review",
       "agensi_x402_attack_surface_gate": "https://www.agensi.io/skill/dda183c1-4c47-4f39-a7f1-c4cec9004d20",
       "ai_skill_store_agent_skill_trust_check": "https://aiskillstore.io/skills/be1a09eb-13c2-4bdf-ad00-8445e8394157"
@@ -563,6 +564,15 @@
         "price_microdollars": 10000,
         "note": "For proxy marketplaces that collect payment from the buyer and forward calls with private upstream auth."
       },
+      "apihub_listing": {
+        "marketplace_url": "https://apihub.io/marketplace/tate-programs-x402",
+        "proxy_url": "https://proxy.apihub.io/tate-programs-x402/api/provider/triage",
+        "status": "active",
+        "domain_status": "verified",
+        "price_usd": 0.01,
+        "created_at": "2026-05-20",
+        "verified_at": "2026-05-20"
+      },
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js7b65r0vcewvjpte7tfvs6z09871zj3",
@@ -646,6 +656,15 @@
         "auth_header": "X-Tate-Provider-Token",
         "price_microdollars": 10000,
         "note": "For proxy marketplaces that collect payment from the buyer and forward calls with private upstream auth."
+      },
+      "apihub_listing": {
+        "marketplace_url": "https://apihub.io/marketplace/tate-programs-x402",
+        "proxy_url": "https://proxy.apihub.io/tate-programs-x402/api/provider/index-watch",
+        "status": "active",
+        "domain_status": "verified",
+        "price_usd": 0.01,
+        "created_at": "2026-05-20",
+        "verified_at": "2026-05-20"
       },
       "index_listing_url": "https://402index.io/directory",
       "payanagent_listing": {
@@ -735,6 +754,15 @@
         "auth_header": "X-Tate-Provider-Token",
         "price_microdollars": 50000,
         "note": "For proxy marketplaces that collect payment from the buyer and forward calls with private upstream auth."
+      },
+      "apihub_listing": {
+        "marketplace_url": "https://apihub.io/marketplace/tate-programs-x402",
+        "proxy_url": "https://proxy.apihub.io/tate-programs-x402/api/provider/skill-trust-check",
+        "status": "active",
+        "domain_status": "verified",
+        "price_usd": 0.01,
+        "created_at": "2026-05-20",
+        "verified_at": "2026-05-20"
       },
       "agentmint_listing": {
         "skill_id": 51,

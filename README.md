@@ -46,6 +46,7 @@ npx serve .
 - `services.json` - machine-readable paid service catalog for agent marketplaces and crawlers
 - `/.well-known/agent-card.json` and `/.well-known/x402` - main-domain agent/payment discovery files for agent marketplaces, x402 crawlers, and direct paid endpoint discovery
 - `https://x402-agent-pay.com/providers` - external AgentPay provider registry listing Tate Programs as a verified x402 provider; machine feed: `https://x402-agent-pay.com/api/providers`
+- `https://apihub.io/marketplace/tate-programs-x402` - active APIHub marketplace listing for the Tate Programs x402 Surface Checks proxy endpoints
 - `https://the402.tateprograms.com/api/triage` - deployed public no-payment x402 triage endpoint for agent marketplace listing
 - `https://the402.tateprograms.com/api/x402/triage` - live $0.01 x402 paid triage endpoint on Base mainnet USDC; listed on PayanAgent as `js7b65r0vcewvjpte7tfvs6z09871zj3` and announced on 402.pub as `f6d86109195055ce473a7a9b9524f52fcc5f44008532c474ee436b3b95501477`
 - `https://the402.tateprograms.com/api/x402/index-watch` - live $0.01 x402 paid 402 Index health-watch endpoint for provider/domain/service queries on Base mainnet USDC; listed on PayanAgent as `js783ryc2t5gn5gyh9pg9hw7ph870c67` and announced on 402.pub as `b162ecdf0df98ff1b878f6f70687f9758926bbb4978349cb76c889d661eb21e2`
