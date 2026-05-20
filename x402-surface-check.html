@@ -123,7 +123,7 @@ result: markdown patch queue</code></pre>
           <p class="console-kicker">cli</p>
           <h2>Run the same no-payment pass from the CLI.</h2>
           <p>
-            The package is dependency-free and reads manifests, OpenAPI specs, Streamable HTTP MCP tool catalogs, route catalogs, item catalogs, endpoint-bearing tool maps, string-valued endpoint maps, nested discovery links, or direct paid endpoints. It never sends payment headers, signs, or attempts paid calls. Current reports include grouped findings, cache-policy maps, browser-readable challenge/session headers, x402/MPP retry-header preflight, MPP descriptor-only 402 detection, accept-leg resource binding, timeout/expiry metadata, optional <code>--strict-cache</code> findings for missing policy headers, optional <code>--strict-proof</code> findings for idempotency and signed offer/receipt evidence, and contextual guide links for CORS, cache, Worker gates, resource echo, replay windows, and validation/auth ordering.
+            The package is dependency-free and reads manifests, OpenAPI specs, Streamable HTTP MCP tool catalogs, route catalogs, item catalogs, endpoint-bearing tool maps, string-valued endpoint maps, nested discovery links, framework-wrapped challenge bodies such as <code>{"detail": {...}}</code>, or direct paid endpoints. It never sends payment headers, signs, or attempts paid calls. Current reports include grouped findings, cache-policy maps, browser-readable challenge/session headers, x402/MPP retry-header preflight, MPP descriptor-only 402 detection, accept-leg resource binding, timeout/expiry metadata, optional <code>--strict-cache</code> findings for missing policy headers, optional <code>--strict-proof</code> findings for idempotency and signed offer/receipt evidence, and contextual guide links for CORS, cache, Worker gates, resource echo, replay windows, and validation/auth ordering.
           </p>
         </div>
         <div class="terminal-window">
@@ -212,6 +212,12 @@ npx --yes x402-surface-check --strict-proof https://api.example.com/openapi.json
             <a href="https://github.com/coinbase/x402/pull/134#issuecomment-4480069267" target="_blank" rel="noreferrer">Agiotage follow-up</a>
             <a href="https://github.com/coinbase/x402/pull/174#issuecomment-4492055966" target="_blank" rel="noreferrer">MEV Intelligence first pass</a>
             <a href="https://github.com/coinbase/x402/pull/157#issuecomment-4468475468" target="_blank" rel="noreferrer">docpull proof note</a>
+          </article>
+          <article>
+            <p class="card-command">same-day</p>
+            <h3>LogicNodes Bazaar catalog</h3>
+            <p>A live Coinbase x402 ecosystem PR exposed 256 Bazaar-style resources. Version 0.2.37 now detects the FastAPI-style nested 402 challenge body and isolates browser CORS, preflight, cache-policy, and discovery-surface notes without paid calls.</p>
+            <a href="https://github.com/coinbase/x402/pull/177#issuecomment-4494449681" target="_blank" rel="noreferrer">LogicNodes proof note</a>
           </article>
         </div>
       </section>
@@ -420,7 +426,7 @@ npx --yes x402-surface-check --strict-proof https://api.example.com/openapi.json
           <article>
             <p class="card-command">manifest</p>
             <h3>Fresh manifest shapes</h3>
-            <p>Endpoint arrays, Streamable HTTP MCP <code>tools/list</code> catalogs, <code>routes[]</code> catalogs, <code>resources[]</code> catalogs, endpoint-bearing <code>tools</code> maps, string-valued endpoint maps, raw resource URL strings, item catalogs, string and nested <code>discovery</code> links, OpenAPI server base paths, paid-operation prioritization, nested request schemas, explicit direct-endpoint bodies, <code>schemes[]</code> challenges, declared-price drift, x402 V2 requirements headers, MPP descriptor-only 402s, cache-control posture, accept-leg resource binding, timeout/expiry metadata, optional strict-cache findings, optional strict-proof idempotency and signed offer/receipt findings, credential-like registry URL params with redacted report output, browser-readable 402 CORS gaps, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes. MCP tool-name arrays are kept as tool metadata unless a tool entry includes an actual endpoint path or URL.</p>
+            <p>Endpoint arrays, Streamable HTTP MCP <code>tools/list</code> catalogs, <code>routes[]</code> catalogs, <code>resources[]</code> catalogs, endpoint-bearing <code>tools</code> maps, string-valued endpoint maps, raw resource URL strings, item catalogs, string and nested <code>discovery</code> links, OpenAPI server base paths, paid-operation prioritization, nested request schemas, explicit direct-endpoint bodies, framework-wrapped challenge bodies, <code>schemes[]</code> challenges, declared-price drift, x402 V2 requirements headers, MPP descriptor-only 402s, cache-control posture, accept-leg resource binding, timeout/expiry metadata, optional strict-cache findings, optional strict-proof idempotency and signed offer/receipt findings, credential-like registry URL params with redacted report output, browser-readable 402 CORS gaps, and legacy decimal x402 v1 challenges are parsed because live providers are already shipping those shapes. MCP tool-name arrays are kept as tool metadata unless a tool entry includes an actual endpoint path or URL.</p>
             <a href="https://www.npmjs.com/package/x402-surface-check" target="_blank" rel="noreferrer">current npm build</a>
           </article>
         </div>
