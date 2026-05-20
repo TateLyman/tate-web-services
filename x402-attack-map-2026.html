@@ -131,7 +131,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">100%</p>
             <h3>Cache leakage condition</h3>
-            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.27 makes cache posture, payment-enforcement header drift, resource binding, freshness metadata, and credential-like registry URLs part of the report.</p>
+            <p>The proxy tests show paid content can leak when shared caching is allowed. x402 Surface Check 0.2.38 makes cache posture, payment-enforcement header drift, resource binding, freshness metadata, payment-metadata privacy, and credential-like registry URLs part of the report.</p>
           </article>
           <article>
             <p class="card-command">71.8%</p>
@@ -203,7 +203,7 @@ output: launch controls buyers can inspect</code></pre>
           <article>
             <p class="card-command">cache</p>
             <h3>Paid-content reuse</h3>
-            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.27 prints a Cache Policy Map, flags explicitly cacheable challenge responses as P1, catches payment-enforcement headers on 200 responses, checks accept-leg resource binding and freshness metadata, flags credential-like public registry URLs with redacted values, and links the relevant implementation guide when cache, registry, or CORS findings appear. The Worker starter shows a minimal no-store/private payment gate.</p>
+            <p>Shared caches and payment-gated content do not mix. x402 Surface Check 0.2.38 prints a Cache Policy Map, flags explicitly cacheable challenge responses as P1, catches payment-enforcement headers on 200 responses, checks accept-leg resource binding and freshness metadata, redacts sensitive payment-metadata query context, flags credential-like public registry URLs with redacted values, and links the relevant implementation guide when cache, registry, metadata, or CORS findings appear. The Worker starter shows a minimal no-store/private payment gate.</p>
             <a href="x402-surface-check.html">open checker</a>
             <a href="cloudflare-x402-worker.html">worker guide</a>
           </article>
