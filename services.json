@@ -24,6 +24,67 @@
   "currency": "USD",
   "services": [
     {
+      "id": "agent-spend-guard-review",
+      "name": "Agent Spend Guard Review",
+      "price_usd": 199,
+      "delivery": "48h",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-infrastructure",
+      "tags": [
+        "agent-costs",
+        "spend-caps",
+        "codex",
+        "antigravity",
+        "managed-agents",
+        "x402",
+        "tool-calling",
+        "billing-controls"
+      ],
+      "scope": "Private review for runaway agent cost controls, hard spend caps, retry budgets, usage evidence, and kill switches.",
+      "tiers": [
+        {
+          "name": "Quick cost map",
+          "price_usd": 99,
+          "delivery": "24h",
+          "payment_url": "https://paypal.me/glidelocal/99"
+        },
+        {
+          "name": "Full spend guard review",
+          "price_usd": 199,
+          "delivery": "48h",
+          "payment_url": "https://paypal.me/glidelocal/199"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "project_url",
+        "agent_runtime",
+        "spend_paths",
+        "current_caps",
+        "usage_concern",
+        "authorized_scope"
+      ],
+      "deliverables": [
+        "cost surface diagram",
+        "hard-stop table",
+        "retry budget and idempotency notes",
+        "usage, denial, and receipt evidence checklist",
+        "kill-switch plan",
+        "ranked patch order"
+      ],
+      "url": "https://tateprograms.com/agent-spend-guard.html",
+      "payment_url": "https://paypal.me/glidelocal/199",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20Spend%20Guard%20Review",
+      "payanagent_listing": {
+        "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
+        "service_id": "js7ax64pr8yfh8vjbkrjgynjgd873c4k",
+        "service_type": "job",
+        "pricing_model": "per_job",
+        "discovery_url": "https://payanagent.com/api/v1/discover?q=agent%20spend%20guard%20review"
+      }
+    },
+    {
       "id": "x402-triage-mcp",
       "name": "x402 Triage MCP",
       "price_usd": 0,
