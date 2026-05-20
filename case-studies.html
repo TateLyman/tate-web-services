@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <title>Case Studies | Tate Programs</title>
-    <meta name="description" content="Public proof-of-work from Tate Programs: x402 launch checks, Shipcheck CLI, Shipcheck MCP, LaunchQuest, and agent-payment readiness assets.">
+    <meta name="description" content="Public proof-of-work from Tate Programs: x402 launch checks, merged agent-payment fixes, Shipcheck CLI, Shipcheck MCP, LaunchQuest, and agent-payment readiness assets.">
     <link rel="canonical" href="https://tateprograms.com/case-studies.html">
     <link rel="icon" href="assets/tate-programs-icon.svg" type="image/svg+xml">
     <meta property="og:image" content="https://tateprograms.com/assets/tate-programs-og.png">
@@ -103,6 +103,13 @@
             <h3>Tate Programs Bazaar discovery</h3>
             <p>The live paid endpoints were patched so Agentic Market's seller validator accepts the Bazaar discovery metadata. Triage, index watch, skill trust, and A2A all now parse cleanly and enter discovery processing.</p>
             <a href="https://agentic.market/validate" target="_blank" rel="noreferrer">Agentic Market validator</a>
+          </article>
+          <article>
+            <span>merged</span>
+            <h3>DCP auto-approved spend accounting</h3>
+            <p>A desktop payment protocol PR fixed auto-approved spend accounting for <code>sign_x402</code> and <code>/v1/vault/sign</code>. The merged patch now debits daily budgets, covers repeated under-threshold spend, and keeps the internal ledger hidden from user-facing agent lists.</p>
+            <a href="https://github.com/1lystore/dcp/pull/3" target="_blank" rel="noreferrer">merged PR</a>
+            <a href="https://github.com/1lystore/dcp/pull/3#issuecomment-4500655741" target="_blank" rel="noreferrer">maintainer note</a>
           </article>
           <article>
             <span>new</span>

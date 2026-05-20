@@ -229,6 +229,7 @@ output:
 AgentPay      wallet verified
 402 Index     4 live paid endpoints
 Agentic Mkt   4 Bazaar-valid endpoints
+DCP           spend-accounting patch merged
 TaskHawk      patch re-check clean
 Subscriptions boundary review live</code></pre>
           </div>
@@ -372,6 +373,11 @@ Subscriptions boundary review live</code></pre>
           <h2>Recent signals from live surfaces.</h2>
         </div>
         <div class="rev-proof-grid">
+          <article>
+            <span>merged fix</span>
+            <h3>DCP spend accounting landed</h3>
+            <p>A merged desktop payment protocol patch now debits auto-approved <code>sign_x402</code> and <code>/v1/vault/sign</code> spend against daily budgets while hiding internal ledger sessions from user-facing agent lists.</p>
+          </article>
           <article>
             <span>validator</span>
             <h3>Agentic Market checks passed</h3>
