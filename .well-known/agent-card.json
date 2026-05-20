@@ -1,0 +1,155 @@
+{
+  "name": "Tate Programs x402 Readiness",
+  "description": "Public no-payment triage and paid readiness APIs for x402, MPP, Pay.sh, and agent-payment launch surfaces.",
+  "url": "https://tateprograms.com",
+  "provider": {
+    "name": "Tate Programs",
+    "email": "hello@tateprograms.com",
+    "url": "https://tateprograms.com"
+  },
+  "version": "2026.05.20",
+  "documentationUrl": "https://tateprograms.com/x402-surface-check.html",
+  "serviceCatalog": "https://tateprograms.com/services.json",
+  "payment": {
+    "protocol": "x402",
+    "asset": "USDC",
+    "networks": [
+      "eip155:8453"
+    ],
+    "payTo": {
+      "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+    }
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "authentication": [
+    {
+      "schemes": [
+        "none"
+      ],
+      "scope": "Free public triage endpoint"
+    },
+    {
+      "schemes": [
+        "x402"
+      ],
+      "scope": "Paid readiness APIs"
+    }
+  ],
+  "skills": [
+    {
+      "id": "x402_public_triage",
+      "name": "x402 Public Triage",
+      "description": "Free no-payment triage for a public endpoint, manifest, OpenAPI file, or discovery URL.",
+      "tags": [
+        "x402",
+        "mpp",
+        "pay-sh",
+        "cors",
+        "cache",
+        "launch-readiness"
+      ],
+      "endpoint": {
+        "url": "https://the402.tateprograms.com/api/triage",
+        "method": "POST"
+      },
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Public HTTPS manifest, paid endpoint, OpenAPI file, or discovery URL."
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "GET",
+              "POST",
+              "OPTIONS"
+            ],
+            "default": "GET"
+          },
+          "origin": {
+            "type": "string",
+            "description": "Optional browser Origin for CORS checks."
+          }
+        }
+      }
+    },
+    {
+      "id": "x402_paid_triage",
+      "name": "x402 Paid Triage API",
+      "description": "Paid no-payment triage for public x402, MPP, Pay.sh, and agent-payment launch surfaces.",
+      "tags": [
+        "x402",
+        "base-usdc",
+        "payment-readiness",
+        "developer-tools"
+      ],
+      "endpoint": {
+        "url": "https://the402.tateprograms.com/api/x402/triage",
+        "method": "POST"
+      },
+      "x402": {
+        "amountUsd": 0.01,
+        "network": "eip155:8453",
+        "asset": "USDC",
+        "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      }
+    },
+    {
+      "id": "x402_index_watch",
+      "name": "x402 Index Watch API",
+      "description": "Paid provider/domain/service watch against public 402 Index listings.",
+      "tags": [
+        "x402",
+        "402-index",
+        "market-monitoring"
+      ],
+      "endpoint": {
+        "url": "https://the402.tateprograms.com/api/x402/index-watch",
+        "method": "POST"
+      },
+      "x402": {
+        "amountUsd": 0.01,
+        "network": "eip155:8453",
+        "asset": "USDC",
+        "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      }
+    },
+    {
+      "id": "agent_skill_trust_check",
+      "name": "Agent Skill Trust Check API",
+      "description": "Paid pre-install trust check for SKILL.md, OpenClaw, Hermes, MCP, and agent-skill marketplace listings.",
+      "tags": [
+        "agent-skills",
+        "skill-security",
+        "mcp",
+        "marketplace",
+        "trust-check"
+      ],
+      "endpoint": {
+        "url": "https://the402.tateprograms.com/api/x402/skill-trust-check",
+        "method": "POST"
+      },
+      "x402": {
+        "amountUsd": 0.01,
+        "network": "eip155:8453",
+        "asset": "USDC",
+        "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+      }
+    }
+  ]
+}

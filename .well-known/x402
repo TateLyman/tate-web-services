@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "name": "Tate Programs x402 Readiness APIs",
+  "description": "Public no-payment triage and paid readiness APIs for x402, MPP, Pay.sh, and agent-payment launch surfaces.",
+  "provider": "Tate Programs",
+  "contact": "hello@tateprograms.com",
+  "base_url": "https://the402.tateprograms.com",
+  "service_catalog": "https://tateprograms.com/services.json",
+  "agent_card": "https://tateprograms.com/.well-known/agent-card.json",
+  "networks": [
+    "eip155:8453"
+  ],
+  "pay_to": {
+    "eip155:8453": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+  },
+  "resources": [
+    "https://the402.tateprograms.com/api/x402/triage",
+    "https://the402.tateprograms.com/api/x402/index-watch",
+    "https://the402.tateprograms.com/api/x402/skill-trust-check"
+  ],
+  "endpoints": [
+    {
+      "name": "x402 Paid Triage API",
+      "method": "POST",
+      "url": "https://the402.tateprograms.com/api/x402/triage",
+      "price_usd": 0.01,
+      "network": "eip155:8453",
+      "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+    },
+    {
+      "name": "x402 Index Watch API",
+      "method": "POST",
+      "url": "https://the402.tateprograms.com/api/x402/index-watch",
+      "price_usd": 0.01,
+      "network": "eip155:8453",
+      "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+    },
+    {
+      "name": "Agent Skill Trust Check API",
+      "method": "POST",
+      "url": "https://the402.tateprograms.com/api/x402/skill-trust-check",
+      "price_usd": 0.01,
+      "network": "eip155:8453",
+      "payTo": "0x7bc5e304ca289823dec021012d6bb361ddf6b368"
+    }
+  ],
+  "instructions": "Use the free public triage endpoint at https://the402.tateprograms.com/api/triage for a no-payment preview. Paid x402 APIs return a 402 challenge on first request and settle on Base mainnet USDC."
+}
