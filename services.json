@@ -619,6 +619,14 @@
         "status": "published",
         "created_at": "2026-05-19"
       },
+      "ai_skill_store_listing": {
+        "skill_id": "be1a09eb-13c2-4bdf-ad00-8445e8394157",
+        "public_url": "https://aiskillstore.io/skills/be1a09eb-13c2-4bdf-ad00-8445e8394157",
+        "version": "0.1.2",
+        "trust_level": "verified",
+        "status": "published",
+        "created_at": "2026-05-20"
+      },
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20skill%20trust%20check"
     },
     {
