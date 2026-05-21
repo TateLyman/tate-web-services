@@ -12,6 +12,7 @@
       "agentpay_machine_feed": "https://x402-agent-pay.com/api/providers",
       "apihub_marketplace": "https://apihub.io/marketplace/tate-programs-x402",
       "payanagent_discovery": "https://payanagent.com/api/v1/discover?q=x402%20subscription%20boundary%20launch%20review",
+      "tools402_paid_endpoint": "https://api.tools402.dev/v1/tate-programs/x402-readiness",
       "agensi_x402_attack_surface_gate": "https://www.agensi.io/skill/dda183c1-4c47-4f39-a7f1-c4cec9004d20",
       "ai_skill_store_agent_skill_trust_check": "https://aiskillstore.io/skills/be1a09eb-13c2-4bdf-ad00-8445e8394157"
     },
