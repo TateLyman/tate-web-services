@@ -1,15 +1,15 @@
 {
-  "runDate": "2026-05-20",
-  "generatedAt": "2026-05-20T00:48:29Z",
+  "runDate": "2026-05-21",
+  "generatedAt": "2026-05-21T14:51:11Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 73,
-  "observedProviders": 73,
+  "providerCount": 74,
+  "observedProviders": 74,
   "pricedCount": 59,
   "meteredCount": 59,
-  "freeTierCount": 11,
+  "freeTierCount": 12,
   "categoryCounts": {
     "messaging": 4,
-    "finance": 3,
+    "finance": 4,
     "shopping": 3,
     "ai_ml": 33,
     "cloud": 1,
@@ -41,6 +41,10 @@
       "count": 4
     },
     {
+      "category": "finance",
+      "count": 4
+    },
+    {
       "category": "maps",
       "count": 4
     },
@@ -51,10 +55,6 @@
     {
       "category": "security",
       "count": 4
-    },
-    {
-      "category": "finance",
-      "count": 3
     }
   ],
   "reviewPriority": [
@@ -557,6 +557,26 @@
       ]
     },
     {
+      "fqn": "nansen-ai/nansen-api",
+      "title": "Nansen API",
+      "category": "finance",
+      "description": "On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.",
+      "useCase": "Use for smart money tracking, wallet profiling and PnL analysis, token holder and flow analytics, on-chain signal discovery, Nansen Score token rankings, perpetual and prediction market data, and token screening.",
+      "serviceUrl": "https://api.nansen.ai",
+      "endpointCount": 56,
+      "hasMetering": false,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 0,
+      "sha": "a4411d3814958d70",
+      "priorityScore": 24,
+      "priorityLevel": "watch",
+      "reasons": [
+        "wide endpoint surface",
+        "financial data or wallet context"
+      ]
+    },
+    {
       "fqn": "agentmail/email",
       "title": "AgentMail",
       "category": "messaging",
@@ -636,25 +656,6 @@
       "maxPriceUsd": 0.001,
       "sha": "a87b41df1284158c",
       "priorityScore": 32,
-      "priorityLevel": "watch",
-      "reasons": [
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "solana-foundation/alibaba/imageseg",
-      "title": "Alibaba Cloud Image Segmentation",
-      "category": "ai_ml",
-      "description": "Run image and video analysis or generation with Alibaba Cloud Image Segmentation, including sky Replacement, facial Feature Segmentation, and fine-Grained Mask Segmentation.",
-      "useCase": "Use for sky Replacement, facial Feature Segmentation, fine-Grained Mask Segmentation, and related image or video generation, enhancement, detection, segmentation, and visual analysis.",
-      "serviceUrl": "https://imageseg.alibaba.gateway-402.com",
-      "endpointCount": 15,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 0.001,
-      "sha": "47f8556779b43476",
-      "priorityScore": 26,
       "priorityLevel": "watch",
       "reasons": [
         "metered without free tier"

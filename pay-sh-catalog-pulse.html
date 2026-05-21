@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay.sh Catalog Pulse",
         "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
-        "dateModified": "2026-05-20",
+        "dateModified": "2026-05-21",
         "isBasedOn": "https://pay.sh/api/catalog",
         "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
         "publisher": {
@@ -57,12 +57,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-sh-catalog-pulse</strong>
-        <em>2026-05-20T00:48:29Z</em>
+        <em>2026-05-21T14:51:11Z</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay.sh catalog pulse / 2026-05-20</p>
+          <p class="console-kicker">pay.sh catalog pulse / 2026-05-21</p>
           <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
           <p class="console-subtitle">
             Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
@@ -77,7 +77,7 @@
           <dl class="console-ledger">
             <div>
               <dt>providers</dt>
-              <dd>73</dd>
+              <dd>74</dd>
             </div>
             <div>
               <dt>metered</dt>
@@ -85,7 +85,7 @@
             </div>
             <div>
               <dt>free tier</dt>
-              <dd>11</dd>
+              <dd>12</dd>
             </div>
           </dl>
         </div>
@@ -93,7 +93,7 @@
         <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
           <div class="terminal-topline">catalog pulse</div>
           <pre><code>$ fetch https://pay.sh/api/catalog
-providers: 73
+providers: 74
 priced: 59
 metered: 59
 priority: 12
@@ -232,7 +232,7 @@ output: pay-sh-catalog-pulse.json</code></pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td>ai_ml</td><td>33</td></tr><tr><td>data</td><td>6</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>security</td><td>4</td></tr><tr><td>finance</td><td>3</td></tr>
+              <tr><td>ai_ml</td><td>33</td></tr><tr><td>data</td><td>6</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>finance</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>security</td><td>4</td></tr>
             </tbody>
           </table>
         </div>
@@ -345,17 +345,17 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <a href="https://ocr-api.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
-            <p class="card-command">high / 66</p>
-            <h3>AgentMail</h3>
-            <p>Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.</p>
+            <p class="card-command">watch / 24</p>
+            <h3>Nansen API</h3>
+            <p>On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.</p>
             <dl class="mini-ledger">
-              <div><dt>category</dt><dd>messaging</dd></div>
-              <div><dt>endpoints</dt><dd>51</dd></div>
-              <div><dt>price</dt><dd>$0-$10</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>56</dd></div>
+              <div><dt>price</dt><dd>$0</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
             </dl>
-            <ul class="compact-list"><li>meaningful per-call spend</li><li>wide endpoint surface</li><li>message-sending workflow</li><li>personal or business-contact data</li></ul>
-            <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li></ul>
+            <a href="https://api.nansen.ai" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
