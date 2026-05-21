@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <title>Agent Commerce Readiness Sprint | Tate Programs</title>
-    <meta name="description" content="B2B readiness sprint for May 2026 agent-commerce launches: AgentCore Payments, Circle Agent Stack, x402 paid API routes, merchant checkout, receipts, CORS, spend controls, and launch proof.">
+    <meta name="description" content="B2B readiness sprint for May 2026 agent-commerce launches: UCP, ACP, AP2, TAP, AgentCore Payments, x402 paid API routes, merchant checkout, receipts, CORS, spend controls, and launch proof.">
     <link rel="canonical" href="https://tateprograms.com/agent-commerce-readiness-sprint.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Agent Commerce Readiness Sprint">
@@ -14,7 +14,7 @@
     <meta property="og:image" content="https://tateprograms.com/assets/tate-programs-og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Agent Commerce Readiness Sprint">
-    <meta name="twitter:description" content="B2B readiness sprint for AgentCore Payments, Circle Agent Stack, x402 paid API routes, catalogs, receipts, and spend controls.">
+    <meta name="twitter:description" content="B2B readiness sprint for UCP, ACP, AP2, TAP, AgentCore Payments, x402 paid API routes, catalogs, receipts, and spend controls.">
     <link rel="alternate" type="application/json" href="https://tateprograms.com/services.json" title="Tate Programs service catalog">
     <link rel="alternate" type="text/plain" href="https://tateprograms.com/llms.txt" title="Tate Programs machine-readable map">
     <link rel="icon" href="assets/tate-programs-icon.svg" type="image/svg+xml">
@@ -76,7 +76,7 @@
           <p class="console-kicker">agent commerce readiness / may 2026</p>
           <h1>Make your product or API ready for agent-driven buyers.</h1>
           <p class="console-subtitle">
-            A readiness sprint for teams turning catalogs, APIs, marketplaces, or account actions into agent-discoverable paid surfaces. The work is practical: discovery files, payment challenge behavior, wallet and spend policy, receipts, retries, browser access, and launch proof.
+            A readiness sprint for teams turning catalogs, APIs, marketplaces, or account actions into agent-discoverable paid surfaces. The work is practical: UCP/ACP readiness, x402 and MPP payment behavior, wallet and spend policy, receipts, retries, browser access, and launch proof.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20sprint&amp;body=Company%20or%20product%20URL%3A%0AWhat%20agents%20should%20discover%20or%20buy%3A%0APayment%20or%20checkout%20rail%3A%0ACatalog%20or%20API%20docs%3A%0ADeadline%3A%0A">send launch surface</a>
@@ -165,6 +165,11 @@ outputs:
             <p>AgentCore-style buyers need wallet policy, session spending limits, audit trails, secrets handling, and clear evidence that the paid provider path can be retried safely.</p>
           </article>
           <article>
+            <p class="card-command">ucp/acp</p>
+            <h3>Agentic checkout protocols</h3>
+            <p>Google/Shopify UCP and Stripe/OpenAI ACP surfaces need product discovery, cart intent, payment delegation, trust-token handling, refunds, and post-purchase proof before merchants route real buyers through them.</p>
+          </article>
+          <article>
             <p class="card-command">batch</p>
             <h3>High-volume x402 routes</h3>
             <p>Batch-settled APIs need channel state, voucher boundaries, claim cadence, refund rules, and monitoring before the first production agent loop starts spending.</p>
@@ -197,6 +202,11 @@ outputs:
           </p>
         </div>
         <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">checkout</p>
+            <h3>Agentic checkout is fragmenting</h3>
+            <p>Merchants now have to reason across UCP, ACP, AP2, TAP, x402, MPP, A2A, and platform-specific shopping agents. The readiness problem is evidence that a buyer can discover, authorize, pay, retry, and reconcile safely across whichever rail the channel uses.</p>
+          </article>
           <article>
             <p class="card-command">aws</p>
             <h3>Managed agent wallets</h3>

@@ -37,6 +37,10 @@
       "category": "agent-infrastructure",
       "tags": [
         "agent-commerce",
+        "ucp",
+        "acp",
+        "ap2",
+        "tap",
         "paid-apis",
         "x402",
         "mpp",
