@@ -39,7 +39,7 @@ function renderSignals(report) {
     const signals = (check.signals || []).join(", ") || "no matching signal";
     return `
       <article>
-        <p class="card-command">${escapeHtml(check.id)}</p>
+        <p class="card-command">${escapeHtml(`${check.method || "GET"} ${check.id}`)}</p>
         <h3>${escapeHtml(String(check.status))} ${status}</h3>
         <p>${escapeHtml(signals)}</p>
         <code>${escapeHtml(check.final_url || check.url)}</code>
