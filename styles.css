@@ -1021,6 +1021,28 @@ footer a {
   margin-top: 10px;
 }
 
+.ucp-check-grid {
+  grid-template-columns: 1fr;
+}
+
+.ucp-check-grid article code {
+  display: block;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.ucp-report-output {
+  background: #111915;
+  border: 1px solid rgba(255, 253, 248, 0.14);
+  border-radius: 4px;
+  color: #eaf2e7;
+  font: 0.86rem/1.55 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  min-height: 220px;
+  padding: 14px;
+  resize: vertical;
+  width: 100%;
+}
+
 .audit-facts {
   border-top: 1px solid var(--line);
   color: var(--muted);

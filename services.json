@@ -165,6 +165,43 @@
       "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map"
     },
     {
+      "id": "universal-cart-ucp-readiness-check",
+      "name": "Universal Cart / UCP Readiness Check",
+      "price_usd": 0,
+      "delivery": "instant",
+      "service_type": "software_tool",
+      "fulfillment_type": "automated",
+      "category": "agent-commerce",
+      "tags": [
+        "universal-cart",
+        "ucp",
+        "agentic-commerce",
+        "shopify",
+        "merchant-discovery",
+        "llms.txt",
+        "agents.md",
+        "schema.org",
+        "checkout",
+        "public-check"
+      ],
+      "scope": "Free server-backed public checker for one merchant, product, storefront, or demo URL. Fetches public surfaces only and scores UCP profile, agent docs, sitemap, product schema, shipping, returns, Shopify signals, and checkout context.",
+      "requires_authorization": false,
+      "input_fields": [
+        "merchant_url"
+      ],
+      "deliverables": [
+        "public readiness score",
+        "discovery-surface findings",
+        "per-route public check summary",
+        "markdown report",
+        "paid readiness-map handoff"
+      ],
+      "safety_scope": "No login, no cart mutation, no checkout creation, no payment, no wallet signature, and no order lookup.",
+      "url": "https://tateprograms.com/ucp-readiness-check.html",
+      "api_url": "https://the402.tateprograms.com/api/ucp/readiness",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map"
+    },
+    {
       "id": "agent-spend-guard-review",
       "name": "Agent Spend Guard Review",
       "price_usd": 199,
