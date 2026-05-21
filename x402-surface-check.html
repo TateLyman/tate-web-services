@@ -219,6 +219,18 @@ npx --yes x402-surface-check --strict-proof https://api.example.com/openapi.json
             <p>A live Coinbase x402 ecosystem PR exposed 256 Bazaar-style resources. The current build detects FastAPI-style nested 402 challenge bodies and isolates browser CORS, preflight, cache-policy, metadata-privacy, and discovery-surface notes without paid calls.</p>
             <a href="https://github.com/coinbase/x402/pull/177#issuecomment-4494449681" target="_blank" rel="noreferrer">LogicNodes proof note</a>
           </article>
+          <article>
+            <p class="card-command">spend caps</p>
+            <h3>Dynamic Agent Payments</h3>
+            <p>The auto-fund PR turns a 402 challenge into a Checkout swap and signed payment. The public code pass isolated the missing hard caps, permissive unknown-network fallback, and first-accept selection risk before that path becomes the default agent behavior.</p>
+            <a href="https://github.com/dynamic-labs-oss/dynamic-agent-payments/pull/3#issuecomment-4503833442" target="_blank" rel="noreferrer">spend-control review</a>
+          </article>
+          <article>
+            <p class="card-command">sdk ci</p>
+            <h3>Nevermined Visa x402</h3>
+            <p>The Python Visa/card-delegation mirror failed e2e because the stricter payment-method provider type rejected backend <code>erc4337</code> rows. The note narrowed the patch to summary typing and the remaining uint256 serialization failure.</p>
+            <a href="https://github.com/nevermined-io/payments-py/pull/180#issuecomment-4503821599" target="_blank" rel="noreferrer">Visa x402 review</a>
+          </article>
         </div>
       </section>
 

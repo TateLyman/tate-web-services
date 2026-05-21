@@ -87,19 +87,23 @@
             <a href="https://github.com/solana-foundation/pay-skills/pull/71#issuecomment-4480072443" target="_blank" rel="noreferrer">Stratum scope re-check</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/73#issuecomment-4493660686" target="_blank" rel="noreferrer">Phoenix Zero network re-check</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4503792781" target="_blank" rel="noreferrer">Blocksize final clean re-check</a>
+            <a href="https://github.com/nevermined-io/payments-py/pull/180#issuecomment-4503821599" target="_blank" rel="noreferrer">Nevermined Visa x402 review</a>
+            <a href="https://github.com/dynamic-labs-oss/dynamic-agent-payments/pull/3#issuecomment-4503833442" target="_blank" rel="noreferrer">Dynamic spend-control review</a>
           </article>
         </div>
         <div class="audit-preview-grid">
           <article>
             <span>new</span>
-            <h3>May 20 patch loops</h3>
-            <p>Same-day checks closed the loop on provider fixes: TaskHawk deployed accept-leg resource binding and passed the re-check, Blocksize closed resource, browser-readability, exposed-header, and no-store notes, Carbon Cashmere shipped a flat 177-endpoint manifest and then closed every remaining CORS/resource note, and earlier Crest, Phoenix Zero, and Mameta fixes kept moving.</p>
+            <h3>May 20-21 patch loops</h3>
+            <p>Same-day checks closed the loop on provider fixes and live PRs: Blocksize closed resource, browser-readability, exposed-header, and no-store notes; Carbon Cashmere shipped a flat 177-endpoint manifest; Nevermined's Python Visa/x402 mirror exposed a provider-type regression in CI; and Dynamic's auto-fund path got a spend-control review before merge.</p>
             <a href="https://github.com/solana-foundation/pay-skills/pull/41#issuecomment-4503792781" target="_blank" rel="noreferrer">Blocksize final clean re-check</a>
             <a href="https://github.com/punkpeye/awesome-mcp-servers/pull/6640#issuecomment-4503053870" target="_blank" rel="noreferrer">Carbon final clean re-check</a>
             <a href="https://github.com/coinbase/x402/pull/167#issuecomment-4493636178" target="_blank" rel="noreferrer">Crest re-check</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/73#issuecomment-4493660686" target="_blank" rel="noreferrer">Phoenix re-check</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/74#issuecomment-4493653984" target="_blank" rel="noreferrer">Mameta launch review</a>
             <a href="https://github.com/solana-foundation/pay-skills/pull/74#issuecomment-4494320205" target="_blank" rel="noreferrer">Mameta patch re-check</a>
+            <a href="https://github.com/nevermined-io/payments-py/pull/180#issuecomment-4503821599" target="_blank" rel="noreferrer">Nevermined Python CI note</a>
+            <a href="https://github.com/dynamic-labs-oss/dynamic-agent-payments/pull/3#issuecomment-4503833442" target="_blank" rel="noreferrer">Dynamic auto-fund note</a>
           </article>
           <article>
             <span>new</span>
@@ -126,6 +130,18 @@
             <h3>LogicNodes Bazaar catalog</h3>
             <p>The live Coinbase x402 PR showed 256 Bazaar-discoverable resources and FastAPI-style nested 402 challenge bodies. A same-day pass added scanner support for that shape and scoped remaining launch work to browser-readable CORS, preflight retry headers, cache policy, and discovery clarity.</p>
             <a href="https://github.com/coinbase/x402/pull/177#issuecomment-4494449681" target="_blank" rel="noreferrer">LogicNodes proof note</a>
+          </article>
+          <article>
+            <span>new</span>
+            <h3>Dynamic Agent Payments auto-fund</h3>
+            <p>A wallet-infrastructure PR added Tempo MPP and Checkout auto-funding. The review isolated the commercial spend boundary: agent callers need hard per-call caps, strict network and asset selection, and tests for malicious high-amount or unsupported-network payment challenges.</p>
+            <a href="https://github.com/dynamic-labs-oss/dynamic-agent-payments/pull/3#issuecomment-4503833442" target="_blank" rel="noreferrer">spend-control review</a>
+          </article>
+          <article>
+            <span>new</span>
+            <h3>Nevermined Visa x402 SDK</h3>
+            <p>The Python Visa/x402 mirror added card-delegation support, but the e2e job showed a real parser regression: card-only provider typing rejected backend <code>erc4337</code> rows before Stripe and Braintree flows could run.</p>
+            <a href="https://github.com/nevermined-io/payments-py/pull/180#issuecomment-4503821599" target="_blank" rel="noreferrer">Visa x402 review</a>
           </article>
           <article>
             <span>new</span>
