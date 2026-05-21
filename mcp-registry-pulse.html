@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-05-20",
+        "dateModified": "2026-05-21",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-05-20</em>
+        <em>2026-05-21</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-05-20</dd>
+              <dd>2026-05-21</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>150</dd>
+              <dd>149</dd>
             </div>
           </dl>
         </div>
@@ -98,8 +98,8 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   150
-github repos:     90
+latest servers:   149
+github repos:     88
 readme sampled:   61
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
@@ -114,17 +114,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>150</strong>
+            <strong>149</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>90 (60%)</strong>
+            <strong>88 (59%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>108 (72%)</strong>
+            <strong>109 (73%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -134,7 +134,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>30 (20%)</strong>
+            <strong>29 (19%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -153,7 +153,7 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>28 (19%)</strong>
+            <strong>27 (18%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -163,7 +163,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>13 (9%)</strong>
+            <strong>12 (8%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -197,21 +197,21 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>81 / 150 - harder to understand quickly</span>
+              <span>80 / 149 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>50 / 150 - namespace carries the listing</span>
+              <span>47 / 149 - namespace carries the listing</span>
             </div>
-            <i class="pulse-width-35"></i>
+            <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>118 / 150 - hosted flow must explain trust and auth clearly</span>
+              <span>118 / 149 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
@@ -364,18 +364,6 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.pictomancer/image-processing image processing for ai agents. resize, convert, compress, and pipeline images. remote attach a public repository add a human-readable title expand the registry description expose a product or docs website clarify remote auth and trust boundary">
-            <p class="card-command">score 52/100 · remote</p>
-            <h3>ai.pictomancer/image-processing</h3>
-            <p>Image processing for AI agents. Resize, convert, compress, and pipeline images.</p>
-            <ul>
-              <li>Attach a public repository</li><li>Add a human-readable title</li><li>Expand the registry description</li><li>Expose a product or docs website</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://gitlab.com/pictomancer.ai/pig-gateway" target="_blank" rel="noreferrer">source</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ac.tandem/docs-mcp remote mcp server for tandem docs, install guides, sdks, workflows, and agent setup help. frumu-ai/tandem remote add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add copyable mcpservers config reference server.json metadata alignment">
             <p class="card-command">score 53/100 · remote</p>
             <h3>ac.tandem/docs-mcp</h3>
@@ -502,6 +490,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://a2a-protocol.org" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/nefesh-ai/nefesh-mcp-server" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.ludo/game-assets ludo ai game assets generate game assets with ai: sprites, 3d models, animations, sound effects, music, and voices. ludo-ai/ludo-mcp remote secrets credentials tokens headers clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof document permissions and safety notes refresh stale registry metadata reference server.json metadata alignment">
+            <p class="card-command">score 59/100 · remote</p>
+            <h3>Ludo AI Game Assets</h3>
+            <p>Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.</p>
+            <ul>
+              <li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li><li>Document permissions and safety notes</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://ludo.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/Ludo-AI/ludo-mcp" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>

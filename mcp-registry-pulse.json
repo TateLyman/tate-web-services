@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20",
+  "generatedAt": "2026-05-21",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 150,
-  "githubReposDetected": 90,
+  "latestServersAnalyzed": 149,
+  "githubReposDetected": 88,
   "readmesSampled": 61,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,18 +13,18 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 150,
-    "repos": 90,
+    "latestTotal": 149,
+    "repos": 88,
     "readableRepos": 61,
-    "packageCount": 30,
+    "packageCount": 29,
     "remoteCount": 127,
-    "packageOnly": 21,
+    "packageOnly": 20,
     "remoteOnly": 118,
     "both": 9,
     "noInstallPath": 118,
-    "websiteVisible": 108,
-    "missingTitle": 50,
-    "shortDescription": 81,
+    "websiteVisible": 109,
+    "missingTitle": 47,
+    "shortDescription": 80,
     "recent45": 81,
     "orgOwned": 49,
     "issuesEnabled": 60,
@@ -33,10 +33,10 @@
     "install": 32,
     "serverJson": 8,
     "safety": 48,
-    "stdioPackageCount": 28,
+    "stdioPackageCount": 27,
     "stdioPackageReadable": 18,
     "stdioBoundaryDocs": 10,
-    "secretPackageConfig": 13,
+    "secretPackageConfig": 12,
     "secretRemoteHeaders": 25,
     "glama": 32,
     "smoke": 18
@@ -196,28 +196,6 @@
         "Add install or client command",
         "Add smoke-test or tool-list proof",
         "Add copyable mcpServers config"
-      ]
-    },
-    {
-      "name": "ai.pictomancer/image-processing",
-      "title": "",
-      "description": "Image processing for AI agents. Resize, convert, compress, and pipeline images.",
-      "publicProofScore": 52,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-03T12:08:41.783276Z",
-      "repo": null,
-      "websiteUrl": "",
-      "primaryUrl": "https://gitlab.com/pictomancer.ai/pig-gateway",
-      "topGaps": [
-        "Attach a public repository",
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
       ]
     },
     {
@@ -443,6 +421,28 @@
         "Clarify remote auth and trust boundary",
         "Add install or client command",
         "Add smoke-test or tool-list proof",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.ludo/game-assets",
+      "title": "Ludo AI Game Assets",
+      "description": "Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.",
+      "publicProofScore": 59,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-01-30T17:59:40.034021Z",
+      "repo": "Ludo-AI/ludo-mcp",
+      "websiteUrl": "https://ludo.ai",
+      "primaryUrl": "https://ludo.ai",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
         "Refresh stale registry metadata"
       ]
     }
