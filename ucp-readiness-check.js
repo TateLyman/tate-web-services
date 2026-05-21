@@ -16,7 +16,7 @@ let latestReport = null;
 function setLoading() {
   scoreEl.textContent = "--";
   titleEl.textContent = "Checking public surfaces";
-  summaryEl.textContent = "Fetching the homepage, UCP profile, agent docs, robots, and sitemap without logging in or touching checkout.";
+  summaryEl.textContent = "Fetching the homepage, UCP profile, declared service endpoints, agent docs, robots, and sitemap without logging in or touching checkout.";
   signalListEl.innerHTML = "";
   checkListEl.innerHTML = "";
   outputEl.value = "";
@@ -80,7 +80,7 @@ function buildMarkdownReport(report) {
     ...(report.findings || []).map(finding => `- ${finding}`),
     "",
     "## Public Checks",
-    ...(report.checks || []).map(check => `- ${check.id}: ${check.status} ${check.ok ? "ok" : "needs review"} (${(check.signals || []).join(", ") || "no signal"})`),
+    ...(report.checks || []).map(check => `- ${check.id}: ${check.status} ${check.ok ? "ok" : "needs review"} (${(check.signals || []).join(", ") || "no signal"})${check.source ? ` [${check.source}]` : ""}`),
     "",
     "## Paid Scope",
     `- ${report.paid_scope?.readiness_map || "$750 for one authorized commerce surface"}`,

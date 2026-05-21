@@ -184,7 +184,7 @@
         "checkout",
         "public-check"
       ],
-      "scope": "Free server-backed public checker for one merchant, product, storefront, or demo URL. Fetches public surfaces only and scores UCP profile, agent docs, UCP MCP endpoint, agentic sitemap, product schema, shipping, returns, Shopify signals, and checkout context.",
+      "scope": "Free server-backed public checker for one merchant, product, storefront, or demo URL. Fetches public surfaces only and scores UCP profile, profile-advertised service endpoints, agent docs, UCP MCP endpoint behavior, agentic sitemap, product schema, shipping, returns, Shopify signals, and checkout context.",
       "requires_authorization": false,
       "input_fields": [
         "merchant_url"
@@ -192,7 +192,7 @@
       "deliverables": [
         "public readiness score",
         "discovery-surface findings",
-        "UCP MCP endpoint status",
+        "profile-advertised UCP MCP endpoint status",
         "per-route public check summary",
         "markdown report",
         "paid readiness-map handoff"

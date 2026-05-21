@@ -107,6 +107,7 @@ fetch:
   /llms-full.txt
   /agents.md
   /api/ucp/mcp
+  profile service endpoints
   /robots.txt
   /sitemap.xml
   /sitemap_agentic_discovery.xml
@@ -140,7 +141,7 @@ never:
 
           <fieldset>
             <legend>Public scope</legend>
-            <label class="check-row"><input type="checkbox" checked disabled> Fetches public pages, agent docs, UCP/MCP endpoints, and sitemap files only.</label>
+            <label class="check-row"><input type="checkbox" checked disabled> Fetches public pages, agent docs, UCP profile service endpoints, MCP endpoints, and sitemap files only.</label>
             <label class="check-row"><input type="checkbox" checked disabled> Does not log in, add to cart, create checkout, pay, sign, or look up orders.</label>
             <label class="check-row"><input type="checkbox" checked disabled> Produces a shareable report that can become a private readiness map.</label>
           </fieldset>
@@ -185,7 +186,7 @@ never:
           <article>
             <p class="card-command">ucp</p>
             <h3>Protocol discovery</h3>
-            <p>Looks for UCP profile hints, agent docs, llms.txt, llms-full.txt, agents.md, UCP MCP, robots, sitemap, agentic sitemap, and other surfaces that help agents map the store without guessing.</p>
+            <p>Looks for UCP profile hints, declared service endpoints, agent docs, llms.txt, llms-full.txt, agents.md, UCP MCP, robots, sitemap, agentic sitemap, and other surfaces that help agents map the store without guessing.</p>
           </article>
           <article>
             <p class="card-command">catalog</p>

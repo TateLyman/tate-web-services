@@ -134,6 +134,11 @@ output:
             <p>Product identity, variants, availability, price, shipping, returns, loyalty offers, and merchant-of-record facts need to be consistent across feed, page, and checkout.</p>
           </article>
           <article>
+            <p class="card-command">profile</p>
+            <h3>Declared service endpoints</h3>
+            <p>UCP implementations should be checked from the merchant profile, not hard-coded paths. The map follows declared REST, MCP, and embedded service routes before judging checkout readiness.</p>
+          </article>
+          <article>
             <p class="card-command">cart</p>
             <h3>Cart and handoff behavior</h3>
             <p>When an agent builds or transfers a cart, the merchant should preserve item identity, price freshness, stock state, discounts, and checkout intent without silent drift.</p>
