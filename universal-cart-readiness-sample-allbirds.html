@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <title>Universal Cart Readiness Sample Report: Allbirds | Tate Programs</title>
+    <meta name="description" content="Public sample Universal Cart and UCP readiness snapshot for Allbirds, showing what Tate Programs checks before agentic commerce, UCP, MCP, and checkout handoff work.">
+    <link rel="canonical" href="https://tateprograms.com/universal-cart-readiness-sample-allbirds.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Universal Cart Readiness Sample Report: Allbirds">
+    <meta property="og:description" content="A public-only sample readiness snapshot for UCP, agent docs, MCP, agentic sitemap, product schema, policies, and checkout discovery.">
+    <meta property="og:url" content="https://tateprograms.com/universal-cart-readiness-sample-allbirds.html">
+    <meta property="og:image" content="https://tateprograms.com/assets/tate-programs-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Universal Cart Readiness Sample Report">
+    <meta name="twitter:description" content="Public sample report for Universal Cart and UCP agentic commerce readiness.">
+    <link rel="icon" href="assets/tate-programs-icon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#111915">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Universal Cart Readiness Sample Report: Allbirds",
+        "description": "Public-only Universal Cart and UCP readiness sample for a merchant storefront.",
+        "datePublished": "2026-05-21",
+        "author": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tate Programs",
+          "url": "https://tateprograms.com",
+          "email": "hello@tateprograms.com"
+        },
+        "mainEntityOfPage": "https://tateprograms.com/universal-cart-readiness-sample-allbirds.html"
+      }
+    </script>
+  </head>
+  <body class="console-home terminal-os shell-page">
+    <header class="os-topbar">
+      <a class="os-brand" href="index.html" aria-label="Tate Programs home">
+        <span class="os-mark">tp</span>
+        <span>tate@programs</span>
+      </a>
+      <nav class="os-tabs" aria-label="Primary navigation">
+        <a href="index.html">home</a>
+        <a href="agent-payment-launch-review.html">reviews</a>
+        <a href="x402-surface-check.html">free-check</a>
+        <a href="case-studies.html">proof</a>
+        <a href="payments.html">pay</a>
+      </nav>
+      <a class="os-status" href="mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map">
+        <span></span>
+        sample report
+      </a>
+    </header>
+
+    <main>
+      <div class="shell-pathline">
+        <span>tate@programs</span>
+        <strong>~/proof/ucp-sample-allbirds</strong>
+        <em>public snapshot / no checkout</em>
+      </div>
+
+      <section class="console-hero console-page-hero">
+        <div class="console-copy">
+          <p class="console-kicker">Public Universal Cart sample</p>
+          <h1>A concrete UCP readiness report, captured from public Allbirds surfaces.</h1>
+          <p class="console-subtitle">
+            This sample shows the shape of a readiness packet before a merchant, agency, or checkout platform pays for private scope. It uses only public pages and discovery files. It does not log in, mutate cart state, create checkout, pay, sign, inspect orders, or use private access.
+          </p>
+          <div class="console-actions">
+            <a class="console-button primary" href="ucp-readiness-check.html">run the free check</a>
+            <a class="console-button secondary" href="universal-cart-readiness.html">scope private map</a>
+            <a class="console-button ghost" href="case-studies.html">proof log</a>
+          </div>
+          <dl class="console-ledger">
+            <div>
+              <dt>merchant</dt>
+              <dd>Allbirds</dd>
+            </div>
+            <div>
+              <dt>score</dt>
+              <dd>78/100</dd>
+            </div>
+            <div>
+              <dt>scope</dt>
+              <dd>public only</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="terminal-window" aria-label="Allbirds UCP readiness summary">
+          <div class="terminal-topline">snapshot</div>
+          <pre><code>$ ucp-readiness https://www.allbirds.com/
+checked_at: 2026-05-21T18:04:08Z
+score: 78/100
+passes:
+  homepage
+  /.well-known/ucp
+  /llms-full.txt
+  /agents.md
+  /robots.txt
+  /sitemap.xml
+  /sitemap_agentic_discovery.xml
+review:
+  /llms.txt redirect/status
+  /api/ucp/mcp tools probe
+  product schema
+  return policy schema
+  shipping schema</code></pre>
+        </aside>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">Executive readout</p>
+            <h2>Strong discovery footprint, with private-proof gaps before checkout work.</h2>
+            <p>
+              The public Allbirds surface already exposes meaningful Universal Cart and agentic commerce signals: a UCP profile, agent docs, Shopify-linked discovery, and an agentic sitemap. The visible gaps are exactly where a private readiness map becomes useful: structured product/policy evidence, MCP behavior under the intended agent request shape, and proof of cart, checkout, payment, receipt, refund, loyalty, and support boundaries.
+            </p>
+          </div>
+          <a class="console-link" href="ucp-readiness-check.html">open checker</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">pass</p>
+            <h3>UCP profile</h3>
+            <p><code>/.well-known/ucp</code> returned HTTP 200 with UCP, MCP, commerce-flow, agent-discovery, and Shopify signals.</p>
+          </article>
+          <article>
+            <p class="card-command">pass</p>
+            <h3>Agent docs</h3>
+            <p><code>/llms-full.txt</code> and <code>/agents.md</code> returned public markdown with UCP, MCP, commerce-flow, and agent-discovery signals.</p>
+          </article>
+          <article>
+            <p class="card-command">pass</p>
+            <h3>Agentic sitemap</h3>
+            <p><code>/sitemap_agentic_discovery.xml</code> returned HTTP 200, giving crawlers a narrower machine-readable entry point.</p>
+          </article>
+          <article>
+            <p class="card-command">review</p>
+            <h3>MCP probe shape</h3>
+            <p><code>POST /api/ucp/mcp</code> responded at the expected path, but the safe public <code>tools/list</code> probe returned HTTP 422 instead of HTTP 200.</p>
+          </article>
+          <article>
+            <p class="card-command">review</p>
+            <h3>Structured product proof</h3>
+            <p>The homepage sample did not expose obvious Product, Offer, merchant return policy, or shipping-detail structured-data signals in the public sample window.</p>
+          </article>
+          <article>
+            <p class="card-command">manual</p>
+            <h3>Private commerce boundary</h3>
+            <p>The public check intentionally stops before cart mutation, checkout creation, payment authorization, order webhooks, refunds, returns, and loyalty/account behavior.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">Public checks</p>
+          <h2>What the free checker captured.</h2>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">GET homepage</p>
+            <h3>200 pass</h3>
+            <p>Signals: UCP terms, commerce-flow terms, agent-discovery terms, Shopify signal.</p>
+            <code>https://www.allbirds.com/</code>
+          </article>
+          <article>
+            <p class="card-command">GET ucp_profile</p>
+            <h3>200 pass</h3>
+            <p>Signals: UCP terms, MCP terms, commerce-flow terms, agent-discovery terms, Shopify signal.</p>
+            <code>https://www.allbirds.com/.well-known/ucp</code>
+          </article>
+          <article>
+            <p class="card-command">GET llms_txt</p>
+            <h3>503 review</h3>
+            <p>The request landed on <code>/agents.md</code> and returned a transient JSON error in this capture.</p>
+            <code>https://www.allbirds.com/llms.txt</code>
+          </article>
+          <article>
+            <p class="card-command">GET llms_full_txt</p>
+            <h3>200 pass</h3>
+            <p>Signals: UCP terms, MCP terms, commerce-flow terms, agent-discovery terms, Shopify signal.</p>
+            <code>https://www.allbirds.com/llms-full.txt</code>
+          </article>
+          <article>
+            <p class="card-command">GET agents_md</p>
+            <h3>200 pass</h3>
+            <p>Signals: UCP terms, MCP terms, commerce-flow terms, agent-discovery terms, Shopify signal.</p>
+            <code>https://www.allbirds.com/agents.md</code>
+          </article>
+          <article>
+            <p class="card-command">POST ucp_mcp</p>
+            <h3>422 review</h3>
+            <p>Signals: UCP terms, agent-discovery terms, Shopify signal. The endpoint exists, but this safe probe did not return a normal tools response.</p>
+            <code>https://www.allbirds.com/api/ucp/mcp</code>
+          </article>
+          <article>
+            <p class="card-command">GET robots_txt</p>
+            <h3>200 pass</h3>
+            <p>Signals: commerce-flow terms, agent-discovery terms, Shopify signal.</p>
+            <code>https://www.allbirds.com/robots.txt</code>
+          </article>
+          <article>
+            <p class="card-command">GET sitemap_xml</p>
+            <h3>200 pass</h3>
+            <p>Signals: agent-discovery terms.</p>
+            <code>https://www.allbirds.com/sitemap.xml</code>
+          </article>
+          <article>
+            <p class="card-command">GET agentic_sitemap</p>
+            <h3>200 pass</h3>
+            <p>Signals: agent-discovery terms.</p>
+            <code>https://www.allbirds.com/sitemap_agentic_discovery.xml</code>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head split">
+          <div>
+            <p class="console-kicker">How this becomes paid work</p>
+            <h2>The paid map turns a public snapshot into launch evidence.</h2>
+            <p>
+              A private readiness map starts with this same outside view, then adds authorized catalog, checkout, receipt, post-purchase, and partner surfaces. The deliverable is a ranked patch order, proof commands, and a buyer/partner-safe summary if approved.
+            </p>
+          </div>
+          <a class="console-link" href="mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map">email scope</a>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">$750</p>
+            <h3>Readiness map</h3>
+            <p>One authorized commerce surface: discovery, product data, policy evidence, checkout boundary, receipt/refund path, and ranked fixes.</p>
+          </article>
+          <article>
+            <p class="card-command">$2.5k+</p>
+            <h3>Launch sprint</h3>
+            <p>One implementation or proof pass for agencies, Shopify teams, checkout vendors, catalog vendors, or UCP partner demos.</p>
+          </article>
+          <article>
+            <p class="card-command">$4.5k/mo</p>
+            <h3>Monitor</h3>
+            <p>Recurring readiness watch for agentic commerce surfaces where discovery, policies, checkout, or payment rails can drift after launch.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <p class="eyebrow">Use the same format on a real launch</p>
+          <h2>Run the free check, then send the surface that needs private proof.</h2>
+        </div>
+        <a class="button primary" href="ucp-readiness-check.html">Run check</a>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>Tate Programs</span>
+      <a href="mailto:hello@tateprograms.com">hello@tateprograms.com</a>
+      <a href="case-studies.html">Proof</a>
+      <a href="payments.html">Payments</a>
+    </footer>
+  </body>
+</html>

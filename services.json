@@ -200,6 +200,7 @@
       "safety_scope": "No login, no cart mutation, no checkout creation, no payment, no wallet signature, and no order lookup.",
       "url": "https://tateprograms.com/ucp-readiness-check.html",
       "api_url": "https://the402.tateprograms.com/api/ucp/readiness",
+      "sample_report_url": "https://tateprograms.com/universal-cart-readiness-sample-allbirds.html",
       "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map"
     },
     {
