@@ -24,7 +24,7 @@
       }
     }
   },
-  "last_updated": "2026-05-20",
+  "last_updated": "2026-05-21",
   "currency": "USD",
   "services": [
     {
@@ -38,6 +38,7 @@
       "tags": [
         "agent-commerce",
         "ucp",
+        "universal-cart",
         "acp",
         "ap2",
         "tap",
@@ -95,6 +96,72 @@
       ],
       "url": "https://tateprograms.com/agent-commerce-readiness-sprint.html",
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20sprint"
+    },
+    {
+      "id": "universal-cart-readiness-map",
+      "name": "Google Universal Cart and UCP Readiness Map",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-commerce",
+      "tags": [
+        "universal-cart",
+        "ucp",
+        "ap2",
+        "agentic-commerce",
+        "retail",
+        "shopify",
+        "checkout",
+        "catalogs",
+        "receipts",
+        "refunds",
+        "partner-proof"
+      ],
+      "scope": "Private readiness map for one retailer, agency, checkout platform, or commerce surface preparing product catalogs, cart handoff, payment boundaries, receipts, returns, and partner proof for Universal Cart, UCP, AP2, and agent-driven shopping channels.",
+      "tiers": [
+        {
+          "name": "Readiness map",
+          "price_usd": 750,
+          "delivery": "3 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map"
+        },
+        {
+          "name": "Launch sprint",
+          "price_usd": 2500,
+          "delivery": "1 week",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20launch%20sprint"
+        },
+        {
+          "name": "Readiness monitor",
+          "price_usd": 4500,
+          "delivery": "monthly",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20monitor"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "product_catalog_or_feed",
+        "checkout_or_merchant_surface",
+        "payment_rail_or_wallet_path",
+        "agency_or_platform_role",
+        "authorized_scope",
+        "contact_email",
+        "launch_deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "agent-readable catalog map",
+        "cart and checkout handoff review",
+        "payment authorization boundary map",
+        "receipt, refund, and reconciliation evidence table",
+        "retry and failure-state notes",
+        "ranked patch order",
+        "partner-ready launch proof packet"
+      ],
+      "url": "https://tateprograms.com/universal-cart-readiness.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Universal%20Cart%20readiness%20map"
     },
     {
       "id": "agent-spend-guard-review",
