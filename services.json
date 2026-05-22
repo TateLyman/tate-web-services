@@ -167,6 +167,70 @@
       "contact_url": "mailto:hello@tateprograms.com?subject=AI%20Mode%20UCP%20agency%20partner"
     },
     {
+      "id": "agent-readiness-proof-packet",
+      "name": "Agent Readiness Proof Packet",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-infrastructure",
+      "tags": [
+        "agent-readiness",
+        "lighthouse-agentic-browsing",
+        "cloudflare-agent-readiness",
+        "webmcp",
+        "llms.txt",
+        "agents.json",
+        "mcp-server-card",
+        "agent-skills",
+        "schema",
+        "sitemap",
+        "ecommerce",
+        "white-label"
+      ],
+      "scope": "Outside proof packet for one agent-readiness product, customer example, app listing, agency handoff, ecommerce demo, or public site surface. Reviews public discovery files, schema, sitemap, MCP server-card, agent skills, WebMCP-style action semantics, Lighthouse Agentic Browsing signals, and patch order.",
+      "tiers": [
+        {
+          "name": "Outside proof packet",
+          "price_usd": 750,
+          "delivery": "3 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20readiness%20proof%20packet"
+        },
+        {
+          "name": "Partner support",
+          "price_usd": 2500,
+          "delivery": "1 week",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20readiness%20partner%20support"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "company_name",
+        "surface_url",
+        "product_or_customer_context",
+        "target_claim_to_support",
+        "authorized_scope",
+        "contact_email",
+        "deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "public discovery readback",
+        "llms.txt and agents.json notes",
+        "MCP server-card and agent-skills verification",
+        "schema, sitemap, and markdown negotiation notes",
+        "WebMCP and public action/form readiness notes",
+        "commerce trust and policy signal inventory",
+        "client-safe proof summary",
+        "technical appendix",
+        "ranked patch order",
+        "post-change re-check"
+      ],
+      "safety_scope": "Public surfaces only by default: no login, no form submission, no cart mutation, no checkout creation, no payment, no wallet signature, no private endpoint guessing, and no customer testing without explicit authorization.",
+      "url": "https://tateprograms.com/agent-readiness-proof.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20readiness%20proof%20packet"
+    },
+    {
       "id": "universal-cart-readiness-map",
       "name": "Google Universal Cart and UCP Readiness Map",
       "price_usd": 750,
