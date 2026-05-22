@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-    <title>Agent Security Drill Kit | Governance, A2A, Gemini, and Policy Readiness | Tate Programs</title>
-    <meta name="description" content="Browser-only drill kit for agent security launches: prompt injection, exfiltration, unsafe tool use, policy rules, A2A agent identity, Gemini-safe integration, audit trails, rate limits, and human review gates.">
+    <title>Agent Security Drill | MCP Runtime Readiness | Tate Programs</title>
+    <meta name="description" content="Browser-only drill kit for MCP and AI-agent security launches: prompt injection, tool poisoning, credential exposure, unsafe tool use, audit trails, rate limits, and human review gates.">
     <link rel="canonical" href="https://tateprograms.com/agent-security-drill.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Agent Security Drill Kit">
-    <meta property="og:description" content="A practical readiness check and drill pack for agent security, governance, and Lobster Trap-style policy launches.">
+    <meta property="og:description" content="A practical readiness check and drill pack for MCP runtime security, tool-call governance, and buyer-proof launch evidence.">
     <meta property="og:url" content="https://tateprograms.com/agent-security-drill.html">
     <meta property="og:image" content="https://tateprograms.com/assets/agent-security-evidence-pack.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Agent Security Drill Kit">
-    <meta name="twitter:description" content="Browser-only prompt injection, exfiltration, audit, and policy readiness check for agent launches.">
+    <meta name="twitter:description" content="Browser-only MCP runtime, prompt injection, tool-call, audit, and policy readiness check for agent launches.">
     <meta name="twitter:image" content="https://tateprograms.com/assets/agent-security-evidence-pack.png">
     <link rel="icon" href="assets/tate-programs-icon.svg" type="image/svg+xml">
     <meta name="theme-color" content="#111915">
@@ -64,22 +64,23 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/tools/agent-security-drill</strong>
-        <em>prompt injection / governance / audit</em>
+        <em>MCP / runtime / audit</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">agent security drill / may 2026 enterprise signal</p>
-          <h1>Run the checks an enterprise security reviewer will ask for.</h1>
+          <p class="console-kicker">MCP runtime security / may 2026 enterprise signal</p>
+          <h1>Prove what an agent can touch before a buyer asks.</h1>
           <p class="console-subtitle">
-            Current agent launches are judged on more than model quality. This browser-only kit checks policy files, prompt-injection defenses, declared-versus-detected intent, tool boundaries, audit logs, rate limits, and human review gates before a demo reaches buyers, judges, or early users.
+            Production agent launches are now judged on control surfaces: which tools can run, which credentials can move, which MCP servers are trusted, which actions require review, and which audit events prove the system behaved. This local drill turns those questions into a buyer-readable evidence pack.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="#securityDrill">run drill</a>
             <a class="console-button secondary" href="#evidencePack">export evidence</a>
-            <a class="console-button secondary" href="#submissionMode">track fit</a>
+            <a class="console-button secondary" href="#submissionMode">runtime map</a>
             <a class="console-button secondary" href="#drillPack">copy drill pack</a>
             <a class="console-button secondary" href="agent-commerce-gate.html">commerce gate</a>
+            <a class="console-button ghost" href="mailto:hello@tateprograms.com?subject=Agent%20Security%20Buyer-Proof%20Review">scope review</a>
             <a class="console-button ghost" href="#securitySources">source ledger</a>
           </div>
           <dl class="console-ledger">
@@ -97,13 +98,13 @@
             </div>
             <div>
               <dt>tracks</dt>
-              <dd>Veea / Gemini / A2A</dd>
+              <dd>MCP / x402 / A2A</dd>
             </div>
           </dl>
         </div>
 
         <aside class="terminal-window" aria-label="Agent security drill terminal preview">
-          <div class="terminal-topline">security drill</div>
+          <div class="terminal-topline">runtime proof</div>
           <pre><code>$ drill agent-runtime
 ingress: injection, pii, credentials
 tools: scope, writes, approvals
@@ -194,29 +195,29 @@ result: score + next patch</code></pre>
 
       <section id="submissionMode" class="console-section">
         <div class="console-section-head">
-          <p class="console-kicker">TechEx / lablab submission mode</p>
-          <h2>Three track angles, one concrete product.</h2>
+          <p class="console-kicker">runtime proof matrix</p>
+          <h2>Four surfaces that decide whether a security buyer trusts the launch.</h2>
         </div>
         <div class="proof-terminal-grid">
           <article>
-            <p class="card-command">veea</p>
-            <h3>Agent Security & Governance</h3>
-            <p>The core demo is a local trust workbench: run adversarial drills, inspect policy coverage, export a rule pack, and preserve audit evidence.</p>
+            <p class="card-command">mcp</p>
+            <h3>Server trust and tool metadata</h3>
+            <p>MCP servers should be identified before tool descriptions enter context. Tool names, schemas, descriptions, and response paths need a reviewable trust boundary.</p>
           </article>
           <article>
-            <p class="card-command">gemini</p>
-            <h3>Safe Gemini assist</h3>
-            <p>Use AI Studio or a server-side key only to generate more attack cases and review evidence. Browser-exposed Gemini keys are treated as a launch blocker.</p>
+            <p class="card-command">runtime</p>
+            <h3>Pre-execution policy</h3>
+            <p>Read, write, network, filesystem, payment, and destructive actions need a decision point before execution, not a post-incident explanation.</p>
           </article>
           <article>
             <p class="card-command">a2a</p>
-            <h3>A2A trust boundary</h3>
-            <p>Agent Cards, declared skills, provider identity, and task/audit records make multi-agent delegation reviewable before agents exchange work.</p>
+            <h3>Delegation identity</h3>
+            <p>Agent identity, declared purpose, delegated scope, and handoff records should survive each hop so responsibility does not disappear inside a multi-agent chain.</p>
           </article>
           <article>
-            <p class="card-command">business</p>
-            <h3>Enterprise buyer story</h3>
-            <p>Security review is the saleable pain: agent teams need evidence that files, APIs, private data, spend, and human review are controlled.</p>
+            <p class="card-command">x402</p>
+            <h3>Spend and payment boundaries</h3>
+            <p>Payment-agent surfaces need caps, structured 402s, no-store challenges, retry contracts, and proof that paid actions cannot run before approval.</p>
           </article>
         </div>
       </section>
@@ -249,13 +250,13 @@ result: score + next patch</code></pre>
       <section class="console-section">
         <div class="console-section-head">
           <p class="console-kicker">commercial read</p>
-          <h2>The saleable problem is auditability.</h2>
+          <h2>The revenue problem is proof, not another promise.</h2>
         </div>
         <div class="proof-terminal-grid">
           <article>
             <p class="card-command">guardrails</p>
             <h3>Policies must be inspectable.</h3>
-            <p>Security buyers need to see the exact rule, matched field, action, and fallback. A demo that only says "guardrails" still looks unfinished.</p>
+            <p>Security buyers need the exact rule, matched field, action, and fallback. A demo that only says "guardrails" still looks unfinished.</p>
           </article>
           <article>
             <p class="card-command">tools</p>
@@ -269,8 +270,8 @@ result: score + next patch</code></pre>
           </article>
           <article>
             <p class="card-command">offer</p>
-            <h3>Launch review turns into fixes.</h3>
-            <p>The paid path is simple: map the agent runtime, run the drills, return the evidence gaps, and patch the first two blockers.</p>
+            <h3>Fixed review, concrete output.</h3>
+            <p>The paid path is narrow: map one approved public workflow, run the drills, return the evidence gaps, and produce a patch order a buyer can understand.</p>
           </article>
         </div>
       </section>
@@ -278,26 +279,32 @@ result: score + next patch</code></pre>
       <section id="securitySources" class="console-section">
         <div class="console-section-head">
           <p class="console-kicker">current signal</p>
-          <h2>Sources behind this drill.</h2>
+          <h2>Why this matters in May 2026.</h2>
         </div>
         <div class="proof-terminal-grid">
           <article>
-            <p class="card-command">techex</p>
-            <h3>LabLab / AI and Big Data Expo</h3>
-            <p>The May 11-19, 2026 enterprise AI hackathon includes an Agent Security and AI Governance track and a $10,000 prize pool.</p>
-            <a href="https://lablab.ai/ai-hackathons/techex-intelligent-enterprise-solutions-hackathon" target="_blank" rel="noreferrer">open source</a>
+            <p class="card-command">microsoft</p>
+            <h3>Agent frameworks became exploit surfaces.</h3>
+            <p>Microsoft's May 2026 research on prompt-to-shell paths shows why tool exposure, plugin parameters, and agent execution boundaries need direct review.</p>
+            <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">open source</a>
           </article>
           <article>
-            <p class="card-command">veea</p>
-            <h3>Lobster Trap</h3>
-            <p>Veea's track centers on prompt inspection, policy enforcement, observability, access control, audit trails, and red-team tooling.</p>
-            <a href="https://www.veea.com/" target="_blank" rel="noreferrer">open source</a>
+            <p class="card-command">mckinsey</p>
+            <h3>Security spend is shifting toward agent control.</h3>
+            <p>McKinsey's May 2026 chart frames agents as a new machine-activity risk that changes identity, detection, and security operations budgets.</p>
+            <a href="https://www.mckinsey.com/featured-insights/week-in-charts/ai-agents-raise-cybersecurity-stakes" target="_blank" rel="noreferrer">open source</a>
           </article>
           <article>
-            <p class="card-command">repo</p>
-            <h3>Policy proxy model</h3>
-            <p>The Lobster Trap repository describes OpenAI-compatible proxying, ingress and egress checks, policy actions, audit logs, and metadata reports.</p>
-            <a href="https://github.com/veeainc/lobstertrap" target="_blank" rel="noreferrer">open source</a>
+            <p class="card-command">salt</p>
+            <h3>MCP, APIs, and LLMs are merging into one stack.</h3>
+            <p>Salt's 2026 agentic-security launch and report position MCP servers and APIs as the new production attack surface for autonomous systems.</p>
+            <a href="https://salt.security/press-releases/salt-security-research-as-ai-agents-outpace-security-most-organizations-face-an-unsecured-api-surge" target="_blank" rel="noreferrer">open source</a>
+          </article>
+          <article>
+            <p class="card-command">google</p>
+            <h3>Agents are moving into commerce and booking.</h3>
+            <p>Google's I/O 2026 Search update expands agents that monitor, book, and act across the web, which raises the value of permission and audit evidence.</p>
+            <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/?pubDate=20260520" target="_blank" rel="noreferrer">open source</a>
           </article>
         </div>
       </section>
