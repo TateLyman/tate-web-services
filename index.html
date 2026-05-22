@@ -254,6 +254,7 @@ Shopware UCP  localhost order link fixed
 ToolRouter    StableTravel x402 merged
 Resonate      x402 no-store PR open
 CommandLayer  paid receipt PR open
+UCP Go SDK    CORS Vary PR open
 DCP           spend-accounting patch merged
 TaskHawk      patch re-check clean</code></pre>
           </div>
@@ -455,6 +456,11 @@ TaskHawk      patch re-check clean</code></pre>
             <span>tested PR</span>
             <h3>CommandLayer receipts made non-cacheable</h3>
             <p>A paid-action receipt example now has a PR marking receipt and payment-error responses <code>no-store</code>, plus tests and a synced clean-install lockfile.</p>
+          </article>
+          <article>
+            <span>tested PR</span>
+            <h3>UCP Go SDK CORS cache policy patched</h3>
+            <p>A Universal Commerce Protocol server middleware PR adds <code>Vary: Origin</code> when allowed origins are reflected, with full <code>go test ./...</code> passing.</p>
           </article>
           <article>
             <span>merged fix</span>
