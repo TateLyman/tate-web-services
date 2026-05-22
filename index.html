@@ -75,7 +75,7 @@
               "width": 1200,
               "height": 630
             },
-            "dateModified": "2026-05-20",
+            "dateModified": "2026-05-22",
             "inLanguage": "en-US"
           },
           {
@@ -217,7 +217,7 @@
             </div>
             <div>
               <dt>Buyer signal</dt>
-              <dd>Teams are replying</dd>
+              <dd>Public fixes merged</dd>
             </div>
           </dl>
         </div>
@@ -249,9 +249,10 @@ output:
 AgentPay      wallet verified
 402 Index     4 live paid endpoints
 Agentic Mkt   4 Bazaar-valid endpoints
+Shopify UCP   header-path fix merged
+ToolRouter    StableTravel x402 merged
 DCP           spend-accounting patch merged
-TaskHawk      patch re-check clean
-Subscriptions boundary review live</code></pre>
+TaskHawk      patch re-check clean</code></pre>
           </div>
           <form class="rev-terminal-input" id="terminalForm">
             <label for="terminalCommand">command</label>
@@ -422,6 +423,16 @@ Subscriptions boundary review live</code></pre>
           <h2>Recent signals from live surfaces.</h2>
         </div>
         <div class="rev-proof-grid">
+          <article>
+            <span>merged fix</span>
+            <h3>Shopify UCP header path landed</h3>
+            <p>A public review caught that <code>ucp discover</code> still missed the new custom-header path. The maintainer centralized the logic, credited the catch, and merged the fix.</p>
+          </article>
+          <article>
+            <span>merged launch</span>
+            <h3>ToolRouter StableTravel shipped</h3>
+            <p>The x402 travel-tool PR merged after focused re-checks, 326 StableTravel tests passing, and a clean server-side wrapper path for the paid route.</p>
+          </article>
           <article>
             <span>merged fix</span>
             <h3>DCP spend accounting landed</h3>
