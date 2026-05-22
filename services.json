@@ -247,6 +247,8 @@
         "restaurant-booking",
         "food-delivery",
         "direct-booking",
+        "offer-expiry",
+        "price-change",
         "hospitality",
         "schema",
         "llms.txt",
@@ -254,7 +256,7 @@
         "booking-engine",
         "white-label"
       ],
-      "scope": "Outside proof packet for one hotel, restaurant, booking-engine, food delivery, hospitality agency, or direct-booking surface preparing for Google AI Mode, UCP, MCP, menus, rates, availability, policies, safe action boundaries, and buyer-safe launch evidence.",
+      "scope": "Outside proof packet for one hotel, restaurant, booking-engine, food delivery, hospitality agency, or direct-booking surface preparing for Google AI Mode, Universal Cart, UCP, MCP, menus, rates, availability, offer expiry, price changes, policies, safe action boundaries, and buyer-safe launch evidence.",
       "tiers": [
         {
           "name": "Booking readiness packet",
@@ -286,6 +288,7 @@
         "UCP and MCP server-card verification",
         "schema, sitemap, and markdown negotiation notes",
         "rates, menu, availability, policy, fee, and support signal inventory",
+        "offer expiry and price-change boundary notes",
         "booking, order, payment, guest-data, and loyalty boundary notes",
         "buyer-safe proof summary",
         "technical appendix",
