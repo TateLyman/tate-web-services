@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <title>AI Mode + UCP Agency Partner | Tate Programs</title>
-    <meta name="description" content="White-label AI Mode and Universal Cart/UCP readiness maps for ecommerce, paid media, CRO, Shopify, and SEO agencies. $750 per client, public surfaces only.">
+    <meta name="description" content="White-label AI Mode, Merchant Center feed, and Universal Cart/UCP readiness maps for ecommerce, paid media, CRO, Shopify, and SEO agencies. $750 per client, public surfaces only.">
     <link rel="canonical" href="https://tateprograms.com/ai-mode-ucp-agency.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="AI Mode + UCP Agency Partner">
-    <meta property="og:description" content="White-label readiness maps for agencies preparing ecommerce clients for AI Mode, Universal Cart, UCP, product data, and agentic checkout.">
+    <meta property="og:description" content="White-label readiness maps for agencies preparing ecommerce clients for AI Mode, Merchant Center feeds, Universal Cart, UCP, product data, and agentic checkout.">
     <meta property="og:url" content="https://tateprograms.com/ai-mode-ucp-agency.html">
     <meta property="og:image" content="https://tateprograms.com/assets/tate-programs-og.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
         },
         "areaServed": "Worldwide",
         "url": "https://tateprograms.com/ai-mode-ucp-agency.html",
-        "description": "White-label readiness maps for agencies preparing ecommerce clients for AI Mode, Universal Cart, UCP, product data quality, structured checkout discovery, and agentic commerce.",
+        "description": "White-label readiness maps for agencies preparing ecommerce clients for AI Mode, Merchant Center feed quality, Universal Cart, UCP, product data quality, structured checkout discovery, and agentic commerce.",
         "offers": {
           "@type": "AggregateOffer",
           "lowPrice": "750",
@@ -76,7 +76,7 @@
           <p class="console-kicker">Google AI Mode / Universal Cart / UCP</p>
           <h1>Give ecommerce clients a technical map before agentic checkout gets expensive.</h1>
           <p class="console-subtitle">
-            White-label readiness maps for agencies handling ecommerce SEO, paid media, CRO, Shopify, WooCommerce, and product data. The output is practical: what the client exposes today, what AI Mode and Universal Cart-style buyers can understand, and what should be patched before the channel matters more.
+            White-label readiness maps for agencies handling ecommerce SEO, paid media, CRO, Shopify, WooCommerce, Merchant Center feeds, and product data. The output is practical: what the client exposes today, what AI Mode and Universal Cart-style buyers can understand, and what should be patched before the channel matters more.
           </p>
           <div class="console-actions">
             <a class="console-button primary" href="mailto:hello@tateprograms.com?subject=AI%20Mode%20UCP%20agency%20map&amp;body=Agency%20name%3A%0AClient%20or%20sample%20domain%3A%0APlatform%20%28Shopify%2C%20WooCommerce%2C%20custom%29%3A%0AWhat%20you%20want%20to%20sell%20after%20the%20map%3A%0ADeadline%3A%0A">send client domain</a>
@@ -109,6 +109,7 @@ inputs:
   policy pages
   public UCP / agent docs
   schema and sitemap
+  Merchant Center feed fields
 
 outputs:
   readiness score
@@ -130,7 +131,7 @@ outputs:
               <h3>White-label readiness map</h3>
               <span>$750</span>
             </div>
-            <p>One ecommerce domain. Public-surface UCP, product data, schema, policy, agent docs, sitemap, and checkout-discovery readback. Includes client-safe summary and technical appendix.</p>
+            <p>One ecommerce domain. Public-surface UCP, Merchant Center feed fields, product data, schema, policy, agent docs, sitemap, and checkout-discovery readback. Includes client-safe summary and technical appendix.</p>
             <a href="mailto:hello@tateprograms.com?subject=White-label%20UCP%20readiness%20map">Scope map</a>
             <a href="https://paypal.me/glidelocal/750" target="_blank" rel="noreferrer">Pay after scope</a>
           </article>
@@ -164,8 +165,8 @@ outputs:
         <div class="proof-terminal-grid">
           <article>
             <p class="card-command">product data</p>
-            <h3>Attributes, variants, policy clarity</h3>
-            <p>Product schema, offers, images, reviews, shipping, returns, support, variants, stock/price visibility, and the gaps that make conversational discovery brittle.</p>
+            <h3>Feed fields, variants, policy clarity</h3>
+            <p>Product schema, offers, images, reviews, shipping, returns, support, variants, stock/price visibility, and controlled Merchant Center fields like gender, size system, GTIN, MPN, item groups, and product URLs.</p>
           </article>
           <article>
             <p class="card-command">ucp</p>
@@ -181,6 +182,34 @@ outputs:
             <p class="card-command">agency</p>
             <h3>Patch order your team can sell</h3>
             <p>The output separates copy/feed fixes, platform configuration, structured data, engineering work, and deeper checkout authorization so the next proposal is scoped cleanly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="console-section">
+        <div class="console-section-head">
+          <p class="console-kicker">Current proof</p>
+          <h2>Recent public reads are on the same surfaces agencies now need to explain.</h2>
+          <p>These are source-level or public-surface notes, not private testing. They show the kind of implementation detail the readiness map is designed to catch before a client treats agentic commerce as just another campaign setting.</p>
+        </div>
+        <div class="proof-terminal-grid">
+          <article>
+            <p class="card-command">Shopware</p>
+            <h3>Google feed controlled fields</h3>
+            <p>Flagged that raw merchant option names can land in Google feed attributes that expect canonical values, creating a risk that XML validates while Merchant Center eligibility suffers.</p>
+            <a href="https://github.com/shopware/shopware/pull/16945#issuecomment-4513942040">open note</a>
+          </article>
+          <article>
+            <p class="card-command">WooCommerce</p>
+            <h3>Agentic product visibility lifecycle</h3>
+            <p>Flagged a stale-export edge when products are hidden from agentic commerce after already being synced to Stripe-side product feeds.</p>
+            <a href="https://github.com/woocommerce/woocommerce-gateway-stripe/pull/5458#issuecomment-4513919610">open note</a>
+          </article>
+          <article>
+            <p class="card-command">UCP</p>
+            <h3>Constraint validation boundary</h3>
+            <p>Flagged a spec-shape gap where credential constraints are described as type-scoped but may only validate against a generic schema primitive.</p>
+            <a href="https://github.com/Universal-Commerce-Protocol/ucp/pull/424#issuecomment-4513943299">open note</a>
           </article>
         </div>
       </section>
