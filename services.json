@@ -231,6 +231,72 @@
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20readiness%20proof%20packet"
     },
     {
+      "id": "agent-booking-readiness-proof",
+      "name": "Agent Booking Readiness Proof Packet",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-commerce",
+      "tags": [
+        "agent-booking",
+        "google-ai-mode",
+        "ucp",
+        "mcp",
+        "hotel-booking",
+        "restaurant-booking",
+        "food-delivery",
+        "direct-booking",
+        "hospitality",
+        "schema",
+        "llms.txt",
+        "agents.md",
+        "booking-engine",
+        "white-label"
+      ],
+      "scope": "Outside proof packet for one hotel, restaurant, booking-engine, food delivery, hospitality agency, or direct-booking surface preparing for Google AI Mode, UCP, MCP, menus, rates, availability, policies, safe action boundaries, and buyer-safe launch evidence.",
+      "tiers": [
+        {
+          "name": "Booking readiness packet",
+          "price_usd": 750,
+          "delivery": "3 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20booking%20readiness%20proof"
+        },
+        {
+          "name": "Partner support",
+          "price_usd": 2500,
+          "delivery": "1 week",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20booking%20partner%20support"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "company_name",
+        "surface_url",
+        "hotel_restaurant_booking_or_agency_context",
+        "target_agent_booking_claim",
+        "authorized_scope",
+        "contact_email",
+        "deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "public discovery readback",
+        "llms.txt and agents.md notes",
+        "UCP and MCP server-card verification",
+        "schema, sitemap, and markdown negotiation notes",
+        "rates, menu, availability, policy, fee, and support signal inventory",
+        "booking, order, payment, guest-data, and loyalty boundary notes",
+        "buyer-safe proof summary",
+        "technical appendix",
+        "ranked patch order",
+        "post-change re-check"
+      ],
+      "safety_scope": "Public surfaces only by default: no login, no reservation creation, no food order, no checkout, no payment, no loyalty account, no guest-data lookup, no private endpoint guessing, and no customer testing without explicit authorization.",
+      "url": "https://tateprograms.com/agent-booking-readiness.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20booking%20readiness%20proof"
+    },
+    {
       "id": "universal-cart-readiness-map",
       "name": "Google Universal Cart and UCP Readiness Map",
       "price_usd": 750,
