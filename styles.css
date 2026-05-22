@@ -4534,12 +4534,17 @@ footer a {
 .shell-page .console-subtitle,
 .shell-page .hero-subtitle,
 .shell-page .console-card p,
+.shell-page .proof-terminal-grid p,
 .shell-page .audit-preview-grid p,
 .shell-page .project-grid p,
 .shell-page .release-note,
 .shell-page .release-note p,
 .shell-page .release-note li {
   color: #5f675f;
+}
+
+.shell-page .proof-terminal-grid h3 {
+  color: #17211b;
 }
 
 .shell-page .console-ledger div,
