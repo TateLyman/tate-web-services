@@ -25,7 +25,7 @@
       }
     }
   },
-  "last_updated": "2026-05-21",
+  "last_updated": "2026-05-22",
   "currency": "USD",
   "services": [
     {
@@ -115,12 +115,15 @@
         "shopify",
         "woocommerce",
         "product-data",
+        "lighthouse-agentic-browsing",
+        "webmcp",
+        "llms.txt",
         "seo",
         "paid-media",
         "cro",
         "white-label"
       ],
-      "scope": "White-label readiness map for one ecommerce client domain, built for agencies preparing clients for Google AI Mode, Universal Cart, UCP, public product discovery, structured data, checkout handoff, policy clarity, and agentic commerce.",
+      "scope": "White-label readiness map for one ecommerce client domain, built for agencies preparing clients for Google AI Mode, Universal Cart, UCP, Chrome Lighthouse Agentic Browsing, WebMCP, public product discovery, structured data, checkout handoff, policy clarity, and agentic commerce.",
       "tiers": [
         {
           "name": "White-label readiness map",
@@ -150,6 +153,8 @@
       "deliverables": [
         "public UCP and agent-discovery map",
         "product schema and feed-visible signal review",
+        "Lighthouse Agentic Browsing and WebMCP readiness notes",
+        "agent-readable form and task-completion friction notes",
         "policy and support-page clarity notes",
         "checkout handoff and private-proof boundary",
         "client-safe summary",
