@@ -231,6 +231,74 @@
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20readiness%20proof%20packet"
     },
     {
+      "id": "mcp-agent-security-proof-packet",
+      "name": "MCP Agent Security Proof Packet",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-security",
+      "tags": [
+        "mcp-security",
+        "agent-tool-security",
+        "runtime-security",
+        "tool-risk",
+        "prompt-injection",
+        "exfiltration",
+        "policy-actions",
+        "audit-trail",
+        "human-review",
+        "a2a",
+        "agent-identity",
+        "gemini-testing",
+        "mcp",
+        "agentic-ai",
+        "white-label"
+      ],
+      "scope": "Outside proof packet for one approved MCP, agent-tool, runtime-security, marketplace-skill, enterprise-copilot, or agent-demo surface. Reviews public discovery, tool boundaries, prompt-injection and exfiltration exposure, policy actions, audit evidence, human-review gates, A2A identity signals, and patch order.",
+      "tiers": [
+        {
+          "name": "Outside proof packet",
+          "price_usd": 750,
+          "delivery": "3 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=MCP%20agent%20security%20proof%20packet"
+        },
+        {
+          "name": "Partner support",
+          "price_usd": 2500,
+          "delivery": "1 week",
+          "contact_url": "mailto:hello@tateprograms.com?subject=MCP%20agent%20security%20partner%20support"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "company_name",
+        "surface_url",
+        "mcp_or_agent_tool_context",
+        "target_claim_to_support",
+        "authorized_scope",
+        "contact_email",
+        "deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "public discovery readback",
+        "MCP and agent-tool boundary inventory",
+        "prompt-injection and exfiltration notes",
+        "policy allow, deny, quarantine, and human-review evidence",
+        "audit trail and buyer-proof gaps",
+        "A2A identity and capability declaration notes",
+        "client-safe proof summary",
+        "technical appendix",
+        "ranked patch order",
+        "post-change re-check"
+      ],
+      "safety_scope": "Public surfaces only by default: no credential use, no login, no private endpoint guessing, no destructive testing, no paid call, no wallet signature, and no customer environment testing without written authorization.",
+      "url": "https://tateprograms.com/agent-security-evidence-2026.html",
+      "sample_report_url": "https://tateprograms.com/agent-security-sample-report.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=MCP%20agent%20security%20proof%20packet"
+    },
+    {
       "id": "agent-booking-readiness-proof",
       "name": "Agent Booking Readiness Proof Packet",
       "price_usd": 750,
