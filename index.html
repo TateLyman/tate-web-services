@@ -250,6 +250,7 @@ AgentPay      wallet verified
 402 Index     4 live paid endpoints
 Agentic Mkt   4 Bazaar-valid endpoints
 Shopify UCP   header-path fix merged
+Shopware UCP  localhost order link fixed
 ToolRouter    StableTravel x402 merged
 DCP           spend-accounting patch merged
 TaskHawk      patch re-check clean</code></pre>
@@ -427,6 +428,11 @@ TaskHawk      patch re-check clean</code></pre>
             <span>merged fix</span>
             <h3>Shopify UCP header path landed</h3>
             <p>A public review caught that <code>ucp discover</code> still missed the new custom-header path. The maintainer centralized the logic, credited the catch, and merged the fix.</p>
+          </article>
+          <article>
+            <span>fixed upstream</span>
+            <h3>Shopware UCP order proof corrected</h3>
+            <p>A UCP checkout review caught a production order payload returning a localhost permalink. Shopware moved the URL into a sales-channel-aware builder and the re-check closed the note.</p>
           </article>
           <article>
             <span>merged launch</span>
