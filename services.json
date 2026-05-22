@@ -1306,6 +1306,8 @@
     "No wallet keys, recovery phrases, or production secrets should be sent."
   ],
   "proof": [
+    "https://github.com/Shopify/ucp-cli/pull/13#issuecomment-4521934183",
+    "https://github.com/shopware/shopware/pull/16945#issuecomment-4522866522",
     "https://github.com/Cryptorefills/agentic-commerce/pull/3#issuecomment-4478268227",
     "https://github.com/coinbase/x402/pull/154#issuecomment-4480044559",
     "https://github.com/agno-agi/agno/pull/7885#issuecomment-4480053042",
