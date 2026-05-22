@@ -252,6 +252,8 @@ Agentic Mkt   4 Bazaar-valid endpoints
 Shopify UCP   header-path fix merged
 Shopware UCP  localhost order link fixed
 ToolRouter    StableTravel x402 merged
+Resonate      x402 no-store PR open
+CommandLayer  paid receipt PR open
 DCP           spend-accounting patch merged
 TaskHawk      patch re-check clean</code></pre>
           </div>
@@ -443,6 +445,16 @@ TaskHawk      patch re-check clean</code></pre>
             <span>merged launch</span>
             <h3>ToolRouter StableTravel shipped</h3>
             <p>The x402 travel-tool PR merged after focused re-checks, 326 StableTravel tests passing, and a clean server-side wrapper path for the paid route.</p>
+          </article>
+          <article>
+            <span>tested PR</span>
+            <h3>Resonate x402 challenges hardened</h3>
+            <p>A music-commerce x402 route now has a PR adding <code>Cache-Control: no-store</code> to 402 challenges, with the focused HTTP contract test passing locally.</p>
+          </article>
+          <article>
+            <span>tested PR</span>
+            <h3>CommandLayer receipts made non-cacheable</h3>
+            <p>A paid-action receipt example now has a PR marking receipt and payment-error responses <code>no-store</code>, plus tests and a synced clean-install lockfile.</p>
           </article>
           <article>
             <span>merged fix</span>
