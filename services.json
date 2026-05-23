@@ -25,7 +25,7 @@
       }
     }
   },
-  "last_updated": "2026-05-22",
+  "last_updated": "2026-05-23",
   "currency": "USD",
   "services": [
     {
@@ -97,6 +97,56 @@
       ],
       "url": "https://tateprograms.com/agent-commerce-readiness-sprint.html",
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20sprint"
+    },
+    {
+      "id": "agent-readiness-monitor",
+      "name": "Agent Readiness Monitor",
+      "price_usd": 4500,
+      "delivery": "monthly",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-infrastructure",
+      "tags": [
+        "agent-commerce",
+        "ucp",
+        "universal-cart",
+        "ap2",
+        "acp",
+        "x402",
+        "mpp",
+        "mcp",
+        "paid-apis",
+        "marketplace",
+        "governed-agents",
+        "buyer-proof",
+        "monitoring"
+      ],
+      "scope": "Monthly external readiness monitor for three to five approved launch surfaces where agent-commerce, x402, MCP, UCP, paid API, marketplace, or governed-tool claims can drift after release.",
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "surfaces_to_monitor",
+        "marketplace_or_docs_urls",
+        "payment_or_checkout_rail",
+        "internal_owner",
+        "authorized_scope",
+        "contact_email",
+        "launch_or_partner_deadlines",
+        "notes"
+      ],
+      "deliverables": [
+        "baseline launch-surface map",
+        "weekly public drift checks",
+        "buyer-risk queue",
+        "payment and tool-boundary regression notes",
+        "discovery and documentation mismatch notes",
+        "replay commands",
+        "ranked patch order",
+        "monthly private proof summary"
+      ],
+      "safety_scope": "Public surfaces only by default: no login, no private endpoint guessing, no customer-system probing, no wallet signatures, no real paid calls, and no public disclosure without sign-off.",
+      "url": "https://tateprograms.com/agent-readiness-monitor.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20readiness%20monitor"
     },
     {
       "id": "outside-proof-packet",
