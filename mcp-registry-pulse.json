@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-22",
+  "generatedAt": "2026-05-23",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 150,
-  "githubReposDetected": 90,
+  "githubReposDetected": 91,
   "readmesSampled": 62,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -14,7 +14,7 @@
   ],
   "totals": {
     "latestTotal": 150,
-    "repos": 90,
+    "repos": 91,
     "readableRepos": 62,
     "packageCount": 29,
     "remoteCount": 128,
@@ -23,9 +23,9 @@
     "both": 9,
     "noInstallPath": 119,
     "websiteVisible": 110,
-    "missingTitle": 48,
+    "missingTitle": 47,
     "shortDescription": 81,
-    "recent45": 83,
+    "recent45": 80,
     "orgOwned": 49,
     "issuesEnabled": 61,
     "archived": 0,
