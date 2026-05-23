@@ -99,6 +99,51 @@
       "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20commerce%20readiness%20sprint"
     },
     {
+      "id": "outside-proof-packet",
+      "name": "Outside Proof Packet",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-infrastructure",
+      "tags": [
+        "agent-commerce",
+        "x402",
+        "mcp",
+        "ucp",
+        "universal-cart",
+        "paid-apis",
+        "agent-security",
+        "public-proof",
+        "launch-readiness",
+        "buyer-proof"
+      ],
+      "scope": "Fixed-scope outside proof packet for one approved public launch, demo, repo, paid API, MCP server, UCP surface, marketplace listing, or security-tool surface.",
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "launch_or_demo_surface",
+        "claim_to_support",
+        "authorized_public_scope",
+        "contact_email",
+        "deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "public discovery readback",
+        "payment or tool boundary evidence",
+        "browser and CORS behavior notes",
+        "cache and replay posture notes",
+        "exact replay commands",
+        "private evidence table",
+        "ranked patch order",
+        "buyer-safe summary"
+      ],
+      "safety_scope": "Public surfaces only by default: no login, no private endpoint guessing, no customer-system probing, no wallet signatures, no real paid calls, and no public disclosure without sign-off.",
+      "url": "https://tateprograms.com/outside-proof-packet.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Outside%20proof%20packet"
+    },
+    {
       "id": "ai-mode-ucp-agency-partner",
       "name": "AI Mode + UCP Agency Partner Readiness Map",
       "price_usd": 750,
