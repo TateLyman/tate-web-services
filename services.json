@@ -194,6 +194,55 @@
       "contact_url": "mailto:hello@tateprograms.com?subject=Outside%20proof%20packet"
     },
     {
+      "id": "agentic-commerce-product-data-audit",
+      "name": "Agentic Commerce Product Data Audit",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-commerce",
+      "tags": [
+        "agentic-commerce",
+        "ai-referred-retail",
+        "product-data",
+        "catalogs",
+        "marketplaces",
+        "pim",
+        "universal-cart",
+        "ucp",
+        "acp",
+        "mcp",
+        "google-ai-mode",
+        "policy-evidence",
+        "checkout-handoff",
+        "buyer-proof"
+      ],
+      "scope": "Fixed-scope outside proof packet for one approved product-data, catalog, marketplace, retailer, commerce-agent, or ecommerce-agency surface preparing for AI-referred shoppers and agentic checkout.",
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "product_or_catalog_surface",
+        "agentic_commerce_claim",
+        "authorized_public_scope",
+        "contact_email",
+        "deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "agent-readable discovery readback",
+        "product-data authority map",
+        "schema and sitemap evidence",
+        "policy and checkout handoff notes",
+        "UCP ACP MCP pointer review",
+        "missing fields and stale paths",
+        "ranked patch order",
+        "buyer-safe summary"
+      ],
+      "safety_scope": "Public surfaces only by default: no login, no cart mutation, no payment, no private endpoint guessing, no customer-system probing, and no public disclosure without sign-off.",
+      "url": "https://tateprograms.com/agentic-commerce-product-data-audit.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agentic%20commerce%20product%20data%20audit"
+    },
+    {
       "id": "ai-mode-ucp-agency-partner",
       "name": "AI Mode + UCP Agency Partner Readiness Map",
       "price_usd": 750,
