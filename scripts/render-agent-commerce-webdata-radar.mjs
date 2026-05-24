@@ -23,6 +23,7 @@ function normalizeRows(sourceName, payload) {
     number: row.number,
     title: row.title,
     url: row.url,
+    state: row.state,
     category: row.category,
     priority: row.priority,
     priorityScore: Number(row.priorityScore ?? 0),
@@ -56,7 +57,7 @@ function summarize(x402, paySkills) {
   }))
 
   const highIntent = rows
-    .filter((row) => row.revenueScore >= 62)
+    .filter((row) => row.state === 'open' && row.revenueScore >= 62)
     .sort((a, b) => b.revenueScore - a.revenueScore || new Date(b.updatedAt) - new Date(a.updatedAt))
 
   const categories = rows.reduce((acc, row) => {
@@ -87,8 +88,8 @@ function summarize(x402, paySkills) {
     ],
     observedCount: rows.length,
     highIntentCount: highIntent.length,
-    mainnetCount: rows.filter((row) => row.networks.includes('mainnet')).length,
-    pricedCount: rows.filter((row) => row.maxPriceUsd > 0).length,
+    mainnetCount: rows.filter((row) => row.state === 'open' && row.networks.includes('mainnet')).length,
+    pricedCount: rows.filter((row) => row.state === 'open' && row.maxPriceUsd > 0).length,
     highIntent: highIntent.slice(0, 16),
     rows,
     topCategories: Object.entries(categories).sort((a, b) => b[1] - a[1]).slice(0, 10),
@@ -127,7 +128,7 @@ function renderTableRow(row) {
               <tr>
                 <td><a href="${escapeHtml(row.url)}" target="_blank" rel="noreferrer">#${row.number}</a></td>
                 <td>${escapeHtml(row.title)}</td>
-                <td>${escapeHtml(row.sourceName)}</td>
+                <td>${escapeHtml(row.sourceName)} / ${escapeHtml(row.state)}</td>
                 <td>${escapeHtml(row.category)}</td>
                 <td>${escapeHtml(row.networks.join(', ') || 'none')}</td>
                 <td>${row.revenueScore}</td>
