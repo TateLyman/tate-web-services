@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-23",
+  "generatedAt": "2026-05-24",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 150,
-  "githubReposDetected": 91,
+  "latestServersAnalyzed": 151,
+  "githubReposDetected": 90,
   "readmesSampled": 62,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 150,
-    "repos": 91,
+    "latestTotal": 151,
+    "repos": 90,
     "readableRepos": 62,
-    "packageCount": 29,
+    "packageCount": 30,
     "remoteCount": 128,
-    "packageOnly": 20,
+    "packageOnly": 21,
     "remoteOnly": 119,
     "both": 9,
     "noInstallPath": 119,
     "websiteVisible": 110,
-    "missingTitle": 47,
+    "missingTitle": 48,
     "shortDescription": 81,
-    "recent45": 80,
+    "recent45": 81,
     "orgOwned": 49,
     "issuesEnabled": 61,
     "archived": 0,
-    "mcpServers": 41,
-    "install": 32,
+    "mcpServers": 40,
+    "install": 31,
     "serverJson": 8,
     "safety": 49,
-    "stdioPackageCount": 27,
-    "stdioPackageReadable": 18,
-    "stdioBoundaryDocs": 10,
-    "secretPackageConfig": 13,
+    "stdioPackageCount": 28,
+    "stdioPackageReadable": 19,
+    "stdioBoundaryDocs": 11,
+    "secretPackageConfig": 14,
     "secretRemoteHeaders": 25,
-    "glama": 32,
-    "smoke": 18
+    "glama": 33,
+    "smoke": 17
   },
   "sampleServers": [
     {
@@ -265,6 +265,30 @@
       ]
     },
     {
+      "name": "ai.dynsoft/sac",
+      "title": "SaC — Software as Content",
+      "description": "Give your AI agent the ability to respond with live, interactive apps that evolve.",
+      "publicProofScore": 55,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": true,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-05-24T02:09:53.574937Z",
+      "repo": "Software-As-Content/software-as-content-sdk",
+      "websiteUrl": "https://pypi.org/project/sac-sdk/",
+      "primaryUrl": "https://pypi.org/project/sac-sdk/",
+      "topGaps": [
+        "Expand the registry description",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
+      ]
+    },
+    {
       "name": "ai.adramp/google-ads",
       "title": "",
       "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
@@ -421,28 +445,6 @@
         "Clarify remote auth and trust boundary",
         "Add install or client command",
         "Add smoke-test or tool-list proof",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.ludo/game-assets",
-      "title": "Ludo AI Game Assets",
-      "description": "Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.",
-      "publicProofScore": 59,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-01-30T17:59:40.034021Z",
-      "repo": "Ludo-AI/ludo-mcp",
-      "websiteUrl": "https://ludo.ai",
-      "primaryUrl": "https://ludo.ai",
-      "topGaps": [
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
         "Refresh stale registry metadata"
       ]
     }
