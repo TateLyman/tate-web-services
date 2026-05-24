@@ -1,0 +1,3603 @@
+{
+  "runDate": "2026-05-24",
+  "sources": [
+    {
+      "name": "coinbase/x402",
+      "url": "https://github.com/coinbase/x402/pulls",
+      "observedCount": 50,
+      "priorityCount": 22
+    },
+    {
+      "name": "solana-foundation/pay-skills",
+      "url": "https://github.com/solana-foundation/pay-skills/pulls",
+      "observedCount": 72,
+      "priorityCount": 28
+    }
+  ],
+  "observedCount": 122,
+  "highIntentCount": 58,
+  "mainnetCount": 53,
+  "pricedCount": 40,
+  "highIntent": [
+    {
+      "sourceName": "coinbase/x402",
+      "number": 183,
+      "title": "feat: add Data-Joule to x402 ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/183",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-23T01:25:53Z",
+      "ageHours": 39,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.00005,
+      "summary": "**Data-Joule** is an AI inference node running on a Raspberry Pi in Montréal that participates in real-time grid demand response via OpenADR 3.0.",
+      "urls": [
+        "https://data-joule.com/api/inference`",
+        "https://data-joule.com/demo",
+        "https://data-joule.com/method",
+        "https://github.com/Data-Joule/data-joule-web"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 76,
+      "title": "Add Crypto ETF Sentinel — US spot crypto ETF regulatory intelligence",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/76",
+      "category": "identity / credit",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-22T10:36:21Z",
+      "ageHours": 54,
+      "networks": [
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "agent identity or risk-scoring claims",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 1,
+      "summary": "Adds **Crypto ETF Sentinel** as a `finance` provider: a regulatory data oracle for the US spot crypto ETF universe. 22 paid endpoints covering the full SEC filing pipeline.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 182,
+      "title": "Add Lithium Research Vault to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/182",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 64,
+      "updatedAt": "2026-05-22T04:58:48Z",
+      "ageHours": 61,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.2,
+      "summary": "**Lithium Research Vault** — two x402-payable endpoints serving structured",
+      "urls": [
+        "https://clink-lithium-vault.fly.dev",
+        "https://agentic.market/services/clink-lithium-vault-fly-dev",
+        "https://clink-lithium-vault.fly.dev/favicon.ico"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 181,
+      "title": "Add Fleet x402 Microservices to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/181",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-22T02:00:13Z",
+      "ageHours": 80,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "**Fleet x402 Microservices** — two production x402-payable services running on Base mainnet.",
+      "urls": [
+        "https://fleet-x402-audit.fly.dev",
+        "https://fleet-x402-audit.fly.dev/.well-known/x402-listing",
+        "https://fleet-x402-audit.fly.dev/favicon.ico"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 138,
+      "title": "Add x402watch to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/138",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 76,
+      "updatedAt": "2026-05-21T06:14:30Z",
+      "ageHours": 508,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds x402watch to the ecosystem partners directory.",
+      "urls": [
+        "https://api.x402.printmoneylab.com/mcp",
+        "https://api.x402.printmoneylab.com/mcp`",
+        "https://x402.printmoneylab.com",
+        "https://api.x402.printmoneylab.com",
+        "https://github.com/printmoneylab/x402watch",
+        "https://github.com/printmoneylab/x402watch-data",
+        "https://github.com/printmoneylab"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 74,
+      "title": "Add Japan Data APIs — 7 x402 services on Base + Solana mainnet",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/74",
+      "category": "bounty / escrow",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-20T21:13:26Z",
+      "ageHours": 114,
+      "networks": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.25,
+      "summary": "Adds **seven Japan-specific x402-paid APIs** to the registry under the `mameta/` operator. All seven accept USDC on **Solana mainnet** (and Base + Polygon), so agents on `pay` can pay any of them without leaving Solana.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 167,
+      "title": "feat(ecosystem): add Crest Deployment Systems -- security audit + crypto data",
+      "url": "https://github.com/coinbase/x402/pull/167",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-20T01:17:17Z",
+      "ageHours": 214,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 1,
+      "summary": "**Crest x402 Audit** (https://audit.crestsystems.ai)",
+      "urls": [
+        "https://audit.crestsystems.ai",
+        "https://data.crestsystems.ai",
+        "https://crestsystems.ai"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 160,
+      "title": "Add KR Crypto Intelligence to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/160",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-20T01:09:53Z",
+      "ageHours": 378,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add KR Crypto Intelligence to the ecosystem — Korean crypto market data + AI sentiment API for AI agents.",
+      "urls": [
+        "https://api.printmoneylab.com/openapi.json",
+        "https://github.com/bakyang2/kr-crypto-intelligence"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 174,
+      "title": "MEV Intelligence",
+      "url": "https://github.com/coinbase/x402/pull/174",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-19T21:08:00Z",
+      "ageHours": 125,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "This PR adds MEV Intelligence to the x402 ecosystem under Services/Endpoints.",
+      "urls": [
+        "https://mev.advalorem.io/intelligence/openapi"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 134,
+      "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
+      "url": "https://github.com/coinbase/x402/pull/134",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 72,
+      "updatedAt": "2026-05-18T17:15:39Z",
+      "ageHours": 545,
+      "networks": [
+        "Base",
+        "Base Sepolia",
+        "Solana",
+        "testnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds [Agiotage](https://agiotage.finance) to the x402 ecosystem page.",
+      "urls": [
+        "https://agiotage.finance",
+        "https://agio-protocol-production.up.railway.app",
+        "https://agio-protocol-production.up.railway.app/v1/x402/info",
+        "https://www.npmjs.com/package/agiotage-mcp",
+        "https://agiotage.finance/.well-known/agiotage.json"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 161,
+      "title": "ecosystem: add RugGuard — pre-trade rug-check API for AI agents",
+      "url": "https://github.com/coinbase/x402/pull/161",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 94,
+      "updatedAt": "2026-05-17T06:26:43Z",
+      "ageHours": 310,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds RugGuard to the ecosystem under \"Services/Endpoints\".",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 164,
+      "title": "feat: add Jorkal NFT Data API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/164",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 72,
+      "updatedAt": "2026-05-16T22:49:31Z",
+      "ageHours": 221,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.005,
+      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
+      "urls": [
+        "https://vercel-deploy-alpha-puce.vercel.app",
+        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 158,
+      "title": "Add Crinkl to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/158",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 84,
+      "updatedAt": "2026-05-16T22:36:20Z",
+      "ageHours": 405,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.1,
+      "summary": "Adds Crinkl to the x402 ecosystem page as a `Services/Endpoints` provider.",
+      "urls": [
+        "https://www.crinkl.xyz/developers",
+        "https://api.crinkl.xyz",
+        "https://api.crinkl.xyz/x402/catalog",
+        "https://solscan.io/tx/2uB7Y91N6GQPiAnemQ7yFUpdhUygjoqu4s86MXf4RJSfPza1VaCpC8Uxf1eDcZBQJ7woEaBUq98zYxxT4aBVAM1E"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 23,
+      "title": "feat(security): add algovoi/agent-trust-bench — AI agent payment security testing",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/23",
+      "category": "identity / credit",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-16T17:24:48Z",
+      "ageHours": 444,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "agent identity or risk-scoring claims",
+        "untrusted web-data ingestion",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 10,
+      "summary": "`providers/algovoi/agent-trust-bench` — a live, open security-testing instrument for evaluating AI agent payment behaviour against adversarial x402 challenges.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 20,
+      "title": "feat: add b402/paysh-send — private USDC transfers via x402",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/20",
+      "category": "shopping / fulfillment",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-16T16:36:14Z",
+      "ageHours": 447,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 10,
+      "summary": "Adds [paysh-send](https://paysh-shield-production.up.railway.app) — pay-per-call private USDC transfer over x402 on Solana — as `b402/paysh-send`.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 35,
+      "title": "Add KR Crypto Intelligence provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/35",
+      "category": "finance / market data",
+      "priority": "urgent",
+      "priorityScore": 82,
+      "updatedAt": "2026-05-16T14:44:33Z",
+      "ageHours": 417,
+      "networks": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 17,
+      "summary": "Add KR Crypto Intelligence — Korean crypto market data API for AI agents.",
+      "urls": [],
+      "revenueScore": 100
+    }
+  ],
+  "rows": [
+    {
+      "sourceName": "coinbase/x402",
+      "number": 161,
+      "title": "ecosystem: add RugGuard — pre-trade rug-check API for AI agents",
+      "url": "https://github.com/coinbase/x402/pull/161",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 94,
+      "updatedAt": "2026-05-17T06:26:43Z",
+      "ageHours": 310,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds RugGuard to the ecosystem under \"Services/Endpoints\".",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 158,
+      "title": "Add Crinkl to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/158",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 84,
+      "updatedAt": "2026-05-16T22:36:20Z",
+      "ageHours": 405,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.1,
+      "summary": "Adds Crinkl to the x402 ecosystem page as a `Services/Endpoints` provider.",
+      "urls": [
+        "https://www.crinkl.xyz/developers",
+        "https://api.crinkl.xyz",
+        "https://api.crinkl.xyz/x402/catalog",
+        "https://solscan.io/tx/2uB7Y91N6GQPiAnemQ7yFUpdhUygjoqu4s86MXf4RJSfPza1VaCpC8Uxf1eDcZBQJ7woEaBUq98zYxxT4aBVAM1E"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 138,
+      "title": "Add x402watch to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/138",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 76,
+      "updatedAt": "2026-05-21T06:14:30Z",
+      "ageHours": 508,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds x402watch to the ecosystem partners directory.",
+      "urls": [
+        "https://api.x402.printmoneylab.com/mcp",
+        "https://api.x402.printmoneylab.com/mcp`",
+        "https://x402.printmoneylab.com",
+        "https://api.x402.printmoneylab.com",
+        "https://github.com/printmoneylab/x402watch",
+        "https://github.com/printmoneylab/x402watch-data",
+        "https://github.com/printmoneylab"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 181,
+      "title": "Add Fleet x402 Microservices to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/181",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-22T02:00:13Z",
+      "ageHours": 80,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "**Fleet x402 Microservices** — two production x402-payable services running on Base mainnet.",
+      "urls": [
+        "https://fleet-x402-audit.fly.dev",
+        "https://fleet-x402-audit.fly.dev/.well-known/x402-listing",
+        "https://fleet-x402-audit.fly.dev/favicon.ico"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 167,
+      "title": "feat(ecosystem): add Crest Deployment Systems -- security audit + crypto data",
+      "url": "https://github.com/coinbase/x402/pull/167",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-20T01:17:17Z",
+      "ageHours": 214,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 1,
+      "summary": "**Crest x402 Audit** (https://audit.crestsystems.ai)",
+      "urls": [
+        "https://audit.crestsystems.ai",
+        "https://data.crestsystems.ai",
+        "https://crestsystems.ai"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 160,
+      "title": "Add KR Crypto Intelligence to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/160",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-20T01:09:53Z",
+      "ageHours": 378,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add KR Crypto Intelligence to the ecosystem — Korean crypto market data + AI sentiment API for AI agents.",
+      "urls": [
+        "https://api.printmoneylab.com/openapi.json",
+        "https://github.com/bakyang2/kr-crypto-intelligence"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 174,
+      "title": "MEV Intelligence",
+      "url": "https://github.com/coinbase/x402/pull/174",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-19T21:08:00Z",
+      "ageHours": 125,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "This PR adds MEV Intelligence to the x402 ecosystem under Services/Endpoints.",
+      "urls": [
+        "https://mev.advalorem.io/intelligence/openapi"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 134,
+      "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
+      "url": "https://github.com/coinbase/x402/pull/134",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 72,
+      "updatedAt": "2026-05-18T17:15:39Z",
+      "ageHours": 545,
+      "networks": [
+        "Base",
+        "Base Sepolia",
+        "Solana",
+        "testnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds [Agiotage](https://agiotage.finance) to the x402 ecosystem page.",
+      "urls": [
+        "https://agiotage.finance",
+        "https://agio-protocol-production.up.railway.app",
+        "https://agio-protocol-production.up.railway.app/v1/x402/info",
+        "https://www.npmjs.com/package/agiotage-mcp",
+        "https://agiotage.finance/.well-known/agiotage.json"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 164,
+      "title": "feat: add Jorkal NFT Data API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/164",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 72,
+      "updatedAt": "2026-05-16T22:49:31Z",
+      "ageHours": 221,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.005,
+      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
+      "urls": [
+        "https://vercel-deploy-alpha-puce.vercel.app",
+        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 183,
+      "title": "feat: add Data-Joule to x402 ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/183",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-23T01:25:53Z",
+      "ageHours": 39,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.00005,
+      "summary": "**Data-Joule** is an AI inference node running on a Raspberry Pi in Montréal that participates in real-time grid demand response via OpenADR 3.0.",
+      "urls": [
+        "https://data-joule.com/api/inference`",
+        "https://data-joule.com/demo",
+        "https://data-joule.com/method",
+        "https://github.com/Data-Joule/data-joule-web"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 155,
+      "title": "feat: add AgentLair to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/155",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 68,
+      "updatedAt": "2026-05-20T14:03:31Z",
+      "ageHours": 437,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "AgentLair provides email identity and an encrypted credential vault for AI agents.",
+      "urls": [
+        "https://agentlair.dev",
+        "https://agentlair.dev/docs"
+      ],
+      "revenueScore": 98
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 182,
+      "title": "Add Lithium Research Vault to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/182",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 64,
+      "updatedAt": "2026-05-22T04:58:48Z",
+      "ageHours": 61,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.2,
+      "summary": "**Lithium Research Vault** — two x402-payable endpoints serving structured",
+      "urls": [
+        "https://clink-lithium-vault.fly.dev",
+        "https://agentic.market/services/clink-lithium-vault-fly-dev",
+        "https://clink-lithium-vault.fly.dev/favicon.ico"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 157,
+      "title": "Add docpull to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/157",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 64,
+      "updatedAt": "2026-05-16T23:02:03Z",
+      "ageHours": 426,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds docpull to the x402 ecosystem as a Services/Endpoints partner.",
+      "urls": [
+        "https://docpull.ai",
+        "https://docpull.ai/openapi.json",
+        "https://docpull.ai/mcp",
+        "https://github.com/docpull/docpull"
+      ],
+      "revenueScore": 92
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 154,
+      "title": "Add Sentinel to ecosystem — agent reputation intelligence via x402",
+      "url": "https://github.com/coinbase/x402/pull/154",
+      "category": "ecosystem listing",
+      "priority": "urgent",
+      "priorityScore": 60,
+      "updatedAt": "2026-05-18T17:12:35Z",
+      "ageHours": 440,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.1,
+      "summary": "**Sentinel** is an independent AI agent reputation provider.",
+      "urls": [
+        "https://sentineltrust.xyz",
+        "https://sentineltrust.xyz/v1/reputation?agent=<name"
+      ],
+      "revenueScore": 76
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 159,
+      "title": "feat: add NZRT Wiki API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/159",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 56,
+      "updatedAt": "2026-05-08T01:48:46Z",
+      "ageHours": 399,
+      "networks": [
+        "Base",
+        "Base Sepolia",
+        "USDC",
+        "mainnet",
+        "testnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "**NZRT Wiki API** - pay-per-query knowledge API serving NZRT Network vault content via x402 micropayments on Base.",
+      "urls": [
+        "https://api.nzrtnetwork.com",
+        "https://github.com/NZRTnetwork/nzrt-x402"
+      ],
+      "revenueScore": 74
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 142,
+      "title": "Add TickersFeed to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/142",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 56,
+      "updatedAt": "2026-05-04T19:46:30Z",
+      "ageHours": 498,
+      "networks": [
+        "Base"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Thanks for contributing to x402!",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+      ],
+      "revenueScore": 74
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 169,
+      "title": "Add DPX to x402 ecosystem partners",
+      "url": "https://github.com/coinbase/x402/pull/169",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 54,
+      "updatedAt": "2026-05-18T13:34:40Z",
+      "ageHours": 189,
+      "networks": [
+        "Base",
+        "USDC",
+        "EURC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "settlement or checkout workflow",
+        "trust or risk claims"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "DPX is an AI intelligence oracle and cross-border settlement rail that is x402-native. Uses x402 pay-per-call for its 10-layer Stability Oracle API (climate, macro, FX, ESG, supply chain data). Also runs USDC/EURC settlement on Base at 1.385% all-in via x402.",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+      ],
+      "revenueScore": 72
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 179,
+      "title": "feat: add InstaDomain to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/179",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-21T20:16:21Z",
+      "ageHours": 105,
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "browser/payment-header behavior"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds InstaDomain to the Services/Endpoints category.",
+      "urls": [
+        "https://instadomain.fly.dev/mcp/"
+      ],
+      "revenueScore": 70
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 168,
+      "title": "feat(ecosystem): add AI Talent Atlas — researcher intelligence API",
+      "url": "https://github.com/coinbase/x402/pull/168",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-16T22:16:15Z",
+      "ageHours": 192,
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "Adds AI Talent Atlas to the x402 ecosystem page as a `Services/Endpoints` provider.",
+      "urls": [
+        "https://www.agentrift.tech"
+      ],
+      "revenueScore": 68
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 137,
+      "title": "Add OpenPulsechain to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/137",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-02T12:46:28Z",
+      "ageHours": 532,
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.03,
+      "summary": "**Category:** Services/Endpoints",
+      "urls": [
+        "https://safety.openpulsechain.com",
+        "https://safety.openpulsechain.com/.well-known/x402",
+        "https://www.npmjs.com/package/@openpulsechain/mcp-server"
+      ],
+      "revenueScore": 68
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 144,
+      "title": "Add AgentNews to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/144",
+      "category": "ecosystem listing",
+      "priority": "review",
+      "priorityScore": 44,
+      "updatedAt": "2026-05-04T01:35:55Z",
+      "ageHours": 495,
+      "networks": [
+        "Base",
+        "Tempo",
+        "MPP",
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "multi-protocol payment path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adding AgentNews to the x402 ecosystem.",
+      "urls": [
+        "https://agent.news"
+      ],
+      "revenueScore": 50
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 136,
+      "title": "specs/extensions: add attestseal-trust-attestation",
+      "url": "https://github.com/coinbase/x402/pull/136",
+      "category": "docs / discovery",
+      "priority": "review",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-02T14:03:55Z",
+      "ageHours": 536,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "browser/payment-header behavior"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `specs/extensions/attestseal-trust-attestation.md` defining how a resource server can attach a cryptographically signed third-party trust attestation (Ed25519, signed by an independent attestation authority's DID) to a `402 Payment Required` response.",
+      "urls": [
+        "https://github.com/AttestSeal/attestseal/tree/main/sdk/x402",
+        "https://github.com/AttestSeal/attestseal/tree/main/deploy/cloudflare-worker-x402"
+      ],
+      "revenueScore": 60
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 178,
+      "title": "Add Byte Protocol to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/178",
+      "category": "ecosystem listing",
+      "priority": "watch",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-21T20:27:37Z",
+      "ageHours": 107,
+      "networks": [
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **Byte Protocol** to the ecosystem directory under **Services/Endpoints**.",
+      "urls": [
+        "https://www.payperbyte.io"
+      ],
+      "revenueScore": 42
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 140,
+      "title": "Add x402-saas to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/140",
+      "category": "ecosystem listing",
+      "priority": "watch",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-03T21:51:03Z",
+      "ageHours": 499,
+      "networks": [
+        "USDC"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `x402-saas` to the ecosystem partners list under Services/Endpoints.",
+      "urls": [
+        "https://github.com/kite-builds-erik/x402-kit",
+        "https://x402-saas.surge.sh",
+        "https://x402-saas.onrender.com/__x402/health",
+        "https://x402-saas.onrender.com/api/v1/auth/challenge`",
+        "https://github.com/kite-builds-erik/x402-saas",
+        "https://github.com/kite-builds-erik/x402-saas/blob/main/render.yaml"
+      ],
+      "revenueScore": 42
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 151,
+      "title": "test(python/svm): add unit tests for ExactSvmSchemeV1 client",
+      "url": "https://github.com/coinbase/x402/pull/151",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 34,
+      "updatedAt": "2026-05-20T21:16:17Z",
+      "ageHours": 478,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "testnet"
+      ],
+      "reasons": [
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add 28 unit tests for `python/x402/x402/mechanisms/svm/exact/v1/client.py` — the only file in `mechanisms/svm/exact/v1/` without a dedicated test module. `test_facilitator.py` imports `v1.facilitator` briefly for shared-cache testing, but the V1 client surface had zero direct coverage.",
+      "urls": [],
+      "revenueScore": 46
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 173,
+      "title": "fix(go): add /v2 suffix to module path for Go major version compliance",
+      "url": "https://github.com/coinbase/x402/pull/173",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 34,
+      "updatedAt": "2026-05-19T03:03:08Z",
+      "ageHours": 134,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "The Go module path was `github.com/x402-foundation/x402/go` despite being at major version v2. Go requires that modules at major version ≥2 include the version suffix in their module path — without it, the `go/v2.*` git tags are invisible to the Go toolchain, forcing all consumers to use pseudo-versions instead of tagged releases.",
+      "urls": [],
+      "revenueScore": 46
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 143,
+      "title": "test(python/evm): add unit tests for register helpers",
+      "url": "https://github.com/coinbase/x402/pull/143",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 34,
+      "updatedAt": "2026-05-04T00:36:49Z",
+      "ageHours": 496,
+      "networks": [
+        "Base"
+      ],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **30 unit tests** for `python/x402/x402/mechanisms/evm/exact/register.py` — the only source file in `mechanisms/evm/exact/` without a dedicated unit test module.",
+      "urls": [],
+      "revenueScore": 46
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 177,
+      "title": "Add LogicNodes to ecosystem — 242 A2A workers, x402 on Base, Bazaar-d…",
+      "url": "https://github.com/coinbase/x402/pull/177",
+      "category": "ecosystem listing",
+      "priority": "watch",
+      "priorityScore": 32,
+      "updatedAt": "2026-05-20T04:13:54Z",
+      "ageHours": 110,
+      "networks": [
+        "Base"
+      ],
+      "reasons": [
+        "public ecosystem listing"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "…iscoverable",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+      ],
+      "revenueScore": 38
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 152,
+      "title": "test(python/svm): add unit tests for ExactSvmSchemeV1 facilitator",
+      "url": "https://github.com/coinbase/x402/pull/152",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-20T21:16:13Z",
+      "ageHours": 474,
+      "networks": [],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add 41 unit tests for `python/x402/x402/mechanisms/svm/exact/v1/facilitator.py` — the only file in `mechanisms/svm/exact/v1/` without a dedicated test module after #151 landed `test_exact_v1_client.py`. `test_facilitator.py` covers `ExactSvmFacilitatorScheme` (V2) and only borrows `ExactSvmSchemeV1` for one shared-cache cross-version case; the V1 verify/settle pipelines themselves had no direct coverage.",
+      "urls": [],
+      "revenueScore": 38
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 171,
+      "title": "chore(go/http): remove unused extractPayment/createHTTPResponse",
+      "url": "https://github.com/coinbase/x402/pull/171",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-17T01:56:04Z",
+      "ageHours": 183,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "`go/http/server.go` carries two unexported methods on `*x402HTTPResourceServer` flagged with `//nolint:unused` and comments claiming they are \"kept for API compatibility\":",
+      "urls": [],
+      "revenueScore": 26
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 156,
+      "title": "feat: backport bazaar service-metadata API from x402-foundation",
+      "url": "https://github.com/coinbase/x402/pull/156",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-06T21:08:18Z",
+      "ageHours": 429,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Backports the bazaar resource service-metadata work from upstream [x402-foundation/x402#2200](https://github.com/x402-foundation/x402/pull/2200) (merge commit [`608034f1`](https://github.com/x402-foundation/x402/commit/608034f15aa193eb2b269af711b7f503833a047a)).",
+      "urls": [
+        "https://github.com/x402-foundation/x402/pull/2200",
+        "https://github.com/x402-foundation/x402/commit/608034f15aa193eb2b269af711b7f503833a047a",
+        "https://github.com/x402-foundation/x402/pull/2094",
+        "https://github.com/coinbase/cdp-facilitator/pull/322"
+      ],
+      "revenueScore": 32
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 146,
+      "title": "test(python/evm): add unit tests for ExactEvmSchemeV1 facilitator",
+      "url": "https://github.com/coinbase/x402/pull/146",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-04T04:21:29Z",
+      "ageHours": 492,
+      "networks": [],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds 36 unit tests for `python/x402/x402/mechanisms/evm/exact/v1/facilitator.py` — the only file in `mechanisms/evm/exact/v1/` without a dedicated test module.",
+      "urls": [],
+      "revenueScore": 38
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 166,
+      "title": "docs: add MCP payment policy guidance",
+      "url": "https://github.com/coinbase/x402/pull/166",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 24,
+      "updatedAt": "2026-05-15T16:53:58Z",
+      "ageHours": 216,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- add production guidance for checking MCP payment requirements before signing",
+      "urls": [],
+      "revenueScore": 36
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 165,
+      "title": "docs: clarify payment identifier request binding",
+      "url": "https://github.com/coinbase/x402/pull/165",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 24,
+      "updatedAt": "2026-05-15T16:53:56Z",
+      "ageHours": 216,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- clarify that payment identifier records should be bound to a normalized request fingerprint",
+      "urls": [],
+      "revenueScore": 36
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 163,
+      "title": "Change adex aura to heyAura",
+      "url": "https://github.com/coinbase/x402/pull/163",
+      "category": "ecosystem listing",
+      "priority": "watch",
+      "priorityScore": 24,
+      "updatedAt": "2026-05-15T14:55:01Z",
+      "ageHours": 243,
+      "networks": [],
+      "reasons": [
+        "public ecosystem listing"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Thanks for contributing to x402!",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+      ],
+      "revenueScore": 30
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 153,
+      "title": "feat(ecosystem): update TickersFeed — PNG logo and improved description",
+      "url": "https://github.com/coinbase/x402/pull/153",
+      "category": "ecosystem listing",
+      "priority": "watch",
+      "priorityScore": 24,
+      "updatedAt": "2026-05-05T19:21:09Z",
+      "ageHours": 460,
+      "networks": [],
+      "reasons": [
+        "public ecosystem listing"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Thanks for contributing to x402!",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification",
+        "https://tickersfeed.net"
+      ],
+      "revenueScore": 30
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 172,
+      "title": "test(paywall): replace it.todo stubs with real tests",
+      "url": "https://github.com/coinbase/x402/pull/172",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 22,
+      "updatedAt": "2026-05-17T02:12:00Z",
+      "ageHours": 183,
+      "networks": [
+        "testnet"
+      ],
+      "reasons": [
+        "browser/payment-header behavior"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "`typescript/packages/http/paywall/src/index.test.ts` shipped as a tautology (`expect(true).toBe(true)`) plus three `it.todo()` placeholders. This PR replaces them with real tests against the package's documented public API.",
+      "urls": [],
+      "revenueScore": 34
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 145,
+      "title": "test(python/evm): add unit tests for ExactEvmSchemeV1 client",
+      "url": "https://github.com/coinbase/x402/pull/145",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 22,
+      "updatedAt": "2026-05-04T02:45:38Z",
+      "ageHours": 494,
+      "networks": [
+        "Base",
+        "testnet"
+      ],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Add **23 unit tests** for `python/x402/x402/mechanisms/evm/exact/v1/client.py` — the last source file in `mechanisms/evm/exact/` without a dedicated unit test module.",
+      "urls": [
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 28
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 180,
+      "title": "feat: add arbitrum and arbitrum-sepolia to NetworkSchema",
+      "url": "https://github.com/coinbase/x402/pull/180",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 20,
+      "updatedAt": "2026-05-20T14:39:12Z",
+      "ageHours": 98,
+      "networks": [
+        "Base",
+        "USDC",
+        "testnet"
+      ],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `arbitrum` (chain ID 42161) and `arbitrum-sepolia` (chain ID 421614) to the TypeScript `NetworkSchema` enum, `SupportedEVMNetworks` array, and `EvmNetworkToChainId` map in `typescript/packages/legacy/x402/src/types/shared/network.ts`.",
+      "urls": [],
+      "revenueScore": 32
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 149,
+      "title": "test(python/svm): add unit tests for utils helpers",
+      "url": "https://github.com/coinbase/x402/pull/149",
+      "category": "x402 repo activity",
+      "priority": "watch",
+      "priorityScore": 20,
+      "updatedAt": "2026-05-05T18:19:37Z",
+      "ageHours": 480,
+      "networks": [
+        "Solana",
+        "USDC",
+        "mainnet",
+        "testnet"
+      ],
+      "reasons": [
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add 54 unit tests for `python/x402/x402/mechanisms/svm/utils.py` helpers without prior dedicated coverage. `test_index.py` already covers the public re-exports (`normalize_network`, `validate_svm_address`, `get_usdc_address`, `convert_to_token_amount`); the new `test_utils.py` covers the remaining helpers:",
+      "urls": [],
+      "revenueScore": 32
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 148,
+      "title": "test(python/evm): add unit tests for FacilitatorWeb3Signer methods",
+      "url": "https://github.com/coinbase/x402/pull/148",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 14,
+      "updatedAt": "2026-05-04T12:27:04Z",
+      "ageHours": 484,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "`tests/unit/mechanisms/evm/test_signer.py` previously covered only the constructor, `address` property, and protocol surface of `FacilitatorWeb3Signer` in `python/x402/x402/mechanisms/evm/signers.py`. The actual on-chain methods were untested. This PR adds **17 unit tests** that exercise every method's behavior with a mocked `Web3` client.",
+      "urls": [
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 20
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 139,
+      "title": "test(python/evm): add unit tests for eip3009_utils helpers",
+      "url": "https://github.com/coinbase/x402/pull/139",
+      "category": "protocol implementation",
+      "priority": "watch",
+      "priorityScore": 14,
+      "updatedAt": "2026-05-03T20:35:29Z",
+      "ageHours": 500,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Adds 61 unit tests for `python/x402/x402/mechanisms/evm/exact/eip3009_utils.py` — the largest source file in the EVM mechanism without a dedicated test module. Covers every public helper plus the `_split_signature_parts` private helper that gates ECDSA signature handling for `transferWithAuthorization`.",
+      "urls": [],
+      "revenueScore": 14
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 176,
+      "title": "Add mcp-service-marketplace example — x402-gated MCP workers with Baz…",
+      "url": "https://github.com/coinbase/x402/pull/176",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 12,
+      "updatedAt": "2026-05-20T02:10:56Z",
+      "ageHours": 110,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "…aar discovery",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+      ],
+      "revenueScore": 18
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 162,
+      "title": "feat(evm): add HPP mainnet (190415) and Sepolia (181228) support",
+      "url": "https://github.com/coinbase/x402/pull/162",
+      "category": "x402 repo activity",
+      "priority": "watch",
+      "priorityScore": 12,
+      "updatedAt": "2026-05-15T08:26:14Z",
+      "ageHours": 252,
+      "networks": [
+        "USDC",
+        "mainnet",
+        "testnet"
+      ],
+      "reasons": [
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add USDC.e (Bridged USDC) as the default stablecoin for HPP mainnet",
+      "urls": [
+        "https://mainnet.hpp.io",
+        "https://explorer.hpp.io",
+        "https://sepolia.hpp.io",
+        "https://sepolia-explorer.hpp.io",
+        "https://portal.hpp.io"
+      ],
+      "revenueScore": 30
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 150,
+      "title": "feat: add service metadata on resource to all 3 SDKs",
+      "url": "https://github.com/coinbase/x402/pull/150",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 12,
+      "updatedAt": "2026-05-06T16:51:13Z",
+      "ageHours": 479,
+      "networks": [],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Thanks for contributing to x402!",
+      "urls": [
+        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+      ],
+      "revenueScore": 18
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 135,
+      "title": "docs(specs): add exact scheme for Tenzro chain (EVM/SVM/Canton façades)",
+      "url": "https://github.com/coinbase/x402/pull/135",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 12,
+      "updatedAt": "2026-05-02T06:50:40Z",
+      "ageHours": 538,
+      "networks": [],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `specs/schemes/exact/scheme_exact_tenzro.md` — the `exact` scheme implementation spec for the Tenzro Network L1.",
+      "urls": [
+        "https://github.com/tenzro/tenzro-network"
+      ],
+      "revenueScore": 30
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 147,
+      "title": "test(python/evm): add unit tests for EthAccountSignerWithRPC",
+      "url": "https://github.com/coinbase/x402/pull/147",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 8,
+      "updatedAt": "2026-05-04T08:20:06Z",
+      "ageHours": 488,
+      "networks": [
+        "Base"
+      ],
+      "reasons": [
+        "public ecosystem listing"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "`EthAccountSignerWithRPC` (in `python/x402/mechanisms/evm/signers.py`) was the only signer class in that module without dedicated unit tests. `tests/unit/mechanisms/evm/test_signer.py` already covered `EthAccountSigner` and `FacilitatorWeb3Signer`, but the RPC-extended client signer used by gas-sponsoring extensions (EIP-2612, ERC-20 approval) had no tests.",
+      "urls": [],
+      "revenueScore": 8
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 175,
+      "title": "docs: fix duplicated PaymentRequirements wording",
+      "url": "https://github.com/coinbase/x402/pull/175",
+      "category": "docs / discovery",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-19T17:19:08Z",
+      "ageHours": 119,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Fixes a duplicated word in the README payment flow description.",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 170,
+      "title": "fix(examples/ts): align custom client env vars with .env-local",
+      "url": "https://github.com/coinbase/x402/pull/170",
+      "category": "example app",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-17T01:56:03Z",
+      "ageHours": 183,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "The TypeScript custom client example at `examples/typescript/clients/custom/index.ts` reads `process.env.SERVER_URL` (which is not declared in this example's `.env-local`) and hardcodes the path `/weather`. As a result, developers following the `.env-local` template see no effect from their edits: the env-var fallback `http://localhost:4021` always wins, and the path is unconfigurable despite `.env-local` providing `ENDPOINT_PATH`.",
+      "urls": [
+        "http://localhost:4021`",
+        "http://localhost:4021"
+      ],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "coinbase/x402",
+      "number": 141,
+      "title": "test(python/evm): add unit tests for multicall module",
+      "url": "https://github.com/coinbase/x402/pull/141",
+      "category": "x402 repo activity",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-03T22:44:29Z",
+      "ageHours": 498,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Add **32 unit tests** for `python/x402/x402/mechanisms/evm/multicall.py` — the largest EVM mechanism source file in the Python SDK without a dedicated unit test module.",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 79,
+      "title": "feat: add Dynamic provider (checkout + wallet + env APIs)",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/79",
+      "category": "identity / credit",
+      "priority": "review",
+      "priorityScore": 56,
+      "updatedAt": "2026-05-22T19:31:45Z",
+      "ageHours": 45,
+      "networks": [
+        "Solana",
+        "Base",
+        "Ethereum",
+        "devnet",
+        "mainnet"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "multi-rail payment behavior",
+        "real purchase or fulfillment path",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds three new providers for [Dynamic](https://dynamic.xyz) — a wallet-as-a-service platform for AI agents.",
+      "urls": [],
+      "revenueScore": 90
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 78,
+      "title": "Add SuVerse FMCSA carrier-lookup provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/78",
+      "category": "shopping / fulfillment",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-22T16:12:34Z",
+      "ageHours": 49,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.005,
+      "summary": "A new provider that lets AI agents look up US trucking carriers by USDOT number through FMCSA, paying $0.005 USDC per call on Solana mainnet.",
+      "urls": [],
+      "revenueScore": 94
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 77,
+      "title": "Add Wisely x402 agent-payment infrastructure",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/77",
+      "category": "identity / credit",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-22T15:23:45Z",
+      "ageHours": 54,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "untrusted web-data ingestion",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds Wisely x402 Agent-Payment Infrastructure as a Pay.sh provider with two Solana-compatible paid resources:",
+      "urls": [],
+      "revenueScore": 76
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 76,
+      "title": "Add Crypto ETF Sentinel — US spot crypto ETF regulatory intelligence",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/76",
+      "category": "identity / credit",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-22T10:36:21Z",
+      "ageHours": 54,
+      "networks": [
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "agent identity or risk-scoring claims",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 1,
+      "summary": "Adds **Crypto ETF Sentinel** as a `finance` provider: a regulatory data oracle for the US spot crypto ETF universe. 22 paid endpoints covering the full SEC filing pipeline.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 75,
+      "title": "fix: commit openapi specs",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/75",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-20T00:46:45Z",
+      "ageHours": 113,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 74,
+      "title": "Add Japan Data APIs — 7 x402 services on Base + Solana mainnet",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/74",
+      "category": "bounty / escrow",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-20T21:13:26Z",
+      "ageHours": 114,
+      "networks": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.25,
+      "summary": "Adds **seven Japan-specific x402-paid APIs** to the registry under the `mameta/` operator. All seven accept USDC on **Solana mainnet** (and Base + Polygon), so agents on `pay` can pay any of them without leaving Solana.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 73,
+      "title": "feat: add Phoenix Zero — L2 Sequencer Health Oracle",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/73",
+      "category": "finance / market data",
+      "priority": "watch",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-21T20:31:35Z",
+      "ageHours": 143,
+      "networks": [
+        "Base",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0.0001,
+      "summary": "Real-time L2 sequencer telemetry for DeFi execution agents. Returns P99 RTT, revert ratio, and a boolean `safe: true/false` signal via x402 micropayments.",
+      "urls": [],
+      "revenueScore": 58
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 71,
+      "title": "feat: add Stratum macro data provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/71",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-18T17:16:00Z",
+      "ageHours": 211,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Stratum is an agent-native macroeconomic data brokerage (FRED/BLS/BEA) with Solana mainnet USDC settlement via x402.",
+      "urls": [],
+      "revenueScore": 60
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 70,
+      "title": "feat(providers): add giskard09/mycelium-oasis — x402 AI clarity + on-chain audit trail",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/70",
+      "category": "communications",
+      "priority": "watch",
+      "priorityScore": 44,
+      "updatedAt": "2026-05-16T20:01:28Z",
+      "ageHours": 215,
+      "networks": [
+        "Base",
+        "devnet",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "**Mycelium Oasis** — context clarity for agents in fog, with post-execution accountability.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 69,
+      "title": "feat: add payai/blockrun/inference, payai/nansen/intelligence, and payai/xona/creative",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/69",
+      "category": "shopping / fulfillment",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-16T00:58:41Z",
+      "ageHours": 225,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "wide paid API surface",
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds three PayAI-facilitated merchants under the proxied `payai/<merchant>/<name>` layout:",
+      "urls": [],
+      "revenueScore": 98
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 68,
+      "title": "Add tensorfeed/ai-data",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/68",
+      "category": "identity / credit",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-14T22:58:36Z",
+      "ageHours": 236,
+      "networks": [
+        "Base",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "agent identity or risk-scoring claims",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **TensorFeed.ai** to the pay-skills registry. We provide a real-time AI ecosystem intelligence layer for AI agents: live model pricing across 200+ models, service status across 30+ providers, news from 15+ sources, benchmarks, funding, security data (MITRE CVE + CISA KEV + FIRST EPSS + OSV + Vulnrichment merged into a single fact card), and 36+ paid endpoints settling USDC on Base via the canonical Coinbase x402 V2 wire format.",
+      "urls": [],
+      "revenueScore": 64
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 67,
+      "title": "Add PayAPI Market aggregator listing",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/67",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-14T22:28:08Z",
+      "ageHours": 237,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds PayAPI Market to the aggregators list — an x402-powered marketplace for pay-per-request APIs on Base mainnet covering UK property, vehicle, company, finance, weather, and HMO licensing data.",
+      "urls": [],
+      "revenueScore": 60
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 66,
+      "title": "Add AgentLair — agent identity, trust scoring, and email",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/66",
+      "category": "identity / credit",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-15T00:05:14Z",
+      "ageHours": 237,
+      "networks": [
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "AgentLair is an identity infrastructure layer for AI agents: verifiable identities (Agent Auth Tokens, EdDSA JWTs), behavioral trust scores, and agent-native email addresses — all pay-per-request via x402 v2 on Base mainnet.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 65,
+      "title": "Add madeonsol/memecoin-data — Solana KOL intelligence via x402",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/65",
+      "category": "identity / credit",
+      "priority": "review",
+      "priorityScore": 62,
+      "updatedAt": "2026-05-14T21:24:37Z",
+      "ageHours": 241,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.02,
+      "summary": "Adds `madeonsol/memecoin-data` — a new provider exposing seven pay-per-call Solana memecoin intelligence endpoints via x402.",
+      "urls": [],
+      "revenueScore": 96
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 64,
+      "title": "Add Ankr x402 — 160-chain JSON-RPC provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/64",
+      "category": "bounty / escrow",
+      "priority": "urgent",
+      "priorityScore": 88,
+      "updatedAt": "2026-05-14T22:31:45Z",
+      "ageHours": 264,
+      "networks": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "devnet",
+        "mainnet",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "wide paid API surface",
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds **Ankr** as a provider at \\`providers/ankr/rpc/PAY.md\\`. Pay-per-request JSON-RPC across **160 chain paths** (mainnets + testnets), single gateway at \\`https://x402.rpc.ankr.com\\`. Flat **\\$0.001 USDC/request**, settled on Solana mainnet via x402 or MPP. No signup, no API keys.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 63,
+      "title": "Add crypterian/score — cross-chain agent-wallet credit bureau",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/63",
+      "category": "identity / credit",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-15T13:15:55Z",
+      "ageHours": 285,
+      "networks": [
+        "Solana",
+        "Base",
+        "devnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "agent identity or risk-scoring claims",
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "- New `providers/crypterian/score/PAY.md` for **Crypterian** — an x402-paywalled credit bureau for autonomous agents.",
+      "urls": [],
+      "revenueScore": 64
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 62,
+      "title": "feat: add Agent Overflow — trustless USDC bounty marketplace for AI agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/62",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-14T00:12:51Z",
+      "ageHours": 298,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "escrow, verification, or proof workflow",
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "**Site:** https://agentoverflow-app.vercel.app",
+      "urls": [],
+      "revenueScore": 64
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 61,
+      "title": "Add IDLE Protocol — Distributed Residential Compute Network",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/61",
+      "category": "compute / web data",
+      "priority": "review",
+      "priorityScore": 56,
+      "updatedAt": "2026-05-19T10:42:22Z",
+      "ageHours": 304,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "untrusted web-data ingestion",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.1,
+      "summary": "- Adds **IDLE Protocol** to the Pay.sh registry — distributed residential compute network on Solana",
+      "urls": [],
+      "revenueScore": 90
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 60,
+      "title": "feat: add Spraay x402 Gateway (88+ endpoints, 19 categories)",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/60",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 48,
+      "updatedAt": "2026-05-14T23:27:04Z",
+      "ageHours": 307,
+      "networks": [
+        "Base",
+        "x402"
+      ],
+      "reasons": [
+        "wide paid API surface",
+        "escrow, verification, or proof workflow",
+        "outbound communication or voice path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Spraay x402 Gateway — 88+ pay-per-call x402 endpoints across 19 categories (batch payments, AI inference, Bittensor, DeFi, escrow, agent wallets, RTP robotics, SCTP supply chain, GPU compute, search/RAG, and more). USDC on Base via Coinbase facilitator. 15-chain coverage.",
+      "urls": [],
+      "revenueScore": 48
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 59,
+      "title": "  . ",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/59",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-15T16:50:54Z",
+      "ageHours": 308,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 58,
+      "title": "Add x402jp/japan-data — Japan & APAC Data APIs (18 endpoints, Base + Solana)",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/58",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 40,
+      "updatedAt": "2026-05-14T22:55:14Z",
+      "ageHours": 311,
+      "networks": [
+        "Solana",
+        "Base",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "multi-rail payment behavior"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Japan & APAC Data APIs for AI Agents via x402 protocol.",
+      "urls": [],
+      "revenueScore": 40
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 57,
+      "title": "feat(clustly): add tipping provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/57",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 56,
+      "updatedAt": "2026-05-14T15:44:57Z",
+      "ageHours": 316,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "escrow, verification, or proof workflow",
+        "untrusted web-data ingestion",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.2,
+      "summary": "Adds Clustly's x402 tipping endpoint to the catalog. Single agent surface: `GET https://clustly.ai/api/v1/tip/x402/{recipient}?amount={USDC}`. The endpoint pays any X (Twitter) handle in Solana USDC — registered Clustly users receive directly to their linked Solana wallet, unregistered handles are escrowed in a Privy-custodied placeholder pocket the recipient can claim later via X OAuth.",
+      "urls": [],
+      "revenueScore": 90
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 56,
+      "title": "Add ekopsoner/calparse-api — natural-language datetime parser",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/56",
+      "category": "shopping / fulfillment",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-12T04:11:14Z",
+      "ageHours": 321,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds **ekopsoner/calparse-api** — pay-per-call natural-language datetime parsing for AI scheduling agents and calendar bots.",
+      "urls": [],
+      "revenueScore": 72
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 55,
+      "title": "Add ekopsoner/x402sniper — Solana post-grad sniping decision support for AI agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/55",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-12T04:11:12Z",
+      "ageHours": 327,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "escrow, verification, or proof workflow",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds **x402sniper** — pay-per-call post-graduation Solana sniping decision support for AI agents.",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 54,
+      "title": "Add ekopsoner/x402rent — Solana empty-ATA rent recovery for AI agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/54",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 44,
+      "updatedAt": "2026-05-12T04:11:10Z",
+      "ageHours": 327,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "escrow, verification, or proof workflow",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.4,
+      "summary": "Adds **x402rent** — pay-per-call Solana empty-ATA rent recovery for AI agents and trading bots.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 53,
+      "title": "Add ekopsoner/x402rugproof — Solana bundle/sniper/funder-cluster scoring for AI agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/53",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-12T04:11:07Z",
+      "ageHours": 329,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "escrow, verification, or proof workflow",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds **rugproofx402** — pay-per-call Solana pump.fun bundle / sniper / funder-cluster scoring for AI agents.",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 52,
+      "title": "Refresh GateCheck by LarryBuildsAI provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/52",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 34,
+      "updatedAt": "2026-05-21T11:58:28Z",
+      "ageHours": 340,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "agent identity or risk-scoring claims",
+        "settlement or accounting path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Refreshes `larrybuildsai/boundary-guard` as the GateCheck by LarryBuildsAI pay-skills provider listing.",
+      "urls": [],
+      "revenueScore": 46
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 51,
+      "title": "Add ekopsoner/langdetect — language detection across 75 languages",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/51",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-12T04:11:05Z",
+      "ageHours": 342,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **ekopsoner/langdetect**.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 50,
+      "title": "Add ekopsoner/holidays — public holiday + business-day calendar (100+ countries)",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/50",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-12T04:11:03Z",
+      "ageHours": 342,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **ekopsoner/holidays**.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 49,
+      "title": "Add ekopsoner/md — URL → clean markdown for AI/RAG agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/49",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-12T04:11:01Z",
+      "ageHours": 342,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **ekopsoner/md**.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 48,
+      "title": "Add ekopsoner/tzapi — time zone, datetime conversion, business hours",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/48",
+      "category": "shopping / fulfillment",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-12T04:10:58Z",
+      "ageHours": 342,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.002,
+      "summary": "Adds **ekopsoner/tzapi** — pay-per-call time zone, datetime conversion, and business-hours lookups for AI agents.",
+      "urls": [],
+      "revenueScore": 72
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 47,
+      "title": "Add anchor-x402 (16 listings, one per endpoint)",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/47",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 62,
+      "updatedAt": "2026-05-16T15:10:41Z",
+      "ageHours": 361,
+      "networks": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "agent identity or risk-scoring claims",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 7.77,
+      "summary": "Adds [anchor-x402](https://anchor-x402.com) — 16 x402-paid services on Base + Solana mainnet, one PAY.md per endpoint per CONTRIBUTING.md guidance.",
+      "urls": [],
+      "revenueScore": 96
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 46,
+      "title": "Add aisthetic.service — verifiable receipts probe",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/46",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 60,
+      "updatedAt": "2026-05-15T00:19:09Z",
+      "ageHours": 386,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `providers/aisthetic/probe/` — a public listing for [aisthetic.service](https://aisthetic.services), a 7-stage verifiable agent commerce gateway on Solana. Each paid call through the probe endpoint returns an Ed25519-signed receipt that anyone can verify on `aisthetic.services/r?id=<id>` without an API key.",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 45,
+      "title": "Add Pharma Drug Info API",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/45",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-08T07:49:43Z",
+      "ageHours": 393,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Adds Pharma Drug Info API as a pay.sh provider. Search by brand name or active ingredient. Returns drug information from openFDA, RxNorm, and DailyMed.",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 44,
+      "title": "feat(settle): add Settle Receipt-Pinned x402 Sandbox demo provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/44",
+      "category": "compute / web data",
+      "priority": "watch",
+      "priorityScore": 40,
+      "updatedAt": "2026-05-18T00:53:23Z",
+      "ageHours": 394,
+      "networks": [
+        "Solana",
+        "devnet",
+        "x402"
+      ],
+      "reasons": [
+        "untrusted web-data ingestion",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `providers/settle/demo/`, a Solana devnet x402 sandbox with three endpoints (arxiv-fetch, translate, summarize) priced 0.05 to 0.30 USDC. The deliverables are canned fixtures so client integrators have a stable target to compare against, but the payment flow is real: every successful call lands a `spend_via_pact` tx on devnet that moves USDC from the caller's pact vault to the merchant ATA, and the receipt persists with a verifiable BLAKE3 hash chain.",
+      "urls": [],
+      "revenueScore": 52
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 43,
+      "title": "feat: add metengine/data-agent provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/43",
+      "category": "compute / web data",
+      "priority": "urgent",
+      "priorityScore": 76,
+      "updatedAt": "2026-05-14T22:57:49Z",
+      "ageHours": 395,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "wide paid API surface",
+        "untrusted web-data ingestion",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.2,
+      "summary": "Adds `metengine/data-agent` — a pay-per-query analytics API covering smart-money intelligence across three platforms in one provider listing.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 42,
+      "title": "feat: add nansen-api provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/42",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 28,
+      "updatedAt": "2026-05-21T14:50:32Z",
+      "ageHours": 396,
+      "networks": [
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Adds Nansen API as a native provider with x402 and MPP payment support",
+      "urls": [],
+      "revenueScore": 28
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 41,
+      "title": "Add Blocksize market data provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/41",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 28,
+      "updatedAt": "2026-05-21T01:07:21Z",
+      "ageHours": 402,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds Blocksize Market Data as a Pay.sh provider under `providers/blocksize/market-data`.",
+      "urls": [],
+      "revenueScore": 28
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 40,
+      "title": "add WURK provider listings",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/40",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 22,
+      "updatedAt": "2026-05-22T01:55:33Z",
+      "ageHours": 406,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Add WURK Social Growth, Human Feedback, and Token Boosts provider listings.",
+      "urls": [],
+      "revenueScore": 22
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 39,
+      "title": "Add solrouter/inference — cryptographically private LLM inference",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/39",
+      "category": "shopping / fulfillment",
+      "priority": "review",
+      "priorityScore": 62,
+      "updatedAt": "2026-05-15T00:25:41Z",
+      "ageHours": 408,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.02,
+      "summary": "Adds `solrouter/inference`: an OpenAI-compatible chat completions endpoint where the prompt is encrypted client-side and the inference provider never sees plaintext. Encryption keys are attested on-chain via Arcium MPC on Solana mainnet.",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 38,
+      "title": "feat(cryptorefills): add shopping provider — gift cards & top-ups via Solana USDC",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/38",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 60,
+      "updatedAt": "2026-05-22T19:38:49Z",
+      "ageHours": 411,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "escrow, verification, or proof workflow",
+        "untrusted web-data ingestion",
+        "real purchase or fulfillment path",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds **Cryptorefills** as a shopping provider:",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 37,
+      "title": "Add Invoica — x402 invoice + tax compliance for AI agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/37",
+      "category": "finance / market data",
+      "priority": "watch",
+      "priorityScore": 44,
+      "updatedAt": "2026-05-07T09:35:34Z",
+      "ageHours": 414,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.02,
+      "summary": "Three pay-per-call endpoints on Solana mainnet via PayAI facilitator:",
+      "urls": [],
+      "revenueScore": 78
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 36,
+      "title": "Add x402watch provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/36",
+      "category": "finance / market data",
+      "priority": "watch",
+      "priorityScore": 22,
+      "updatedAt": "2026-05-16T18:39:10Z",
+      "ageHours": 417,
+      "networks": [
+        "Solana",
+        "Base",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or accounting path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds x402watch — the analytics layer for the x402 ecosystem.",
+      "urls": [],
+      "revenueScore": 34
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 35,
+      "title": "Add KR Crypto Intelligence provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/35",
+      "category": "finance / market data",
+      "priority": "urgent",
+      "priorityScore": 82,
+      "updatedAt": "2026-05-16T14:44:33Z",
+      "ageHours": 417,
+      "networks": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 17,
+      "summary": "Add KR Crypto Intelligence — Korean crypto market data API for AI agents.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 34,
+      "title": "feat: add EconDash economic data provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/34",
+      "category": "finance / market data",
+      "priority": "review",
+      "priorityScore": 62,
+      "updatedAt": "2026-05-17T07:28:10Z",
+      "ageHours": 418,
+      "networks": [
+        "Solana",
+        "Tempo",
+        "mainnet",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.02,
+      "summary": "Add EconDash to the pay-skills registry — a pay-per-call macroeconomic data API with **753 indicators** across **298 countries**, accessible via x402 and MPP payments.",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 33,
+      "title": "chore: add security policy",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/33",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-07T01:23:28Z",
+      "ageHours": 425,
+      "networks": [
+        "Solana"
+      ],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Adds a `SECURITY.md` matching the policy used in [solana-foundation/kora](https://github.com/solana-foundation/kora/blob/main/SECURITY.md): vulnerabilities should be reported privately via the GitHub Security Advisory flow rather than as public issues.",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 32,
+      "title": "Add tetrac/markets provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/32",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 34,
+      "updatedAt": "2026-05-15T00:54:54Z",
+      "ageHours": 426,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Focused on x402 pay per request perp data and trading built for solana agents and humans.",
+      "urls": [],
+      "revenueScore": 34
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 31,
+      "title": "docs(purch/marketplace): tighten listing for agent routing",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/31",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 28,
+      "updatedAt": "2026-05-15T01:14:52Z",
+      "ageHours": 429,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Tightens the existing `purch/marketplace` listing so agents route to it more reliably and the body matches the convention used across the rest of the registry.",
+      "urls": [],
+      "revenueScore": 28
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 28,
+      "title": "feat: add uzproof/verify — gasless x402+MPP verification provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/28",
+      "category": "bounty / escrow",
+      "priority": "review",
+      "priorityScore": 68,
+      "updatedAt": "2026-05-16T00:40:28Z",
+      "ageHours": 434,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "agent identity or risk-scoring claims",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds `providers/uzproof/verify` — the first **gasless x402+MPP** verification provider in the catalog.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 27,
+      "title": "Add Top Ledger wallet intelligence",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/27",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 12,
+      "updatedAt": "2026-05-15T01:10:13Z",
+      "ageHours": 436,
+      "networks": [
+        "Solana",
+        "MPP"
+      ],
+      "reasons": [
+        "outbound communication or voice path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Add Top Ledger Wallet Intelligence as a finance provider in the pay skills catalog.",
+      "urls": [],
+      "revenueScore": 12
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 26,
+      "title": "feat: add vegacore AI document services (contract-checker, invoice-parser, doc-compliance)",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/26",
+      "category": "compliance / invoices",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-14T23:32:43Z",
+      "ageHours": 437,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "untrusted web-data ingestion",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 10,
+      "summary": "Three x402-enabled AI services for document intelligence, all deployed on Google Cloud Run with dual-chain USDC payments (Base mainnet + Solana mainnet).",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 25,
+      "title": "Add Orion memecoin safety provider",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/25",
+      "category": "shopping / fulfillment",
+      "priority": "watch",
+      "priorityScore": 30,
+      "updatedAt": "2026-05-15T01:29:06Z",
+      "ageHours": 437,
+      "networks": [
+        "Solana",
+        "Base",
+        "MPP"
+      ],
+      "reasons": [
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds Orion Memecoin Safety API as a pay.sh provider.",
+      "urls": [],
+      "revenueScore": 42
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 24,
+      "title": "feat: add algovoi/compliance-gate provider — pre-payment compliance screen for agents",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/24",
+      "category": "identity / credit",
+      "priority": "review",
+      "priorityScore": 48,
+      "updatedAt": "2026-05-16T06:11:16Z",
+      "ageHours": 443,
+      "networks": [
+        "Solana",
+        "Base",
+        "Tempo",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-rail payment behavior",
+        "agent identity or risk-scoring claims",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "A second AlgoVoi provider — `providers/algovoi/compliance-gate/PAY.md` — exposing **AlgoVoi's compliance machinery** as a public agent-callable surface. This is the headline AlgoVoi entry; the existing `providers/algovoi/agent-trust-bench/` (PR #23) is the paired research instrument that demonstrates *what can go wrong without compliance* — the compliance-gate is *what to do about it*.",
+      "urls": [],
+      "revenueScore": 72
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 23,
+      "title": "feat(security): add algovoi/agent-trust-bench — AI agent payment security testing",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/23",
+      "category": "identity / credit",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-16T17:24:48Z",
+      "ageHours": 444,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "agent identity or risk-scoring claims",
+        "untrusted web-data ingestion",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 10,
+      "summary": "`providers/algovoi/agent-trust-bench` — a live, open security-testing instrument for evaluating AI agent payment behaviour against adversarial x402 challenges.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 22,
+      "title": "Akca x402 Anonymous Proxy provider ",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/22",
+      "category": "compute / web data",
+      "priority": "watch",
+      "priorityScore": 30,
+      "updatedAt": "2026-05-07T01:28:23Z",
+      "ageHours": 444,
+      "networks": [
+        "Solana",
+        "x402"
+      ],
+      "reasons": [
+        "untrusted web-data ingestion",
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 1,
+      "summary": "Provider: Akca x402 Anonymous Proxy",
+      "urls": [],
+      "revenueScore": 52
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 21,
+      "title": "Add MoltyCash provider listing",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/21",
+      "category": "bounty / escrow",
+      "priority": "watch",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-16T03:08:00Z",
+      "ageHours": 445,
+      "networks": [
+        "Solana",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds `providers/moltycash/api/` to the registry.",
+      "urls": [],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 20,
+      "title": "feat: add b402/paysh-send — private USDC transfers via x402",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/20",
+      "category": "shopping / fulfillment",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-16T16:36:14Z",
+      "ageHours": 447,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "meaningful per-call value movement",
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 10,
+      "summary": "Adds [paysh-send](https://paysh-shield-production.up.railway.app) — pay-per-call private USDC transfer over x402 on Solana — as `b402/paysh-send`.",
+      "urls": [],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 19,
+      "title": "feat: add HYRE Agent",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/19",
+      "category": "shopping / fulfillment",
+      "priority": "review",
+      "priorityScore": 66,
+      "updatedAt": "2026-05-16T04:00:38Z",
+      "ageHours": 449,
+      "networks": [
+        "Solana",
+        "Base",
+        "mainnet",
+        "MPP",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "multi-rail payment behavior",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds [HYRE Agent](https://mpp.hyreagent.fun) — an AI-interpreted DeFi data API on Solana — as `hyre/agent`.",
+      "urls": [],
+      "revenueScore": 78
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 18,
+      "title": "fix: update quicknode title casing",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/18",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-07T01:23:17Z",
+      "ageHours": 449,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Updates the `title` field in `providers/quicknode/rpc/PAY.md` from `\"QuickNode\"` to `\"Quicknode\"` to match the official Quicknode brand casing.",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 17,
+      "title": "feat: add nyne support",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/17",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-05T13:30:10Z",
+      "ageHours": 468,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 16,
+      "title": "fix: provide local openapi spec for fal",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/16",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-05T13:41:39Z",
+      "ageHours": 468,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 15,
+      "title": "Update Wolfram|Alpha API documentation and OpenAPI spec",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/15",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-05T12:13:43Z",
+      "ageHours": 468,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Revised PAY.md to clarify service usage and pricing details.",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 14,
+      "title": "fix: categories",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/14",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-05T02:51:28Z",
+      "ageHours": 469,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 13,
+      "title": "fix: use local openapi spec for 2captcha",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/13",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-05T02:41:26Z",
+      "ageHours": 470,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 12,
+      "title": "feat: repo clean-up",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/12",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-05T01:17:23Z",
+      "ageHours": 473,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 11,
+      "title": "feat: add reducto provider docs + spec",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/11",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-04T22:09:39Z",
+      "ageHours": 477,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 10,
+      "title": "feat: add coingecko endpoint and openapi spec",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/10",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-04T22:09:31Z",
+      "ageHours": 479,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 9,
+      "title": "feat: add Textbelt SMS API with x402 payment support",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/9",
+      "category": "communications",
+      "priority": "watch",
+      "priorityScore": 16,
+      "updatedAt": "2026-05-04T22:09:25Z",
+      "ageHours": 480,
+      "networks": [
+        "x402"
+      ],
+      "reasons": [
+        "outbound communication or voice path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 16
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 8,
+      "title": "Add new Alibaba Cloud services documentation for AI and search capabilities",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/8",
+      "category": "agent-payment launch",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-02T16:19:38Z",
+      "ageHours": 539,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 7,
+      "title": "feat: add paysponge endpoints without full openapi specs",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/7",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-04T22:09:04Z",
+      "ageHours": 539,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 6,
+      "title": "feat: add paysponge provider with fully documented openapi specs",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/6",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 6,
+      "updatedAt": "2026-05-02T16:20:12Z",
+      "ageHours": 539,
+      "networks": [],
+      "reasons": [
+        "agent-discoverable contract"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 6
+    },
+    {
+      "sourceName": "solana-foundation/pay-skills",
+      "number": 5,
+      "title": "feat: add Perplexity AI API documentation and endpoints",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/5",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-02T04:29:30Z",
+      "ageHours": 542,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "",
+      "urls": [],
+      "revenueScore": 0
+    }
+  ],
+  "topCategories": [
+    [
+      "ecosystem listing",
+      26
+    ],
+    [
+      "bounty / escrow",
+      17
+    ],
+    [
+      "shopping / fulfillment",
+      16
+    ],
+    [
+      "docs / discovery",
+      10
+    ],
+    [
+      "protocol implementation",
+      10
+    ],
+    [
+      "data API",
+      10
+    ],
+    [
+      "identity / credit",
+      9
+    ],
+    [
+      "agent-payment launch",
+      8
+    ],
+    [
+      "finance / market data",
+      5
+    ],
+    [
+      "compute / web data",
+      4
+    ]
+  ],
+  "topRails": [
+    [
+      "Solana",
+      57
+    ],
+    [
+      "mainnet",
+      53
+    ],
+    [
+      "Base",
+      52
+    ],
+    [
+      "x402",
+      52
+    ],
+    [
+      "USDC",
+      24
+    ],
+    [
+      "MPP",
+      11
+    ],
+    [
+      "testnet",
+      8
+    ],
+    [
+      "devnet",
+      5
+    ],
+    [
+      "Polygon",
+      4
+    ],
+    [
+      "Tempo",
+      3
+    ]
+  ]
+}

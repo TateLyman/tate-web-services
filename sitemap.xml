@@ -162,7 +162,12 @@
   </url>
   <url>
     <loc>https://tateprograms.com/x402-ecosystem-radar.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tateprograms.com/agent-commerce-webdata-radar.html</loc>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
