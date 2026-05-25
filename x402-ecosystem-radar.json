@@ -1,23 +1,23 @@
 {
-  "runDate": "2026-05-24",
+  "runDate": "2026-05-25",
   "source": "https://github.com/coinbase/x402/pulls",
   "apiSource": "https://api.github.com/search/issues?q=repo:coinbase/x402+is:pr+created:>=2026-05-01",
   "startDate": "2026-05-01",
-  "totalCount": 50,
-  "observedCount": 50,
-  "openCount": 37,
-  "submittedLast24h": 0,
-  "ecosystemListingCount": 26,
-  "priorityCount": 22,
+  "totalCount": 51,
+  "observedCount": 51,
+  "openCount": 38,
+  "submittedLast24h": 1,
+  "ecosystemListingCount": 27,
+  "priorityCount": 23,
   "categoryCounts": {
-    "ecosystem listing": 26,
+    "ecosystem listing": 27,
     "docs / discovery": 10,
     "protocol implementation": 10,
     "x402 repo activity": 3,
     "example app": 1
   },
   "networkCounts": {
-    "Base": 26,
+    "Base": 27,
     "Solana": 9,
     "USDC": 24,
     "mainnet": 16,
@@ -30,7 +30,7 @@
   "topCategories": [
     [
       "ecosystem listing",
-      26
+      27
     ],
     [
       "docs / discovery",
@@ -52,7 +52,7 @@
   "topNetworks": [
     [
       "Base",
-      26
+      27
     ],
     [
       "USDC",
@@ -91,7 +91,7 @@
       "state": "open",
       "createdAt": "2026-05-11T18:10:17Z",
       "updatedAt": "2026-05-17T06:26:43Z",
-      "ageHours": 310,
+      "ageHours": 335,
       "author": "dbe006",
       "authorUrl": "https://github.com/dbe006",
       "category": "ecosystem listing",
@@ -129,7 +129,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-05-16T22:36:20Z",
-      "ageHours": 405,
+      "ageHours": 430,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -171,7 +171,7 @@
       "state": "open",
       "createdAt": "2026-05-03T12:10:08Z",
       "updatedAt": "2026-05-21T06:14:30Z",
-      "ageHours": 508,
+      "ageHours": 533,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -215,7 +215,7 @@
       "state": "open",
       "createdAt": "2026-05-21T08:41:59Z",
       "updatedAt": "2026-05-22T02:00:13Z",
-      "ageHours": 80,
+      "ageHours": 105,
       "author": "SASN19",
       "authorUrl": "https://github.com/SASN19",
       "category": "ecosystem listing",
@@ -254,7 +254,7 @@
       "state": "open",
       "createdAt": "2026-05-15T18:46:48Z",
       "updatedAt": "2026-05-20T01:17:17Z",
-      "ageHours": 214,
+      "ageHours": 239,
       "author": "andysalvo",
       "authorUrl": "https://github.com/andysalvo",
       "category": "ecosystem listing",
@@ -296,7 +296,7 @@
       "state": "open",
       "createdAt": "2026-05-08T22:35:56Z",
       "updatedAt": "2026-05-20T01:09:53Z",
-      "ageHours": 378,
+      "ageHours": 403,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -335,7 +335,7 @@
       "state": "open",
       "createdAt": "2026-05-19T11:48:48Z",
       "updatedAt": "2026-05-19T21:08:00Z",
-      "ageHours": 125,
+      "ageHours": 149,
       "author": "ValoremFoundation",
       "authorUrl": "https://github.com/ValoremFoundation",
       "category": "ecosystem listing",
@@ -367,13 +367,52 @@
       "priority": "urgent"
     },
     {
+      "number": 164,
+      "title": "feat: add Jorkal NFT Data API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/164",
+      "state": "open",
+      "createdAt": "2026-05-15T11:22:14Z",
+      "updatedAt": "2026-05-25T11:24:00Z",
+      "ageHours": 246,
+      "author": "jorkal-crypto",
+      "authorUrl": "https://github.com/jorkal-crypto",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.005,
+      "urls": [
+        "https://vercel-deploy-alpha-puce.vercel.app",
+        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json",
+        "typescript/site/public/logos/jorkal-nft-api.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json"
+      ],
+      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 72,
+      "priority": "urgent"
+    },
+    {
       "number": 134,
       "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
       "url": "https://github.com/coinbase/x402/pull/134",
       "state": "open",
       "createdAt": "2026-05-01T23:30:36Z",
       "updatedAt": "2026-05-18T17:15:39Z",
-      "ageHours": 545,
+      "ageHours": 570,
       "author": "j2422144-beep",
       "authorUrl": "https://github.com/j2422144-beep",
       "category": "ecosystem listing",
@@ -409,13 +448,163 @@
       "priority": "urgent"
     },
     {
+      "number": 155,
+      "title": "feat: add AgentLair to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/155",
+      "state": "closed",
+      "createdAt": "2026-05-06T12:00:16Z",
+      "updatedAt": "2026-05-20T14:03:31Z",
+      "ageHours": 461,
+      "author": "piiiico",
+      "authorUrl": "https://github.com/piiiico",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://agentlair.dev",
+        "https://agentlair.dev/docs"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json",
+        "typescript/site/public/logos/agentlair.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json"
+      ],
+      "summary": "AgentLair provides email identity and an encrypted credential vault for AI agents.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "priorityScore": 68,
+      "priority": "urgent"
+    },
+    {
+      "number": 182,
+      "title": "Add Lithium Research Vault to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/182",
+      "state": "closed",
+      "createdAt": "2026-05-22T03:01:32Z",
+      "updatedAt": "2026-05-22T04:58:48Z",
+      "ageHours": 86,
+      "author": "ciinkwia",
+      "authorUrl": "https://github.com/ciinkwia",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.2,
+      "urls": [
+        "https://clink-lithium-vault.fly.dev",
+        "https://agentic.market/services/clink-lithium-vault-fly-dev",
+        "https://clink-lithium-vault.fly.dev/favicon.ico"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/lithium-research-vault/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/lithium-research-vault/metadata.json"
+      ],
+      "summary": "**Lithium Research Vault** — two x402-payable endpoints serving structured",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    },
+    {
+      "number": 157,
+      "title": "Add docpull to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/157",
+      "state": "open",
+      "createdAt": "2026-05-06T22:39:51Z",
+      "updatedAt": "2026-05-16T23:02:03Z",
+      "ageHours": 451,
+      "author": "docpull",
+      "authorUrl": "https://github.com/docpull",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.001,
+      "urls": [
+        "https://docpull.ai",
+        "https://docpull.ai/openapi.json",
+        "https://docpull.ai/mcp",
+        "https://github.com/docpull/docpull"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/docpull/metadata.json",
+        "typescript/site/public/logos/docpull_logo.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/docpull/metadata.json"
+      ],
+      "summary": "Adds docpull to the x402 ecosystem as a Services/Endpoints partner.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    }
+  ],
+  "newestRows": [
+    {
+      "number": 184,
+      "title": "feat(ecosystem): add extract.dkta.dev — LLM-ready content extraction …",
+      "url": "https://github.com/coinbase/x402/pull/184",
+      "state": "open",
+      "createdAt": "2026-05-25T12:42:45Z",
+      "updatedAt": "2026-05-25T15:42:53Z",
+      "ageHours": 5,
+      "author": "dkta0",
+      "authorUrl": "https://github.com/dkta0",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://extract.dkta.dev"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/extract-dkta/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/extract-dkta/metadata.json"
+      ],
+      "summary": "extract.dkta.dev is a content extraction API built for AI agents. It returns clean, LLM-ready markdown from any URL — stripped of nav, ads, and boilerplate. Agents integrate via x402 on Base: no account, no API key, no subscription. The x402 payment flow is handled automatically by any x402-compatible client.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface"
+      ],
+      "priorityScore": 52,
+      "priority": "review"
+    },
+    {
       "number": 164,
       "title": "feat: add Jorkal NFT Data API to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/164",
       "state": "open",
       "createdAt": "2026-05-15T11:22:14Z",
-      "updatedAt": "2026-05-16T22:49:31Z",
-      "ageHours": 221,
+      "updatedAt": "2026-05-25T11:24:00Z",
+      "ageHours": 246,
       "author": "jorkal-crypto",
       "authorUrl": "https://github.com/jorkal-crypto",
       "category": "ecosystem listing",
@@ -454,7 +643,7 @@
       "state": "closed",
       "createdAt": "2026-05-23T01:24:15Z",
       "updatedAt": "2026-05-23T01:25:53Z",
-      "ageHours": 39,
+      "ageHours": 64,
       "author": "JefBronze",
       "authorUrl": "https://github.com/JefBronze",
       "category": "ecosystem listing",
@@ -484,45 +673,7 @@
         "mainnet value path",
         "declared paid calls"
       ],
-      "priorityScore": 70,
-      "priority": "urgent"
-    },
-    {
-      "number": 155,
-      "title": "feat: add AgentLair to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/155",
-      "state": "closed",
-      "createdAt": "2026-05-06T12:00:16Z",
-      "updatedAt": "2026-05-20T14:03:31Z",
-      "ageHours": 437,
-      "author": "piiiico",
-      "authorUrl": "https://github.com/piiiico",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://agentlair.dev",
-        "https://agentlair.dev/docs"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json",
-        "typescript/site/public/logos/agentlair.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json"
-      ],
-      "summary": "AgentLair provides email identity and an encrypted credential vault for AI agents.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "mainnet value path"
-      ],
-      "priorityScore": 68,
+      "priorityScore": 62,
       "priority": "urgent"
     },
     {
@@ -532,87 +683,7 @@
       "state": "closed",
       "createdAt": "2026-05-22T03:01:32Z",
       "updatedAt": "2026-05-22T04:58:48Z",
-      "ageHours": 61,
-      "author": "ciinkwia",
-      "authorUrl": "https://github.com/ciinkwia",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.2,
-      "urls": [
-        "https://clink-lithium-vault.fly.dev",
-        "https://agentic.market/services/clink-lithium-vault-fly-dev",
-        "https://clink-lithium-vault.fly.dev/favicon.ico"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/lithium-research-vault/metadata.json"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/lithium-research-vault/metadata.json"
-      ],
-      "summary": "**Lithium Research Vault** — two x402-payable endpoints serving structured",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 64,
-      "priority": "urgent"
-    }
-  ],
-  "newestRows": [
-    {
-      "number": 183,
-      "title": "feat: add Data-Joule to x402 ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/183",
-      "state": "closed",
-      "createdAt": "2026-05-23T01:24:15Z",
-      "updatedAt": "2026-05-23T01:25:53Z",
-      "ageHours": 39,
-      "author": "JefBronze",
-      "authorUrl": "https://github.com/JefBronze",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.00005,
-      "urls": [
-        "https://data-joule.com/api/inference`",
-        "https://data-joule.com/demo",
-        "https://data-joule.com/method",
-        "https://github.com/Data-Joule/data-joule-web"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/data-joule/metadata.json",
-        "typescript/site/public/logos/data-joule.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/data-joule/metadata.json"
-      ],
-      "summary": "**Data-Joule** is an AI inference node running on a Raspberry Pi in Montréal that participates in real-time grid demand response via OpenADR 3.0.",
-      "reasons": [
-        "public ecosystem listing",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 70,
-      "priority": "urgent"
-    },
-    {
-      "number": 182,
-      "title": "Add Lithium Research Vault to ecosystem (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/182",
-      "state": "closed",
-      "createdAt": "2026-05-22T03:01:32Z",
-      "updatedAt": "2026-05-22T04:58:48Z",
-      "ageHours": 61,
+      "ageHours": 86,
       "author": "ciinkwia",
       "authorUrl": "https://github.com/ciinkwia",
       "category": "ecosystem listing",
@@ -650,7 +721,7 @@
       "state": "open",
       "createdAt": "2026-05-21T08:41:59Z",
       "updatedAt": "2026-05-22T02:00:13Z",
-      "ageHours": 80,
+      "ageHours": 105,
       "author": "SASN19",
       "authorUrl": "https://github.com/SASN19",
       "category": "ecosystem listing",
@@ -689,7 +760,7 @@
       "state": "open",
       "createdAt": "2026-05-20T05:01:30Z",
       "updatedAt": "2026-05-21T20:27:37Z",
-      "ageHours": 107,
+      "ageHours": 132,
       "author": "0rkz",
       "authorUrl": "https://github.com/0rkz",
       "category": "ecosystem listing",
@@ -722,7 +793,7 @@
       "state": "open",
       "createdAt": "2026-05-20T07:06:37Z",
       "updatedAt": "2026-05-21T20:16:21Z",
-      "ageHours": 105,
+      "ageHours": 130,
       "author": "nach-dakwale",
       "authorUrl": "https://github.com/nach-dakwale",
       "category": "ecosystem listing",
@@ -757,7 +828,7 @@
       "state": "open",
       "createdAt": "2026-05-03T12:10:08Z",
       "updatedAt": "2026-05-21T06:14:30Z",
-      "ageHours": 508,
+      "ageHours": 533,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -801,7 +872,7 @@
       "state": "open",
       "createdAt": "2026-05-04T18:23:02Z",
       "updatedAt": "2026-05-20T21:16:17Z",
-      "ageHours": 478,
+      "ageHours": 503,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -831,7 +902,7 @@
       "state": "open",
       "createdAt": "2026-05-04T22:24:40Z",
       "updatedAt": "2026-05-20T21:16:13Z",
-      "ageHours": 474,
+      "ageHours": 499,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -857,7 +928,7 @@
       "state": "open",
       "createdAt": "2026-05-20T14:37:46Z",
       "updatedAt": "2026-05-20T14:39:12Z",
-      "ageHours": 98,
+      "ageHours": 123,
       "author": "tdnupe3",
       "authorUrl": "https://github.com/tdnupe3",
       "category": "docs / discovery",
@@ -886,7 +957,7 @@
       "state": "closed",
       "createdAt": "2026-05-06T12:00:16Z",
       "updatedAt": "2026-05-20T14:03:31Z",
-      "ageHours": 437,
+      "ageHours": 461,
       "author": "piiiico",
       "authorUrl": "https://github.com/piiiico",
       "category": "ecosystem listing",
@@ -924,7 +995,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:11:54Z",
       "updatedAt": "2026-05-20T04:13:54Z",
-      "ageHours": 110,
+      "ageHours": 135,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "ecosystem listing",
@@ -956,7 +1027,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:10:46Z",
       "updatedAt": "2026-05-20T02:10:56Z",
-      "ageHours": 110,
+      "ageHours": 135,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "docs / discovery",
@@ -990,7 +1061,7 @@
       "state": "open",
       "createdAt": "2026-05-15T18:46:48Z",
       "updatedAt": "2026-05-20T01:17:17Z",
-      "ageHours": 214,
+      "ageHours": 239,
       "author": "andysalvo",
       "authorUrl": "https://github.com/andysalvo",
       "category": "ecosystem listing",
@@ -1032,7 +1103,7 @@
       "state": "open",
       "createdAt": "2026-05-08T22:35:56Z",
       "updatedAt": "2026-05-20T01:09:53Z",
-      "ageHours": 378,
+      "ageHours": 403,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -1063,67 +1134,6 @@
       ],
       "priorityScore": 74,
       "priority": "urgent"
-    },
-    {
-      "number": 174,
-      "title": "MEV Intelligence",
-      "url": "https://github.com/coinbase/x402/pull/174",
-      "state": "open",
-      "createdAt": "2026-05-19T11:48:48Z",
-      "updatedAt": "2026-05-19T21:08:00Z",
-      "ageHours": 125,
-      "author": "ValoremFoundation",
-      "authorUrl": "https://github.com/ValoremFoundation",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.5,
-      "urls": [
-        "https://mev.advalorem.io/intelligence/openapi"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/advalorem-mev-intelligence/metadata.json",
-        "typescript/site/public/logos/advalorem.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/advalorem-mev-intelligence/metadata.json"
-      ],
-      "summary": "This PR adds MEV Intelligence to the x402 ecosystem under Services/Endpoints.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 74,
-      "priority": "urgent"
-    },
-    {
-      "number": 175,
-      "title": "docs: fix duplicated PaymentRequirements wording",
-      "url": "https://github.com/coinbase/x402/pull/175",
-      "state": "open",
-      "createdAt": "2026-05-19T17:19:01Z",
-      "updatedAt": "2026-05-19T17:19:08Z",
-      "ageHours": 119,
-      "author": "scosemicolon",
-      "authorUrl": "https://github.com/scosemicolon",
-      "category": "docs / discovery",
-      "networks": [],
-      "maxPriceUsd": 0,
-      "urls": [],
-      "files": [
-        "README.md"
-      ],
-      "ecosystemFiles": [],
-      "summary": "Fixes a duplicated word in the README payment flow description.",
-      "reasons": [],
-      "priorityScore": 0,
-      "priority": "watch"
     }
   ],
   "rows": [
@@ -1134,7 +1144,7 @@
       "state": "open",
       "createdAt": "2026-05-11T18:10:17Z",
       "updatedAt": "2026-05-17T06:26:43Z",
-      "ageHours": 310,
+      "ageHours": 335,
       "author": "dbe006",
       "authorUrl": "https://github.com/dbe006",
       "category": "ecosystem listing",
@@ -1172,7 +1182,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-05-16T22:36:20Z",
-      "ageHours": 405,
+      "ageHours": 430,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -1214,7 +1224,7 @@
       "state": "open",
       "createdAt": "2026-05-03T12:10:08Z",
       "updatedAt": "2026-05-21T06:14:30Z",
-      "ageHours": 508,
+      "ageHours": 533,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -1258,7 +1268,7 @@
       "state": "open",
       "createdAt": "2026-05-21T08:41:59Z",
       "updatedAt": "2026-05-22T02:00:13Z",
-      "ageHours": 80,
+      "ageHours": 105,
       "author": "SASN19",
       "authorUrl": "https://github.com/SASN19",
       "category": "ecosystem listing",
@@ -1297,7 +1307,7 @@
       "state": "open",
       "createdAt": "2026-05-15T18:46:48Z",
       "updatedAt": "2026-05-20T01:17:17Z",
-      "ageHours": 214,
+      "ageHours": 239,
       "author": "andysalvo",
       "authorUrl": "https://github.com/andysalvo",
       "category": "ecosystem listing",
@@ -1339,7 +1349,7 @@
       "state": "open",
       "createdAt": "2026-05-08T22:35:56Z",
       "updatedAt": "2026-05-20T01:09:53Z",
-      "ageHours": 378,
+      "ageHours": 403,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -1378,7 +1388,7 @@
       "state": "open",
       "createdAt": "2026-05-19T11:48:48Z",
       "updatedAt": "2026-05-19T21:08:00Z",
-      "ageHours": 125,
+      "ageHours": 149,
       "author": "ValoremFoundation",
       "authorUrl": "https://github.com/ValoremFoundation",
       "category": "ecosystem listing",
@@ -1410,13 +1420,52 @@
       "priority": "urgent"
     },
     {
+      "number": 164,
+      "title": "feat: add Jorkal NFT Data API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/164",
+      "state": "open",
+      "createdAt": "2026-05-15T11:22:14Z",
+      "updatedAt": "2026-05-25T11:24:00Z",
+      "ageHours": 246,
+      "author": "jorkal-crypto",
+      "authorUrl": "https://github.com/jorkal-crypto",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.005,
+      "urls": [
+        "https://vercel-deploy-alpha-puce.vercel.app",
+        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json",
+        "typescript/site/public/logos/jorkal-nft-api.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json"
+      ],
+      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 72,
+      "priority": "urgent"
+    },
+    {
       "number": 134,
       "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
       "url": "https://github.com/coinbase/x402/pull/134",
       "state": "open",
       "createdAt": "2026-05-01T23:30:36Z",
       "updatedAt": "2026-05-18T17:15:39Z",
-      "ageHours": 545,
+      "ageHours": 570,
       "author": "j2422144-beep",
       "authorUrl": "https://github.com/j2422144-beep",
       "category": "ecosystem listing",
@@ -1452,92 +1501,13 @@
       "priority": "urgent"
     },
     {
-      "number": 164,
-      "title": "feat: add Jorkal NFT Data API to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/164",
-      "state": "open",
-      "createdAt": "2026-05-15T11:22:14Z",
-      "updatedAt": "2026-05-16T22:49:31Z",
-      "ageHours": 221,
-      "author": "jorkal-crypto",
-      "authorUrl": "https://github.com/jorkal-crypto",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.005,
-      "urls": [
-        "https://vercel-deploy-alpha-puce.vercel.app",
-        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json",
-        "typescript/site/public/logos/jorkal-nft-api.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json"
-      ],
-      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 72,
-      "priority": "urgent"
-    },
-    {
-      "number": 183,
-      "title": "feat: add Data-Joule to x402 ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/183",
-      "state": "closed",
-      "createdAt": "2026-05-23T01:24:15Z",
-      "updatedAt": "2026-05-23T01:25:53Z",
-      "ageHours": 39,
-      "author": "JefBronze",
-      "authorUrl": "https://github.com/JefBronze",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.00005,
-      "urls": [
-        "https://data-joule.com/api/inference`",
-        "https://data-joule.com/demo",
-        "https://data-joule.com/method",
-        "https://github.com/Data-Joule/data-joule-web"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/data-joule/metadata.json",
-        "typescript/site/public/logos/data-joule.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/data-joule/metadata.json"
-      ],
-      "summary": "**Data-Joule** is an AI inference node running on a Raspberry Pi in Montréal that participates in real-time grid demand response via OpenADR 3.0.",
-      "reasons": [
-        "public ecosystem listing",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 70,
-      "priority": "urgent"
-    },
-    {
       "number": 155,
       "title": "feat: add AgentLair to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/155",
       "state": "closed",
       "createdAt": "2026-05-06T12:00:16Z",
       "updatedAt": "2026-05-20T14:03:31Z",
-      "ageHours": 437,
+      "ageHours": 461,
       "author": "piiiico",
       "authorUrl": "https://github.com/piiiico",
       "category": "ecosystem listing",
@@ -1575,7 +1545,7 @@
       "state": "closed",
       "createdAt": "2026-05-22T03:01:32Z",
       "updatedAt": "2026-05-22T04:58:48Z",
-      "ageHours": 61,
+      "ageHours": 86,
       "author": "ciinkwia",
       "authorUrl": "https://github.com/ciinkwia",
       "category": "ecosystem listing",
@@ -1613,7 +1583,7 @@
       "state": "open",
       "createdAt": "2026-05-06T22:39:51Z",
       "updatedAt": "2026-05-16T23:02:03Z",
-      "ageHours": 426,
+      "ageHours": 451,
       "author": "docpull",
       "authorUrl": "https://github.com/docpull",
       "category": "ecosystem listing",
@@ -1647,13 +1617,53 @@
       "priority": "urgent"
     },
     {
+      "number": 183,
+      "title": "feat: add Data-Joule to x402 ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/183",
+      "state": "closed",
+      "createdAt": "2026-05-23T01:24:15Z",
+      "updatedAt": "2026-05-23T01:25:53Z",
+      "ageHours": 64,
+      "author": "JefBronze",
+      "authorUrl": "https://github.com/JefBronze",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.00005,
+      "urls": [
+        "https://data-joule.com/api/inference`",
+        "https://data-joule.com/demo",
+        "https://data-joule.com/method",
+        "https://github.com/Data-Joule/data-joule-web"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/data-joule/metadata.json",
+        "typescript/site/public/logos/data-joule.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/data-joule/metadata.json"
+      ],
+      "summary": "**Data-Joule** is an AI inference node running on a Raspberry Pi in Montréal that participates in real-time grid demand response via OpenADR 3.0.",
+      "reasons": [
+        "public ecosystem listing",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 62,
+      "priority": "urgent"
+    },
+    {
       "number": 154,
       "title": "Add Sentinel to ecosystem — agent reputation intelligence via x402",
       "url": "https://github.com/coinbase/x402/pull/154",
       "state": "open",
       "createdAt": "2026-05-06T08:21:08Z",
       "updatedAt": "2026-05-18T17:12:35Z",
-      "ageHours": 440,
+      "ageHours": 465,
       "author": "InfraGridACP-Sentinel",
       "authorUrl": "https://github.com/InfraGridACP-Sentinel",
       "category": "ecosystem listing",
@@ -1689,7 +1699,7 @@
       "state": "closed",
       "createdAt": "2026-05-08T01:39:02Z",
       "updatedAt": "2026-05-08T01:48:46Z",
-      "ageHours": 399,
+      "ageHours": 424,
       "author": "NZRTnetwork",
       "authorUrl": "https://github.com/NZRTnetwork",
       "category": "ecosystem listing",
@@ -1728,7 +1738,7 @@
       "state": "open",
       "createdAt": "2026-05-03T22:54:58Z",
       "updatedAt": "2026-05-04T19:46:30Z",
-      "ageHours": 498,
+      "ageHours": 522,
       "author": "johnyi12",
       "authorUrl": "https://github.com/johnyi12",
       "category": "ecosystem listing",
@@ -1762,7 +1772,7 @@
       "state": "open",
       "createdAt": "2026-05-16T19:20:33Z",
       "updatedAt": "2026-05-18T13:34:40Z",
-      "ageHours": 189,
+      "ageHours": 214,
       "author": "untitledfinancial",
       "authorUrl": "https://github.com/untitledfinancial",
       "category": "ecosystem listing",
@@ -1792,13 +1802,45 @@
       "priority": "review"
     },
     {
+      "number": 184,
+      "title": "feat(ecosystem): add extract.dkta.dev — LLM-ready content extraction …",
+      "url": "https://github.com/coinbase/x402/pull/184",
+      "state": "open",
+      "createdAt": "2026-05-25T12:42:45Z",
+      "updatedAt": "2026-05-25T15:42:53Z",
+      "ageHours": 5,
+      "author": "dkta0",
+      "authorUrl": "https://github.com/dkta0",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://extract.dkta.dev"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/extract-dkta/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/extract-dkta/metadata.json"
+      ],
+      "summary": "extract.dkta.dev is a content extraction API built for AI agents. It returns clean, LLM-ready markdown from any URL — stripped of nav, ads, and boilerplate. Agents integrate via x402 on Base: no account, no API key, no subscription. The x402 payment flow is handled automatically by any x402-compatible client.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface"
+      ],
+      "priorityScore": 52,
+      "priority": "review"
+    },
+    {
       "number": 179,
       "title": "feat: add InstaDomain to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/179",
       "state": "open",
       "createdAt": "2026-05-20T07:06:37Z",
       "updatedAt": "2026-05-21T20:16:21Z",
-      "ageHours": 105,
+      "ageHours": 130,
       "author": "nach-dakwale",
       "authorUrl": "https://github.com/nach-dakwale",
       "category": "ecosystem listing",
@@ -1833,7 +1875,7 @@
       "state": "open",
       "createdAt": "2026-05-16T16:59:56Z",
       "updatedAt": "2026-05-16T22:16:15Z",
-      "ageHours": 192,
+      "ageHours": 216,
       "author": "FuturMix",
       "authorUrl": "https://github.com/FuturMix",
       "category": "ecosystem listing",
@@ -1868,7 +1910,7 @@
       "state": "open",
       "createdAt": "2026-05-02T12:46:19Z",
       "updatedAt": "2026-05-02T12:46:28Z",
-      "ageHours": 532,
+      "ageHours": 557,
       "author": "openpulsechain",
       "authorUrl": "https://github.com/openpulsechain",
       "category": "ecosystem listing",
@@ -1905,7 +1947,7 @@
       "state": "open",
       "createdAt": "2026-05-04T01:35:45Z",
       "updatedAt": "2026-05-04T01:35:55Z",
-      "ageHours": 495,
+      "ageHours": 520,
       "author": "Kaizor7",
       "authorUrl": "https://github.com/Kaizor7",
       "category": "ecosystem listing",
@@ -1942,7 +1984,7 @@
       "state": "open",
       "createdAt": "2026-05-02T08:31:52Z",
       "updatedAt": "2026-05-02T14:03:55Z",
-      "ageHours": 536,
+      "ageHours": 561,
       "author": "bonedoc911",
       "authorUrl": "https://github.com/bonedoc911",
       "category": "docs / discovery",
@@ -1973,7 +2015,7 @@
       "state": "open",
       "createdAt": "2026-05-20T05:01:30Z",
       "updatedAt": "2026-05-21T20:27:37Z",
-      "ageHours": 107,
+      "ageHours": 132,
       "author": "0rkz",
       "authorUrl": "https://github.com/0rkz",
       "category": "ecosystem listing",
@@ -2006,7 +2048,7 @@
       "state": "open",
       "createdAt": "2026-05-03T21:50:55Z",
       "updatedAt": "2026-05-03T21:51:03Z",
-      "ageHours": 499,
+      "ageHours": 523,
       "author": "kite-builds",
       "authorUrl": "https://github.com/kite-builds",
       "category": "ecosystem listing",
@@ -2044,7 +2086,7 @@
       "state": "open",
       "createdAt": "2026-05-04T18:23:02Z",
       "updatedAt": "2026-05-20T21:16:17Z",
-      "ageHours": 478,
+      "ageHours": 503,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2074,7 +2116,7 @@
       "state": "closed",
       "createdAt": "2026-05-19T03:00:21Z",
       "updatedAt": "2026-05-19T03:03:08Z",
-      "ageHours": 134,
+      "ageHours": 158,
       "author": "ethanoroshiba",
       "authorUrl": "https://github.com/ethanoroshiba",
       "category": "docs / discovery",
@@ -2200,7 +2242,7 @@
       "state": "open",
       "createdAt": "2026-05-04T00:36:38Z",
       "updatedAt": "2026-05-04T00:36:49Z",
-      "ageHours": 496,
+      "ageHours": 521,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2228,7 +2270,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:11:54Z",
       "updatedAt": "2026-05-20T04:13:54Z",
-      "ageHours": 110,
+      "ageHours": 135,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "ecosystem listing",
@@ -2260,7 +2302,7 @@
       "state": "open",
       "createdAt": "2026-05-04T22:24:40Z",
       "updatedAt": "2026-05-20T21:16:13Z",
-      "ageHours": 474,
+      "ageHours": 499,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2286,7 +2328,7 @@
       "state": "closed",
       "createdAt": "2026-05-17T01:45:46Z",
       "updatedAt": "2026-05-17T01:56:04Z",
-      "ageHours": 183,
+      "ageHours": 208,
       "author": "feldmannn",
       "authorUrl": "https://github.com/feldmannn",
       "category": "protocol implementation",
@@ -2311,7 +2353,7 @@
       "state": "closed",
       "createdAt": "2026-05-06T19:50:13Z",
       "updatedAt": "2026-05-06T21:08:18Z",
-      "ageHours": 429,
+      "ageHours": 453,
       "author": "aayushijain21",
       "authorUrl": "https://github.com/aayushijain21",
       "category": "protocol implementation",
@@ -2362,7 +2404,7 @@
       "state": "open",
       "createdAt": "2026-05-04T04:21:19Z",
       "updatedAt": "2026-05-04T04:21:29Z",
-      "ageHours": 492,
+      "ageHours": 517,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2387,7 +2429,7 @@
       "state": "closed",
       "createdAt": "2026-05-15T16:41:08Z",
       "updatedAt": "2026-05-15T16:53:58Z",
-      "ageHours": 216,
+      "ageHours": 241,
       "author": "EfeDurmaz16",
       "authorUrl": "https://github.com/EfeDurmaz16",
       "category": "docs / discovery",
@@ -2512,7 +2554,7 @@
       "state": "closed",
       "createdAt": "2026-05-15T16:39:42Z",
       "updatedAt": "2026-05-15T16:53:56Z",
-      "ageHours": 216,
+      "ageHours": 241,
       "author": "EfeDurmaz16",
       "authorUrl": "https://github.com/EfeDurmaz16",
       "category": "docs / discovery",
@@ -2637,7 +2679,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T13:12:46Z",
       "updatedAt": "2026-05-15T14:55:01Z",
-      "ageHours": 243,
+      "ageHours": 268,
       "author": "TRtomasz",
       "authorUrl": "https://github.com/TRtomasz",
       "category": "ecosystem listing",
@@ -2670,7 +2712,7 @@
       "state": "open",
       "createdAt": "2026-05-05T12:17:33Z",
       "updatedAt": "2026-05-05T19:21:09Z",
-      "ageHours": 460,
+      "ageHours": 485,
       "author": "johnyi12",
       "authorUrl": "https://github.com/johnyi12",
       "category": "ecosystem listing",
@@ -2702,7 +2744,7 @@
       "state": "closed",
       "createdAt": "2026-05-17T01:45:48Z",
       "updatedAt": "2026-05-17T02:12:00Z",
-      "ageHours": 183,
+      "ageHours": 208,
       "author": "feldmannn",
       "authorUrl": "https://github.com/feldmannn",
       "category": "protocol implementation",
@@ -2729,7 +2771,7 @@
       "state": "open",
       "createdAt": "2026-05-04T02:45:28Z",
       "updatedAt": "2026-05-04T02:45:38Z",
-      "ageHours": 494,
+      "ageHours": 519,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2757,7 +2799,7 @@
       "state": "open",
       "createdAt": "2026-05-20T14:37:46Z",
       "updatedAt": "2026-05-20T14:39:12Z",
-      "ageHours": 98,
+      "ageHours": 123,
       "author": "tdnupe3",
       "authorUrl": "https://github.com/tdnupe3",
       "category": "docs / discovery",
@@ -2786,7 +2828,7 @@
       "state": "open",
       "createdAt": "2026-05-04T16:21:55Z",
       "updatedAt": "2026-05-05T18:19:37Z",
-      "ageHours": 480,
+      "ageHours": 505,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "x402 repo activity",
@@ -2817,7 +2859,7 @@
       "state": "open",
       "createdAt": "2026-05-04T12:26:54Z",
       "updatedAt": "2026-05-04T12:27:04Z",
-      "ageHours": 484,
+      "ageHours": 509,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2843,7 +2885,7 @@
       "state": "open",
       "createdAt": "2026-05-03T20:35:18Z",
       "updatedAt": "2026-05-03T20:35:29Z",
-      "ageHours": 500,
+      "ageHours": 525,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2867,7 +2909,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:10:46Z",
       "updatedAt": "2026-05-20T02:10:56Z",
-      "ageHours": 110,
+      "ageHours": 135,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "docs / discovery",
@@ -2901,7 +2943,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T04:03:07Z",
       "updatedAt": "2026-05-15T08:26:14Z",
-      "ageHours": 252,
+      "ageHours": 277,
       "author": "nolnol3",
       "authorUrl": "https://github.com/nolnol3",
       "category": "x402 repo activity",
@@ -2941,7 +2983,7 @@
       "state": "open",
       "createdAt": "2026-05-04T17:40:51Z",
       "updatedAt": "2026-05-06T16:51:13Z",
-      "ageHours": 479,
+      "ageHours": 504,
       "author": "aayushijain21",
       "authorUrl": "https://github.com/aayushijain21",
       "category": "docs / discovery",
@@ -3068,7 +3110,7 @@
       "state": "open",
       "createdAt": "2026-05-02T06:50:31Z",
       "updatedAt": "2026-05-02T06:50:40Z",
-      "ageHours": 538,
+      "ageHours": 562,
       "author": "hilarl",
       "authorUrl": "https://github.com/hilarl",
       "category": "docs / discovery",
@@ -3095,7 +3137,7 @@
       "state": "open",
       "createdAt": "2026-05-04T08:19:55Z",
       "updatedAt": "2026-05-04T08:20:06Z",
-      "ageHours": 488,
+      "ageHours": 513,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "docs / discovery",
@@ -3122,7 +3164,7 @@
       "state": "open",
       "createdAt": "2026-05-19T17:19:01Z",
       "updatedAt": "2026-05-19T17:19:08Z",
-      "ageHours": 119,
+      "ageHours": 144,
       "author": "scosemicolon",
       "authorUrl": "https://github.com/scosemicolon",
       "category": "docs / discovery",
@@ -3145,7 +3187,7 @@
       "state": "closed",
       "createdAt": "2026-05-17T01:45:44Z",
       "updatedAt": "2026-05-17T01:56:03Z",
-      "ageHours": 183,
+      "ageHours": 208,
       "author": "feldmannn",
       "authorUrl": "https://github.com/feldmannn",
       "category": "example app",
@@ -3171,7 +3213,7 @@
       "state": "open",
       "createdAt": "2026-05-03T22:44:19Z",
       "updatedAt": "2026-05-03T22:44:29Z",
-      "ageHours": 498,
+      "ageHours": 523,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "x402 repo activity",
