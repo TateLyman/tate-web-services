@@ -1,0 +1,432 @@
+{
+  "runDate": "2026-05-25",
+  "product": "WebData Unlocked Revenue Agent",
+  "source": "agent-commerce-webdata-radar.json",
+  "brightDataReady": {
+    "status": "adapter-ready",
+    "needed": [
+      "Bright Data API token or MCP credentials",
+      "SERP/Web Unlocker credits from the hackathon account"
+    ],
+    "use": "replace GitHub-only queue reads with live public web fetches, SERP discovery, and rendered-page extraction during hackathon demo"
+  },
+  "counts": {
+    "observedSignals": 179,
+    "highIntent": 78,
+    "mainnetRails": 59,
+    "pricedCalls": 53,
+    "selectedSignals": 16
+  },
+  "buyerSegments": [
+    {
+      "name": "paid API teams",
+      "fit": 13
+    },
+    {
+      "name": "payment infrastructure teams",
+      "fit": 11
+    },
+    {
+      "name": "agent-commerce directories",
+      "fit": 5
+    }
+  ],
+  "actionCounts": {
+    "browser-payment loop": 6,
+    "settlement evidence": 3,
+    "outside proof packet": 1,
+    "discovery proof": 6
+  },
+  "signals": [
+    {
+      "rank": 1,
+      "title": "Add Agent Commerce Desk",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/425",
+      "category": "trust / security",
+      "action": "browser-payment loop",
+      "revenueScore": 100,
+      "price": "not priced",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "updatedAt": "2026-05-25T00:47:18Z"
+    },
+    {
+      "rank": 2,
+      "title": "Add Nexus — signed-inference rail (Solana + Base) under AI Agent Inte…",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/419",
+      "category": "trust / security",
+      "action": "settlement evidence",
+      "revenueScore": 100,
+      "price": "$0.010",
+      "rails": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-25T00:04:01Z"
+    },
+    {
+      "rank": 3,
+      "title": "Add Fleet x402 Microservices — agent-payable SEO audit + intel pack on Base",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/410",
+      "category": "trust / security",
+      "action": "settlement evidence",
+      "revenueScore": 100,
+      "price": "$0.500",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-24T23:58:08Z"
+    },
+    {
+      "rank": 4,
+      "title": "Add TradeRoute — 55-endpoint crypto-trading data router for AI agents",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/406",
+      "category": "agent tool surface",
+      "action": "settlement evidence",
+      "revenueScore": 100,
+      "price": "$0.050",
+      "rails": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-24T23:51:17Z"
+    },
+    {
+      "rank": 5,
+      "title": "Add Usenami — multi-venue perp funding & RWA spread API",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/405",
+      "category": "trust / security",
+      "action": "browser-payment loop",
+      "revenueScore": 100,
+      "price": "$0.001",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-24T22:54:16Z"
+    },
+    {
+      "rank": 6,
+      "title": "feat: add CryptoHunter APIs — live crypto data + DeFi safety via x402",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/426",
+      "category": "trust / security",
+      "action": "browser-payment loop",
+      "revenueScore": 100,
+      "price": "$0.010",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-24T20:35:30Z"
+    },
+    {
+      "rank": 7,
+      "title": "Add AgentScrape to Data & Social APIs",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/423",
+      "category": "agent tool surface",
+      "action": "browser-payment loop",
+      "revenueScore": 100,
+      "price": "$0.008",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-24T20:24:37Z"
+    },
+    {
+      "rank": 8,
+      "title": "Add AgentGrade to Agent Verification & Security",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/421",
+      "category": "trust / security",
+      "action": "browser-payment loop",
+      "revenueScore": 100,
+      "price": "not priced",
+      "rails": [
+        "Base",
+        "x402",
+        "MCP",
+        "A2A"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "updatedAt": "2026-05-24T03:32:02Z"
+    },
+    {
+      "rank": 9,
+      "title": "Add Hermes Asia Intelligence - AI research API (CN/JP markets)",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/420",
+      "category": "agent tool surface",
+      "action": "outside proof packet",
+      "revenueScore": 100,
+      "price": "$0.030",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-23T22:00:45Z"
+    },
+    {
+      "rank": 10,
+      "title": "Add Tate Programs x402 Surface Checks",
+      "source": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/418",
+      "category": "trust / security",
+      "action": "browser-payment loop",
+      "revenueScore": 100,
+      "price": "not priced",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "updatedAt": "2026-05-22T17:00:32Z"
+    },
+    {
+      "rank": 11,
+      "title": "Add Fleet x402 Microservices to ecosystem (Services/Endpoints)",
+      "source": "coinbase/x402",
+      "url": "https://github.com/coinbase/x402/pull/181",
+      "category": "ecosystem listing",
+      "action": "discovery proof",
+      "revenueScore": 100,
+      "price": "$0.500",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-22T02:00:13Z"
+    },
+    {
+      "rank": 12,
+      "title": "Add x402watch to ecosystem",
+      "source": "coinbase/x402",
+      "url": "https://github.com/coinbase/x402/pull/138",
+      "category": "ecosystem listing",
+      "action": "discovery proof",
+      "revenueScore": 100,
+      "price": "not priced",
+      "rails": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "updatedAt": "2026-05-21T06:14:30Z"
+    },
+    {
+      "rank": 13,
+      "title": "Add Japan Data APIs — 7 x402 services on Base + Solana mainnet",
+      "source": "solana-foundation/pay-skills",
+      "url": "https://github.com/solana-foundation/pay-skills/pull/74",
+      "category": "bounty / escrow",
+      "action": "discovery proof",
+      "revenueScore": 100,
+      "price": "$0.250",
+      "rails": [
+        "Solana",
+        "Base",
+        "Polygon",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "multi-endpoint paid surface",
+        "multi-rail payment behavior",
+        "escrow, verification, or proof workflow",
+        "settlement or accounting path",
+        "outbound communication or voice path",
+        "agent-discoverable contract",
+        "mainnet value path"
+      ],
+      "updatedAt": "2026-05-20T21:13:26Z"
+    },
+    {
+      "rank": 14,
+      "title": "feat(ecosystem): add Crest Deployment Systems -- security audit + crypto data",
+      "source": "coinbase/x402",
+      "url": "https://github.com/coinbase/x402/pull/167",
+      "category": "ecosystem listing",
+      "action": "discovery proof",
+      "revenueScore": 100,
+      "price": "$1.00",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-20T01:17:17Z"
+    },
+    {
+      "rank": 15,
+      "title": "Add KR Crypto Intelligence to ecosystem",
+      "source": "coinbase/x402",
+      "url": "https://github.com/coinbase/x402/pull/160",
+      "category": "ecosystem listing",
+      "action": "discovery proof",
+      "revenueScore": 100,
+      "price": "not priced",
+      "rails": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path"
+      ],
+      "updatedAt": "2026-05-20T01:09:53Z"
+    },
+    {
+      "rank": 16,
+      "title": "MEV Intelligence",
+      "source": "coinbase/x402",
+      "url": "https://github.com/coinbase/x402/pull/174",
+      "category": "ecosystem listing",
+      "action": "discovery proof",
+      "revenueScore": 100,
+      "price": "$0.500",
+      "rails": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "updatedAt": "2026-05-19T21:08:00Z"
+    }
+  ]
+}
