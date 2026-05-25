@@ -18,7 +18,8 @@ async function readJson(path) {
 }
 
 function normalizeRows(sourceName, payload) {
-  return (payload.rows ?? []).map((row) => ({
+  const rows = payload.rows ?? payload.priorityRows ?? []
+  return rows.map((row) => ({
     sourceName,
     number: row.number,
     title: row.title,
@@ -47,10 +48,11 @@ function scoreRevenue(row) {
   return Math.min(100, score)
 }
 
-function summarize(x402, paySkills) {
+function summarize(x402, paySkills, awesomeX402) {
   const rows = [
     ...normalizeRows('coinbase/x402', x402),
     ...normalizeRows('solana-foundation/pay-skills', paySkills),
+    ...normalizeRows('xpaysh/awesome-x402', awesomeX402),
   ].map((row) => ({
     ...row,
     revenueScore: scoreRevenue(row),
@@ -84,6 +86,12 @@ function summarize(x402, paySkills) {
         url: paySkills.source,
         observedCount: paySkills.observedCount,
         priorityCount: paySkills.priorityCount,
+      },
+      {
+        name: 'xpaysh/awesome-x402',
+        url: awesomeX402.source,
+        observedCount: awesomeX402.observedCount,
+        priorityCount: awesomeX402.priorityCount,
       },
     ],
     observedCount: rows.length,
@@ -232,7 +240,7 @@ function renderHtml(summary) {
         <aside class="terminal-window" aria-label="agent commerce web-data terminal preview">
           <div class="terminal-topline">radar run</div>
           <pre><code>$ fuse public launch queues
-sources: coinbase/x402 + pay-skills
+sources: coinbase/x402 + pay-skills + awesome-x402
 observed: ${summary.observedCount}
 high-intent: ${summary.highIntentCount}
 output: agent-commerce-webdata-radar.json</code></pre>
@@ -301,11 +309,12 @@ output: agent-commerce-webdata-radar.json</code></pre>
 }
 
 async function main() {
-  const [x402, paySkills] = await Promise.all([
+  const [x402, paySkills, awesomeX402] = await Promise.all([
     readJson('x402-ecosystem-radar.json'),
     readJson('pay-skills-launch-queue.json'),
+    readJson('awesome-x402-launch-queue.json'),
   ])
-  const summary = summarize(x402, paySkills)
+  const summary = summarize(x402, paySkills, awesomeX402)
   await Promise.all([
     writeFile(OUTPUT_JSON, `${JSON.stringify(summary, null, 2)}\n`),
     writeFile(OUTPUT_HTML, renderHtml(summary)),

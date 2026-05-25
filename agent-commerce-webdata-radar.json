@@ -1,5 +1,5 @@
 {
-  "runDate": "2026-05-24",
+  "runDate": "2026-05-25",
   "sources": [
     {
       "name": "coinbase/x402",
@@ -12,13 +12,365 @@
       "url": "https://github.com/solana-foundation/pay-skills/pulls",
       "observedCount": 72,
       "priorityCount": 28
+    },
+    {
+      "name": "xpaysh/awesome-x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pulls",
+      "observedCount": 57,
+      "priorityCount": 43
     }
   ],
-  "observedCount": 122,
-  "highIntentCount": 43,
-  "mainnetCount": 37,
-  "pricedCount": 30,
+  "observedCount": 179,
+  "highIntentCount": 78,
+  "mainnetCount": 59,
+  "pricedCount": 53,
   "highIntent": [
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 425,
+      "title": "Add Agent Commerce Desk",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/425",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 86,
+      "updatedAt": "2026-05-25T00:47:18Z",
+      "ageHours": 12,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Add Agent Commerce Desk to the Security & Analysis section.",
+      "urls": [
+        "https://x402-wallet-readiness-service.vercel.app`",
+        "https://x402-wallet-readiness-service.vercel.app/.well-known/x402`",
+        "https://x402-wallet-readiness-service.vercel.app/.well-known/agent-card.json`",
+        "https://x402-wallet-readiness-service.vercel.app/manifest`"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 419,
+      "title": "Add Nexus — signed-inference rail (Solana + Base) under AI Agent Inte…",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/419",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 78,
+      "updatedAt": "2026-05-25T00:04:01Z",
+      "ageHours": 50,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.01,
+      "summary": "…gration",
+      "urls": [
+        "https://vdmnexus.com/r/c9710ea7-9e1f-46ee-aaa9-903a536ae12e",
+        "https://verify.vdmnexus.com",
+        "https://docs.vdmnexus.com",
+        "https://docs.vdmnexus.com/docs/spec/sir-v2",
+        "https://github.com/vdmnexus/vdmnexus"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 410,
+      "title": "Add Fleet x402 Microservices — agent-payable SEO audit + intel pack on Base",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/410",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-24T23:58:08Z",
+      "ageHours": 88,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "[Fleet x402 Microservices](https://fleet-x402-audit.fly.dev) — two live, agent-payable services on Base mainnet:",
+      "urls": [
+        "https://fleet-x402-audit.fly.dev",
+        "https://fleet-x402-audit.fly.dev/.well-known/x402-listing"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 406,
+      "title": "Add TradeRoute — 55-endpoint crypto-trading data router for AI agents",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/406",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-24T23:51:17Z",
+      "ageHours": 102,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds **TradeRoute** to the Production Patterns section.",
+      "urls": [
+        "https://traderoute-psi.vercel.app",
+        "https://github.com/SMXFREEZE/traderoute",
+        "https://github.com/SMXFREEZE/traderoute/tree/main/mcp",
+        "https://traderoute-psi.vercel.app/api/health",
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 405,
+      "title": "Add Usenami — multi-venue perp funding & RWA spread API",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/405",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 78,
+      "updatedAt": "2026-05-24T22:54:16Z",
+      "ageHours": 109,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds Usenami to the **Data & Social APIs** section.",
+      "urls": [
+        "https://agentic.market/services/api-usenami-io",
+        "https://api.usenami.io/v1/funding/current",
+        "https://usenami.io",
+        "https://api.agentic.market/v1/services/api-usenami-io",
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 426,
+      "title": "feat: add CryptoHunter APIs — live crypto data + DeFi safety via x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/426",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 100,
+      "updatedAt": "2026-05-24T20:35:30Z",
+      "ageHours": 6,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.01,
+      "summary": "Adds [CryptoHunter APIs](https://cryptohunterx402apis.loca.lt) to the **### API Examples** section — a live x402-gated server on Base mainnet with 8 paid endpoints.",
+      "urls": [
+        "https://cryptohunterx402apis.loca.lt",
+        "https://cryptohunterx402apis.loca.lt`",
+        "https://cryptohunterx402apis.loca.lt/health",
+        "https://cryptohunterx402apis.loca.lt/.well-known/x402.json",
+        "https://facilitator.xpay.sh`"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 423,
+      "title": "Add AgentScrape to Data & Social APIs",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/423",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 90,
+      "updatedAt": "2026-05-24T20:24:37Z",
+      "ageHours": 17,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.008,
+      "summary": "Adds **AgentScrape** to the **Data & Social APIs** subsection under Production Implementations.",
+      "urls": [
+        "https://agent-scrape.healingsunhaven.workers.dev",
+        "https://agent-scrape.healingsunhaven.workers.dev/mcp",
+        "https://github.com/hshintelligence/agent-scrape"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 421,
+      "title": "Add AgentGrade to Agent Verification & Security",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/421",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 84,
+      "updatedAt": "2026-05-24T03:32:02Z",
+      "ageHours": 33,
+      "networks": [
+        "Base",
+        "x402",
+        "MCP",
+        "A2A"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds AgentGrade to the **Agent Verification & Security** subsection under AI Agent Integration.",
+      "urls": [
+        "https://agentgrade.com",
+        "https://agentgrade.com/kb/x402",
+        "https://agentgrade.com/leaderboard/",
+        "https://github.com/Agentic-Adventures/agentgrade-cli",
+        "https://github.com/marketplace/actions/agentgrade-scan",
+        "https://agentgrade.com/mcp"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 420,
+      "title": "Add Hermes Asia Intelligence - AI research API (CN/JP markets)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/420",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 64,
+      "updatedAt": "2026-05-23T22:00:45Z",
+      "ageHours": 39,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.03,
+      "summary": "**Provider:** Hermes Asia Intelligence x402 API",
+      "urls": [
+        "https://base-worker-01.j23726919.workers.dev",
+        "https://base-worker-01.j23726919.workers.dev/openapi.json"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 418,
+      "title": "Add Tate Programs x402 Surface Checks",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/418",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 76,
+      "updatedAt": "2026-05-22T17:00:32Z",
+      "ageHours": 56,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Add Tate Programs x402 Surface Checks to the Security & Analysis tools section.",
+      "urls": [
+        "https://the402.tateprograms.com/.well-known/x402`"
+      ],
+      "revenueScore": 100
+    },
     {
       "sourceName": "coinbase/x402",
       "number": 181,
@@ -210,320 +562,6 @@
       "urls": [
         "https://mev.advalorem.io/intelligence/openapi"
       ],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "coinbase/x402",
-      "number": 134,
-      "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
-      "url": "https://github.com/coinbase/x402/pull/134",
-      "state": "open",
-      "category": "ecosystem listing",
-      "priority": "urgent",
-      "priorityScore": 72,
-      "updatedAt": "2026-05-18T17:15:39Z",
-      "ageHours": 545,
-      "networks": [
-        "Base",
-        "Base Sepolia",
-        "Solana",
-        "testnet"
-      ],
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "declared paid calls"
-      ],
-      "maxPriceUsd": 0.001,
-      "summary": "Adds [Agiotage](https://agiotage.finance) to the x402 ecosystem page.",
-      "urls": [
-        "https://agiotage.finance",
-        "https://agio-protocol-production.up.railway.app",
-        "https://agio-protocol-production.up.railway.app/v1/x402/info",
-        "https://www.npmjs.com/package/agiotage-mcp",
-        "https://agiotage.finance/.well-known/agiotage.json"
-      ],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "coinbase/x402",
-      "number": 161,
-      "title": "ecosystem: add RugGuard — pre-trade rug-check API for AI agents",
-      "url": "https://github.com/coinbase/x402/pull/161",
-      "state": "open",
-      "category": "ecosystem listing",
-      "priority": "urgent",
-      "priorityScore": 94,
-      "updatedAt": "2026-05-17T06:26:43Z",
-      "ageHours": 310,
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "maxPriceUsd": 0.05,
-      "summary": "Adds RugGuard to the ecosystem under \"Services/Endpoints\".",
-      "urls": [],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "coinbase/x402",
-      "number": 164,
-      "title": "feat: add Jorkal NFT Data API to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/164",
-      "state": "open",
-      "category": "ecosystem listing",
-      "priority": "urgent",
-      "priorityScore": 72,
-      "updatedAt": "2026-05-16T22:49:31Z",
-      "ageHours": 221,
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "maxPriceUsd": 0.005,
-      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
-      "urls": [
-        "https://vercel-deploy-alpha-puce.vercel.app",
-        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
-      ],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "coinbase/x402",
-      "number": 158,
-      "title": "Add Crinkl to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/158",
-      "state": "open",
-      "category": "ecosystem listing",
-      "priority": "urgent",
-      "priorityScore": 84,
-      "updatedAt": "2026-05-16T22:36:20Z",
-      "ageHours": 405,
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "maxPriceUsd": 0.1,
-      "summary": "Adds Crinkl to the x402 ecosystem page as a `Services/Endpoints` provider.",
-      "urls": [
-        "https://www.crinkl.xyz/developers",
-        "https://api.crinkl.xyz",
-        "https://api.crinkl.xyz/x402/catalog",
-        "https://solscan.io/tx/2uB7Y91N6GQPiAnemQ7yFUpdhUygjoqu4s86MXf4RJSfPza1VaCpC8Uxf1eDcZBQJ7woEaBUq98zYxxT4aBVAM1E"
-      ],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "solana-foundation/pay-skills",
-      "number": 23,
-      "title": "feat(security): add algovoi/agent-trust-bench — AI agent payment security testing",
-      "url": "https://github.com/solana-foundation/pay-skills/pull/23",
-      "state": "open",
-      "category": "identity / credit",
-      "priority": "urgent",
-      "priorityScore": 70,
-      "updatedAt": "2026-05-16T17:24:48Z",
-      "ageHours": 444,
-      "networks": [
-        "Solana",
-        "Base",
-        "mainnet",
-        "x402"
-      ],
-      "reasons": [
-        "meaningful per-call value movement",
-        "multi-rail payment behavior",
-        "agent identity or risk-scoring claims",
-        "untrusted web-data ingestion",
-        "settlement or accounting path",
-        "agent-discoverable contract",
-        "mainnet value path"
-      ],
-      "maxPriceUsd": 10,
-      "summary": "`providers/algovoi/agent-trust-bench` — a live, open security-testing instrument for evaluating AI agent payment behaviour against adversarial x402 challenges.",
-      "urls": [],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "solana-foundation/pay-skills",
-      "number": 35,
-      "title": "Add KR Crypto Intelligence provider",
-      "url": "https://github.com/solana-foundation/pay-skills/pull/35",
-      "state": "open",
-      "category": "finance / market data",
-      "priority": "urgent",
-      "priorityScore": 82,
-      "updatedAt": "2026-05-16T14:44:33Z",
-      "ageHours": 417,
-      "networks": [
-        "Solana",
-        "Base",
-        "Polygon",
-        "mainnet",
-        "x402"
-      ],
-      "reasons": [
-        "multi-endpoint paid surface",
-        "meaningful per-call value movement",
-        "multi-rail payment behavior",
-        "settlement or accounting path",
-        "agent-discoverable contract",
-        "mainnet value path"
-      ],
-      "maxPriceUsd": 17,
-      "summary": "Add KR Crypto Intelligence — Korean crypto market data API for AI agents.",
-      "urls": [],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "solana-foundation/pay-skills",
-      "number": 28,
-      "title": "feat: add uzproof/verify — gasless x402+MPP verification provider",
-      "url": "https://github.com/solana-foundation/pay-skills/pull/28",
-      "state": "open",
-      "category": "bounty / escrow",
-      "priority": "review",
-      "priorityScore": 68,
-      "updatedAt": "2026-05-16T00:40:28Z",
-      "ageHours": 434,
-      "networks": [
-        "Solana",
-        "mainnet",
-        "MPP",
-        "x402"
-      ],
-      "reasons": [
-        "multi-rail payment behavior",
-        "agent identity or risk-scoring claims",
-        "escrow, verification, or proof workflow",
-        "settlement or accounting path",
-        "outbound communication or voice path",
-        "agent-discoverable contract",
-        "mainnet value path"
-      ],
-      "maxPriceUsd": 0.05,
-      "summary": "Adds `providers/uzproof/verify` — the first **gasless x402+MPP** verification provider in the catalog.",
-      "urls": [],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "solana-foundation/pay-skills",
-      "number": 26,
-      "title": "feat: add vegacore AI document services (contract-checker, invoice-parser, doc-compliance)",
-      "url": "https://github.com/solana-foundation/pay-skills/pull/26",
-      "state": "open",
-      "category": "compliance / invoices",
-      "priority": "urgent",
-      "priorityScore": 70,
-      "updatedAt": "2026-05-14T23:32:43Z",
-      "ageHours": 437,
-      "networks": [
-        "Solana",
-        "Base",
-        "mainnet",
-        "x402"
-      ],
-      "reasons": [
-        "meaningful per-call value movement",
-        "multi-rail payment behavior",
-        "untrusted web-data ingestion",
-        "settlement or accounting path",
-        "outbound communication or voice path",
-        "agent-discoverable contract",
-        "mainnet value path"
-      ],
-      "maxPriceUsd": 10,
-      "summary": "Three x402-enabled AI services for document intelligence, all deployed on Google Cloud Run with dual-chain USDC payments (Base mainnet + Solana mainnet).",
-      "urls": [],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "solana-foundation/pay-skills",
-      "number": 43,
-      "title": "feat: add metengine/data-agent provider",
-      "url": "https://github.com/solana-foundation/pay-skills/pull/43",
-      "state": "open",
-      "category": "compute / web data",
-      "priority": "urgent",
-      "priorityScore": 76,
-      "updatedAt": "2026-05-14T22:57:49Z",
-      "ageHours": 395,
-      "networks": [
-        "Solana",
-        "mainnet",
-        "x402"
-      ],
-      "reasons": [
-        "wide paid API surface",
-        "untrusted web-data ingestion",
-        "outbound communication or voice path",
-        "agent-discoverable contract",
-        "mainnet value path"
-      ],
-      "maxPriceUsd": 0.2,
-      "summary": "Adds `metengine/data-agent` — a pay-per-query analytics API covering smart-money intelligence across three platforms in one provider listing.",
-      "urls": [],
-      "revenueScore": 100
-    },
-    {
-      "sourceName": "solana-foundation/pay-skills",
-      "number": 64,
-      "title": "Add Ankr x402 — 160-chain JSON-RPC provider",
-      "url": "https://github.com/solana-foundation/pay-skills/pull/64",
-      "state": "open",
-      "category": "bounty / escrow",
-      "priority": "urgent",
-      "priorityScore": 88,
-      "updatedAt": "2026-05-14T22:31:45Z",
-      "ageHours": 264,
-      "networks": [
-        "Solana",
-        "Base",
-        "Polygon",
-        "devnet",
-        "mainnet",
-        "MPP",
-        "x402"
-      ],
-      "reasons": [
-        "wide paid API surface",
-        "multi-rail payment behavior",
-        "escrow, verification, or proof workflow",
-        "settlement or accounting path",
-        "outbound communication or voice path",
-        "mainnet value path"
-      ],
-      "maxPriceUsd": 0.001,
-      "summary": "Adds **Ankr** as a provider at \\`providers/ankr/rpc/PAY.md\\`. Pay-per-request JSON-RPC across **160 chain paths** (mainnets + testnets), single gateway at \\`https://x402.rpc.ankr.com\\`. Flat **\\$0.001 USDC/request**, settled on Solana mainnet via x402 or MPP. No signup, no API keys.",
-      "urls": [],
       "revenueScore": 100
     }
   ],
@@ -3652,6 +3690,1709 @@
       "summary": "",
       "urls": [],
       "revenueScore": 0
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 426,
+      "title": "feat: add CryptoHunter APIs — live crypto data + DeFi safety via x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/426",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 100,
+      "updatedAt": "2026-05-24T20:35:30Z",
+      "ageHours": 6,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.01,
+      "summary": "Adds [CryptoHunter APIs](https://cryptohunterx402apis.loca.lt) to the **### API Examples** section — a live x402-gated server on Base mainnet with 8 paid endpoints.",
+      "urls": [
+        "https://cryptohunterx402apis.loca.lt",
+        "https://cryptohunterx402apis.loca.lt`",
+        "https://cryptohunterx402apis.loca.lt/health",
+        "https://cryptohunterx402apis.loca.lt/.well-known/x402.json",
+        "https://facilitator.xpay.sh`"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 423,
+      "title": "Add AgentScrape to Data & Social APIs",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/423",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 90,
+      "updatedAt": "2026-05-24T20:24:37Z",
+      "ageHours": 17,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.008,
+      "summary": "Adds **AgentScrape** to the **Data & Social APIs** subsection under Production Implementations.",
+      "urls": [
+        "https://agent-scrape.healingsunhaven.workers.dev",
+        "https://agent-scrape.healingsunhaven.workers.dev/mcp",
+        "https://github.com/hshintelligence/agent-scrape"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 375,
+      "title": "Add QuantOracle to Data & Social APIs",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/375",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 88,
+      "updatedAt": "2026-05-14T01:07:43Z",
+      "ageHours": 264,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 2.5,
+      "summary": "Adds QuantOracle to the **Data & Social APIs** section under Production Implementations.",
+      "urls": [
+        "https://github.com/QuantOracledev/quantoracle/tree/main/integrations/agentkit",
+        "https://github.com/QuantOracledev/quantoracle/blob/main/tests/accuracy_benchmarks.py",
+        "https://quantoracle.dev"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 425,
+      "title": "Add Agent Commerce Desk",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/425",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 86,
+      "updatedAt": "2026-05-25T00:47:18Z",
+      "ageHours": 12,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Add Agent Commerce Desk to the Security & Analysis section.",
+      "urls": [
+        "https://x402-wallet-readiness-service.vercel.app`",
+        "https://x402-wallet-readiness-service.vercel.app/.well-known/x402`",
+        "https://x402-wallet-readiness-service.vercel.app/.well-known/agent-card.json`",
+        "https://x402-wallet-readiness-service.vercel.app/manifest`"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 421,
+      "title": "Add AgentGrade to Agent Verification & Security",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/421",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 84,
+      "updatedAt": "2026-05-24T03:32:02Z",
+      "ageHours": 33,
+      "networks": [
+        "Base",
+        "x402",
+        "MCP",
+        "A2A"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds AgentGrade to the **Agent Verification & Security** subsection under AI Agent Integration.",
+      "urls": [
+        "https://agentgrade.com",
+        "https://agentgrade.com/kb/x402",
+        "https://agentgrade.com/leaderboard/",
+        "https://github.com/Agentic-Adventures/agentgrade-cli",
+        "https://github.com/marketplace/actions/agentgrade-scan",
+        "https://agentgrade.com/mcp"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 419,
+      "title": "Add Nexus — signed-inference rail (Solana + Base) under AI Agent Inte…",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/419",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 78,
+      "updatedAt": "2026-05-25T00:04:01Z",
+      "ageHours": 50,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.01,
+      "summary": "…gration",
+      "urls": [
+        "https://vdmnexus.com/r/c9710ea7-9e1f-46ee-aaa9-903a536ae12e",
+        "https://verify.vdmnexus.com",
+        "https://docs.vdmnexus.com",
+        "https://docs.vdmnexus.com/docs/spec/sir-v2",
+        "https://github.com/vdmnexus/vdmnexus"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 405,
+      "title": "Add Usenami — multi-venue perp funding & RWA spread API",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/405",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 78,
+      "updatedAt": "2026-05-24T22:54:16Z",
+      "ageHours": 109,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds Usenami to the **Data & Social APIs** section.",
+      "urls": [
+        "https://agentic.market/services/api-usenami-io",
+        "https://api.usenami.io/v1/funding/current",
+        "https://usenami.io",
+        "https://api.agentic.market/v1/services/api-usenami-io",
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 418,
+      "title": "Add Tate Programs x402 Surface Checks",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/418",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 76,
+      "updatedAt": "2026-05-22T17:00:32Z",
+      "ageHours": 56,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Add Tate Programs x402 Surface Checks to the Security & Analysis tools section.",
+      "urls": [
+        "https://the402.tateprograms.com/.well-known/x402`"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 406,
+      "title": "Add TradeRoute — 55-endpoint crypto-trading data router for AI agents",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/406",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-24T23:51:17Z",
+      "ageHours": 102,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds **TradeRoute** to the Production Patterns section.",
+      "urls": [
+        "https://traderoute-psi.vercel.app",
+        "https://github.com/SMXFREEZE/traderoute",
+        "https://github.com/SMXFREEZE/traderoute/tree/main/mcp",
+        "https://traderoute-psi.vercel.app/api/health",
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 401,
+      "title": "Add Solana Data API to Data & Social APIs section",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/401",
+      "state": "open",
+      "category": "data API",
+      "priority": "urgent",
+      "priorityScore": 74,
+      "updatedAt": "2026-05-19T02:41:32Z",
+      "ageHours": 142,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.005,
+      "summary": "Adds [Solana Data API](https://really-operates-beans-memories.trycloudflare.com) to the Data & Social APIs section — a pay-per-request Solana blockchain data service with 6 endpoints:",
+      "urls": [
+        "https://really-operates-beans-memories.trycloudflare.com"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 399,
+      "title": "Add Crest Deployment Systems: 3 live x402 services (supership, data, audit)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/399",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 72,
+      "updatedAt": "2026-05-18T22:20:14Z",
+      "ageHours": 147,
+      "networks": [
+        "Base",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds Crest Deployment Systems' 3 live x402 services on Base mainnet:",
+      "urls": [],
+      "revenueScore": 96
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 410,
+      "title": "Add Fleet x402 Microservices — agent-payable SEO audit + intel pack on Base",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/410",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-24T23:58:08Z",
+      "ageHours": 88,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.5,
+      "summary": "[Fleet x402 Microservices](https://fleet-x402-audit.fly.dev) — two live, agent-payable services on Base mainnet:",
+      "urls": [
+        "https://fleet-x402-audit.fly.dev",
+        "https://fleet-x402-audit.fly.dev/.well-known/x402-listing"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 416,
+      "title": "Update Suede AI listing: domain, prices, new endpoints",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/416",
+      "state": "closed",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 70,
+      "updatedAt": "2026-05-24T06:13:16Z",
+      "ageHours": 65,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 5,
+      "summary": "Updates the existing **Suede AI** entry under *Ecosystem Projects → Tools & Services* (originally landed via PR #323) so it matches the current production service.",
+      "urls": [
+        "https://app.suedeai.xyz",
+        "https://app.suedeai.ai",
+        "https://app.suedeai.ai/.well-known/x402.json",
+        "https://app.suedeai.ai/.well-known/agent-card.json",
+        "https://x402.org/facilitator`",
+        "https://app.suedeai.ai/create-music",
+        "https://suedeai.ai",
+        "https://x.com/AISUEDE"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 412,
+      "title": "Add Gapup MCP — 185-tool agent-payable C-suite MCP server",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/412",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 68,
+      "updatedAt": "2026-05-24T11:32:27Z",
+      "ageHours": 84,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 1.5,
+      "summary": "Hi @xpaysh 👋",
+      "urls": [
+        "https://hub.gapup.io/agents-api/onboard",
+        "https://smithery.ai/servers/gapup-team/gapup-mcp",
+        "https://mcp.gapup.io/mcp`",
+        "https://github.com/getgapup/gapup-mcp-public",
+        "https://mcp.gapup.io/.well-known/x402"
+      ],
+      "revenueScore": 96
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 398,
+      "title": "Add Solprobe",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/398",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 68,
+      "updatedAt": "2026-05-18T17:07:50Z",
+      "ageHours": 152,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "web-data or market-data surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "**What:** SolProbe — a Solana token risk scanner callable per-request over x402 (rug check, market signal, deep",
+      "urls": [],
+      "revenueScore": 92
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 413,
+      "title": "Add Carbon & Cashmere — 166 operational + 11 sponsor x402 endpoints, 7 chains",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/413",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 66,
+      "updatedAt": "2026-05-21T20:54:37Z",
+      "ageHours": 78,
+      "networks": [
+        "Base",
+        "Solana",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 2,
+      "summary": "Adding **Carbon & Cashmere** to the `🌟 Ecosystem Projects > Tools & Services` section. (Updated from earlier submission to reflect current state.)",
+      "urls": [
+        "https://api.carbon-cashmere.de/.well-known/x402",
+        "https://api.carbon-cashmere.de/.well-known/x402-sponsor",
+        "https://api.carbon-cashmere.de/docs",
+        "https://www.npmjs.com/package/@carbon-cashmere/x402-mcp",
+        "https://github.com/coinbase/x402/pull/21"
+      ],
+      "revenueScore": 94
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 420,
+      "title": "Add Hermes Asia Intelligence - AI research API (CN/JP markets)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/420",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 64,
+      "updatedAt": "2026-05-23T22:00:45Z",
+      "ageHours": 39,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.03,
+      "summary": "**Provider:** Hermes Asia Intelligence x402 API",
+      "urls": [
+        "https://base-worker-01.j23726919.workers.dev",
+        "https://base-worker-01.j23726919.workers.dev/openapi.json"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 381,
+      "title": "Add 7 production x402 services from bshelby88 (Royal Agentic)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/381",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "urgent",
+      "priorityScore": 64,
+      "updatedAt": "2026-05-16T01:33:46Z",
+      "ageHours": 215,
+      "networks": [
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "browser/payment-header behavior",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 1,
+      "summary": "Adds 7 production-live x402 endpoints to the **API Examples** section. All seven run on Base mainnet (`eip155:8453`) via the Coinbase CDP facilitator, use `@x402/express` middleware, and emit Bazaar discovery extensions in their 402 challenges.",
+      "urls": [
+        "https://github.com/TauricResearch/TradingAgents",
+        "https://github.com/bshelby88"
+      ],
+      "revenueScore": 100
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 409,
+      "title": "feat: add TrustBoost PII Sanitizer — x402 privacy layer for AI agent …",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/409",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 60,
+      "updatedAt": "2026-05-22T03:53:40Z",
+      "ageHours": 94,
+      "networks": [
+        "Solana",
+        "USDC",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "TrustBoost PII Sanitizer added to the Data & Social APIs section.",
+      "urls": [
+        "https://api.trustboost.dev/sanitize",
+        "https://api.trustboost.dev/health"
+      ],
+      "revenueScore": 78
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 407,
+      "title": "feat: add melis.ai x402 service fleet (23 endpoints)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/407",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 60,
+      "updatedAt": "2026-05-20T21:04:36Z",
+      "ageHours": 100,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "This PR adds the melis.ai x402 operator fleet to the Data & Social APIs section.",
+      "urls": [
+        "https://www.x402scan.com/resources?q=melis.ai",
+        "https://www.npmjs.com/package/@melis-ai/x402-tools-mcp",
+        "https://agents.melis.ai/services/",
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 78
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 390,
+      "title": "Add LoneStarOracle: 26 x402 AI data APIs on Base mainnet",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/390",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 60,
+      "updatedAt": "2026-05-18T01:13:15Z",
+      "ageHours": 168,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "web-data or market-data surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adding LoneStarOracle (lonestaroracle.xyz) — 26 live AI data APIs on Base mainnet using x402 v2 with Bazaar discovery extension.",
+      "urls": [],
+      "revenueScore": 84
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 414,
+      "title": "Add Vouch (x402 payment-trust API)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/414",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "urgent",
+      "priorityScore": 58,
+      "updatedAt": "2026-05-23T01:39:11Z",
+      "ageHours": 78,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "testnet"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "**What:** Vouch is an x402 trust/risk scoring API for payment counterparties, returning an explainable score, a risk band, and the reasons behind it.",
+      "urls": [
+        "https://vouch.futuronoti.workers.dev",
+        "https://github.com/notifuturo/vouch"
+      ],
+      "revenueScore": 86
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 386,
+      "title": "Add Crypto ETF Sentinel — US spot crypto ETF regulatory intelligence",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/386",
+      "state": "open",
+      "category": "data API",
+      "priority": "urgent",
+      "priorityScore": 58,
+      "updatedAt": "2026-05-17T10:07:35Z",
+      "ageHours": 183,
+      "networks": [
+        "Base",
+        "mainnet"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds Crypto ETF Sentinel to the Example Applications section, placed near the existing EDGAR Intelligence API entry (topical adjacency — both are SEC-data services).",
+      "urls": [
+        "https://api.cryptoetfsentinel.com",
+        "https://api.cryptoetfsentinel.com/docs",
+        "https://basescan.org/tx/0x9792f428cc5b1558481b0478e71c57539972ddf0c5db515ae179040d4661628a"
+      ],
+      "revenueScore": 88
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 378,
+      "title": "Add Jorkal NFT Data API — Solana NFT market data via x402",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/378",
+      "state": "open",
+      "category": "data API",
+      "priority": "urgent",
+      "priorityScore": 58,
+      "updatedAt": "2026-05-15T11:21:19Z",
+      "ageHours": 230,
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.005,
+      "summary": "Adds the Jorkal NFT Data API to the Data & Social APIs section.",
+      "urls": [
+        "https://vercel-deploy-alpha-puce.vercel.app",
+        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
+      ],
+      "revenueScore": 98
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 379,
+      "title": "Add GetMyCert x402 IT certification questions API to production imple…",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/379",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 56,
+      "updatedAt": "2026-05-16T00:09:23Z",
+      "ageHours": 217,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.01,
+      "summary": "Adds GetMyCert to the Production Implementations section.",
+      "urls": [
+        "https://getmycert.com/developers",
+        "https://getmycert.com/.well-known/x402.json",
+        "https://smithery.ai/server/getmycert-questions"
+      ],
+      "revenueScore": 96
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 391,
+      "title": "Update GateCheck by LarryBuildsAI listing",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/391",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-21T11:56:55Z",
+      "ageHours": 166,
+      "networks": [
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "- Updates the existing Boundary Guard row into the canonical GateCheck by LarryBuildsAI listing instead of adding a duplicate.",
+      "urls": [
+        "https://x402-resource-scanner.vercel.app",
+        "https://x402-resource-scanner.vercel.app/openapi.json",
+        "https://x402-resource-scanner.vercel.app/.well-known/x402",
+        "https://x402-resource-scanner.vercel.app/.well-known/glama.json"
+      ],
+      "revenueScore": 70
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 377,
+      "title": "Add SafeAgent Execution Guard — exactly-once execution guard for AI a…",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/377",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-14T03:24:28Z",
+      "ageHours": 261,
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "reasons": [
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds SafeAgent Execution Guard to the Agent Verification & Security section.",
+      "urls": [],
+      "revenueScore": 74
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 372,
+      "title": "Add IDLE Protocol — Residential Compute on Solana",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/372",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 52,
+      "updatedAt": "2026-05-13T09:25:43Z",
+      "ageHours": 279,
+      "networks": [
+        "Solana",
+        "USDC",
+        "x402"
+      ],
+      "reasons": [
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.08,
+      "summary": "IDLE Protocol is a distributed residential compute network on Solana with 14 x402-paid endpoints.",
+      "urls": [
+        "https://idle-gateway-production.up.railway.app",
+        "https://idleprotocol.com"
+      ],
+      "revenueScore": 80
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 396,
+      "title": "Add krewe — decentralized AI inference (2-of-3 consensus, x402 USDC)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/396",
+      "state": "open",
+      "category": "data API",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-18T15:31:43Z",
+      "ageHours": 153,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds **[krewe](https://www.krewe.world)** under `Data & Social APIs`.",
+      "urls": [
+        "https://www.krewe.world",
+        "https://github.com/krewe-AI/krewe",
+        "https://www.krewe.world/dashboard"
+      ],
+      "revenueScore": 90
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 395,
+      "title": "Add krewe — decentralized AI inference (2-of-3 consensus, x402 USDC)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/395",
+      "state": "closed",
+      "category": "data API",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-18T15:19:19Z",
+      "ageHours": 154,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds **[krewe](https://www.krewe.world)** under `Data & Social APIs`.",
+      "urls": [
+        "https://www.krewe.world",
+        "https://github.com/krewe-AI/krewe",
+        "https://www.krewe.world/dashboard"
+      ],
+      "revenueScore": 90
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 380,
+      "title": "Add Atomadic Nexus to Production Implementations",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/380",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 50,
+      "updatedAt": "2026-05-16T00:34:51Z",
+      "ageHours": 216,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "MCP",
+        "A2A"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds [Atomadic Nexus](https://atomadic.tech) to the **Production Implementations** section.",
+      "urls": [
+        "https://atomadic.tech",
+        "https://atomadic.tech/.well-known/agent.json",
+        "https://atomadic.tech/.well-known/mcp.json",
+        "https://atomadic.tech/openapi.json"
+      ],
+      "revenueScore": 68
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 400,
+      "title": "Refresh EP AgentIAM listings: 9→18 endpoints + canonical domain",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/400",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 48,
+      "updatedAt": "2026-05-19T02:35:17Z",
+      "ageHours": 144,
+      "networks": [
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "web-data or market-data surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Refreshes the two existing AgentIAM listings (lines 436 and 681).",
+      "urls": [
+        "https://www.x402scan.com/server/de9dbadb-6475-43f2-a621-a805fb1c661e",
+        "https://402index.io",
+        "https://achillesalpha.com/.well-known/x402"
+      ],
+      "revenueScore": 76
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 415,
+      "title": "Add 5 French data services (adresses, SIRET/SIREN, IBAN, geocoder, scraper)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/415",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 46,
+      "updatedAt": "2026-05-22T16:07:52Z",
+      "ageHours": 77,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Five x402-powered French data APIs, all live on Base mainnet:",
+      "urls": [
+        "https://x402-adresses.suretat.com",
+        "https://x402-siret.suretat.com",
+        "https://x402-iban.suretat.com",
+        "https://x402-geocoder.suretat.com",
+        "https://x402-scraper.suretat.com",
+        "https://...`",
+        "https://x402scout.com"
+      ],
+      "revenueScore": 64
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 408,
+      "title": "Add ALPHA PDF / Document Tools (x402 document toolkit on Base)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/408",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 44,
+      "updatedAt": "2026-05-22T02:34:41Z",
+      "ageHours": 95,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.05,
+      "summary": "Adds a live, working x402-enabled service to **Example Applications → API Examples**.",
+      "urls": [
+        "https://alpha-systems.net",
+        "https://alpha-systems.net/health`",
+        "https://alpha-systems.net/v1/pdf/pro`",
+        "https://claude.com/claude-code"
+      ],
+      "revenueScore": 72
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 388,
+      "title": "  Add ReportCheck + Land3D + PlantRisk; refresh AdametherzLab x402 API Network entry (10 → 46 endpoints)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/388",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 44,
+      "updatedAt": "2026-05-17T15:29:21Z",
+      "ageHours": 177,
+      "networks": [
+        "USDC",
+        "x402"
+      ],
+      "reasons": [
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 50,
+      "summary": "Single PR consolidating all current AdametherzLab x402 listings:",
+      "urls": [
+        "https://reportcheck.adametherzlab.com",
+        "https://land3d.adametherzlab.com",
+        "https://plantrisk.adametherzlab.com"
+      ],
+      "revenueScore": 72
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 383,
+      "title": "Add x402 Surface Check and x402 Triage MCP",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/383",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 42,
+      "updatedAt": "2026-05-19T15:30:53Z",
+      "ageHours": 199,
+      "networks": [
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds two Tate Programs developer tools for x402 launch readiness:",
+      "urls": [],
+      "revenueScore": 54
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 384,
+      "title": "Add Solvo Dependency Migration",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/384",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 40,
+      "updatedAt": "2026-05-16T20:40:41Z",
+      "ageHours": 196,
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.01,
+      "summary": "Solvo Dependency Migration is an agent-callable API that returns dependency-upgrade migration briefs for major Tailwind/Next/React version bumps. It is a live, no-account x402 endpoint settling $0.01 USDC per call on Base mainnet (eip155:8453) — wallet is auth, no API key, with a free GET /supported listing covered pairs.",
+      "urls": [],
+      "revenueScore": 74
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 371,
+      "title": "Add x402 List to Tools & Utilities → Monitoring & Analytics",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/371",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 40,
+      "updatedAt": "2026-05-13T08:51:59Z",
+      "ageHours": 280,
+      "networks": [
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "browser/payment-header behavior",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "**Project:** [x402 List](https://x402-list.com) — agent-first directory of x402 API services.",
+      "urls": [
+        "https://x402-list.com",
+        "https://x402-list.com/api/v1/services",
+        "https://x402-list.com/api/v1/openapi.json",
+        "https://x402-list.com/llms.txt",
+        "https://x402-list.com/llms-full.txt"
+      ],
+      "revenueScore": 58
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 422,
+      "title": "Add SunfishLoop — AI Agent Social Network with x402-style crypto tipping",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/422",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 38,
+      "updatedAt": "2026-05-24T02:24:35Z",
+      "ageHours": 27,
+      "networks": [
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "**What:** [SunfishLoop](https://sunfishloop.com) — Open-source, machine-first social network where AI agents discover each other, post structured observations, and send crypto tips (ETH/SOL/BTC). 32 agents, 375+ posts. Cross-framework compatible (CrewAI, AutoGen, LangGraph).",
+      "urls": [
+        "https://sunfishloop.com"
+      ],
+      "revenueScore": 66
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 376,
+      "title": "Add Cinderwright Discovery Hub — cross-protocol index + payment proxy",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/376",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 38,
+      "updatedAt": "2026-05-14T03:11:31Z",
+      "ageHours": 262,
+      "networks": [
+        "USDC",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "**URL:** https://api.ideafactorylab.org",
+      "urls": [
+        "https://api.ideafactorylab.org"
+      ],
+      "revenueScore": 56
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 427,
+      "title": "Add Secant Agent Research Pack",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/427",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-24T23:55:37Z",
+      "ageHours": 2,
+      "networks": [
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds Secant Agent Research Pack, a live x402-paid web research API and MCP endpoint for autonomous agents. Includes manifest, OpenAPI, and MCP links.",
+      "urls": [],
+      "revenueScore": 46
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 403,
+      "title": "Add x402trace under CLI Tools",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/403",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "review",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-19T19:28:13Z",
+      "ageHours": 125,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "testnet"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adding [x402trace](https://github.com/fardinvahdat/x402trace) under `🔨 Tools & Utilities → CLI Tools` (next to `x402-proxy`, similar npm-installable CLI shape).",
+      "urls": [
+        "https://github.com/fardinvahdat/x402trace",
+        "https://github.com/coinbase/x402/issues/1062",
+        "https://github.com/x402-foundation/x402/issues/2207",
+        "https://www.npmjs.com/package/x402trace",
+        "https://github.com/fardinvahdat/x402trace/releases/tag/v0.3.0"
+      ],
+      "revenueScore": 54
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 392,
+      "title": "Add SmartFlow suite: Mapper API, Observatory, Validator Action, Weekly Intel",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/392",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "review",
+      "priorityScore": 36,
+      "updatedAt": "2026-05-18T13:12:26Z",
+      "ageHours": 156,
+      "networks": [
+        "x402"
+      ],
+      "reasons": [
+        "trust or risk claims",
+        "settlement or checkout workflow",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds four SmartFlow entries across existing categories:",
+      "urls": [],
+      "revenueScore": 48
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 374,
+      "title": "Add PQS Grade — pre-flight prompt quality scoring",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/374",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 32,
+      "updatedAt": "2026-05-13T19:10:04Z",
+      "ageHours": 270,
+      "networks": [
+        "Base",
+        "USDC",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "declared paid calls"
+      ],
+      "maxPriceUsd": 0.001,
+      "summary": "Adds PQS Grade to the API Examples section. $0.001 USDC/call on Base via CDP facilitator. Returns composite score (0-100), letter grade, three framework sub-scores (PEEM, RAGAS, G-Eval), and verdict. Designed to run upstream of other paid endpoints to filter weak prompts before inference. Live and indexed in CDP Bazaar. Includes MCP server (`pqs-mcp-server@1.1.0` on npm) and methodology blog post.",
+      "urls": [],
+      "revenueScore": 42
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 402,
+      "title": "Add EZ-Path DEX meta-router",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/402",
+      "state": "open",
+      "category": "data API",
+      "priority": "watch",
+      "priorityScore": 30,
+      "updatedAt": "2026-05-19T18:30:29Z",
+      "ageHours": 126,
+      "networks": [
+        "Base",
+        "mainnet",
+        "x402"
+      ],
+      "reasons": [
+        "web-data or market-data surface",
+        "mainnet value path"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adding EZ-Path to the Data & Social APIs section.",
+      "urls": [
+        "https://ezpath.myezverse.xyz"
+      ],
+      "revenueScore": 48
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 393,
+      "title": "feat: add DPX Settlement Protocol MCP server",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/393",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 28,
+      "updatedAt": "2026-05-18T13:27:59Z",
+      "ageHours": 155,
+      "networks": [
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "feat: add DPX Settlement Protocol MCP server",
+      "urls": [],
+      "revenueScore": 40
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 411,
+      "title": "Add GoldBean x402 API marketplace",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/411",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-24T22:40:56Z",
+      "ageHours": 87,
+      "networks": [
+        "x402"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adding **GoldBean 🫘** to Tools & Services",
+      "urls": [
+        "https://goldbean-api.xyz",
+        "https://goldbean-api.xyz/.well-known/x402-bazaar",
+        "https://github.com/wuzenghai616-lang/goldbean"
+      ],
+      "revenueScore": 32
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 417,
+      "title": "Add agent-tools-mcp to MCP section",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/417",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-23T01:24:27Z",
+      "ageHours": 64,
+      "networks": [
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface",
+        "web-data or market-data surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds agent-tools-mcp — a free discovery-layer MCP server for x402 paid services. Agents can search by intent and filter by price/chain.",
+      "urls": [
+        "https://pypi.org/project/agent-tools-mcp/",
+        "https://github.com/JoursBleu/agent-tools-mcp",
+        "https://agent-tools.cloud/mcp-discovery/"
+      ],
+      "revenueScore": 42
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 370,
+      "title": "Add LetAgentPay — rail-agnostic spend-control policy layer",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/370",
+      "state": "open",
+      "category": "trust / security",
+      "priority": "watch",
+      "priorityScore": 26,
+      "updatedAt": "2026-05-13T07:03:09Z",
+      "ageHours": 282,
+      "networks": [
+        "USDC",
+        "x402"
+      ],
+      "reasons": [
+        "trust or risk claims",
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds LetAgentPay to **Agent Verification & Security** — a rail-agnostic spend-control policy layer for AI agents.",
+      "urls": [
+        "https://github.com/LetAgentPay/letagentpay",
+        "https://letagentpay.com",
+        "https://pypi.org/project/letagentpay/",
+        "https://www.npmjs.com/package/letagentpay",
+        "https://letagentpay.com/asps/spec"
+      ],
+      "revenueScore": 44
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 382,
+      "title": "Update API Factory entry to klymax402 (production domain)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/382",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 24,
+      "updatedAt": "2026-05-16T13:37:49Z",
+      "ageHours": 203,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "MCP"
+      ],
+      "reasons": [
+        "agent-discoverable surface"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Updates the existing 'API Factory x402' entry to point to klymax402.com.",
+      "urls": [
+        "https://klymax402.com/llms.txt",
+        "https://klymax402.com"
+      ],
+      "revenueScore": 30
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 387,
+      "title": "Add x402-agent-monetizer: FastAPI @paywall decorator (Python, MIT)",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/387",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 20,
+      "updatedAt": "2026-05-17T14:42:59Z",
+      "ageHours": 178,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402"
+      ],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds [x402-agent-monetizer](https://github.com/minhthai1995/x402-agent-monetizer) to the Python FastAPI section.",
+      "urls": [
+        "https://github.com/minhthai1995/x402-agent-monetizer"
+      ],
+      "revenueScore": 38
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 373,
+      "title": "Add x402trace to CLI Tools",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/373",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 20,
+      "updatedAt": "2026-05-13T09:31:23Z",
+      "ageHours": 279,
+      "networks": [
+        "Base",
+        "x402",
+        "testnet"
+      ],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Adds [x402trace](https://github.com/fardinvahdat/x402trace) under `🔨 Tools & Utilities → CLI Tools`, alongside the existing `x402-proxy` entry.",
+      "urls": [
+        "https://github.com/fardinvahdat/x402trace",
+        "https://github.com/coinbase/x402/issues/1062",
+        "https://www.npmjs.com/package/x402trace",
+        "https://sepolia.basescan.org/tx/0x116ccf73fa77eda19aea149606042f1e848e8afe2f719a0d2890dd2b2ff0ba52"
+      ],
+      "revenueScore": 38
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 369,
+      "title": "feat: add Bindu - AI agent operating layer with native X402 support",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/369",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 20,
+      "updatedAt": "2026-05-13T05:18:30Z",
+      "ageHours": 284,
+      "networks": [
+        "Base",
+        "USDC",
+        "x402",
+        "A2A"
+      ],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "[Bindu](https://github.com/GetBindu/Bindu) is an open-source operating layer that turns any AI",
+      "urls": [
+        "https://github.com/GetBindu/Bindu",
+        "https://github.com/GetBindu/Bindu/blob/main/docs/PAYMENT.md"
+      ],
+      "revenueScore": 38
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 385,
+      "title": "Add Floe — credit and payments for AI agent developers",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/385",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 12,
+      "updatedAt": "2026-05-16T21:35:44Z",
+      "ageHours": 196,
+      "networks": [],
+      "reasons": [
+        "settlement or checkout workflow"
+      ],
+      "maxPriceUsd": 0,
+      "summary": "Add Floe — credit and payments for AI agent developers",
+      "urls": [],
+      "revenueScore": 24
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 424,
+      "title": "docs: fix 'Implementatdions' typo in TOC link label",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/424",
+      "state": "open",
+      "category": "awesome-x402 listing",
+      "priority": "watch",
+      "priorityScore": 10,
+      "updatedAt": "2026-05-24T07:59:46Z",
+      "ageHours": 17,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Small docs fix — README.md line 14 had `Implementatdions` (extra `d`) in the table-of-contents link label for the Production Implementations section. The heading itself and the anchor are spelled correctly; just the label was off.",
+      "urls": [],
+      "revenueScore": 20
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 404,
+      "title": "Add LogicNodes — 242 A2A workers, x402 on Base, Bazaar-discoverable",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/404",
+      "state": "open",
+      "category": "agent tool surface",
+      "priority": "watch",
+      "priorityScore": 8,
+      "updatedAt": "2026-05-25T00:08:55Z",
+      "ageHours": 119,
+      "networks": [
+        "Base",
+        "x402",
+        "A2A"
+      ],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Add LogicNodes — 242 A2A workers, x402 on Base, Bazaar-discoverable",
+      "urls": [],
+      "revenueScore": 8
+    },
+    {
+      "sourceName": "xpaysh/awesome-x402",
+      "number": 389,
+      "title": "Update README.md",
+      "url": "https://github.com/xpaysh/awesome-x402/pull/389",
+      "state": "open",
+      "category": "awesome-x402 listing",
+      "priority": "watch",
+      "priorityScore": 0,
+      "updatedAt": "2026-05-20T21:11:02Z",
+      "ageHours": 172,
+      "networks": [],
+      "reasons": [],
+      "maxPriceUsd": 0,
+      "summary": "Addition of a new Defi & Finance solution",
+      "urls": [],
+      "revenueScore": 0
     }
   ],
   "topCategories": [
@@ -3660,11 +5401,23 @@
       26
     ],
     [
+      "trust / security",
+      25
+    ],
+    [
+      "agent tool surface",
+      24
+    ],
+    [
       "bounty / escrow",
       17
     ],
     [
       "shopping / fulfillment",
+      16
+    ],
+    [
+      "data API",
       16
     ],
     [
@@ -3676,54 +5429,46 @@
       10
     ],
     [
-      "data API",
-      10
-    ],
-    [
       "identity / credit",
       9
     ],
     [
       "agent-payment launch",
       8
-    ],
-    [
-      "finance / market data",
-      5
-    ],
-    [
-      "compute / web data",
-      4
     ]
   ],
   "topRails": [
     [
-      "Solana",
-      57
-    ],
-    [
-      "mainnet",
-      53
+      "x402",
+      102
     ],
     [
       "Base",
-      52
+      91
     ],
     [
-      "x402",
-      52
+      "mainnet",
+      77
+    ],
+    [
+      "Solana",
+      66
     ],
     [
       "USDC",
-      24
+      60
+    ],
+    [
+      "MCP",
+      22
+    ],
+    [
+      "testnet",
+      11
     ],
     [
       "MPP",
       11
-    ],
-    [
-      "testnet",
-      8
     ],
     [
       "devnet",
@@ -3732,10 +5477,6 @@
     [
       "Polygon",
       4
-    ],
-    [
-      "Tempo",
-      3
     ]
   ]
 }
