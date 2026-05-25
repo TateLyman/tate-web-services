@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-24",
+  "generatedAt": "2026-05-25",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 151,
-  "githubReposDetected": 90,
-  "readmesSampled": 62,
+  "githubReposDetected": 89,
+  "readmesSampled": 60,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -14,31 +14,31 @@
   ],
   "totals": {
     "latestTotal": 151,
-    "repos": 90,
-    "readableRepos": 62,
+    "repos": 89,
+    "readableRepos": 60,
     "packageCount": 30,
     "remoteCount": 128,
     "packageOnly": 21,
     "remoteOnly": 119,
     "both": 9,
     "noInstallPath": 119,
-    "websiteVisible": 110,
+    "websiteVisible": 109,
     "missingTitle": 48,
-    "shortDescription": 81,
+    "shortDescription": 79,
     "recent45": 81,
-    "orgOwned": 49,
-    "issuesEnabled": 61,
+    "orgOwned": 48,
+    "issuesEnabled": 59,
     "archived": 0,
     "mcpServers": 40,
-    "install": 31,
+    "install": 30,
     "serverJson": 8,
-    "safety": 49,
+    "safety": 48,
     "stdioPackageCount": 28,
     "stdioPackageReadable": 19,
     "stdioBoundaryDocs": 11,
     "secretPackageConfig": 14,
     "secretRemoteHeaders": 25,
-    "glama": 33,
+    "glama": 32,
     "smoke": 17
   },
   "sampleServers": [
@@ -62,28 +62,6 @@
         "Clarify remote auth and trust boundary",
         "Add smoke-test or tool-list proof",
         "Document permissions and safety notes"
-      ]
-    },
-    {
-      "name": "ai.packmind/mcp-server",
-      "title": "",
-      "description": "Packmind captures, scales, and enforces your organization's technical decisions.",
-      "publicProofScore": 40,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2025-11-24T15:23:52.365339Z",
-      "repo": "PackmindHub/packmind",
-      "websiteUrl": "https://packmindhub.github.io/packmind/",
-      "primaryUrl": "https://packmindhub.github.io/packmind/",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof"
       ]
     },
     {
@@ -221,6 +199,28 @@
       ]
     },
     {
+      "name": "ai.nullary/nullary",
+      "title": "",
+      "description": "Negative results intelligence for drug discovery — query measured failures via MCP.",
+      "publicProofScore": 54,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-05-25T00:44:06.690461Z",
+      "repo": "nullary-ai/nullary",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/nullary-ai/nullary",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
       "name": "ai.explorium/mcp-explorium",
       "title": "",
       "description": "Access live company and contact data from Explorium's AgentSource B2B platform.",
@@ -308,28 +308,6 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.paperlantern/code",
-      "title": "Paper Lantern",
-      "description": "Research intelligence for AI coding agents. 2M+ CS papers with evidence and tradeoffs.",
-      "publicProofScore": 55,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-04-21T06:03:58.313689Z",
-      "repo": "paperlantern-ai/paperlantern-cli",
-      "websiteUrl": "https://paperlantern.ai/code",
-      "primaryUrl": "https://paperlantern.ai/code",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
-        "Add copyable mcpServers config"
       ]
     },
     {
@@ -445,6 +423,28 @@
         "Clarify remote auth and trust boundary",
         "Add install or client command",
         "Add smoke-test or tool-list proof",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.ludo/game-assets",
+      "title": "Ludo AI Game Assets",
+      "description": "Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.",
+      "publicProofScore": 59,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-01-30T17:59:40.034021Z",
+      "repo": "Ludo-AI/ludo-mcp",
+      "websiteUrl": "https://ludo.ai",
+      "primaryUrl": "https://ludo.ai",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
         "Refresh stale registry metadata"
       ]
     }
