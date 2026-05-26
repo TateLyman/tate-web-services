@@ -13,6 +13,7 @@
       "apihub_marketplace": "https://apihub.io/marketplace/tate-programs-x402",
       "payanagent_discovery": "https://payanagent.com/api/v1/discover?q=x402%20subscription%20boundary%20launch%20review",
       "tools402_paid_endpoint": "https://api.tools402.dev/v1/tate-programs/x402-readiness",
+      "the402_catalog_api": "https://api.the402.ai/v1/services/catalog",
       "agensi_x402_attack_surface_gate": "https://www.agensi.io/skill/dda183c1-4c47-4f39-a7f1-c4cec9004d20",
       "ai_skill_store_agent_skill_trust_check": "https://aiskillstore.io/skills/be1a09eb-13c2-4bdf-ad00-8445e8394157"
     },
@@ -865,6 +866,12 @@
       "url": "https://tateprograms.com/x402-fix-sprint.html",
       "payment_url": "https://paypal.me/glidelocal/49",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20re-check",
+      "the402_listing": {
+        "service_id": "svc_aa278e3b6f274e75",
+        "provider_id": "p_5466c73327774253",
+        "purchase_endpoint": "POST https://api.the402.ai/v1/services/svc_aa278e3b6f274e75/purchase",
+        "catalog_url": "https://api.the402.ai/v1/services/catalog"
+      },
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js70vv9t0qqfctw68afdqc82ms871hkv",
@@ -909,6 +916,12 @@
       "url": "https://tateprograms.com/agent-payment-launch-review.html",
       "payment_url": "https://paypal.me/glidelocal/149",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20launch%20review",
+      "the402_listing": {
+        "service_id": "svc_90f59a6c82794f1e",
+        "provider_id": "p_5466c73327774253",
+        "purchase_endpoint": "POST https://api.the402.ai/v1/services/svc_90f59a6c82794f1e/purchase",
+        "catalog_url": "https://api.the402.ai/v1/services/catalog"
+      },
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js738p91kt259jwmsm8fqxhrsd871y6c",
@@ -1009,6 +1022,12 @@
       "url": "https://tateprograms.com/x402-fix-sprint.html",
       "payment_url": "https://paypal.me/glidelocal/299",
       "contact_url": "mailto:hello@tateprograms.com?subject=x402%20fix%20sprint",
+      "the402_listing": {
+        "service_id": "svc_26811428bdde407b",
+        "provider_id": "p_5466c73327774253",
+        "purchase_endpoint": "POST https://api.the402.ai/v1/services/svc_26811428bdde407b/purchase",
+        "catalog_url": "https://api.the402.ai/v1/services/catalog"
+      },
       "payanagent_listing": {
         "agent_id": "j575z1518kyvm8xcr4nvhjqnf9871jjv",
         "service_id": "js74yyeev0mhss30y6knrwdsfd870d20",
