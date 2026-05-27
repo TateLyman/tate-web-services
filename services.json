@@ -26,7 +26,7 @@
       }
     }
   },
-  "last_updated": "2026-05-23",
+  "last_updated": "2026-05-27",
   "currency": "USD",
   "services": [
     {
@@ -193,6 +193,57 @@
       "safety_scope": "Public surfaces only by default: no login, no private endpoint guessing, no customer-system probing, no wallet signatures, no real paid calls, and no public disclosure without sign-off.",
       "url": "https://tateprograms.com/outside-proof-packet.html",
       "contact_url": "mailto:hello@tateprograms.com?subject=Outside%20proof%20packet"
+    },
+    {
+      "id": "agent-governance-proof-packet",
+      "name": "Agent Governance Proof Packet",
+      "price_usd": 750,
+      "delivery": "3 business days",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "agent-governance",
+      "tags": [
+        "mcp",
+        "agent-governance",
+        "identity",
+        "tool-security",
+        "kill-switch",
+        "audit",
+        "public-proof",
+        "launch-readiness",
+        "buyer-proof"
+      ],
+      "scope": "Fixed-scope public proof packet for one MCP gateway, agent identity, tool governance, paid API, or agent-commerce launch where buyers need to understand discovery, access boundaries, auditability, and rollback controls.",
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "launch_or_demo_surface",
+        "mcp_or_agent_surface",
+        "authorized_public_scope",
+        "identity_or_access_model",
+        "contact_email",
+        "deadline",
+        "notes"
+      ],
+      "deliverables": [
+        "public discovery map",
+        "agent and MCP readability notes",
+        "identity and access-boundary readback",
+        "tool permission and kill-switch evidence",
+        "audit and incident-response wording notes",
+        "exact replay commands",
+        "private evidence table",
+        "ranked patch order",
+        "buyer-safe summary",
+        "one re-check after fixes"
+      ],
+      "safety_scope": "Public surfaces only by default: no login, no private endpoint guessing, no customer-system probing, no wallet signatures, no real paid calls, and no public disclosure without sign-off.",
+      "url": "https://tateprograms.com/agent-governance-proof.html",
+      "contact_url": "mailto:hello@tateprograms.com?subject=Agent%20governance%20proof%20packet",
+      "marketplace_listings": {
+        "payanagent_service_id": "js7eyht5kj4feyt0k70nf4a36187hchj",
+        "payanagent_discovery": "https://payanagent.com/api/v1/discover?q=agent%20governance%20proof"
+      }
     },
     {
       "id": "agentic-commerce-product-data-audit",
