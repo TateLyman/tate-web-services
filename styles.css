@@ -4171,6 +4171,25 @@ footer a {
   margin: 0;
 }
 
+.rev-proof-grid blockquote {
+  border-left: 3px solid var(--rev-green);
+  color: #1f2a24;
+  font-family: var(--rev-serif);
+  font-size: 1rem;
+  line-height: 1.45;
+  margin: 16px 0 12px;
+  padding-left: 14px;
+}
+
+.rev-proof-grid article > a {
+  color: #1b6b58;
+  display: inline-block;
+  font-family: var(--rev-mono);
+  font-size: 0.78rem;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
 .rev-process {
   display: grid;
   gap: 40px;
