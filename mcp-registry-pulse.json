@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-27",
+  "generatedAt": "2026-05-28",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 151,
-  "githubReposDetected": 89,
-  "readmesSampled": 60,
+  "latestServersAnalyzed": 152,
+  "githubReposDetected": 88,
+  "readmesSampled": 59,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,26 +13,26 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 151,
-    "repos": 89,
-    "readableRepos": 60,
+    "latestTotal": 152,
+    "repos": 88,
+    "readableRepos": 59,
     "packageCount": 30,
-    "remoteCount": 128,
+    "remoteCount": 129,
     "packageOnly": 21,
-    "remoteOnly": 119,
+    "remoteOnly": 120,
     "both": 9,
-    "noInstallPath": 119,
+    "noInstallPath": 120,
     "websiteVisible": 109,
     "missingTitle": 49,
-    "shortDescription": 80,
-    "recent45": 80,
-    "orgOwned": 48,
-    "issuesEnabled": 59,
+    "shortDescription": 81,
+    "recent45": 81,
+    "orgOwned": 47,
+    "issuesEnabled": 58,
     "archived": 0,
     "mcpServers": 40,
     "install": 30,
     "serverJson": 8,
-    "safety": 48,
+    "safety": 47,
     "stdioPackageCount": 28,
     "stdioPackageReadable": 19,
     "stdioBoundaryDocs": 11,
@@ -84,28 +84,6 @@
         "Add install or client command",
         "Add smoke-test or tool-list proof",
         "Document permissions and safety notes"
-      ]
-    },
-    {
-      "name": "ai.openarx/openarx",
-      "title": "",
-      "description": "Open scientific knowledge MCP for AI agents. Three profiles: search, publish, govern.",
-      "publicProofScore": 45,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-12T19:52:34.330776Z",
-      "repo": "OpenArx-AI/openarx-core",
-      "websiteUrl": "https://openarx.ai",
-      "primaryUrl": "https://openarx.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof"
       ]
     },
     {
@@ -445,6 +423,28 @@
         "Add install or client command",
         "Add smoke-test or tool-list proof",
         "Document permissions and safety notes",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.cirra/salesforce-mcp",
+      "title": "Cirra AI Salesforce Admin MCP Server",
+      "description": "Comprehensive Salesforce administration and data management capabilities",
+      "publicProofScore": 59,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2025-12-13T01:53:10.483779Z",
+      "repo": "cirra-ai/mcp-server",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/cirra-ai/mcp-server",
+      "topGaps": [
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
       ]
     }
