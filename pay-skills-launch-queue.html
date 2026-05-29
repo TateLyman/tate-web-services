@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay-Skills Launch Queue",
         "url": "https://tateprograms.com/pay-skills-launch-queue.html",
-        "dateModified": "2026-05-28",
+        "dateModified": "2026-05-29",
         "isBasedOn": "https://github.com/solana-foundation/pay-skills/pulls",
         "description": "Aggregated public pull-request queue for pay-skills agent-payment launch surfaces.",
         "publisher": {
@@ -58,12 +58,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-skills-launch-queue</strong>
-        <em>2026-05-28</em>
+        <em>2026-05-29</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay-skills launch queue / 2026-05-28</p>
+          <p class="console-kicker">pay-skills launch queue / 2026-05-29</p>
           <h1>New agent-payment services are entering the registry faster than their launch controls can mature.</h1>
           <p class="console-subtitle">
             This watchlist reads the public pay-skills pull-request queue and turns fresh x402, MPP, Solana, Base, compute, commerce, wallet, and data-api launches into a practical review map. The point is simple: before autonomous agents spend, teams need visible caps, receipts, replay handling, metadata boundaries, and failure paths.
@@ -79,15 +79,15 @@
           <dl class="console-ledger">
             <div>
               <dt>fresh PRs</dt>
-              <dd>76</dd>
+              <dd>87</dd>
             </div>
             <div>
               <dt>last 24h</dt>
-              <dd>1</dd>
+              <dd>11</dd>
             </div>
             <div>
               <dt>review priority</dt>
-              <dd>29</dd>
+              <dd>33</dd>
             </div>
           </dl>
         </div>
@@ -96,8 +96,8 @@
           <div class="terminal-topline">queue scan</div>
           <pre><code>$ scan solana-foundation/pay-skills
 since: 2026-05-01
-observed: 76
-open: 46
+observed: 87
+open: 51
 signals: x402, MPP, mainnet, caps
 output: pay-skills-launch-queue.json</code></pre>
         </aside>
@@ -113,6 +113,20 @@ output: pay-skills-launch-queue.json</code></pre>
         </div>
         <div class="proof-terminal-grid">
           <article>
+            <p class="card-command">urgent / 90</p>
+            <h3>Add Verifik KYC/KYB provider (paysponge)</h3>
+            <p>- Adds `providers/paysponge/verifik/` with `PAY.md` and `openapi.json`</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>identity / credit</dd></div>
+              <div><dt>endpoints</dt><dd>122</dd></div>
+              <div><dt>max price</dt><dd>$1</dd></div>
+              <div><dt>age</dt><dd>23h</dd></div>
+            </dl>
+            <p class="mini-copy">Networks: Solana, Base, Polygon, mainnet, x402</p>
+            <ul class="compact-list"><li>wide paid API surface</li><li>multi-rail payment behavior</li><li>agent identity or risk-scoring claims</li><li>outbound communication or voice path</li><li>agent-discoverable contract</li></ul>
+            <a href="https://github.com/solana-foundation/pay-skills/pull/84" target="_blank" rel="noreferrer">PR #84 by @rishinsharma</a>
+          </article>
+<article>
             <p class="card-command">urgent / 88</p>
             <h3>Add Ankr x402 — 160-chain JSON-RPC provider</h3>
             <p>Adds **Ankr** as a provider at \`providers/ankr/rpc/PAY.md\`. Pay-per-request JSON-RPC across **160 chain paths** (mainnets + testnets), single gateway at \`https://x402.rpc.ankr.com\`. Flat **\$0.001 USDC/request**, settled on Solana mainnet via x402 or MPP. No signup, no API keys.</p>
@@ -120,7 +134,7 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>bounty / escrow</dd></div>
               <div><dt>endpoints</dt><dd>160</dd></div>
               <div><dt>max price</dt><dd>$0.001</dd></div>
-              <div><dt>age</dt><dd>362h</dd></div>
+              <div><dt>age</dt><dd>386h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Solana, Base, Polygon, devnet, mainnet, MPP, x402</p>
             <ul class="compact-list"><li>wide paid API surface</li><li>multi-rail payment behavior</li><li>escrow, verification, or proof workflow</li><li>settlement or accounting path</li><li>outbound communication or voice path</li></ul>
@@ -134,7 +148,7 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>finance / market data</dd></div>
               <div><dt>endpoints</dt><dd>11</dd></div>
               <div><dt>max price</dt><dd>$17</dd></div>
-              <div><dt>age</dt><dd>515h</dd></div>
+              <div><dt>age</dt><dd>540h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Solana, Base, Polygon, mainnet, x402</p>
             <ul class="compact-list"><li>multi-endpoint paid surface</li><li>meaningful per-call value movement</li><li>multi-rail payment behavior</li><li>settlement or accounting path</li><li>agent-discoverable contract</li></ul>
@@ -148,7 +162,7 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>compute / web data</dd></div>
               <div><dt>endpoints</dt><dd>74</dd></div>
               <div><dt>max price</dt><dd>$0.2</dd></div>
-              <div><dt>age</dt><dd>493h</dd></div>
+              <div><dt>age</dt><dd>517h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Solana, mainnet, x402</p>
             <ul class="compact-list"><li>wide paid API surface</li><li>untrusted web-data ingestion</li><li>outbound communication or voice path</li><li>agent-discoverable contract</li><li>mainnet value path</li></ul>
@@ -162,7 +176,7 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>identity / credit</dd></div>
               <div><dt>endpoints</dt><dd>22</dd></div>
               <div><dt>max price</dt><dd>$1</dd></div>
-              <div><dt>age</dt><dd>152h</dd></div>
+              <div><dt>age</dt><dd>176h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Base, mainnet, x402</p>
             <ul class="compact-list"><li>multi-endpoint paid surface</li><li>agent identity or risk-scoring claims</li><li>settlement or accounting path</li><li>outbound communication or voice path</li><li>agent-discoverable contract</li></ul>
@@ -176,7 +190,7 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>bounty / escrow</dd></div>
               <div><dt>endpoints</dt><dd>42</dd></div>
               <div><dt>max price</dt><dd>$0.25</dd></div>
-              <div><dt>age</dt><dd>212h</dd></div>
+              <div><dt>age</dt><dd>236h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Solana, Base, Polygon, mainnet, x402</p>
             <ul class="compact-list"><li>multi-endpoint paid surface</li><li>multi-rail payment behavior</li><li>escrow, verification, or proof workflow</li><li>settlement or accounting path</li><li>outbound communication or voice path</li></ul>
@@ -190,7 +204,7 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>compliance / invoices</dd></div>
               <div><dt>endpoints</dt><dd>n/a</dd></div>
               <div><dt>max price</dt><dd>$10</dd></div>
-              <div><dt>age</dt><dd>535h</dd></div>
+              <div><dt>age</dt><dd>559h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Solana, Base, mainnet, x402</p>
             <ul class="compact-list"><li>meaningful per-call value movement</li><li>multi-rail payment behavior</li><li>untrusted web-data ingestion</li><li>settlement or accounting path</li><li>outbound communication or voice path</li></ul>
@@ -204,25 +218,11 @@ output: pay-skills-launch-queue.json</code></pre>
               <div><dt>category</dt><dd>identity / credit</dd></div>
               <div><dt>endpoints</dt><dd>n/a</dd></div>
               <div><dt>max price</dt><dd>$10</dd></div>
-              <div><dt>age</dt><dd>542h</dd></div>
+              <div><dt>age</dt><dd>566h</dd></div>
             </dl>
             <p class="mini-copy">Networks: Solana, Base, mainnet, x402</p>
             <ul class="compact-list"><li>meaningful per-call value movement</li><li>multi-rail payment behavior</li><li>agent identity or risk-scoring claims</li><li>untrusted web-data ingestion</li><li>settlement or accounting path</li></ul>
             <a href="https://github.com/solana-foundation/pay-skills/pull/23" target="_blank" rel="noreferrer">PR #23 by @chopmob-cloud</a>
-          </article>
-<article>
-            <p class="card-command">urgent / 70</p>
-            <h3>feat: add b402/paysh-send — private USDC transfers via x402</h3>
-            <p>Adds [paysh-send](https://paysh-shield-production.up.railway.app) — pay-per-call private USDC transfer over x402 on Solana — as `b402/paysh-send`.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>shopping / fulfillment</dd></div>
-              <div><dt>endpoints</dt><dd>1</dd></div>
-              <div><dt>max price</dt><dd>$10</dd></div>
-              <div><dt>age</dt><dd>545h</dd></div>
-            </dl>
-            <p class="mini-copy">Networks: Solana, Base, mainnet, x402</p>
-            <ul class="compact-list"><li>meaningful per-call value movement</li><li>multi-rail payment behavior</li><li>escrow, verification, or proof workflow</li><li>settlement or accounting path</li><li>outbound communication or voice path</li></ul>
-            <a href="https://github.com/solana-foundation/pay-skills/pull/20" target="_blank" rel="noreferrer">PR #20 by @mmchougule</a>
           </article>
         </div>
       </section>
@@ -248,111 +248,111 @@ output: pay-skills-launch-queue.json</code></pre>
             </thead>
             <tbody>
               <tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/94" target="_blank" rel="noreferrer">#94</a></td>
+              <td>chore: add venum/rpc provider</td>
+              <td>compute / web data</td>
+              <td>1</td>
+              <td>$25</td>
+              <td>Solana, mainnet, MPP</td>
+              <td>review</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/93" target="_blank" rel="noreferrer">#93</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>n/a</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/92" target="_blank" rel="noreferrer">#92</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>n/a</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/91" target="_blank" rel="noreferrer">#91</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>n/a</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/90" target="_blank" rel="noreferrer">#90</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>n/a</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/89" target="_blank" rel="noreferrer">#89</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>n/a</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/88" target="_blank" rel="noreferrer">#88</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>n/a</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/87" target="_blank" rel="noreferrer">#87</a></td>
+              <td>Add CoinStats crypto data API</td>
+              <td>finance / market data</td>
+              <td>33</td>
+              <td>$0.05</td>
+              <td>Base, x402</td>
+              <td>review</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/86" target="_blank" rel="noreferrer">#86</a></td>
+              <td>Add Cinderwright aggregator</td>
+              <td>compute / web data</td>
+              <td>n/a</td>
+              <td>$0</td>
+              <td>Solana, Base, Tempo, MPP, x402</td>
+              <td>watch</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/85" target="_blank" rel="noreferrer">#85</a></td>
+              <td>feat: add TrustBoost PII Sanitizer — x402 privacy layer for AI agent pipelines</td>
+              <td>bounty / escrow</td>
+              <td>n/a</td>
+              <td>$0.01</td>
+              <td>Solana, mainnet, x402</td>
+              <td>review</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/solana-foundation/pay-skills/pull/84" target="_blank" rel="noreferrer">#84</a></td>
+              <td>Add Verifik KYC/KYB provider (paysponge)</td>
+              <td>identity / credit</td>
+              <td>122</td>
+              <td>$1</td>
+              <td>Solana, Base, Polygon, mainnet, x402</td>
+              <td>urgent</td>
+            </tr>
+<tr>
               <td><a href="https://github.com/solana-foundation/pay-skills/pull/83" target="_blank" rel="noreferrer">#83</a></td>
               <td>Add DeepSearch Korean Stock Intelligence</td>
               <td>agent-payment launch</td>
               <td>n/a</td>
               <td>$0.15</td>
               <td>Base, mainnet, x402</td>
-              <td>watch</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/82" target="_blank" rel="noreferrer">#82</a></td>
-              <td>Add smartmoney.market data provider</td>
-              <td>shopping / fulfillment</td>
-              <td>n/a</td>
-              <td>$0</td>
-              <td>MPP</td>
-              <td>watch</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/81" target="_blank" rel="noreferrer">#81</a></td>
-              <td>Add onchain stock data</td>
-              <td>data API</td>
-              <td>n/a</td>
-              <td>$0</td>
-              <td>not declared</td>
-              <td>watch</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/80" target="_blank" rel="noreferrer">#80</a></td>
-              <td>Add Crypto ETF Sentinel — US spot crypto ETF regulatory intelligence (dual-chain)</td>
-              <td>bounty / escrow</td>
-              <td>22</td>
-              <td>$1</td>
-              <td>Solana, Base, mainnet</td>
-              <td>review</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/79" target="_blank" rel="noreferrer">#79</a></td>
-              <td>feat: add Dynamic provider (checkout + wallet + env APIs)</td>
-              <td>identity / credit</td>
-              <td>26</td>
-              <td>$0</td>
-              <td>Solana, Base, Ethereum, devnet, mainnet</td>
-              <td>review</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/78" target="_blank" rel="noreferrer">#78</a></td>
-              <td>Add SuVerse FMCSA carrier-lookup provider</td>
-              <td>shopping / fulfillment</td>
-              <td>n/a</td>
-              <td>$0.005</td>
-              <td>Solana, mainnet, x402</td>
-              <td>review</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/77" target="_blank" rel="noreferrer">#77</a></td>
-              <td>Add Wisely x402 agent-payment infrastructure</td>
-              <td>identity / credit</td>
-              <td>2</td>
-              <td>$0</td>
-              <td>Solana, mainnet, x402</td>
-              <td>watch</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/76" target="_blank" rel="noreferrer">#76</a></td>
-              <td>Add Crypto ETF Sentinel — US spot crypto ETF regulatory intelligence</td>
-              <td>identity / credit</td>
-              <td>22</td>
-              <td>$1</td>
-              <td>Base, mainnet, x402</td>
-              <td>urgent</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/75" target="_blank" rel="noreferrer">#75</a></td>
-              <td>fix: commit openapi specs</td>
-              <td>data API</td>
-              <td>n/a</td>
-              <td>$0</td>
-              <td>not declared</td>
-              <td>watch</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/74" target="_blank" rel="noreferrer">#74</a></td>
-              <td>Add Japan Data APIs — 7 x402 services on Base + Solana mainnet</td>
-              <td>bounty / escrow</td>
-              <td>42</td>
-              <td>$0.25</td>
-              <td>Solana, Base, Polygon, mainnet, x402</td>
-              <td>urgent</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/73" target="_blank" rel="noreferrer">#73</a></td>
-              <td>feat: add Phoenix Zero — L2 Sequencer Health Oracle</td>
-              <td>finance / market data</td>
-              <td>n/a</td>
-              <td>$0.0001</td>
-              <td>Base, x402</td>
-              <td>watch</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/solana-foundation/pay-skills/pull/71" target="_blank" rel="noreferrer">#71</a></td>
-              <td>feat: add Stratum macro data provider</td>
-              <td>bounty / escrow</td>
-              <td>n/a</td>
-              <td>$0</td>
-              <td>Solana, mainnet, x402</td>
               <td>watch</td>
             </tr>
             </tbody>
@@ -365,7 +365,7 @@ output: pay-skills-launch-queue.json</code></pre>
           <div class="terminal-topline">category mix</div>
           <div class="table-shell compact">
             <table>
-              <tbody><tr><td>bounty / escrow</td><td>18</td></tr><tr><td>shopping / fulfillment</td><td>17</td></tr><tr><td>data API</td><td>11</td></tr><tr><td>agent-payment launch</td><td>9</td></tr><tr><td>identity / credit</td><td>9</td></tr><tr><td>finance / market data</td><td>5</td></tr><tr><td>compute / web data</td><td>4</td></tr><tr><td>communications</td><td>2</td></tr></tbody>
+              <tbody><tr><td>bounty / escrow</td><td>19</td></tr><tr><td>shopping / fulfillment</td><td>17</td></tr><tr><td>finance / market data</td><td>12</td></tr><tr><td>data API</td><td>11</td></tr><tr><td>identity / credit</td><td>10</td></tr><tr><td>agent-payment launch</td><td>9</td></tr><tr><td>compute / web data</td><td>6</td></tr><tr><td>communications</td><td>2</td></tr></tbody>
             </table>
           </div>
         </article>
@@ -373,7 +373,7 @@ output: pay-skills-launch-queue.json</code></pre>
           <div class="terminal-topline">rail signals</div>
           <div class="table-shell compact">
             <table>
-              <tbody><tr><td>x402</td><td>53</td></tr><tr><td>Solana</td><td>49</td></tr><tr><td>mainnet</td><td>38</td></tr><tr><td>Base</td><td>28</td></tr><tr><td>MPP</td><td>11</td></tr><tr><td>devnet</td><td>5</td></tr><tr><td>Polygon</td><td>4</td></tr><tr><td>Tempo</td><td>2</td></tr></tbody>
+              <tbody><tr><td>x402</td><td>63</td></tr><tr><td>Solana</td><td>53</td></tr><tr><td>mainnet</td><td>41</td></tr><tr><td>Base</td><td>37</td></tr><tr><td>MPP</td><td>13</td></tr><tr><td>Polygon</td><td>5</td></tr><tr><td>devnet</td><td>5</td></tr><tr><td>Tempo</td><td>3</td></tr></tbody>
             </table>
           </div>
         </article>
