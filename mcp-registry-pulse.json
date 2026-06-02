@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-01",
+  "generatedAt": "2026-06-02",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 141,
-  "githubReposDetected": 80,
+  "latestServersAnalyzed": 144,
+  "githubReposDetected": 81,
   "readmesSampled": 56,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,32 +13,32 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 141,
-    "repos": 80,
+    "latestTotal": 144,
+    "repos": 81,
     "readableRepos": 56,
-    "packageCount": 26,
-    "remoteCount": 121,
+    "packageCount": 27,
+    "remoteCount": 124,
     "packageOnly": 18,
-    "remoteOnly": 113,
-    "both": 8,
-    "noInstallPath": 113,
-    "websiteVisible": 102,
-    "missingTitle": 46,
-    "shortDescription": 75,
-    "recent45": 70,
+    "remoteOnly": 115,
+    "both": 9,
+    "noInstallPath": 115,
+    "websiteVisible": 103,
+    "missingTitle": 48,
+    "shortDescription": 76,
+    "recent45": 73,
     "orgOwned": 48,
     "issuesEnabled": 55,
     "archived": 0,
     "mcpServers": 37,
-    "install": 29,
+    "install": 30,
     "serverJson": 8,
     "safety": 45,
-    "stdioPackageCount": 24,
+    "stdioPackageCount": 25,
     "stdioPackageReadable": 17,
     "stdioBoundaryDocs": 12,
-    "secretPackageConfig": 11,
+    "secretPackageConfig": 12,
     "secretRemoteHeaders": 23,
-    "glama": 30,
+    "glama": 31,
     "smoke": 16
   },
   "sampleServers": [
@@ -361,28 +361,6 @@
       ]
     },
     {
-      "name": "ai.nefesh/human-state",
-      "title": "Nefesh — Real-Time Human State Awareness for AI",
-      "description": "Fuses biometric signals into a stress score (0-100) for AI adaptation. MCP + A2A native.",
-      "publicProofScore": 57,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-04-03T19:42:18.337564Z",
-      "repo": "nefesh-ai/nefesh-mcp-server",
-      "websiteUrl": "https://a2a-protocol.org",
-      "primaryUrl": "https://a2a-protocol.org",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "ai.ludo/game-assets",
       "title": "Ludo AI Game Assets",
       "description": "Generate game assets with AI: sprites, 3D models, animations, sound effects, music, and voices.",
@@ -446,6 +424,30 @@
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.adeu/adeu",
+      "title": "",
+      "description": "Automated DOCX Redlining Engine",
+      "publicProofScore": 60,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-05-16T13:54:48.18266Z",
+      "repo": "dealfluence/adeu",
+      "websiteUrl": "https://adeu.ai",
+      "primaryUrl": "https://adeu.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Add smoke-test or tool-list proof",
+        "Explain STDIO command boundary",
+        "Reference server.json metadata alignment"
       ]
     }
   ]
