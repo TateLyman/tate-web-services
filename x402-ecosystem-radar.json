@@ -1,12 +1,12 @@
 {
-  "runDate": "2026-06-01",
+  "runDate": "2026-06-02",
   "source": "https://github.com/coinbase/x402/pulls",
   "apiSource": "https://api.github.com/search/issues?q=repo:coinbase/x402+is:pr+created:>=2026-05-01",
   "startDate": "2026-05-01",
   "totalCount": 59,
   "observedCount": 59,
   "openCount": 44,
-  "submittedLast24h": 2,
+  "submittedLast24h": 0,
   "ecosystemListingCount": 34,
   "priorityCount": 30,
   "categoryCounts": {
@@ -91,7 +91,7 @@
       "state": "open",
       "createdAt": "2026-05-11T18:10:17Z",
       "updatedAt": "2026-05-17T06:26:43Z",
-      "ageHours": 506,
+      "ageHours": 529,
       "author": "dbe006",
       "authorUrl": "https://github.com/dbe006",
       "category": "ecosystem listing",
@@ -129,7 +129,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-05-28T05:48:29Z",
-      "ageHours": 601,
+      "ageHours": 624,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -166,149 +166,13 @@
       "priority": "urgent"
     },
     {
-      "number": 190,
-      "title": "Add Anicca — autonomous AI agent ecosystem partner",
-      "url": "https://github.com/coinbase/x402/pull/190",
-      "state": "open",
-      "createdAt": "2026-05-31T17:26:04Z",
-      "updatedAt": "2026-05-31T17:26:34Z",
-      "ageHours": 27,
-      "author": "Daisuke134",
-      "authorUrl": "https://github.com/Daisuke134",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC"
-      ],
-      "maxPriceUsd": 50,
-      "urls": [
-        "https://anicca-x402.netlify.app/.well-known/x402",
-        "https://github.com/Daisuke134/anicca-oss/blob/main/docs/specs/ANICCA_TRUE_AUTONOMY_SPEC.md",
-        "https://github.com/Daisuke134/anicca-oss",
-        "https://anicca-x402.netlify.app"
-      ],
-      "files": [
-        ".github/CODEOWNERS",
-        ".github/workflows/check_format.yml",
-        ".github/workflows/check_go.yml",
-        ".github/workflows/check_lint.yml",
-        ".github/workflows/check_package_lock.yml",
-        ".github/workflows/check_paywall_template.yml",
-        ".github/workflows/check_python.yml",
-        ".github/workflows/e2e_tests.yml",
-        ".github/workflows/java.yml",
-        ".github/workflows/labeler.yml",
-        ".github/workflows/publish_npm_coinbase_x402.yml",
-        ".github/workflows/publish_npm_scoped_x402_aptos.yml",
-        ".github/workflows/publish_npm_scoped_x402_avm.yml",
-        ".github/workflows/publish_npm_scoped_x402_axios.yml",
-        ".github/workflows/publish_npm_scoped_x402_core.yml",
-        ".github/workflows/publish_npm_scoped_x402_evm.yml",
-        ".github/workflows/publish_npm_scoped_x402_express.yml",
-        ".github/workflows/publish_npm_scoped_x402_extensions.yml",
-        ".github/workflows/publish_npm_scoped_x402_fastify.yml",
-        ".github/workflows/publish_npm_scoped_x402_fetch.yml",
-        ".github/workflows/publish_npm_scoped_x402_hedera.yml",
-        ".github/workflows/publish_npm_scoped_x402_hono.yml",
-        ".github/workflows/publish_npm_scoped_x402_mcp.yml",
-        ".github/workflows/publish_npm_scoped_x402_next.yml",
-        ".github/workflows/publish_npm_scoped_x402_paywall.yml",
-        ".github/workflows/publish_npm_scoped_x402_stellar.yml",
-        ".github/workflows/publish_npm_scoped_x402_svm.yml",
-        ".github/workflows/publish_npm_x402.yml",
-        ".github/workflows/publish_npm_x402_axios.yml",
-        ".github/workflows/publish_npm_x402_express.yml",
-        ".github/workflows/publish_npm_x402_fetch.yml",
-        ".github/workflows/publish_npm_x402_hono.yml",
-        ".github/workflows/publish_npm_x402_next.yml",
-        ".github/workflows/publish_pypi_x402.yml",
-        ".github/workflows/unit_tests.yml",
-        ".github/workflows/update-docs.yml",
-        ".gitignore",
-        "CONTRIBUTING.md",
-        "DEFAULT_ASSETS.md",
-        "README.md",
-        "TSC.md",
-        "contracts/evm/README.md",
-        "contracts/evm/audits/cantina_x402_mar2026.pdf",
-        "contracts/evm/audits/cantina_x402_may2026.pdf",
-        "contracts/evm/docs/x402-batch-settlement-implementers.md",
-        "contracts/evm/foundry.toml",
-        "contracts/evm/lib/account-abstraction",
-        "contracts/evm/script/ComputeAddress.s.sol",
-        "contracts/evm/script/Deploy.s.sol",
-        "contracts/evm/script/DeployBatchSettlement.s.sol",
-        "contracts/evm/snapshots/X402BatchSettlementGasTest.json",
-        "contracts/evm/src/interfaces/IDepositCollector.sol",
-        "contracts/evm/src/interfaces/IERC3009.sol",
-        "contracts/evm/src/periphery/DepositCollector.sol",
-        "contracts/evm/src/periphery/ERC3009DepositCollector.sol",
-        "contracts/evm/src/periphery/Permit2DepositCollector.sol",
-        "contracts/evm/src/x402BasePermit2Proxy.sol",
-        "contracts/evm/src/x402BatchSettlement.sol",
-        "contracts/evm/test/MockGenericERC20.t.sol",
-        "contracts/evm/test/mocks/GasMockDepositCollector.sol",
-        "contracts/evm/test/mocks/MockBatchDepositCollectors.sol",
-        "contracts/evm/test/mocks/MockERC3009Token.sol",
-        "contracts/evm/test/periphery/ERC3009DepositCollector.t.sol",
-        "contracts/evm/test/periphery/Permit2DepositCollector.t.sol",
-        "contracts/evm/test/periphery/Permit2WithERC2612DepositCollector.t.sol",
-        "contracts/evm/test/x402BatchSettlement.fork.t.sol",
-        "contracts/evm/test/x402BatchSettlement.gas.t.sol",
-        "contracts/evm/test/x402BatchSettlement.t.sol",
-        "contracts/evm/test/x402UptoPermit2Proxy.t.sol",
-        "contracts/evm/vanity-miner/bytecode/erc3009_creation.hex",
-        "contracts/evm/vanity-miner/bytecode/permit2_creation.hex",
-        "contracts/evm/vanity-miner/src/main.rs",
-        "docs/AGENTS.md",
-        "docs/advanced-concepts/lifecycle-hooks.mdx",
-        "docs/core-concepts/client-server.md",
-        "docs/core-concepts/facilitator.md",
-        "docs/core-concepts/http-402.md",
-        "docs/core-concepts/network-and-token-support.mdx",
-        "docs/dev-tools/facilitators.md",
-        "docs/dev-tools/overview.md",
-        "docs/dev-tools/third-party-extensions.md",
-        "docs/dev-tools/third-party-sdks.md",
-        "docs/docs.json",
-        "docs/extensions/bazaar.mdx",
-        "docs/extensions/eip2612-gas-sponsoring.mdx",
-        "docs/extensions/erc20-approval-gas-sponsoring.mdx",
-        "docs/extensions/offer-receipt.mdx",
-        "docs/extensions/overview.mdx",
-        "docs/extensions/payment-identifier.mdx",
-        "docs/extensions/sign-in-with-x.mdx",
-        "docs/faq.md",
-        "docs/getting-started/quickstart-for-buyers.mdx",
-        "docs/getting-started/quickstart-for-sellers.mdx",
-        "docs/guides/mcp-server-with-x402.md",
-        "docs/guides/migration-v1-to-v2.mdx",
-        "docs/introduction.md",
-        "docs/schemes/batch-settlement.mdx",
-        "docs/schemes/exact.mdx",
-        "docs/schemes/overview.mdx",
-        "docs/schemes/upto.mdx"
-      ],
-      "ecosystemFiles": [],
-      "summary": "Adds Anicca to the x402 ecosystem partners directory.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "trust or risk claims",
-        "declared paid calls"
-      ],
-      "priorityScore": 82,
-      "priority": "urgent"
-    },
-    {
       "number": 187,
       "title": "Add Lagoon Tech Systems (x402-md + CIV Commodity Data) to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/187",
       "state": "open",
       "createdAt": "2026-05-28T16:19:34Z",
       "updatedAt": "2026-05-28T16:19:48Z",
-      "ageHours": 100,
+      "ageHours": 123,
       "author": "Bigabou007-dev",
       "authorUrl": "https://github.com/Bigabou007-dev",
       "category": "ecosystem listing",
@@ -350,7 +214,7 @@
       "state": "open",
       "createdAt": "2026-05-03T12:10:08Z",
       "updatedAt": "2026-05-21T06:14:30Z",
-      "ageHours": 704,
+      "ageHours": 727,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -388,352 +252,13 @@
       "priority": "urgent"
     },
     {
-      "number": 167,
-      "title": "feat(ecosystem): add Crest Deployment Systems -- security audit + crypto data",
-      "url": "https://github.com/coinbase/x402/pull/167",
-      "state": "open",
-      "createdAt": "2026-05-15T18:46:48Z",
-      "updatedAt": "2026-05-27T19:31:04Z",
-      "ageHours": 409,
-      "author": "andysalvo",
-      "authorUrl": "https://github.com/andysalvo",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 1,
-      "urls": [
-        "https://audit.crestsystems.ai",
-        "https://data.crestsystems.ai",
-        "https://crestsystems.ai"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/crest-audit/metadata.json",
-        "typescript/site/app/ecosystem/partners-data/crest-data/metadata.json",
-        "typescript/site/public/logos/crest-deployment-systems.svg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/crest-audit/metadata.json",
-        "typescript/site/app/ecosystem/partners-data/crest-data/metadata.json"
-      ],
-      "summary": "**Crest x402 Audit** (https://audit.crestsystems.ai)",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 74,
-      "priority": "urgent"
-    },
-    {
-      "number": 181,
-      "title": "Add Fleet x402 Microservices to ecosystem (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/181",
-      "state": "open",
-      "createdAt": "2026-05-21T08:41:59Z",
-      "updatedAt": "2026-05-26T15:05:30Z",
-      "ageHours": 275,
-      "author": "SASN19",
-      "authorUrl": "https://github.com/SASN19",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.5,
-      "urls": [
-        "https://fleet-x402-audit.fly.dev",
-        "https://fleet-x402-audit.fly.dev/.well-known/x402-listing",
-        "https://fleet-x402-audit.fly.dev/favicon.ico"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/fleet-x402/metadata.json"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/fleet-x402/metadata.json"
-      ],
-      "summary": "**Fleet x402 Microservices** — two production x402-payable services running on Base mainnet.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 74,
-      "priority": "urgent"
-    },
-    {
-      "number": 160,
-      "title": "Add KR Crypto Intelligence to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/160",
-      "state": "open",
-      "createdAt": "2026-05-08T22:35:56Z",
-      "updatedAt": "2026-05-20T01:09:53Z",
-      "ageHours": 573,
-      "author": "bakyang2",
-      "authorUrl": "https://github.com/bakyang2",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://api.printmoneylab.com/openapi.json",
-        "https://github.com/bakyang2/kr-crypto-intelligence"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/kr-crypto/metadata.json",
-        "typescript/site/public/logos/kr-crypto.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/kr-crypto/metadata.json"
-      ],
-      "summary": "Add KR Crypto Intelligence to the ecosystem — Korean crypto market data + AI sentiment API for AI agents.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "trust or risk claims",
-        "mainnet value path"
-      ],
-      "priorityScore": 74,
-      "priority": "urgent"
-    },
-    {
-      "number": 174,
-      "title": "MEV Intelligence",
-      "url": "https://github.com/coinbase/x402/pull/174",
-      "state": "open",
-      "createdAt": "2026-05-19T11:48:48Z",
-      "updatedAt": "2026-05-19T21:08:00Z",
-      "ageHours": 320,
-      "author": "ValoremFoundation",
-      "authorUrl": "https://github.com/ValoremFoundation",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.5,
-      "urls": [
-        "https://mev.advalorem.io/intelligence/openapi"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/advalorem-mev-intelligence/metadata.json",
-        "typescript/site/public/logos/advalorem.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/advalorem-mev-intelligence/metadata.json"
-      ],
-      "summary": "This PR adds MEV Intelligence to the x402 ecosystem under Services/Endpoints.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 74,
-      "priority": "urgent"
-    },
-    {
-      "number": 164,
-      "title": "feat: add Jorkal NFT Data API to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/164",
-      "state": "open",
-      "createdAt": "2026-05-15T11:22:14Z",
-      "updatedAt": "2026-05-25T23:15:31Z",
-      "ageHours": 417,
-      "author": "jorkal-crypto",
-      "authorUrl": "https://github.com/jorkal-crypto",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.005,
-      "urls": [
-        "https://vercel-deploy-alpha-puce.vercel.app",
-        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json",
-        "typescript/site/public/logos/jorkal-nft-api.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json"
-      ],
-      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 72,
-      "priority": "urgent"
-    },
-    {
-      "number": 134,
-      "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
-      "url": "https://github.com/coinbase/x402/pull/134",
-      "state": "open",
-      "createdAt": "2026-05-01T23:30:36Z",
-      "updatedAt": "2026-05-18T17:15:39Z",
-      "ageHours": 740,
-      "author": "j2422144-beep",
-      "authorUrl": "https://github.com/j2422144-beep",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Base Sepolia",
-        "Solana",
-        "testnet"
-      ],
-      "maxPriceUsd": 0.001,
-      "urls": [
-        "https://agiotage.finance",
-        "https://agio-protocol-production.up.railway.app",
-        "https://agio-protocol-production.up.railway.app/v1/x402/info",
-        "https://www.npmjs.com/package/agiotage-mcp",
-        "https://agiotage.finance/.well-known/agiotage.json"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/agiotage/metadata.json",
-        "typescript/site/public/logos/agiotage.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/agiotage/metadata.json"
-      ],
-      "summary": "Adds [Agiotage](https://agiotage.finance) to the x402 ecosystem page.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "declared paid calls"
-      ],
-      "priorityScore": 72,
-      "priority": "urgent"
-    },
-    {
-      "number": 155,
-      "title": "feat: add AgentLair to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/155",
-      "state": "closed",
-      "createdAt": "2026-05-06T12:00:16Z",
-      "updatedAt": "2026-05-20T14:03:31Z",
-      "ageHours": 632,
-      "author": "piiiico",
-      "authorUrl": "https://github.com/piiiico",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://agentlair.dev",
-        "https://agentlair.dev/docs"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json",
-        "typescript/site/public/logos/agentlair.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json"
-      ],
-      "summary": "AgentLair provides email identity and an encrypted credential vault for AI agents.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "mainnet value path"
-      ],
-      "priorityScore": 68,
-      "priority": "urgent"
-    }
-  ],
-  "newestRows": [
-    {
-      "number": 192,
-      "title": "Add CDK to ecosystem (agent-native game-key / digital-goods API on x402)",
-      "url": "https://github.com/coinbase/x402/pull/192",
-      "state": "open",
-      "createdAt": "2026-06-01T09:28:36Z",
-      "updatedAt": "2026-06-01T09:28:50Z",
-      "ageHours": 11,
-      "author": "cdkbotmcp",
-      "authorUrl": "https://github.com/cdkbotmcp",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://cdk.bot",
-        "https://api.cdk.bot",
-        "https://mcp.cdk.bot/mcp",
-        "https://claude.com/claude-code"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/cdk/metadata.json",
-        "typescript/site/public/logos/cdk.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/cdk/metadata.json"
-      ],
-      "summary": "Adds **CDK** under **Services/Endpoints**.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface"
-      ],
-      "priorityScore": 52,
-      "priority": "review"
-    },
-    {
-      "number": 191,
-      "title": "fix(docs): remove duplicate @x402/svm in README install command",
-      "url": "https://github.com/coinbase/x402/pull/191",
-      "state": "open",
-      "createdAt": "2026-06-01T04:00:55Z",
-      "updatedAt": "2026-06-01T04:01:00Z",
-      "ageHours": 16,
-      "author": "abhicris",
-      "authorUrl": "https://github.com/abhicris",
-      "category": "docs / discovery",
-      "networks": [],
-      "maxPriceUsd": 0,
-      "urls": [],
-      "files": [
-        "README.md"
-      ],
-      "ecosystemFiles": [],
-      "summary": "Remove the duplicated `@x402/svm` package in the TypeScript \"all available reference sdks\" `npm install` command in `README.md`.",
-      "reasons": [],
-      "priorityScore": 8,
-      "priority": "watch"
-    },
-    {
       "number": 190,
       "title": "Add Anicca — autonomous AI agent ecosystem partner",
       "url": "https://github.com/coinbase/x402/pull/190",
       "state": "open",
       "createdAt": "2026-05-31T17:26:04Z",
       "updatedAt": "2026-05-31T17:26:34Z",
-      "ageHours": 27,
+      "ageHours": 50,
       "author": "Daisuke134",
       "authorUrl": "https://github.com/Daisuke134",
       "category": "ecosystem listing",
@@ -859,17 +384,296 @@
         "trust or risk claims",
         "declared paid calls"
       ],
-      "priorityScore": 82,
+      "priorityScore": 74,
       "priority": "urgent"
     },
     {
+      "number": 167,
+      "title": "feat(ecosystem): add Crest Deployment Systems -- security audit + crypto data",
+      "url": "https://github.com/coinbase/x402/pull/167",
+      "state": "open",
+      "createdAt": "2026-05-15T18:46:48Z",
+      "updatedAt": "2026-05-27T19:31:04Z",
+      "ageHours": 432,
+      "author": "andysalvo",
+      "authorUrl": "https://github.com/andysalvo",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 1,
+      "urls": [
+        "https://audit.crestsystems.ai",
+        "https://data.crestsystems.ai",
+        "https://crestsystems.ai"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/crest-audit/metadata.json",
+        "typescript/site/app/ecosystem/partners-data/crest-data/metadata.json",
+        "typescript/site/public/logos/crest-deployment-systems.svg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/crest-audit/metadata.json",
+        "typescript/site/app/ecosystem/partners-data/crest-data/metadata.json"
+      ],
+      "summary": "**Crest x402 Audit** (https://audit.crestsystems.ai)",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 74,
+      "priority": "urgent"
+    },
+    {
+      "number": 181,
+      "title": "Add Fleet x402 Microservices to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/181",
+      "state": "open",
+      "createdAt": "2026-05-21T08:41:59Z",
+      "updatedAt": "2026-05-26T15:05:30Z",
+      "ageHours": 298,
+      "author": "SASN19",
+      "authorUrl": "https://github.com/SASN19",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.5,
+      "urls": [
+        "https://fleet-x402-audit.fly.dev",
+        "https://fleet-x402-audit.fly.dev/.well-known/x402-listing",
+        "https://fleet-x402-audit.fly.dev/favicon.ico"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/fleet-x402/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/fleet-x402/metadata.json"
+      ],
+      "summary": "**Fleet x402 Microservices** — two production x402-payable services running on Base mainnet.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 74,
+      "priority": "urgent"
+    },
+    {
+      "number": 160,
+      "title": "Add KR Crypto Intelligence to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/160",
+      "state": "open",
+      "createdAt": "2026-05-08T22:35:56Z",
+      "updatedAt": "2026-05-20T01:09:53Z",
+      "ageHours": 596,
+      "author": "bakyang2",
+      "authorUrl": "https://github.com/bakyang2",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://api.printmoneylab.com/openapi.json",
+        "https://github.com/bakyang2/kr-crypto-intelligence"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/kr-crypto/metadata.json",
+        "typescript/site/public/logos/kr-crypto.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/kr-crypto/metadata.json"
+      ],
+      "summary": "Add KR Crypto Intelligence to the ecosystem — Korean crypto market data + AI sentiment API for AI agents.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path"
+      ],
+      "priorityScore": 74,
+      "priority": "urgent"
+    },
+    {
+      "number": 174,
+      "title": "MEV Intelligence",
+      "url": "https://github.com/coinbase/x402/pull/174",
+      "state": "open",
+      "createdAt": "2026-05-19T11:48:48Z",
+      "updatedAt": "2026-05-19T21:08:00Z",
+      "ageHours": 343,
+      "author": "ValoremFoundation",
+      "authorUrl": "https://github.com/ValoremFoundation",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.5,
+      "urls": [
+        "https://mev.advalorem.io/intelligence/openapi"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/advalorem-mev-intelligence/metadata.json",
+        "typescript/site/public/logos/advalorem.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/advalorem-mev-intelligence/metadata.json"
+      ],
+      "summary": "This PR adds MEV Intelligence to the x402 ecosystem under Services/Endpoints.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 74,
+      "priority": "urgent"
+    },
+    {
+      "number": 164,
+      "title": "feat: add Jorkal NFT Data API to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/164",
+      "state": "open",
+      "createdAt": "2026-05-15T11:22:14Z",
+      "updatedAt": "2026-05-25T23:15:31Z",
+      "ageHours": 440,
+      "author": "jorkal-crypto",
+      "authorUrl": "https://github.com/jorkal-crypto",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.005,
+      "urls": [
+        "https://vercel-deploy-alpha-puce.vercel.app",
+        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json",
+        "typescript/site/public/logos/jorkal-nft-api.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json"
+      ],
+      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 72,
+      "priority": "urgent"
+    },
+    {
+      "number": 134,
+      "title": "feat(ecosystem): add Agiotage — cross-chain payment infrastructure for AI agents",
+      "url": "https://github.com/coinbase/x402/pull/134",
+      "state": "open",
+      "createdAt": "2026-05-01T23:30:36Z",
+      "updatedAt": "2026-05-18T17:15:39Z",
+      "ageHours": 763,
+      "author": "j2422144-beep",
+      "authorUrl": "https://github.com/j2422144-beep",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Base Sepolia",
+        "Solana",
+        "testnet"
+      ],
+      "maxPriceUsd": 0.001,
+      "urls": [
+        "https://agiotage.finance",
+        "https://agio-protocol-production.up.railway.app",
+        "https://agio-protocol-production.up.railway.app/v1/x402/info",
+        "https://www.npmjs.com/package/agiotage-mcp",
+        "https://agiotage.finance/.well-known/agiotage.json"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/agiotage/metadata.json",
+        "typescript/site/public/logos/agiotage.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/agiotage/metadata.json"
+      ],
+      "summary": "Adds [Agiotage](https://agiotage.finance) to the x402 ecosystem page.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "declared paid calls"
+      ],
+      "priorityScore": 72,
+      "priority": "urgent"
+    },
+    {
+      "number": 155,
+      "title": "feat: add AgentLair to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/155",
+      "state": "closed",
+      "createdAt": "2026-05-06T12:00:16Z",
+      "updatedAt": "2026-05-20T14:03:31Z",
+      "ageHours": 655,
+      "author": "piiiico",
+      "authorUrl": "https://github.com/piiiico",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://agentlair.dev",
+        "https://agentlair.dev/docs"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json",
+        "typescript/site/public/logos/agentlair.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/agentlair/metadata.json"
+      ],
+      "summary": "AgentLair provides email identity and an encrypted credential vault for AI agents.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "priorityScore": 68,
+      "priority": "urgent"
+    }
+  ],
+  "newestRows": [
+    {
       "number": 189,
-      "title": "Add Archive Forever to ecosystem",
+      "title": "Add Save Forever to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/189",
       "state": "open",
       "createdAt": "2026-05-30T20:50:07Z",
-      "updatedAt": "2026-05-31T13:41:04Z",
-      "ageHours": 47,
+      "updatedAt": "2026-06-02T05:04:07Z",
+      "ageHours": 70,
       "author": "Kedawgs",
       "authorUrl": "https://github.com/Kedawgs",
       "category": "ecosystem listing",
@@ -879,16 +683,53 @@
       ],
       "maxPriceUsd": 0,
       "urls": [
-        "https://archive-forever-api-production.up.railway.app"
+        "https://saveforever.xyz"
       ],
       "files": [
-        "typescript/site/app/ecosystem/partners-data/archive-forever/metadata.json",
-        "typescript/site/public/logos/archive-forever.svg"
+        "typescript/site/app/ecosystem/partners-data/save-forever/metadata.json",
+        "typescript/site/public/logos/save-forever.svg"
       ],
       "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/archive-forever/metadata.json"
+        "typescript/site/app/ecosystem/partners-data/save-forever/metadata.json"
       ],
-      "summary": "Adds **Archive Forever** to the x402 ecosystem.",
+      "summary": "Adds **Save Forever** to the x402 ecosystem.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface"
+      ],
+      "priorityScore": 44,
+      "priority": "review"
+    },
+    {
+      "number": 192,
+      "title": "Add CDK to ecosystem (agent-native game-key / digital-goods API on x402)",
+      "url": "https://github.com/coinbase/x402/pull/192",
+      "state": "open",
+      "createdAt": "2026-06-01T09:28:36Z",
+      "updatedAt": "2026-06-01T09:28:50Z",
+      "ageHours": 33,
+      "author": "cdkbotmcp",
+      "authorUrl": "https://github.com/cdkbotmcp",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://cdk.bot",
+        "https://api.cdk.bot",
+        "https://mcp.cdk.bot/mcp",
+        "https://claude.com/claude-code"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/cdk/metadata.json",
+        "typescript/site/public/logos/cdk.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/cdk/metadata.json"
+      ],
+      "summary": "Adds **CDK** under **Services/Endpoints**.",
       "reasons": [
         "public ecosystem listing",
         "agent-discoverable surface"
@@ -897,13 +738,172 @@
       "priority": "review"
     },
     {
+      "number": 191,
+      "title": "fix(docs): remove duplicate @x402/svm in README install command",
+      "url": "https://github.com/coinbase/x402/pull/191",
+      "state": "open",
+      "createdAt": "2026-06-01T04:00:55Z",
+      "updatedAt": "2026-06-01T04:01:00Z",
+      "ageHours": 39,
+      "author": "abhicris",
+      "authorUrl": "https://github.com/abhicris",
+      "category": "docs / discovery",
+      "networks": [],
+      "maxPriceUsd": 0,
+      "urls": [],
+      "files": [
+        "README.md"
+      ],
+      "ecosystemFiles": [],
+      "summary": "Remove the duplicated `@x402/svm` package in the TypeScript \"all available reference sdks\" `npm install` command in `README.md`.",
+      "reasons": [],
+      "priorityScore": 8,
+      "priority": "watch"
+    },
+    {
+      "number": 190,
+      "title": "Add Anicca — autonomous AI agent ecosystem partner",
+      "url": "https://github.com/coinbase/x402/pull/190",
+      "state": "open",
+      "createdAt": "2026-05-31T17:26:04Z",
+      "updatedAt": "2026-05-31T17:26:34Z",
+      "ageHours": 50,
+      "author": "Daisuke134",
+      "authorUrl": "https://github.com/Daisuke134",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "maxPriceUsd": 50,
+      "urls": [
+        "https://anicca-x402.netlify.app/.well-known/x402",
+        "https://github.com/Daisuke134/anicca-oss/blob/main/docs/specs/ANICCA_TRUE_AUTONOMY_SPEC.md",
+        "https://github.com/Daisuke134/anicca-oss",
+        "https://anicca-x402.netlify.app"
+      ],
+      "files": [
+        ".github/CODEOWNERS",
+        ".github/workflows/check_format.yml",
+        ".github/workflows/check_go.yml",
+        ".github/workflows/check_lint.yml",
+        ".github/workflows/check_package_lock.yml",
+        ".github/workflows/check_paywall_template.yml",
+        ".github/workflows/check_python.yml",
+        ".github/workflows/e2e_tests.yml",
+        ".github/workflows/java.yml",
+        ".github/workflows/labeler.yml",
+        ".github/workflows/publish_npm_coinbase_x402.yml",
+        ".github/workflows/publish_npm_scoped_x402_aptos.yml",
+        ".github/workflows/publish_npm_scoped_x402_avm.yml",
+        ".github/workflows/publish_npm_scoped_x402_axios.yml",
+        ".github/workflows/publish_npm_scoped_x402_core.yml",
+        ".github/workflows/publish_npm_scoped_x402_evm.yml",
+        ".github/workflows/publish_npm_scoped_x402_express.yml",
+        ".github/workflows/publish_npm_scoped_x402_extensions.yml",
+        ".github/workflows/publish_npm_scoped_x402_fastify.yml",
+        ".github/workflows/publish_npm_scoped_x402_fetch.yml",
+        ".github/workflows/publish_npm_scoped_x402_hedera.yml",
+        ".github/workflows/publish_npm_scoped_x402_hono.yml",
+        ".github/workflows/publish_npm_scoped_x402_mcp.yml",
+        ".github/workflows/publish_npm_scoped_x402_next.yml",
+        ".github/workflows/publish_npm_scoped_x402_paywall.yml",
+        ".github/workflows/publish_npm_scoped_x402_stellar.yml",
+        ".github/workflows/publish_npm_scoped_x402_svm.yml",
+        ".github/workflows/publish_npm_x402.yml",
+        ".github/workflows/publish_npm_x402_axios.yml",
+        ".github/workflows/publish_npm_x402_express.yml",
+        ".github/workflows/publish_npm_x402_fetch.yml",
+        ".github/workflows/publish_npm_x402_hono.yml",
+        ".github/workflows/publish_npm_x402_next.yml",
+        ".github/workflows/publish_pypi_x402.yml",
+        ".github/workflows/unit_tests.yml",
+        ".github/workflows/update-docs.yml",
+        ".gitignore",
+        "CONTRIBUTING.md",
+        "DEFAULT_ASSETS.md",
+        "README.md",
+        "TSC.md",
+        "contracts/evm/README.md",
+        "contracts/evm/audits/cantina_x402_mar2026.pdf",
+        "contracts/evm/audits/cantina_x402_may2026.pdf",
+        "contracts/evm/docs/x402-batch-settlement-implementers.md",
+        "contracts/evm/foundry.toml",
+        "contracts/evm/lib/account-abstraction",
+        "contracts/evm/script/ComputeAddress.s.sol",
+        "contracts/evm/script/Deploy.s.sol",
+        "contracts/evm/script/DeployBatchSettlement.s.sol",
+        "contracts/evm/snapshots/X402BatchSettlementGasTest.json",
+        "contracts/evm/src/interfaces/IDepositCollector.sol",
+        "contracts/evm/src/interfaces/IERC3009.sol",
+        "contracts/evm/src/periphery/DepositCollector.sol",
+        "contracts/evm/src/periphery/ERC3009DepositCollector.sol",
+        "contracts/evm/src/periphery/Permit2DepositCollector.sol",
+        "contracts/evm/src/x402BasePermit2Proxy.sol",
+        "contracts/evm/src/x402BatchSettlement.sol",
+        "contracts/evm/test/MockGenericERC20.t.sol",
+        "contracts/evm/test/mocks/GasMockDepositCollector.sol",
+        "contracts/evm/test/mocks/MockBatchDepositCollectors.sol",
+        "contracts/evm/test/mocks/MockERC3009Token.sol",
+        "contracts/evm/test/periphery/ERC3009DepositCollector.t.sol",
+        "contracts/evm/test/periphery/Permit2DepositCollector.t.sol",
+        "contracts/evm/test/periphery/Permit2WithERC2612DepositCollector.t.sol",
+        "contracts/evm/test/x402BatchSettlement.fork.t.sol",
+        "contracts/evm/test/x402BatchSettlement.gas.t.sol",
+        "contracts/evm/test/x402BatchSettlement.t.sol",
+        "contracts/evm/test/x402UptoPermit2Proxy.t.sol",
+        "contracts/evm/vanity-miner/bytecode/erc3009_creation.hex",
+        "contracts/evm/vanity-miner/bytecode/permit2_creation.hex",
+        "contracts/evm/vanity-miner/src/main.rs",
+        "docs/AGENTS.md",
+        "docs/advanced-concepts/lifecycle-hooks.mdx",
+        "docs/core-concepts/client-server.md",
+        "docs/core-concepts/facilitator.md",
+        "docs/core-concepts/http-402.md",
+        "docs/core-concepts/network-and-token-support.mdx",
+        "docs/dev-tools/facilitators.md",
+        "docs/dev-tools/overview.md",
+        "docs/dev-tools/third-party-extensions.md",
+        "docs/dev-tools/third-party-sdks.md",
+        "docs/docs.json",
+        "docs/extensions/bazaar.mdx",
+        "docs/extensions/eip2612-gas-sponsoring.mdx",
+        "docs/extensions/erc20-approval-gas-sponsoring.mdx",
+        "docs/extensions/offer-receipt.mdx",
+        "docs/extensions/overview.mdx",
+        "docs/extensions/payment-identifier.mdx",
+        "docs/extensions/sign-in-with-x.mdx",
+        "docs/faq.md",
+        "docs/getting-started/quickstart-for-buyers.mdx",
+        "docs/getting-started/quickstart-for-sellers.mdx",
+        "docs/guides/mcp-server-with-x402.md",
+        "docs/guides/migration-v1-to-v2.mdx",
+        "docs/introduction.md",
+        "docs/schemes/batch-settlement.mdx",
+        "docs/schemes/exact.mdx",
+        "docs/schemes/overview.mdx",
+        "docs/schemes/upto.mdx"
+      ],
+      "ecosystemFiles": [],
+      "summary": "Adds Anicca to the x402 ecosystem partners directory.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "declared paid calls"
+      ],
+      "priorityScore": 74,
+      "priority": "urgent"
+    },
+    {
       "number": 188,
       "title": "feat(ecosystem): add 24K Labs — AI services via x402",
       "url": "https://github.com/coinbase/x402/pull/188",
       "state": "closed",
       "createdAt": "2026-05-30T19:55:40Z",
       "updatedAt": "2026-05-30T20:04:31Z",
-      "ageHours": 48,
+      "ageHours": 71,
       "author": "Haustorium12",
       "authorUrl": "https://github.com/Haustorium12",
       "category": "ecosystem listing",
@@ -929,7 +929,7 @@
         "public ecosystem listing",
         "trust or risk claims"
       ],
-      "priorityScore": 50,
+      "priorityScore": 42,
       "priority": "review"
     },
     {
@@ -939,7 +939,7 @@
       "state": "open",
       "createdAt": "2026-05-28T16:19:34Z",
       "updatedAt": "2026-05-28T16:19:48Z",
-      "ageHours": 100,
+      "ageHours": 123,
       "author": "Bigabou007-dev",
       "authorUrl": "https://github.com/Bigabou007-dev",
       "category": "ecosystem listing",
@@ -981,7 +981,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-05-28T05:48:29Z",
-      "ageHours": 601,
+      "ageHours": 624,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -1024,7 +1024,7 @@
       "state": "closed",
       "createdAt": "2026-05-28T04:43:01Z",
       "updatedAt": "2026-05-28T05:37:00Z",
-      "ageHours": 111,
+      "ageHours": 134,
       "author": "Ivan-LB",
       "authorUrl": "https://github.com/Ivan-LB",
       "category": "ecosystem listing",
@@ -1061,7 +1061,7 @@
       "state": "open",
       "createdAt": "2026-05-27T13:55:58Z",
       "updatedAt": "2026-05-28T00:59:47Z",
-      "ageHours": 126,
+      "ageHours": 149,
       "author": "kinance",
       "authorUrl": "https://github.com/kinance",
       "category": "ecosystem listing",
@@ -1098,7 +1098,7 @@
       "state": "open",
       "createdAt": "2026-05-15T18:46:48Z",
       "updatedAt": "2026-05-27T19:31:04Z",
-      "ageHours": 409,
+      "ageHours": 432,
       "author": "andysalvo",
       "authorUrl": "https://github.com/andysalvo",
       "category": "ecosystem listing",
@@ -1140,7 +1140,7 @@
       "state": "open",
       "createdAt": "2026-05-21T08:41:59Z",
       "updatedAt": "2026-05-26T15:05:30Z",
-      "ageHours": 275,
+      "ageHours": 298,
       "author": "SASN19",
       "authorUrl": "https://github.com/SASN19",
       "category": "ecosystem listing",
@@ -1179,7 +1179,7 @@
       "state": "open",
       "createdAt": "2026-05-20T05:01:30Z",
       "updatedAt": "2026-05-26T11:56:23Z",
-      "ageHours": 303,
+      "ageHours": 326,
       "author": "0rkz",
       "authorUrl": "https://github.com/0rkz",
       "category": "ecosystem listing",
@@ -1212,7 +1212,7 @@
       "state": "open",
       "createdAt": "2026-05-15T11:22:14Z",
       "updatedAt": "2026-05-25T23:15:31Z",
-      "ageHours": 417,
+      "ageHours": 440,
       "author": "jorkal-crypto",
       "authorUrl": "https://github.com/jorkal-crypto",
       "category": "ecosystem listing",
@@ -1251,7 +1251,7 @@
       "state": "open",
       "createdAt": "2026-05-25T12:42:45Z",
       "updatedAt": "2026-05-25T23:13:41Z",
-      "ageHours": 175,
+      "ageHours": 198,
       "author": "dkta0",
       "authorUrl": "https://github.com/dkta0",
       "category": "ecosystem listing",
@@ -1283,7 +1283,7 @@
       "state": "closed",
       "createdAt": "2026-05-23T01:24:15Z",
       "updatedAt": "2026-05-23T01:25:53Z",
-      "ageHours": 235,
+      "ageHours": 258,
       "author": "JefBronze",
       "authorUrl": "https://github.com/JefBronze",
       "category": "ecosystem listing",
@@ -1323,7 +1323,7 @@
       "state": "closed",
       "createdAt": "2026-05-22T03:01:32Z",
       "updatedAt": "2026-05-22T04:58:48Z",
-      "ageHours": 257,
+      "ageHours": 280,
       "author": "ciinkwia",
       "authorUrl": "https://github.com/ciinkwia",
       "category": "ecosystem listing",
@@ -1363,7 +1363,7 @@
       "state": "open",
       "createdAt": "2026-05-11T18:10:17Z",
       "updatedAt": "2026-05-17T06:26:43Z",
-      "ageHours": 506,
+      "ageHours": 529,
       "author": "dbe006",
       "authorUrl": "https://github.com/dbe006",
       "category": "ecosystem listing",
@@ -1401,7 +1401,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-05-28T05:48:29Z",
-      "ageHours": 601,
+      "ageHours": 624,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -1438,13 +1438,99 @@
       "priority": "urgent"
     },
     {
+      "number": 187,
+      "title": "Add Lagoon Tech Systems (x402-md + CIV Commodity Data) to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/187",
+      "state": "open",
+      "createdAt": "2026-05-28T16:19:34Z",
+      "updatedAt": "2026-05-28T16:19:48Z",
+      "ageHours": 123,
+      "author": "Bigabou007-dev",
+      "authorUrl": "https://github.com/Bigabou007-dev",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.1,
+      "urls": [
+        "https://...\\",
+        "https://api.cdp.coinbase.com/platform/v2/x402\\`"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/civ-commodity-data/metadata.json",
+        "typescript/site/app/ecosystem/partners-data/webpage-to-markdown/metadata.json",
+        "typescript/site/public/logos/lagoon-tech-commodity-data.svg",
+        "typescript/site/public/logos/lagoon-tech-x402-md.svg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/civ-commodity-data/metadata.json",
+        "typescript/site/app/ecosystem/partners-data/webpage-to-markdown/metadata.json"
+      ],
+      "summary": "Adds two production x402 services run by Lagoon Tech Systems (Côte d'Ivoire) to the ecosystem partners directory.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 76,
+      "priority": "urgent"
+    },
+    {
+      "number": 138,
+      "title": "Add x402watch to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/138",
+      "state": "open",
+      "createdAt": "2026-05-03T12:10:08Z",
+      "updatedAt": "2026-05-21T06:14:30Z",
+      "ageHours": 727,
+      "author": "bakyang2",
+      "authorUrl": "https://github.com/bakyang2",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://api.x402.printmoneylab.com/mcp",
+        "https://api.x402.printmoneylab.com/mcp`",
+        "https://x402.printmoneylab.com",
+        "https://api.x402.printmoneylab.com",
+        "https://github.com/printmoneylab/x402watch",
+        "https://github.com/printmoneylab/x402watch-data",
+        "https://github.com/printmoneylab"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/x402watch/metadata.json",
+        "typescript/site/public/logos/x402watch.svg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/x402watch/metadata.json"
+      ],
+      "summary": "Adds x402watch to the ecosystem partners directory.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "priorityScore": 76,
+      "priority": "urgent"
+    },
+    {
       "number": 190,
       "title": "Add Anicca — autonomous AI agent ecosystem partner",
       "url": "https://github.com/coinbase/x402/pull/190",
       "state": "open",
       "createdAt": "2026-05-31T17:26:04Z",
       "updatedAt": "2026-05-31T17:26:34Z",
-      "ageHours": 27,
+      "ageHours": 50,
       "author": "Daisuke134",
       "authorUrl": "https://github.com/Daisuke134",
       "category": "ecosystem listing",
@@ -1570,93 +1656,7 @@
         "trust or risk claims",
         "declared paid calls"
       ],
-      "priorityScore": 82,
-      "priority": "urgent"
-    },
-    {
-      "number": 187,
-      "title": "Add Lagoon Tech Systems (x402-md + CIV Commodity Data) to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/187",
-      "state": "open",
-      "createdAt": "2026-05-28T16:19:34Z",
-      "updatedAt": "2026-05-28T16:19:48Z",
-      "ageHours": 100,
-      "author": "Bigabou007-dev",
-      "authorUrl": "https://github.com/Bigabou007-dev",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.1,
-      "urls": [
-        "https://...\\",
-        "https://api.cdp.coinbase.com/platform/v2/x402\\`"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/civ-commodity-data/metadata.json",
-        "typescript/site/app/ecosystem/partners-data/webpage-to-markdown/metadata.json",
-        "typescript/site/public/logos/lagoon-tech-commodity-data.svg",
-        "typescript/site/public/logos/lagoon-tech-x402-md.svg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/civ-commodity-data/metadata.json",
-        "typescript/site/app/ecosystem/partners-data/webpage-to-markdown/metadata.json"
-      ],
-      "summary": "Adds two production x402 services run by Lagoon Tech Systems (Côte d'Ivoire) to the ecosystem partners directory.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 76,
-      "priority": "urgent"
-    },
-    {
-      "number": 138,
-      "title": "Add x402watch to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/138",
-      "state": "open",
-      "createdAt": "2026-05-03T12:10:08Z",
-      "updatedAt": "2026-05-21T06:14:30Z",
-      "ageHours": 704,
-      "author": "bakyang2",
-      "authorUrl": "https://github.com/bakyang2",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://api.x402.printmoneylab.com/mcp",
-        "https://api.x402.printmoneylab.com/mcp`",
-        "https://x402.printmoneylab.com",
-        "https://api.x402.printmoneylab.com",
-        "https://github.com/printmoneylab/x402watch",
-        "https://github.com/printmoneylab/x402watch-data",
-        "https://github.com/printmoneylab"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/x402watch/metadata.json",
-        "typescript/site/public/logos/x402watch.svg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/x402watch/metadata.json"
-      ],
-      "summary": "Adds x402watch to the ecosystem partners directory.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "settlement or checkout workflow",
-        "mainnet value path"
-      ],
-      "priorityScore": 76,
+      "priorityScore": 74,
       "priority": "urgent"
     },
     {
@@ -1666,7 +1666,7 @@
       "state": "open",
       "createdAt": "2026-05-15T18:46:48Z",
       "updatedAt": "2026-05-27T19:31:04Z",
-      "ageHours": 409,
+      "ageHours": 432,
       "author": "andysalvo",
       "authorUrl": "https://github.com/andysalvo",
       "category": "ecosystem listing",
@@ -1708,7 +1708,7 @@
       "state": "open",
       "createdAt": "2026-05-21T08:41:59Z",
       "updatedAt": "2026-05-26T15:05:30Z",
-      "ageHours": 275,
+      "ageHours": 298,
       "author": "SASN19",
       "authorUrl": "https://github.com/SASN19",
       "category": "ecosystem listing",
@@ -1747,7 +1747,7 @@
       "state": "open",
       "createdAt": "2026-05-08T22:35:56Z",
       "updatedAt": "2026-05-20T01:09:53Z",
-      "ageHours": 573,
+      "ageHours": 596,
       "author": "bakyang2",
       "authorUrl": "https://github.com/bakyang2",
       "category": "ecosystem listing",
@@ -1786,7 +1786,7 @@
       "state": "open",
       "createdAt": "2026-05-19T11:48:48Z",
       "updatedAt": "2026-05-19T21:08:00Z",
-      "ageHours": 320,
+      "ageHours": 343,
       "author": "ValoremFoundation",
       "authorUrl": "https://github.com/ValoremFoundation",
       "category": "ecosystem listing",
@@ -1824,7 +1824,7 @@
       "state": "open",
       "createdAt": "2026-05-15T11:22:14Z",
       "updatedAt": "2026-05-25T23:15:31Z",
-      "ageHours": 417,
+      "ageHours": 440,
       "author": "jorkal-crypto",
       "authorUrl": "https://github.com/jorkal-crypto",
       "category": "ecosystem listing",
@@ -1863,7 +1863,7 @@
       "state": "open",
       "createdAt": "2026-05-01T23:30:36Z",
       "updatedAt": "2026-05-18T17:15:39Z",
-      "ageHours": 740,
+      "ageHours": 763,
       "author": "j2422144-beep",
       "authorUrl": "https://github.com/j2422144-beep",
       "category": "ecosystem listing",
@@ -1905,7 +1905,7 @@
       "state": "closed",
       "createdAt": "2026-05-06T12:00:16Z",
       "updatedAt": "2026-05-20T14:03:31Z",
-      "ageHours": 632,
+      "ageHours": 655,
       "author": "piiiico",
       "authorUrl": "https://github.com/piiiico",
       "category": "ecosystem listing",
@@ -1943,7 +1943,7 @@
       "state": "closed",
       "createdAt": "2026-05-28T04:43:01Z",
       "updatedAt": "2026-05-28T05:37:00Z",
-      "ageHours": 111,
+      "ageHours": 134,
       "author": "Ivan-LB",
       "authorUrl": "https://github.com/Ivan-LB",
       "category": "ecosystem listing",
@@ -1980,7 +1980,7 @@
       "state": "closed",
       "createdAt": "2026-05-22T03:01:32Z",
       "updatedAt": "2026-05-22T04:58:48Z",
-      "ageHours": 257,
+      "ageHours": 280,
       "author": "ciinkwia",
       "authorUrl": "https://github.com/ciinkwia",
       "category": "ecosystem listing",
@@ -2018,7 +2018,7 @@
       "state": "open",
       "createdAt": "2026-05-06T22:39:51Z",
       "updatedAt": "2026-05-16T23:02:03Z",
-      "ageHours": 621,
+      "ageHours": 644,
       "author": "docpull",
       "authorUrl": "https://github.com/docpull",
       "category": "ecosystem listing",
@@ -2058,7 +2058,7 @@
       "state": "closed",
       "createdAt": "2026-05-23T01:24:15Z",
       "updatedAt": "2026-05-23T01:25:53Z",
-      "ageHours": 235,
+      "ageHours": 258,
       "author": "JefBronze",
       "authorUrl": "https://github.com/JefBronze",
       "category": "ecosystem listing",
@@ -2098,7 +2098,7 @@
       "state": "open",
       "createdAt": "2026-05-06T08:21:08Z",
       "updatedAt": "2026-05-18T17:12:35Z",
-      "ageHours": 636,
+      "ageHours": 659,
       "author": "InfraGridACP-Sentinel",
       "authorUrl": "https://github.com/InfraGridACP-Sentinel",
       "category": "ecosystem listing",
@@ -2134,7 +2134,7 @@
       "state": "closed",
       "createdAt": "2026-05-08T01:39:02Z",
       "updatedAt": "2026-05-08T01:48:46Z",
-      "ageHours": 594,
+      "ageHours": 617,
       "author": "NZRTnetwork",
       "authorUrl": "https://github.com/NZRTnetwork",
       "category": "ecosystem listing",
@@ -2173,7 +2173,7 @@
       "state": "open",
       "createdAt": "2026-05-03T22:54:58Z",
       "updatedAt": "2026-05-04T19:46:30Z",
-      "ageHours": 693,
+      "ageHours": 716,
       "author": "johnyi12",
       "authorUrl": "https://github.com/johnyi12",
       "category": "ecosystem listing",
@@ -2207,7 +2207,7 @@
       "state": "open",
       "createdAt": "2026-05-16T19:20:33Z",
       "updatedAt": "2026-05-18T13:34:40Z",
-      "ageHours": 385,
+      "ageHours": 408,
       "author": "untitledfinancial",
       "authorUrl": "https://github.com/untitledfinancial",
       "category": "ecosystem listing",
@@ -2243,7 +2243,7 @@
       "state": "open",
       "createdAt": "2026-06-01T09:28:36Z",
       "updatedAt": "2026-06-01T09:28:50Z",
-      "ageHours": 11,
+      "ageHours": 33,
       "author": "cdkbotmcp",
       "authorUrl": "https://github.com/cdkbotmcp",
       "category": "ecosystem listing",
@@ -2274,47 +2274,13 @@
       "priority": "review"
     },
     {
-      "number": 189,
-      "title": "Add Archive Forever to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/189",
-      "state": "open",
-      "createdAt": "2026-05-30T20:50:07Z",
-      "updatedAt": "2026-05-31T13:41:04Z",
-      "ageHours": 47,
-      "author": "Kedawgs",
-      "authorUrl": "https://github.com/Kedawgs",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://archive-forever-api-production.up.railway.app"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/archive-forever/metadata.json",
-        "typescript/site/public/logos/archive-forever.svg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/archive-forever/metadata.json"
-      ],
-      "summary": "Adds **Archive Forever** to the x402 ecosystem.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface"
-      ],
-      "priorityScore": 52,
-      "priority": "review"
-    },
-    {
       "number": 179,
       "title": "feat: add InstaDomain to ecosystem",
       "url": "https://github.com/coinbase/x402/pull/179",
       "state": "open",
       "createdAt": "2026-05-20T07:06:37Z",
       "updatedAt": "2026-05-21T20:16:21Z",
-      "ageHours": 301,
+      "ageHours": 324,
       "author": "nach-dakwale",
       "authorUrl": "https://github.com/nach-dakwale",
       "category": "ecosystem listing",
@@ -2349,7 +2315,7 @@
       "state": "open",
       "createdAt": "2026-05-16T16:59:56Z",
       "updatedAt": "2026-05-16T22:16:15Z",
-      "ageHours": 387,
+      "ageHours": 410,
       "author": "FuturMix",
       "authorUrl": "https://github.com/FuturMix",
       "category": "ecosystem listing",
@@ -2384,7 +2350,7 @@
       "state": "open",
       "createdAt": "2026-05-02T12:46:19Z",
       "updatedAt": "2026-05-02T12:46:28Z",
-      "ageHours": 727,
+      "ageHours": 750,
       "author": "openpulsechain",
       "authorUrl": "https://github.com/openpulsechain",
       "category": "ecosystem listing",
@@ -2415,15 +2381,15 @@
       "priority": "review"
     },
     {
-      "number": 188,
-      "title": "feat(ecosystem): add 24K Labs — AI services via x402",
-      "url": "https://github.com/coinbase/x402/pull/188",
-      "state": "closed",
-      "createdAt": "2026-05-30T19:55:40Z",
-      "updatedAt": "2026-05-30T20:04:31Z",
-      "ageHours": 48,
-      "author": "Haustorium12",
-      "authorUrl": "https://github.com/Haustorium12",
+      "number": 189,
+      "title": "Add Save Forever to ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/189",
+      "state": "open",
+      "createdAt": "2026-05-30T20:50:07Z",
+      "updatedAt": "2026-06-02T05:04:07Z",
+      "ageHours": 70,
+      "author": "Kedawgs",
+      "authorUrl": "https://github.com/Kedawgs",
       "category": "ecosystem listing",
       "networks": [
         "Base",
@@ -2431,23 +2397,21 @@
       ],
       "maxPriceUsd": 0,
       "urls": [
-        "https://24klabs.ai",
-        "https://api.24klabs.ai",
-        "https://24klabs.ai/developers/quickstart"
+        "https://saveforever.xyz"
       ],
       "files": [
-        "typescript/site/app/ecosystem/partners-data/24klabs/metadata.json",
-        "typescript/site/public/logos/24klabs.svg"
+        "typescript/site/app/ecosystem/partners-data/save-forever/metadata.json",
+        "typescript/site/public/logos/save-forever.svg"
       ],
       "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/24klabs/metadata.json"
+        "typescript/site/app/ecosystem/partners-data/save-forever/metadata.json"
       ],
-      "summary": "Adds 24K Labs to the x402 ecosystem.",
+      "summary": "Adds **Save Forever** to the x402 ecosystem.",
       "reasons": [
         "public ecosystem listing",
-        "trust or risk claims"
+        "agent-discoverable surface"
       ],
-      "priorityScore": 50,
+      "priorityScore": 44,
       "priority": "review"
     },
     {
@@ -2457,7 +2421,7 @@
       "state": "open",
       "createdAt": "2026-05-25T12:42:45Z",
       "updatedAt": "2026-05-25T23:13:41Z",
-      "ageHours": 175,
+      "ageHours": 198,
       "author": "dkta0",
       "authorUrl": "https://github.com/dkta0",
       "category": "ecosystem listing",
@@ -2489,7 +2453,7 @@
       "state": "open",
       "createdAt": "2026-05-04T01:35:45Z",
       "updatedAt": "2026-05-04T01:35:55Z",
-      "ageHours": 690,
+      "ageHours": 713,
       "author": "Kaizor7",
       "authorUrl": "https://github.com/Kaizor7",
       "category": "ecosystem listing",
@@ -2520,13 +2484,49 @@
       "priority": "review"
     },
     {
+      "number": 188,
+      "title": "feat(ecosystem): add 24K Labs — AI services via x402",
+      "url": "https://github.com/coinbase/x402/pull/188",
+      "state": "closed",
+      "createdAt": "2026-05-30T19:55:40Z",
+      "updatedAt": "2026-05-30T20:04:31Z",
+      "ageHours": 71,
+      "author": "Haustorium12",
+      "authorUrl": "https://github.com/Haustorium12",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://24klabs.ai",
+        "https://api.24klabs.ai",
+        "https://24klabs.ai/developers/quickstart"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/24klabs/metadata.json",
+        "typescript/site/public/logos/24klabs.svg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/24klabs/metadata.json"
+      ],
+      "summary": "Adds 24K Labs to the x402 ecosystem.",
+      "reasons": [
+        "public ecosystem listing",
+        "trust or risk claims"
+      ],
+      "priorityScore": 42,
+      "priority": "review"
+    },
+    {
       "number": 136,
       "title": "specs/extensions: add attestseal-trust-attestation",
       "url": "https://github.com/coinbase/x402/pull/136",
       "state": "open",
       "createdAt": "2026-05-02T08:31:52Z",
       "updatedAt": "2026-05-02T14:03:55Z",
-      "ageHours": 731,
+      "ageHours": 754,
       "author": "bonedoc911",
       "authorUrl": "https://github.com/bonedoc911",
       "category": "docs / discovery",
@@ -2557,7 +2557,7 @@
       "state": "open",
       "createdAt": "2026-05-27T13:55:58Z",
       "updatedAt": "2026-05-28T00:59:47Z",
-      "ageHours": 126,
+      "ageHours": 149,
       "author": "kinance",
       "authorUrl": "https://github.com/kinance",
       "category": "ecosystem listing",
@@ -2594,7 +2594,7 @@
       "state": "open",
       "createdAt": "2026-05-20T05:01:30Z",
       "updatedAt": "2026-05-26T11:56:23Z",
-      "ageHours": 303,
+      "ageHours": 326,
       "author": "0rkz",
       "authorUrl": "https://github.com/0rkz",
       "category": "ecosystem listing",
@@ -2627,7 +2627,7 @@
       "state": "open",
       "createdAt": "2026-05-03T21:50:55Z",
       "updatedAt": "2026-05-03T21:51:03Z",
-      "ageHours": 694,
+      "ageHours": 717,
       "author": "kite-builds",
       "authorUrl": "https://github.com/kite-builds",
       "category": "ecosystem listing",
@@ -2665,7 +2665,7 @@
       "state": "open",
       "createdAt": "2026-05-04T18:23:02Z",
       "updatedAt": "2026-05-20T21:16:17Z",
-      "ageHours": 674,
+      "ageHours": 697,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2695,7 +2695,7 @@
       "state": "closed",
       "createdAt": "2026-05-19T03:00:21Z",
       "updatedAt": "2026-05-19T03:03:08Z",
-      "ageHours": 329,
+      "ageHours": 352,
       "author": "ethanoroshiba",
       "authorUrl": "https://github.com/ethanoroshiba",
       "category": "docs / discovery",
@@ -2821,7 +2821,7 @@
       "state": "open",
       "createdAt": "2026-05-04T00:36:38Z",
       "updatedAt": "2026-05-04T00:36:49Z",
-      "ageHours": 691,
+      "ageHours": 714,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2849,7 +2849,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:11:54Z",
       "updatedAt": "2026-05-20T04:13:54Z",
-      "ageHours": 306,
+      "ageHours": 329,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "ecosystem listing",
@@ -2881,7 +2881,7 @@
       "state": "open",
       "createdAt": "2026-05-04T22:24:40Z",
       "updatedAt": "2026-05-20T21:16:13Z",
-      "ageHours": 670,
+      "ageHours": 693,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -2907,7 +2907,7 @@
       "state": "closed",
       "createdAt": "2026-05-17T01:45:46Z",
       "updatedAt": "2026-05-17T01:56:04Z",
-      "ageHours": 378,
+      "ageHours": 401,
       "author": "feldmannn",
       "authorUrl": "https://github.com/feldmannn",
       "category": "protocol implementation",
@@ -2932,7 +2932,7 @@
       "state": "closed",
       "createdAt": "2026-05-06T19:50:13Z",
       "updatedAt": "2026-05-06T21:08:18Z",
-      "ageHours": 624,
+      "ageHours": 647,
       "author": "aayushijain21",
       "authorUrl": "https://github.com/aayushijain21",
       "category": "protocol implementation",
@@ -2983,7 +2983,7 @@
       "state": "open",
       "createdAt": "2026-05-04T04:21:19Z",
       "updatedAt": "2026-05-04T04:21:29Z",
-      "ageHours": 688,
+      "ageHours": 711,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -3008,7 +3008,7 @@
       "state": "closed",
       "createdAt": "2026-05-15T16:41:08Z",
       "updatedAt": "2026-05-15T16:53:58Z",
-      "ageHours": 411,
+      "ageHours": 434,
       "author": "EfeDurmaz16",
       "authorUrl": "https://github.com/EfeDurmaz16",
       "category": "docs / discovery",
@@ -3133,7 +3133,7 @@
       "state": "closed",
       "createdAt": "2026-05-15T16:39:42Z",
       "updatedAt": "2026-05-15T16:53:56Z",
-      "ageHours": 411,
+      "ageHours": 434,
       "author": "EfeDurmaz16",
       "authorUrl": "https://github.com/EfeDurmaz16",
       "category": "docs / discovery",
@@ -3258,7 +3258,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T13:12:46Z",
       "updatedAt": "2026-05-15T14:55:01Z",
-      "ageHours": 439,
+      "ageHours": 462,
       "author": "TRtomasz",
       "authorUrl": "https://github.com/TRtomasz",
       "category": "ecosystem listing",
@@ -3291,7 +3291,7 @@
       "state": "open",
       "createdAt": "2026-05-05T12:17:33Z",
       "updatedAt": "2026-05-05T19:21:09Z",
-      "ageHours": 656,
+      "ageHours": 679,
       "author": "johnyi12",
       "authorUrl": "https://github.com/johnyi12",
       "category": "ecosystem listing",
@@ -3323,7 +3323,7 @@
       "state": "closed",
       "createdAt": "2026-05-17T01:45:48Z",
       "updatedAt": "2026-05-17T02:12:00Z",
-      "ageHours": 378,
+      "ageHours": 401,
       "author": "feldmannn",
       "authorUrl": "https://github.com/feldmannn",
       "category": "protocol implementation",
@@ -3350,7 +3350,7 @@
       "state": "open",
       "createdAt": "2026-05-04T02:45:28Z",
       "updatedAt": "2026-05-04T02:45:38Z",
-      "ageHours": 689,
+      "ageHours": 712,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -3378,7 +3378,7 @@
       "state": "open",
       "createdAt": "2026-05-20T14:37:46Z",
       "updatedAt": "2026-05-20T14:39:12Z",
-      "ageHours": 293,
+      "ageHours": 316,
       "author": "tdnupe3",
       "authorUrl": "https://github.com/tdnupe3",
       "category": "docs / discovery",
@@ -3407,7 +3407,7 @@
       "state": "open",
       "createdAt": "2026-05-04T16:21:55Z",
       "updatedAt": "2026-05-05T18:19:37Z",
-      "ageHours": 676,
+      "ageHours": 699,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "x402 repo activity",
@@ -3438,7 +3438,7 @@
       "state": "open",
       "createdAt": "2026-05-04T12:26:54Z",
       "updatedAt": "2026-05-04T12:27:04Z",
-      "ageHours": 680,
+      "ageHours": 703,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -3464,7 +3464,7 @@
       "state": "open",
       "createdAt": "2026-05-03T20:35:18Z",
       "updatedAt": "2026-05-03T20:35:29Z",
-      "ageHours": 695,
+      "ageHours": 718,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "protocol implementation",
@@ -3488,7 +3488,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:10:46Z",
       "updatedAt": "2026-05-20T02:10:56Z",
-      "ageHours": 306,
+      "ageHours": 329,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "docs / discovery",
@@ -3522,7 +3522,7 @@
       "state": "closed",
       "createdAt": "2026-05-14T04:03:07Z",
       "updatedAt": "2026-05-15T08:26:14Z",
-      "ageHours": 448,
+      "ageHours": 471,
       "author": "nolnol3",
       "authorUrl": "https://github.com/nolnol3",
       "category": "x402 repo activity",
@@ -3562,7 +3562,7 @@
       "state": "open",
       "createdAt": "2026-05-04T17:40:51Z",
       "updatedAt": "2026-05-06T16:51:13Z",
-      "ageHours": 674,
+      "ageHours": 697,
       "author": "aayushijain21",
       "authorUrl": "https://github.com/aayushijain21",
       "category": "docs / discovery",
@@ -3689,7 +3689,7 @@
       "state": "open",
       "createdAt": "2026-05-02T06:50:31Z",
       "updatedAt": "2026-05-02T06:50:40Z",
-      "ageHours": 733,
+      "ageHours": 756,
       "author": "hilarl",
       "authorUrl": "https://github.com/hilarl",
       "category": "docs / discovery",
@@ -3716,7 +3716,7 @@
       "state": "open",
       "createdAt": "2026-06-01T04:00:55Z",
       "updatedAt": "2026-06-01T04:01:00Z",
-      "ageHours": 16,
+      "ageHours": 39,
       "author": "abhicris",
       "authorUrl": "https://github.com/abhicris",
       "category": "docs / discovery",
@@ -3739,7 +3739,7 @@
       "state": "open",
       "createdAt": "2026-05-04T08:19:55Z",
       "updatedAt": "2026-05-04T08:20:06Z",
-      "ageHours": 684,
+      "ageHours": 707,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "docs / discovery",
@@ -3766,7 +3766,7 @@
       "state": "open",
       "createdAt": "2026-05-19T17:19:01Z",
       "updatedAt": "2026-05-19T17:19:08Z",
-      "ageHours": 315,
+      "ageHours": 338,
       "author": "scosemicolon",
       "authorUrl": "https://github.com/scosemicolon",
       "category": "docs / discovery",
@@ -3789,7 +3789,7 @@
       "state": "closed",
       "createdAt": "2026-05-17T01:45:44Z",
       "updatedAt": "2026-05-17T01:56:03Z",
-      "ageHours": 378,
+      "ageHours": 401,
       "author": "feldmannn",
       "authorUrl": "https://github.com/feldmannn",
       "category": "example app",
@@ -3815,7 +3815,7 @@
       "state": "open",
       "createdAt": "2026-05-03T22:44:19Z",
       "updatedAt": "2026-05-03T22:44:29Z",
-      "ageHours": 693,
+      "ageHours": 716,
       "author": "0xAxiom",
       "authorUrl": "https://github.com/0xAxiom",
       "category": "x402 repo activity",
