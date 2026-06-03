@@ -1,15 +1,15 @@
 {
-  "runDate": "2026-06-02",
-  "generatedAt": "2026-05-21T14:51:11Z",
+  "runDate": "2026-06-03",
+  "generatedAt": "2026-06-03T13:08:53Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 74,
-  "observedProviders": 74,
+  "providerCount": 75,
+  "observedProviders": 75,
   "pricedCount": 59,
   "meteredCount": 59,
-  "freeTierCount": 12,
+  "freeTierCount": 13,
   "categoryCounts": {
     "messaging": 4,
-    "finance": 4,
+    "finance": 5,
     "shopping": 3,
     "ai_ml": 33,
     "cloud": 1,
@@ -33,15 +33,15 @@
       "count": 6
     },
     {
+      "category": "finance",
+      "count": 5
+    },
+    {
       "category": "search",
       "count": 5
     },
     {
       "category": "messaging",
-      "count": 4
-    },
-    {
-      "category": "finance",
       "count": 4
     },
     {
@@ -600,6 +600,25 @@
       ]
     },
     {
+      "fqn": "birdeye/data",
+      "title": "Birdeye Data",
+      "category": "finance",
+      "description": "Pay-per-request DeFi market data, token analytics, and wallet intelligence across Solana and 15+ chains. Covers token prices, OHLCV charts, holder distribution, smart money flows, meme signals, trade history, and security scores without API keys.",
+      "useCase": "Use for fetching token prices, OHLCV charts, holder distribution, top trader rankings, smart money flows, token security assessments, meme token signals, new token listings, and trade history on Solana and multi-chain DeFi.",
+      "serviceUrl": "https://public-api.birdeye.so",
+      "endpointCount": 47,
+      "hasMetering": false,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 0,
+      "sha": "ef9d6da67a5798ec",
+      "priorityScore": 18,
+      "priorityLevel": "watch",
+      "reasons": [
+        "financial data or wallet context"
+      ]
+    },
+    {
       "fqn": "merit-systems/stablesocial/social-data",
       "title": "StableSocial",
       "category": "media",
@@ -639,25 +658,6 @@
         "message-sending workflow",
         "personal or business-contact data",
         "untrusted web-data input",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "solana-foundation/alibaba/facebody",
-      "title": "Alibaba Cloud Facebody",
-      "category": "ai_ml",
-      "description": "Run image and video analysis or generation with Alibaba Cloud Facebody, including face Information Desensitization, human Pose Keypoints, and face Comparison.",
-      "useCase": "Use for face Information Desensitization, human Pose Keypoints, face Comparison, and related image or video generation, enhancement, detection, segmentation, and visual analysis.",
-      "serviceUrl": "https://facebody.alibaba.gateway-402.com",
-      "endpointCount": 26,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 0.001,
-      "sha": "a87b41df1284158c",
-      "priorityScore": 32,
-      "priorityLevel": "watch",
-      "reasons": [
         "metered without free tier"
       ]
     }
