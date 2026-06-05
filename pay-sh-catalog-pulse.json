@@ -1,17 +1,17 @@
 {
-  "runDate": "2026-06-04",
-  "generatedAt": "2026-06-03T13:08:53Z",
+  "runDate": "2026-06-05",
+  "generatedAt": "2026-06-05T01:54:33Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 75,
-  "observedProviders": 75,
-  "pricedCount": 59,
-  "meteredCount": 59,
-  "freeTierCount": 13,
+  "providerCount": 76,
+  "observedProviders": 76,
+  "pricedCount": 60,
+  "meteredCount": 60,
+  "freeTierCount": 14,
   "categoryCounts": {
     "messaging": 4,
     "finance": 5,
     "shopping": 3,
-    "ai_ml": 33,
+    "ai_ml": 34,
     "cloud": 1,
     "data": 6,
     "media": 3,
@@ -26,7 +26,7 @@
   "topCategories": [
     {
       "category": "ai_ml",
-      "count": 33
+      "count": 34
     },
     {
       "category": "data",
@@ -123,6 +123,27 @@
         "message-sending workflow",
         "domain or DNS workflow",
         "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "venice/ai",
+      "title": "Venice.ai — Private AI Inference",
+      "category": "ai_ml",
+      "description": "OpenAI-compatible inference API for text, image, audio, and video generation with x402 wallet access. No API key required — authenticate with an EVM or Solana wallet via SIWX and pay with USDC credits.",
+      "useCase": "Use for chat completions, image generation and editing, audio synthesis and transcription, video generation, embeddings, web scraping, text parsing, semantic search, and blockchain RPC proxying — all payable with USDC via x402 without an account.",
+      "serviceUrl": "https://api.venice.ai/api/v1",
+      "endpointCount": 43,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 5,
+      "maxPriceUsd": 10,
+      "sha": "3c45aa44fdceee3f",
+      "priorityScore": 54,
+      "priorityLevel": "medium",
+      "reasons": [
+        "meaningful per-call spend",
+        "financial data or wallet context",
+        "untrusted web-data input"
       ]
     },
     {
@@ -388,6 +409,27 @@
       ]
     },
     {
+      "fqn": "venice/ai",
+      "title": "Venice.ai — Private AI Inference",
+      "category": "ai_ml",
+      "description": "OpenAI-compatible inference API for text, image, audio, and video generation with x402 wallet access. No API key required — authenticate with an EVM or Solana wallet via SIWX and pay with USDC credits.",
+      "useCase": "Use for chat completions, image generation and editing, audio synthesis and transcription, video generation, embeddings, web scraping, text parsing, semantic search, and blockchain RPC proxying — all payable with USDC via x402 without an account.",
+      "serviceUrl": "https://api.venice.ai/api/v1",
+      "endpointCount": 43,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 5,
+      "maxPriceUsd": 10,
+      "sha": "3c45aa44fdceee3f",
+      "priorityScore": 54,
+      "priorityLevel": "medium",
+      "reasons": [
+        "meaningful per-call spend",
+        "financial data or wallet context",
+        "untrusted web-data input"
+      ]
+    },
+    {
       "fqn": "merit-systems/stableemail/email",
       "title": "StableEmail",
       "category": "messaging",
@@ -467,27 +509,6 @@
       "reasons": [
         "message-sending workflow",
         "personal or business-contact data",
-        "untrusted web-data input",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "solana-foundation/google/videointelligence",
-      "title": "Cloud Video Intelligence API",
-      "category": "ai_ml",
-      "description": "Analyze video content asynchronously with Google Video Intelligence. Detect labels, shots, explicit content, speech, on-screen text, logos, object tracks, scene changes, and searchable metadata for uploaded or cloud-hosted videos.",
-      "useCase": "Use for video indexing, content moderation, scene and shot detection, object tracking, logo recognition, OCR on video frames, speech transcription, media search, compliance review, archive tagging, and extracting structured video metadata.",
-      "serviceUrl": "https://videointelligence.google.gateway-402.com",
-      "endpointCount": 1,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.1,
-      "maxPriceUsd": 0.1,
-      "sha": "d2bf158df9b91225",
-      "priorityScore": 32,
-      "priorityLevel": "watch",
-      "reasons": [
-        "voice or calling workflow",
         "untrusted web-data input",
         "metered without free tier"
       ]
@@ -619,6 +640,27 @@
       ]
     },
     {
+      "fqn": "venice/ai",
+      "title": "Venice.ai — Private AI Inference",
+      "category": "ai_ml",
+      "description": "OpenAI-compatible inference API for text, image, audio, and video generation with x402 wallet access. No API key required — authenticate with an EVM or Solana wallet via SIWX and pay with USDC credits.",
+      "useCase": "Use for chat completions, image generation and editing, audio synthesis and transcription, video generation, embeddings, web scraping, text parsing, semantic search, and blockchain RPC proxying — all payable with USDC via x402 without an account.",
+      "serviceUrl": "https://api.venice.ai/api/v1",
+      "endpointCount": 43,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 5,
+      "maxPriceUsd": 10,
+      "sha": "3c45aa44fdceee3f",
+      "priorityScore": 54,
+      "priorityLevel": "medium",
+      "reasons": [
+        "meaningful per-call spend",
+        "financial data or wallet context",
+        "untrusted web-data input"
+      ]
+    },
+    {
       "fqn": "merit-systems/stablesocial/social-data",
       "title": "StableSocial",
       "category": "media",
@@ -634,28 +676,6 @@
       "priorityScore": 44,
       "priorityLevel": "medium",
       "reasons": [
-        "personal or business-contact data",
-        "untrusted web-data input",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "merit-systems/stableenrich/enrichment",
-      "title": "StableEnrich",
-      "category": "data",
-      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
-      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
-      "serviceUrl": "https://stableenrich.dev",
-      "endpointCount": 34,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.002,
-      "maxPriceUsd": 0.44,
-      "sha": "431a9d9548e2c8b6",
-      "priorityScore": 50,
-      "priorityLevel": "medium",
-      "reasons": [
-        "message-sending workflow",
         "personal or business-contact data",
         "untrusted web-data input",
         "metered without free tier"

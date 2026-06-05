@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay.sh Catalog Pulse",
         "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
-        "dateModified": "2026-06-04",
+        "dateModified": "2026-06-05",
         "isBasedOn": "https://pay.sh/api/catalog",
         "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
         "publisher": {
@@ -57,12 +57,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-sh-catalog-pulse</strong>
-        <em>2026-06-03T13:08:53Z</em>
+        <em>2026-06-05T01:54:33Z</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay.sh catalog pulse / 2026-06-04</p>
+          <p class="console-kicker">pay.sh catalog pulse / 2026-06-05</p>
           <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
           <p class="console-subtitle">
             Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
@@ -77,15 +77,15 @@
           <dl class="console-ledger">
             <div>
               <dt>providers</dt>
-              <dd>75</dd>
+              <dd>76</dd>
             </div>
             <div>
               <dt>metered</dt>
-              <dd>59</dd>
+              <dd>60</dd>
             </div>
             <div>
               <dt>free tier</dt>
-              <dd>13</dd>
+              <dd>14</dd>
             </div>
           </dl>
         </div>
@@ -93,10 +93,10 @@
         <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
           <div class="terminal-topline">catalog pulse</div>
           <pre><code>$ fetch https://pay.sh/api/catalog
-providers: 75
-priced: 59
-metered: 59
-priority: 12
+providers: 76
+priced: 60
+metered: 60
+priority: 13
 checks: caps, receipts, metadata
 output: pay-sh-catalog-pulse.json</code></pre>
         </aside>
@@ -151,6 +151,19 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <a href="https://stabledomains.dev" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
+            <p class="card-command">medium / 54</p>
+            <h3>Venice.ai — Private AI Inference</h3>
+            <p>OpenAI-compatible inference API for text, image, audio, and video generation with x402 wallet access. No API key required — authenticate with an EVM or Solana wallet via SIWX and pay with USDC credits.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>ai_ml</dd></div>
+              <div><dt>endpoints</dt><dd>43</dd></div>
+              <div><dt>price</dt><dd>$5-$10</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
+            <a href="https://api.venice.ai/api/v1" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
             <p class="card-command">medium / 50</p>
             <h3>StableEnrich</h3>
             <p>Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.</p>
@@ -202,19 +215,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <ul class="compact-list"><li>wide endpoint surface</li><li>metered without free tier</li></ul>
             <a href="https://ocr-api.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
-<article>
-            <p class="card-command">medium / 44</p>
-            <h3>StableSocial</h3>
-            <p>Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>media</dd></div>
-              <div><dt>endpoints</dt><dd>36</dd></div>
-              <div><dt>price</dt><dd>$0.06</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>personal or business-contact data</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
-            <a href="https://stablesocial.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
         </div>
       </section>
 
@@ -232,7 +232,7 @@ output: pay-sh-catalog-pulse.json</code></pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td>ai_ml</td><td>33</td></tr><tr><td>data</td><td>6</td></tr><tr><td>finance</td><td>5</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>security</td><td>4</td></tr>
+              <tr><td>ai_ml</td><td>34</td></tr><tr><td>data</td><td>6</td></tr><tr><td>finance</td><td>5</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>security</td><td>4</td></tr>
             </tbody>
           </table>
         </div>
@@ -284,17 +284,17 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
-            <p class="card-command">medium / 38</p>
-            <h3>StableEmail</h3>
-            <p>Send email, buy dedicated inboxes, manage custom subdomains, and retrieve inbound messages through per-request email APIs. Supports shared relay sending, subdomain sender identities, forwarding inboxes, message storage, and attachment access.</p>
+            <p class="card-command">medium / 54</p>
+            <h3>Venice.ai — Private AI Inference</h3>
+            <p>OpenAI-compatible inference API for text, image, audio, and video generation with x402 wallet access. No API key required — authenticate with an EVM or Solana wallet via SIWX and pay with USDC credits.</p>
             <dl class="mini-ledger">
-              <div><dt>category</dt><dd>messaging</dd></div>
-              <div><dt>endpoints</dt><dd>13</dd></div>
-              <div><dt>price</dt><dd>$0.001-$8</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
+              <div><dt>category</dt><dd>ai_ml</dd></div>
+              <div><dt>endpoints</dt><dd>43</dd></div>
+              <div><dt>price</dt><dd>$5-$10</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
             </dl>
-            <ul class="compact-list"><li>message-sending workflow</li><li>domain or DNS workflow</li><li>metered without free tier</li></ul>
-            <a href="https://stableemail.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
+            <a href="https://api.venice.ai/api/v1" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
