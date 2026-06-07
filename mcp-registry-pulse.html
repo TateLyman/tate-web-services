@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-06-06",
+        "dateModified": "2026-06-07",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-06-06</em>
+        <em>2026-06-07</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-06-06</dd>
+              <dd>2026-06-07</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>120</dd>
+              <dd>119</dd>
             </div>
           </dl>
         </div>
@@ -98,7 +98,7 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   120
+latest servers:   119
 github repos:     66
 readme sampled:   46
 output:           mcp-registry-pulse.html
@@ -114,7 +114,7 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>120</strong>
+            <strong>119</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -124,12 +124,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>89 (74%)</strong>
+            <strong>89 (75%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>64 (53%)</strong>
+            <strong>61 (51%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -139,7 +139,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>102 (85%)</strong>
+            <strong>101 (85%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -197,21 +197,21 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>58 / 120 - harder to understand quickly</span>
+              <span>57 / 119 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-50"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>38 / 120 - namespace carries the listing</span>
+              <span>38 / 119 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>95 / 120 - hosted flow must explain trust and auth clearly</span>
+              <span>94 / 119 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
@@ -286,6 +286,19 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ac.tandem/docs-mcp remote mcp server for tandem docs, install guides, sdks, workflows, and agent setup help. frumu-ai/tandem remote add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
+            <p class="card-command">score 48/100 · remote</p>
+            <h3>ac.tandem/docs-mcp</h3>
+            <p>Remote MCP server for Tandem docs, install guides, SDKs, workflows, and agent setup help.</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://tandem.ac/docs-mcp" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/frumu-ai/tandem" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aliengiraffe/spotdb ephemeral data sandbox for ai workflows with guardrails and security aliengiraffe/spotdb package stdio stdio command boundary local process secrets credentials tokens headers add a human-readable title expand the registry description add smoke-test or tool-list proof explain stdio command boundary add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
             <p class="card-command">score 48/100 · package · stdio</p>
             <h3>ai.aliengiraffe/spotdb</h3>
@@ -309,19 +322,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ac.tandem/docs-mcp remote mcp server for tandem docs, install guides, sdks, workflows, and agent setup help. frumu-ai/tandem remote add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add copyable mcpservers config reference server.json metadata alignment">
-            <p class="card-command">score 53/100 · remote</p>
-            <h3>ac.tandem/docs-mcp</h3>
-            <p>Remote MCP server for Tandem docs, install guides, SDKs, workflows, and agent setup help.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://tandem.ac/docs-mcp" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/frumu-ai/tandem" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
