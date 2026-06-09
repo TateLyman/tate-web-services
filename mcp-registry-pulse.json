@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-08",
+  "generatedAt": "2026-06-09",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 119,
-  "githubReposDetected": 66,
-  "readmesSampled": 46,
+  "latestServersAnalyzed": 120,
+  "githubReposDetected": 67,
+  "readmesSampled": 48,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 119,
-    "repos": 66,
-    "readableRepos": 46,
+    "latestTotal": 120,
+    "repos": 67,
+    "readableRepos": 48,
     "packageCount": 23,
-    "remoteCount": 101,
+    "remoteCount": 102,
     "packageOnly": 16,
-    "remoteOnly": 94,
+    "remoteOnly": 95,
     "both": 7,
-    "noInstallPath": 94,
-    "websiteVisible": 89,
+    "noInstallPath": 95,
+    "websiteVisible": 90,
     "missingTitle": 38,
     "shortDescription": 57,
     "recent45": 59,
-    "orgOwned": 39,
-    "issuesEnabled": 45,
+    "orgOwned": 40,
+    "issuesEnabled": 46,
     "archived": 0,
-    "mcpServers": 30,
-    "install": 23,
+    "mcpServers": 31,
+    "install": 25,
     "serverJson": 7,
-    "safety": 37,
+    "safety": 38,
     "stdioPackageCount": 21,
     "stdioPackageReadable": 14,
     "stdioBoundaryDocs": 9,
     "secretPackageConfig": 12,
-    "secretRemoteHeaders": 17,
-    "glama": 26,
-    "smoke": 13
+    "secretRemoteHeaders": 18,
+    "glama": 27,
+    "smoke": 14
   },
   "sampleServers": [
     {
@@ -220,6 +220,28 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.bowmark/bowmark",
+      "title": "Bowmark",
+      "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-06-09T07:11:09.344269Z",
+      "repo": "bowmark-ai/skill",
+      "websiteUrl": "https://bowmark.ai",
+      "primaryUrl": "https://bowmark.ai",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
       ]
     },
     {
@@ -420,28 +442,6 @@
       "repo": "la-rebelion/hapimcp",
       "websiteUrl": "https://run.mcp.com.ai",
       "primaryUrl": "https://run.mcp.com.ai",
-      "topGaps": [
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.com.mcp/openai-tools",
-      "title": "OpenAI Tools MCP Server",
-      "description": "Focused MCP server for OpenAI image/audio generation (v2.0.0). Wraps endpoints via HAPI CLI.",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-01-22T02:35:00.021804Z",
-      "repo": "la-rebelion/hapimcp",
-      "websiteUrl": "https://platform.openai.com/docs/api-reference",
-      "primaryUrl": "https://platform.openai.com/docs/api-reference",
       "topGaps": [
         "Clarify remote auth and trust boundary",
         "Add install or client command",
