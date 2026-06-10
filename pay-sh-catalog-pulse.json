@@ -1,15 +1,15 @@
 {
-  "runDate": "2026-06-09",
-  "generatedAt": "2026-06-05T01:54:33Z",
+  "runDate": "2026-06-10",
+  "generatedAt": "2026-06-10T15:43:50Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 76,
-  "observedProviders": 76,
-  "pricedCount": 60,
-  "meteredCount": 60,
+  "providerCount": 77,
+  "observedProviders": 77,
+  "pricedCount": 61,
+  "meteredCount": 61,
   "freeTierCount": 14,
   "categoryCounts": {
     "messaging": 4,
-    "finance": 5,
+    "finance": 6,
     "shopping": 3,
     "ai_ml": 34,
     "cloud": 1,
@@ -29,12 +29,12 @@
       "count": 34
     },
     {
-      "category": "data",
+      "category": "finance",
       "count": 6
     },
     {
-      "category": "finance",
-      "count": 5
+      "category": "data",
+      "count": 6
     },
     {
       "category": "search",
