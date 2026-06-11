@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-06-10",
+        "dateModified": "2026-06-11",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-06-10</em>
+        <em>2026-06-11</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-06-10</dd>
+              <dd>2026-06-11</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>123</dd>
+              <dd>126</dd>
             </div>
           </dl>
         </div>
@@ -98,9 +98,9 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   123
-github repos:     69
-readme sampled:   50
+latest servers:   126
+github repos:     71
+readme sampled:   51
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -114,32 +114,32 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>123</strong>
+            <strong>126</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>69 (56%)</strong>
+            <strong>71 (56%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>93 (76%)</strong>
+            <strong>95 (75%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>59 (48%)</strong>
+            <strong>62 (49%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>23 (19%)</strong>
+            <strong>24 (19%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>105 (85%)</strong>
+            <strong>107 (85%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -153,17 +153,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>21 (17%)</strong>
+            <strong>22 (17%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">stdio docs visible</p>
-            <strong>9 / 14</strong>
+            <strong>9 / 15</strong>
             <p>Readable STDIO package READMEs that mention the command or local-process boundary.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>12 (10%)</strong>
+            <strong>13 (10%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -197,63 +197,63 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>56 / 123 - harder to understand quickly</span>
+              <span>57 / 126 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-45"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>40 / 123 - namespace carries the listing</span>
+              <span>42 / 126 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-35"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>98 / 123 - hosted flow must explain trust and auth clearly</span>
+              <span>100 / 126 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>33 / 50 - among readable GitHub READMEs</span>
+              <span>33 / 51 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>27 / 50 - among readable GitHub READMEs</span>
+              <span>27 / 51 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>40 / 50 - among readable GitHub READMEs</span>
+              <span>41 / 51 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>STDIO package READMEs explain command boundary</strong>
-              <span>9 / 14 - among readable STDIO package repos</span>
+              <span>9 / 15 - among readable STDIO package repos</span>
             </div>
-            <i class="pulse-width-65"></i>
+            <i class="pulse-width-60"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>8 / 50 - among readable GitHub READMEs</span>
+              <span>8 / 51 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-15"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>15 / 50 - among readable GitHub READMEs</span>
+              <span>15 / 51 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
@@ -322,6 +322,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/filegraph/docconvert" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aient/mcp mcp-native ai sre: ask what's broken in production, get a reviewed github fix pr. haf/glimt remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary">
+            <p class="card-command">score 54/100 · remote</p>
+            <h3>ai.aient/mcp</h3>
+            <p>MCP-native AI SRE: ask what's broken in production, get a reviewed GitHub fix PR.</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://github.com/haf/glimt" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/haf/glimt" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -488,19 +501,6 @@ data:             mcp-registry-pulse.json</code></pre>
             </ul>
             <div class="pulse-sample-links">
               <a href="https://run.mcp.com.ai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/la-rebelion/hapimcp" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.com.mcp/lenny-rachitsky-podcast lenny rachitsky podcast transcripts mcp server mcp server for structured access to lenny rachitsky podcast transcripts. for content creators. la-rebelion/hapimcp remote clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
-            <p class="card-command">score 60/100 · remote</p>
-            <h3>Lenny Rachitsky Podcast Transcripts MCP Server</h3>
-            <p>MCP server for structured access to Lenny Rachitsky podcast transcripts. For content creators.</p>
-            <ul>
-              <li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li><li>Add copyable mcpServers config</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://mcp.com.ai" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/la-rebelion/hapimcp" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
