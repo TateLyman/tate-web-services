@@ -1,18 +1,20 @@
 {
-  "runDate": "2026-06-12",
-  "generatedAt": "2026-06-10T22:01:34Z",
+  "runDate": "2026-06-13",
+  "generatedAt": "2026-06-12T19:34:38Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 77,
-  "observedProviders": 77,
-  "pricedCount": 62,
-  "meteredCount": 62,
+  "providerCount": 72,
+  "observedProviders": 72,
+  "pricedCount": 53,
+  "meteredCount": 53,
   "freeTierCount": 13,
   "categoryCounts": {
     "messaging": 4,
-    "finance": 6,
-    "ai_ml": 34,
+    "finance": 7,
+    "ai_ml": 26,
+    "identity": 2,
+    "productivity": 1,
     "cloud": 1,
-    "data": 6,
+    "data": 7,
     "shopping": 3,
     "media": 3,
     "storage": 1,
@@ -21,20 +23,20 @@
     "compute": 1,
     "search": 5,
     "translation": 4,
-    "security": 4
+    "security": 2
   },
   "topCategories": [
     {
       "category": "ai_ml",
-      "count": 34
+      "count": 26
     },
     {
       "category": "finance",
-      "count": 6
+      "count": 7
     },
     {
       "category": "data",
-      "count": 6
+      "count": 7
     },
     {
       "category": "search",
@@ -53,8 +55,8 @@
       "count": 4
     },
     {
-      "category": "security",
-      "count": 4
+      "category": "shopping",
+      "count": 3
     }
   ],
   "reviewPriority": [
@@ -208,26 +210,6 @@
       "reasons": [
         "wide endpoint surface",
         "financial data or wallet context"
-      ]
-    },
-    {
-      "fqn": "solana-foundation/alibaba/ocr-api",
-      "title": "Alibaba Cloud OCR API",
-      "category": "ai_ml",
-      "description": "Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.",
-      "useCase": "Use for high-Precision Full-Text Recognition, air Travel Itinerary Recognition, unified OCR Recognition, and related document OCR, structured extraction, and image-to-text parsing.",
-      "serviceUrl": "https://ocr-api.alibaba.gateway-402.com",
-      "endpointCount": 75,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 0.001,
-      "sha": "cae946157324313c",
-      "priorityScore": 44,
-      "priorityLevel": "medium",
-      "reasons": [
-        "wide endpoint surface",
-        "metered without free tier"
       ]
     },
     {
@@ -558,26 +540,6 @@
       ]
     },
     {
-      "fqn": "solana-foundation/alibaba/ocr-api",
-      "title": "Alibaba Cloud OCR API",
-      "category": "ai_ml",
-      "description": "Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.",
-      "useCase": "Use for high-Precision Full-Text Recognition, air Travel Itinerary Recognition, unified OCR Recognition, and related document OCR, structured extraction, and image-to-text parsing.",
-      "serviceUrl": "https://ocr-api.alibaba.gateway-402.com",
-      "endpointCount": 75,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 0.001,
-      "sha": "cae946157324313c",
-      "priorityScore": 44,
-      "priorityLevel": "medium",
-      "reasons": [
-        "wide endpoint surface",
-        "metered without free tier"
-      ]
-    },
-    {
       "fqn": "nansen-ai/nansen-api",
       "title": "Nansen API",
       "category": "finance",
@@ -676,6 +638,28 @@
       "priorityScore": 44,
       "priorityLevel": "medium",
       "reasons": [
+        "personal or business-contact data",
+        "untrusted web-data input",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "merit-systems/stableenrich/enrichment",
+      "title": "StableEnrich",
+      "category": "data",
+      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
+      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
+      "serviceUrl": "https://stableenrich.dev",
+      "endpointCount": 34,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.002,
+      "maxPriceUsd": 0.44,
+      "sha": "431a9d9548e2c8b6",
+      "priorityScore": 50,
+      "priorityLevel": "medium",
+      "reasons": [
+        "message-sending workflow",
         "personal or business-contact data",
         "untrusted web-data input",
         "metered without free tier"

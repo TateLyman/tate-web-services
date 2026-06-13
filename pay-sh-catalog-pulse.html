@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay.sh Catalog Pulse",
         "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
-        "dateModified": "2026-06-12",
+        "dateModified": "2026-06-13",
         "isBasedOn": "https://pay.sh/api/catalog",
         "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
         "publisher": {
@@ -57,12 +57,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-sh-catalog-pulse</strong>
-        <em>2026-06-10T22:01:34Z</em>
+        <em>2026-06-12T19:34:38Z</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay.sh catalog pulse / 2026-06-12</p>
+          <p class="console-kicker">pay.sh catalog pulse / 2026-06-13</p>
           <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
           <p class="console-subtitle">
             Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
@@ -77,11 +77,11 @@
           <dl class="console-ledger">
             <div>
               <dt>providers</dt>
-              <dd>77</dd>
+              <dd>72</dd>
             </div>
             <div>
               <dt>metered</dt>
-              <dd>62</dd>
+              <dd>53</dd>
             </div>
             <div>
               <dt>free tier</dt>
@@ -93,10 +93,10 @@
         <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
           <div class="terminal-topline">catalog pulse</div>
           <pre><code>$ fetch https://pay.sh/api/catalog
-providers: 77
-priced: 62
-metered: 62
-priority: 13
+providers: 72
+priced: 53
+metered: 53
+priority: 12
 checks: caps, receipts, metadata
 output: pay-sh-catalog-pulse.json</code></pre>
         </aside>
@@ -204,16 +204,16 @@ output: pay-sh-catalog-pulse.json</code></pre>
           </article>
 <article>
             <p class="card-command">medium / 44</p>
-            <h3>Alibaba Cloud OCR API</h3>
-            <p>Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.</p>
+            <h3>StableSocial</h3>
+            <p>Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.</p>
             <dl class="mini-ledger">
-              <div><dt>category</dt><dd>ai_ml</dd></div>
-              <div><dt>endpoints</dt><dd>75</dd></div>
-              <div><dt>price</dt><dd>$0.001</dd></div>
+              <div><dt>category</dt><dd>media</dd></div>
+              <div><dt>endpoints</dt><dd>36</dd></div>
+              <div><dt>price</dt><dd>$0.06</dd></div>
               <div><dt>free tier</dt><dd>no</dd></div>
             </dl>
-            <ul class="compact-list"><li>wide endpoint surface</li><li>metered without free tier</li></ul>
-            <a href="https://ocr-api.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
+            <ul class="compact-list"><li>personal or business-contact data</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
+            <a href="https://stablesocial.dev" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
@@ -232,7 +232,7 @@ output: pay-sh-catalog-pulse.json</code></pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td>ai_ml</td><td>34</td></tr><tr><td>finance</td><td>6</td></tr><tr><td>data</td><td>6</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>security</td><td>4</td></tr>
+              <tr><td>ai_ml</td><td>26</td></tr><tr><td>finance</td><td>7</td></tr><tr><td>data</td><td>7</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>shopping</td><td>3</td></tr>
             </tbody>
           </table>
         </div>
@@ -332,19 +332,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <a href="https://stablecrypto.dev" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
-            <p class="card-command">medium / 44</p>
-            <h3>Alibaba Cloud OCR API</h3>
-            <p>Extract text and structured document data with Alibaba Cloud OCR API, including high-Precision Full-Text Recognition, air Travel Itinerary Recognition, and unified OCR Recognition, for OCR workflows.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>ai_ml</dd></div>
-              <div><dt>endpoints</dt><dd>75</dd></div>
-              <div><dt>price</dt><dd>$0.001</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>wide endpoint surface</li><li>metered without free tier</li></ul>
-            <a href="https://ocr-api.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
             <p class="card-command">watch / 24</p>
             <h3>Nansen API</h3>
             <p>On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.</p>
@@ -356,6 +343,19 @@ output: pay-sh-catalog-pulse.json</code></pre>
             </dl>
             <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li></ul>
             <a href="https://api.nansen.ai" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">high / 66</p>
+            <h3>AgentMail</h3>
+            <p>Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>51</dd></div>
+              <div><dt>price</dt><dd>$0-$10</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li><li>wide endpoint surface</li><li>message-sending workflow</li><li>personal or business-contact data</li></ul>
+            <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
