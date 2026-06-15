@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-06-15",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 133,
-  "githubReposDetected": 71,
-  "readmesSampled": 51,
+  "latestServersAnalyzed": 134,
+  "githubReposDetected": 72,
+  "readmesSampled": 52,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,24 +13,24 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 133,
-    "repos": 71,
-    "readableRepos": 51,
+    "latestTotal": 134,
+    "repos": 72,
+    "readableRepos": 52,
     "packageCount": 24,
-    "remoteCount": 114,
+    "remoteCount": 115,
     "packageOnly": 17,
-    "remoteOnly": 107,
+    "remoteOnly": 108,
     "both": 7,
-    "noInstallPath": 107,
-    "websiteVisible": 101,
-    "missingTitle": 46,
-    "shortDescription": 58,
-    "recent45": 65,
-    "orgOwned": 43,
-    "issuesEnabled": 49,
+    "noInstallPath": 108,
+    "websiteVisible": 102,
+    "missingTitle": 47,
+    "shortDescription": 59,
+    "recent45": 64,
+    "orgOwned": 44,
+    "issuesEnabled": 50,
     "archived": 0,
-    "mcpServers": 33,
-    "install": 27,
+    "mcpServers": 34,
+    "install": 28,
     "serverJson": 8,
     "safety": 41,
     "stdioPackageCount": 22,
@@ -38,7 +38,7 @@
     "stdioBoundaryDocs": 9,
     "secretPackageConfig": 13,
     "secretRemoteHeaders": 23,
-    "glama": 29,
+    "glama": 30,
     "smoke": 15
   },
   "sampleServers": [
@@ -130,6 +130,28 @@
         "Make README proof available",
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
+      "name": "ai.groundroute/web-search",
+      "title": "",
+      "description": "Web search for AI agents — one tool across 6 engines, routed to the cheapest + cached.",
+      "publicProofScore": 52,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-06-14T19:08:27.400818Z",
+      "repo": "PROJECT-B-26/groundroute-mcp",
+      "websiteUrl": "https://groundroute.ai/mcp",
+      "primaryUrl": "https://groundroute.ai/mcp",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes"
       ]
     },
     {
@@ -254,7 +276,7 @@
       "hasStdioPackage": false,
       "hasSecretPackageConfig": false,
       "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-11T01:34:58.594887Z",
+      "updatedAt": "2026-06-15T02:50:19.87016Z",
       "repo": "bowmark-ai/skill",
       "websiteUrl": "https://bowmark.ai",
       "primaryUrl": "https://bowmark.ai",
@@ -426,28 +448,6 @@
         "Add smoke-test or tool-list proof",
         "Explain STDIO command boundary",
         "Reference server.json metadata alignment"
-      ]
-    },
-    {
-      "name": "ai.com.mcp/contabo",
-      "title": "Contabo (VPS) MCP Server",
-      "description": "Contabo API (v1.0.0) as MCP tools for cloud provisioning, and management. Powered by HAPI MCP server",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-01-08T13:19:46.430479Z",
-      "repo": "la-rebelion/hapimcp",
-      "websiteUrl": "https://run.mcp.com.ai",
-      "primaryUrl": "https://run.mcp.com.ai",
-      "topGaps": [
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config",
-        "Refresh stale registry metadata"
       ]
     }
   ]
