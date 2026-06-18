@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-17",
+  "generatedAt": "2026-06-18",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 137,
-  "githubReposDetected": 74,
-  "readmesSampled": 54,
+  "latestServersAnalyzed": 141,
+  "githubReposDetected": 75,
+  "readmesSampled": 53,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,32 +13,32 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 137,
-    "repos": 74,
-    "readableRepos": 54,
-    "packageCount": 25,
-    "remoteCount": 117,
-    "packageOnly": 18,
-    "remoteOnly": 110,
+    "latestTotal": 141,
+    "repos": 75,
+    "readableRepos": 53,
+    "packageCount": 26,
+    "remoteCount": 120,
+    "packageOnly": 19,
+    "remoteOnly": 113,
     "both": 7,
-    "noInstallPath": 110,
-    "websiteVisible": 104,
-    "missingTitle": 48,
-    "shortDescription": 59,
-    "recent45": 68,
-    "orgOwned": 44,
+    "noInstallPath": 113,
+    "websiteVisible": 108,
+    "missingTitle": 49,
+    "shortDescription": 61,
+    "recent45": 72,
+    "orgOwned": 43,
     "issuesEnabled": 52,
     "archived": 0,
-    "mcpServers": 35,
-    "install": 30,
+    "mcpServers": 34,
+    "install": 29,
     "serverJson": 8,
-    "safety": 43,
-    "stdioPackageCount": 23,
+    "safety": 42,
+    "stdioPackageCount": 24,
     "stdioPackageReadable": 16,
     "stdioBoundaryDocs": 9,
     "secretPackageConfig": 14,
     "secretRemoteHeaders": 23,
-    "glama": 32,
+    "glama": 31,
     "smoke": 15
   },
   "sampleServers": [
@@ -199,28 +199,6 @@
       ]
     },
     {
-      "name": "ai.inflowpay.app/inflow",
-      "title": "",
-      "description": "MCP Server for agents to onboard, pay, and provision services autonomously with InFlow",
-      "publicProofScore": 55,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-04-01T08:15:17.136175Z",
-      "repo": "inflowpayai/inflow-mcp",
-      "websiteUrl": "https://app.inflowpay.ai",
-      "primaryUrl": "https://app.inflowpay.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "ai.dynsoft/sac",
       "title": "SaC — Software as Content",
       "description": "Give your AI agent the ability to respond with live, interactive apps that evolve.",
@@ -276,7 +254,7 @@
       "hasStdioPackage": false,
       "hasSecretPackageConfig": false,
       "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-17T07:11:12.942934Z",
+      "updatedAt": "2026-06-18T07:29:11.280676Z",
       "repo": "bowmark-ai/skill",
       "websiteUrl": "https://bowmark.ai",
       "primaryUrl": "https://bowmark.ai",
@@ -405,28 +383,6 @@
       ]
     },
     {
-      "name": "ai.cirra/salesforce-mcp",
-      "title": "Cirra AI Salesforce Admin MCP Server",
-      "description": "Comprehensive Salesforce administration and data management capabilities",
-      "publicProofScore": 59,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2025-12-13T01:53:10.483779Z",
-      "repo": "cirra-ai/mcp-server",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/cirra-ai/mcp-server",
-      "topGaps": [
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "ai.adeu/adeu",
       "title": "",
       "description": "Automated DOCX Redlining Engine",
@@ -448,6 +404,50 @@
         "Add smoke-test or tool-list proof",
         "Explain STDIO command boundary",
         "Reference server.json metadata alignment"
+      ]
+    },
+    {
+      "name": "ai.com.mcp/contabo",
+      "title": "Contabo (VPS) MCP Server",
+      "description": "Contabo API (v1.0.0) as MCP tools for cloud provisioning, and management. Powered by HAPI MCP server",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-01-08T13:19:46.430479Z",
+      "repo": "la-rebelion/hapimcp",
+      "websiteUrl": "https://run.mcp.com.ai",
+      "primaryUrl": "https://run.mcp.com.ai",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Add copyable mcpServers config",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.com.mcp/lenny-rachitsky-podcast",
+      "title": "Lenny Rachitsky Podcast Transcripts MCP Server",
+      "description": "MCP server for structured access to Lenny Rachitsky podcast transcripts. For content creators.",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-01-16T11:08:36.481149Z",
+      "repo": "la-rebelion/hapimcp",
+      "websiteUrl": "https://mcp.com.ai",
+      "primaryUrl": "https://mcp.com.ai",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Add copyable mcpServers config",
+        "Refresh stale registry metadata"
       ]
     }
   ]
