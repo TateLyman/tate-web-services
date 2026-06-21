@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-06-20",
+        "dateModified": "2026-06-21",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-06-20</em>
+        <em>2026-06-21</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-06-20</dd>
+              <dd>2026-06-21</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -99,8 +99,8 @@
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
 latest servers:   136
-github repos:     72
-readme sampled:   50
+github repos:     71
+readme sampled:   49
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -119,7 +119,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>72 (53%)</strong>
+            <strong>71 (52%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -134,12 +134,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>23 (17%)</strong>
+            <strong>22 (16%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>117 (86%)</strong>
+            <strong>118 (87%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -153,12 +153,12 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>21 (15%)</strong>
+            <strong>20 (15%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">stdio docs visible</p>
-            <strong>7 / 13</strong>
+            <strong>6 / 12</strong>
             <p>Readable STDIO package READMEs that mention the command or local-process boundary.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -204,56 +204,56 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>46 / 136 - namespace carries the listing</span>
+              <span>45 / 136 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-35"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>111 / 136 - hosted flow must explain trust and auth clearly</span>
+              <span>112 / 136 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>32 / 50 - among readable GitHub READMEs</span>
+              <span>31 / 49 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>27 / 50 - among readable GitHub READMEs</span>
+              <span>26 / 49 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>39 / 50 - among readable GitHub READMEs</span>
+              <span>38 / 49 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>STDIO package READMEs explain command boundary</strong>
-              <span>7 / 13 - among readable STDIO package repos</span>
+              <span>6 / 12 - among readable STDIO package repos</span>
             </div>
-            <i class="pulse-width-55"></i>
+            <i class="pulse-width-50"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>8 / 50 - among readable GitHub READMEs</span>
+              <span>8 / 49 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-15"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>13 / 50 - among readable GitHub READMEs</span>
+              <span>12 / 49 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
@@ -479,19 +479,6 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.buywhere/catalog-api buywhere product catalog search 1.5m+ products across 20+ platforms. compare prices, find deals, browse categories. buywhere/buywhere remote secrets credentials tokens headers clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof document permissions and safety notes refresh stale registry metadata reference server.json metadata alignment">
-            <p class="card-command">score 59/100 · remote</p>
-            <h3>BuyWhere Product Catalog</h3>
-            <p>Search 1.5M+ products across 20+ platforms. Compare prices, find deals, browse categories.</p>
-            <ul>
-              <li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li><li>Document permissions and safety notes</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://buywhere.ai/api-keys" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/BuyWhere/buywhere" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.adeu/adeu automated docx redlining engine dealfluence/adeu package stdio stdio command boundary local process add a human-readable title expand the registry description add smoke-test or tool-list proof explain stdio command boundary reference server.json metadata alignment">
             <p class="card-command">score 60/100 · package · stdio</p>
             <h3>ai.adeu/adeu</h3>
@@ -502,6 +489,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://adeu.ai" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/dealfluence/adeu" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.byteask/embedded-docs page-cited retrieval for embedded docs, datasheets, misra, cmsis, and rtos references. byteask/byteask-embedded-mcp remote add a human-readable title expand the registry description clarify remote auth and trust boundary add smoke-test or tool-list proof reference server.json metadata alignment">
+            <p class="card-command">score 60/100 · remote</p>
+            <h3>ai.byteask/embedded-docs</h3>
+            <p>Page-cited retrieval for embedded docs, datasheets, MISRA, CMSIS, and RTOS references.</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add smoke-test or tool-list proof</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://docs.byteask.ai/embedded" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/ByteAsk/ByteAsk-Embedded-MCP" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
