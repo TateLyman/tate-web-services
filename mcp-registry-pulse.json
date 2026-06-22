@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-21",
+  "generatedAt": "2026-06-22",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 136,
-  "githubReposDetected": 71,
-  "readmesSampled": 49,
+  "latestServersAnalyzed": 133,
+  "githubReposDetected": 69,
+  "readmesSampled": 48,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,32 +13,32 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 136,
-    "repos": 71,
-    "readableRepos": 49,
+    "latestTotal": 133,
+    "repos": 69,
+    "readableRepos": 48,
     "packageCount": 22,
-    "remoteCount": 118,
+    "remoteCount": 115,
     "packageOnly": 16,
-    "remoteOnly": 112,
+    "remoteOnly": 109,
     "both": 6,
-    "noInstallPath": 112,
-    "websiteVisible": 104,
-    "missingTitle": 45,
-    "shortDescription": 60,
-    "recent45": 67,
-    "orgOwned": 39,
-    "issuesEnabled": 48,
+    "noInstallPath": 109,
+    "websiteVisible": 103,
+    "missingTitle": 43,
+    "shortDescription": 58,
+    "recent45": 65,
+    "orgOwned": 38,
+    "issuesEnabled": 47,
     "archived": 0,
-    "mcpServers": 31,
-    "install": 26,
+    "mcpServers": 30,
+    "install": 25,
     "serverJson": 8,
     "safety": 38,
     "stdioPackageCount": 20,
     "stdioPackageReadable": 12,
     "stdioBoundaryDocs": 6,
     "secretPackageConfig": 13,
-    "secretRemoteHeaders": 24,
-    "glama": 28,
+    "secretRemoteHeaders": 23,
+    "glama": 27,
     "smoke": 12
   },
   "sampleServers": [
@@ -130,28 +130,6 @@
         "Make README proof available",
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.groundroute/web-search",
-      "title": "",
-      "description": "Web search for AI agents — one tool across 6 engines, routed to the cheapest + cached.",
-      "publicProofScore": 52,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-14T19:08:27.400818Z",
-      "repo": "PROJECT-B-26/groundroute-mcp",
-      "websiteUrl": "https://groundroute.ai/mcp",
-      "primaryUrl": "https://groundroute.ai/mcp",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes"
       ]
     },
     {
@@ -254,7 +232,7 @@
       "hasStdioPackage": false,
       "hasSecretPackageConfig": false,
       "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-21T08:53:05.655505Z",
+      "updatedAt": "2026-06-22T18:00:57.360025Z",
       "repo": "bowmark-ai/skill",
       "websiteUrl": "https://bowmark.ai",
       "primaryUrl": "https://bowmark.ai",
@@ -448,6 +426,28 @@
         "Clarify remote auth and trust boundary",
         "Add smoke-test or tool-list proof",
         "Reference server.json metadata alignment"
+      ]
+    },
+    {
+      "name": "ai.com.mcp/contabo",
+      "title": "Contabo (VPS) MCP Server",
+      "description": "Contabo API (v1.0.0) as MCP tools for cloud provisioning, and management. Powered by HAPI MCP server",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-01-08T13:19:46.430479Z",
+      "repo": "la-rebelion/hapimcp",
+      "websiteUrl": "https://run.mcp.com.ai",
+      "primaryUrl": "https://run.mcp.com.ai",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Add copyable mcpServers config",
+        "Refresh stale registry metadata"
       ]
     }
   ]
