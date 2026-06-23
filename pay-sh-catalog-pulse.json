@@ -1,21 +1,21 @@
 {
-  "runDate": "2026-06-22",
-  "generatedAt": "2026-06-18T19:28:06Z",
+  "runDate": "2026-06-23",
+  "generatedAt": "2026-06-23T15:22:36Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 72,
-  "observedProviders": 72,
+  "providerCount": 73,
+  "observedProviders": 73,
   "pricedCount": 53,
   "meteredCount": 53,
   "freeTierCount": 13,
   "categoryCounts": {
     "messaging": 4,
     "finance": 7,
+    "shopping": 4,
     "ai_ml": 26,
     "identity": 2,
     "productivity": 1,
     "cloud": 1,
     "data": 7,
-    "shopping": 3,
     "media": 3,
     "storage": 1,
     "devtools": 1,
@@ -47,16 +47,16 @@
       "count": 4
     },
     {
+      "category": "shopping",
+      "count": 4
+    },
+    {
       "category": "maps",
       "count": 4
     },
     {
       "category": "translation",
       "count": 4
-    },
-    {
-      "category": "shopping",
-      "count": 3
     }
   ],
   "reviewPriority": [
