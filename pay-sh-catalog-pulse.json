@@ -1,12 +1,12 @@
 {
-  "runDate": "2026-06-24",
-  "generatedAt": "2026-06-23T15:22:36Z",
+  "runDate": "2026-06-25",
+  "generatedAt": "2026-06-25T15:40:22Z",
   "source": "https://pay.sh/api/catalog",
   "providerCount": 73,
   "observedProviders": 73,
-  "pricedCount": 53,
-  "meteredCount": 53,
-  "freeTierCount": 13,
+  "pricedCount": 58,
+  "meteredCount": 58,
+  "freeTierCount": 15,
   "categoryCounts": {
     "messaging": 4,
     "finance": 7,
