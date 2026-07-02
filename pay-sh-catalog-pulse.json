@@ -1,27 +1,25 @@
 {
-  "runDate": "2026-07-01",
-  "generatedAt": "2026-06-25T15:40:22Z",
+  "runDate": "2026-07-02",
+  "generatedAt": "2026-07-01T17:36:27Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 73,
-  "observedProviders": 73,
-  "pricedCount": 58,
-  "meteredCount": 58,
-  "freeTierCount": 15,
+  "providerCount": 67,
+  "observedProviders": 67,
+  "pricedCount": 55,
+  "meteredCount": 55,
+  "freeTierCount": 16,
   "categoryCounts": {
-    "messaging": 4,
-    "finance": 7,
-    "shopping": 4,
+    "messaging": 2,
+    "finance": 6,
+    "shopping": 3,
     "ai_ml": 26,
     "identity": 2,
     "productivity": 1,
-    "cloud": 1,
+    "search": 6,
     "data": 7,
-    "media": 3,
-    "storage": 1,
     "devtools": 1,
+    "media": 2,
     "maps": 4,
     "compute": 1,
-    "search": 5,
     "translation": 4,
     "security": 2
   },
@@ -31,24 +29,16 @@
       "count": 26
     },
     {
-      "category": "finance",
-      "count": 7
-    },
-    {
       "category": "data",
       "count": 7
     },
     {
+      "category": "finance",
+      "count": 6
+    },
+    {
       "category": "search",
-      "count": 5
-    },
-    {
-      "category": "messaging",
-      "count": 4
-    },
-    {
-      "category": "shopping",
-      "count": 4
+      "count": 6
     },
     {
       "category": "maps",
@@ -57,6 +47,14 @@
     {
       "category": "translation",
       "count": 4
+    },
+    {
+      "category": "shopping",
+      "count": 3
+    },
+    {
+      "category": "messaging",
+      "count": 2
     }
   ],
   "reviewPriority": [
@@ -84,50 +82,6 @@
       ]
     },
     {
-      "fqn": "merit-systems/stablecrypto/market-data",
-      "title": "StableCrypto",
-      "category": "finance",
-      "description": "Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.",
-      "useCase": "Use for crypto prices, market charts, DeFi analytics, TVL and yield research, DEX pool data, wallet token balances, Ethereum transfers, contract metadata, gas estimates, bridge volume, stablecoin supply, treasury holdings, and blockchain monitoring.",
-      "serviceUrl": "https://stablecrypto.dev",
-      "endpointCount": 105,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.01,
-      "maxPriceUsd": 0.01,
-      "sha": "1dfeec1735ba1ad8",
-      "priorityScore": 56,
-      "priorityLevel": "medium",
-      "reasons": [
-        "wide endpoint surface",
-        "financial data or wallet context",
-        "untrusted web-data input",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "merit-systems/stabledomains/domains",
-      "title": "StableDomains",
-      "category": "cloud",
-      "description": "Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.",
-      "useCase": "Use for domain registration, renewing existing names, managing DNS records, buying agent-owned domains, setting A/AAAA/CNAME/MX/TXT records, launching websites, configuring branded email, and handling registrar workflows through micropayments.",
-      "serviceUrl": "https://stabledomains.dev",
-      "endpointCount": 3,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.1,
-      "maxPriceUsd": 1500,
-      "sha": "7b88fed42fdf135",
-      "priorityScore": 56,
-      "priorityLevel": "medium",
-      "reasons": [
-        "large per-call ceiling",
-        "message-sending workflow",
-        "domain or DNS workflow",
-        "metered without free tier"
-      ]
-    },
-    {
       "fqn": "venice/ai",
       "title": "Venice.ai — Private AI Inference",
       "category": "ai_ml",
@@ -146,50 +100,6 @@
         "meaningful per-call spend",
         "financial data or wallet context",
         "untrusted web-data input"
-      ]
-    },
-    {
-      "fqn": "merit-systems/stableenrich/enrichment",
-      "title": "StableEnrich",
-      "category": "data",
-      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
-      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
-      "serviceUrl": "https://stableenrich.dev",
-      "endpointCount": 34,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.002,
-      "maxPriceUsd": 0.44,
-      "sha": "431a9d9548e2c8b6",
-      "priorityScore": 50,
-      "priorityLevel": "medium",
-      "reasons": [
-        "message-sending workflow",
-        "personal or business-contact data",
-        "untrusted web-data input",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "merit-systems/stablephone/calls",
-      "title": "StablePhone",
-      "category": "messaging",
-      "description": "Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.",
-      "useCase": "Use for AI phone calls, outbound voice tasks, call automation, dedicated caller ID numbers, renewing phone number leases, checking iMessage or FaceTime availability, appointment calls, reminders, surveys, support outreach, and phone-based agent workflows.",
-      "serviceUrl": "https://stablephone.dev",
-      "endpointCount": 3,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.05,
-      "maxPriceUsd": 20,
-      "sha": "64e72fc855ba23db",
-      "priorityScore": 48,
-      "priorityLevel": "medium",
-      "reasons": [
-        "meaningful per-call spend",
-        "message-sending workflow",
-        "voice or calling workflow",
-        "metered without free tier"
       ]
     },
     {
@@ -213,23 +123,23 @@
       ]
     },
     {
-      "fqn": "merit-systems/stablesocial/social-data",
-      "title": "StableSocial",
-      "category": "media",
-      "description": "Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.",
-      "useCase": "Use for social profile lookup, post retrieval, comment analysis, follower and following lists, TikTok/Instagram/Facebook/Reddit research, engagement metrics, subreddit monitoring, social listening, creator intelligence, and content discovery.",
-      "serviceUrl": "https://stablesocial.dev",
-      "endpointCount": 36,
+      "fqn": "nansen-ai/nansen-api",
+      "title": "Nansen API",
+      "category": "finance",
+      "description": "On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.",
+      "useCase": "Use for smart money tracking, wallet profiling and PnL analysis, token holder and flow analytics, on-chain signal discovery, Nansen Score token rankings, perpetual and prediction market data, and token screening.",
+      "serviceUrl": "https://api.nansen.ai",
+      "endpointCount": 60,
       "hasMetering": true,
       "hasFreeTier": false,
-      "minPriceUsd": 0.06,
-      "maxPriceUsd": 0.06,
-      "sha": "924c58d33cfd5041",
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 7.5,
+      "sha": "7e76728d96d81624",
       "priorityScore": 44,
       "priorityLevel": "medium",
       "reasons": [
-        "personal or business-contact data",
-        "untrusted web-data input",
+        "wide endpoint surface",
+        "financial data or wallet context",
         "metered without free tier"
       ]
     },
@@ -280,27 +190,6 @@
       ]
     },
     {
-      "fqn": "merit-systems/stableemail/email",
-      "title": "StableEmail",
-      "category": "messaging",
-      "description": "Send email, buy dedicated inboxes, manage custom subdomains, and retrieve inbound messages through per-request email APIs. Supports shared relay sending, subdomain sender identities, forwarding inboxes, message storage, and attachment access.",
-      "useCase": "Use for sending outbound emails, creating receiving inboxes, reading inbound messages, managing custom email subdomains, agent email workflows, forwarding inboxes, reply handling, verification messages, customer outreach, and per-message email delivery.",
-      "serviceUrl": "https://stableemail.dev",
-      "endpointCount": 13,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 8,
-      "sha": "72274ea90c47ad45",
-      "priorityScore": 38,
-      "priorityLevel": "medium",
-      "reasons": [
-        "message-sending workflow",
-        "domain or DNS workflow",
-        "metered without free tier"
-      ]
-    },
-    {
       "fqn": "paysponge/rentcast",
       "title": "RentCast API",
       "category": "data",
@@ -323,50 +212,6 @@
     }
   ],
   "highestPrice": [
-    {
-      "fqn": "merit-systems/stabledomains/domains",
-      "title": "StableDomains",
-      "category": "cloud",
-      "description": "Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.",
-      "useCase": "Use for domain registration, renewing existing names, managing DNS records, buying agent-owned domains, setting A/AAAA/CNAME/MX/TXT records, launching websites, configuring branded email, and handling registrar workflows through micropayments.",
-      "serviceUrl": "https://stabledomains.dev",
-      "endpointCount": 3,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.1,
-      "maxPriceUsd": 1500,
-      "sha": "7b88fed42fdf135",
-      "priorityScore": 56,
-      "priorityLevel": "medium",
-      "reasons": [
-        "large per-call ceiling",
-        "message-sending workflow",
-        "domain or DNS workflow",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "merit-systems/stablephone/calls",
-      "title": "StablePhone",
-      "category": "messaging",
-      "description": "Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.",
-      "useCase": "Use for AI phone calls, outbound voice tasks, call automation, dedicated caller ID numbers, renewing phone number leases, checking iMessage or FaceTime availability, appointment calls, reminders, surveys, support outreach, and phone-based agent workflows.",
-      "serviceUrl": "https://stablephone.dev",
-      "endpointCount": 3,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.05,
-      "maxPriceUsd": 20,
-      "sha": "64e72fc855ba23db",
-      "priorityScore": 48,
-      "priorityLevel": "medium",
-      "reasons": [
-        "meaningful per-call spend",
-        "message-sending workflow",
-        "voice or calling workflow",
-        "metered without free tier"
-      ]
-    },
     {
       "fqn": "agentmail/email",
       "title": "AgentMail",
@@ -412,24 +257,43 @@
       ]
     },
     {
-      "fqn": "merit-systems/stableemail/email",
-      "title": "StableEmail",
-      "category": "messaging",
-      "description": "Send email, buy dedicated inboxes, manage custom subdomains, and retrieve inbound messages through per-request email APIs. Supports shared relay sending, subdomain sender identities, forwarding inboxes, message storage, and attachment access.",
-      "useCase": "Use for sending outbound emails, creating receiving inboxes, reading inbound messages, managing custom email subdomains, agent email workflows, forwarding inboxes, reply handling, verification messages, customer outreach, and per-message email delivery.",
-      "serviceUrl": "https://stableemail.dev",
-      "endpointCount": 13,
+      "fqn": "nansen-ai/nansen-api",
+      "title": "Nansen API",
+      "category": "finance",
+      "description": "On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.",
+      "useCase": "Use for smart money tracking, wallet profiling and PnL analysis, token holder and flow analytics, on-chain signal discovery, Nansen Score token rankings, perpetual and prediction market data, and token screening.",
+      "serviceUrl": "https://api.nansen.ai",
+      "endpointCount": 60,
       "hasMetering": true,
       "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 8,
-      "sha": "72274ea90c47ad45",
-      "priorityScore": 38,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 7.5,
+      "sha": "7e76728d96d81624",
+      "priorityScore": 44,
       "priorityLevel": "medium",
       "reasons": [
-        "message-sending workflow",
-        "domain or DNS workflow",
+        "wide endpoint surface",
+        "financial data or wallet context",
         "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "earnfi/agent-api",
+      "title": "EarnFi Agent API",
+      "category": "productivity",
+      "description": "EarnFi human execution API for autonomous agents. Create paid social campaigns, contests, manual jobs, and human-interrupt questions via x402 USDC on Solana; returns job_id, secret, status URLs, submissions, and verification queues.",
+      "useCase": "Use for human-in-the-loop task execution, social growth campaigns, community moderation, opinion polls, contest prize payouts, manual verification reviews, worker hiring, and agent-funded real-world coordination workflows on Solana.",
+      "serviceUrl": "https://app.earnfi.fun/api/ai-agent/v1",
+      "endpointCount": 21,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.165,
+      "maxPriceUsd": 5.5,
+      "sha": "71b01f4d199b9942",
+      "priorityScore": 26,
+      "priorityLevel": "watch",
+      "reasons": [
+        "personal or business-contact data"
       ]
     },
     {
@@ -474,23 +338,42 @@
       ]
     },
     {
-      "fqn": "merit-systems/stableenrich/enrichment",
-      "title": "StableEnrich",
-      "category": "data",
-      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
-      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
-      "serviceUrl": "https://stableenrich.dev",
-      "endpointCount": 34,
+      "fqn": "clustly/tipping",
+      "title": "Clustly",
+      "category": "finance",
+      "description": "Tip any X (Twitter) handle in Solana USDC via x402. Registered Clustly users receive directly to their linked Solana wallet; unregistered handles are escrowed in a Privy-custodied placeholder pocket the recipient can claim later via X OAuth.",
+      "useCase": "Use for paying any X handle in USDC without a wallet address, tipping content, micropayments, programmatic rewards, agent-to-agent payouts, and routing funds to recipients who do not yet have a crypto wallet.",
+      "serviceUrl": "https://tip.clustly.ai",
+      "endpointCount": 1,
       "hasMetering": true,
       "hasFreeTier": false,
-      "minPriceUsd": 0.002,
-      "maxPriceUsd": 0.44,
-      "sha": "431a9d9548e2c8b6",
-      "priorityScore": 50,
-      "priorityLevel": "medium",
+      "minPriceUsd": 0.168306,
+      "maxPriceUsd": 0.168306,
+      "sha": "404123d7f4b8f7bd",
+      "priorityScore": 26,
+      "priorityLevel": "watch",
       "reasons": [
-        "message-sending workflow",
-        "personal or business-contact data",
+        "financial data or wallet context",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/google/videointelligence",
+      "title": "Cloud Video Intelligence API",
+      "category": "ai_ml",
+      "description": "Analyze video content asynchronously with Google Video Intelligence. Detect labels, shots, explicit content, speech, on-screen text, logos, object tracks, scene changes, and searchable metadata for uploaded or cloud-hosted videos.",
+      "useCase": "Use for video indexing, content moderation, scene and shot detection, object tracking, logo recognition, OCR on video frames, speech transcription, media search, compliance review, archive tagging, and extracting structured video metadata.",
+      "serviceUrl": "https://videointelligence.google.gateway-402.com",
+      "endpointCount": 1,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.1,
+      "maxPriceUsd": 0.1,
+      "sha": "5d18be555e2bbcd6",
+      "priorityScore": 32,
+      "priorityLevel": "watch",
+      "reasons": [
+        "voice or calling workflow",
         "untrusted web-data input",
         "metered without free tier"
       ]
@@ -518,45 +401,24 @@
       ]
     },
     {
-      "fqn": "merit-systems/stablecrypto/market-data",
-      "title": "StableCrypto",
-      "category": "finance",
-      "description": "Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.",
-      "useCase": "Use for crypto prices, market charts, DeFi analytics, TVL and yield research, DEX pool data, wallet token balances, Ethereum transfers, contract metadata, gas estimates, bridge volume, stablecoin supply, treasury holdings, and blockchain monitoring.",
-      "serviceUrl": "https://stablecrypto.dev",
-      "endpointCount": 105,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.01,
-      "maxPriceUsd": 0.01,
-      "sha": "1dfeec1735ba1ad8",
-      "priorityScore": 56,
-      "priorityLevel": "medium",
-      "reasons": [
-        "wide endpoint surface",
-        "financial data or wallet context",
-        "untrusted web-data input",
-        "metered without free tier"
-      ]
-    },
-    {
       "fqn": "nansen-ai/nansen-api",
       "title": "Nansen API",
       "category": "finance",
       "description": "On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.",
       "useCase": "Use for smart money tracking, wallet profiling and PnL analysis, token holder and flow analytics, on-chain signal discovery, Nansen Score token rankings, perpetual and prediction market data, and token screening.",
       "serviceUrl": "https://api.nansen.ai",
-      "endpointCount": 56,
-      "hasMetering": false,
-      "hasFreeTier": true,
-      "minPriceUsd": 0,
-      "maxPriceUsd": 0,
-      "sha": "a4411d3814958d70",
-      "priorityScore": 24,
-      "priorityLevel": "watch",
+      "endpointCount": 60,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.01,
+      "maxPriceUsd": 7.5,
+      "sha": "7e76728d96d81624",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
       "reasons": [
         "wide endpoint surface",
-        "financial data or wallet context"
+        "financial data or wallet context",
+        "metered without free tier"
       ]
     },
     {
@@ -589,12 +451,12 @@
       "description": "Pay-per-request DeFi market data, token analytics, and wallet intelligence across Solana and 15+ chains. Covers token prices, OHLCV charts, holder distribution, smart money flows, meme signals, trade history, and security scores without API keys.",
       "useCase": "Use for fetching token prices, OHLCV charts, holder distribution, top trader rankings, smart money flows, token security assessments, meme token signals, new token listings, and trade history on Solana and multi-chain DeFi.",
       "serviceUrl": "https://public-api.birdeye.so",
-      "endpointCount": 47,
+      "endpointCount": 46,
       "hasMetering": false,
       "hasFreeTier": true,
       "minPriceUsd": 0,
       "maxPriceUsd": 0,
-      "sha": "ef9d6da67a5798ec",
+      "sha": "596260c3807ab53c",
       "priorityScore": 18,
       "priorityLevel": "watch",
       "reasons": [
@@ -623,46 +485,61 @@
       ]
     },
     {
-      "fqn": "merit-systems/stablesocial/social-data",
-      "title": "StableSocial",
-      "category": "media",
-      "description": "Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.",
-      "useCase": "Use for social profile lookup, post retrieval, comment analysis, follower and following lists, TikTok/Instagram/Facebook/Reddit research, engagement metrics, subreddit monitoring, social listening, creator intelligence, and content discovery.",
-      "serviceUrl": "https://stablesocial.dev",
-      "endpointCount": 36,
+      "fqn": "glim/data",
+      "title": "glim.sh",
+      "category": "data",
+      "description": "One remote endpoint gives your agent live data from Twitter, Reddit, the open web, GitHub and more. No API keys, no scraping stack - pay per call with USDC.",
+      "useCase": "Use for live external data in agent workflows: Twitter/X search and threads, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos and code, Amazon products, YouTube transcripts.",
+      "serviceUrl": "https://glim.sh",
+      "endpointCount": 31,
+      "hasMetering": false,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 0,
+      "sha": "6bc8b50dc677b9cb",
+      "priorityScore": 24,
+      "priorityLevel": "watch",
+      "reasons": [
+        "voice or calling workflow",
+        "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/alibaba/facebody",
+      "title": "Alibaba Cloud Facebody",
+      "category": "ai_ml",
+      "description": "Run image and video analysis or generation with Alibaba Cloud Facebody, including face Information Desensitization, human Pose Keypoints, and face Comparison.",
+      "useCase": "Use for face Information Desensitization, human Pose Keypoints, face Comparison, and related image or video generation, enhancement, detection, segmentation, and visual analysis.",
+      "serviceUrl": "https://facebody.alibaba.gateway-402.com",
+      "endpointCount": 26,
       "hasMetering": true,
       "hasFreeTier": false,
-      "minPriceUsd": 0.06,
-      "maxPriceUsd": 0.06,
-      "sha": "924c58d33cfd5041",
-      "priorityScore": 44,
-      "priorityLevel": "medium",
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 0.001,
+      "sha": "a13c66c6bb015ec1",
+      "priorityScore": 32,
+      "priorityLevel": "watch",
       "reasons": [
-        "personal or business-contact data",
-        "untrusted web-data input",
         "metered without free tier"
       ]
     },
     {
-      "fqn": "merit-systems/stableenrich/enrichment",
-      "title": "StableEnrich",
-      "category": "data",
-      "description": "Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.",
-      "useCase": "Use for contact enrichment, company lookup, prospect search, web search, page scraping, local business discovery, place details, email verification, social profile enrichment, Reddit research, news and shopping search, people search, and property records.",
-      "serviceUrl": "https://stableenrich.dev",
-      "endpointCount": 34,
+      "fqn": "earnfi/agent-api",
+      "title": "EarnFi Agent API",
+      "category": "productivity",
+      "description": "EarnFi human execution API for autonomous agents. Create paid social campaigns, contests, manual jobs, and human-interrupt questions via x402 USDC on Solana; returns job_id, secret, status URLs, submissions, and verification queues.",
+      "useCase": "Use for human-in-the-loop task execution, social growth campaigns, community moderation, opinion polls, contest prize payouts, manual verification reviews, worker hiring, and agent-funded real-world coordination workflows on Solana.",
+      "serviceUrl": "https://app.earnfi.fun/api/ai-agent/v1",
+      "endpointCount": 21,
       "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.002,
-      "maxPriceUsd": 0.44,
-      "sha": "431a9d9548e2c8b6",
-      "priorityScore": 50,
-      "priorityLevel": "medium",
+      "hasFreeTier": true,
+      "minPriceUsd": 0.165,
+      "maxPriceUsd": 5.5,
+      "sha": "71b01f4d199b9942",
+      "priorityScore": 26,
+      "priorityLevel": "watch",
       "reasons": [
-        "message-sending workflow",
-        "personal or business-contact data",
-        "untrusted web-data input",
-        "metered without free tier"
+        "personal or business-contact data"
       ]
     }
   ]

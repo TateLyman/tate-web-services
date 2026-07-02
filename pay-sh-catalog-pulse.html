@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay.sh Catalog Pulse",
         "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
-        "dateModified": "2026-07-01",
+        "dateModified": "2026-07-02",
         "isBasedOn": "https://pay.sh/api/catalog",
         "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
         "publisher": {
@@ -57,12 +57,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-sh-catalog-pulse</strong>
-        <em>2026-06-25T15:40:22Z</em>
+        <em>2026-07-01T17:36:27Z</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay.sh catalog pulse / 2026-07-01</p>
+          <p class="console-kicker">pay.sh catalog pulse / 2026-07-02</p>
           <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
           <p class="console-subtitle">
             Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
@@ -77,15 +77,15 @@
           <dl class="console-ledger">
             <div>
               <dt>providers</dt>
-              <dd>73</dd>
+              <dd>67</dd>
             </div>
             <div>
               <dt>metered</dt>
-              <dd>58</dd>
+              <dd>55</dd>
             </div>
             <div>
               <dt>free tier</dt>
-              <dd>15</dd>
+              <dd>16</dd>
             </div>
           </dl>
         </div>
@@ -93,10 +93,10 @@
         <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
           <div class="terminal-topline">catalog pulse</div>
           <pre><code>$ fetch https://pay.sh/api/catalog
-providers: 73
-priced: 58
-metered: 58
-priority: 12
+providers: 67
+priced: 55
+metered: 55
+priority: 7
 checks: caps, receipts, metadata
 output: pay-sh-catalog-pulse.json</code></pre>
         </aside>
@@ -125,32 +125,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
-            <p class="card-command">medium / 56</p>
-            <h3>StableCrypto</h3>
-            <p>Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>finance</dd></div>
-              <div><dt>endpoints</dt><dd>105</dd></div>
-              <div><dt>price</dt><dd>$0.01</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
-            <a href="https://stablecrypto.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
-            <p class="card-command">medium / 56</p>
-            <h3>StableDomains</h3>
-            <p>Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>cloud</dd></div>
-              <div><dt>endpoints</dt><dd>3</dd></div>
-              <div><dt>price</dt><dd>$0.1-$1,500</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>large per-call ceiling</li><li>message-sending workflow</li><li>domain or DNS workflow</li><li>metered without free tier</li></ul>
-            <a href="https://stabledomains.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
             <p class="card-command">medium / 54</p>
             <h3>Venice.ai — Private AI Inference</h3>
             <p>OpenAI-compatible inference API for text, image, audio, and video generation with x402 wallet access. No API key required — authenticate with an EVM or Solana wallet via SIWX and pay with USDC credits.</p>
@@ -162,32 +136,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
             </dl>
             <ul class="compact-list"><li>meaningful per-call spend</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
             <a href="https://api.venice.ai/api/v1" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
-            <p class="card-command">medium / 50</p>
-            <h3>StableEnrich</h3>
-            <p>Unified enrichment gateway for Apollo, Exa, Firecrawl, Google Maps, Hunter, Minerva, Reddit, Serper, Whitepages, Cloudflare, and more. Covers people and company enrichment, web search, scraping, maps, email verification, and property data.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>data</dd></div>
-              <div><dt>endpoints</dt><dd>34</dd></div>
-              <div><dt>price</dt><dd>$0.002-$0.44</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>message-sending workflow</li><li>personal or business-contact data</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
-            <a href="https://stableenrich.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
-            <p class="card-command">medium / 48</p>
-            <h3>StablePhone</h3>
-            <p>Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>messaging</dd></div>
-              <div><dt>endpoints</dt><dd>3</dd></div>
-              <div><dt>price</dt><dd>$0.05-$20</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>meaningful per-call spend</li><li>message-sending workflow</li><li>voice or calling workflow</li><li>metered without free tier</li></ul>
-            <a href="https://stablephone.dev" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
             <p class="card-command">medium / 44</p>
@@ -204,16 +152,55 @@ output: pay-sh-catalog-pulse.json</code></pre>
           </article>
 <article>
             <p class="card-command">medium / 44</p>
-            <h3>StableSocial</h3>
-            <p>Retrieve social media data from TikTok, Instagram, Facebook, and Reddit. Covers profiles, posts, comments, followers, following lists, search results, subreddit content, engagement metrics, captions, authors, timestamps, and nested threads.</p>
+            <h3>Nansen API</h3>
+            <p>On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.</p>
             <dl class="mini-ledger">
-              <div><dt>category</dt><dd>media</dd></div>
-              <div><dt>endpoints</dt><dd>36</dd></div>
-              <div><dt>price</dt><dd>$0.06</dd></div>
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>60</dd></div>
+              <div><dt>price</dt><dd>$0.01-$7.5</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>metered without free tier</li></ul>
+            <a href="https://api.nansen.ai" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Nyne AI</h3>
+            <p>Nyne AI person enrichment and prospect search through PaySponge&#39;s x402 wrapper, with known-contact enrichment, async request polling, and natural-language people search that can return contact, company, and profile data.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>data</dd></div>
+              <div><dt>endpoints</dt><dd>3</dd></div>
+              <div><dt>price</dt><dd>$0-$0.02</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>message-sending workflow</li><li>voice or calling workflow</li><li>personal or business-contact data</li><li>untrusted web-data input</li></ul>
+            <a href="https://api.paysponge.com/x402/purchase/svc_d5ymfernpzeh58gb8" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Textbelt SMS API</h3>
+            <p>Send outbound SMS to supported-country phone numbers and check delivery status through PaySponge&#39;s x402-wrapped Textbelt service. Supports optional sender metadata, reply webhooks, and webhook data passthrough.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>messaging</dd></div>
+              <div><dt>endpoints</dt><dd>2</dd></div>
+              <div><dt>price</dt><dd>$0-$0.02</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>message-sending workflow</li><li>voice or calling workflow</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
+            <a href="https://api.paysponge.com/x402/purchase/svc_d6kszbre4qwg5n4n4" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 38</p>
+            <h3>RentCast API</h3>
+            <p>Search US property records, sale listings, rental listings, market stats, rent estimates, and value estimates with geographic filters, structured housing attributes, listing detail lookups, and comparable-property data for real-estate workflows.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>data</dd></div>
+              <div><dt>endpoints</dt><dd>10</dd></div>
+              <div><dt>price</dt><dd>$0.01</dd></div>
               <div><dt>free tier</dt><dd>no</dd></div>
             </dl>
             <ul class="compact-list"><li>personal or business-contact data</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
-            <a href="https://stablesocial.dev" target="_blank" rel="noreferrer">provider endpoint</a>
+            <a href="https://rentcast.x402.paysponge.com" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
@@ -232,7 +219,7 @@ output: pay-sh-catalog-pulse.json</code></pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td>ai_ml</td><td>26</td></tr><tr><td>finance</td><td>7</td></tr><tr><td>data</td><td>7</td></tr><tr><td>search</td><td>5</td></tr><tr><td>messaging</td><td>4</td></tr><tr><td>shopping</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr>
+              <tr><td>ai_ml</td><td>26</td></tr><tr><td>data</td><td>7</td></tr><tr><td>finance</td><td>6</td></tr><tr><td>search</td><td>6</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>shopping</td><td>3</td></tr><tr><td>messaging</td><td>2</td></tr>
             </tbody>
           </table>
         </div>
@@ -245,32 +232,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
         </div>
         <div class="proof-terminal-grid">
           <article>
-            <p class="card-command">medium / 56</p>
-            <h3>StableDomains</h3>
-            <p>Register, renew, and manage DNS for domains via stablecoin micropayments. Supports common TLDs including .com, .org, .net, .io, .ai, .dev, .app, and .xyz, plus DNS record creation and updates without traditional registrar billing.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>cloud</dd></div>
-              <div><dt>endpoints</dt><dd>3</dd></div>
-              <div><dt>price</dt><dd>$0.1-$1,500</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>large per-call ceiling</li><li>message-sending workflow</li><li>domain or DNS workflow</li><li>metered without free tier</li></ul>
-            <a href="https://stabledomains.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
-            <p class="card-command">medium / 48</p>
-            <h3>StablePhone</h3>
-            <p>Make AI-powered outbound phone calls, buy dedicated phone numbers, extend number leases, and look up iMessage or FaceTime capability. Supports call IDs, caller ID continuity, global phone workflows, and pay-per-call voice automation.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>messaging</dd></div>
-              <div><dt>endpoints</dt><dd>3</dd></div>
-              <div><dt>price</dt><dd>$0.05-$20</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>meaningful per-call spend</li><li>message-sending workflow</li><li>voice or calling workflow</li><li>metered without free tier</li></ul>
-            <a href="https://stablephone.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
             <p class="card-command">high / 66</p>
             <h3>AgentMail</h3>
             <p>Create and operate dedicated email inboxes for AI agents. Supports programmatic inbox creation, outbound sending, inbound message retrieval, unique agent addresses, workflow automation, and no manual account setup for email-based agent tasks.</p>
@@ -295,6 +256,32 @@ output: pay-sh-catalog-pulse.json</code></pre>
             </dl>
             <ul class="compact-list"><li>meaningful per-call spend</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
             <a href="https://api.venice.ai/api/v1" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
+            <h3>Nansen API</h3>
+            <p>On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>60</dd></div>
+              <div><dt>price</dt><dd>$0.01-$7.5</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>metered without free tier</li></ul>
+            <a href="https://api.nansen.ai" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">watch / 26</p>
+            <h3>EarnFi Agent API</h3>
+            <p>EarnFi human execution API for autonomous agents. Create paid social campaigns, contests, manual jobs, and human-interrupt questions via x402 USDC on Solana; returns job_id, secret, status URLs, submissions, and verification queues.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>productivity</dd></div>
+              <div><dt>endpoints</dt><dd>21</dd></div>
+              <div><dt>price</dt><dd>$0.17-$5.5</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>personal or business-contact data</li></ul>
+            <a href="https://app.earnfi.fun/api/ai-agent/v1" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
@@ -319,29 +306,16 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <a href="https://x402.quicknode.com" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
-            <p class="card-command">medium / 56</p>
-            <h3>StableCrypto</h3>
-            <p>Access crypto market and on-chain data through CoinGecko, DefiLlama, Alchemy, and Etherscan. Covers prices, DEX pools, DeFi TVL, yields, bridges, treasuries, token balances, transactions, contracts, logs, gas, and Ethereum stats.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>finance</dd></div>
-              <div><dt>endpoints</dt><dd>105</dd></div>
-              <div><dt>price</dt><dd>$0.01</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
-            <a href="https://stablecrypto.dev" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
-            <p class="card-command">watch / 24</p>
+            <p class="card-command">medium / 44</p>
             <h3>Nansen API</h3>
             <p>On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.</p>
             <dl class="mini-ledger">
               <div><dt>category</dt><dd>finance</dd></div>
-              <div><dt>endpoints</dt><dd>56</dd></div>
-              <div><dt>price</dt><dd>$0</dd></div>
-              <div><dt>free tier</dt><dd>yes</dd></div>
+              <div><dt>endpoints</dt><dd>60</dd></div>
+              <div><dt>price</dt><dd>$0.01-$7.5</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
             </dl>
-            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li></ul>
+            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>metered without free tier</li></ul>
             <a href="https://api.nansen.ai" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
@@ -356,6 +330,19 @@ output: pay-sh-catalog-pulse.json</code></pre>
             </dl>
             <ul class="compact-list"><li>meaningful per-call spend</li><li>wide endpoint surface</li><li>message-sending workflow</li><li>personal or business-contact data</li></ul>
             <a href="https://x402.api.agentmail.to" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">watch / 18</p>
+            <h3>Birdeye Data</h3>
+            <p>Pay-per-request DeFi market data, token analytics, and wallet intelligence across Solana and 15+ chains. Covers token prices, OHLCV charts, holder distribution, smart money flows, meme signals, trade history, and security scores without API keys.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>46</dd></div>
+              <div><dt>price</dt><dd>$0</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>financial data or wallet context</li></ul>
+            <a href="https://public-api.birdeye.so" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
