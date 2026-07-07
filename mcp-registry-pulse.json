@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-06",
+  "generatedAt": "2026-07-07",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 88,
-  "githubReposDetected": 48,
-  "readmesSampled": 32,
+  "latestServersAnalyzed": 81,
+  "githubReposDetected": 47,
+  "readmesSampled": 31,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 88,
-    "repos": 48,
-    "readableRepos": 32,
-    "packageCount": 17,
-    "remoteCount": 75,
+    "latestTotal": 81,
+    "repos": 47,
+    "readableRepos": 31,
+    "packageCount": 16,
+    "remoteCount": 68,
     "packageOnly": 12,
-    "remoteOnly": 70,
-    "both": 5,
-    "noInstallPath": 70,
-    "websiteVisible": 64,
-    "missingTitle": 30,
-    "shortDescription": 38,
-    "recent45": 38,
+    "remoteOnly": 64,
+    "both": 4,
+    "noInstallPath": 64,
+    "websiteVisible": 58,
+    "missingTitle": 26,
+    "shortDescription": 35,
+    "recent45": 35,
     "orgOwned": 24,
-    "issuesEnabled": 31,
+    "issuesEnabled": 30,
     "archived": 0,
-    "mcpServers": 23,
-    "install": 18,
+    "mcpServers": 22,
+    "install": 17,
     "serverJson": 6,
-    "safety": 24,
-    "stdioPackageCount": 17,
-    "stdioPackageReadable": 12,
-    "stdioBoundaryDocs": 5,
-    "secretPackageConfig": 11,
-    "secretRemoteHeaders": 15,
+    "safety": 23,
+    "stdioPackageCount": 16,
+    "stdioPackageReadable": 11,
+    "stdioBoundaryDocs": 4,
+    "secretPackageConfig": 10,
+    "secretRemoteHeaders": 14,
     "glama": 18,
-    "smoke": 11
+    "smoke": 10
   },
   "sampleServers": [
     {
@@ -278,7 +278,7 @@
       "hasStdioPackage": true,
       "hasSecretPackageConfig": true,
       "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-06T11:50:52.893368Z",
+      "updatedAt": "2026-07-07T12:55:08.432774Z",
       "repo": "bowmark-ai/skill",
       "websiteUrl": "https://bowmark.ai",
       "primaryUrl": "https://bowmark.ai",
@@ -288,28 +288,6 @@
         "Document permissions and safety notes",
         "Explain STDIO command boundary",
         "Add copyable mcpServers config"
-      ]
-    },
-    {
-      "name": "ai.childanxiety/library",
-      "title": "",
-      "description": "Clinician-reviewed library on anxiety, OCD, and phobias in children ages 5–12.",
-      "publicProofScore": 55,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-04-26T00:04:17.518812Z",
-      "repo": null,
-      "websiteUrl": "https://childanxiety.ai",
-      "primaryUrl": "https://childanxiety.ai",
-      "topGaps": [
-        "Attach a public repository",
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
       ]
     },
     {
@@ -448,6 +426,30 @@
         "Add smoke-test or tool-list proof",
         "Add copyable mcpServers config",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.autonomad/computeback",
+      "title": "",
+      "description": "Agent Rewards Marketplace: earn $NOMD on B2B work, spend on agent capabilities.",
+      "publicProofScore": 63,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": true,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-05-11T23:17:51.160439Z",
+      "repo": "Autonomad1/computeback-mcp",
+      "websiteUrl": "https://www.computeback.com",
+      "primaryUrl": "https://www.computeback.com",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Add smoke-test or tool-list proof",
+        "Refresh stale registry metadata",
+        "Reference server.json metadata alignment"
       ]
     }
   ]
