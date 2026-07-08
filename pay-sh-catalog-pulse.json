@@ -1,6 +1,6 @@
 {
-  "runDate": "2026-07-07",
-  "generatedAt": "2026-07-01T17:36:27Z",
+  "runDate": "2026-07-08",
+  "generatedAt": "2026-07-08T15:21:26Z",
   "source": "https://pay.sh/api/catalog",
   "providerCount": 67,
   "observedProviders": 67,
@@ -79,6 +79,27 @@
         "message-sending workflow",
         "personal or business-contact data",
         "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/google/generativelanguage",
+      "title": "Generative Language API (Gemini)",
+      "category": "ai_ml",
+      "description": "Use Google Gemini models for text generation, multimodal image/audio/video understanding, chat, embeddings, code generation, JSON output, function calling, cached context, file search, grounding with Google Search, and fine-tuned models.",
+      "useCase": "Use for AI chat, text generation, summarization, code help, image and video understanding, embeddings, semantic retrieval, tool calling, structured JSON output, grounded answers, batch generation, cached prompts, and tuned model workflows.",
+      "serviceUrl": "https://generativelanguage.google.gateway-402.com",
+      "endpointCount": 11,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 138,
+      "sha": "319a9e89c0eda2b5",
+      "priorityScore": 56,
+      "priorityLevel": "medium",
+      "reasons": [
+        "large per-call ceiling",
+        "voice or calling workflow",
+        "untrusted web-data input"
       ]
     },
     {
@@ -213,6 +234,27 @@
   ],
   "highestPrice": [
     {
+      "fqn": "solana-foundation/google/generativelanguage",
+      "title": "Generative Language API (Gemini)",
+      "category": "ai_ml",
+      "description": "Use Google Gemini models for text generation, multimodal image/audio/video understanding, chat, embeddings, code generation, JSON output, function calling, cached context, file search, grounding with Google Search, and fine-tuned models.",
+      "useCase": "Use for AI chat, text generation, summarization, code help, image and video understanding, embeddings, semantic retrieval, tool calling, structured JSON output, grounded answers, batch generation, cached prompts, and tuned model workflows.",
+      "serviceUrl": "https://generativelanguage.google.gateway-402.com",
+      "endpointCount": 11,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0,
+      "maxPriceUsd": 138,
+      "sha": "319a9e89c0eda2b5",
+      "priorityScore": 56,
+      "priorityLevel": "medium",
+      "reasons": [
+        "large per-call ceiling",
+        "voice or calling workflow",
+        "untrusted web-data input"
+      ]
+    },
+    {
       "fqn": "agentmail/email",
       "title": "AgentMail",
       "category": "messaging",
@@ -284,12 +326,12 @@
       "description": "EarnFi human execution API for autonomous agents. Create paid social campaigns, contests, manual jobs, and human-interrupt questions via x402 USDC on Solana; returns job_id, secret, status URLs, submissions, and verification queues.",
       "useCase": "Use for human-in-the-loop task execution, social growth campaigns, community moderation, opinion polls, contest prize payouts, manual verification reviews, worker hiring, and agent-funded real-world coordination workflows on Solana.",
       "serviceUrl": "https://app.earnfi.fun/api/ai-agent/v1",
-      "endpointCount": 21,
+      "endpointCount": 20,
       "hasMetering": true,
       "hasFreeTier": true,
       "minPriceUsd": 0.165,
       "maxPriceUsd": 5.5,
-      "sha": "71b01f4d199b9942",
+      "sha": "97cd328785e63257",
       "priorityScore": 26,
       "priorityLevel": "watch",
       "reasons": [
@@ -347,34 +389,13 @@
       "endpointCount": 1,
       "hasMetering": true,
       "hasFreeTier": false,
-      "minPriceUsd": 0.168306,
-      "maxPriceUsd": 0.168306,
-      "sha": "404123d7f4b8f7bd",
+      "minPriceUsd": 0.166252,
+      "maxPriceUsd": 0.166252,
+      "sha": "359f4cbae858cc03",
       "priorityScore": 26,
       "priorityLevel": "watch",
       "reasons": [
         "financial data or wallet context",
-        "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "solana-foundation/google/videointelligence",
-      "title": "Cloud Video Intelligence API",
-      "category": "ai_ml",
-      "description": "Analyze video content asynchronously with Google Video Intelligence. Detect labels, shots, explicit content, speech, on-screen text, logos, object tracks, scene changes, and searchable metadata for uploaded or cloud-hosted videos.",
-      "useCase": "Use for video indexing, content moderation, scene and shot detection, object tracking, logo recognition, OCR on video frames, speech transcription, media search, compliance review, archive tagging, and extracting structured video metadata.",
-      "serviceUrl": "https://videointelligence.google.gateway-402.com",
-      "endpointCount": 1,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.1,
-      "maxPriceUsd": 0.1,
-      "sha": "5d18be555e2bbcd6",
-      "priorityScore": 32,
-      "priorityLevel": "watch",
-      "reasons": [
-        "voice or calling workflow",
-        "untrusted web-data input",
         "metered without free tier"
       ]
     }
@@ -491,12 +512,12 @@
       "description": "One remote endpoint gives your agent live data from Twitter, Reddit, the open web, GitHub and more. No API keys, no scraping stack - pay per call with USDC.",
       "useCase": "Use for live external data in agent workflows: Twitter/X search and threads, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos and code, Amazon products, YouTube transcripts.",
       "serviceUrl": "https://glim.sh",
-      "endpointCount": 31,
+      "endpointCount": 30,
       "hasMetering": false,
       "hasFreeTier": true,
       "minPriceUsd": 0,
       "maxPriceUsd": 0,
-      "sha": "6bc8b50dc677b9cb",
+      "sha": "220cd04b47969b0d",
       "priorityScore": 24,
       "priorityLevel": "watch",
       "reasons": [
@@ -530,12 +551,12 @@
       "description": "EarnFi human execution API for autonomous agents. Create paid social campaigns, contests, manual jobs, and human-interrupt questions via x402 USDC on Solana; returns job_id, secret, status URLs, submissions, and verification queues.",
       "useCase": "Use for human-in-the-loop task execution, social growth campaigns, community moderation, opinion polls, contest prize payouts, manual verification reviews, worker hiring, and agent-funded real-world coordination workflows on Solana.",
       "serviceUrl": "https://app.earnfi.fun/api/ai-agent/v1",
-      "endpointCount": 21,
+      "endpointCount": 20,
       "hasMetering": true,
       "hasFreeTier": true,
       "minPriceUsd": 0.165,
       "maxPriceUsd": 5.5,
-      "sha": "71b01f4d199b9942",
+      "sha": "97cd328785e63257",
       "priorityScore": 26,
       "priorityLevel": "watch",
       "reasons": [
