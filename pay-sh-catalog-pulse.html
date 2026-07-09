@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay.sh Catalog Pulse",
         "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
-        "dateModified": "2026-07-08",
+        "dateModified": "2026-07-09",
         "isBasedOn": "https://pay.sh/api/catalog",
         "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
         "publisher": {
@@ -57,12 +57,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-sh-catalog-pulse</strong>
-        <em>2026-07-08T15:21:26Z</em>
+        <em>2026-07-09T12:13:03Z</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay.sh catalog pulse / 2026-07-08</p>
+          <p class="console-kicker">pay.sh catalog pulse / 2026-07-09</p>
           <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
           <p class="console-subtitle">
             Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
@@ -77,11 +77,11 @@
           <dl class="console-ledger">
             <div>
               <dt>providers</dt>
-              <dd>67</dd>
+              <dd>68</dd>
             </div>
             <div>
               <dt>metered</dt>
-              <dd>55</dd>
+              <dd>56</dd>
             </div>
             <div>
               <dt>free tier</dt>
@@ -93,10 +93,10 @@
         <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
           <div class="terminal-topline">catalog pulse</div>
           <pre><code>$ fetch https://pay.sh/api/catalog
-providers: 67
-priced: 55
-metered: 55
-priority: 8
+providers: 68
+priced: 56
+metered: 56
+priority: 9
 checks: caps, receipts, metadata
 output: pay-sh-catalog-pulse.json</code></pre>
         </aside>
@@ -178,6 +178,19 @@ output: pay-sh-catalog-pulse.json</code></pre>
           </article>
 <article>
             <p class="card-command">medium / 44</p>
+            <h3>Vybe Solana Analytics API (x402)</h3>
+            <p>Solana on-chain analytics — token prices, top holders, wallet PnL, DEX trades, transfers, Pyth oracles. Pay-per-call USDC on Solana or Base; no API key.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>finance</dd></div>
+              <div><dt>endpoints</dt><dd>46</dd></div>
+              <div><dt>price</dt><dd>$0.01-$0.03</dd></div>
+              <div><dt>free tier</dt><dd>no</dd></div>
+            </dl>
+            <ul class="compact-list"><li>voice or calling workflow</li><li>financial data or wallet context</li><li>metered without free tier</li></ul>
+            <a href="https://x402-api.vybenetwork.xyz" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">medium / 44</p>
             <h3>Nyne AI</h3>
             <p>Nyne AI person enrichment and prospect search through PaySponge&#39;s x402 wrapper, with known-contact enrichment, async request polling, and natural-language people search that can return contact, company, and profile data.</p>
             <dl class="mini-ledger">
@@ -202,19 +215,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
             <ul class="compact-list"><li>message-sending workflow</li><li>voice or calling workflow</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
             <a href="https://api.paysponge.com/x402/purchase/svc_d6kszbre4qwg5n4n4" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
-<article>
-            <p class="card-command">medium / 38</p>
-            <h3>RentCast API</h3>
-            <p>Search US property records, sale listings, rental listings, market stats, rent estimates, and value estimates with geographic filters, structured housing attributes, listing detail lookups, and comparable-property data for real-estate workflows.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>data</dd></div>
-              <div><dt>endpoints</dt><dd>10</dd></div>
-              <div><dt>price</dt><dd>$0.01</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>personal or business-contact data</li><li>untrusted web-data input</li><li>metered without free tier</li></ul>
-            <a href="https://rentcast.x402.paysponge.com" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
         </div>
       </section>
 
@@ -232,7 +232,7 @@ output: pay-sh-catalog-pulse.json</code></pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td>ai_ml</td><td>26</td></tr><tr><td>data</td><td>7</td></tr><tr><td>finance</td><td>6</td></tr><tr><td>search</td><td>6</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>shopping</td><td>3</td></tr><tr><td>messaging</td><td>2</td></tr>
+              <tr><td>ai_ml</td><td>26</td></tr><tr><td>finance</td><td>7</td></tr><tr><td>data</td><td>7</td></tr><tr><td>search</td><td>6</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>shopping</td><td>3</td></tr><tr><td>messaging</td><td>2</td></tr>
             </tbody>
           </table>
         </div>

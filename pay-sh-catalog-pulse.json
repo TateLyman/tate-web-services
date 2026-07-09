@@ -1,15 +1,15 @@
 {
-  "runDate": "2026-07-08",
-  "generatedAt": "2026-07-08T15:21:26Z",
+  "runDate": "2026-07-09",
+  "generatedAt": "2026-07-09T12:13:03Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 67,
-  "observedProviders": 67,
-  "pricedCount": 55,
-  "meteredCount": 55,
+  "providerCount": 68,
+  "observedProviders": 68,
+  "pricedCount": 56,
+  "meteredCount": 56,
   "freeTierCount": 16,
   "categoryCounts": {
     "messaging": 2,
-    "finance": 6,
+    "finance": 7,
     "shopping": 3,
     "ai_ml": 26,
     "identity": 2,
@@ -29,12 +29,12 @@
       "count": 26
     },
     {
-      "category": "data",
+      "category": "finance",
       "count": 7
     },
     {
-      "category": "finance",
-      "count": 6
+      "category": "data",
+      "count": 7
     },
     {
       "category": "search",
@@ -160,6 +160,27 @@
       "priorityLevel": "medium",
       "reasons": [
         "wide endpoint surface",
+        "financial data or wallet context",
+        "metered without free tier"
+      ]
+    },
+    {
+      "fqn": "vybenetwork/solana-analytics",
+      "title": "Vybe Solana Analytics API (x402)",
+      "category": "finance",
+      "description": "Solana on-chain analytics — token prices, top holders, wallet PnL, DEX trades, transfers, Pyth oracles. Pay-per-call USDC on Solana or Base; no API key.",
+      "useCase": "Use for Solana token metrics (price, market cap, holders), wallet PnL and profiling, DEX market and trade data, SPL transfer history and Pyth oracle prices. Reach for this instead of running your own RPC indexer for targeted reads.",
+      "serviceUrl": "https://x402-api.vybenetwork.xyz",
+      "endpointCount": 46,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.012,
+      "maxPriceUsd": 0.03,
+      "sha": "6f391ff1f05b714c",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "voice or calling workflow",
         "financial data or wallet context",
         "metered without free tier"
       ]
@@ -485,6 +506,27 @@
       ]
     },
     {
+      "fqn": "vybenetwork/solana-analytics",
+      "title": "Vybe Solana Analytics API (x402)",
+      "category": "finance",
+      "description": "Solana on-chain analytics — token prices, top holders, wallet PnL, DEX trades, transfers, Pyth oracles. Pay-per-call USDC on Solana or Base; no API key.",
+      "useCase": "Use for Solana token metrics (price, market cap, holders), wallet PnL and profiling, DEX market and trade data, SPL transfer history and Pyth oracle prices. Reach for this instead of running your own RPC indexer for targeted reads.",
+      "serviceUrl": "https://x402-api.vybenetwork.xyz",
+      "endpointCount": 46,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.012,
+      "maxPriceUsd": 0.03,
+      "sha": "6f391ff1f05b714c",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
+      "reasons": [
+        "voice or calling workflow",
+        "financial data or wallet context",
+        "metered without free tier"
+      ]
+    },
+    {
       "fqn": "venice/ai",
       "title": "Venice.ai — Private AI Inference",
       "category": "ai_ml",
@@ -542,25 +584,6 @@
       "priorityLevel": "watch",
       "reasons": [
         "metered without free tier"
-      ]
-    },
-    {
-      "fqn": "earnfi/agent-api",
-      "title": "EarnFi Agent API",
-      "category": "productivity",
-      "description": "EarnFi human execution API for autonomous agents. Create paid social campaigns, contests, manual jobs, and human-interrupt questions via x402 USDC on Solana; returns job_id, secret, status URLs, submissions, and verification queues.",
-      "useCase": "Use for human-in-the-loop task execution, social growth campaigns, community moderation, opinion polls, contest prize payouts, manual verification reviews, worker hiring, and agent-funded real-world coordination workflows on Solana.",
-      "serviceUrl": "https://app.earnfi.fun/api/ai-agent/v1",
-      "endpointCount": 20,
-      "hasMetering": true,
-      "hasFreeTier": true,
-      "minPriceUsd": 0.165,
-      "maxPriceUsd": 5.5,
-      "sha": "97cd328785e63257",
-      "priorityScore": 26,
-      "priorityLevel": "watch",
-      "reasons": [
-        "personal or business-contact data"
       ]
     }
   ]
