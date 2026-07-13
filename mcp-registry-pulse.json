@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-12",
+  "generatedAt": "2026-07-13",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 73,
-  "githubReposDetected": 44,
+  "latestServersAnalyzed": 76,
+  "githubReposDetected": 45,
   "readmesSampled": 27,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 73,
-    "repos": 44,
+    "latestTotal": 76,
+    "repos": 45,
     "readableRepos": 27,
     "packageCount": 14,
-    "remoteCount": 61,
+    "remoteCount": 64,
     "packageOnly": 11,
-    "remoteOnly": 58,
+    "remoteOnly": 61,
     "both": 3,
-    "noInstallPath": 58,
-    "websiteVisible": 51,
-    "missingTitle": 23,
-    "shortDescription": 31,
-    "recent45": 32,
+    "noInstallPath": 61,
+    "websiteVisible": 55,
+    "missingTitle": 24,
+    "shortDescription": 32,
+    "recent45": 36,
     "orgOwned": 21,
     "issuesEnabled": 27,
     "archived": 0,
@@ -405,6 +405,27 @@
       ]
     },
     {
+      "name": "ai.argushq/enforcement-database",
+      "title": "",
+      "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
+      "publicProofScore": 62,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-07-12T20:32:22.415073Z",
+      "repo": "andrewjgaber-commits/empire-distribution",
+      "websiteUrl": "https://argushq.ai",
+      "primaryUrl": "https://argushq.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
       "name": "ai.autonomad/computeback",
       "title": "",
       "description": "Agent Rewards Marketplace: earn $NOMD on B2B work, spend on agent capabilities.",
@@ -426,27 +447,6 @@
         "Add smoke-test or tool-list proof",
         "Refresh stale registry metadata",
         "Reference server.json metadata alignment"
-      ]
-    },
-    {
-      "name": "ai.agentberg/agentberg",
-      "title": "",
-      "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
-      "publicProofScore": 64,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-18T01:49:38.050173Z",
-      "repo": "Agentberg/agentberg",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/Agentberg/agentberg",
-      "topGaps": [
-        "Add a human-readable title",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
       ]
     }
   ]
