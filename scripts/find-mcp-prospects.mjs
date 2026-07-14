@@ -441,7 +441,10 @@ contactedEmails = existingOutreach.emails
 contactedDomains = existingOutreach.domains
 
 await mkdir(OUTPUT_DIR, { recursive: true })
-await mkdir(MESSAGE_DIR, { recursive: true })
+const allowDraftGeneration = process.env.TATE_MANUAL_OUTREACH_APPROVED === '1'
+if (allowDraftGeneration) {
+  await mkdir(MESSAGE_DIR, { recursive: true })
+}
 
 const registryEntries = await fetchRegistryServers(maxServers)
 const latestEntries = registryEntries.filter(entry => {
@@ -495,11 +498,13 @@ await writeFile(
   ].join('\n') + '\n',
 )
 await writeFile(mdPath, formatMarkdown(prospects))
-await writeFile(emailBatchPath, formatPriorityEmailBatch(prospects))
+if (allowDraftGeneration) {
+  await writeFile(emailBatchPath, formatPriorityEmailBatch(prospects))
 
-for (const lead of prospects.slice(0, 12)) {
-  const filename = `${slugify(lead.githubRepo || lead.name)}.txt`
-  await writeFile(`${MESSAGE_DIR}/${filename}`, formatMessage(lead))
+  for (const lead of prospects.slice(0, 12)) {
+    const filename = `${slugify(lead.githubRepo || lead.name)}.txt`
+    await writeFile(`${MESSAGE_DIR}/${filename}`, formatMessage(lead))
+  }
 }
 
 console.log(`Fetched ${registryEntries.length} registry entries.`)
@@ -508,5 +513,9 @@ console.log(`Wrote ${prospects.length} prospects:`)
 console.log(`- ${jsonPath}`)
 console.log(`- ${csvPath}`)
 console.log(`- ${mdPath}`)
-console.log(`- ${emailBatchPath}`)
-console.log(`- ${MESSAGE_DIR}/`)
+if (allowDraftGeneration) {
+  console.log(`- ${emailBatchPath}`)
+  console.log(`- ${MESSAGE_DIR}/`)
+} else {
+  console.log('Outbound drafts paused; research reports only.')
+}

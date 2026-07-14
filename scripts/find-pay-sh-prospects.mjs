@@ -314,7 +314,10 @@ const suppressedEmails = await loadSuppressedEmails()
 const contacted = await loadExistingOutreach()
 
 await mkdir(OUTPUT_DIR, { recursive: true })
-await mkdir(MESSAGE_DIR, { recursive: true })
+const allowDraftGeneration = process.env.TATE_MANUAL_OUTREACH_APPROVED === '1'
+if (allowDraftGeneration) {
+  await mkdir(MESSAGE_DIR, { recursive: true })
+}
 
 const prospects = (catalog.providers ?? [])
   .map(provider => analyzeProvider(provider, contacted, suppressedEmails))
@@ -351,10 +354,12 @@ await writeFile(
   ].join('\n') + '\n',
 )
 await writeFile(mdPath, formatMarkdown(prospects, catalog))
-await writeFile(emailPath, formatEmailPriority(prospects))
+if (allowDraftGeneration) {
+  await writeFile(emailPath, formatEmailPriority(prospects))
 
-for (const lead of prospects.slice(0, 12)) {
-  await writeFile(`${MESSAGE_DIR}/${slugify(lead.fqn || lead.title)}.txt`, formatMessage(lead))
+  for (const lead of prospects.slice(0, 12)) {
+    await writeFile(`${MESSAGE_DIR}/${slugify(lead.fqn || lead.title)}.txt`, formatMessage(lead))
+  }
 }
 
 console.log(`Fetched ${catalog.provider_count ?? catalog.providers?.length ?? 0} Pay.sh providers.`)
@@ -362,5 +367,9 @@ console.log(`Wrote ${prospects.length} prospects:`)
 console.log(`- ${jsonPath}`)
 console.log(`- ${csvPath}`)
 console.log(`- ${mdPath}`)
-console.log(`- ${emailPath}`)
-console.log(`- ${MESSAGE_DIR}/`)
+if (allowDraftGeneration) {
+  console.log(`- ${emailPath}`)
+  console.log(`- ${MESSAGE_DIR}/`)
+} else {
+  console.log('Outbound drafts paused; research reports only.')
+}

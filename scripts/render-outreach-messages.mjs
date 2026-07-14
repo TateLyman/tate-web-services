@@ -1,6 +1,11 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
+if (process.env.TATE_MANUAL_OUTREACH_APPROVED !== '1') {
+  console.error('Outbound message generation is paused. Set TATE_MANUAL_OUTREACH_APPROVED=1 only after Tate approves the exact message in the current turn.')
+  process.exit(1)
+}
+
 const address = process.argv[2]
 const inputPath = process.argv[3] ?? 'outreach/message-data.json'
 const outputDir = process.argv[4] ?? 'outreach/generated/messages'

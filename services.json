@@ -30,66 +30,53 @@
   "currency": "USD",
   "services": [
     {
-      "id": "workflow-finality-engineering",
-      "name": "Workflow Finality Engineering",
+      "id": "focused-technical-investigation",
+      "name": "Focused Technical Investigation",
       "price_usd": 750,
-      "delivery": "2-7 days by tier",
+      "delivery": "3-7 business days by tier",
       "service_type": "human_service",
       "fulfillment_type": "human",
       "category": "b2b-engineering",
       "tags": [
-        "workflow-finality",
-        "money-movement",
-        "regulated-operations",
-        "agent-commerce",
-        "reconciliation",
-        "audit-evidence",
-        "idempotency",
-        "acceptance-testing"
+        "debugging",
+        "software-integration",
+        "payment-workflows",
+        "testing",
+        "implementation"
       ],
-      "scope": "Bind one consequential instruction and authority chain to execution, acknowledgement, exception handling, reconciliation, and verifiable final evidence.",
+      "scope": "Investigate one clearly defined technical problem and provide a plain-language finding, evidence, and the smallest useful next step.",
       "tiers": [
         {
-          "name": "Outside readback",
+          "name": "Focused investigation",
           "price_usd": 750,
           "delivery": "3 business days",
-          "contact_url": "mailto:hello@tateprograms.com?subject=%24750%20outside%20readback"
+          "contact_url": "mailto:hello@tateprograms.com?subject=Focused%20investigation"
         },
         {
-          "name": "Proof pilot",
-          "price_usd": 2500,
-          "delivery": "5 business days",
-          "contact_url": "mailto:hello@tateprograms.com?subject=%242%2C500%20proof%20pilot"
-        },
-        {
-          "name": "Implementation sprint",
-          "price_usd_from": 7500,
-          "price_usd_to": 15000,
-          "delivery": "7 calendar days",
-          "contact_url": "mailto:hello@tateprograms.com?subject=Workflow%20finality%20implementation%20sprint"
+          "name": "Small fix sprint",
+          "price_usd_from": 2500,
+          "delivery": "quoted after scope",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Small%20fix%20sprint"
         }
       ],
       "requires_authorization": true,
       "input_fields": [
         "company_url",
-        "workflow",
-        "required_final_state",
+        "problem",
+        "what_has_been_tried",
         "authorized_scope",
-        "repository_or_api_surface",
+        "relevant_link_or_repository",
         "deadline"
       ],
       "deliverables": [
-        "evidence-backed control chain",
-        "executable release gate",
-        "synthetic or approved fixtures",
-        "negative cases",
-        "acknowledgement and reconciliation contract",
-        "ranked implementation path",
-        "buyer-ready acceptance packet"
+        "clear finding",
+        "reproduction or evidence where possible",
+        "recommended next step",
+        "implementation and tests when agreed"
       ],
-      "safety_scope": "Public surfaces and mutually approved fixtures only until access is explicitly granted. No production actions, private endpoint guessing, wallet signatures, or real paid calls by default.",
+      "safety_scope": "Public surfaces and supplied materials only until access is explicitly granted. No production actions or real payments by default.",
       "url": "https://tateprograms.com/",
-      "contact_url": "mailto:hello@tateprograms.com?subject=One%20workflow%20to%20prove"
+      "contact_url": "mailto:hello@tateprograms.com?subject=Something%20is%20broken"
     },
     {
       "id": "agent-commerce-readiness-sprint",
