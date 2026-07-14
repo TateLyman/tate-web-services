@@ -26,9 +26,71 @@
       }
     }
   },
-  "last_updated": "2026-05-27",
+  "last_updated": "2026-07-13",
   "currency": "USD",
   "services": [
+    {
+      "id": "workflow-finality-engineering",
+      "name": "Workflow Finality Engineering",
+      "price_usd": 750,
+      "delivery": "2-7 days by tier",
+      "service_type": "human_service",
+      "fulfillment_type": "human",
+      "category": "b2b-engineering",
+      "tags": [
+        "workflow-finality",
+        "money-movement",
+        "regulated-operations",
+        "agent-commerce",
+        "reconciliation",
+        "audit-evidence",
+        "idempotency",
+        "acceptance-testing"
+      ],
+      "scope": "Bind one consequential instruction and authority chain to execution, acknowledgement, exception handling, reconciliation, and verifiable final evidence.",
+      "tiers": [
+        {
+          "name": "Outside readback",
+          "price_usd": 750,
+          "delivery": "3 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=%24750%20outside%20readback"
+        },
+        {
+          "name": "Proof pilot",
+          "price_usd": 2500,
+          "delivery": "5 business days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=%242%2C500%20proof%20pilot"
+        },
+        {
+          "name": "Implementation sprint",
+          "price_usd_from": 7500,
+          "price_usd_to": 15000,
+          "delivery": "7 calendar days",
+          "contact_url": "mailto:hello@tateprograms.com?subject=Workflow%20finality%20implementation%20sprint"
+        }
+      ],
+      "requires_authorization": true,
+      "input_fields": [
+        "company_url",
+        "workflow",
+        "required_final_state",
+        "authorized_scope",
+        "repository_or_api_surface",
+        "deadline"
+      ],
+      "deliverables": [
+        "evidence-backed control chain",
+        "executable release gate",
+        "synthetic or approved fixtures",
+        "negative cases",
+        "acknowledgement and reconciliation contract",
+        "ranked implementation path",
+        "buyer-ready acceptance packet"
+      ],
+      "safety_scope": "Public surfaces and mutually approved fixtures only until access is explicitly granted. No production actions, private endpoint guessing, wallet signatures, or real paid calls by default.",
+      "url": "https://tateprograms.com/",
+      "contact_url": "mailto:hello@tateprograms.com?subject=One%20workflow%20to%20prove"
+    },
     {
       "id": "agent-commerce-readiness-sprint",
       "name": "Agent Commerce Readiness Sprint",

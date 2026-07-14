@@ -1,10 +1,11 @@
 # Tate Programs
 
-Tate Programs runs B2B agent-commerce readiness sprints, fixed-scope launch reviews, and small implementation sprints for paid agent APIs, x402, Pay.sh, MPP, AgentCore, MCP, JavaScript, TypeScript, and GitHub Action launches.
+Tate Programs runs fixed-scope workflow-finality engineering for B2B products that move money, change records, or commit a company. The commercial ladder is a $750 outside readback, a $2,500 proof pilot, or a $7,500-$15,000 seven-day implementation sprint. Agent commerce, x402, MPP, MCP, regulated operations, and cross-rail money movement are supported specializations.
 
 ## Primary Pages
 
-- [Home](https://tateprograms.com/) - Focused B2B paid-offer page for agent-commerce readiness maps, launch sprints, recurring monitors, private x402 launch reviews, proof signals, and current May 2026 agent-payment market positioning.
+- [Home](https://tateprograms.com/) - July 2026 buyer page for workflow-finality engineering: bind instruction and authority to execution, acknowledgement, exceptions, reconciliation, and verifiable evidence. Pricing: $750 outside readback, $2,500 proof pilot, and $7,500-$15,000 implementation sprint.
+- [Payments](https://tateprograms.com/payments.html) - The same three-offer commercial ladder, with scope confirmation before payment and a 50/50 start/acceptance split for implementation sprints.
 - [Agent Commerce Readiness Sprint](https://tateprograms.com/agent-commerce-readiness-sprint.html) - B2B readiness sprint for companies launching agent-discoverable catalogs, paid APIs, UCP, ACP, AP2, TAP, x402 routes, MPP flows, AgentCore integrations, receipts, spend controls, failure recovery, and partner-ready launch proof. Tiers: $750 readiness map, $2,500 launch sprint, and $4,500/month readiness monitor.
 - [Agent Readiness Monitor](https://tateprograms.com/agent-readiness-monitor.html) - $4,500/month external readiness monitor for fast-moving agent-commerce, x402, MCP, UCP, paid API, marketplace, and governed agent launches. Weekly drift checks cover discovery files, payment challenges, docs and route mismatch, browser-header regressions, receipt and retry wording, marketplace claims, buyer-risk queue, proof commands, and monthly private summary.
 - [Outside Proof Packet](https://tateprograms.com/outside-proof-packet.html) - Fixed $750 public-surface evidence packet for agent-commerce, x402, MCP, UCP, marketplace, and security-tool launches. Covers discovery files, payment or tool boundaries, browser/readback behavior, cache and CORS posture, replay commands, and ranked patch order.
