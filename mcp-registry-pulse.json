@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-16",
+  "generatedAt": "2026-07-17",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 96,
+  "latestServersAnalyzed": 98,
   "githubReposDetected": 63,
   "readmesSampled": 27,
   "method": [
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 96,
+    "latestTotal": 98,
     "repos": 63,
     "readableRepos": 27,
-    "packageCount": 32,
-    "remoteCount": 66,
-    "packageOnly": 29,
-    "remoteOnly": 63,
+    "packageCount": 33,
+    "remoteCount": 67,
+    "packageOnly": 30,
+    "remoteOnly": 64,
     "both": 3,
-    "noInstallPath": 63,
-    "websiteVisible": 74,
-    "missingTitle": 24,
-    "shortDescription": 32,
-    "recent45": 57,
+    "noInstallPath": 64,
+    "websiteVisible": 76,
+    "missingTitle": 25,
+    "shortDescription": 33,
+    "recent45": 59,
     "orgOwned": 21,
     "issuesEnabled": 27,
     "archived": 0,
@@ -33,11 +33,11 @@
     "install": 14,
     "serverJson": 8,
     "safety": 21,
-    "stdioPackageCount": 32,
+    "stdioPackageCount": 33,
     "stdioPackageReadable": 9,
     "stdioBoundaryDocs": 3,
     "secretPackageConfig": 8,
-    "secretRemoteHeaders": 11,
+    "secretRemoteHeaders": 12,
     "glama": 13,
     "smoke": 10
   },
@@ -383,6 +383,27 @@
       ]
     },
     {
+      "name": "ai.adside/adside",
+      "title": "",
+      "description": "AI agents that manage paid ads on Meta, LinkedIn, and Google Ads from any MCP client.",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-07-16T19:48:48.148514Z",
+      "repo": null,
+      "websiteUrl": "https://www.adside.ai",
+      "primaryUrl": "https://www.adside.ai",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
       "name": "ai.auxen/auxen",
       "title": "Auxen",
       "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
@@ -423,30 +444,6 @@
         "Expand the registry description",
         "Make README proof available",
         "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.autonomad/computeback",
-      "title": "",
-      "description": "Agent Rewards Marketplace: earn $NOMD on B2B work, spend on agent capabilities.",
-      "publicProofScore": 63,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": true,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-11T23:17:51.160439Z",
-      "repo": "Autonomad1/computeback-mcp",
-      "websiteUrl": "https://www.computeback.com",
-      "primaryUrl": "https://www.computeback.com",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Add smoke-test or tool-list proof",
-        "Refresh stale registry metadata",
-        "Reference server.json metadata alignment"
       ]
     }
   ]
