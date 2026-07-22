@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-21",
+  "generatedAt": "2026-07-22",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 100,
+  "latestServersAnalyzed": 101,
   "githubReposDetected": 64,
   "readmesSampled": 27,
   "method": [
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 100,
+    "latestTotal": 101,
     "repos": 64,
     "readableRepos": 27,
     "packageCount": 34,
-    "remoteCount": 68,
+    "remoteCount": 69,
     "packageOnly": 31,
-    "remoteOnly": 65,
+    "remoteOnly": 66,
     "both": 3,
-    "noInstallPath": 65,
-    "websiteVisible": 77,
-    "missingTitle": 25,
-    "shortDescription": 36,
-    "recent45": 61,
+    "noInstallPath": 66,
+    "websiteVisible": 78,
+    "missingTitle": 26,
+    "shortDescription": 37,
+    "recent45": 62,
     "orgOwned": 21,
     "issuesEnabled": 27,
     "archived": 0,
@@ -404,6 +404,27 @@
       ]
     },
     {
+      "name": "ai.atlasverified/atlas-mcp",
+      "title": "",
+      "description": "AI-powered organic supply chain verification: certification, OFAC, FDA import checks.",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-07-21T23:43:13.692003Z",
+      "repo": null,
+      "websiteUrl": "https://atlasverified.ai",
+      "primaryUrl": "https://atlasverified.ai",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
       "name": "ai.auxen/auxen",
       "title": "Auxen",
       "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
@@ -423,27 +444,6 @@
         "Add smoke-test or tool-list proof",
         "Add copyable mcpServers config",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.argushq/enforcement-database",
-      "title": "",
-      "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
-      "publicProofScore": 62,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-12T20:32:22.415073Z",
-      "repo": "andrewjgaber-commits/empire-distribution",
-      "websiteUrl": "https://argushq.ai",
-      "primaryUrl": "https://argushq.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Clarify remote auth and trust boundary"
       ]
     }
   ]

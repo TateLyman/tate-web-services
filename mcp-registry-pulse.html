@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-07-21",
+        "dateModified": "2026-07-22",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-07-21</em>
+        <em>2026-07-22</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-07-21</dd>
+              <dd>2026-07-22</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>100</dd>
+              <dd>101</dd>
             </div>
           </dl>
         </div>
@@ -98,7 +98,7 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   100
+latest servers:   101
 github repos:     64
 readme sampled:   27
 output:           mcp-registry-pulse.html
@@ -114,22 +114,22 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>100</strong>
+            <strong>101</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>64 (64%)</strong>
+            <strong>64 (63%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>77 (77%)</strong>
+            <strong>78 (77%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>61 (61%)</strong>
+            <strong>62 (61%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -139,7 +139,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>68 (68%)</strong>
+            <strong>69 (68%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -197,21 +197,21 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>36 / 100 - harder to understand quickly</span>
+              <span>37 / 101 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-35"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>25 / 100 - namespace carries the listing</span>
+              <span>26 / 101 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>65 / 100 - hosted flow must explain trust and auth clearly</span>
+              <span>66 / 101 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
@@ -479,6 +479,18 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.atlasverified/atlas-mcp ai-powered organic supply chain verification: certification, ofac, fda import checks. remote attach a public repository add a human-readable title expand the registry description clarify remote auth and trust boundary">
+            <p class="card-command">score 60/100 · remote</p>
+            <h3>ai.atlasverified/atlas-mcp</h3>
+            <p>AI-powered organic supply chain verification: certification, OFAC, FDA import checks.</p>
+            <ul>
+              <li>Attach a public repository</li><li>Add a human-readable title</li><li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://atlasverified.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.auxen/auxen auxen provision private ai model endpoints on dedicated gpus (llama, qwen, mistral). pay per minute. auxen-ai/auxen-mcp remote clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
             <p class="card-command">score 60/100 · remote</p>
             <h3>Auxen</h3>
@@ -489,19 +501,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://auxen.ai" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/auxen-ai/auxen-mcp" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.argushq/enforcement-database search argus hq public fda enforcement data: warning letters, recalls, approvals, 483s. andrewjgaber-commits/empire-distribution remote add a human-readable title expand the registry description make readme proof available clarify remote auth and trust boundary">
-            <p class="card-command">score 62/100 · remote</p>
-            <h3>ai.argushq/enforcement-database</h3>
-            <p>Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Clarify remote auth and trust boundary</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://argushq.ai" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/andrewjgaber-commits/empire-distribution" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
