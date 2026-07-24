@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-23",
+  "generatedAt": "2026-07-24",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 101,
-  "githubReposDetected": 64,
-  "readmesSampled": 27,
+  "latestServersAnalyzed": 104,
+  "githubReposDetected": 65,
+  "readmesSampled": 28,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,30 +13,30 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 101,
-    "repos": 64,
-    "readableRepos": 27,
-    "packageCount": 34,
-    "remoteCount": 69,
+    "latestTotal": 104,
+    "repos": 65,
+    "readableRepos": 28,
+    "packageCount": 35,
+    "remoteCount": 72,
     "packageOnly": 31,
-    "remoteOnly": 66,
-    "both": 3,
-    "noInstallPath": 66,
-    "websiteVisible": 78,
-    "missingTitle": 26,
-    "shortDescription": 37,
-    "recent45": 62,
-    "orgOwned": 21,
+    "remoteOnly": 68,
+    "both": 4,
+    "noInstallPath": 68,
+    "websiteVisible": 80,
+    "missingTitle": 27,
+    "shortDescription": 39,
+    "recent45": 65,
+    "orgOwned": 22,
     "issuesEnabled": 27,
     "archived": 0,
     "mcpServers": 17,
-    "install": 14,
+    "install": 15,
     "serverJson": 8,
     "safety": 21,
-    "stdioPackageCount": 34,
-    "stdioPackageReadable": 9,
+    "stdioPackageCount": 35,
+    "stdioPackageReadable": 10,
     "stdioBoundaryDocs": 3,
-    "secretPackageConfig": 9,
+    "secretPackageConfig": 10,
     "secretRemoteHeaders": 12,
     "glama": 13,
     "smoke": 10
@@ -267,6 +267,30 @@
       ]
     },
     {
+      "name": "ai.bowmark/bowmark",
+      "title": "Bowmark",
+      "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
+      "publicProofScore": 55,
+      "installPath": "package + remote",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": true,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-07-24T14:09:18.143449Z",
+      "repo": "bowmark-ai/skill",
+      "websiteUrl": "https://bowmark.ai",
+      "primaryUrl": "https://bowmark.ai",
+      "topGaps": [
+        "Expand the registry description",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Explain STDIO command boundary",
+        "Add copyable mcpServers config"
+      ]
+    },
+    {
       "name": "agency.lona/trading",
       "title": "",
       "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
@@ -422,28 +446,6 @@
         "Add a human-readable title",
         "Expand the registry description",
         "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.auxen/auxen",
-      "title": "Auxen",
-      "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-18T23:32:19.610277Z",
-      "repo": "auxen-ai/auxen-mcp",
-      "websiteUrl": "https://auxen.ai",
-      "primaryUrl": "https://auxen.ai",
-      "topGaps": [
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config",
-        "Refresh stale registry metadata"
       ]
     }
   ]
