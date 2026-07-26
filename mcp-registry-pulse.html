@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-07-25",
+        "dateModified": "2026-07-26",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-07-25</em>
+        <em>2026-07-26</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-07-25</dd>
+              <dd>2026-07-26</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>106</dd>
+              <dd>107</dd>
             </div>
           </dl>
         </div>
@@ -98,8 +98,8 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   106
-github repos:     66
+latest servers:   107
+github repos:     67
 readme sampled:   29
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
@@ -114,17 +114,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>106</strong>
+            <strong>107</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>66 (62%)</strong>
+            <strong>67 (63%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>81 (76%)</strong>
+            <strong>82 (77%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -139,7 +139,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>74 (70%)</strong>
+            <strong>75 (70%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -168,7 +168,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote secret headers</p>
-            <strong>13 (12%)</strong>
+            <strong>14 (13%)</strong>
             <p>Listings whose remote metadata declares secret request headers.</p>
           </article>
         </div>
@@ -197,21 +197,21 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>40 / 106 - harder to understand quickly</span>
+              <span>40 / 107 - harder to understand quickly</span>
             </div>
-            <i class="pulse-width-40"></i>
+            <i class="pulse-width-35"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>27 / 106 - namespace carries the listing</span>
+              <span>28 / 107 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>70 / 106 - hosted flow must explain trust and auth clearly</span>
+              <span>71 / 107 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
