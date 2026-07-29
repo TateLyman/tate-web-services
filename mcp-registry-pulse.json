@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28",
+  "generatedAt": "2026-07-29",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 108,
@@ -26,20 +26,20 @@
     "missingTitle": 28,
     "shortDescription": 41,
     "recent45": 64,
-    "orgOwned": 23,
-    "issuesEnabled": 28,
+    "orgOwned": 22,
+    "issuesEnabled": 29,
     "archived": 0,
-    "mcpServers": 18,
+    "mcpServers": 19,
     "install": 16,
     "serverJson": 9,
-    "safety": 22,
+    "safety": 23,
     "stdioPackageCount": 36,
     "stdioPackageReadable": 10,
-    "stdioBoundaryDocs": 3,
-    "secretPackageConfig": 10,
+    "stdioBoundaryDocs": 4,
+    "secretPackageConfig": 9,
     "secretRemoteHeaders": 14,
-    "glama": 14,
-    "smoke": 10
+    "glama": 15,
+    "smoke": 11
   },
   "sampleServers": [
     {
@@ -267,30 +267,6 @@
       ]
     },
     {
-      "name": "ai.bowmark/bowmark",
-      "title": "Bowmark",
-      "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-      "publicProofScore": 55,
-      "installPath": "package + remote",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": true,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-27T00:08:09.72584Z",
-      "repo": "bowmark-ai/skill",
-      "websiteUrl": "https://bowmark.ai",
-      "primaryUrl": "https://bowmark.ai",
-      "topGaps": [
-        "Expand the registry description",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
-        "Explain STDIO command boundary",
-        "Add copyable mcpServers config"
-      ]
-    },
-    {
       "name": "agency.lona/trading",
       "title": "",
       "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
@@ -446,6 +422,28 @@
         "Add a human-readable title",
         "Expand the registry description",
         "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
+      "name": "ai.auxen/auxen",
+      "title": "Auxen",
+      "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-05-18T23:32:19.610277Z",
+      "repo": "auxen-ai/auxen-mcp",
+      "websiteUrl": "https://auxen.ai",
+      "primaryUrl": "https://auxen.ai",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Add copyable mcpServers config",
+        "Refresh stale registry metadata"
       ]
     }
   ]
