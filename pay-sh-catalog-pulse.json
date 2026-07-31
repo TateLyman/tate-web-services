@@ -1,17 +1,17 @@
 {
-  "runDate": "2026-07-30",
-  "generatedAt": "2026-07-10T17:17:35Z",
+  "runDate": "2026-07-31",
+  "generatedAt": "2026-07-31T12:36:51Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 70,
-  "observedProviders": 70,
-  "pricedCount": 58,
-  "meteredCount": 58,
-  "freeTierCount": 18,
+  "providerCount": 72,
+  "observedProviders": 72,
+  "pricedCount": 57,
+  "meteredCount": 57,
+  "freeTierCount": 22,
   "categoryCounts": {
     "messaging": 2,
     "finance": 8,
+    "ai_ml": 28,
     "shopping": 4,
-    "ai_ml": 26,
     "identity": 2,
     "productivity": 1,
     "search": 6,
@@ -26,7 +26,7 @@
   "topCategories": [
     {
       "category": "ai_ml",
-      "count": 26
+      "count": 28
     },
     {
       "category": "finance",
@@ -93,7 +93,7 @@
       "hasFreeTier": true,
       "minPriceUsd": 0,
       "maxPriceUsd": 138,
-      "sha": "319a9e89c0eda2b5",
+      "sha": "bde37d6eccb9fa61",
       "priorityScore": 56,
       "priorityLevel": "medium",
       "reasons": [
@@ -266,13 +266,32 @@
       "hasFreeTier": true,
       "minPriceUsd": 0,
       "maxPriceUsd": 138,
-      "sha": "319a9e89c0eda2b5",
+      "sha": "bde37d6eccb9fa61",
       "priorityScore": 56,
       "priorityLevel": "medium",
       "reasons": [
         "large per-call ceiling",
         "voice or calling workflow",
         "untrusted web-data input"
+      ]
+    },
+    {
+      "fqn": "solana-foundation/alibaba/modelstudio",
+      "title": "Alibaba Cloud Model Studio (Qwen)",
+      "category": "ai_ml",
+      "description": "Alibaba Cloud Model Studio's OpenAI-compatible API for Qwen chat, reasoning, and code-generation models.",
+      "useCase": "Use for OpenAI-compatible chat completions with Qwen Max, Plus, Flash, and Coder models.",
+      "serviceUrl": "https://modelstudio.alibaba.gateway-402.com",
+      "endpointCount": 2,
+      "hasMetering": true,
+      "hasFreeTier": true,
+      "minPriceUsd": 0.05,
+      "maxPriceUsd": 60,
+      "sha": "3a9a3ce62e0a2467",
+      "priorityScore": 30,
+      "priorityLevel": "watch",
+      "reasons": [
+        "meaningful per-call spend"
       ]
     },
     {
@@ -398,26 +417,6 @@
         "message-sending workflow",
         "personal or business-contact data",
         "untrusted web-data input"
-      ]
-    },
-    {
-      "fqn": "clustly/tipping",
-      "title": "Clustly",
-      "category": "finance",
-      "description": "Tip any X (Twitter) handle in Solana USDC via x402. Registered Clustly users receive directly to their linked Solana wallet; unregistered handles are escrowed in a Privy-custodied placeholder pocket the recipient can claim later via X OAuth.",
-      "useCase": "Use for paying any X handle in USDC without a wallet address, tipping content, micropayments, programmatic rewards, agent-to-agent payouts, and routing funds to recipients who do not yet have a crypto wallet.",
-      "serviceUrl": "https://tip.clustly.ai",
-      "endpointCount": 1,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.166252,
-      "maxPriceUsd": 0.166252,
-      "sha": "359f4cbae858cc03",
-      "priorityScore": 26,
-      "priorityLevel": "watch",
-      "reasons": [
-        "financial data or wallet context",
-        "metered without free tier"
       ]
     }
   ],

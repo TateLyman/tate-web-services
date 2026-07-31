@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "Pay.sh Catalog Pulse",
         "url": "https://tateprograms.com/pay-sh-catalog-pulse.html",
-        "dateModified": "2026-07-30",
+        "dateModified": "2026-07-31",
         "isBasedOn": "https://pay.sh/api/catalog",
         "description": "Aggregated Pay.sh catalog snapshot for agent-paid API launch-readiness review.",
         "publisher": {
@@ -57,12 +57,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/pay-sh-catalog-pulse</strong>
-        <em>2026-07-10T17:17:35Z</em>
+        <em>2026-07-31T12:36:51Z</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">pay.sh catalog pulse / 2026-07-30</p>
+          <p class="console-kicker">pay.sh catalog pulse / 2026-07-31</p>
           <h1>Agent-paid APIs need launch controls before agents start spending.</h1>
           <p class="console-subtitle">
             Pay.sh exposes a live catalog of APIs that agents can discover, price, and call. This pulse turns that machine-readable catalog into a launch-readiness map: where spend, contact data, messaging, DNS, finance, and wide endpoint surfaces need price previews, caps, receipts, metadata filtering, and provider validation.
@@ -77,15 +77,15 @@
           <dl class="console-ledger">
             <div>
               <dt>providers</dt>
-              <dd>70</dd>
+              <dd>72</dd>
             </div>
             <div>
               <dt>metered</dt>
-              <dd>58</dd>
+              <dd>57</dd>
             </div>
             <div>
               <dt>free tier</dt>
-              <dd>18</dd>
+              <dd>22</dd>
             </div>
           </dl>
         </div>
@@ -93,9 +93,9 @@
         <aside class="terminal-window" aria-label="Pay.sh catalog terminal preview">
           <div class="terminal-topline">catalog pulse</div>
           <pre><code>$ fetch https://pay.sh/api/catalog
-providers: 70
-priced: 58
-metered: 58
+providers: 72
+priced: 57
+metered: 57
 priority: 9
 checks: caps, receipts, metadata
 output: pay-sh-catalog-pulse.json</code></pre>
@@ -232,7 +232,7 @@ output: pay-sh-catalog-pulse.json</code></pre>
               </tr>
             </thead>
             <tbody>
-              <tr><td>ai_ml</td><td>26</td></tr><tr><td>finance</td><td>8</td></tr><tr><td>data</td><td>7</td></tr><tr><td>search</td><td>6</td></tr><tr><td>shopping</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>messaging</td><td>2</td></tr>
+              <tr><td>ai_ml</td><td>28</td></tr><tr><td>finance</td><td>8</td></tr><tr><td>data</td><td>7</td></tr><tr><td>search</td><td>6</td></tr><tr><td>shopping</td><td>4</td></tr><tr><td>maps</td><td>4</td></tr><tr><td>translation</td><td>4</td></tr><tr><td>messaging</td><td>2</td></tr>
             </tbody>
           </table>
         </div>
@@ -256,6 +256,19 @@ output: pay-sh-catalog-pulse.json</code></pre>
             </dl>
             <ul class="compact-list"><li>large per-call ceiling</li><li>voice or calling workflow</li><li>untrusted web-data input</li></ul>
             <a href="https://generativelanguage.google.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
+          </article>
+<article>
+            <p class="card-command">watch / 30</p>
+            <h3>Alibaba Cloud Model Studio (Qwen)</h3>
+            <p>Alibaba Cloud Model Studio&#39;s OpenAI-compatible API for Qwen chat, reasoning, and code-generation models.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>ai_ml</dd></div>
+              <div><dt>endpoints</dt><dd>2</dd></div>
+              <div><dt>price</dt><dd>$0.05-$60</dd></div>
+              <div><dt>free tier</dt><dd>yes</dd></div>
+            </dl>
+            <ul class="compact-list"><li>meaningful per-call spend</li></ul>
+            <a href="https://modelstudio.alibaba.gateway-402.com" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
 <article>
             <p class="card-command">high / 66</p>
@@ -282,19 +295,6 @@ output: pay-sh-catalog-pulse.json</code></pre>
             </dl>
             <ul class="compact-list"><li>meaningful per-call spend</li><li>financial data or wallet context</li><li>untrusted web-data input</li></ul>
             <a href="https://api.venice.ai/api/v1" target="_blank" rel="noreferrer">provider endpoint</a>
-          </article>
-<article>
-            <p class="card-command">medium / 44</p>
-            <h3>Nansen API</h3>
-            <p>On-chain analytics API covering smart money flows, token metrics, wallet profiling, Nansen Score, perpetual markets, prediction markets, and token screening across multiple blockchains.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>finance</dd></div>
-              <div><dt>endpoints</dt><dd>60</dd></div>
-              <div><dt>price</dt><dd>$0.01-$7.5</dd></div>
-              <div><dt>free tier</dt><dd>no</dd></div>
-            </dl>
-            <ul class="compact-list"><li>wide endpoint surface</li><li>financial data or wallet context</li><li>metered without free tier</li></ul>
-            <a href="https://api.nansen.ai" target="_blank" rel="noreferrer">provider endpoint</a>
           </article>
         </div>
       </section>
