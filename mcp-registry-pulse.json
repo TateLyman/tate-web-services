@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-01",
+  "generatedAt": "2026-08-02",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 110,
-  "githubReposDetected": 67,
-  "readmesSampled": 30,
+  "latestServersAnalyzed": 112,
+  "githubReposDetected": 69,
+  "readmesSampled": 32,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,31 +13,31 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 110,
-    "repos": 67,
-    "readableRepos": 30,
+    "latestTotal": 112,
+    "repos": 69,
+    "readableRepos": 32,
     "packageCount": 36,
-    "remoteCount": 77,
+    "remoteCount": 79,
     "packageOnly": 32,
-    "remoteOnly": 73,
+    "remoteOnly": 75,
     "both": 4,
-    "noInstallPath": 73,
-    "websiteVisible": 85,
-    "missingTitle": 28,
-    "shortDescription": 43,
-    "recent45": 65,
-    "orgOwned": 22,
-    "issuesEnabled": 29,
+    "noInstallPath": 75,
+    "websiteVisible": 87,
+    "missingTitle": 29,
+    "shortDescription": 44,
+    "recent45": 66,
+    "orgOwned": 23,
+    "issuesEnabled": 31,
     "archived": 0,
-    "mcpServers": 19,
-    "install": 16,
-    "serverJson": 9,
-    "safety": 23,
+    "mcpServers": 20,
+    "install": 17,
+    "serverJson": 10,
+    "safety": 25,
     "stdioPackageCount": 36,
     "stdioPackageReadable": 10,
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 9,
-    "secretRemoteHeaders": 14,
+    "secretRemoteHeaders": 15,
     "glama": 15,
     "smoke": 11
   },
@@ -267,6 +267,28 @@
       ]
     },
     {
+      "name": "ai.atlaso/mcp",
+      "title": "",
+      "description": "AI memory layer — one shared, persistent memory across every AI tool you connect.",
+      "publicProofScore": 56,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-02T11:07:21.155706Z",
+      "repo": "atlaso-labs/mcp",
+      "websiteUrl": "https://www.atlaso.ai",
+      "primaryUrl": "https://www.atlaso.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof"
+      ]
+    },
+    {
       "name": "agency.lona/trading",
       "title": "",
       "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
@@ -383,6 +405,28 @@
       ]
     },
     {
+      "name": "ai.agentberg/agentberg",
+      "title": "",
+      "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
+      "publicProofScore": 59,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-06-18T01:49:38.050173Z",
+      "repo": "Agentberg/agentberg",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/Agentberg/agentberg",
+      "topGaps": [
+        "Add a human-readable title",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "ai.adside/adside",
       "title": "",
       "description": "AI agents that manage paid ads on Meta, LinkedIn, and Google Ads from any MCP client.",
@@ -401,49 +445,6 @@
         "Add a human-readable title",
         "Expand the registry description",
         "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.atlasverified/atlas-mcp",
-      "title": "",
-      "description": "AI-powered organic supply chain verification: certification, OFAC, FDA import checks.",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-21T23:43:13.692003Z",
-      "repo": null,
-      "websiteUrl": "https://atlasverified.ai",
-      "primaryUrl": "https://atlasverified.ai",
-      "topGaps": [
-        "Attach a public repository",
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.auxen/auxen",
-      "title": "Auxen",
-      "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-05-18T23:32:19.610277Z",
-      "repo": "auxen-ai/auxen-mcp",
-      "websiteUrl": "https://auxen.ai",
-      "primaryUrl": "https://auxen.ai",
-      "topGaps": [
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config",
-        "Refresh stale registry metadata"
       ]
     }
   ]
