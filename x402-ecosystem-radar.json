@@ -1,24 +1,24 @@
 {
-  "runDate": "2026-08-07",
+  "runDate": "2026-08-08",
   "source": "https://github.com/coinbase/x402/pulls",
   "apiSource": "https://api.github.com/search/issues?q=repo:coinbase/x402+is:pr+created:>=2026-05-01",
   "startDate": "2026-05-01",
-  "totalCount": 132,
+  "totalCount": 133,
   "observedCount": 100,
-  "openCount": 78,
-  "submittedLast24h": 3,
+  "openCount": 77,
+  "submittedLast24h": 1,
   "ecosystemListingCount": 88,
-  "priorityCount": 85,
+  "priorityCount": 86,
   "categoryCounts": {
     "ecosystem listing": 88,
     "protocol implementation": 5,
     "docs / discovery": 7
   },
   "networkCounts": {
-    "Base": 77,
-    "Solana": 18,
+    "Base": 78,
+    "mainnet": 40,
+    "Solana": 17,
     "USDC": 71,
-    "mainnet": 39,
     "testnet": 8,
     "Base Sepolia": 2,
     "EURC": 1
@@ -40,7 +40,7 @@
   "topNetworks": [
     [
       "Base",
-      77
+      78
     ],
     [
       "USDC",
@@ -48,11 +48,11 @@
     ],
     [
       "mainnet",
-      39
+      40
     ],
     [
       "Solana",
-      18
+      17
     ],
     [
       "testnet",
@@ -69,13 +69,51 @@
   ],
   "priorityRows": [
     {
+      "number": 279,
+      "title": "Add AG Pay Server to x402 ecosystem partners (ag-pay)",
+      "url": "https://github.com/coinbase/x402/pull/279",
+      "state": "open",
+      "createdAt": "2026-08-07T22:25:11Z",
+      "updatedAt": "2026-08-07T22:25:21Z",
+      "ageHours": 17,
+      "author": "squadan",
+      "authorUrl": "https://github.com/squadan",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.05,
+      "urls": [
+        "https://facilitator.payai.network",
+        "https://ivory-gradually-collaborative-fingers.trycloudflare.com"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/ag-pay/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/ag-pay/metadata.json"
+      ],
+      "summary": "Adds `ag-pay` to the x402 ecosystem directory. A self-hosted Hermes + NVIDIA NIM (minimax-m3) pay-per-request server settling through the PayAI facilitator on Base mainnet (eip155:8453).",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 94,
+      "priority": "urgent"
+    },
+    {
       "number": 161,
       "title": "ecosystem: add RugGuard — pre-trade rug-check API for AI agents",
       "url": "https://github.com/coinbase/x402/pull/161",
       "state": "open",
       "createdAt": "2026-05-11T18:10:17Z",
       "updatedAt": "2026-07-05T10:13:55Z",
-      "ageHours": 2110,
+      "ageHours": 2134,
       "author": "dbe006",
       "authorUrl": "https://github.com/dbe006",
       "category": "ecosystem listing",
@@ -113,7 +151,7 @@
       "state": "open",
       "createdAt": "2026-07-26T01:16:01Z",
       "updatedAt": "2026-07-26T01:16:12Z",
-      "ageHours": 303,
+      "ageHours": 327,
       "author": "letom1176-spec",
       "authorUrl": "https://github.com/letom1176-spec",
       "category": "ecosystem listing",
@@ -152,7 +190,7 @@
       "state": "open",
       "createdAt": "2026-07-08T08:15:09Z",
       "updatedAt": "2026-07-10T03:13:09Z",
-      "ageHours": 728,
+      "ageHours": 752,
       "author": "fablerlabs",
       "authorUrl": "https://github.com/fablerlabs",
       "category": "ecosystem listing",
@@ -193,7 +231,7 @@
       "state": "open",
       "createdAt": "2026-07-04T20:48:55Z",
       "updatedAt": "2026-07-07T13:56:16Z",
-      "ageHours": 811,
+      "ageHours": 835,
       "author": "GeorgeSpring",
       "authorUrl": "https://github.com/GeorgeSpring",
       "category": "ecosystem listing",
@@ -236,7 +274,7 @@
       "state": "open",
       "createdAt": "2026-06-20T11:54:35Z",
       "updatedAt": "2026-06-20T11:55:10Z",
-      "ageHours": 1156,
+      "ageHours": 1180,
       "author": "attestifyagent",
       "authorUrl": "https://github.com/attestifyagent",
       "category": "ecosystem listing",
@@ -373,7 +411,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-06-16T23:51:24Z",
-      "ageHours": 2205,
+      "ageHours": 2229,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -416,7 +454,7 @@
       "state": "open",
       "createdAt": "2026-07-29T14:25:07Z",
       "updatedAt": "2026-07-30T11:07:16Z",
-      "ageHours": 218,
+      "ageHours": 241,
       "author": "malin-globalinfratech",
       "authorUrl": "https://github.com/malin-globalinfratech",
       "category": "ecosystem listing",
@@ -457,7 +495,7 @@
       "state": "open",
       "createdAt": "2026-07-01T20:51:27Z",
       "updatedAt": "2026-07-01T20:51:36Z",
-      "ageHours": 883,
+      "ageHours": 907,
       "author": "aitools420",
       "authorUrl": "https://github.com/aitools420",
       "category": "ecosystem listing",
@@ -497,7 +535,7 @@
       "state": "closed",
       "createdAt": "2026-05-28T16:19:34Z",
       "updatedAt": "2026-06-27T19:06:41Z",
-      "ageHours": 1704,
+      "ageHours": 1728,
       "author": "Bigabou007-dev",
       "authorUrl": "https://github.com/Bigabou007-dev",
       "category": "ecosystem listing",
@@ -539,7 +577,7 @@
       "state": "open",
       "createdAt": "2026-08-01T11:07:34Z",
       "updatedAt": "2026-08-01T11:09:16Z",
-      "ageHours": 149,
+      "ageHours": 173,
       "author": "PatrickPi1312",
       "authorUrl": "https://github.com/PatrickPi1312",
       "category": "ecosystem listing",
@@ -576,7 +614,7 @@
       "state": "open",
       "createdAt": "2026-07-29T06:58:45Z",
       "updatedAt": "2026-07-29T08:58:58Z",
-      "ageHours": 225,
+      "ageHours": 249,
       "author": "mamenesia",
       "authorUrl": "https://github.com/mamenesia",
       "category": "ecosystem listing",
@@ -608,196 +646,17 @@
       ],
       "priorityScore": 74,
       "priority": "urgent"
-    },
-    {
-      "number": 262,
-      "title": "Add x402-seller to ecosystem (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/262",
-      "state": "open",
-      "createdAt": "2026-07-29T02:11:13Z",
-      "updatedAt": "2026-07-29T02:11:29Z",
-      "ageHours": 230,
-      "author": "wyattpalm2-eng",
-      "authorUrl": "https://github.com/wyattpalm2-eng",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.01,
-      "urls": [
-        "https://claude.com/claude-code"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/x402-seller/metadata.json",
-        "typescript/site/public/logos/x402-seller.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/x402-seller/metadata.json"
-      ],
-      "summary": "Adds `x402-seller` to the ecosystem registry.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "trust or risk claims",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 74,
-      "priority": "urgent"
     }
   ],
   "newestRows": [
     {
-      "number": 278,
-      "title": "Add agent-tools.net to ecosystem directory",
-      "url": "https://github.com/coinbase/x402/pull/278",
-      "state": "open",
-      "createdAt": "2026-08-07T08:30:08Z",
-      "updatedAt": "2026-08-07T08:30:24Z",
-      "ageHours": 8,
-      "author": "karucosu",
-      "authorUrl": "https://github.com/karucosu",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://agent-tools.net"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json",
-        "typescript/site/public/logos/agent-tools-net.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json"
-      ],
-      "summary": "Adds agent-tools.net, an x402-gated API marketplace for AI agents (page-to-Markdown extraction, page metadata extraction, and a directory where third parties can list their own agent-facing tool for a flat x402 fee). Live on Base mainnet USDC via the CDP-hosted facilitator.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path"
-      ],
-      "priorityScore": 64,
-      "priority": "urgent"
-    },
-    {
-      "number": 276,
-      "title": "Add BridgeNode to Ecosystem (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/276",
-      "state": "open",
-      "createdAt": "2026-08-06T16:33:51Z",
-      "updatedAt": "2026-08-07T07:14:20Z",
-      "ageHours": 24,
-      "author": "applefanaimail-blip",
-      "authorUrl": "https://github.com/applefanaimail-blip",
-      "category": "ecosystem listing",
-      "networks": [
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://bridgenode.cc",
-        "https://bridgenode.cc/openapi.json"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/bridgenode/metadata.json",
-        "typescript/site/public/logos/bridgenode.jpg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/bridgenode/metadata.json"
-      ],
-      "summary": "Add BridgeNode to the x402 ecosystem directory as a **Services/Endpoints** entry.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path"
-      ],
-      "priorityScore": 64,
-      "priority": "urgent"
-    },
-    {
-      "number": 277,
-      "title": "Fail loudly when toClientEvmSigner gets a signer without an address",
-      "url": "https://github.com/coinbase/x402/pull/277",
-      "state": "open",
-      "createdAt": "2026-08-07T06:32:03Z",
-      "updatedAt": "2026-08-07T06:32:20Z",
-      "ageHours": 10,
-      "author": "tevfikefeaydin",
-      "authorUrl": "https://github.com/tevfikefeaydin",
-      "category": "protocol implementation",
-      "networks": [],
-      "maxPriceUsd": 0,
-      "urls": [],
-      "files": [
-        "typescript/.changeset/tidy-buses-check.md",
-        "typescript/packages/mechanisms/evm/src/signer.ts",
-        "typescript/packages/mechanisms/evm/test/unit/signer.test.ts"
-      ],
-      "ecosystemFiles": [],
-      "summary": "`toClientEvmSigner` copies `signer.address` without checking it exists. A viem",
-      "reasons": [
-        "browser/payment-header behavior"
-      ],
-      "priorityScore": 30,
-      "priority": "watch"
-    },
-    {
-      "number": 275,
-      "title": "Add VDM Nexus to ecosystem (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/275",
-      "state": "open",
-      "createdAt": "2026-08-06T07:28:31Z",
-      "updatedAt": "2026-08-06T07:28:41Z",
-      "ageHours": 33,
-      "author": "2504VDM",
-      "authorUrl": "https://github.com/2504VDM",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "mainnet",
-        "testnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://nexus.vdmnexus.com/api/v1/chat/completions",
-        "https://docs.vdmnexus.com",
-        "https://verify.vdmnexus.com",
-        "https://docs.vdmnexus.com/docs/spec/sir-v2",
-        "https://claude.com/claude-code"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json",
-        "typescript/site/public/logos/vdm-nexus.svg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json"
-      ],
-      "summary": "Adds VDM Nexus to the ecosystem directory under Services/Endpoints.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path"
-      ],
-      "priorityScore": 72,
-      "priority": "urgent"
-    },
-    {
       "number": 272,
       "title": "ecosystem: add cogDepot (Services/Endpoints)",
       "url": "https://github.com/coinbase/x402/pull/272",
-      "state": "open",
+      "state": "closed",
       "createdAt": "2026-08-03T22:54:04Z",
-      "updatedAt": "2026-08-05T10:18:53Z",
-      "ageHours": 89,
+      "updatedAt": "2026-08-08T14:36:38Z",
+      "ageHours": 113,
       "author": "Avraham-K",
       "authorUrl": "https://github.com/Avraham-K",
       "category": "ecosystem listing",
@@ -828,13 +687,229 @@
       "priority": "review"
     },
     {
+      "number": 276,
+      "title": "Add BridgeNode to Ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/276",
+      "state": "open",
+      "createdAt": "2026-08-06T16:33:51Z",
+      "updatedAt": "2026-08-08T12:33:39Z",
+      "ageHours": 47,
+      "author": "applefanaimail-blip",
+      "authorUrl": "https://github.com/applefanaimail-blip",
+      "category": "ecosystem listing",
+      "networks": [
+        "Solana",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://bridgenode.cc",
+        "https://bridgenode.cc/openapi.json"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/bridgenode/metadata.json",
+        "typescript/site/public/logos/bridgenode.jpg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/bridgenode/metadata.json"
+      ],
+      "summary": "Add BridgeNode to the x402 ecosystem directory as a **Services/Endpoints** entry.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    },
+    {
+      "number": 242,
+      "title": "Add DeskCrew to the ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/242",
+      "state": "open",
+      "createdAt": "2026-07-13T09:45:46Z",
+      "updatedAt": "2026-08-08T01:38:43Z",
+      "ageHours": 630,
+      "author": "webmilmind1",
+      "authorUrl": "https://github.com/webmilmind1",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://deskcrew.io/.well-known/x402"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/deskcrew/metadata.json",
+        "typescript/site/public/logos/deskcrew.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/deskcrew/metadata.json"
+      ],
+      "summary": "Adds DeskCrew to the ecosystem partners list: one metadata entry and a logo. No",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "priorityScore": 68,
+      "priority": "urgent"
+    },
+    {
+      "number": 279,
+      "title": "Add AG Pay Server to x402 ecosystem partners (ag-pay)",
+      "url": "https://github.com/coinbase/x402/pull/279",
+      "state": "open",
+      "createdAt": "2026-08-07T22:25:11Z",
+      "updatedAt": "2026-08-07T22:25:21Z",
+      "ageHours": 17,
+      "author": "squadan",
+      "authorUrl": "https://github.com/squadan",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.05,
+      "urls": [
+        "https://facilitator.payai.network",
+        "https://ivory-gradually-collaborative-fingers.trycloudflare.com"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/ag-pay/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/ag-pay/metadata.json"
+      ],
+      "summary": "Adds `ag-pay` to the x402 ecosystem directory. A self-hosted Hermes + NVIDIA NIM (minimax-m3) pay-per-request server settling through the PayAI facilitator on Base mainnet (eip155:8453).",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 94,
+      "priority": "urgent"
+    },
+    {
+      "number": 278,
+      "title": "Add agent-tools.net to ecosystem directory",
+      "url": "https://github.com/coinbase/x402/pull/278",
+      "state": "open",
+      "createdAt": "2026-08-07T08:30:08Z",
+      "updatedAt": "2026-08-07T08:30:24Z",
+      "ageHours": 31,
+      "author": "karucosu",
+      "authorUrl": "https://github.com/karucosu",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://agent-tools.net"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json",
+        "typescript/site/public/logos/agent-tools-net.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json"
+      ],
+      "summary": "Adds agent-tools.net, an x402-gated API marketplace for AI agents (page-to-Markdown extraction, page metadata extraction, and a directory where third parties can list their own agent-facing tool for a flat x402 fee). Live on Base mainnet USDC via the CDP-hosted facilitator.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    },
+    {
+      "number": 277,
+      "title": "Fail loudly when toClientEvmSigner gets a signer without an address",
+      "url": "https://github.com/coinbase/x402/pull/277",
+      "state": "open",
+      "createdAt": "2026-08-07T06:32:03Z",
+      "updatedAt": "2026-08-07T06:32:20Z",
+      "ageHours": 33,
+      "author": "tevfikefeaydin",
+      "authorUrl": "https://github.com/tevfikefeaydin",
+      "category": "protocol implementation",
+      "networks": [],
+      "maxPriceUsd": 0,
+      "urls": [],
+      "files": [
+        "typescript/.changeset/tidy-buses-check.md",
+        "typescript/packages/mechanisms/evm/src/signer.ts",
+        "typescript/packages/mechanisms/evm/test/unit/signer.test.ts"
+      ],
+      "ecosystemFiles": [],
+      "summary": "`toClientEvmSigner` copies `signer.address` without checking it exists. A viem",
+      "reasons": [
+        "browser/payment-header behavior"
+      ],
+      "priorityScore": 30,
+      "priority": "watch"
+    },
+    {
+      "number": 275,
+      "title": "Add VDM Nexus to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/275",
+      "state": "open",
+      "createdAt": "2026-08-06T07:28:31Z",
+      "updatedAt": "2026-08-06T07:28:41Z",
+      "ageHours": 56,
+      "author": "2504VDM",
+      "authorUrl": "https://github.com/2504VDM",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "mainnet",
+        "testnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://nexus.vdmnexus.com/api/v1/chat/completions",
+        "https://docs.vdmnexus.com",
+        "https://verify.vdmnexus.com",
+        "https://docs.vdmnexus.com/docs/spec/sir-v2",
+        "https://claude.com/claude-code"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json",
+        "typescript/site/public/logos/vdm-nexus.svg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json"
+      ],
+      "summary": "Adds VDM Nexus to the ecosystem directory under Services/Endpoints.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    },
+    {
       "number": 274,
       "title": "Feat arkhe timechain 7782781246610880059",
       "url": "https://github.com/coinbase/x402/pull/274",
       "state": "open",
       "createdAt": "2026-08-04T18:36:34Z",
       "updatedAt": "2026-08-04T18:37:08Z",
-      "ageHours": 70,
+      "ageHours": 93,
       "author": "arkhe-genesis",
       "authorUrl": "https://github.com/arkhe-genesis",
       "category": "protocol implementation",
@@ -958,7 +1033,7 @@
       "state": "open",
       "createdAt": "2026-08-04T14:37:37Z",
       "updatedAt": "2026-08-04T14:38:04Z",
-      "ageHours": 74,
+      "ageHours": 97,
       "author": "cv-scvd",
       "authorUrl": "https://github.com/cv-scvd",
       "category": "ecosystem listing",
@@ -998,7 +1073,7 @@
       "state": "open",
       "createdAt": "2026-07-19T23:42:27Z",
       "updatedAt": "2026-08-02T04:34:34Z",
-      "ageHours": 448,
+      "ageHours": 472,
       "author": "holistis",
       "authorUrl": "https://github.com/holistis",
       "category": "ecosystem listing",
@@ -1035,7 +1110,7 @@
       "state": "open",
       "createdAt": "2026-08-01T18:58:49Z",
       "updatedAt": "2026-08-01T18:59:00Z",
-      "ageHours": 141,
+      "ageHours": 165,
       "author": "vsdawkins-creator",
       "authorUrl": "https://github.com/vsdawkins-creator",
       "category": "ecosystem listing",
@@ -1072,7 +1147,7 @@
       "state": "open",
       "createdAt": "2026-07-19T15:16:53Z",
       "updatedAt": "2026-08-01T17:43:33Z",
-      "ageHours": 457,
+      "ageHours": 481,
       "author": "holistis",
       "authorUrl": "https://github.com/holistis",
       "category": "ecosystem listing",
@@ -1108,7 +1183,7 @@
       "state": "open",
       "createdAt": "2026-08-01T11:07:34Z",
       "updatedAt": "2026-08-01T11:09:16Z",
-      "ageHours": 149,
+      "ageHours": 173,
       "author": "PatrickPi1312",
       "authorUrl": "https://github.com/PatrickPi1312",
       "category": "ecosystem listing",
@@ -1145,7 +1220,7 @@
       "state": "open",
       "createdAt": "2026-08-01T02:45:45Z",
       "updatedAt": "2026-08-01T02:45:55Z",
-      "ageHours": 157,
+      "ageHours": 181,
       "author": "davebirnbaum",
       "authorUrl": "https://github.com/davebirnbaum",
       "category": "ecosystem listing",
@@ -1178,7 +1253,7 @@
       "state": "open",
       "createdAt": "2026-07-31T19:22:46Z",
       "updatedAt": "2026-07-31T19:23:03Z",
-      "ageHours": 165,
+      "ageHours": 188,
       "author": "donnywin85",
       "authorUrl": "https://github.com/donnywin85",
       "category": "ecosystem listing",
@@ -1213,7 +1288,7 @@
       "state": "open",
       "createdAt": "2026-07-29T14:25:07Z",
       "updatedAt": "2026-07-30T11:07:16Z",
-      "ageHours": 218,
+      "ageHours": 241,
       "author": "malin-globalinfratech",
       "authorUrl": "https://github.com/malin-globalinfratech",
       "category": "ecosystem listing",
@@ -1246,81 +1321,47 @@
       ],
       "priorityScore": 76,
       "priority": "urgent"
-    },
-    {
-      "number": 267,
-      "title": "ecosystem: add Hexanon (family of 8 pay-per-call x402 APIs)",
-      "url": "https://github.com/coinbase/x402/pull/267",
-      "state": "open",
-      "createdAt": "2026-07-30T06:22:40Z",
-      "updatedAt": "2026-07-30T06:22:51Z",
-      "ageHours": 202,
-      "author": "jcislo",
-      "authorUrl": "https://github.com/jcislo",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://hexanon.dev"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/hexanon/metadata.json",
-        "typescript/site/public/logos/hexanon.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/hexanon/metadata.json"
-      ],
-      "summary": "Adds one ecosystem entry for **Hexanon** — a family of eight independently operated, pay-per-call x402 APIs for autonomous agents (no signup, no keys, USDC on Base):",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface"
-      ],
-      "priorityScore": 44,
-      "priority": "review"
-    },
-    {
-      "number": 266,
-      "title": "Ecosystem: add Second Opinion (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/266",
-      "state": "open",
-      "createdAt": "2026-07-29T20:28:55Z",
-      "updatedAt": "2026-07-29T20:29:13Z",
-      "ageHours": 212,
-      "author": "secondopinionx402",
-      "authorUrl": "https://github.com/secondopinionx402",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://secondopinionx402.com/benchmark",
-        "https://x402-list.com/services/second-opinion-ms0hen6l-0"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/second-opinion/metadata.json",
-        "typescript/site/public/logos/second-opinion.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/second-opinion/metadata.json"
-      ],
-      "summary": "Adds Second Opinion to the ecosystem page under Services/Endpoints.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path"
-      ],
-      "priorityScore": 64,
-      "priority": "urgent"
     }
   ],
   "rows": [
+    {
+      "number": 279,
+      "title": "Add AG Pay Server to x402 ecosystem partners (ag-pay)",
+      "url": "https://github.com/coinbase/x402/pull/279",
+      "state": "open",
+      "createdAt": "2026-08-07T22:25:11Z",
+      "updatedAt": "2026-08-07T22:25:21Z",
+      "ageHours": 17,
+      "author": "squadan",
+      "authorUrl": "https://github.com/squadan",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0.05,
+      "urls": [
+        "https://facilitator.payai.network",
+        "https://ivory-gradually-collaborative-fingers.trycloudflare.com"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/ag-pay/metadata.json"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/ag-pay/metadata.json"
+      ],
+      "summary": "Adds `ag-pay` to the x402 ecosystem directory. A self-hosted Hermes + NVIDIA NIM (minimax-m3) pay-per-request server settling through the PayAI facilitator on Base mainnet (eip155:8453).",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "trust or risk claims",
+        "mainnet value path",
+        "declared paid calls"
+      ],
+      "priorityScore": 94,
+      "priority": "urgent"
+    },
     {
       "number": 161,
       "title": "ecosystem: add RugGuard — pre-trade rug-check API for AI agents",
@@ -1328,7 +1369,7 @@
       "state": "open",
       "createdAt": "2026-05-11T18:10:17Z",
       "updatedAt": "2026-07-05T10:13:55Z",
-      "ageHours": 2110,
+      "ageHours": 2134,
       "author": "dbe006",
       "authorUrl": "https://github.com/dbe006",
       "category": "ecosystem listing",
@@ -1366,7 +1407,7 @@
       "state": "open",
       "createdAt": "2026-07-26T01:16:01Z",
       "updatedAt": "2026-07-26T01:16:12Z",
-      "ageHours": 303,
+      "ageHours": 327,
       "author": "letom1176-spec",
       "authorUrl": "https://github.com/letom1176-spec",
       "category": "ecosystem listing",
@@ -1405,7 +1446,7 @@
       "state": "open",
       "createdAt": "2026-07-08T08:15:09Z",
       "updatedAt": "2026-07-10T03:13:09Z",
-      "ageHours": 728,
+      "ageHours": 752,
       "author": "fablerlabs",
       "authorUrl": "https://github.com/fablerlabs",
       "category": "ecosystem listing",
@@ -1446,7 +1487,7 @@
       "state": "open",
       "createdAt": "2026-07-04T20:48:55Z",
       "updatedAt": "2026-07-07T13:56:16Z",
-      "ageHours": 811,
+      "ageHours": 835,
       "author": "GeorgeSpring",
       "authorUrl": "https://github.com/GeorgeSpring",
       "category": "ecosystem listing",
@@ -1489,7 +1530,7 @@
       "state": "open",
       "createdAt": "2026-06-20T11:54:35Z",
       "updatedAt": "2026-06-20T11:55:10Z",
-      "ageHours": 1156,
+      "ageHours": 1180,
       "author": "attestifyagent",
       "authorUrl": "https://github.com/attestifyagent",
       "category": "ecosystem listing",
@@ -1626,7 +1667,7 @@
       "state": "open",
       "createdAt": "2026-05-07T19:16:56Z",
       "updatedAt": "2026-06-16T23:51:24Z",
-      "ageHours": 2205,
+      "ageHours": 2229,
       "author": "alvintanpoco",
       "authorUrl": "https://github.com/alvintanpoco",
       "category": "ecosystem listing",
@@ -1669,7 +1710,7 @@
       "state": "open",
       "createdAt": "2026-07-29T14:25:07Z",
       "updatedAt": "2026-07-30T11:07:16Z",
-      "ageHours": 218,
+      "ageHours": 241,
       "author": "malin-globalinfratech",
       "authorUrl": "https://github.com/malin-globalinfratech",
       "category": "ecosystem listing",
@@ -1710,7 +1751,7 @@
       "state": "open",
       "createdAt": "2026-07-01T20:51:27Z",
       "updatedAt": "2026-07-01T20:51:36Z",
-      "ageHours": 883,
+      "ageHours": 907,
       "author": "aitools420",
       "authorUrl": "https://github.com/aitools420",
       "category": "ecosystem listing",
@@ -1750,7 +1791,7 @@
       "state": "closed",
       "createdAt": "2026-05-28T16:19:34Z",
       "updatedAt": "2026-06-27T19:06:41Z",
-      "ageHours": 1704,
+      "ageHours": 1728,
       "author": "Bigabou007-dev",
       "authorUrl": "https://github.com/Bigabou007-dev",
       "category": "ecosystem listing",
@@ -1792,7 +1833,7 @@
       "state": "open",
       "createdAt": "2026-08-01T11:07:34Z",
       "updatedAt": "2026-08-01T11:09:16Z",
-      "ageHours": 149,
+      "ageHours": 173,
       "author": "PatrickPi1312",
       "authorUrl": "https://github.com/PatrickPi1312",
       "category": "ecosystem listing",
@@ -1829,7 +1870,7 @@
       "state": "open",
       "createdAt": "2026-07-29T06:58:45Z",
       "updatedAt": "2026-07-29T08:58:58Z",
-      "ageHours": 225,
+      "ageHours": 249,
       "author": "mamenesia",
       "authorUrl": "https://github.com/mamenesia",
       "category": "ecosystem listing",
@@ -1869,7 +1910,7 @@
       "state": "open",
       "createdAt": "2026-07-29T02:11:13Z",
       "updatedAt": "2026-07-29T02:11:29Z",
-      "ageHours": 230,
+      "ageHours": 254,
       "author": "wyattpalm2-eng",
       "authorUrl": "https://github.com/wyattpalm2-eng",
       "category": "ecosystem listing",
@@ -1907,7 +1948,7 @@
       "state": "open",
       "createdAt": "2026-07-11T01:38:03Z",
       "updatedAt": "2026-07-15T16:16:23Z",
-      "ageHours": 663,
+      "ageHours": 686,
       "author": "levelsofself",
       "authorUrl": "https://github.com/levelsofself",
       "category": "ecosystem listing",
@@ -1945,7 +1986,7 @@
       "state": "open",
       "createdAt": "2026-06-02T21:59:49Z",
       "updatedAt": "2026-06-02T22:00:22Z",
-      "ageHours": 1578,
+      "ageHours": 1602,
       "author": "philpof102-svg",
       "authorUrl": "https://github.com/philpof102-svg",
       "category": "ecosystem listing",
@@ -2081,7 +2122,7 @@
       "state": "open",
       "createdAt": "2026-05-15T18:46:48Z",
       "updatedAt": "2026-05-27T19:31:04Z",
-      "ageHours": 2013,
+      "ageHours": 2037,
       "author": "andysalvo",
       "authorUrl": "https://github.com/andysalvo",
       "category": "ecosystem listing",
@@ -2123,7 +2164,7 @@
       "state": "open",
       "createdAt": "2026-05-21T08:41:59Z",
       "updatedAt": "2026-05-26T15:05:30Z",
-      "ageHours": 1880,
+      "ageHours": 1903,
       "author": "SASN19",
       "authorUrl": "https://github.com/SASN19",
       "category": "ecosystem listing",
@@ -2156,93 +2197,13 @@
       "priority": "urgent"
     },
     {
-      "number": 275,
-      "title": "Add VDM Nexus to ecosystem (Services/Endpoints)",
-      "url": "https://github.com/coinbase/x402/pull/275",
-      "state": "open",
-      "createdAt": "2026-08-06T07:28:31Z",
-      "updatedAt": "2026-08-06T07:28:41Z",
-      "ageHours": 33,
-      "author": "2504VDM",
-      "authorUrl": "https://github.com/2504VDM",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "mainnet",
-        "testnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://nexus.vdmnexus.com/api/v1/chat/completions",
-        "https://docs.vdmnexus.com",
-        "https://verify.vdmnexus.com",
-        "https://docs.vdmnexus.com/docs/spec/sir-v2",
-        "https://claude.com/claude-code"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json",
-        "typescript/site/public/logos/vdm-nexus.svg"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json"
-      ],
-      "summary": "Adds VDM Nexus to the ecosystem directory under Services/Endpoints.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path"
-      ],
-      "priorityScore": 72,
-      "priority": "urgent"
-    },
-    {
-      "number": 164,
-      "title": "feat: add Jorkal NFT Data API to ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/164",
-      "state": "open",
-      "createdAt": "2026-05-15T11:22:14Z",
-      "updatedAt": "2026-05-25T23:15:31Z",
-      "ageHours": 2021,
-      "author": "jorkal-crypto",
-      "authorUrl": "https://github.com/jorkal-crypto",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "Solana",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0.005,
-      "urls": [
-        "https://vercel-deploy-alpha-puce.vercel.app",
-        "https://www.x402scan.com/server/8c591070-fcf5-4f18-becb-e829c1f42640"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json",
-        "typescript/site/public/logos/jorkal-nft-api.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/jorkal-nft-api/metadata.json"
-      ],
-      "summary": "Adds Jorkal NFT Data API to the x402 ecosystem directory.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path",
-        "declared paid calls"
-      ],
-      "priorityScore": 72,
-      "priority": "urgent"
-    },
-    {
       "number": 249,
       "title": "Add BrazilMCP to the ecosystem page (Services/Endpoints)",
       "url": "https://github.com/coinbase/x402/pull/249",
       "state": "open",
       "createdAt": "2026-07-15T23:37:18Z",
       "updatedAt": "2026-07-18T00:54:20Z",
-      "ageHours": 545,
+      "ageHours": 568,
       "author": "jdcarvalho",
       "authorUrl": "https://github.com/jdcarvalho",
       "category": "ecosystem listing",
@@ -2330,13 +2291,50 @@
       "priority": "urgent"
     },
     {
+      "number": 242,
+      "title": "Add DeskCrew to the ecosystem",
+      "url": "https://github.com/coinbase/x402/pull/242",
+      "state": "open",
+      "createdAt": "2026-07-13T09:45:46Z",
+      "updatedAt": "2026-08-08T01:38:43Z",
+      "ageHours": 630,
+      "author": "webmilmind1",
+      "authorUrl": "https://github.com/webmilmind1",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://deskcrew.io/.well-known/x402"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/deskcrew/metadata.json",
+        "typescript/site/public/logos/deskcrew.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/deskcrew/metadata.json"
+      ],
+      "summary": "Adds DeskCrew to the ecosystem partners list: one metadata entry and a logo. No",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "settlement or checkout workflow",
+        "mainnet value path"
+      ],
+      "priorityScore": 68,
+      "priority": "urgent"
+    },
+    {
       "number": 250,
       "title": "Add Agent Utility API to ecosystem (Services/Endpoints)",
       "url": "https://github.com/coinbase/x402/pull/250",
       "state": "open",
       "createdAt": "2026-07-16T15:34:40Z",
       "updatedAt": "2026-07-16T15:34:52Z",
-      "ageHours": 529,
+      "ageHours": 552,
       "author": "eamondidier-ux",
       "authorUrl": "https://github.com/eamondidier-ux",
       "category": "ecosystem listing",
@@ -2373,7 +2371,7 @@
       "state": "open",
       "createdAt": "2026-06-23T13:21:15Z",
       "updatedAt": "2026-06-23T13:25:12Z",
-      "ageHours": 1083,
+      "ageHours": 1106,
       "author": "MarvinRey7879",
       "authorUrl": "https://github.com/MarvinRey7879",
       "category": "ecosystem listing",
@@ -2410,7 +2408,7 @@
       "state": "open",
       "createdAt": "2026-07-19T23:42:27Z",
       "updatedAt": "2026-08-02T04:34:34Z",
-      "ageHours": 448,
+      "ageHours": 472,
       "author": "holistis",
       "authorUrl": "https://github.com/holistis",
       "category": "ecosystem listing",
@@ -2447,7 +2445,7 @@
       "state": "open",
       "createdAt": "2026-07-16T19:53:50Z",
       "updatedAt": "2026-07-16T19:54:01Z",
-      "ageHours": 524,
+      "ageHours": 548,
       "author": "Mazeh18",
       "authorUrl": "https://github.com/Mazeh18",
       "category": "ecosystem listing",
@@ -2486,7 +2484,7 @@
       "state": "closed",
       "createdAt": "2026-06-17T21:52:55Z",
       "updatedAt": "2026-06-17T21:53:45Z",
-      "ageHours": 1218,
+      "ageHours": 1242,
       "author": "gapup-team",
       "authorUrl": "https://github.com/gapup-team",
       "category": "ecosystem listing",
@@ -2619,7 +2617,7 @@
       "state": "open",
       "createdAt": "2026-06-12T19:10:13Z",
       "updatedAt": "2026-06-12T19:10:26Z",
-      "ageHours": 1341,
+      "ageHours": 1365,
       "author": "aiscan-app",
       "authorUrl": "https://github.com/aiscan-app",
       "category": "ecosystem listing",
@@ -2658,7 +2656,7 @@
       "state": "open",
       "createdAt": "2026-06-10T22:30:12Z",
       "updatedAt": "2026-06-10T22:30:22Z",
-      "ageHours": 1386,
+      "ageHours": 1409,
       "author": "sbynode-ux",
       "authorUrl": "https://github.com/sbynode-ux",
       "category": "ecosystem listing",
@@ -2690,49 +2688,13 @@
       "priority": "urgent"
     },
     {
-      "number": 278,
-      "title": "Add agent-tools.net to ecosystem directory",
-      "url": "https://github.com/coinbase/x402/pull/278",
-      "state": "open",
-      "createdAt": "2026-08-07T08:30:08Z",
-      "updatedAt": "2026-08-07T08:30:24Z",
-      "ageHours": 8,
-      "author": "karucosu",
-      "authorUrl": "https://github.com/karucosu",
-      "category": "ecosystem listing",
-      "networks": [
-        "Base",
-        "USDC",
-        "mainnet"
-      ],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://agent-tools.net"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json",
-        "typescript/site/public/logos/agent-tools-net.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json"
-      ],
-      "summary": "Adds agent-tools.net, an x402-gated API marketplace for AI agents (page-to-Markdown extraction, page metadata extraction, and a directory where third parties can list their own agent-facing tool for a flat x402 fee). Live on Base mainnet USDC via the CDP-hosted facilitator.",
-      "reasons": [
-        "public ecosystem listing",
-        "agent-discoverable surface",
-        "mainnet value path"
-      ],
-      "priorityScore": 64,
-      "priority": "urgent"
-    },
-    {
       "number": 276,
       "title": "Add BridgeNode to Ecosystem (Services/Endpoints)",
       "url": "https://github.com/coinbase/x402/pull/276",
       "state": "open",
       "createdAt": "2026-08-06T16:33:51Z",
-      "updatedAt": "2026-08-07T07:14:20Z",
-      "ageHours": 24,
+      "updatedAt": "2026-08-08T12:33:39Z",
+      "ageHours": 47,
       "author": "applefanaimail-blip",
       "authorUrl": "https://github.com/applefanaimail-blip",
       "category": "ecosystem listing",
@@ -2763,13 +2725,90 @@
       "priority": "urgent"
     },
     {
+      "number": 278,
+      "title": "Add agent-tools.net to ecosystem directory",
+      "url": "https://github.com/coinbase/x402/pull/278",
+      "state": "open",
+      "createdAt": "2026-08-07T08:30:08Z",
+      "updatedAt": "2026-08-07T08:30:24Z",
+      "ageHours": 31,
+      "author": "karucosu",
+      "authorUrl": "https://github.com/karucosu",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "USDC",
+        "mainnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://agent-tools.net"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json",
+        "typescript/site/public/logos/agent-tools-net.png"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/agent-tools-net/metadata.json"
+      ],
+      "summary": "Adds agent-tools.net, an x402-gated API marketplace for AI agents (page-to-Markdown extraction, page metadata extraction, and a directory where third parties can list their own agent-facing tool for a flat x402 fee). Live on Base mainnet USDC via the CDP-hosted facilitator.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    },
+    {
+      "number": 275,
+      "title": "Add VDM Nexus to ecosystem (Services/Endpoints)",
+      "url": "https://github.com/coinbase/x402/pull/275",
+      "state": "open",
+      "createdAt": "2026-08-06T07:28:31Z",
+      "updatedAt": "2026-08-06T07:28:41Z",
+      "ageHours": 56,
+      "author": "2504VDM",
+      "authorUrl": "https://github.com/2504VDM",
+      "category": "ecosystem listing",
+      "networks": [
+        "Base",
+        "Solana",
+        "mainnet",
+        "testnet"
+      ],
+      "maxPriceUsd": 0,
+      "urls": [
+        "https://nexus.vdmnexus.com/api/v1/chat/completions",
+        "https://docs.vdmnexus.com",
+        "https://verify.vdmnexus.com",
+        "https://docs.vdmnexus.com/docs/spec/sir-v2",
+        "https://claude.com/claude-code"
+      ],
+      "files": [
+        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json",
+        "typescript/site/public/logos/vdm-nexus.svg"
+      ],
+      "ecosystemFiles": [
+        "typescript/site/app/ecosystem/partners-data/vdm-nexus/metadata.json"
+      ],
+      "summary": "Adds VDM Nexus to the ecosystem directory under Services/Endpoints.",
+      "reasons": [
+        "public ecosystem listing",
+        "agent-discoverable surface",
+        "mainnet value path"
+      ],
+      "priorityScore": 64,
+      "priority": "urgent"
+    },
+    {
       "number": 271,
       "title": "Add LedgerProof LAIN to the x402 ecosystem",
       "url": "https://github.com/coinbase/x402/pull/271",
       "state": "open",
       "createdAt": "2026-08-01T18:58:49Z",
       "updatedAt": "2026-08-01T18:59:00Z",
-      "ageHours": 141,
+      "ageHours": 165,
       "author": "vsdawkins-creator",
       "authorUrl": "https://github.com/vsdawkins-creator",
       "category": "ecosystem listing",
@@ -2806,7 +2845,7 @@
       "state": "open",
       "createdAt": "2026-07-29T20:28:55Z",
       "updatedAt": "2026-07-29T20:29:13Z",
-      "ageHours": 212,
+      "ageHours": 235,
       "author": "secondopinionx402",
       "authorUrl": "https://github.com/secondopinionx402",
       "category": "ecosystem listing",
@@ -2844,7 +2883,7 @@
       "state": "open",
       "createdAt": "2026-07-29T15:29:57Z",
       "updatedAt": "2026-07-29T15:30:13Z",
-      "ageHours": 217,
+      "ageHours": 240,
       "author": "predge-ai",
       "authorUrl": "https://github.com/predge-ai",
       "category": "ecosystem listing",
@@ -2881,7 +2920,7 @@
       "state": "open",
       "createdAt": "2026-07-22T05:33:32Z",
       "updatedAt": "2026-07-22T05:33:41Z",
-      "ageHours": 395,
+      "ageHours": 418,
       "author": "brawlaphant",
       "authorUrl": "https://github.com/brawlaphant",
       "category": "ecosystem listing",
@@ -2921,7 +2960,7 @@
       "state": "open",
       "createdAt": "2026-07-10T15:50:33Z",
       "updatedAt": "2026-07-21T03:19:36Z",
-      "ageHours": 672,
+      "ageHours": 696,
       "author": "MikeyPetrillo",
       "authorUrl": "https://github.com/MikeyPetrillo",
       "category": "ecosystem listing",
@@ -2958,7 +2997,7 @@
       "state": "open",
       "createdAt": "2026-07-14T18:50:37Z",
       "updatedAt": "2026-07-14T18:51:20Z",
-      "ageHours": 573,
+      "ageHours": 597,
       "author": "seekdaseek",
       "authorUrl": "https://github.com/seekdaseek",
       "category": "ecosystem listing",
@@ -2996,7 +3035,7 @@
       "state": "closed",
       "createdAt": "2026-07-12T21:49:33Z",
       "updatedAt": "2026-07-14T16:45:54Z",
-      "ageHours": 618,
+      "ageHours": 642,
       "author": "Foshap",
       "authorUrl": "https://github.com/Foshap",
       "category": "ecosystem listing",
@@ -3033,7 +3072,7 @@
       "state": "open",
       "createdAt": "2026-07-10T23:33:08Z",
       "updatedAt": "2026-07-10T23:34:20Z",
-      "ageHours": 665,
+      "ageHours": 688,
       "author": "Satelink-Protocol",
       "authorUrl": "https://github.com/Satelink-Protocol",
       "category": "ecosystem listing",
@@ -3070,7 +3109,7 @@
       "state": "closed",
       "createdAt": "2026-06-14T03:25:33Z",
       "updatedAt": "2026-07-10T15:53:53Z",
-      "ageHours": 1309,
+      "ageHours": 1332,
       "author": "MikeyPetrillo",
       "authorUrl": "https://github.com/MikeyPetrillo",
       "category": "ecosystem listing",
@@ -3108,7 +3147,7 @@
       "state": "open",
       "createdAt": "2026-07-09T12:46:11Z",
       "updatedAt": "2026-07-09T12:46:18Z",
-      "ageHours": 699,
+      "ageHours": 723,
       "author": "This-Is-Hellgate",
       "authorUrl": "https://github.com/This-Is-Hellgate",
       "category": "ecosystem listing",
@@ -3149,7 +3188,7 @@
       "state": "closed",
       "createdAt": "2026-07-03T22:10:57Z",
       "updatedAt": "2026-07-03T22:49:48Z",
-      "ageHours": 834,
+      "ageHours": 858,
       "author": "clawdbotworker",
       "authorUrl": "https://github.com/clawdbotworker",
       "category": "ecosystem listing",
@@ -3187,7 +3226,7 @@
       "state": "open",
       "createdAt": "2026-06-25T18:28:08Z",
       "updatedAt": "2026-06-25T18:28:20Z",
-      "ageHours": 1030,
+      "ageHours": 1053,
       "author": "dharris289-cyber",
       "authorUrl": "https://github.com/dharris289-cyber",
       "category": "ecosystem listing",
@@ -3224,7 +3263,7 @@
       "state": "closed",
       "createdAt": "2026-05-28T04:43:01Z",
       "updatedAt": "2026-05-28T05:37:00Z",
-      "ageHours": 1715,
+      "ageHours": 1739,
       "author": "Ivan-LB",
       "authorUrl": "https://github.com/Ivan-LB",
       "category": "ecosystem listing",
@@ -3261,7 +3300,7 @@
       "state": "open",
       "createdAt": "2026-07-14T16:10:08Z",
       "updatedAt": "2026-07-14T16:10:19Z",
-      "ageHours": 576,
+      "ageHours": 600,
       "author": "eltociear",
       "authorUrl": "https://github.com/eltociear",
       "category": "ecosystem listing",
@@ -3295,7 +3334,7 @@
       "state": "closed",
       "createdAt": "2026-06-17T12:48:39Z",
       "updatedAt": "2026-07-14T16:07:51Z",
-      "ageHours": 1227,
+      "ageHours": 1251,
       "author": "eltociear",
       "authorUrl": "https://github.com/eltociear",
       "category": "ecosystem listing",
@@ -3329,7 +3368,7 @@
       "state": "open",
       "createdAt": "2026-06-21T01:36:55Z",
       "updatedAt": "2026-06-21T01:37:06Z",
-      "ageHours": 1143,
+      "ageHours": 1166,
       "author": "PaulieB14",
       "authorUrl": "https://github.com/PaulieB14",
       "category": "ecosystem listing",
@@ -3368,7 +3407,7 @@
       "state": "open",
       "createdAt": "2026-06-18T11:06:08Z",
       "updatedAt": "2026-06-18T11:28:25Z",
-      "ageHours": 1205,
+      "ageHours": 1229,
       "author": "kaditang",
       "authorUrl": "https://github.com/kaditang",
       "category": "ecosystem listing",
@@ -3409,7 +3448,7 @@
       "state": "open",
       "createdAt": "2026-05-20T02:11:54Z",
       "updatedAt": "2026-06-12T18:23:08Z",
-      "ageHours": 1910,
+      "ageHours": 1934,
       "author": "cmdenney",
       "authorUrl": "https://github.com/cmdenney",
       "category": "ecosystem listing",
@@ -3447,7 +3486,7 @@
       "state": "open",
       "createdAt": "2026-06-09T19:34:52Z",
       "updatedAt": "2026-06-09T19:35:06Z",
-      "ageHours": 1413,
+      "ageHours": 1436,
       "author": "pfeilisolana",
       "authorUrl": "https://github.com/pfeilisolana",
       "category": "ecosystem listing",
@@ -3483,7 +3522,7 @@
       "state": "open",
       "createdAt": "2026-07-23T06:42:39Z",
       "updatedAt": "2026-07-23T06:42:48Z",
-      "ageHours": 369,
+      "ageHours": 393,
       "author": "anhmtk",
       "authorUrl": "https://github.com/anhmtk",
       "category": "protocol implementation",
@@ -3521,7 +3560,7 @@
       "state": "closed",
       "createdAt": "2026-06-05T03:48:32Z",
       "updatedAt": "2026-06-07T07:27:24Z",
-      "ageHours": 1524,
+      "ageHours": 1548,
       "author": "John-Weeks-Dev",
       "authorUrl": "https://github.com/John-Weeks-Dev",
       "category": "ecosystem listing",
@@ -3649,10 +3688,10 @@
       "number": 272,
       "title": "ecosystem: add cogDepot (Services/Endpoints)",
       "url": "https://github.com/coinbase/x402/pull/272",
-      "state": "open",
+      "state": "closed",
       "createdAt": "2026-08-03T22:54:04Z",
-      "updatedAt": "2026-08-05T10:18:53Z",
-      "ageHours": 89,
+      "updatedAt": "2026-08-08T14:36:38Z",
+      "ageHours": 113,
       "author": "Avraham-K",
       "authorUrl": "https://github.com/Avraham-K",
       "category": "ecosystem listing",
@@ -3689,7 +3728,7 @@
       "state": "open",
       "createdAt": "2026-08-04T14:37:37Z",
       "updatedAt": "2026-08-04T14:38:04Z",
-      "ageHours": 74,
+      "ageHours": 97,
       "author": "cv-scvd",
       "authorUrl": "https://github.com/cv-scvd",
       "category": "ecosystem listing",
@@ -3729,7 +3768,7 @@
       "state": "open",
       "createdAt": "2026-07-19T15:16:53Z",
       "updatedAt": "2026-08-01T17:43:33Z",
-      "ageHours": 457,
+      "ageHours": 481,
       "author": "holistis",
       "authorUrl": "https://github.com/holistis",
       "category": "ecosystem listing",
@@ -3765,7 +3804,7 @@
       "state": "open",
       "createdAt": "2026-07-27T14:22:22Z",
       "updatedAt": "2026-07-27T14:22:38Z",
-      "ageHours": 266,
+      "ageHours": 289,
       "author": "MikeyPetrillo",
       "authorUrl": "https://github.com/MikeyPetrillo",
       "category": "ecosystem listing",
@@ -3800,7 +3839,7 @@
       "state": "open",
       "createdAt": "2026-07-23T09:27:40Z",
       "updatedAt": "2026-07-23T09:27:49Z",
-      "ageHours": 367,
+      "ageHours": 390,
       "author": "sxaidev",
       "authorUrl": "https://github.com/sxaidev",
       "category": "ecosystem listing",
@@ -3835,7 +3874,7 @@
       "state": "open",
       "createdAt": "2026-07-15T03:53:02Z",
       "updatedAt": "2026-07-15T03:53:13Z",
-      "ageHours": 564,
+      "ageHours": 588,
       "author": "chuddyrudd",
       "authorUrl": "https://github.com/chuddyrudd",
       "category": "ecosystem listing",
@@ -3872,7 +3911,7 @@
       "state": "closed",
       "createdAt": "2026-07-03T22:40:24Z",
       "updatedAt": "2026-07-03T22:49:49Z",
-      "ageHours": 834,
+      "ageHours": 857,
       "author": "clawdbotworker",
       "authorUrl": "https://github.com/clawdbotworker",
       "category": "ecosystem listing",
@@ -3919,7 +3958,7 @@
       "state": "closed",
       "createdAt": "2026-06-10T08:25:35Z",
       "updatedAt": "2026-06-19T04:35:30Z",
-      "ageHours": 1400,
+      "ageHours": 1423,
       "author": "tim-r136",
       "authorUrl": "https://github.com/tim-r136",
       "category": "ecosystem listing",
@@ -3954,7 +3993,7 @@
       "state": "open",
       "createdAt": "2026-06-17T21:57:15Z",
       "updatedAt": "2026-06-17T21:57:25Z",
-      "ageHours": 1218,
+      "ageHours": 1242,
       "author": "gapup-team",
       "authorUrl": "https://github.com/gapup-team",
       "category": "ecosystem listing",
@@ -3990,7 +4029,7 @@
       "state": "open",
       "createdAt": "2026-06-11T11:50:33Z",
       "updatedAt": "2026-06-17T11:17:28Z",
-      "ageHours": 1372,
+      "ageHours": 1396,
       "author": "fiatdock",
       "authorUrl": "https://github.com/fiatdock",
       "category": "ecosystem listing",
@@ -4026,7 +4065,7 @@
       "state": "open",
       "createdAt": "2026-06-13T03:49:17Z",
       "updatedAt": "2026-06-13T03:52:11Z",
-      "ageHours": 1332,
+      "ageHours": 1356,
       "author": "luiso2",
       "authorUrl": "https://github.com/luiso2",
       "category": "ecosystem listing",
@@ -4064,7 +4103,7 @@
       "state": "open",
       "createdAt": "2026-06-12T14:31:05Z",
       "updatedAt": "2026-06-12T14:31:18Z",
-      "ageHours": 1346,
+      "ageHours": 1369,
       "author": "joshfreeland",
       "authorUrl": "https://github.com/joshfreeland",
       "category": "ecosystem listing",
@@ -4102,7 +4141,7 @@
       "state": "open",
       "createdAt": "2026-06-11T15:20:31Z",
       "updatedAt": "2026-06-11T15:20:45Z",
-      "ageHours": 1369,
+      "ageHours": 1393,
       "author": "ChrisDover",
       "authorUrl": "https://github.com/ChrisDover",
       "category": "ecosystem listing",
@@ -4141,7 +4180,7 @@
       "state": "open",
       "createdAt": "2026-07-31T19:22:46Z",
       "updatedAt": "2026-07-31T19:23:03Z",
-      "ageHours": 165,
+      "ageHours": 188,
       "author": "donnywin85",
       "authorUrl": "https://github.com/donnywin85",
       "category": "ecosystem listing",
@@ -4176,7 +4215,7 @@
       "state": "closed",
       "createdAt": "2026-05-16T19:20:33Z",
       "updatedAt": "2026-07-14T01:36:54Z",
-      "ageHours": 1989,
+      "ageHours": 2013,
       "author": "untitledfinancial",
       "authorUrl": "https://github.com/untitledfinancial",
       "category": "ecosystem listing",
@@ -4212,7 +4251,7 @@
       "state": "open",
       "createdAt": "2026-07-22T11:10:41Z",
       "updatedAt": "2026-07-22T11:10:52Z",
-      "ageHours": 389,
+      "ageHours": 413,
       "author": "azimuth-network",
       "authorUrl": "https://github.com/azimuth-network",
       "category": "ecosystem listing",
@@ -4248,7 +4287,7 @@
       "state": "closed",
       "createdAt": "2026-06-22T22:58:53Z",
       "updatedAt": "2026-07-03T12:09:00Z",
-      "ageHours": 1097,
+      "ageHours": 1121,
       "author": "true402",
       "authorUrl": "https://github.com/true402",
       "category": "ecosystem listing",
@@ -4284,7 +4323,7 @@
       "state": "open",
       "createdAt": "2026-06-12T15:19:23Z",
       "updatedAt": "2026-06-25T20:15:15Z",
-      "ageHours": 1345,
+      "ageHours": 1369,
       "author": "babyblueviper1",
       "authorUrl": "https://github.com/babyblueviper1",
       "category": "ecosystem listing",
@@ -4321,7 +4360,7 @@
       "state": "open",
       "createdAt": "2026-06-16T14:19:19Z",
       "updatedAt": "2026-06-17T22:30:03Z",
-      "ageHours": 1250,
+      "ageHours": 1274,
       "author": "manelomanu",
       "authorUrl": "https://github.com/manelomanu",
       "category": "ecosystem listing",
@@ -4356,7 +4395,7 @@
       "state": "open",
       "createdAt": "2026-06-11T15:34:25Z",
       "updatedAt": "2026-06-11T15:34:38Z",
-      "ageHours": 1369,
+      "ageHours": 1392,
       "author": "selfradiance",
       "authorUrl": "https://github.com/selfradiance",
       "category": "ecosystem listing",
@@ -4393,7 +4432,7 @@
       "state": "open",
       "createdAt": "2026-06-05T23:48:14Z",
       "updatedAt": "2026-06-05T23:48:36Z",
-      "ageHours": 1504,
+      "ageHours": 1528,
       "author": "OrbisAPI",
       "authorUrl": "https://github.com/OrbisAPI",
       "category": "ecosystem listing",
@@ -4527,7 +4566,7 @@
       "state": "open",
       "createdAt": "2026-07-15T01:01:36Z",
       "updatedAt": "2026-07-24T22:30:28Z",
-      "ageHours": 567,
+      "ageHours": 591,
       "author": "pipeabellos",
       "authorUrl": "https://github.com/pipeabellos",
       "category": "ecosystem listing",
@@ -4560,7 +4599,7 @@
       "state": "closed",
       "createdAt": "2026-07-07T16:02:41Z",
       "updatedAt": "2026-07-22T16:35:55Z",
-      "ageHours": 744,
+      "ageHours": 768,
       "author": "mcccsm",
       "authorUrl": "https://github.com/mcccsm",
       "category": "ecosystem listing",
@@ -4592,7 +4631,7 @@
       "state": "open",
       "createdAt": "2026-07-21T16:21:54Z",
       "updatedAt": "2026-07-21T16:22:04Z",
-      "ageHours": 408,
+      "ageHours": 431,
       "author": "usman-setix",
       "authorUrl": "https://github.com/usman-setix",
       "category": "ecosystem listing",
@@ -4624,7 +4663,7 @@
       "state": "closed",
       "createdAt": "2026-06-07T08:01:54Z",
       "updatedAt": "2026-06-19T19:25:56Z",
-      "ageHours": 1472,
+      "ageHours": 1496,
       "author": "John-Weeks-Dev",
       "authorUrl": "https://github.com/John-Weeks-Dev",
       "category": "ecosystem listing",
@@ -4658,7 +4697,7 @@
       "state": "open",
       "createdAt": "2026-07-14T01:46:12Z",
       "updatedAt": "2026-07-14T01:46:23Z",
-      "ageHours": 590,
+      "ageHours": 614,
       "author": "viral-sangani",
       "authorUrl": "https://github.com/viral-sangani",
       "category": "protocol implementation",
@@ -4694,7 +4733,7 @@
       "state": "open",
       "createdAt": "2026-07-13T12:19:47Z",
       "updatedAt": "2026-07-13T12:19:57Z",
-      "ageHours": 604,
+      "ageHours": 628,
       "author": "simoncrean",
       "authorUrl": "https://github.com/simoncrean",
       "category": "ecosystem listing",
@@ -4729,7 +4768,7 @@
       "state": "open",
       "createdAt": "2026-07-30T06:22:40Z",
       "updatedAt": "2026-07-30T06:22:51Z",
-      "ageHours": 202,
+      "ageHours": 225,
       "author": "jcislo",
       "authorUrl": "https://github.com/jcislo",
       "category": "ecosystem listing",
@@ -4763,7 +4802,7 @@
       "state": "closed",
       "createdAt": "2026-05-31T17:26:04Z",
       "updatedAt": "2026-07-22T00:10:25Z",
-      "ageHours": 1631,
+      "ageHours": 1654,
       "author": "Daisuke134",
       "authorUrl": "https://github.com/Daisuke134",
       "category": "ecosystem listing",
@@ -4799,7 +4838,7 @@
       "state": "closed",
       "createdAt": "2026-06-25T19:02:00Z",
       "updatedAt": "2026-06-25T19:12:25Z",
-      "ageHours": 1029,
+      "ageHours": 1053,
       "author": "jwelten",
       "authorUrl": "https://github.com/jwelten",
       "category": "ecosystem listing",
@@ -4828,7 +4867,7 @@
       "state": "open",
       "createdAt": "2026-06-23T01:12:57Z",
       "updatedAt": "2026-06-23T01:13:07Z",
-      "ageHours": 1095,
+      "ageHours": 1119,
       "author": "magpiecapital",
       "authorUrl": "https://github.com/magpiecapital",
       "category": "ecosystem listing",
@@ -4862,7 +4901,7 @@
       "state": "open",
       "createdAt": "2026-05-30T20:50:07Z",
       "updatedAt": "2026-06-02T05:04:07Z",
-      "ageHours": 1651,
+      "ageHours": 1675,
       "author": "Kedawgs",
       "authorUrl": "https://github.com/Kedawgs",
       "category": "ecosystem listing",
@@ -4896,7 +4935,7 @@
       "state": "open",
       "createdAt": "2026-05-25T12:42:45Z",
       "updatedAt": "2026-05-25T23:13:41Z",
-      "ageHours": 1779,
+      "ageHours": 1803,
       "author": "dkta0",
       "authorUrl": "https://github.com/dkta0",
       "category": "ecosystem listing",
@@ -4928,7 +4967,7 @@
       "state": "closed",
       "createdAt": "2026-06-07T09:10:59Z",
       "updatedAt": "2026-06-07T09:18:30Z",
-      "ageHours": 1471,
+      "ageHours": 1495,
       "author": "Khelechy",
       "authorUrl": "https://github.com/Khelechy",
       "category": "docs / discovery",
@@ -5057,7 +5096,7 @@
       "state": "closed",
       "createdAt": "2026-05-30T19:55:40Z",
       "updatedAt": "2026-05-30T20:04:31Z",
-      "ageHours": 1652,
+      "ageHours": 1676,
       "author": "Haustorium12",
       "authorUrl": "https://github.com/Haustorium12",
       "category": "ecosystem listing",
@@ -5093,7 +5132,7 @@
       "state": "open",
       "createdAt": "2026-05-27T13:55:58Z",
       "updatedAt": "2026-05-28T00:59:47Z",
-      "ageHours": 1730,
+      "ageHours": 1754,
       "author": "kinance",
       "authorUrl": "https://github.com/kinance",
       "category": "ecosystem listing",
@@ -5130,7 +5169,7 @@
       "state": "open",
       "createdAt": "2026-07-04T03:41:25Z",
       "updatedAt": "2026-07-06T16:24:20Z",
-      "ageHours": 829,
+      "ageHours": 852,
       "author": "agentutility-ai",
       "authorUrl": "https://github.com/agentutility-ai",
       "category": "ecosystem listing",
@@ -5159,7 +5198,7 @@
       "state": "closed",
       "createdAt": "2026-06-24T01:08:09Z",
       "updatedAt": "2026-07-06T16:05:47Z",
-      "ageHours": 1071,
+      "ageHours": 1095,
       "author": "rooz21",
       "authorUrl": "https://github.com/rooz21",
       "category": "ecosystem listing",
@@ -5188,7 +5227,7 @@
       "state": "open",
       "createdAt": "2026-07-02T11:30:16Z",
       "updatedAt": "2026-07-02T11:30:26Z",
-      "ageHours": 869,
+      "ageHours": 892,
       "author": "ktamas77",
       "authorUrl": "https://github.com/ktamas77",
       "category": "ecosystem listing",
@@ -5220,7 +5259,7 @@
       "state": "closed",
       "createdAt": "2026-05-20T05:01:30Z",
       "updatedAt": "2026-06-04T15:32:24Z",
-      "ageHours": 1907,
+      "ageHours": 1931,
       "author": "0rkz",
       "authorUrl": "https://github.com/0rkz",
       "category": "ecosystem listing",
@@ -5253,7 +5292,7 @@
       "state": "open",
       "createdAt": "2026-06-27T06:16:43Z",
       "updatedAt": "2026-07-14T23:16:46Z",
-      "ageHours": 994,
+      "ageHours": 1018,
       "author": "dimitrilaouanis-tech",
       "authorUrl": "https://github.com/dimitrilaouanis-tech",
       "category": "docs / discovery",
@@ -5282,7 +5321,7 @@
       "state": "closed",
       "createdAt": "2026-07-02T13:01:51Z",
       "updatedAt": "2026-07-02T13:34:19Z",
-      "ageHours": 867,
+      "ageHours": 891,
       "author": "CedricConday",
       "authorUrl": "https://github.com/CedricConday",
       "category": "docs / discovery",
@@ -5408,7 +5447,7 @@
       "state": "open",
       "createdAt": "2026-08-01T02:45:45Z",
       "updatedAt": "2026-08-01T02:45:55Z",
-      "ageHours": 157,
+      "ageHours": 181,
       "author": "davebirnbaum",
       "authorUrl": "https://github.com/davebirnbaum",
       "category": "ecosystem listing",
@@ -5441,7 +5480,7 @@
       "state": "open",
       "createdAt": "2026-07-07T21:20:26Z",
       "updatedAt": "2026-07-07T21:24:49Z",
-      "ageHours": 739,
+      "ageHours": 763,
       "author": "StelarDigital",
       "authorUrl": "https://github.com/StelarDigital",
       "category": "docs / discovery",
@@ -5482,7 +5521,7 @@
       "state": "open",
       "createdAt": "2026-08-07T06:32:03Z",
       "updatedAt": "2026-08-07T06:32:20Z",
-      "ageHours": 10,
+      "ageHours": 33,
       "author": "tevfikefeaydin",
       "authorUrl": "https://github.com/tevfikefeaydin",
       "category": "protocol implementation",
@@ -5509,7 +5548,7 @@
       "state": "open",
       "createdAt": "2026-06-12T17:20:33Z",
       "updatedAt": "2026-06-12T17:20:46Z",
-      "ageHours": 1343,
+      "ageHours": 1367,
       "author": "osr21",
       "authorUrl": "https://github.com/osr21",
       "category": "docs / discovery",
@@ -5544,7 +5583,7 @@
       "state": "open",
       "createdAt": "2026-08-04T18:36:34Z",
       "updatedAt": "2026-08-04T18:37:08Z",
-      "ageHours": 70,
+      "ageHours": 93,
       "author": "arkhe-genesis",
       "authorUrl": "https://github.com/arkhe-genesis",
       "category": "protocol implementation",
@@ -5668,7 +5707,7 @@
       "state": "closed",
       "createdAt": "2026-07-02T14:06:51Z",
       "updatedAt": "2026-07-13T19:20:13Z",
-      "ageHours": 866,
+      "ageHours": 890,
       "author": "CedricConday",
       "authorUrl": "https://github.com/CedricConday",
       "category": "protocol implementation",
@@ -5688,43 +5727,13 @@
       "priority": "watch"
     },
     {
-      "number": 242,
-      "title": "Add DeskCrew to the ecosystem",
-      "url": "https://github.com/coinbase/x402/pull/242",
-      "state": "open",
-      "createdAt": "2026-07-13T09:45:46Z",
-      "updatedAt": "2026-07-13T09:45:56Z",
-      "ageHours": 606,
-      "author": "webmilmind1",
-      "authorUrl": "https://github.com/webmilmind1",
-      "category": "ecosystem listing",
-      "networks": [],
-      "maxPriceUsd": 0,
-      "urls": [
-        "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
-      ],
-      "files": [
-        "typescript/site/app/ecosystem/partners-data/deskcrew/metadata.json",
-        "typescript/site/public/logos/deskcrew.png"
-      ],
-      "ecosystemFiles": [
-        "typescript/site/app/ecosystem/partners-data/deskcrew/metadata.json"
-      ],
-      "summary": "Thanks for contributing to x402!",
-      "reasons": [
-        "public ecosystem listing"
-      ],
-      "priorityScore": 24,
-      "priority": "watch"
-    },
-    {
       "number": 217,
       "title": "feat(evm): add XDC Network (50) and XDC Apothem testnet (51) default assets",
       "url": "https://github.com/coinbase/x402/pull/217",
       "state": "open",
       "createdAt": "2026-06-22T16:55:46Z",
       "updatedAt": "2026-06-22T16:55:58Z",
-      "ageHours": 1103,
+      "ageHours": 1127,
       "author": "AnilChinchawale",
       "authorUrl": "https://github.com/AnilChinchawale",
       "category": "docs / discovery",
@@ -5760,7 +5769,7 @@
       "state": "open",
       "createdAt": "2026-06-01T04:00:55Z",
       "updatedAt": "2026-06-01T04:01:00Z",
-      "ageHours": 1620,
+      "ageHours": 1644,
       "author": "abhicris",
       "authorUrl": "https://github.com/abhicris",
       "category": "docs / discovery",
