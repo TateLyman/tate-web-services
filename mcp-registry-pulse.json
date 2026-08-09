@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-08",
+  "generatedAt": "2026-08-09",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 121,
-  "githubReposDetected": 70,
+  "latestServersAnalyzed": 123,
+  "githubReposDetected": 71,
   "readmesSampled": 32,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 121,
-    "repos": 70,
+    "latestTotal": 123,
+    "repos": 71,
     "readableRepos": 32,
     "packageCount": 36,
-    "remoteCount": 88,
+    "remoteCount": 90,
     "packageOnly": 32,
-    "remoteOnly": 84,
+    "remoteOnly": 86,
     "both": 4,
-    "noInstallPath": 84,
-    "websiteVisible": 93,
-    "missingTitle": 36,
-    "shortDescription": 48,
-    "recent45": 74,
+    "noInstallPath": 86,
+    "websiteVisible": 94,
+    "missingTitle": 38,
+    "shortDescription": 50,
+    "recent45": 76,
     "orgOwned": 23,
     "issuesEnabled": 31,
     "archived": 0,
@@ -124,6 +124,28 @@
       "repo": "haf/glimt",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/haf/glimt",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
+      "name": "ai.adoraads/beauty",
+      "title": "",
+      "description": "AI-native beauty ads, sponsored product discovery, and brand recommendations.",
+      "publicProofScore": 54,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-08T17:50:25.566057Z",
+      "repo": "DIGIBIZ360-COM/adoraads",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/DIGIBIZ360-COM/adoraads",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
@@ -424,27 +446,6 @@
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.adside/adside",
-      "title": "",
-      "description": "AI agents that manage paid ads on Meta, LinkedIn, and Google Ads from any MCP client.",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-07-16T19:48:48.148514Z",
-      "repo": null,
-      "websiteUrl": "https://www.adside.ai",
-      "primaryUrl": "https://www.adside.ai",
-      "topGaps": [
-        "Attach a public repository",
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary"
       ]
     }
   ]

@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-08-08",
+        "dateModified": "2026-08-09",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-08-08</em>
+        <em>2026-08-09</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-08-08</dd>
+              <dd>2026-08-09</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>121</dd>
+              <dd>123</dd>
             </div>
           </dl>
         </div>
@@ -98,8 +98,8 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   121
-github repos:     70
+latest servers:   123
+github repos:     71
 readme sampled:   32
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
@@ -114,32 +114,32 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>121</strong>
+            <strong>123</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>70 (58%)</strong>
+            <strong>71 (58%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>93 (77%)</strong>
+            <strong>94 (76%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>74 (61%)</strong>
+            <strong>76 (62%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>36 (30%)</strong>
+            <strong>36 (29%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>88 (73%)</strong>
+            <strong>90 (73%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -153,7 +153,7 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>36 (30%)</strong>
+            <strong>36 (29%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -197,21 +197,21 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>48 / 121 - harder to understand quickly</span>
+              <span>50 / 123 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-40"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>36 / 121 - namespace carries the listing</span>
+              <span>38 / 123 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>84 / 121 - hosted flow must explain trust and auth clearly</span>
+              <span>86 / 123 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-70"></i>
           </div>
@@ -322,6 +322,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/haf/glimt" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/haf/glimt" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.adoraads/beauty ai-native beauty ads, sponsored product discovery, and brand recommendations. digibiz360-com/adoraads remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary">
+            <p class="card-command">score 54/100 · remote</p>
+            <h3>ai.adoraads/beauty</h3>
+            <p>AI-native beauty ads, sponsored product discovery, and brand recommendations.</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://github.com/DIGIBIZ360-COM/adoraads" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/DIGIBIZ360-COM/adoraads" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -490,18 +503,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/Agentberg/agentberg" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/Agentberg/agentberg" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.adside/adside ai agents that manage paid ads on meta, linkedin, and google ads from any mcp client. remote secrets credentials tokens headers attach a public repository add a human-readable title expand the registry description clarify remote auth and trust boundary">
-            <p class="card-command">score 60/100 · remote</p>
-            <h3>ai.adside/adside</h3>
-            <p>AI agents that manage paid ads on Meta, LinkedIn, and Google Ads from any MCP client.</p>
-            <ul>
-              <li>Attach a public repository</li><li>Add a human-readable title</li><li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://www.adside.ai" target="_blank" rel="noreferrer">source</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
