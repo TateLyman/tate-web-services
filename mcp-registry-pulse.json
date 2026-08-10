@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09",
+  "generatedAt": "2026-08-10",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 123,
@@ -38,7 +38,7 @@
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 9,
     "secretRemoteHeaders": 16,
-    "glama": 15,
+    "glama": 14,
     "smoke": 11
   },
   "sampleServers": [
