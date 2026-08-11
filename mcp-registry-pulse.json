@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-10",
+  "generatedAt": "2026-08-11",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 123,
-  "githubReposDetected": 71,
-  "readmesSampled": 32,
+  "githubReposDetected": 72,
+  "readmesSampled": 33,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -14,8 +14,8 @@
   ],
   "totals": {
     "latestTotal": 123,
-    "repos": 71,
-    "readableRepos": 32,
+    "repos": 72,
+    "readableRepos": 33,
     "packageCount": 36,
     "remoteCount": 90,
     "packageOnly": 32,
@@ -26,20 +26,20 @@
     "missingTitle": 38,
     "shortDescription": 50,
     "recent45": 76,
-    "orgOwned": 23,
-    "issuesEnabled": 31,
+    "orgOwned": 24,
+    "issuesEnabled": 32,
     "archived": 0,
-    "mcpServers": 20,
-    "install": 17,
+    "mcpServers": 21,
+    "install": 18,
     "serverJson": 10,
-    "safety": 25,
+    "safety": 26,
     "stdioPackageCount": 36,
     "stdioPackageReadable": 10,
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 9,
     "secretRemoteHeaders": 16,
     "glama": 14,
-    "smoke": 11
+    "smoke": 12
   },
   "sampleServers": [
     {
