@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11",
+  "generatedAt": "2026-08-12",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 123,
@@ -30,7 +30,7 @@
     "issuesEnabled": 32,
     "archived": 0,
     "mcpServers": 21,
-    "install": 18,
+    "install": 19,
     "serverJson": 10,
     "safety": 26,
     "stdioPackageCount": 36,
@@ -267,28 +267,6 @@
       ]
     },
     {
-      "name": "ai.betterpost/server",
-      "title": "BetterPost",
-      "description": "Finds timely sources across news, social, and the web and writes posts worth publishing.",
-      "publicProofScore": 55,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-08T13:48:32.941236Z",
-      "repo": "betterpost/betterpost-plugin",
-      "websiteUrl": "https://betterpost.ai",
-      "primaryUrl": "https://betterpost.ai",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config"
-      ]
-    },
-    {
       "name": "ai.atlaso/mcp",
       "title": "",
       "description": "AI memory layer — one shared, persistent memory across every AI tool you connect.",
@@ -446,6 +424,27 @@
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.adplane/google-ads",
+      "title": "",
+      "description": "Google Ads reporting and campaign management. Everything it creates starts paused.",
+      "publicProofScore": 60,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-08T18:01:15.320148Z",
+      "repo": null,
+      "websiteUrl": "https://adplane.ai",
+      "primaryUrl": "https://adplane.ai",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary"
       ]
     }
   ]
