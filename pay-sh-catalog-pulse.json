@@ -1,19 +1,19 @@
 {
-  "runDate": "2026-08-13",
-  "generatedAt": "2026-07-31T12:36:51Z",
+  "runDate": "2026-08-14",
+  "generatedAt": "2026-08-13T23:11:48Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 72,
-  "observedProviders": 72,
+  "providerCount": 74,
+  "observedProviders": 74,
   "pricedCount": 57,
   "meteredCount": 57,
-  "freeTierCount": 22,
+  "freeTierCount": 24,
   "categoryCounts": {
     "messaging": 2,
-    "finance": 8,
+    "productivity": 2,
+    "finance": 9,
     "ai_ml": 28,
     "shopping": 4,
     "identity": 2,
-    "productivity": 1,
     "search": 6,
     "data": 7,
     "devtools": 1,
@@ -30,7 +30,7 @@
     },
     {
       "category": "finance",
-      "count": 8
+      "count": 9
     },
     {
       "category": "data",
