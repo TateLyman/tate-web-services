@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-08-14",
+        "dateModified": "2026-08-15",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-08-14</em>
+        <em>2026-08-15</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-08-14</dd>
+              <dd>2026-08-15</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>124</dd>
+              <dd>140</dd>
             </div>
           </dl>
         </div>
@@ -98,7 +98,7 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   124
+latest servers:   140
 github repos:     72
 readme sampled:   34
 output:           mcp-registry-pulse.html
@@ -114,32 +114,32 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>124</strong>
+            <strong>140</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>72 (58%)</strong>
+            <strong>72 (51%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>95 (77%)</strong>
+            <strong>111 (79%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>77 (62%)</strong>
+            <strong>91 (65%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>36 (29%)</strong>
+            <strong>36 (26%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>91 (73%)</strong>
+            <strong>107 (76%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -153,7 +153,7 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>36 (29%)</strong>
+            <strong>36 (26%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -163,12 +163,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>9 (7%)</strong>
+            <strong>9 (6%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote secret headers</p>
-            <strong>16 (13%)</strong>
+            <strong>16 (11%)</strong>
             <p>Listings whose remote metadata declares secret request headers.</p>
           </article>
         </div>
@@ -197,23 +197,23 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>52 / 124 - harder to understand quickly</span>
+              <span>66 / 140 - harder to understand quickly</span>
             </div>
-            <i class="pulse-width-40"></i>
+            <i class="pulse-width-45"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>39 / 124 - namespace carries the listing</span>
+              <span>39 / 140 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>87 / 124 - hosted flow must explain trust and auth clearly</span>
+              <span>103 / 140 - hosted flow must explain trust and auth clearly</span>
             </div>
-            <i class="pulse-width-70"></i>
+            <i class="pulse-width-75"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
@@ -338,21 +338,8 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.adoraads/beauty ai-native beauty ads, sponsored product discovery, and brand recommendations. digibiz360-com/adoraads remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary">
-            <p class="card-command">score 54/100 · remote</p>
-            <h3>ai.adoraads/beauty</h3>
-            <p>AI-native beauty ads, sponsored product discovery, and brand recommendations.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://github.com/DIGIBIZ360-COM/adoraads" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/DIGIBIZ360-COM/adoraads" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aviado/health supplement research, biomarker effects, drug interactions, and brand quality data kipmcc/aviado-mcp remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary">
-            <p class="card-command">score 54/100 · remote</p>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aviado/health supplement research, biomarker effects, drug interactions, and brand quality data kipmcc/aviado-mcp remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary refresh stale registry metadata">
+            <p class="card-command">score 49/100 · remote</p>
             <h3>ai.aviado/health</h3>
             <p>Supplement research, biomarker effects, drug interactions, and brand quality data</p>
             <ul>
@@ -364,8 +351,8 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.blast-radius/blast-radius blast radius tools for ai strategy, diligence, and market updates. kipmcc/blast-radius-live remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary">
-            <p class="card-command">score 54/100 · remote</p>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.blast-radius/blast-radius blast radius tools for ai strategy, diligence, and market updates. kipmcc/blast-radius-live remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary refresh stale registry metadata">
+            <p class="card-command">score 49/100 · remote</p>
             <h3>ai.blast-radius/blast-radius</h3>
             <p>Blast Radius tools for AI strategy, diligence, and market updates.</p>
             <ul>
@@ -374,6 +361,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/kipmcc/blast-radius-live" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/kipmcc/blast-radius-live" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.adoraads/beauty ai-native beauty ads, sponsored product discovery, and brand recommendations. digibiz360-com/adoraads remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary">
+            <p class="card-command">score 54/100 · remote</p>
+            <h3>ai.adoraads/beauty</h3>
+            <p>AI-native beauty ads, sponsored product discovery, and brand recommendations.</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://github.com/DIGIBIZ360-COM/adoraads" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/DIGIBIZ360-COM/adoraads" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
