@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22",
+  "generatedAt": "2026-08-23",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 149,
+  "latestServersAnalyzed": 150,
   "githubReposDetected": 77,
   "readmesSampled": 37,
   "method": [
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 149,
+    "latestTotal": 150,
     "repos": 77,
     "readableRepos": 37,
     "packageCount": 36,
-    "remoteCount": 116,
+    "remoteCount": 117,
     "packageOnly": 32,
-    "remoteOnly": 112,
+    "remoteOnly": 113,
     "both": 4,
-    "noInstallPath": 112,
+    "noInstallPath": 113,
     "websiteVisible": 121,
     "missingTitle": 43,
-    "shortDescription": 68,
-    "recent45": 93,
+    "shortDescription": 69,
+    "recent45": 91,
     "orgOwned": 25,
     "issuesEnabled": 36,
     "archived": 0,
@@ -196,6 +196,28 @@
         "Make README proof available",
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary"
+      ]
+    },
+    {
+      "name": "ai.basethread/basethread",
+      "title": "",
+      "description": "One shared context your team's AI tools read & write over MCP. No re-explaining. Free.",
+      "publicProofScore": 52,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-07-08T17:57:42.454703Z",
+      "repo": "navbuildz/basethread-mcp",
+      "websiteUrl": "https://basethread.ai",
+      "primaryUrl": "https://basethread.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Add copyable mcpServers config"
       ]
     },
     {
@@ -383,25 +405,25 @@
       ]
     },
     {
-      "name": "ai.basethread/basethread",
-      "title": "",
-      "description": "One shared context your team's AI tools read & write over MCP. No re-explaining. Free.",
-      "publicProofScore": 57,
+      "name": "ai.betterpost/server",
+      "title": "BetterPost",
+      "description": "Finds timely sources across news, social, and the web and writes posts worth publishing.",
+      "publicProofScore": 58,
       "installPath": "remote",
       "packageTransports": [],
       "hasStdioPackage": false,
       "hasSecretPackageConfig": false,
       "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-08T17:57:42.454703Z",
-      "repo": "navbuildz/basethread-mcp",
-      "websiteUrl": "https://basethread.ai",
-      "primaryUrl": "https://basethread.ai",
+      "updatedAt": "2026-07-08T13:48:32.941236Z",
+      "repo": "betterpost/betterpost-plugin",
+      "websiteUrl": "https://betterpost.ai",
+      "primaryUrl": "https://betterpost.ai",
       "topGaps": [
-        "Add a human-readable title",
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config"
+        "Add copyable mcpServers config",
+        "Refresh stale registry metadata"
       ]
     },
     {
@@ -424,27 +446,6 @@
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.actwise/ideation",
-      "title": "",
-      "description": "Actwise Ideation helps founders benchmark startup and product ideas before they build.",
-      "publicProofScore": 60,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-08-14T04:14:24.243152Z",
-      "repo": null,
-      "websiteUrl": "https://actwise.ai/home/ideation",
-      "primaryUrl": "https://actwise.ai/home/ideation",
-      "topGaps": [
-        "Attach a public repository",
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary"
       ]
     }
   ]
