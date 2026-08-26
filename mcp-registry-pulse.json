@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25",
+  "generatedAt": "2026-08-26",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 154,
@@ -29,8 +29,8 @@
     "orgOwned": 25,
     "issuesEnabled": 36,
     "archived": 0,
-    "mcpServers": 24,
-    "install": 21,
+    "mcpServers": 25,
+    "install": 22,
     "serverJson": 11,
     "safety": 30,
     "stdioPackageCount": 36,
@@ -38,7 +38,7 @@
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 9,
     "secretRemoteHeaders": 18,
-    "glama": 15,
+    "glama": 16,
     "smoke": 14
   },
   "sampleServers": [
