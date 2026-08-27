@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-26",
+  "generatedAt": "2026-08-27",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 154,
+  "latestServersAnalyzed": 159,
   "githubReposDetected": 78,
   "readmesSampled": 37,
   "method": [
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 154,
+    "latestTotal": 159,
     "repos": 78,
     "readableRepos": 37,
     "packageCount": 36,
-    "remoteCount": 121,
+    "remoteCount": 126,
     "packageOnly": 32,
-    "remoteOnly": 117,
+    "remoteOnly": 122,
     "both": 4,
-    "noInstallPath": 117,
-    "websiteVisible": 126,
-    "missingTitle": 44,
-    "shortDescription": 69,
-    "recent45": 92,
+    "noInstallPath": 122,
+    "websiteVisible": 134,
+    "missingTitle": 42,
+    "shortDescription": 70,
+    "recent45": 97,
     "orgOwned": 25,
     "issuesEnabled": 36,
     "archived": 0,
@@ -333,6 +333,28 @@
       ]
     },
     {
+      "name": "ai.argushq/enforcement-database",
+      "title": "",
+      "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
+      "publicProofScore": 57,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-07-12T20:32:22.415073Z",
+      "repo": "andrewjgaber-commits/empire-distribution",
+      "websiteUrl": "https://argushq.ai",
+      "primaryUrl": "https://argushq.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "ai.autoblocks/contextlayer-mcp",
       "title": "",
       "description": "Personal context management for AI assistants",
@@ -423,28 +445,6 @@
         "Clarify remote auth and trust boundary",
         "Add smoke-test or tool-list proof",
         "Add copyable mcpServers config",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.agentberg/agentberg",
-      "title": "",
-      "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
-      "publicProofScore": 59,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-18T01:49:38.050173Z",
-      "repo": "Agentberg/agentberg",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/Agentberg/agentberg",
-      "topGaps": [
-        "Add a human-readable title",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
       ]
     }
