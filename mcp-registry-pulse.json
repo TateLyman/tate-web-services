@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29",
+  "generatedAt": "2026-08-30",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 160,
@@ -24,8 +24,8 @@
     "noInstallPath": 124,
     "websiteVisible": 134,
     "missingTitle": 42,
-    "shortDescription": 72,
-    "recent45": 78,
+    "shortDescription": 71,
+    "recent45": 79,
     "orgOwned": 25,
     "issuesEnabled": 36,
     "archived": 0,
