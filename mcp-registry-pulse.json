@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30",
+  "generatedAt": "2026-08-31",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 160,
@@ -25,7 +25,7 @@
     "websiteVisible": 134,
     "missingTitle": 42,
     "shortDescription": 71,
-    "recent45": 79,
+    "recent45": 78,
     "orgOwned": 25,
     "issuesEnabled": 36,
     "archived": 0,
@@ -289,6 +289,28 @@
       ]
     },
     {
+      "name": "ai.adside/adside",
+      "title": "",
+      "description": "AI agents that manage paid ads on Meta, LinkedIn, and Google Ads from any MCP client.",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": true,
+      "updatedAt": "2026-07-16T19:48:48.148514Z",
+      "repo": null,
+      "websiteUrl": "https://www.adside.ai",
+      "primaryUrl": "https://www.adside.ai",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "ai.atlaso/mcp",
       "title": "",
       "description": "AI memory layer — one shared, persistent memory across every AI tool you connect.",
@@ -423,28 +445,6 @@
         "Expand the registry description",
         "Make README proof available",
         "Expose a product or docs website",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.betterpost/server",
-      "title": "BetterPost",
-      "description": "Finds timely sources across news, social, and the web and writes posts worth publishing.",
-      "publicProofScore": 58,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-08T13:48:32.941236Z",
-      "repo": "betterpost/betterpost-plugin",
-      "websiteUrl": "https://betterpost.ai",
-      "primaryUrl": "https://betterpost.ai",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config",
         "Refresh stale registry metadata"
       ]
     }
