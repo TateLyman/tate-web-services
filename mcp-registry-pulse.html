@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-09-01",
+        "dateModified": "2026-09-02",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-09-01</em>
+        <em>2026-09-02</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-09-01</dd>
+              <dd>2026-09-02</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>162</dd>
+              <dd>163</dd>
             </div>
           </dl>
         </div>
@@ -98,9 +98,9 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   162
-github repos:     77
-readme sampled:   37
+latest servers:   163
+github repos:     78
+readme sampled:   38
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -114,27 +114,27 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>162</strong>
+            <strong>163</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>77 (48%)</strong>
+            <strong>78 (48%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>136 (84%)</strong>
+            <strong>137 (84%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>79 (49%)</strong>
+            <strong>80 (49%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>34 (21%)</strong>
+            <strong>35 (21%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -153,17 +153,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>34 (21%)</strong>
+            <strong>35 (21%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">stdio docs visible</p>
-            <strong>4 / 9</strong>
+            <strong>4 / 10</strong>
             <p>Readable STDIO package READMEs that mention the command or local-process boundary.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>8 (5%)</strong>
+            <strong>9 (6%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -197,65 +197,65 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>72 / 162 - harder to understand quickly</span>
+              <span>72 / 163 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-45"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>43 / 162 - namespace carries the listing</span>
+              <span>44 / 163 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>127 / 162 - hosted flow must explain trust and auth clearly</span>
+              <span>127 / 163 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>24 / 37 - among readable GitHub READMEs</span>
+              <span>25 / 38 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>22 / 37 - among readable GitHub READMEs</span>
+              <span>23 / 38 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-60"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>30 / 37 - among readable GitHub READMEs</span>
+              <span>30 / 38 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>STDIO package READMEs explain command boundary</strong>
-              <span>4 / 9 - among readable STDIO package repos</span>
+              <span>4 / 10 - among readable STDIO package repos</span>
             </div>
-            <i class="pulse-width-45"></i>
+            <i class="pulse-width-40"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>11 / 37 - among readable GitHub READMEs</span>
+              <span>11 / 38 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>14 / 37 - among readable GitHub READMEs</span>
+              <span>14 / 38 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-40"></i>
+            <i class="pulse-width-35"></i>
           </div>
         </div>
       </section>
