@@ -1,6 +1,6 @@
 {
-  "runDate": "2026-09-01",
-  "generatedAt": "2026-08-19T00:54:08Z",
+  "runDate": "2026-09-02",
+  "generatedAt": "2026-09-01T20:55:46Z",
   "source": "https://pay.sh/api/catalog",
   "providerCount": 74,
   "observedProviders": 74,
@@ -287,7 +287,7 @@
       "hasFreeTier": true,
       "minPriceUsd": 0.05,
       "maxPriceUsd": 60,
-      "sha": "3a9a3ce62e0a2467",
+      "sha": "677744a6b91781c5",
       "priorityScore": 30,
       "priorityLevel": "watch",
       "reasons": [
