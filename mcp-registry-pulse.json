@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-04",
+  "generatedAt": "2026-09-05",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 164,
-  "githubReposDetected": 77,
-  "readmesSampled": 37,
+  "latestServersAnalyzed": 163,
+  "githubReposDetected": 76,
+  "readmesSampled": 36,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 164,
-    "repos": 77,
-    "readableRepos": 37,
+    "latestTotal": 163,
+    "repos": 76,
+    "readableRepos": 36,
     "packageCount": 35,
-    "remoteCount": 131,
+    "remoteCount": 130,
     "packageOnly": 32,
-    "remoteOnly": 128,
+    "remoteOnly": 127,
     "both": 3,
-    "noInstallPath": 128,
-    "websiteVisible": 138,
+    "noInstallPath": 127,
+    "websiteVisible": 137,
     "missingTitle": 44,
     "shortDescription": 74,
-    "recent45": 81,
-    "orgOwned": 24,
-    "issuesEnabled": 36,
+    "recent45": 80,
+    "orgOwned": 23,
+    "issuesEnabled": 35,
     "archived": 0,
-    "mcpServers": 24,
+    "mcpServers": 23,
     "install": 23,
-    "serverJson": 10,
+    "serverJson": 9,
     "safety": 30,
     "stdioPackageCount": 35,
     "stdioPackageReadable": 10,
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 9,
     "secretRemoteHeaders": 18,
-    "glama": 16,
-    "smoke": 13
+    "glama": 15,
+    "smoke": 12
   },
   "sampleServers": [
     {
@@ -333,6 +333,28 @@
       ]
     },
     {
+      "name": "ai.atlasverified/atlas-mcp",
+      "title": "",
+      "description": "AI-powered organic supply chain verification: certification, OFAC, FDA import checks.",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-07-21T23:43:13.692003Z",
+      "repo": null,
+      "websiteUrl": "https://atlasverified.ai",
+      "primaryUrl": "https://atlasverified.ai",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "ai.atlaso/mcp",
       "title": "",
       "description": "AI memory layer — one shared, persistent memory across every AI tool you connect.",
@@ -411,30 +433,6 @@
       "hasSecretPackageConfig": false,
       "hasSecretRemoteHeaders": false,
       "updatedAt": "2026-01-12T03:52:52.134106Z",
-      "repo": "autoblocksai/ctxl",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/autoblocksai/ctxl",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.autoblocks/ctxl",
-      "title": "",
-      "description": "Personal context management for AI assistants",
-      "publicProofScore": 57,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-01-12T03:52:12.746584Z",
       "repo": "autoblocksai/ctxl",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/autoblocksai/ctxl",
