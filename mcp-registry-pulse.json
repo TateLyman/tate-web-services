@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-10",
+  "generatedAt": "2026-09-11",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 167,
   "githubReposDetected": 76,
-  "readmesSampled": 35,
+  "readmesSampled": 34,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -15,7 +15,7 @@
   "totals": {
     "latestTotal": 167,
     "repos": 76,
-    "readableRepos": 35,
+    "readableRepos": 34,
     "packageCount": 33,
     "remoteCount": 136,
     "packageOnly": 30,
@@ -25,14 +25,14 @@
     "websiteVisible": 141,
     "missingTitle": 47,
     "shortDescription": 77,
-    "recent45": 84,
+    "recent45": 82,
     "orgOwned": 21,
-    "issuesEnabled": 34,
+    "issuesEnabled": 33,
     "archived": 0,
     "mcpServers": 21,
     "install": 25,
     "serverJson": 9,
-    "safety": 28,
+    "safety": 27,
     "stdioPackageCount": 33,
     "stdioPackageReadable": 8,
     "stdioBoundaryDocs": 4,
@@ -59,28 +59,6 @@
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof"
-      ]
-    },
-    {
-      "name": "ai.biddeed/biddeed-mcp",
-      "title": "BidDeed MCP",
-      "description": "AI-powered foreclosure auction intelligence for Florida counties via MCP tools.",
-      "publicProofScore": 42,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-03T13:00:32.732972Z",
-      "repo": "breverdbidder/cli-anything-biddeed",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/breverdbidder/cli-anything-biddeed",
-      "topGaps": [
-        "Expand the registry description",
-        "Expose a product or docs website",
         "Clarify remote auth and trust boundary",
         "Add install or client command",
         "Add smoke-test or tool-list proof"
@@ -439,6 +417,30 @@
         "Expand the registry description",
         "Make README proof available",
         "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.autoblocks/contextlayer-mcp",
+      "title": "",
+      "description": "Personal context management for AI assistants",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-01-12T03:52:52.134106Z",
+      "repo": "autoblocksai/ctxl",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/autoblocksai/ctxl",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
         "Refresh stale registry metadata"
       ]
     }
