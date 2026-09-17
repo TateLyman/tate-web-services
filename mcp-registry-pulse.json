@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-16",
+  "generatedAt": "2026-09-17",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 172,
-  "githubReposDetected": 78,
+  "latestServersAnalyzed": 173,
+  "githubReposDetected": 79,
   "readmesSampled": 36,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 172,
-    "repos": 78,
+    "latestTotal": 173,
+    "repos": 79,
     "readableRepos": 36,
     "packageCount": 34,
-    "remoteCount": 140,
+    "remoteCount": 141,
     "packageOnly": 31,
-    "remoteOnly": 137,
+    "remoteOnly": 138,
     "both": 3,
-    "noInstallPath": 137,
-    "websiteVisible": 147,
+    "noInstallPath": 138,
+    "websiteVisible": 148,
     "missingTitle": 48,
     "shortDescription": 76,
-    "recent45": 86,
+    "recent45": 85,
     "orgOwned": 21,
     "issuesEnabled": 35,
     "archived": 0,
@@ -221,6 +221,28 @@
       ]
     },
     {
+      "name": "ai.atlaso/mcp",
+      "title": "",
+      "description": "AI memory layer — one shared, persistent memory across every AI tool you connect.",
+      "publicProofScore": 51,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-02T11:07:21.155706Z",
+      "repo": "atlaso-labs/mcp",
+      "websiteUrl": "https://www.atlaso.ai",
+      "primaryUrl": "https://www.atlaso.ai",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof"
+      ]
+    },
+    {
       "name": "ai.basethread/basethread",
       "title": "",
       "description": "One shared context your team's AI tools read & write over MCP. No re-explaining. Free.",
@@ -352,28 +374,6 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.atlaso/mcp",
-      "title": "",
-      "description": "AI memory layer — one shared, persistent memory across every AI tool you connect.",
-      "publicProofScore": 56,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-08-02T11:07:21.155706Z",
-      "repo": "atlaso-labs/mcp",
-      "websiteUrl": "https://www.atlaso.ai",
-      "primaryUrl": "https://www.atlaso.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof"
       ]
     },
     {
