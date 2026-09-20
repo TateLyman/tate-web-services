@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19",
+  "generatedAt": "2026-09-20",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 175,
-  "githubReposDetected": 80,
+  "latestServersAnalyzed": 177,
+  "githubReposDetected": 81,
   "readmesSampled": 37,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 175,
-    "repos": 80,
+    "latestTotal": 177,
+    "repos": 81,
     "readableRepos": 37,
     "packageCount": 34,
-    "remoteCount": 143,
+    "remoteCount": 145,
     "packageOnly": 31,
-    "remoteOnly": 140,
+    "remoteOnly": 142,
     "both": 3,
-    "noInstallPath": 140,
-    "websiteVisible": 150,
+    "noInstallPath": 142,
+    "websiteVisible": 152,
     "missingTitle": 48,
-    "shortDescription": 76,
-    "recent45": 88,
+    "shortDescription": 78,
+    "recent45": 87,
     "orgOwned": 22,
     "issuesEnabled": 36,
     "archived": 0,
@@ -37,7 +37,7 @@
     "stdioPackageReadable": 9,
     "stdioBoundaryDocs": 5,
     "secretPackageConfig": 7,
-    "secretRemoteHeaders": 20,
+    "secretRemoteHeaders": 21,
     "glama": 15,
     "smoke": 11
   },
@@ -377,6 +377,28 @@
       ]
     },
     {
+      "name": "ai.beket/audit",
+      "title": "",
+      "description": "See how AI assistants answer about your brand",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-06T01:11:42.174388Z",
+      "repo": null,
+      "websiteUrl": "https://beket.ai/guides/using-the-beket-ai-mcp/",
+      "primaryUrl": "https://beket.ai/guides/using-the-beket-ai-mcp/",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "agency.lona/trading",
       "title": "",
       "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
@@ -417,30 +439,6 @@
         "Expand the registry description",
         "Make README proof available",
         "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.autoblocks/contextlayer-mcp",
-      "title": "",
-      "description": "Personal context management for AI assistants",
-      "publicProofScore": 57,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-01-12T03:52:52.134106Z",
-      "repo": "autoblocksai/ctxl",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/autoblocksai/ctxl",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
         "Refresh stale registry metadata"
       ]
     }
