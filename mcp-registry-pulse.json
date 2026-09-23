@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-22",
+  "generatedAt": "2026-09-23",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 179,
+  "latestServersAnalyzed": 181,
   "githubReposDetected": 82,
   "readmesSampled": 38,
   "method": [
@@ -13,18 +13,18 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 179,
+    "latestTotal": 181,
     "repos": 82,
     "readableRepos": 38,
     "packageCount": 34,
-    "remoteCount": 147,
+    "remoteCount": 148,
     "packageOnly": 31,
-    "remoteOnly": 144,
+    "remoteOnly": 145,
     "both": 3,
-    "noInstallPath": 144,
-    "websiteVisible": 154,
-    "missingTitle": 48,
-    "shortDescription": 81,
+    "noInstallPath": 145,
+    "websiteVisible": 155,
+    "missingTitle": 47,
+    "shortDescription": 83,
     "recent45": 87,
     "orgOwned": 22,
     "issuesEnabled": 37,
@@ -37,7 +37,7 @@
     "stdioPackageReadable": 9,
     "stdioBoundaryDocs": 5,
     "secretPackageConfig": 7,
-    "secretRemoteHeaders": 22,
+    "secretRemoteHeaders": 23,
     "glama": 16,
     "smoke": 11
   },
@@ -130,6 +130,28 @@
         "Add smoke-test or tool-list proof",
         "Explain STDIO command boundary",
         "Add copyable mcpServers config"
+      ]
+    },
+    {
+      "name": "ai.adoraads/beauty",
+      "title": "",
+      "description": "AI-native beauty ads, sponsored product discovery, and brand recommendations.",
+      "publicProofScore": 49,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-08T17:50:25.566057Z",
+      "repo": "DIGIBIZ360-COM/adoraads",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/DIGIBIZ360-COM/adoraads",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary"
       ]
     },
     {
@@ -265,28 +287,6 @@
       ]
     },
     {
-      "name": "ai.adoraads/beauty",
-      "title": "",
-      "description": "AI-native beauty ads, sponsored product discovery, and brand recommendations.",
-      "publicProofScore": 54,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-08-08T17:50:25.566057Z",
-      "repo": "DIGIBIZ360-COM/adoraads",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/DIGIBIZ360-COM/adoraads",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
       "name": "ai.adeu/adeu",
       "title": "",
       "description": "Automated DOCX Redlining Engine",
@@ -307,6 +307,28 @@
         "Expand the registry description",
         "Add smoke-test or tool-list proof",
         "Explain STDIO command boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.adplane/google-ads",
+      "title": "",
+      "description": "Google Ads reporting and campaign management. Everything it creates starts paused.",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-08T18:01:15.320148Z",
+      "repo": null,
+      "websiteUrl": "https://adplane.ai",
+      "primaryUrl": "https://adplane.ai",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
       ]
     },
@@ -412,28 +434,6 @@
       "repo": "mindsightventures/lona",
       "websiteUrl": "https://lona.agency",
       "primaryUrl": "https://lona.agency",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.argushq/enforcement-database",
-      "title": "",
-      "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
-      "publicProofScore": 57,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-12T20:32:22.415073Z",
-      "repo": "andrewjgaber-commits/empire-distribution",
-      "websiteUrl": "https://argushq.ai",
-      "primaryUrl": "https://argushq.ai",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
