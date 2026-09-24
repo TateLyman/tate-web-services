@@ -20,7 +20,7 @@
         "@type": "Dataset",
         "name": "x402 Ecosystem Radar",
         "url": "https://tateprograms.com/x402-ecosystem-radar.html",
-        "dateModified": "2026-09-23",
+        "dateModified": "2026-09-24",
         "isBasedOn": "https://github.com/coinbase/x402/pulls",
         "description": "Aggregated public pull-request radar for Coinbase x402 ecosystem launch surfaces.",
         "publisher": {
@@ -56,12 +56,12 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/radar/coinbase-x402</strong>
-        <em>2026-09-23</em>
+        <em>2026-09-24</em>
       </div>
 
       <section class="console-hero console-page-hero">
         <div class="console-copy">
-          <p class="console-kicker">coinbase x402 ecosystem / 2026-09-23</p>
+          <p class="console-kicker">coinbase x402 ecosystem / 2026-09-24</p>
           <h1>The x402 ecosystem page is becoming a live market map for agent-paid APIs.</h1>
           <p class="console-subtitle">
             This radar reads public Coinbase x402 pull requests and separates partner listings, MCP payment endpoints, mainnet rails, discovery metadata, and browser/payment-header launch signals. The useful question is not whether a launch mentions x402. It is whether agents can discover the paid surface, understand the cap, receive a proper 402, and reconcile the receipt.
@@ -80,7 +80,7 @@
             </div>
             <div>
               <dt>ecosystem listings</dt>
-              <dd>83</dd>
+              <dd>84</dd>
             </div>
             <div>
               <dt>review priority</dt>
@@ -94,7 +94,7 @@
           <pre><code>$ scan coinbase/x402
 since: 2026-05-01
 observed: 100
-open: 85
+open: 87
 signals: MCP, Base, Solana, discovery
 output: x402-ecosystem-radar.json</code></pre>
         </aside>
@@ -110,6 +110,34 @@ output: x402-ecosystem-radar.json</code></pre>
         </div>
         <div class="proof-terminal-grid">
           <article>
+            <p class="card-command">urgent / 92</p>
+            <h3>feat(ecosystem): add crosscheck</h3>
+            <p>Adds crosscheck to the ecosystem page under Services/Endpoints.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>ecosystem listing</dd></div>
+              <div><dt>rails</dt><dd>Base, Base Sepolia, USDC, mainnet, testnet</dd></div>
+              <div><dt>max price</dt><dd>$0.02</dd></div>
+              <div><dt>age</dt><dd>2h</dd></div>
+            </dl>
+            <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>browser/payment-header behavior</li><li>mainnet value path</li></ul>
+            <p class="mini-copy">Primary URL: https://crosscheckapi.com/v1/check`</p>
+            <a href="https://github.com/coinbase/x402/pull/348" target="_blank" rel="noreferrer">PR #348 by @maxugc</a>
+          </article>
+<article>
+            <p class="card-command">urgent / 92</p>
+            <h3>Ecosystem: add AgentWallet (client-side MCP payer)</h3>
+            <p>Adds AgentWallet to the ecosystem page under Client-Side Integrations.</p>
+            <dl class="mini-ledger">
+              <div><dt>category</dt><dd>ecosystem listing</dd></div>
+              <div><dt>rails</dt><dd>Base, Solana, mainnet</dd></div>
+              <div><dt>max price</dt><dd>n/a</dd></div>
+              <div><dt>age</dt><dd>22h</dd></div>
+            </dl>
+            <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>browser/payment-header behavior</li><li>mainnet value path</li></ul>
+            <p class="mini-copy">Primary URL: not declared</p>
+            <a href="https://github.com/coinbase/x402/pull/346" target="_blank" rel="noreferrer">PR #346 by @hifriendbot</a>
+          </article>
+<article>
             <p class="card-command">urgent / 86</p>
             <h3>Ecosystem: add HostDeFi Token Risk API (Services/Endpoints)</h3>
             <p>Adds **HostDeFi Token Risk API** to the ecosystem page under **Services/Endpoints**, per the README recipe (new `partners-data/hostdefi/metadata.json` + `public/logos/hostdefi.png`, 512×512).</p>
@@ -117,7 +145,7 @@ output: x402-ecosystem-radar.json</code></pre>
               <div><dt>category</dt><dd>ecosystem listing</dd></div>
               <div><dt>rails</dt><dd>Base, Solana, USDC, mainnet</dd></div>
               <div><dt>max price</dt><dd>n/a</dd></div>
-              <div><dt>age</dt><dd>214h</dd></div>
+              <div><dt>age</dt><dd>238h</dd></div>
             </dl>
             <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>trust or risk claims</li><li>mainnet value path</li></ul>
             <p class="mini-copy">Primary URL: https://hostdefi.com/docs/api/</p>
@@ -131,7 +159,7 @@ output: x402-ecosystem-radar.json</code></pre>
               <div><dt>category</dt><dd>ecosystem listing</dd></div>
               <div><dt>rails</dt><dd>Base, USDC, mainnet</dd></div>
               <div><dt>max price</dt><dd>$0.005</dd></div>
-              <div><dt>age</dt><dd>1942h</dd></div>
+              <div><dt>age</dt><dd>1967h</dd></div>
             </dl>
             <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>trust or risk claims</li><li>mainnet value path</li></ul>
             <p class="mini-copy">Primary URL: https://relay402.georgespring.workers.dev</p>
@@ -145,7 +173,7 @@ output: x402-ecosystem-radar.json</code></pre>
               <div><dt>category</dt><dd>ecosystem listing</dd></div>
               <div><dt>rails</dt><dd>Base, Solana, USDC, mainnet</dd></div>
               <div><dt>max price</dt><dd>n/a</dd></div>
-              <div><dt>age</dt><dd>914h</dd></div>
+              <div><dt>age</dt><dd>939h</dd></div>
             </dl>
             <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>trust or risk claims</li><li>mainnet value path</li></ul>
             <p class="mini-copy">Primary URL: https://trustdex.app/docs/api/</p>
@@ -159,7 +187,7 @@ output: x402-ecosystem-radar.json</code></pre>
               <div><dt>category</dt><dd>ecosystem listing</dd></div>
               <div><dt>rails</dt><dd>Base, mainnet</dd></div>
               <div><dt>max price</dt><dd>$0.05</dd></div>
-              <div><dt>age</dt><dd>1125h</dd></div>
+              <div><dt>age</dt><dd>1149h</dd></div>
             </dl>
             <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>trust or risk claims</li><li>mainnet value path</li></ul>
             <p class="mini-copy">Primary URL: https://facilitator.payai.network</p>
@@ -173,7 +201,7 @@ output: x402-ecosystem-radar.json</code></pre>
               <div><dt>category</dt><dd>ecosystem listing</dd></div>
               <div><dt>rails</dt><dd>Base, mainnet</dd></div>
               <div><dt>max price</dt><dd>$0.001</dd></div>
-              <div><dt>age</dt><dd>1434h</dd></div>
+              <div><dt>age</dt><dd>1458h</dd></div>
             </dl>
             <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>trust or risk claims</li><li>mainnet value path</li></ul>
             <p class="mini-copy">Primary URL: not declared</p>
@@ -187,39 +215,11 @@ output: x402-ecosystem-radar.json</code></pre>
               <div><dt>category</dt><dd>ecosystem listing</dd></div>
               <div><dt>rails</dt><dd>Base, USDC, mainnet</dd></div>
               <div><dt>max price</dt><dd>$2</dd></div>
-              <div><dt>age</dt><dd>394h</dd></div>
+              <div><dt>age</dt><dd>418h</dd></div>
             </dl>
             <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>browser/payment-header behavior</li><li>mainnet value path</li></ul>
             <p class="mini-copy">Primary URL: https://exo-trust.com</p>
             <a href="https://github.com/coinbase/x402/pull/318" target="_blank" rel="noreferrer">PR #318 by @Ir0nBeard</a>
-          </article>
-<article>
-            <p class="card-command">urgent / 82</p>
-            <h3>ecosystem: add Automaton-Alfa URL Health Check</h3>
-            <p>Adds an x402 service to Services/Endpoints.</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>ecosystem listing</dd></div>
-              <div><dt>rails</dt><dd>Base, USDC</dd></div>
-              <div><dt>max price</dt><dd>n/a</dd></div>
-              <div><dt>age</dt><dd>7h</dd></div>
-            </dl>
-            <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>trust or risk claims</li><li>browser/payment-header behavior</li></ul>
-            <p class="mini-copy">Primary URL: https://alfa.alfa-agente.com/</p>
-            <a href="https://github.com/coinbase/x402/pull/344" target="_blank" rel="noreferrer">PR #344 by @brzin-hub</a>
-          </article>
-<article>
-            <p class="card-command">urgent / 76</p>
-            <h3>Add Agent Shop to x402 ecosystem (Services/Endpoints)</h3>
-            <p>**Category:** `Services/Endpoints`</p>
-            <dl class="mini-ledger">
-              <div><dt>category</dt><dd>ecosystem listing</dd></div>
-              <div><dt>rails</dt><dd>Base, USDC, mainnet</dd></div>
-              <div><dt>max price</dt><dd>n/a</dd></div>
-              <div><dt>age</dt><dd>95h</dd></div>
-            </dl>
-            <ul class="compact-list"><li>public ecosystem listing</li><li>agent-discoverable surface</li><li>settlement or checkout workflow</li><li>browser/payment-header behavior</li><li>mainnet value path</li></ul>
-            <p class="mini-copy">Primary URL: https://&lt;shop</p>
-            <a href="https://github.com/coinbase/x402/pull/342" target="_blank" rel="noreferrer">PR #342 by @MagnificoAi</a>
           </article>
         </div>
       </section>
@@ -244,6 +244,38 @@ output: x402-ecosystem-radar.json</code></pre>
             </thead>
             <tbody>
               <tr>
+              <td><a href="https://github.com/coinbase/x402/pull/348" target="_blank" rel="noreferrer">#348</a></td>
+              <td>feat(ecosystem): add crosscheck</td>
+              <td>ecosystem listing</td>
+              <td>Base, Base Sepolia, USDC, mainnet, testnet</td>
+              <td>$0.02</td>
+              <td>urgent</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/coinbase/x402/pull/349" target="_blank" rel="noreferrer">#349</a></td>
+              <td>ecosystem: add Overwing (Services/Endpoints)</td>
+              <td>ecosystem listing</td>
+              <td>Base, USDC</td>
+              <td>$0.002</td>
+              <td>urgent</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/coinbase/x402/pull/347" target="_blank" rel="noreferrer">#347</a></td>
+              <td>Ecosystem: add Agent World (Services/Endpoints, Algorand)</td>
+              <td>ecosystem listing</td>
+              <td>mainnet</td>
+              <td>n/a</td>
+              <td>urgent</td>
+            </tr>
+<tr>
+              <td><a href="https://github.com/coinbase/x402/pull/346" target="_blank" rel="noreferrer">#346</a></td>
+              <td>Ecosystem: add AgentWallet (client-side MCP payer)</td>
+              <td>ecosystem listing</td>
+              <td>Base, Solana, mainnet</td>
+              <td>n/a</td>
+              <td>urgent</td>
+            </tr>
+<tr>
               <td><a href="https://github.com/coinbase/x402/pull/345" target="_blank" rel="noreferrer">#345</a></td>
               <td>Add XDC AI facilitators (XDC mainnet) to the ecosystem</td>
               <td>ecosystem listing</td>
@@ -339,38 +371,6 @@ output: x402-ecosystem-radar.json</code></pre>
               <td>n/a</td>
               <td>urgent</td>
             </tr>
-<tr>
-              <td><a href="https://github.com/coinbase/x402/pull/333" target="_blank" rel="noreferrer">#333</a></td>
-              <td>ecosystem: add x402 Bazaar Rank (Services/Endpoints)</td>
-              <td>ecosystem listing</td>
-              <td>Base, USDC</td>
-              <td>n/a</td>
-              <td>review</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/coinbase/x402/pull/335" target="_blank" rel="noreferrer">#335</a></td>
-              <td>feat(site): add Hoodbook to the ecosystem</td>
-              <td>ecosystem listing</td>
-              <td>not declared</td>
-              <td>n/a</td>
-              <td>review</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/coinbase/x402/pull/334" target="_blank" rel="noreferrer">#334</a></td>
-              <td>Add AMNT Facilitator (Hedera mainnet) to the ecosystem directory</td>
-              <td>ecosystem listing</td>
-              <td>Base, Base Sepolia, Solana, mainnet, testnet</td>
-              <td>n/a</td>
-              <td>urgent</td>
-            </tr>
-<tr>
-              <td><a href="https://github.com/coinbase/x402/pull/332" target="_blank" rel="noreferrer">#332</a></td>
-              <td>Add Brian Booms to ecosystem</td>
-              <td>ecosystem listing</td>
-              <td>Base, USDC, mainnet</td>
-              <td>n/a</td>
-              <td>urgent</td>
-            </tr>
             </tbody>
           </table>
         </div>
@@ -381,7 +381,7 @@ output: x402-ecosystem-radar.json</code></pre>
           <div class="terminal-topline">category mix</div>
           <div class="table-shell compact">
             <table>
-              <tbody><tr><td>ecosystem listing</td><td>83</td></tr><tr><td>protocol implementation</td><td>9</td></tr><tr><td>docs / discovery</td><td>8</td></tr></tbody>
+              <tbody><tr><td>ecosystem listing</td><td>84</td></tr><tr><td>protocol implementation</td><td>8</td></tr><tr><td>docs / discovery</td><td>8</td></tr></tbody>
             </table>
           </div>
         </article>
@@ -389,7 +389,7 @@ output: x402-ecosystem-radar.json</code></pre>
           <div class="terminal-topline">rail signals</div>
           <div class="table-shell compact">
             <table>
-              <tbody><tr><td>Base</td><td>74</td></tr><tr><td>USDC</td><td>69</td></tr><tr><td>mainnet</td><td>45</td></tr><tr><td>Solana</td><td>18</td></tr><tr><td>testnet</td><td>9</td></tr><tr><td>Base Sepolia</td><td>5</td></tr></tbody>
+              <tbody><tr><td>Base</td><td>74</td></tr><tr><td>USDC</td><td>68</td></tr><tr><td>mainnet</td><td>47</td></tr><tr><td>Solana</td><td>18</td></tr><tr><td>testnet</td><td>10</td></tr><tr><td>Base Sepolia</td><td>6</td></tr></tbody>
             </table>
           </div>
         </article>
