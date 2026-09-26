@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-09-25",
+        "dateModified": "2026-09-26",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-09-25</em>
+        <em>2026-09-26</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-09-25</dd>
+              <dd>2026-09-26</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>180</dd>
+              <dd>179</dd>
             </div>
           </dl>
         </div>
@@ -98,9 +98,9 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   180
-github repos:     81
-readme sampled:   37
+latest servers:   179
+github repos:     80
+readme sampled:   36
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -114,12 +114,12 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>180</strong>
+            <strong>179</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>81 (45%)</strong>
+            <strong>80 (45%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -129,12 +129,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>86 (48%)</strong>
+            <strong>88 (49%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>34 (19%)</strong>
+            <strong>33 (18%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -153,7 +153,7 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>34 (19%)</strong>
+            <strong>33 (18%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -163,12 +163,12 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>7 (4%)</strong>
+            <strong>6 (3%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote secret headers</p>
-            <strong>24 (13%)</strong>
+            <strong>25 (14%)</strong>
             <p>Listings whose remote metadata declares secret request headers.</p>
           </article>
         </div>
@@ -197,42 +197,42 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>83 / 180 - harder to understand quickly</span>
+              <span>80 / 179 - harder to understand quickly</span>
             </div>
             <i class="pulse-width-45"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>47 / 180 - namespace carries the listing</span>
+              <span>44 / 179 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>144 / 180 - hosted flow must explain trust and auth clearly</span>
+              <span>144 / 179 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>24 / 37 - among readable GitHub READMEs</span>
+              <span>23 / 36 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-65"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>28 / 37 - among readable GitHub READMEs</span>
+              <span>28 / 36 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-75"></i>
+            <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>30 / 37 - among readable GitHub READMEs</span>
+              <span>29 / 36 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
@@ -246,14 +246,14 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>10 / 37 - among readable GitHub READMEs</span>
+              <span>10 / 36 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-25"></i>
+            <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>11 / 37 - among readable GitHub READMEs</span>
+              <span>10 / 36 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-30"></i>
           </div>
@@ -273,20 +273,7 @@ data:             mcp-registry-pulse.json</code></pre>
           <input id="pulseSearch" type="search" placeholder="try: remote, smoke-test, title, GitHub">
         </div>
         <div class="pulse-sample-grid" data-pulse-list>
-          <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.bizmoon/regulatory live us federal and state regulatory changes and grant programs, every result cited. uofuonye/bizmoon-plugins remote add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof document permissions and safety notes add copyable mcpservers config reference server.json metadata alignment">
-            <p class="card-command">score 37/100 · remote</p>
-            <h3>ai.bizmoon/regulatory</h3>
-            <p>Live US federal and state regulatory changes and grant programs, every result cited.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://bizmoon.ai/mcp" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/uofuonye/bizmoon-plugins" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.avasis/quant-research crypto backtest statistics: the server owns the trial count, so it cannot be understated. abhayjnayakk/quant-integrity remote secrets credentials tokens headers add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
+          <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.avasis/quant-research crypto backtest statistics: the server owns the trial count, so it cannot be understated. abhayjnayakk/quant-integrity remote secrets credentials tokens headers add a human-readable title expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
             <p class="card-command">score 45/100 · remote</p>
             <h3>ai.avasis/quant-research</h3>
             <p>Crypto backtest statistics: the server owns the trial count, so it cannot be understated.</p>
@@ -374,19 +361,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://github.com/kipmcc/aviado-mcp" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/kipmcc/aviado-mcp" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.blast-radius/blast-radius blast radius tools for ai strategy, diligence, and market updates. kipmcc/blast-radius-live remote add a human-readable title expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary refresh stale registry metadata">
-            <p class="card-command">score 49/100 · remote</p>
-            <h3>ai.blast-radius/blast-radius</h3>
-            <p>Blast Radius tools for AI strategy, diligence, and market updates.</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://github.com/kipmcc/blast-radius-live" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/kipmcc/blast-radius-live" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -498,6 +472,32 @@ data:             mcp-registry-pulse.json</code></pre>
             </ul>
             <div class="pulse-sample-links">
               <a href="https://beket.ai/guides/using-the-beket-ai-mcp/" target="_blank" rel="noreferrer">source</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="agency.lona/trading ai-powered trading strategy development: backtesting, market data, and portfolio analysis mindsightventures/lona remote add a human-readable title expand the registry description make readme proof available clarify remote auth and trust boundary refresh stale registry metadata">
+            <p class="card-command">score 57/100 · remote</p>
+            <h3>agency.lona/trading</h3>
+            <p>AI-powered trading strategy development: backtesting, market data, and portfolio analysis</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Clarify remote auth and trust boundary</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://lona.agency" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/mindsightventures/lona" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.argushq/enforcement-database search argus hq public fda enforcement data: warning letters, recalls, approvals, 483s. andrewjgaber-commits/empire-distribution remote add a human-readable title expand the registry description make readme proof available clarify remote auth and trust boundary refresh stale registry metadata">
+            <p class="card-command">score 57/100 · remote</p>
+            <h3>ai.argushq/enforcement-database</h3>
+            <p>Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.</p>
+            <ul>
+              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Make README proof available</li><li>Clarify remote auth and trust boundary</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://argushq.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/andrewjgaber-commits/empire-distribution" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
