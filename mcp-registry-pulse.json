@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-09-30",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 170,
-  "githubReposDetected": 76,
-  "readmesSampled": 36,
+  "latestServersAnalyzed": 167,
+  "githubReposDetected": 73,
+  "readmesSampled": 35,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 170,
-    "repos": 76,
-    "readableRepos": 36,
+    "latestTotal": 167,
+    "repos": 73,
+    "readableRepos": 35,
     "packageCount": 34,
-    "remoteCount": 138,
+    "remoteCount": 135,
     "packageOnly": 30,
-    "remoteOnly": 134,
+    "remoteOnly": 131,
     "both": 4,
-    "noInstallPath": 134,
-    "websiteVisible": 149,
-    "missingTitle": 41,
+    "noInstallPath": 131,
+    "websiteVisible": 146,
+    "missingTitle": 39,
     "shortDescription": 71,
-    "recent45": 70,
-    "orgOwned": 20,
-    "issuesEnabled": 35,
+    "recent45": 71,
+    "orgOwned": 21,
+    "issuesEnabled": 34,
     "archived": 0,
-    "mcpServers": 23,
-    "install": 27,
-    "serverJson": 11,
-    "safety": 30,
+    "mcpServers": 22,
+    "install": 25,
+    "serverJson": 10,
+    "safety": 28,
     "stdioPackageCount": 34,
     "stdioPackageReadable": 10,
     "stdioBoundaryDocs": 5,
     "secretPackageConfig": 6,
-    "secretRemoteHeaders": 22,
-    "glama": 16,
-    "smoke": 10
+    "secretRemoteHeaders": 18,
+    "glama": 15,
+    "smoke": 9
   },
   "sampleServers": [
     {
@@ -221,28 +221,6 @@
       ]
     },
     {
-      "name": "ai.basethread/basethread",
-      "title": "",
-      "description": "One shared context your team's AI tools read & write over MCP. No re-explaining. Free.",
-      "publicProofScore": 52,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-08T17:57:42.454703Z",
-      "repo": "navbuildz/basethread-mcp",
-      "websiteUrl": "https://basethread.ai",
-      "primaryUrl": "https://basethread.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Add copyable mcpServers config"
-      ]
-    },
-    {
       "name": "ai.adeu/adeu",
       "title": "",
       "description": "Automated DOCX Redlining Engine",
@@ -374,6 +352,28 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ae.datadubai/dubai-real-estate",
+      "title": "Dubai Data — Dubai real estate statistics",
+      "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
+      "publicProofScore": 57,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-09-30T08:30:47.911063Z",
+      "repo": "datadubai/dubai-real-estate-dld",
+      "websiteUrl": "https://datadubai.ae/mcp/",
+      "primaryUrl": "https://datadubai.ae/mcp/",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
       ]
     },
     {
