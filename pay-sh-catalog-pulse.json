@@ -1,16 +1,16 @@
 {
-  "runDate": "2026-09-29",
-  "generatedAt": "2026-09-01T20:55:46Z",
+  "runDate": "2026-09-30",
+  "generatedAt": "2026-09-30T19:00:33Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 74,
-  "observedProviders": 74,
-  "pricedCount": 56,
-  "meteredCount": 56,
+  "providerCount": 75,
+  "observedProviders": 75,
+  "pricedCount": 57,
+  "meteredCount": 57,
   "freeTierCount": 24,
   "categoryCounts": {
     "messaging": 2,
     "productivity": 2,
-    "finance": 9,
+    "finance": 10,
     "ai_ml": 28,
     "shopping": 4,
     "identity": 2,
@@ -30,7 +30,7 @@
     },
     {
       "category": "finance",
-      "count": 9
+      "count": 10
     },
     {
       "category": "data",
@@ -58,6 +58,28 @@
     }
   ],
   "reviewPriority": [
+    {
+      "fqn": "arkham/api",
+      "title": "Arkham Intelligence API",
+      "category": "finance",
+      "description": "Wallet balances, entity attribution, transfer and exchange-flow tracing, token holders, and Polymarket analytics across 10+ chains — returning labeled entities, portfolio breakdowns, transfer records, and live market data. Paid per request in USDC.",
+      "useCase": "Use for identifying who owns a wallet, tracing transfers and exchange flows, checking balances and portfolios, breaking down token holders, and pulling Polymarket market data on demand.",
+      "serviceUrl": "https://api.arkm.com/x402",
+      "endpointCount": 89,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.2,
+      "maxPriceUsd": 200,
+      "sha": "1c1dcd0fa880a62f",
+      "priorityScore": 74,
+      "priorityLevel": "high",
+      "reasons": [
+        "large per-call ceiling",
+        "wide endpoint surface",
+        "financial data or wallet context",
+        "metered without free tier"
+      ]
+    },
     {
       "fqn": "agentmail/email",
       "title": "AgentMail",
@@ -255,6 +277,28 @@
   ],
   "highestPrice": [
     {
+      "fqn": "arkham/api",
+      "title": "Arkham Intelligence API",
+      "category": "finance",
+      "description": "Wallet balances, entity attribution, transfer and exchange-flow tracing, token holders, and Polymarket analytics across 10+ chains — returning labeled entities, portfolio breakdowns, transfer records, and live market data. Paid per request in USDC.",
+      "useCase": "Use for identifying who owns a wallet, tracing transfers and exchange flows, checking balances and portfolios, breaking down token holders, and pulling Polymarket market data on demand.",
+      "serviceUrl": "https://api.arkm.com/x402",
+      "endpointCount": 89,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.2,
+      "maxPriceUsd": 200,
+      "sha": "1c1dcd0fa880a62f",
+      "priorityScore": 74,
+      "priorityLevel": "high",
+      "reasons": [
+        "large per-call ceiling",
+        "wide endpoint surface",
+        "financial data or wallet context",
+        "metered without free tier"
+      ]
+    },
+    {
       "fqn": "solana-foundation/google/generativelanguage",
       "title": "Generative Language API (Gemini)",
       "category": "ai_ml",
@@ -397,27 +441,6 @@
         "wide endpoint surface",
         "financial data or wallet context"
       ]
-    },
-    {
-      "fqn": "socialintel/influencer-search",
-      "title": "Social Intel",
-      "category": "data",
-      "description": "Find Instagram influencers across 33M+ profiles by niche, country, city, follower count, and gender. Returns username, bio, follower count, engagement metrics, business contact email (~50% coverage), and creator categories for marketing discovery.",
-      "useCase": "Use for Instagram influencer discovery, creator search, niche keyword matching, audience demographics, engagement rate filtering, follower count ranges, geographic targeting, campaign planning, brand partnerships, and marketing lead lists.",
-      "serviceUrl": "https://api.socialintel.dev",
-      "endpointCount": 9,
-      "hasMetering": true,
-      "hasFreeTier": true,
-      "minPriceUsd": 0.01,
-      "maxPriceUsd": 0.5,
-      "sha": "95c931cb4ce58ba0",
-      "priorityScore": 32,
-      "priorityLevel": "watch",
-      "reasons": [
-        "message-sending workflow",
-        "personal or business-contact data",
-        "untrusted web-data input"
-      ]
     }
   ],
   "widestSurface": [
@@ -439,6 +462,28 @@
       "reasons": [
         "wide endpoint surface",
         "financial data or wallet context"
+      ]
+    },
+    {
+      "fqn": "arkham/api",
+      "title": "Arkham Intelligence API",
+      "category": "finance",
+      "description": "Wallet balances, entity attribution, transfer and exchange-flow tracing, token holders, and Polymarket analytics across 10+ chains — returning labeled entities, portfolio breakdowns, transfer records, and live market data. Paid per request in USDC.",
+      "useCase": "Use for identifying who owns a wallet, tracing transfers and exchange flows, checking balances and portfolios, breaking down token holders, and pulling Polymarket market data on demand.",
+      "serviceUrl": "https://api.arkm.com/x402",
+      "endpointCount": 89,
+      "hasMetering": true,
+      "hasFreeTier": false,
+      "minPriceUsd": 0.2,
+      "maxPriceUsd": 200,
+      "sha": "1c1dcd0fa880a62f",
+      "priorityScore": 74,
+      "priorityLevel": "high",
+      "reasons": [
+        "large per-call ceiling",
+        "wide endpoint surface",
+        "financial data or wallet context",
+        "metered without free tier"
       ]
     },
     {
@@ -564,25 +609,6 @@
       "reasons": [
         "voice or calling workflow",
         "untrusted web-data input"
-      ]
-    },
-    {
-      "fqn": "solana-foundation/alibaba/facebody",
-      "title": "Alibaba Cloud Facebody",
-      "category": "ai_ml",
-      "description": "Run image and video analysis or generation with Alibaba Cloud Facebody, including face Information Desensitization, human Pose Keypoints, and face Comparison.",
-      "useCase": "Use for face Information Desensitization, human Pose Keypoints, face Comparison, and related image or video generation, enhancement, detection, segmentation, and visual analysis.",
-      "serviceUrl": "https://facebody.alibaba.gateway-402.com",
-      "endpointCount": 26,
-      "hasMetering": true,
-      "hasFreeTier": false,
-      "minPriceUsd": 0.001,
-      "maxPriceUsd": 0.001,
-      "sha": "a13c66c6bb015ec1",
-      "priorityScore": 32,
-      "priorityLevel": "watch",
-      "reasons": [
-        "metered without free tier"
       ]
     }
   ]
