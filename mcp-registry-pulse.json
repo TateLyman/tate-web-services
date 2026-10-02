@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-01",
+  "generatedAt": "2026-10-02",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 167,
-  "githubReposDetected": 74,
-  "readmesSampled": 36,
+  "githubReposDetected": 73,
+  "readmesSampled": 35,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -14,8 +14,8 @@
   ],
   "totals": {
     "latestTotal": 167,
-    "repos": 74,
-    "readableRepos": 36,
+    "repos": 73,
+    "readableRepos": 35,
     "packageCount": 35,
     "remoteCount": 135,
     "packageOnly": 30,
@@ -23,16 +23,16 @@
     "both": 5,
     "noInstallPath": 130,
     "websiteVisible": 146,
-    "missingTitle": 39,
-    "shortDescription": 72,
+    "missingTitle": 37,
+    "shortDescription": 73,
     "recent45": 70,
-    "orgOwned": 22,
-    "issuesEnabled": 35,
+    "orgOwned": 21,
+    "issuesEnabled": 34,
     "archived": 0,
-    "mcpServers": 22,
-    "install": 26,
+    "mcpServers": 21,
+    "install": 25,
     "serverJson": 10,
-    "safety": 29,
+    "safety": 28,
     "stdioPackageCount": 35,
     "stdioPackageReadable": 11,
     "stdioBoundaryDocs": 5,
@@ -333,6 +333,28 @@
       ]
     },
     {
+      "name": "ai.aqta/seal",
+      "title": "",
+      "description": "Verify Seal AI decision receipts: signed evidence anyone can check, no account needed.",
+      "publicProofScore": 55,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-17T22:32:58.036357Z",
+      "repo": null,
+      "websiteUrl": "https://app.aqta.ai/demo",
+      "primaryUrl": "https://app.aqta.ai/demo",
+      "topGaps": [
+        "Attach a public repository",
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "ai.atlasverified/atlas-mcp",
       "title": "",
       "description": "AI-powered organic supply chain verification: certification, OFAC, FDA import checks.",
@@ -417,30 +439,6 @@
         "Expand the registry description",
         "Make README proof available",
         "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.autoblocks/contextlayer-mcp",
-      "title": "",
-      "description": "Personal context management for AI assistants",
-      "publicProofScore": 57,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-01-12T03:52:52.134106Z",
-      "repo": "autoblocksai/ctxl",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/autoblocksai/ctxl",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
         "Refresh stale registry metadata"
       ]
     }
