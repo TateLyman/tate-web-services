@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04",
+  "generatedAt": "2026-10-05",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 161,
-  "githubReposDetected": 75,
-  "readmesSampled": 37,
+  "latestServersAnalyzed": 158,
+  "githubReposDetected": 72,
+  "readmesSampled": 35,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,57 +13,35 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 161,
-    "repos": 75,
-    "readableRepos": 37,
+    "latestTotal": 158,
+    "repos": 72,
+    "readableRepos": 35,
     "packageCount": 36,
-    "remoteCount": 128,
+    "remoteCount": 125,
     "packageOnly": 31,
-    "remoteOnly": 123,
+    "remoteOnly": 120,
     "both": 5,
-    "noInstallPath": 123,
-    "websiteVisible": 140,
-    "missingTitle": 37,
-    "shortDescription": 60,
-    "recent45": 77,
-    "orgOwned": 21,
-    "issuesEnabled": 36,
+    "noInstallPath": 120,
+    "websiteVisible": 137,
+    "missingTitle": 35,
+    "shortDescription": 58,
+    "recent45": 79,
+    "orgOwned": 20,
+    "issuesEnabled": 34,
     "archived": 0,
-    "mcpServers": 22,
-    "install": 27,
+    "mcpServers": 21,
+    "install": 26,
     "serverJson": 10,
-    "safety": 30,
+    "safety": 28,
     "stdioPackageCount": 36,
     "stdioPackageReadable": 11,
     "stdioBoundaryDocs": 5,
     "secretPackageConfig": 8,
     "secretRemoteHeaders": 19,
-    "glama": 15,
+    "glama": 13,
     "smoke": 9
   },
   "sampleServers": [
-    {
-      "name": "ai.avasis/quant-research",
-      "title": "",
-      "description": "Crypto backtest statistics: the server owns the trial count, so it cannot be understated.",
-      "publicProofScore": 45,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-09-01T12:19:43.073489Z",
-      "repo": "abhayjnayakk/quant-integrity",
-      "websiteUrl": "https://quant-mcp.avasis.ai",
-      "primaryUrl": "https://quant-mcp.avasis.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof"
-      ]
-    },
     {
       "name": "ac.tandem/docs-mcp",
       "title": "",
@@ -168,28 +146,6 @@
       "repo": "alex-hoyeol-choi/headless-commerce",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/alex-hoyeol-choi/headless-commerce",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.aviado/health",
-      "title": "",
-      "description": "Supplement research, biomarker effects, drug interactions, and brand quality data",
-      "publicProofScore": 49,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-30T13:03:52.011241Z",
-      "repo": "kipmcc/aviado-mcp",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/kipmcc/aviado-mcp",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
@@ -439,6 +395,54 @@
         "Expand the registry description",
         "Make README proof available",
         "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.autoblocks/contextlayer-mcp",
+      "title": "",
+      "description": "Personal context management for AI assistants",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-01-12T03:52:52.134106Z",
+      "repo": "autoblocksai/ctxl",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/autoblocksai/ctxl",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.autoblocks/ctxl",
+      "title": "",
+      "description": "Personal context management for AI assistants",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-01-12T03:52:12.746584Z",
+      "repo": "autoblocksai/ctxl",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/autoblocksai/ctxl",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Make README proof available",
+        "Expose a product or docs website",
         "Refresh stale registry metadata"
       ]
     }
