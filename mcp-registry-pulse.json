@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-08",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 156,
-  "githubReposDetected": 67,
-  "readmesSampled": 33,
+  "latestServersAnalyzed": 155,
+  "githubReposDetected": 65,
+  "readmesSampled": 32,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,23 +13,23 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 156,
-    "repos": 67,
-    "readableRepos": 33,
+    "latestTotal": 155,
+    "repos": 65,
+    "readableRepos": 32,
     "packageCount": 34,
-    "remoteCount": 125,
+    "remoteCount": 124,
     "packageOnly": 29,
-    "remoteOnly": 120,
+    "remoteOnly": 119,
     "both": 5,
-    "noInstallPath": 120,
+    "noInstallPath": 119,
     "websiteVisible": 137,
     "missingTitle": 30,
-    "shortDescription": 57,
-    "recent45": 80,
+    "shortDescription": 55,
+    "recent45": 79,
     "orgOwned": 20,
-    "issuesEnabled": 32,
+    "issuesEnabled": 31,
     "archived": 0,
-    "mcpServers": 20,
+    "mcpServers": 19,
     "install": 26,
     "serverJson": 9,
     "safety": 25,
@@ -37,7 +37,7 @@
     "stdioPackageReadable": 11,
     "stdioBoundaryDocs": 5,
     "secretPackageConfig": 8,
-    "secretRemoteHeaders": 18,
+    "secretRemoteHeaders": 17,
     "glama": 13,
     "smoke": 9
   },
@@ -377,52 +377,6 @@
       ]
     },
     {
-      "name": "ai.authoryze/authoryze",
-      "title": "Authoryze",
-      "description": "Give your AI agent a spending limit: approval controls and single-use virtual cards.",
-      "publicProofScore": 57,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": true,
-      "updatedAt": "2026-08-21T21:03:07.846629Z",
-      "repo": "kevinfee3/authoryze-mcp",
-      "websiteUrl": "https://authoryze.ai",
-      "primaryUrl": "https://authoryze.ai",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.autoblocks/contextlayer-mcp",
-      "title": "",
-      "description": "Personal context management for AI assistants",
-      "publicProofScore": 57,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-01-12T03:52:52.134106Z",
-      "repo": "autoblocksai/ctxl",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/autoblocksai/ctxl",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "agency.ottobot/business-contact-finder",
       "title": "Business Contact Finder",
       "description": "Check how to contact a business website, and whether that contact path actually works.",
@@ -442,6 +396,50 @@
         "Add smoke-test or tool-list proof",
         "Document permissions and safety notes",
         "Add copyable mcpServers config"
+      ]
+    },
+    {
+      "name": "agency.ottobot/contractor-license-changes",
+      "title": "Contractor Licence Changes",
+      "description": "Did this contractor's licence change? Observed lapses and reinstatements, not a snapshot.",
+      "publicProofScore": 59,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-09-07T23:30:00.319394Z",
+      "repo": "modelcontextprotocol/registry",
+      "websiteUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
+      "primaryUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
+      ]
+    },
+    {
+      "name": "ai.agentberg/agentberg",
+      "title": "",
+      "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
+      "publicProofScore": 59,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-06-18T01:49:38.050173Z",
+      "repo": "Agentberg/agentberg",
+      "websiteUrl": "",
+      "primaryUrl": "https://github.com/Agentberg/agentberg",
+      "topGaps": [
+        "Add a human-readable title",
+        "Make README proof available",
+        "Expose a product or docs website",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
       ]
     }
   ]
