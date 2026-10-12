@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-11",
+  "generatedAt": "2026-10-12",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 152,
-  "githubReposDetected": 60,
+  "latestServersAnalyzed": 155,
+  "githubReposDetected": 59,
   "readmesSampled": 28,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,32 +13,32 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 152,
-    "repos": 60,
+    "latestTotal": 155,
+    "repos": 59,
     "readableRepos": 28,
-    "packageCount": 32,
-    "remoteCount": 122,
-    "packageOnly": 28,
-    "remoteOnly": 118,
+    "packageCount": 33,
+    "remoteCount": 124,
+    "packageOnly": 29,
+    "remoteOnly": 120,
     "both": 4,
-    "noInstallPath": 118,
-    "websiteVisible": 135,
-    "missingTitle": 27,
+    "noInstallPath": 120,
+    "websiteVisible": 139,
+    "missingTitle": 26,
     "shortDescription": 53,
-    "recent45": 76,
-    "orgOwned": 16,
+    "recent45": 78,
+    "orgOwned": 15,
     "issuesEnabled": 27,
     "archived": 0,
     "mcpServers": 15,
     "install": 23,
-    "serverJson": 6,
+    "serverJson": 5,
     "safety": 22,
-    "stdioPackageCount": 32,
-    "stdioPackageReadable": 10,
+    "stdioPackageCount": 33,
+    "stdioPackageReadable": 11,
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 7,
     "secretRemoteHeaders": 15,
-    "glama": 12,
+    "glama": 13,
     "smoke": 7
   },
   "sampleServers": [
@@ -124,28 +124,6 @@
       "repo": "haf/glimt",
       "websiteUrl": "",
       "primaryUrl": "https://github.com/haf/glimt",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Expose a product or docs website",
-        "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ai.atdev/supershopping",
-      "title": "",
-      "description": "나만을 위한 AI 쇼핑 MCP — 상품을 자연어로 검색·비교·추천해 사용자의 효과적인 쇼핑을 돕습니다.",
-      "publicProofScore": 49,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-06-29T05:36:58.413006Z",
-      "repo": "alex-hoyeol-choi/headless-commerce",
-      "websiteUrl": "",
-      "primaryUrl": "https://github.com/alex-hoyeol-choi/headless-commerce",
       "topGaps": [
         "Add a human-readable title",
         "Expand the registry description",
@@ -440,6 +418,30 @@
         "Add install or client command",
         "Add smoke-test or tool-list proof",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ai.adtest/adtest-mcp",
+      "title": "",
+      "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
+      "publicProofScore": 62,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": true,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-09-01T21:42:48.138341Z",
+      "repo": "menaker/adtest-mcp",
+      "websiteUrl": "https://adtest.ai/",
+      "primaryUrl": "https://adtest.ai/",
+      "topGaps": [
+        "Add a human-readable title",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Explain STDIO command boundary",
+        "Reference server.json metadata alignment"
       ]
     }
   ]
