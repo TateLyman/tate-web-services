@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13",
+  "generatedAt": "2026-10-14",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 155,
+  "latestServersAnalyzed": 156,
   "githubReposDetected": 60,
   "readmesSampled": 29,
   "method": [
@@ -13,15 +13,15 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 155,
+    "latestTotal": 156,
     "repos": 60,
     "readableRepos": 29,
     "packageCount": 33,
-    "remoteCount": 124,
+    "remoteCount": 125,
     "packageOnly": 29,
-    "remoteOnly": 120,
+    "remoteOnly": 121,
     "both": 4,
-    "noInstallPath": 120,
+    "noInstallPath": 121,
     "websiteVisible": 139,
     "missingTitle": 25,
     "shortDescription": 53,
@@ -37,7 +37,7 @@
     "stdioPackageReadable": 11,
     "stdioBoundaryDocs": 4,
     "secretPackageConfig": 7,
-    "secretRemoteHeaders": 15,
+    "secretRemoteHeaders": 16,
     "glama": 13,
     "smoke": 7
   },
