@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-16",
+  "generatedAt": "2026-10-17",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 156,
+  "latestServersAnalyzed": 155,
   "githubReposDetected": 61,
   "readmesSampled": 30,
   "method": [
@@ -13,19 +13,19 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 156,
+    "latestTotal": 155,
     "repos": 61,
     "readableRepos": 30,
     "packageCount": 34,
-    "remoteCount": 125,
+    "remoteCount": 124,
     "packageOnly": 29,
-    "remoteOnly": 120,
+    "remoteOnly": 119,
     "both": 5,
-    "noInstallPath": 120,
+    "noInstallPath": 119,
     "websiteVisible": 138,
-    "missingTitle": 24,
+    "missingTitle": 23,
     "shortDescription": 51,
-    "recent45": 75,
+    "recent45": 74,
     "orgOwned": 16,
     "issuesEnabled": 29,
     "archived": 0,
@@ -289,6 +289,30 @@
       ]
     },
     {
+      "name": "ai.adtest/adtest-mcp",
+      "title": "",
+      "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
+      "publicProofScore": 57,
+      "installPath": "package",
+      "packageTransports": [
+        "stdio"
+      ],
+      "hasStdioPackage": true,
+      "hasSecretPackageConfig": true,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-09-01T21:42:48.138341Z",
+      "repo": "menaker/adtest-mcp",
+      "websiteUrl": "https://adtest.ai/",
+      "primaryUrl": "https://adtest.ai/",
+      "topGaps": [
+        "Add a human-readable title",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Explain STDIO command boundary",
+        "Refresh stale registry metadata"
+      ]
+    },
+    {
       "name": "ai.argushq/enforcement-database",
       "title": "",
       "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
@@ -418,30 +442,6 @@
         "Add install or client command",
         "Add smoke-test or tool-list proof",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "ai.adtest/adtest-mcp",
-      "title": "",
-      "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
-      "publicProofScore": 62,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": true,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-09-01T21:42:48.138341Z",
-      "repo": "menaker/adtest-mcp",
-      "websiteUrl": "https://adtest.ai/",
-      "primaryUrl": "https://adtest.ai/",
-      "topGaps": [
-        "Add a human-readable title",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
-        "Explain STDIO command boundary",
-        "Reference server.json metadata alignment"
       ]
     }
   ]
