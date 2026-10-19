@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-18",
+  "generatedAt": "2026-10-19",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 153,
-  "githubReposDetected": 59,
+  "latestServersAnalyzed": 152,
+  "githubReposDetected": 58,
   "readmesSampled": 28,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 153,
-    "repos": 59,
+    "latestTotal": 152,
+    "repos": 58,
     "readableRepos": 28,
-    "packageCount": 33,
-    "remoteCount": 123,
-    "packageOnly": 28,
-    "remoteOnly": 118,
-    "both": 5,
-    "noInstallPath": 118,
-    "websiteVisible": 136,
-    "missingTitle": 23,
-    "shortDescription": 51,
-    "recent45": 73,
-    "orgOwned": 15,
+    "packageCount": 35,
+    "remoteCount": 121,
+    "packageOnly": 29,
+    "remoteOnly": 115,
+    "both": 6,
+    "noInstallPath": 115,
+    "websiteVisible": 135,
+    "missingTitle": 22,
+    "shortDescription": 50,
+    "recent45": 74,
+    "orgOwned": 16,
     "issuesEnabled": 27,
     "archived": 0,
     "mcpServers": 17,
     "install": 22,
-    "serverJson": 5,
-    "safety": 22,
-    "stdioPackageCount": 33,
-    "stdioPackageReadable": 10,
-    "stdioBoundaryDocs": 3,
-    "secretPackageConfig": 7,
+    "serverJson": 4,
+    "safety": 23,
+    "stdioPackageCount": 35,
+    "stdioPackageReadable": 11,
+    "stdioBoundaryDocs": 4,
+    "secretPackageConfig": 8,
     "secretRemoteHeaders": 17,
     "glama": 13,
-    "smoke": 8
+    "smoke": 9
   },
   "sampleServers": [
     {
@@ -313,28 +313,6 @@
       ]
     },
     {
-      "name": "ai.argushq/enforcement-database",
-      "title": "",
-      "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
-      "publicProofScore": 57,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-07-12T20:32:22.415073Z",
-      "repo": "andrewjgaber-commits/empire-distribution",
-      "websiteUrl": "https://argushq.ai",
-      "primaryUrl": "https://argushq.ai",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "agency.ottobot/business-contact-finder",
       "title": "Business Contact Finder",
       "description": "Check how to contact a business website, and whether that contact path actually works.",
@@ -442,6 +420,28 @@
         "Add install or client command",
         "Add smoke-test or tool-list proof",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "agency.goji/goji",
+      "title": "",
+      "description": "Answers on AEO, SEO, web and brand from GOJI's published material. Melbourne, Australia.",
+      "publicProofScore": 63,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-08-13T13:12:26.047978Z",
+      "repo": "goji-agency/goji-mcp",
+      "websiteUrl": "https://goji.agency",
+      "primaryUrl": "https://goji.agency",
+      "topGaps": [
+        "Add a human-readable title",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata",
+        "Reference server.json metadata alignment"
       ]
     }
   ]
