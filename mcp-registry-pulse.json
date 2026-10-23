@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22",
+  "generatedAt": "2026-10-23",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 150,
@@ -16,16 +16,16 @@
     "latestTotal": 150,
     "repos": 58,
     "readableRepos": 28,
-    "packageCount": 33,
-    "remoteCount": 122,
-    "packageOnly": 26,
-    "remoteOnly": 115,
+    "packageCount": 32,
+    "remoteCount": 123,
+    "packageOnly": 25,
+    "remoteOnly": 116,
     "both": 7,
-    "noInstallPath": 115,
+    "noInstallPath": 116,
     "websiteVisible": 133,
-    "missingTitle": 21,
-    "shortDescription": 47,
-    "recent45": 71,
+    "missingTitle": 20,
+    "shortDescription": 45,
+    "recent45": 72,
     "orgOwned": 16,
     "issuesEnabled": 27,
     "archived": 0,
@@ -33,10 +33,10 @@
     "install": 22,
     "serverJson": 4,
     "safety": 23,
-    "stdioPackageCount": 33,
+    "stdioPackageCount": 32,
     "stdioPackageReadable": 10,
     "stdioBoundaryDocs": 4,
-    "secretPackageConfig": 8,
+    "secretPackageConfig": 7,
     "secretRemoteHeaders": 19,
     "glama": 12,
     "smoke": 9
@@ -133,6 +133,50 @@
       ]
     },
     {
+      "name": "agency.ottobot/business-contact-finder",
+      "title": "Business Contact Finder",
+      "description": "Check how to contact a business website, and whether that contact path actually works.",
+      "publicProofScore": 54,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-09-07T21:23:32.359958Z",
+      "repo": "modelcontextprotocol/registry",
+      "websiteUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
+      "primaryUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
+      ]
+    },
+    {
+      "name": "agency.ottobot/contractor-license-changes",
+      "title": "Contractor Licence Changes",
+      "description": "Did this contractor's licence change? Observed lapses and reinstatements, not a snapshot.",
+      "publicProofScore": 54,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-09-07T23:30:00.319394Z",
+      "repo": "modelcontextprotocol/registry",
+      "websiteUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
+      "primaryUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
+      ]
+    },
+    {
       "name": "ai.adeu/adeu",
       "title": "",
       "description": "Automated DOCX Redlining Engine",
@@ -223,28 +267,6 @@
       ]
     },
     {
-      "name": "ai.aqta/seal",
-      "title": "",
-      "description": "Verify Seal AI decision receipts: signed evidence anyone can check, no account needed.",
-      "publicProofScore": 55,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-08-17T22:32:58.036357Z",
-      "repo": null,
-      "websiteUrl": "https://app.aqta.ai/demo",
-      "primaryUrl": "https://app.aqta.ai/demo",
-      "topGaps": [
-        "Attach a public repository",
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "ae.datadubai/dubai-real-estate",
       "title": "Dubai Data — Dubai real estate statistics",
       "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
@@ -310,50 +332,6 @@
         "Document permissions and safety notes",
         "Explain STDIO command boundary",
         "Refresh stale registry metadata"
-      ]
-    },
-    {
-      "name": "agency.ottobot/business-contact-finder",
-      "title": "Business Contact Finder",
-      "description": "Check how to contact a business website, and whether that contact path actually works.",
-      "publicProofScore": 59,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-09-07T21:23:32.359958Z",
-      "repo": "modelcontextprotocol/registry",
-      "websiteUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
-      "primaryUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
-        "Add copyable mcpServers config"
-      ]
-    },
-    {
-      "name": "agency.ottobot/contractor-license-changes",
-      "title": "Contractor Licence Changes",
-      "description": "Did this contractor's licence change? Observed lapses and reinstatements, not a snapshot.",
-      "publicProofScore": 59,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-09-07T23:30:00.319394Z",
-      "repo": "modelcontextprotocol/registry",
-      "websiteUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
-      "primaryUrl": "https://github.com/modelcontextprotocol/registry/tree/main/docs",
-      "topGaps": [
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
-        "Add copyable mcpServers config"
       ]
     },
     {
@@ -442,6 +420,27 @@
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata",
         "Reference server.json metadata alignment"
+      ]
+    },
+    {
+      "name": "ai.aarna/atars-mcp",
+      "title": "aTars MCP",
+      "description": "Crypto market signals, technical indicators, and sentiment analysis for AI agents.",
+      "publicProofScore": 65,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-03-10T11:09:59.15927Z",
+      "repo": null,
+      "websiteUrl": "https://mcp.aarna.ai/mcp",
+      "primaryUrl": "https://mcp.aarna.ai/mcp",
+      "topGaps": [
+        "Attach a public repository",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
       ]
     }
   ]
