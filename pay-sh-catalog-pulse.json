@@ -1,21 +1,21 @@
 {
-  "runDate": "2026-10-30",
-  "generatedAt": "2026-10-14T23:08:18Z",
+  "runDate": "2026-10-31",
+  "generatedAt": "2026-10-08T14:49:12Z",
   "source": "https://pay.sh/api/catalog",
-  "providerCount": 76,
-  "observedProviders": 76,
-  "pricedCount": 58,
-  "meteredCount": 58,
-  "freeTierCount": 25,
+  "providerCount": 75,
+  "observedProviders": 75,
+  "pricedCount": 57,
+  "meteredCount": 57,
+  "freeTierCount": 24,
   "categoryCounts": {
     "messaging": 2,
     "productivity": 2,
-    "data": 8,
     "finance": 10,
     "ai_ml": 28,
     "shopping": 4,
     "identity": 2,
     "search": 6,
+    "data": 7,
     "devtools": 1,
     "media": 2,
     "maps": 4,
@@ -34,7 +34,7 @@
     },
     {
       "category": "data",
-      "count": 8
+      "count": 7
     },
     {
       "category": "search",
@@ -444,23 +444,23 @@
       ]
     },
     {
-      "fqn": "apify/web-data",
-      "title": "Apify",
-      "category": "data",
-      "description": "Apify Actors for web scraping, crawling, and browser automation, returning search results, product listings, social profiles, map places, reviews, job postings, structured datasets, and rendered page content from public websites.",
-      "useCase": "Use for web scraping, crawling, and structured data extraction (Google Maps places, Instagram profiles, Amazon listings, Google search results, reviews, job boards, site-to-markdown crawls) under one prepaid budget or per run.",
-      "serviceUrl": "https://agi.apify.com",
-      "endpointCount": 4,
+      "fqn": "quicknode/rpc",
+      "title": "Quicknode",
+      "category": "compute",
+      "description": "Pay-per-request JSON-RPC endpoints for 140+ blockchain networks. Each chain is its own path (e.g. solana-mainnet, ethereum-mainnet). Supports SIWX session auth, x402 micropayments, dynamic per-method pricing, and direct node access without infrastructure.",
+      "useCase": "Use for blockchain JSON-RPC, querying account or contract state, submitting transactions, Solana RPC, EVM RPC, multi-chain dapps, block and transaction lookups, devnet/testnet access, and scalable chain reads with pay-per-request billing.",
+      "serviceUrl": "https://x402.quicknode.com",
+      "endpointCount": 137,
       "hasMetering": true,
       "hasFreeTier": true,
-      "minPriceUsd": 2,
-      "maxPriceUsd": 2,
-      "sha": "e095038fbd3d5f44",
-      "priorityScore": 26,
-      "priorityLevel": "watch",
+      "minPriceUsd": 0.001,
+      "maxPriceUsd": 1,
+      "sha": "8095874e9a258619",
+      "priorityScore": 44,
+      "priorityLevel": "medium",
       "reasons": [
-        "personal or business-contact data",
-        "untrusted web-data input"
+        "wide endpoint surface",
+        "financial data or wallet context"
       ]
     }
   ],
