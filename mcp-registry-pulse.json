@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-03",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 157,
-  "githubReposDetected": 59,
-  "readmesSampled": 29,
+  "githubReposDetected": 62,
+  "readmesSampled": 33,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -14,8 +14,8 @@
   ],
   "totals": {
     "latestTotal": 157,
-    "repos": 59,
-    "readableRepos": 29,
+    "repos": 62,
+    "readableRepos": 33,
     "packageCount": 29,
     "remoteCount": 132,
     "packageOnly": 24,
@@ -23,22 +23,22 @@
     "both": 5,
     "noInstallPath": 127,
     "websiteVisible": 141,
-    "missingTitle": 19,
+    "missingTitle": 17,
     "shortDescription": 45,
-    "recent45": 76,
-    "orgOwned": 17,
-    "issuesEnabled": 28,
+    "recent45": 79,
+    "orgOwned": 19,
+    "issuesEnabled": 32,
     "archived": 0,
-    "mcpServers": 17,
-    "install": 21,
-    "serverJson": 5,
-    "safety": 23,
+    "mcpServers": 19,
+    "install": 24,
+    "serverJson": 7,
+    "safety": 26,
     "stdioPackageCount": 29,
     "stdioPackageReadable": 8,
     "stdioBoundaryDocs": 3,
     "secretPackageConfig": 6,
-    "secretRemoteHeaders": 20,
-    "glama": 13,
+    "secretRemoteHeaders": 21,
+    "glama": 14,
     "smoke": 8
   },
   "sampleServers": [
@@ -267,6 +267,28 @@
       ]
     },
     {
+      "name": "ai.agentblueprint/agent-blueprint",
+      "title": "Agent Blueprint",
+      "description": "Measured agent costs, a one-page agent summary check, and an offline access map. No sign-in.",
+      "publicProofScore": 57,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-11-03T17:50:33.59427Z",
+      "repo": "agent-blueprint/agent-blueprint-website",
+      "websiteUrl": "https://agentblueprint.ai/agents",
+      "primaryUrl": "https://agentblueprint.ai/agents",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
+      ]
+    },
+    {
       "name": "ae.datadubai/dubai-real-estate",
       "title": "Dubai Data — Dubai real estate statistics",
       "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
@@ -420,27 +442,6 @@
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata",
         "Reference server.json metadata alignment"
-      ]
-    },
-    {
-      "name": "agency.thebureauoflostcontext/bureau-public",
-      "title": "Bureau public reader",
-      "description": "Bureau-operated public read-only MCP service for public Context Packets and Cases.",
-      "publicProofScore": 65,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-09-13T05:48:39.780486Z",
-      "repo": null,
-      "websiteUrl": "https://thebureauoflostcontext.agency",
-      "primaryUrl": "https://thebureauoflostcontext.agency",
-      "topGaps": [
-        "Attach a public repository",
-        "Expand the registry description",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
       ]
     }
   ]
