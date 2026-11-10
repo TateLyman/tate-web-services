@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-10",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-11-09</em>
+        <em>2026-11-10</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-11-09</dd>
+              <dd>2026-11-10</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>162</dd>
+              <dd>161</dd>
             </div>
           </dl>
         </div>
@@ -98,9 +98,9 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   162
-github repos:     64
-readme sampled:   35
+latest servers:   161
+github repos:     63
+readme sampled:   34
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -114,17 +114,17 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>162</strong>
+            <strong>161</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>64 (40%)</strong>
+            <strong>63 (39%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>146 (90%)</strong>
+            <strong>143 (89%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -134,7 +134,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>30 (19%)</strong>
+            <strong>29 (18%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -153,22 +153,22 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>30 (19%)</strong>
+            <strong>29 (18%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">stdio docs visible</p>
-            <strong>3 / 9</strong>
+            <strong>3 / 8</strong>
             <p>Readable STDIO package READMEs that mention the command or local-process boundary.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package secrets</p>
-            <strong>6 (4%)</strong>
+            <strong>5 (3%)</strong>
             <p>Listings whose package metadata declares secret environment variables.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote secret headers</p>
-            <strong>22 (14%)</strong>
+            <strong>20 (12%)</strong>
             <p>Listings whose remote metadata declares secret request headers.</p>
           </article>
         </div>
@@ -197,63 +197,63 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>44 / 162 - harder to understand quickly</span>
+              <span>45 / 161 - harder to understand quickly</span>
             </div>
-            <i class="pulse-width-25"></i>
+            <i class="pulse-width-30"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>16 / 162 - namespace carries the listing</span>
+              <span>15 / 161 - namespace carries the listing</span>
             </div>
             <i class="pulse-width-10"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>131 / 162 - hosted flow must explain trust and auth clearly</span>
+              <span>131 / 161 - hosted flow must explain trust and auth clearly</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>19 / 35 - among readable GitHub READMEs</span>
+              <span>19 / 34 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-55"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>26 / 35 - among readable GitHub READMEs</span>
+              <span>25 / 34 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-75"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>28 / 35 - among readable GitHub READMEs</span>
+              <span>27 / 34 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>STDIO package READMEs explain command boundary</strong>
-              <span>3 / 9 - among readable STDIO package repos</span>
+              <span>3 / 8 - among readable STDIO package repos</span>
             </div>
-            <i class="pulse-width-35"></i>
+            <i class="pulse-width-40"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>8 / 35 - among readable GitHub READMEs</span>
+              <span>8 / 34 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>8 / 35 - among readable GitHub READMEs</span>
+              <span>9 / 34 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-25"></i>
           </div>
@@ -283,19 +283,6 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://tandem.ac/docs-mcp" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/frumu-ai/tandem" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.aliengiraffe/spotdb ephemeral data sandbox for ai workflows with guardrails and security aliengiraffe/spotdb package stdio stdio command boundary local process secrets credentials tokens headers add a human-readable title expand the registry description add smoke-test or tool-list proof explain stdio command boundary add copyable mcpservers config refresh stale registry metadata reference server.json metadata alignment">
-            <p class="card-command">score 48/100 · package · stdio</p>
-            <h3>ai.aliengiraffe/spotdb</h3>
-            <p>Ephemeral data sandbox for AI workflows with guardrails and security</p>
-            <ul>
-              <li>Add a human-readable title</li><li>Expand the registry description</li><li>Add smoke-test or tool-list proof</li><li>Explain STDIO command boundary</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="http://localhost:8080/api/v1/upload" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/aliengiraffe/spotdb" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
@@ -501,6 +488,19 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://goji.agency" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/goji-agency/goji-mcp" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.agentgates/compute agentgates compute confidential computers for ai swarms: sealed vms (intel tdx) by the hour, usdc over x402. agentgates-ai/agentgates remote expand the registry description clarify remote auth and trust boundary add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
+            <p class="card-command">score 63/100 · remote</p>
+            <h3>Agentgates Compute</h3>
+            <p>Confidential computers for AI swarms: sealed VMs (Intel TDX) by the hour, USDC over x402.</p>
+            <ul>
+              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add smoke-test or tool-list proof</li><li>Add copyable mcpServers config</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://agentgates.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/agentgates-ai/agentgates" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>

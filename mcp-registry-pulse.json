@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-09",
+  "generatedAt": "2026-11-10",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 162,
-  "githubReposDetected": 64,
-  "readmesSampled": 35,
+  "latestServersAnalyzed": 161,
+  "githubReposDetected": 63,
+  "readmesSampled": 34,
   "method": [
     "Fetched public MCP Registry entries.",
     "Kept entries marked latest by official registry metadata.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 162,
-    "repos": 64,
-    "readableRepos": 35,
-    "packageCount": 30,
+    "latestTotal": 161,
+    "repos": 63,
+    "readableRepos": 34,
+    "packageCount": 29,
     "remoteCount": 136,
-    "packageOnly": 25,
+    "packageOnly": 24,
     "remoteOnly": 131,
     "both": 5,
     "noInstallPath": 131,
-    "websiteVisible": 146,
-    "missingTitle": 16,
-    "shortDescription": 44,
+    "websiteVisible": 143,
+    "missingTitle": 15,
+    "shortDescription": 45,
     "recent45": 81,
-    "orgOwned": 20,
-    "issuesEnabled": 34,
+    "orgOwned": 19,
+    "issuesEnabled": 33,
     "archived": 0,
     "mcpServers": 19,
-    "install": 26,
+    "install": 25,
     "serverJson": 8,
-    "safety": 28,
-    "stdioPackageCount": 30,
-    "stdioPackageReadable": 9,
+    "safety": 27,
+    "stdioPackageCount": 29,
+    "stdioPackageReadable": 8,
     "stdioBoundaryDocs": 3,
-    "secretPackageConfig": 6,
-    "secretRemoteHeaders": 22,
-    "glama": 13,
-    "smoke": 8
+    "secretPackageConfig": 5,
+    "secretRemoteHeaders": 20,
+    "glama": 12,
+    "smoke": 9
   },
   "sampleServers": [
     {
@@ -61,30 +61,6 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Add install or client command",
-        "Add copyable mcpServers config"
-      ]
-    },
-    {
-      "name": "ai.aliengiraffe/spotdb",
-      "title": "",
-      "description": "Ephemeral data sandbox for AI workflows with guardrails and security",
-      "publicProofScore": 48,
-      "installPath": "package",
-      "packageTransports": [
-        "stdio"
-      ],
-      "hasStdioPackage": true,
-      "hasSecretPackageConfig": true,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2025-10-09T17:05:17.793149Z",
-      "repo": "aliengiraffe/spotdb",
-      "websiteUrl": "http://localhost:8080/api/v1/upload",
-      "primaryUrl": "http://localhost:8080/api/v1/upload",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Add smoke-test or tool-list proof",
-        "Explain STDIO command boundary",
         "Add copyable mcpServers config"
       ]
     },
@@ -441,6 +417,28 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata",
+        "Reference server.json metadata alignment"
+      ]
+    },
+    {
+      "name": "ai.agentgates/compute",
+      "title": "Agentgates Compute",
+      "description": "Confidential computers for AI swarms: sealed VMs (Intel TDX) by the hour, USDC over x402.",
+      "publicProofScore": 63,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-11-05T22:38:47.26369Z",
+      "repo": "agentgates-ai/agentgates",
+      "websiteUrl": "https://agentgates.ai",
+      "primaryUrl": "https://agentgates.ai",
+      "topGaps": [
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Add smoke-test or tool-list proof",
+        "Add copyable mcpServers config",
         "Reference server.json metadata alignment"
       ]
     }
