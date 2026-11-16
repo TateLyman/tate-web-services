@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15",
+  "generatedAt": "2026-11-16",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 165,
@@ -24,8 +24,8 @@
     "noInstallPath": 136,
     "websiteVisible": 147,
     "missingTitle": 14,
-    "shortDescription": 51,
-    "recent45": 86,
+    "shortDescription": 52,
+    "recent45": 88,
     "orgOwned": 16,
     "issuesEnabled": 31,
     "archived": 0,
@@ -37,7 +37,7 @@
     "stdioPackageReadable": 8,
     "stdioBoundaryDocs": 3,
     "secretPackageConfig": 5,
-    "secretRemoteHeaders": 20,
+    "secretRemoteHeaders": 21,
     "glama": 12,
     "smoke": 8
   },
