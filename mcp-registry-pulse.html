@@ -21,7 +21,7 @@
         "name": "MCP Registry Pulse",
         "url": "https://tateprograms.com/mcp-registry-pulse.html",
         "description": "Aggregate launch-readiness signals from public MCP Registry metadata and linked public GitHub repositories.",
-        "dateModified": "2026-11-19",
+        "dateModified": "2026-11-20",
         "license": "https://opensource.org/license/mit",
         "creator": {
           "@type": "Organization",
@@ -62,7 +62,7 @@
       <div class="shell-pathline">
         <span>tate@programs</span>
         <strong>~/notes/mcp-registry-pulse</strong>
-        <em>2026-11-19</em>
+        <em>2026-11-20</em>
       </div>
 
       <section class="console-hero console-page-hero">
@@ -81,7 +81,7 @@
           <dl class="console-ledger">
             <div>
               <dt>generated</dt>
-              <dd>2026-11-19</dd>
+              <dd>2026-11-20</dd>
             </div>
             <div>
               <dt>registry rows</dt>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <dt>latest servers</dt>
-              <dd>162</dd>
+              <dd>191</dd>
             </div>
           </dl>
         </div>
@@ -98,9 +98,9 @@
           <div class="terminal-topline">pulse run</div>
           <pre><code>$ node scripts/render-mcp-registry-pulse.mjs
 registry entries: 300
-latest servers:   162
-github repos:     60
-readme sampled:   31
+latest servers:   191
+github repos:     55
+readme sampled:   28
 output:           mcp-registry-pulse.html
 data:             mcp-registry-pulse.json</code></pre>
         </aside>
@@ -114,32 +114,32 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">latest servers</p>
-            <strong>162</strong>
+            <strong>191</strong>
             <p>Official registry entries marked latest in the fetched window.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">github repos</p>
-            <strong>60 (37%)</strong>
+            <strong>55 (29%)</strong>
             <p>Listings with a GitHub repository URL attached.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">website visible</p>
-            <strong>146 (90%)</strong>
+            <strong>177 (93%)</strong>
             <p>Website URL visible in registry metadata, GitHub homepage, or README.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">recent movement</p>
-            <strong>85 (52%)</strong>
+            <strong>119 (62%)</strong>
             <p>Latest metadata updated within the last 45 days.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">package path</p>
-            <strong>29 (18%)</strong>
+            <strong>28 (15%)</strong>
             <p>Listings with package install metadata.</p>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote path</p>
-            <strong>138 (85%)</strong>
+            <strong>168 (88%)</strong>
             <p>Listings with hosted remote server metadata.</p>
           </article>
         </div>
@@ -153,7 +153,7 @@ data:             mcp-registry-pulse.json</code></pre>
         <div class="console-card-grid">
           <article class="console-card pulse-metric">
             <p class="card-command">stdio package path</p>
-            <strong>29 (18%)</strong>
+            <strong>28 (15%)</strong>
             <p>Latest listings whose package metadata uses STDIO transport.</p>
           </article>
           <article class="console-card pulse-metric">
@@ -168,7 +168,7 @@ data:             mcp-registry-pulse.json</code></pre>
           </article>
           <article class="console-card pulse-metric">
             <p class="card-command">remote secret headers</p>
-            <strong>20 (12%)</strong>
+            <strong>19 (10%)</strong>
             <p>Listings whose remote metadata declares secret request headers.</p>
           </article>
         </div>
@@ -197,44 +197,44 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>Short registry descriptions</strong>
-              <span>49 / 162 - harder to understand quickly</span>
+              <span>46 / 191 - harder to understand quickly</span>
             </div>
-            <i class="pulse-width-30"></i>
+            <i class="pulse-width-25"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Missing human-readable title</strong>
-              <span>13 / 162 - namespace carries the listing</span>
+              <span>33 / 191 - namespace carries the listing</span>
             </div>
-            <i class="pulse-width-10"></i>
+            <i class="pulse-width-15"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>Remote-only with no package path</strong>
-              <span>133 / 162 - hosted flow must explain trust and auth clearly</span>
+              <span>163 / 191 - hosted flow must explain trust and auth clearly</span>
             </div>
-            <i class="pulse-width-80"></i>
+            <i class="pulse-width-85"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes copyable mcpServers config</strong>
-              <span>15 / 31 - among readable GitHub READMEs</span>
+              <span>14 / 28 - among readable GitHub READMEs</span>
             </div>
             <i class="pulse-width-50"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions install or client command</strong>
-              <span>23 / 31 - among readable GitHub READMEs</span>
+              <span>22 / 28 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-75"></i>
+            <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions permissions or safety</strong>
-              <span>24 / 31 - among readable GitHub READMEs</span>
+              <span>22 / 28 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-75"></i>
+            <i class="pulse-width-80"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
@@ -246,16 +246,16 @@ data:             mcp-registry-pulse.json</code></pre>
           <div class="pulse-bar-row">
             <div>
               <strong>README mentions server.json</strong>
-              <span>7 / 31 - among readable GitHub READMEs</span>
+              <span>5 / 28 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-25"></i>
+            <i class="pulse-width-20"></i>
           </div>
           <div class="pulse-bar-row">
             <div>
               <strong>README includes smoke-test language</strong>
-              <span>8 / 31 - among readable GitHub READMEs</span>
+              <span>6 / 28 - among readable GitHub READMEs</span>
             </div>
-            <i class="pulse-width-25"></i>
+            <i class="pulse-width-20"></i>
           </div>
         </div>
       </section>
@@ -439,32 +439,6 @@ data:             mcp-registry-pulse.json</code></pre>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.ai-akari/one-minute-akari aiﾉアカリ☆ one-minute akari a free one-minute reset for people, delivered by ai, with no account or personal data. ainoakari/arigatou-kawaii-lp remote expand the registry description make readme proof available expose a product or docs website clarify remote auth and trust boundary refresh stale registry metadata">
-            <p class="card-command">score 59/100 · remote</p>
-            <h3>AIﾉアカリ☆ One-Minute Akari</h3>
-            <p>A free one-minute reset for people, delivered by AI, with no account or personal data.</p>
-            <ul>
-              <li>Expand the registry description</li><li>Make README proof available</li><li>Expose a product or docs website</li><li>Clarify remote auth and trust boundary</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://github.com/AInoAKARI/arigatou-kawaii-lp" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/AInoAKARI/arigatou-kawaii-lp" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
-<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.ai-akari/agent-trust-receipt aiﾉアカリ☆ agent trust receipt read-only remote mcp for externally grounded ai agent trust receipts. ainoakari/ainoakari remote expand the registry description clarify remote auth and trust boundary add install or client command add smoke-test or tool-list proof refresh stale registry metadata">
-            <p class="card-command">score 61/100 · remote</p>
-            <h3>AIﾉアカリ☆ Agent Trust Receipt</h3>
-            <p>Read-only Remote MCP for externally grounded AI agent trust receipts.</p>
-            <ul>
-              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add install or client command</li><li>Add smoke-test or tool-list proof</li>
-            </ul>
-            <div class="pulse-sample-links">
-              <a href="https://ai-akari.ai/.well-known/agent-trust.json" target="_blank" rel="noreferrer">source</a>
-              <a href="https://github.com/AInoAKARI/AInoAKARI" target="_blank" rel="noreferrer">repo</a>
-              <a href="mcp-registry-audit.html">audit template</a>
-            </div>
-          </article>
 <article class="console-card pulse-sample-card" data-pulse-card data-search="ai.a2uicatalog/catalog a2ui atomic catalog 500+ typed ui atoms an agent composes into real rendered interfaces. free, no api key. a2uicatalog/a2ui remote expand the registry description clarify remote auth and trust boundary add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
             <p class="card-command">score 63/100 · remote</p>
             <h3>A2UI Atomic Catalog</h3>
@@ -501,6 +475,32 @@ data:             mcp-registry-pulse.json</code></pre>
             <div class="pulse-sample-links">
               <a href="https://goji.agency" target="_blank" rel="noreferrer">source</a>
               <a href="https://github.com/goji-agency/goji-mcp" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.agentgates/compute agentgates compute confidential computers for ai swarms: sealed vms (intel tdx) by the hour, usdc over x402. agentgates-ai/agentgates remote expand the registry description clarify remote auth and trust boundary add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
+            <p class="card-command">score 63/100 · remote</p>
+            <h3>Agentgates Compute</h3>
+            <p>Confidential computers for AI swarms: sealed VMs (Intel TDX) by the hour, USDC over x402.</p>
+            <ul>
+              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add smoke-test or tool-list proof</li><li>Add copyable mcpServers config</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://agentgates.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/agentgates-ai/agentgates" target="_blank" rel="noreferrer">repo</a>
+              <a href="mcp-registry-audit.html">audit template</a>
+            </div>
+          </article>
+<article class="console-card pulse-sample-card" data-pulse-card data-search="ai.agentgates/mcp agentgates wallet an agent wallet over mcp: balances, and sends, swaps and earn moves its owner approves. agentgates-ai/agentgates remote expand the registry description clarify remote auth and trust boundary add smoke-test or tool-list proof add copyable mcpservers config reference server.json metadata alignment">
+            <p class="card-command">score 63/100 · remote</p>
+            <h3>Agentgates Wallet</h3>
+            <p>An agent wallet over MCP: balances, and sends, swaps and earn moves its owner approves.</p>
+            <ul>
+              <li>Expand the registry description</li><li>Clarify remote auth and trust boundary</li><li>Add smoke-test or tool-list proof</li><li>Add copyable mcpServers config</li>
+            </ul>
+            <div class="pulse-sample-links">
+              <a href="https://agentgates.ai" target="_blank" rel="noreferrer">source</a>
+              <a href="https://github.com/agentgates-ai/agentgates" target="_blank" rel="noreferrer">repo</a>
               <a href="mcp-registry-audit.html">audit template</a>
             </div>
           </article>
