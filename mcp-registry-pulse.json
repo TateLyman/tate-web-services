@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-24",
+  "generatedAt": "2026-11-25",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
-  "latestServersAnalyzed": 187,
-  "githubReposDetected": 44,
+  "latestServersAnalyzed": 184,
+  "githubReposDetected": 38,
   "readmesSampled": 28,
   "method": [
     "Fetched public MCP Registry entries.",
@@ -13,33 +13,33 @@
     "Reported aggregate launch-readiness signals only."
   ],
   "totals": {
-    "latestTotal": 187,
-    "repos": 44,
+    "latestTotal": 184,
+    "repos": 38,
     "readableRepos": 28,
-    "packageCount": 17,
-    "remoteCount": 175,
-    "packageOnly": 12,
-    "remoteOnly": 170,
+    "packageCount": 12,
+    "remoteCount": 177,
+    "packageOnly": 7,
+    "remoteOnly": 172,
     "both": 5,
-    "noInstallPath": 170,
-    "websiteVisible": 172,
-    "missingTitle": 34,
-    "shortDescription": 48,
-    "recent45": 116,
-    "orgOwned": 15,
+    "noInstallPath": 172,
+    "websiteVisible": 169,
+    "missingTitle": 35,
+    "shortDescription": 46,
+    "recent45": 121,
+    "orgOwned": 16,
     "issuesEnabled": 28,
     "archived": 0,
     "mcpServers": 15,
     "install": 21,
-    "serverJson": 5,
+    "serverJson": 6,
     "safety": 23,
-    "stdioPackageCount": 17,
+    "stdioPackageCount": 12,
     "stdioPackageReadable": 8,
     "stdioBoundaryDocs": 3,
-    "secretPackageConfig": 4,
+    "secretPackageConfig": 3,
     "secretRemoteHeaders": 19,
     "glama": 9,
-    "smoke": 6
+    "smoke": 5
   },
   "sampleServers": [
     {
@@ -265,28 +265,6 @@
       ]
     },
     {
-      "name": "agency.lona/trading",
-      "title": "",
-      "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
-      "publicProofScore": 57,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-02-24T00:07:27.525636Z",
-      "repo": "mindsightventures/lona",
-      "websiteUrl": "https://lona.agency",
-      "primaryUrl": "https://lona.agency",
-      "topGaps": [
-        "Add a human-readable title",
-        "Expand the registry description",
-        "Make README proof available",
-        "Clarify remote auth and trust boundary",
-        "Refresh stale registry metadata"
-      ]
-    },
-    {
       "name": "ai.adtest/adtest-mcp",
       "title": "",
       "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
@@ -440,6 +418,27 @@
         "Add smoke-test or tool-list proof",
         "Add copyable mcpServers config",
         "Reference server.json metadata alignment"
+      ]
+    },
+    {
+      "name": "aero.events/events",
+      "title": "Events.Aero",
+      "description": "Find aviation events: airshows, fly-ins, workshops and club meets. Public and read-only.",
+      "publicProofScore": 65,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-10-09T21:06:19.122059Z",
+      "repo": null,
+      "websiteUrl": "https://events.aero",
+      "primaryUrl": "https://events.aero",
+      "topGaps": [
+        "Attach a public repository",
+        "Expand the registry description",
+        "Clarify remote auth and trust boundary",
+        "Refresh stale registry metadata"
       ]
     }
   ]
