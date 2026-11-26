@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25",
+  "generatedAt": "2026-11-26",
   "source": "https://registry.modelcontextprotocol.io/v0.1/servers",
   "fetchedEntries": 300,
   "latestServersAnalyzed": 184,
@@ -25,7 +25,7 @@
     "websiteVisible": 169,
     "missingTitle": 35,
     "shortDescription": 46,
-    "recent45": 121,
+    "recent45": 120,
     "orgOwned": 16,
     "issuesEnabled": 28,
     "archived": 0,
@@ -84,28 +84,6 @@
         "Make README proof available",
         "Expose a product or docs website",
         "Clarify remote auth and trust boundary"
-      ]
-    },
-    {
-      "name": "ae.datadubai/dubai-real-estate",
-      "title": "Dubai Data — Dubai real estate statistics",
-      "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
-      "publicProofScore": 52,
-      "installPath": "remote",
-      "packageTransports": [],
-      "hasStdioPackage": false,
-      "hasSecretPackageConfig": false,
-      "hasSecretRemoteHeaders": false,
-      "updatedAt": "2026-09-30T08:30:47.911063Z",
-      "repo": "datadubai/dubai-real-estate-dld",
-      "websiteUrl": "https://datadubai.ae/mcp/",
-      "primaryUrl": "https://datadubai.ae/mcp/",
-      "topGaps": [
-        "Clarify remote auth and trust boundary",
-        "Add install or client command",
-        "Add smoke-test or tool-list proof",
-        "Document permissions and safety notes",
-        "Add copyable mcpServers config"
       ]
     },
     {
@@ -240,6 +218,28 @@
         "Expand the registry description",
         "Clarify remote auth and trust boundary",
         "Refresh stale registry metadata"
+      ]
+    },
+    {
+      "name": "ae.datadubai/dubai-real-estate",
+      "title": "Data Dubai — Dubai real estate statistics",
+      "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
+      "publicProofScore": 57,
+      "installPath": "remote",
+      "packageTransports": [],
+      "hasStdioPackage": false,
+      "hasSecretPackageConfig": false,
+      "hasSecretRemoteHeaders": false,
+      "updatedAt": "2026-11-26T08:41:38.568168Z",
+      "repo": "datadubai/dubai-real-estate-dld",
+      "websiteUrl": "https://datadubai.ae/mcp/",
+      "primaryUrl": "https://datadubai.ae/mcp/",
+      "topGaps": [
+        "Clarify remote auth and trust boundary",
+        "Add install or client command",
+        "Add smoke-test or tool-list proof",
+        "Document permissions and safety notes",
+        "Add copyable mcpServers config"
       ]
     },
     {
